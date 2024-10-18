@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: update-snapshot-replication.html 
+keywords: update snapshot data, replication 
+summary: Atualize manualmente os dados instantâneos transferidos entre os volumes de origem e destino em uma relação de replicação a qualquer momento. 
+---
+= Atualizar dados instantâneos em uma relação de replicação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Uma relação de replicação tem um agendamento de replicação definido, mas você pode atualizar manualmente os dados instantâneos transferidos entre os volumes de origem e destino, quando necessário.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, clique no menu de três pontos do sistema de arquivos para atualizar e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *relacionamentos de replicação*.
+. Na guia relacionamentos de replicação, clique no menu três pontos da relação de replicação a ser atualizada.
+. Selecione *Atualizar agora*.
+. Na caixa de diálogo Atualizar, clique em *Atualizar agora*.
+

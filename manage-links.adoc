@@ -1,0 +1,84 @@
+---
+sidebar: sidebar 
+permalink: manage-links.html 
+keywords: links, accounts, lambda, creating, associating, disassociating, deleting, editing 
+summary: Você pode criar e gerenciar links para fornecer uma relação de confiança e conetividade entre uma conta de fábrica de carga de trabalho e um ou mais sistemas de arquivos FSX for ONTAP. Isso permite que você monitore e gerencie certos recursos diretamente do sistema de arquivos ONTAP que não estão disponíveis através das APIs do AWS FSX for ONTAP. 
+---
+= Gerenciar links
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gerencie os links associados à sua conta do Workload Factory.
+
+link:links-overview.html["Saiba mais sobre links"] ou link:create-link.html["crie um link"].
+
+
+
+== Veja os links associados à sua conta
+
+Você pode exibir os links que estão atualmente associados à sua conta.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. No menu conta, selecione *links*.
++
+image:screenshot-links-button.png["Uma captura de tela mostrando como abrir a página de links."]
+
+. Se existirem links, a página de visão geral fornece as informações.
+. Para visualizar os sistemas de arquivos FSX for ONTAP associados a um link, selecione o botão *Exibir* na seção recursos associados.
++
+image:screenshot-view-link-details.png["Uma captura de tela que mostra os sistemas de arquivos do FSX for ONTAP que estão usando um link específico."]
+
+. Se você precisar do Amazon Resource Name (ARN) para o link, selecione o ícone _copy_ ao lado do campo ARN.
+
+
+
+
+== Associe um link com um sistema de arquivos FSX for ONTAP
+
+Depois de criar um link, você pode associá-lo aos seus sistemas de arquivos FSX for ONTAP. Cada sistema de arquivos pode ser associado a apenas um link em uma única conta do NetApp, mas um link pode ser associado a muitos sistemas de arquivos.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos para associar um link e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione *Link associado*.
+. Na página associar link, selecione *associar um link existente*, selecione o link e selecione *aplicar*.
+
+
+.Resultado
+O link está associado ao sistema de arquivos FSX for ONTAP e você pode executar operações avançadas do ONTAP.
+
+
+
+== Edite um link
+
+Não é possível editar um link a partir da interface do Workload Factory. Se você precisar fazer uma alteração em um link, será necessário criar um novo link e associá-lo ao seu sistema de arquivos.
+
+
+NOTE: Você pode editar a configuração de rede do Lambda (por exemplo, VPC, sub-redes e grupos de segurança) usando o console da AWS e as alterações serão refletidas na IU de gerenciamento de links. No entanto, essas alterações podem levar a problemas de conetividade entre o Lambda e o ONTAP, e não são recomendadas.
+
+
+
+== Remova um link
+
+Você pode remover um link que você não está mais usando em seu ambiente. Qualquer sistema de arquivos do FSX for ONTAP ou outros recursos que estavam usando o link não será capaz de usar certas funcionalidades depois que o link for removido.
+
+Observe que o link só é excluído do Workload Factory - ele não é excluído do seu ambiente AWS. Você deve excluir a função do Lambda de sua conta da AWS depois de remover o link no Workload Factory.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. No menu conta, selecione *links*.
+. Na página de links, selecione o botão de menu e selecione *Remover*.
++
+image:screenshot-remove-link.png["Uma captura de tela mostrando como remover um link do Workload Factory."]
+
+. Se tiver certeza, selecione *Remover* novamente.
+
+
+Consulte a documentação da AWS para link:https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-awscli.html#with-userapp-walkthrough-custom-events-delete-function["Exclua a função Lambda"].

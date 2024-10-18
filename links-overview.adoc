@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: links-overview.html 
+keywords: links, accounts, lambda 
+summary: Um link de fábrica de carga de trabalho cria uma relação de confiança e conetividade entre uma conta de fábrica de carga de trabalho e um ou mais sistemas de arquivos FSX for ONTAP. Isso permite que você monitore e gerencie certos recursos do sistema de arquivos diretamente das APIS REST do ONTAP que não estão disponíveis por meio das APIs do Amazon FSX for ONTAP. 
+---
+= Saiba mais sobre os links de fábrica da carga de trabalho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Um link de fábrica de carga de trabalho cria uma relação de confiança e conetividade entre uma conta de fábrica de carga de trabalho e um ou mais sistemas de arquivos FSX for ONTAP. Isso permite que você monitore e gerencie certos recursos do sistema de arquivos diretamente das chamadas da API REST do ONTAP que não estão disponíveis por meio da API do Amazon FSX for ONTAP.
+
+Você não precisa de um link para começar a usar o Workload Factory, mas, em alguns casos, você precisará criar um link para desbloquear todos os recursos do Workload Factory e os recursos de carga de trabalho.
+
+
+
+== Como os links funcionam
+
+Os links aproveitam o AWS Lambda. O Lambda executa código em resposta a eventos e gerencia automaticamente os recursos de computação exigidos por esse código. Os links que você cria fazem parte da sua conta do NetApp e são associados a uma conta da AWS.
+
+Depois de criar um link, você pode associá-lo a um ou muitos sistemas de arquivos FSX for ONTAP. Cada sistema de arquivos pode ser associado apenas a um link na mesma conta do NetApp. Se você tiver várias contas do NetApp, um único sistema de arquivos pode ser associado a links adicionais em diferentes contas do NetApp.
+
+Você cria links a partir das páginas do sistema de arquivos FSX for ONTAP no Workload Factory. link:create-link.html["Saiba como criar links"] para mais detalhes.
+
+
+
+== Custos
+
+Cada transação que o Lambda executa incorre em uma cobrança. Como o Lambda atua como um proxy entre os dois sistemas, há uma cobrança quando o Lambda envia uma solicitação à API REST do ONTAP em um sistema de arquivos e quando envia a resposta de volta à fábrica de cargas de trabalho.
+
+link:https://aws.amazon.com/lambda/pricing/["Saiba mais sobre os custos relacionados ao uso do AWS Lambda"^]
+
+
+
+== Quando um link é necessário
+
+A fábrica de carga de trabalho requer um link para exibir algumas informações e executar algumas tarefas. Se você tentar executar uma operação que requer um link e você não associou um link ao sistema de arquivos FSX for ONTAP, você verá uma mensagem informando que a operação requer um link. Você pode adicionar um novo link ou associar o sistema de arquivos FSX for ONTAP a um link existente naquele momento para que você possa executar a operação.
+
+Os recursos que exigem um link incluem:
+
+* Exiba a versão do ONTAP que está instalada em um sistema de arquivos FSX for ONTAP
+* Gerir volumes iSCSI no sistema
+* Ative e desative o recurso de crescimento automático para volumes
+* Criar e gerenciar políticas de snapshot
+* Configurar relações de replicação e replicar volumes entre sistemas de arquivos
+* Configurar relações de backup e fazer backup dos dados de volume no storage de nuvem
+* Clonar volumes dentro de um sistema de arquivos
+* Exibir métricas adicionais diretamente do ONTAP (as métricas padrão são coletadas pelo Amazon CloudWatch)
+* Gerenciamento de políticas de exportação de NFS
+

@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: change-tiering-policy.html 
+keywords:  
+summary: Altere a política de disposição em categorias para realocar dados da camada de storage primário de alto desempenho para a camada de storage do pool de capacidade secundária. 
+---
+= Alterar a política de disposição em camadas de um volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Altere a política de disposição em categorias para realocar automaticamente os dados da camada de storage primário de alto desempenho para a camada de storage do pool de capacidade secundária.
+
+.Sobre esta tarefa
+Você pode alterar a política de disposição em categorias de um volume a qualquer momento. A política de disposição em categorias é definida por volume.
+
+Decidir onde seus dados são armazenados tem implicações para sua economia de custos.
+
+O FSX para ONTAP tem duas camadas para armazenar dados de volume:
+
+* *Camada de armazenamento SSD*: Essa camada de armazenamento principal é para os dados que você acessa com mais frequência, também conhecidos como _hot_ data. Armazenar dados na camada de storage primário é mais caro do que na camada de storage secundário.
+* * Camada de storage de pool de capacidade*: Essa camada de storage secundário é para dados arquivados ou acessados com pouca frequência, também conhecidos como dados _cold_.
+
+
+Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage-capacity.html#storage-tiers["Gerenciamento da capacidade de storage"^]a documentação do no AWS for FSX for NetApp ONTAP para obter mais informações sobre camadas de armazenamento.
+
+.Antes de começar
+Revise as quatro políticas de disposição em categorias disponíveis antes de alterar a política de disposição em categorias.
+
+* *Automático*: Classifica todos os dados inativos, que incluem dados de usuário e snapshots na camada de armazenamento do pool de capacidade para um período de tempo específico.
+* *Somente snapshot*: Categoriza somente os dados snapshot para a camada de storage do pool de capacidade.
+* *Nenhum*: Mantém todos os dados do seu volume na camada de storage primário.
+* *All*: Marca todos os dados do usuário e dados instantâneos como inativos e os armazena na camada de armazenamento do pool de capacidade.
+
+
+Observe que algumas políticas de disposição em categorias têm um período de resfriamento mínimo associado que define o tempo, ou _dias de resfriamento_, que os dados do usuário em um volume devem permanecer inativos para que os dados sejam considerados "frios" e movidos para a camada de storage do pool de capacidade. O período de resfriamento começa quando os dados são gravados no disco.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume a ser atualizado e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
+. Na guia volumes, clique no menu três pontos do volume para alterar a política de disposição em categorias.
+. Selecione *ações avançadas* e, em seguida, *alterar política de disposição em camadas*.
+. Na página alterar política de disposição em categorias, selecione uma das seguintes políticas de disposição em categorias:
++
+** *Auto*: Introduza o número de dias de arrefecimento.
+** *Snapshot only*: Insira o número de dias de resfriamento.
+** *Nenhuma*
+** *Todos*
+
+
+. Clique em *aplicar*.
+

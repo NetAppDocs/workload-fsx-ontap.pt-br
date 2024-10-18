@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: change-replication-schedule.html 
+keywords: change replication schedule, update replication schedule, edit replication schedule 
+summary: Altere a programação de replicação do volume de origem em uma relação de replicação. 
+---
+= Alterar o agendamento de replicação de um volume de origem
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Altere a programação de replicação do volume de origem em uma relação de replicação.
+
+Escolha com que frequência os snapshots do volume de origem são transferidos para o volume replicado para corresponder aos objetivos de ponto (RPOs) necessários.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, clique no menu de três pontos do sistema de arquivos para atualizar e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *relacionamentos de replicação*.
+. Na guia relacionamentos de replicação, clique no menu três pontos da programação de relacionamento de replicação a ser alterada.
+. Selecione *Editar intervalo de replicação*.
+. Na caixa de diálogo Editar intervalo de replicação, selecione a frequência da transferência de instantâneos a partir do volume de origem. Pode selecionar entre as seguintes frequências:
++
+** A cada 5 minutos
+** Por hora
+** A cada 8 horas
+** Diariamente
+** Semanalmente
+
+
+. Clique em *aplicar*.
+

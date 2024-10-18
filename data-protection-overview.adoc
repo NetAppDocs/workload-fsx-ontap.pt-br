@@ -1,0 +1,72 @@
+---
+sidebar: sidebar 
+permalink: data-protection-overview.html 
+keywords: overview 
+summary:  
+---
+= Visão geral da proteção de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+O FSX para ONTAP oferece suporte a snapshots para criar imagens pontuais e somente leitura de um volume, backups de volume para criar backups off-line com longa retenção de volumes e replicação de volume para criar espelhos assíncronos do seu volume em diferentes regiões.
+
+
+
+== Tipos de proteção de dados
+
+A proteção de dados para seus workloads ajuda a garantir que você se recupere de qualquer perda de dados a qualquer momento. Saiba mais sobre os tipos de proteção de dados antes de selecionar os recursos que você usará.
+
+.Instantâneos
+Um instantâneo cria uma imagem pontual e somente leitura de um volume dentro do volume de origem como uma cópia instantânea. Você pode usar a cópia snapshot para recuperar arquivos individuais ou restaurar todo o conteúdo de um volume. Os instantâneos são a base de todos os métodos de backup. A cópia snapshot criada no volume é usada para manter o volume replicado e o arquivo de backup sincronizados com as alterações feitas no volume de origem.
+
+.Backups
+Você pode criar backups de seus dados na nuvem para fins de proteção e retenção de longo prazo. Se necessário, você pode restaurar um volume, pasta ou arquivos individuais do backup para o mesmo sistema de arquivos em funcionamento ou diferente.
+
+.Replicação
+A replicação cria uma cópia secundária de seus dados em outro sistema de arquivos do FSX for ONTAP e atualiza continuamente os dados secundários. Seus dados permanecem atuais e disponíveis sempre que você precisar, como para recuperação de desastres.
+
+Você pode optar por criar volumes replicados em outro sistema de arquivos do FSX for ONTAP e arquivos de backup na nuvem. Ou você pode escolher apenas criar volumes replicados ou arquivos de backup - é sua escolha.
+
+O diagrama a seguir mostra uma representação visual da proteção de dados do FSX for ONTAP storage usando snapshots, replicação entre regiões e backup para armazenamento de objetos.
+
+image:diagram-fsx-data-protection.png["A captura de tela mostra a proteção de dados para o FSX for ONTAP storage usando snapshots, replicação entre regiões e backup para armazenamento de objetos."]
+
+
+
+== Práticas recomendadas para proteger seus dados de workload
+
+O FSX para ONTAP oferece várias opções de proteção de dados que podem ser combinadas para atingir seus objetivos de tempo e ponto de recuperação selecionados. Para obter a melhor proteção possível, recomendamos que você use snapshots de volume e backups de volume.
+
+O objetivo do ponto de restauração (RPO) descreve como é garantida a cópia mais recente dos seus dados, o que depende da frequência com que as cópias são feitas. Um objetivo de tempo de recuperação (rto) define quanto tempo leva para restaurar seus dados.
+
+
+
+== Proteja os dados de workload com snapshots
+
+Os instantâneos são versões virtuais pontuais de um volume que são tiradas de forma programada. Você pode acessar snapshots usando comandos padrão do sistema de arquivos. Os snapshots fornecem um RPO de apenas uma hora. O rto depende da quantidade de dados a serem restaurados e é limitado principalmente pelo limite de taxa de transferência de volume. Os instantâneos também permitem que os usuários restaurem arquivos e diretórios específicos, o que diminui o rto ainda mais. Os instantâneos consomem apenas espaço de volume adicional para alterações feitas no volume.
+
+
+
+== Proteja seus dados de workload com backups
+
+Os backups de volume fornecem cópias pontuais e independentes do seu volume. Eles podem ser usados para armazenar backups antigos e fornecer a segunda cópia necessária de seus dados. As programações de backup diárias, semanais e mensais permitem RPOs a partir de um dia. Os backups de volume só podem ser restaurados como um todo. A criação de um volume a partir de um backup (rto) pode levar de horas a muitos dias, dependendo do tamanho do backup.
+
+
+
+== Proteger os dados de workload com replicação de volume
+
+A replicação de volume cria uma cópia dos dados mais recentes de um volume, incluindo todos os snapshots em uma região diferente. Se você não puder pagar RTOs de várias horas de uma operação de restauração de volume total a partir de um backup de volume, considere executar uma replicação de volume. Embora a replicação de volume garanta que os dados recentes estejam disponíveis em uma região diferente para você usar, você precisa ajustar seus clientes para usar o volume na outra região.
+
+
+
+== Recomendações para proteger os dados de workload
+
+Considere as recomendações a seguir para proteger seus dados de workload.
+
+* Usar backups de volume em conjunto com snapshots: Usar os dois recursos juntos garante que você seja capaz de restaurar seus arquivos de snapshots e realizar restaurações completas em caso de perda de volume usando backups.
+* Definir uma política de backup de volume: Certifique-se de que a política de backup atenda aos requisitos da sua empresa para idade e frequência de backup. Recomendamos manter um mínimo de dois backups diários para cada volume.
+* Definir uma programação de instantâneos: Os instantâneos mais antigos têm menos probabilidade de serem usados para restaurar dados. Recomendamos que você defina um agendamento de snapshot que leve em consideração os retornos decrescentes de manter snapshots antigos em relação ao custo para capacidade adicional de snapshot.
+

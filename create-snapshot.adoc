@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: create-snapshot.html 
+keywords: create snapshot, snapshot 
+summary: Crie um snapshot manual de um volume do FSX for ONTAP. Os instantâneos são versões pontuais do conteúdo do seu volume. 
+---
+= Crie um snapshot manual de um volume do FSX for ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Crie um snapshot manual de um volume do FSX for ONTAP. Os instantâneos são versões pontuais do conteúdo do seu volume.
+
+Os snapshots são recursos de volumes e são capturas instantâneas de seus dados que consomem espaço apenas para dados modificados. Como os dados mudam com o tempo, os snapshots geralmente consomem mais espaço à medida que envelhecem.
+
+O FSX para ONTAP volumes usa cópia-on-write just-in-time para que todos os arquivos não modificados em snapshots não consumam nenhuma capacidade do volume.
+
+
+NOTE: Os snapshots não são cópias de seus dados. Se você quiser fazer cópias de seus dados, considere usar os backups do FSX for ONTAP ou os recursos de replicação de volume.
+
+.Antes de começar
+Você deve link:manage-links.html["associe um link"]criar um instantâneo. Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, clique em *associar link* em *nome da conta*. Assim que o link se associar, volte a esta operação.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Em *armazenamento*, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, clique no menu de três pontos do sistema de arquivos com o volume e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
+. Na guia *volumes*, selecione o menu de três pontos para o volume a proteger.
+. Selecione *ações de proteção de dados*, *instantâneos* e, em seguida, *criar volume a partir de um instantâneo*.
+. Na caixa de diálogo criar volume a partir de um instantâneo, no campo *Nome do instantâneo*, insira um nome do instantâneo.
+. Clique em *criar*.
+

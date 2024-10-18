@@ -1,0 +1,206 @@
+---
+sidebar: sidebar 
+permalink: create-file-system.html 
+keywords: create, FSx file system, ONTAP file system, Workload Factory, storage 
+summary: Usando o Workload Factory, você pode criar um sistema de arquivos FSX for ONTAP para adicionar e gerenciar volumes e serviços de dados adicionais. 
+---
+= Crie um sistema de arquivos FSX for ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Usando o Workload Factory, você pode criar um sistema de arquivos FSX for ONTAP para adicionar e gerenciar volumes e serviços de dados adicionais.
+
+.Sobre esta tarefa
+Uma VM de storage é criada quando você cria um sistema de arquivos.
+
+.Antes de começar
+Antes de criar seu sistema de arquivos FSX for ONTAP, você precisará de:
+
+* O ARN de uma função do IAM que dá ao Workload Factory as permissões necessárias para criar um sistema de arquivos FSX for ONTAP. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Saiba como conceder permissões a uma conta da AWS"^].
+* A região e as informações de VPC para onde você criará a instância do FSX for ONTAP.
+
+
+
+
+== Crie um sistema de arquivos FSX for ONTAP
+
+Você pode criar um sistema de arquivos FSX for ONTAP usando _Quick Create_ ou _Advanced Create_. Você também pode usar as seguintes ferramentas disponíveis na Codebox: API REST, CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Saiba como usar o Codebox para automação"^].
+
+
+NOTE: Ao usar o Terraform do Codebox, o código que você copia ou baixa oculta `fsxadmin` e `vsadmin` senhas. Você precisará digitar novamente as senhas quando executar o código.
+
+[role="tabbed-block"]
+====
+.Criação rápida
+--
+O Quick Create permite que você use uma configuração recomendada de práticas recomendadas. Você pode alterar a maioria das configurações depois de criar um sistema de arquivos FSX for ONTAP.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. No armazenamento, selecione *criar FSX para ONTAP*.
+. Na página criar FSX para ONTAP, selecione *criar rápido*.
++
+Você também pode carregar uma configuração salva.
+
+. Em Configuração geral do sistema de arquivos, forneça o seguinte:
++
+.. *Credenciais da AWS*: Selecione para adicionar credenciais da AWS no Workload Factory ou continuar sem credenciais.
+.. *Nome do sistema de arquivos*: Insira um nome para o sistema de arquivos.
+.. *Topologia de implantação*: Selecione uma topologia de implantação.
++
+*** A topologia de escalabilidade vertical é onde um sistema de arquivos é usado para distribuição de dados e pode aumentar de tamanho para acomodar o crescimento de dados.
+*** A topologia de escalabilidade horizontal é onde mais de um sistema de arquivos é usado para distribuição de dados.
+
+
+.. *Pares HA*: Insira o número de pares HA.
++
+*** Para implantações de escalabilidade vertical, você só pode ter um par de HA.
+*** Para implantações de escalabilidade horizontal, é possível ter entre dois a doze pares de HA.
+
+
+.. *Tipo de implantação*: Selecione um tipo de implantação.
++
+*** Implantação de zona de disponibilidade única (Single-AZ): Garante disponibilidade monitorando falhas de hardware e substituindo automaticamente componentes de infraestrutura em caso de falha. Atinge alta durabilidade replicando automaticamente seus dados em uma zona de disponibilidade para protegê-los de falhas de componentes.
+*** Implantação de várias zonas de disponibilidade (Multi-AZ): Fornece disponibilidade contínua aos dados, mesmo quando uma zona de disponibilidade não está disponível. Os sistemas de arquivos Multi-AZ suportam todos os recursos de disponibilidade e durabilidade dos sistemas de arquivos Single-AZ. Um sistema de arquivos Multi-AZ foi desenvolvido para workloads de produção essenciais aos negócios que exigem alta disponibilidade para dados de arquivos ONTAP compartilhados e precisam de storage com replicação incorporada entre zonas de disponibilidade.
+
+
+.. *Tags*: Opcionalmente, você pode adicionar até 50 tags.
+
+
+. Em *rede e segurança*, no campo *região e VPC*, selecione a região e a VPC para o sistema de arquivos.
+. Em *Detalhes do sistema de arquivos*, forneça o seguinte:
++
+.. *Capacidade de armazenamento SSD*: Introduza a capacidade de armazenamento e selecione a unidade de capacidade de armazenamento.
+.. *Credenciais ONTAP*: Insira seu nome de usuário e senha do ONTAP.
+.. *Configuração SMB/CIFS*: Opcional. Se você planeja usar o protocolo SMB/CIFS para acessar volumes, configure o ative Directory para a VM de storage durante a criação do sistema de arquivos. Forneça os detalhes a seguir para a VM de storage criada para esse sistema de arquivos.
++
+... *Domínio do ative Directory para ingressar*: Insira o nome de domínio totalmente qualificado (FQDN) para o ative Directory.
+... *Endereços IP DNS*: Insira até três endereços IP DNS separados por vírgulas.
+... *Nome NetBIOS do servidor SMB*: Insira o nome NetBIOS do servidor SMB do objeto computador do ative Directory a ser criado para sua VM de armazenamento. Este é o nome desta VM de armazenamento no ative Directory.
+... *Nome de utilizador*: Introduza o nome de utilizador da conta de serviço no ative Directory existente.
++
+Não inclua um prefixo ou sufixo de domínio. Para `EXAMPLE\ADMIN`, use `ADMIN`.
+
+... *Senha*: Insira a senha da conta de serviço.
+... * Unidade de organização*: Opcionalmente, insira o nome da Unidade organizacional onde você pretende criar a conta de computador para o FSX for ONTAP. A UO é o nome de caminho distinto da unidade organizacional à qual você deseja ingressar no sistema de arquivos.
+... *Grupo de administradores delegados*: Opcionalmente, insira o nome do grupo no ative Directory que pode administrar seu sistema de arquivos.
++
+Se você estiver usando o AWS Managed Microsoft AD, você deve especificar um grupo como Administradores delegados do FSX da AWS, Administradores delegados da AWS ou um grupo personalizado com permissões delegadas na UO.
+
++
+Se você estiver se juntando a um AD autogerenciado, use o nome do grupo em seu AD. O grupo padrão é `Domain Admins`.
+
+
+
+
+
+. Abra o *Summary* para rever a configuração definida. Se necessário, você pode alterar qualquer configuração neste momento antes de salvar ou criar o sistema de arquivos.
+. Salve ou crie o sistema de arquivos.
+
+
+Se você criou o sistema de arquivos, agora você pode visualizar o sistema de arquivos FSX for ONTAP na página *Inventário*.
+
+--
+.Criação avançada
+--
+Com o Advanced Create, você define todas as opções de configuração, incluindo disponibilidade, segurança, backups e manutenção.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. No armazenamento, selecione *criar FSX para ONTAP*.
+. Na página criar FSX para ONTAP, selecione *criar avançado*.
++
+Você também pode carregar uma configuração salva.
+
+. Em Configuração geral do sistema de arquivos, forneça o seguinte:
++
+.. *Credenciais da AWS*: Selecione para adicionar credenciais da AWS no Workload Factory ou continuar sem credenciais.
+.. *Nome do sistema de arquivos*: Insira um nome para o sistema de arquivos.
+.. *Topologia de implantação*: Selecione uma topologia de implantação.
++
+*** A topologia de escalabilidade vertical é onde um sistema de arquivos é usado para distribuição de dados e pode aumentar de tamanho para acomodar o crescimento de dados.
+*** A topologia de escalabilidade horizontal é onde mais de um sistema de arquivos é usado para distribuição de dados.
+
+
+.. *Pares HA*: Insira o número de pares HA.
++
+*** Para implantações de escalabilidade vertical, você só pode ter um par de HA.
+*** Para implantações de escalabilidade horizontal, é possível ter entre dois a doze pares de HA.
+
+
+.. *Tipo de implantação*: Selecione um tipo de implantação.
++
+*** Implantação de zona de disponibilidade única (Single-AZ): Garante disponibilidade monitorando falhas de hardware e substituindo automaticamente componentes de infraestrutura em caso de falha. Atinge alta durabilidade replicando automaticamente seus dados em uma zona de disponibilidade para protegê-los de falhas de componentes.
+*** Implantação de várias zonas de disponibilidade (Multi-AZ): Fornece disponibilidade contínua aos dados, mesmo quando uma zona de disponibilidade não está disponível. Os sistemas de arquivos Multi-AZ suportam todos os recursos de disponibilidade e durabilidade dos sistemas de arquivos Single-AZ. Um sistema de arquivos Multi-AZ foi desenvolvido para workloads de produção essenciais aos negócios que exigem alta disponibilidade para dados de arquivos ONTAP compartilhados e precisam de storage com replicação incorporada entre zonas de disponibilidade.
+
+
+.. *Tags*: Opcionalmente, você pode adicionar até 50 tags.
+
+
+. Em rede e segurança, forneça o seguinte:
++
+.. *Região e VPC*: Selecione a região e a VPC para o sistema de arquivos.
+.. *Grupo de segurança*: Crie ou use um grupo de segurança existente.
+.. *Zonas de disponibilidade*: Selecione zonas de disponibilidade e sub-redes.
++
+*** Para o nó de configuração de cluster 1: Selecione uma zona de disponibilidade e uma sub-rede.
+*** Para o nó de configuração de cluster 2: Selecione uma zona de disponibilidade e uma sub-rede.
+
+
+.. *Tabelas de rota VPC*: Selecione a tabela de rota VPC para habilitar o acesso do cliente aos volumes.
+.. *Intervalo de endereços IP do endpoint*: Selecione *intervalo de endereços IP flutuante fora da VPC* ou *Introduza um intervalo de endereços IP* e introduza um intervalo de endereços IP.
+.. *Criptografia*: Selecione o nome da chave de criptografia no menu suspenso.
+
+
+. Em Detalhes do sistema de arquivos, forneça o seguinte:
++
+.. *Capacidade de armazenamento SSD*: Introduza a capacidade de armazenamento e selecione a unidade de capacidade de armazenamento.
+.. *IOPS provisionados*: Selecione *Automático* ou *aprovisionado pelo usuário*.
+.. *Capacidade de taxa de transferência por par de HA*: Selecione a capacidade de taxa de transferência por par de HA.
+.. *Credenciais ONTAP*: Insira seu nome de usuário e senha do ONTAP.
+.. * Credenciais de armazenamento de VM*: Insira seu nome de usuário. A palavra-passe pode ser específica para este sistema de ficheiros ou caso utilize a mesma palavra-passe introduzida para as credenciais ONTAP.
+.. *Configuração SMB/CIFS*: Opcional. Se você planeja usar o protocolo SMB/CIFS para acessar volumes, configure o ative Directory para a VM de storage durante a criação do sistema de arquivos. Forneça os detalhes a seguir para a VM de storage criada para esse sistema de arquivos.
++
+... *Domínio do ative Directory para ingressar*: Insira o nome de domínio totalmente qualificado (FQDN) para o ative Directory.
+... *Endereços IP DNS*: Insira até três endereços IP DNS separados por vírgulas.
+... *Nome NetBIOS do servidor SMB*: Insira o nome NetBIOS do servidor SMB do objeto computador do ative Directory a ser criado para sua VM de armazenamento. Este é o nome desta VM de armazenamento no ative Directory.
+... *Nome de utilizador*: Introduza o nome de utilizador da conta de serviço no ative Directory existente.
++
+Não inclua um prefixo ou sufixo de domínio. Para `EXAMPLE\ADMIN`, use `ADMIN`.
+
+... *Senha*: Insira a senha da conta de serviço.
+... * Unidade de organização*: Opcionalmente, insira o nome da Unidade organizacional onde você pretende criar a conta de computador para o FSX for ONTAP. A UO é o nome de caminho distinto da unidade organizacional à qual você deseja ingressar no sistema de arquivos.
+... *Grupo de administradores delegados*: Opcionalmente, insira o nome do grupo no ative Directory que pode administrar seu sistema de arquivos.
++
+Se você estiver usando o AWS Managed Microsoft AD, você deve especificar um grupo como Administradores delegados do FSX da AWS, Administradores delegados da AWS ou um grupo personalizado com permissões delegadas na UO.
+
++
+Se você estiver se juntando a um AD autogerenciado, use o nome do grupo em seu AD. O grupo padrão é `Domain Admins`.
+
+
+
+
+
+. Em Backup e manutenção, forneça o seguinte:
++
+.. *FSX para backup ONTAP*: Backups automáticos diários são ativados por padrão. Desative, se desejado.
++
+... *Período de retenção de backup automático*: Insira o número de dias para reter backups automáticos.
+... *Janela de backup automático diário*: Selecione *sem preferência* (uma hora de início de backup diário está selecionada para você) ou *Selecione hora de início para backups diários* e especifique uma hora de início.
+... *Janela de manutenção semanal*: Selecione *Nenhuma preferência* (uma hora de início semanal da janela de manutenção está selecionada para você) ou *Selecione hora de início para a janela de manutenção semanal de 30 minutos* e especifique uma hora de início.
+
+
+
+
+. Salve ou crie o sistema de arquivos.
+
+
+Se você criou o sistema de arquivos, agora você pode visualizar o sistema de arquivos FSX for ONTAP na página *Inventário*.
+
+--
+====
+.O que vem a seguir
+Com um sistema de arquivos em seu inventário de armazenamento, você pode link:create-volume.html["criar volumes"]gerenciar seu sistema de arquivos FSX for ONTAP e configurar link:data-protection-overview.html["proteção de dados"]seus recursos.

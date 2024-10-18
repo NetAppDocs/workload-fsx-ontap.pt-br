@@ -1,0 +1,169 @@
+---
+settings:
+  name: Amazon FSx for NetApp ONTAP
+  platform: cloud
+  internal:
+    pdf_enabled: true
+    termcheck_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  release_notes_autogen:
+    release_notes_repo: workload-relnotes
+  langs: pt-br,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr,it-it
+sidebar:
+  entries:
+  - title: Documentos do Amazon FSX para NetApp ONTAP
+    url: "/index.html"
+  - title: Notas de lançamento
+    entries:
+    - title: O que há de novo
+      url: "/whats-new.html"
+    - title: Limitações conhecidas
+      url: "/known-limitations.html"
+  - title: Comece agora
+    entries:
+    - title: Saiba mais sobre o Amazon FSX for NetApp ONTAP
+      url: "/learn-fsx-ontap.html"
+    - title: Início rápido
+      url: "/quick-start.html"
+    - title: Crie um sistema de arquivos FSX for ONTAP
+      url: "/create-file-system.html"
+  - title: Use o Amazon FSX para NetApp ONTAP
+    entries:
+    - title: Explore as poupanças
+      url: "/explore-savings.html"
+    - title: Use links
+      entries:
+      - title: Descrição geral da ligação
+        url: "/links-overview.html"
+      - title: Crie um link
+        url: "/create-link.html"
+      - title: Gerenciar links
+        url: "/manage-links.html"
+    - title: Gerenciar volumes
+      entries:
+      - title: Crie um volume
+        url: "/create-volume.html"
+      - title: Acesse seus dados
+        url: access-data.html
+    - title: Crie uma VM de storage
+      url: "/create-storage-vm.html"
+    - title: Proteja seus dados
+      entries:
+      - title: Visão geral da proteção de dados
+        url: "/data-protection-overview.html"
+      - title: Gerenciar snapshots
+        entries:
+        - title: Criar um instantâneo
+          url: "/create-snapshot.html"
+        - title: Criar uma política de snapshot
+          url: "/create-snapshot-policy.html"
+        - title: Restaurar um volume a partir de um instantâneo
+          url: "/restore-volume-from-snapshot.html"
+        - title: Criar um novo volume a partir de um instantâneo
+          url: "/create-volume-from-snapshot.html"
+      - title: Gerenciar backups para o storage de objetos
+        entries:
+        - title: Crie uma cópia de segurança manual
+          url: "/create-backup.html"
+        - title: Restaurar um volume a partir de uma cópia de segurança
+          url: "/restore-from-backup.html"
+      - title: Gerenciar a replicação
+        entries:
+        - title: Crie uma relação de replicação
+          url: "/create-replication.html"
+        - title: Inicializar uma relação de replicação
+          url: "/initialize-replication.html"
+      - title: Clonar um volume
+        url: clone-volume.html
+  - title: Administrar e monitorar
+    entries:
+    - title: Administração de volumes
+      entries:
+      - title: Edite o volume com crescimento automático
+        url: "/edit-volume-autogrow.html"
+      - title: Aumentar a capacidade de volume
+        url: "/increase-volume-capacity.html"
+      - title: Editar etiquetas de volume
+        url: "/edit-volume-tags.html"
+      - title: Rebalancear a capacidade de um volume
+        url: "/rebalance-volume.html"
+      - title: Alterar a política de disposição em camadas
+        url: "/change-tiering-policy.html"
+      - title: Altere a política de exportação NFS
+        url: "/change-nfs-export-policy.html"
+      - title: Altere o compartilhamento CIFS
+        url: "/change-cifs-share.html"
+      - title: Divida um volume clonado
+        url: split-cloned-volume.html
+      - title: Eliminar um volume
+        url: "/delete-volume.html"
+    - title: Administração do sistema de arquivos
+      entries:
+      - title: Aumentar a capacidade do sistema de arquivos
+        url: "/increase-file-system-capacity.html"
+      - title: Ativar o gerenciamento automático de capacidade
+        url: "/enable-auto-capacity-management.html"
+      - title: Repor a palavra-passe do fsxadmin
+        url: "/reset-fsxadmin-password.html"
+      - title: Eliminar um sistema de ficheiros
+        url: "/delete-file-system.html"
+    - title: Administração da VM de storage
+      entries:
+      - title: Replique uma VM de storage para outro sistema de arquivos
+        url: "/replicate-svm-to-file-system.html"
+      - title: Configurar e atualizar o ative Directory para uma VM de armazenamento
+        url: "/configure-active-directory.html"
+      - title: Editar tags de VM de armazenamento
+        url: "/edit-svm-tags.html"
+      - title: Repor a palavra-passe da VM de armazenamento
+        url: reset-svm-password.html
+      - title: Exclua uma VM de armazenamento
+        url: "/delete-svm.html"
+    - title: Administração da proteção de dados
+      entries:
+      - title: Alterar a política de snapshot de um volume
+        url: change-snapshot-policy.html
+      - title: Atualize o agendamento de backup do FSX for ONTAP
+        url: "/update-backup-schedule.html"
+      - title: Habilite e edite snapshots para retenção de longo prazo
+        url: "/enable-snapshots-long-term.html"
+      - title: Inverta uma relação de replicação
+        url: "/reverse-replication.html"
+      - title: Alterar o agendamento de replicação de um volume de origem
+        url: "/change-replication-schedule.html"
+      - title: Limite a taxa máxima de transferência de uma relação de replicação
+        url: "/limit-transfer-rate.html"
+      - title: Atualização manual de dados instantâneos numa relação de replicação
+        url: "/update-snapshot-replication.html"
+      - title: Parar uma relação de replicação
+        url: "/stop-replication.html"
+      - title: Excluir uma relação de replicação
+        url: "/delete-replication.html"
+    - title: Administração da performance
+      entries:
+      - title: Provisione IOPS para um sistema de arquivos
+        url: "/provision-iops.html"
+      - title: Atualize a capacidade de transferência para um sistema de ficheiros
+        url: "/update-throughput-capacity.html"
+  - title: Referência
+    entries:
+    - title: Desempenho do FSX para ONTAP
+      url: "/performance-reference.html"
+    - title: Segurança para o FSX for ONTAP
+      url: "/security-reference.html"
+  - title: Conhecimento e apoio
+    entries:
+    - title: Registre-se para obter suporte
+      url: "/support-registration.html"
+    - title: Obtenha ajuda
+      url: "/get-help.html"
+    - title: Solução de problemas
+      url: "/troubleshooting.html"
+  - title: Avisos legais
+    url: "/legal-notices.html"
+product-family:
+  name: BlueXP Workload Factory for AWS
+  repo: workload-family

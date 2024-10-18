@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: limit-transfer-rate.html 
+keywords: limit max transfer rate, limit transfer rate 
+summary: Limite a taxa máxima de transferência de uma relação de replicação. Uma taxa de transferência ilimitada pode afetar negativamente o desempenho de outros aplicativos e sua rede. 
+---
+= Limite a taxa máxima de transferência de uma relação de replicação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Limite a taxa máxima de transferência de uma relação de replicação. Uma taxa de transferência ilimitada pode afetar negativamente o desempenho de outros aplicativos e sua rede.
+
+.Sobre esta tarefa
+Limitar a taxa máxima de transferência é opcional, mas recomendado. Sem um limite, o desempenho da rede e do aplicativo pode declinar.
+
+Como alternativa, recomendamos uma taxa de transferência ilimitada para os sistemas de arquivos FSX for ONTAP para cargas de trabalho críticas, por exemplo, aquelas que são usadas principalmente para recuperação de desastres.
+
+.Antes de começar
+Considere a quantidade de largura de banda a alocar para replicação.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, clique no menu de três pontos do sistema de arquivos para atualizar e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *relacionamentos de replicação*.
+. Na guia relacionamentos de replicação, clique no menu três pontos da relação de replicação para limitar a taxa máxima de transferência.
+. Selecione *Editar taxa de transferência máxima*.
+. Na caixa de diálogo Edit Max transfer rate (Editar taxa de transferência máxima), selecione *Limited* (limitado) e introduza o limite máximo de transferência em MB/s.
++
+Em alternativa, selecione *Unlimited*.
+
+. Clique em *aplicar*.
+

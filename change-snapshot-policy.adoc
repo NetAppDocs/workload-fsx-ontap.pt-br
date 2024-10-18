@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: change-snapshot-policy.html 
+keywords: snapshot policy, snapshot schedule, modify snapshot policy, edit snapshot policy, change snapshot policy 
+summary: Atualize a política de instantâneos de um volume a qualquer momento. 
+---
+= Alterar a política de snapshot de um volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Atualize a política de instantâneos de um volume a qualquer momento.
+
+.Sobre esta tarefa
+Esta operação atualiza a frequência de instantâneos obtidos para um volume ou desativa instantâneos automáticos.
+
+.Antes de começar
+É necessário um link para exibir as políticas de snapshot existentes. Para associar um link, clique em *associar link* em *Nome da conta*. Em seguida, volte a esta operação.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Selecione a guia *volumes*.
+. Na guia *volumes*, selecione o menu de três pontos do volume para alterar a política de snapshot.
+. Selecione *ações de proteção de dados*, *Snapshots* e, em seguida, *Gerenciar políticas de snapshot*.
+. Na página de gerenciamento de políticas de snapshot, selecione *alterar uma política de snapshot existente*.
+. No campo *Nome da política de instantâneo* , selecione uma política de instantâneo diferente para este volume.
++
+Para desativar instantâneos automáticos, `none` selecione .
+
++
+Se não existirem outras políticas de snapshotlink:create-snapshot-policy.html["crie uma nova política de snapshot para esse volume"], .
+
+. Clique em *aplicar*.
+

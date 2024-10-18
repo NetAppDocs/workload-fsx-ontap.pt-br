@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: enable-auto-capacity-management.html 
+keywords: auto capacity, automatic capacity management, file system capacity 
+summary: Ativar este recurso permite que o Workload Factory adicione automaticamente armazenamento incremental a um sistema de arquivos FSX for ONTAP, conforme as necessidades de capacidade mudam ao longo do tempo. 
+---
+= Ative o gerenciamento automático de capacidade para um sistema de arquivos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ativar este recurso permite que o Workload Factory adicione automaticamente armazenamento incremental a um sistema de arquivos FSX for ONTAP, conforme as necessidades de capacidade mudam ao longo do tempo.
+
+.Sobre esta tarefa
+Somente uma conta pode gerenciar esse recurso.
+
+A quantidade máxima de capacidade de armazenamento SSD para todos os sistemas de arquivos FSX for ONTAP é de 524.288 GiB. Para solicitar um aumento de cota, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quotas"^]documentação do AWS FSX for NetApp ONTAP.
+
+.Antes de começar
+Você deve ter credenciais com permissões _Automate_ no Workload Factory para concluir esta tarefa.
+
+.Passos
+. Faça login no console do Workload Factory.
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, clique no menu de três pontos do sistema de arquivos para habilitar o gerenciamento automático de capacidade.
+. Selecione *Gerenciar*.
+. Em informações, clique no ícone de lápis ao lado de *Gerenciamento automático de capacidade*. O ícone de lápis aparece ao lado da seta suspensa quando o Mouse passa sobre a linha *Gerenciamento automático de capacidade*.
+. Na caixa de diálogo *Gerenciamento automático de capacidade*, forneça o seguinte:
++
+.. *Credenciais*: Selecione credenciais com permissões _Automate_ no menu suspenso.
+.. Clique no botão Enable (Ativar) para *Enable automatic capacity Management* (Ativar gestão automática de capacidade).
++
+Em alternativa, desative a funcionalidade. Se você precisar aumentar a capacidade do sistema de arquivos, primeiro desative o gerenciamento automático de capacidade.
+
+.. *Limite de capacidade*: Insira o tamanho máximo do sistema de arquivos FSX for ONTAP.
+.. *Incrementos de aumento de capacidade*: Insira a porcentagem para aumentar a capacidade de forma incremental.
+
+
+. Clique em *aplicar*.
+

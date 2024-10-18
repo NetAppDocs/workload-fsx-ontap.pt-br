@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: split-cloned-volume.html 
+keywords: split clone volume, FlexVol volume 
+summary: Divida um clone FlexVol volume de seu volume pai para tornar o clone um FlexVol volume normal de leitura e gravação. 
+---
+= Divida um volume clonado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Divida um FlexVol volume clonado de seu volume pai para tornar o clone um FlexVol volume normal de leitura e gravação.
+
+Os dados podem ser acessados no clone e no pai durante a divisão. O processo de divisão atualiza apenas os metadados e requer o mínimo de e/S. Nenhum bloco de dados é copiado.
+
+.Sobre esta tarefa
+A operação de divisão de clones envolve o seguinte:
+
+* Não é possível criar novas cópias snapshot do volume FlexClone durante a operação de divisão.
+* Um volume FlexClone não pode ser dividido do volume pai se pertencer a uma relação de proteção de dados.
+* Se você colocar o volume FlexClone offline enquanto a divisão estiver em andamento, a operação de divisão será suspensa; quando você colocar o volume FlexClone novamente on-line, a operação de divisão será retomada.
+* Após a divisão, tanto o FlexVol volume pai quanto o clone exigem a alocação de espaço total determinada por suas garantias de volume.
+* Depois que um volume FlexClone é dividido de seu pai, os dois não podem ser rejuntados.
+
+
+.Antes de começar
+Considere o seguinte antes de dividir um volume clonado:
+
+* Para dividir um volume clonado, é link:manage-links.html["associe um link"]necessário . Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, clique em *associar link* em *nome da conta*. Assim que o link se associar, volte a esta operação.
+* Você deve ser um administrador de cluster.
+* O volume FlexClone deve estar online quando a operação de divisão começar.
+* O volume principal deve estar online para que a divisão tenha sucesso.
+
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Selecione a guia *volumes*.
+. Na guia volumes, selecione o menu de três pontos do volume com o volume clonado para dividir.
+. Selecione *ações de proteção de dados* e, em seguida, *volume clonado dividido*.
+. Na caixa de diálogo dividir volume, clique em *Excluir*.
+

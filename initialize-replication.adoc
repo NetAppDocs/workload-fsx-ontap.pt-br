@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: initialize-replication.html 
+keywords: initialize replication, begin replication, start replication 
+summary: Inicialize uma relação de replicação entre os volumes de origem e destino. 
+---
+= Inicializar uma relação de replicação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Inicialize uma relação de replicação entre os volumes de origem e destino.
+
+.Sobre esta tarefa
+A inicialização executa uma transferência _Baseline_: Ele faz um instantâneo do volume de origem e, em seguida, transfere o instantâneo e todos os blocos de dados que ele faz referência ao volume de destino.
+
+.Antes de começar
+Considere quando você optar por concluir esta operação. A inicialização pode ser demorada. Você pode querer executar a transferência de linha de base em horas fora do pico.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, clique no menu de três pontos do sistema de arquivos para atualizar e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *relacionamentos de replicação*.
+. Na guia relacionamentos de replicação, clique no menu três pontos da relação de replicação a ser inicializada.
+. Selecione *Inicializar*.
+. Na caixa de diálogo Inicializar relacionamento, clique em *Inicializar*.
+

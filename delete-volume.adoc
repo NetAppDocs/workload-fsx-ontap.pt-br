@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: delete-volume.html 
+keywords: delete volume, volume deletion 
+summary: Você pode excluir um volume em seu sistema de arquivos FSX for ONTAP a qualquer momento. Esta operação é irreversível. 
+---
+= Eliminar um volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode excluir um volume em seu sistema de arquivos FSX for ONTAP a qualquer momento. Esta operação é irreversível.
+
+.Antes de começar
+Considere o seguinte antes de excluir um volume:
+
+* Relacionamentos de replicação: É necessário link:delete-replication.html["eliminar todas as relações de replicação existentes"] para esse volume antes de excluir o volume para que não haja relacionamentos quebrados.
+* Snapshots locais: Todos os snapshots associados a este sistema de arquivos FSX for ONTAP serão excluídos permanentemente.
+* Backup do FSX para ONTAP: As cópias de backup do FSX for ONTAP permanecerão e você ainda poderá usá-las.
+
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume a ser excluído e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
+. Na guia volumes, selecione o menu de três pontos do volume a ser excluído.
+. Selecione *ações básicas* e, em seguida, *Excluir volume*.
+. Na caixa de diálogo Excluir volume, faça o seguinte:
++
+.. Opcionalmente, clique em *fazer backup do volume* para fazer backup do volume antes da exclusão.
++
+O backup permanecerá no sistema de arquivos até que você o exclua manualmente.
+
+.. Clique em *continuar*.
+.. Digite "delete" para excluir o volume.
+.. Clique em *Excluir*.
+
+
+

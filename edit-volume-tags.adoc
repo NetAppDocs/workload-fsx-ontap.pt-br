@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: edit-volume-tags.html 
+keywords: volume tags, edit volume tags, edit tags 
+summary: As tags podem ajudá-lo a categorizar seus recursos. Você pode adicionar, editar e remover tags de volume a qualquer momento para o FSX for ONTAP volumes. 
+---
+= Editar etiquetas de volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+As tags podem ajudá-lo a categorizar seus recursos. Você pode adicionar, editar e remover tags de volume a qualquer momento para o FSX for ONTAP volumes.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume a ser atualizado e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
+. Na guia volumes, clique no menu três pontos para o volume para modificar tags.
+. Selecione *ações básicas* e, em seguida, *Editar etiquetas de volume*.
+. Na página Editar etiquetas de volume, adicione, edite ou remova tags.
++
+O número máximo de tags que você pode aplicar a um volume é 50.
+
+. Clique em *aplicar*.
+

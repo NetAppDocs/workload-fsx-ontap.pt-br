@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: change-cifs-share.html 
+keywords: cifs, CIFS, cifs share, change cifs share, update cifs share, modify cifs share 
+summary: Altere o compartilhamento CIFS de um volume que usa o tipo de protocolo SMB/CIFS. 
+---
+= Altere o compartilhamento CIFS de um volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Alterar o compartilhamento CIFS de um volume envolve determinar os usuários e grupos para dar acesso e o tipo de acesso a eles.
+
+.Antes de começar
+Determine os usuários ou grupos a dar acesso e o tipo de acesso a eles.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume a ser atualizado e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
+. Na guia volumes, clique no menu três pontos do volume para alterar o compartilhamento SMB.
+. Selecione *ações avançadas* e, em seguida, *Editar compartilhamento CIFS*.
+. Na página Editar compartilhamento CIFS, forneça o seguinte:
++
+.. *Usuários ou grupos*: Insira usuários e grupos válidos. Separe cada entrada por um ponto e vírgula ";".
+.. *Permissões*: Selecione *Controle completo*, *leitura/gravação*, *leitura* ou *sem acesso*.
+
+
+. Clique em *aplicar*.
+

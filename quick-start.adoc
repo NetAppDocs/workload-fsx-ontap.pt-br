@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: quick-start.html 
+keywords: Amazon FSx for NetApp ONTAP, fsx, netapp, quick, get started, install, deploy, setup, launch, requirements, prerequisites, credentials, permissions, policy 
+summary: Você pode começar a usar o FSX for ONTAP em apenas alguns passos. 
+---
+= Início rápido para fábrica de cargas de trabalho para Amazon FSX for NetApp ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Com o Workload Factory para o Amazon FSX for NetApp ONTAP, você pode começar imediatamente no modo _Basic_.
+
+Se você quiser usar o Workload Factory para criar um sistema de arquivos, gerenciar recursos e muito mais, você pode começar em alguns passos. Nesse caso, você precisa de uma conta da AWS para começar.
+
+Siga estes passos para começar.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Inicie sessão no Workload Factory
+[role="quick-margin-para"]
+Você vai precisar link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["Configure uma conta com o Workload Factory"^] de e. link:https://console.workloads.netapp.com["inicie sessão"^]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Adicione credenciais e permissões
+[role="quick-margin-para"]
+Escolha entre _Basic_ e _Automate_ link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modos operacionais"^]
+
+[role="quick-margin-para"]
+Se você optar por operar no modo _básico_, não precisará ir mais longe. Você pode começar a usar o Workload Factory para FSX for ONTAP para copiar amostras de código parcialmente concluídas.
+
+[role="quick-margin-para"]
+Se você operar no modo _Automate_, precisará link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["adicione credenciais a uma conta manualmente"^]selecionar os recursos de carga de trabalho, como bancos de dados e IA, e criar as políticas do IAM para garantir que você tenha as permissões corretas para operar no modo _Automate_.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] Crie um sistema de arquivos
+[role="quick-margin-para"]
+Você vai criar um sistema de arquivos FSX para começar a gerenciar seu armazenamento e os recursos do FSX for ONTAP no Workload Factory. No link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^], em armazenamento, clique em *criar sistema de arquivos*. link:create-file-system.html["Saiba como criar um sistema de arquivos"].
+
+[role="quick-margin-para"]
+Você também pode começar com a calculadora de economia de armazenamento para comparar os custos de seus ambientes de armazenamento Amazon Elastic Block Store, Elastic File System e FSX for Windows File Server com o FSX for ONTAP. link:explore-savings.html["Explore as economias com a calculadora de economia de armazenamento."]
+
+.O que vem a seguir
+Com um sistema de arquivos em seu inventário de armazenamento, você pode link:create-volume.html["criar volumes"]gerenciar seu sistema de arquivos FSX for ONTAP e configurar a proteção de dados para seus recursos.

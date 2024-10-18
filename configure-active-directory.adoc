@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: configure-active-directory.html 
+keywords: configure AD, configure active directory, update ad, edit active directory 
+summary:  
+---
+= Configurar e atualizar o ative Directory para uma VM de armazenamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Configure e atualize o ative Directory para uma VM de armazenamento em um sistema de arquivos FSX for ONTAP.
+
+.Sobre esta tarefa
+As mesmas etapas se aplicam à configuração e atualização do ative Directory para uma VM de armazenamento.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, clique no menu de três pontos do sistema de arquivos com a VM de armazenamento para atualizar e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *Storage VMs*.
+. Na guia VMs de armazenamento, selecione o menu três pontos da VM de armazenamento para o qual você deseja configurar o ative Directory.
+. Selecione *Gerenciar configuração do AD*.
+. Na página Gerenciar configuração do AD, forneça o seguinte:
++
+.. *Domínio do ative Directory para ingressar*: Insira o nome de domínio totalmente qualificado (FQDN) do seu ative Directory.
+.. *Endereços IP DNS*: Insira até três endereços IP separados por vírgulas.
+.. *Nome NetBIOS do servidor SMB*: Insira o nome NetBIOS do servidor SMB do objeto computador do ative Directory a ser criado para sua VM de armazenamento. Esse é o nome desta SVM no active Directory.
+.. *Nome de utilizador*: Introduza o nome de utilizador da conta de serviço no ative Directory existente.
++
+Não inclua um prefixo ou sufixo de domínio. Para `EXAMPLE\ADMIN`, use `ADMIN`.
+
+.. *Senha*: Insira a senha da conta de serviço.
+.. *Unidade de organização (ou)*: Insira a unidade da organização.
++
+A UO é o nome de caminho distinto da unidade organizacional à qual você deseja ingressar no sistema de arquivos.
+
+.. *Grupo de administradores delegados*: Opcionalmente, insira o grupo de administradores do sistema de arquivos delegados.
++
+O grupo de administradores delegados é o nome do grupo no ative Directory que pode administrar o sistema de arquivos.
+
++
+Se você estiver usando o AWS Managed Microsoft AD, você deve especificar um grupo como Administradores delegados do FSX da AWS, Administradores delegados da AWS ou um grupo personalizado com permissões delegadas na UO.
+
++
+Se você estiver se conetando a um AD autogerenciado, use o nome do grupo no AD. O grupo padrão é `Domain Admins`.
+
+
+
+. Clique em *aplicar*.
+

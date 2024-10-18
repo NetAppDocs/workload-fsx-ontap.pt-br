@@ -1,0 +1,151 @@
+---
+sidebar: sidebar 
+permalink: create-volume.html 
+keywords: create volume, FSx for ONTAP volume 
+summary: Depois de configurar seu sistema de arquivos FSX for ONTAP, você pode criar o FSX for ONTAP volumes. 
+---
+= Crie um volume FSX for ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Depois de configurar seu sistema de arquivos FSX for ONTAP, você pode criar o FSX for ONTAP volumes.
+
+.Sobre esta tarefa
+O FSX para ONTAP volumes são recursos virtuais usados para agrupar dados, determinar como os dados são armazenados e determinar o tipo de acesso aos seus dados. Os volumes não consomem a capacidade de storage do sistema de arquivos. Os dados armazenados em um volume consomem principalmente o armazenamento SSD. Dependendo da política de disposição em camadas do volume, os dados também podem consumir o storage do pool de capacidade. Você define o tamanho de um volume ao criá-lo e pode alterar seu tamanho mais tarde.
+
+Os seguintes protocolos podem ser usados para seus volumes:
+
+* CIFS: Protocolo de armazenamento de arquivos para sistemas operacionais Windows
+* NFS: Protocolo de armazenamento de arquivos para sistemas operacionais Unix
+* ISCSI: Protocolo de armazenamento de bloco
+
+
+.Antes de começar
+Reveja os seguintes pré-requisitos antes de criar um volume:
+
+* Você deve ter um sistema de arquivos FSX for ONTAP no Workload Factory.
+* Você precisa ter uma VM de storage.
+* Para acesso ao protocolo, execute o seguinte:
++
+** Para configurar o acesso ao volume, é link:manage-links.html["associe um link"]necessário . Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, clique em *associar link* em *nome da conta*. Assim que o link se associar, volte a esta operação.
+** Tem de configurar o acesso para o protocolo selecionado, seja CIFS, NFS ou iSCSI.
+
+
+
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos no qual você deseja criar um volume e selecione *Gerenciar*.
+. Na guia *Visão geral*, clique em *criar volume*.
+. Na página criar volume em Detalhes gerais, forneça os seguintes detalhes:
++
+.. *Nome do volume*: Insira um nome para o volume.
+.. *Storage VM name*: Opcionalmente, insira um nome de VM de armazenamento.
+.. *Estilo de volume*: Selecione o volume *FlexVol* ou *FlexGroup*.
++
+O estilo FlexVol volume é selecionado por padrão.
+
++
+O tamanho do volume FlexGroup depende do número de componentes. 100 GiB é exigido por constituinte.
+
+.. *Tamanho do volume*: Introduza o tamanho do volume e a unidade.
++
+Opcionalmente, ative o volume com crescimento automático. Esta opção está disponível quando você seleciona *Acesso a arquivos* como o tipo de acesso de volume.
+
+.. *Tags*: Opcionalmente, você pode adicionar até 50 tags.
+
+
+. Em Access (somente para sistemas de arquivos com links associados), forneça os seguintes detalhes:
++
+.. *Tipo de acesso*: Selecione *Acesso a arquivos* ou *Acesso a blocos*. Os campos adicionais para configurar o acesso ao volume diferem dependendo da sua seleção.
++
+*** *Acesso a arquivos*: Permite que vários usuários e dispositivos autorizados acessem o volume usando protocolos SMB/CIFS, NFS ou dual (SMB/NFS).
++
+Preencha os campos a seguir para configurar o acesso de arquivos ao volume.
+
++
+.... *Política de exportação NFS*: Forneça os seguintes detalhes para fornecer acesso NFS:
++
+..... *Controle de acesso*: Selecione uma política de exportação personalizada*, *Política de exportação existente* ou *nenhum acesso ao volume* no menu suspenso.
+..... *Nome da política de exportação*:
++
+Se você selecionou uma política de exportação personalizada, selecione um nome de política existente no menu suspenso.
+
++
+Se tiver selecionado uma política de exportação existente, introduza um novo nome de política.
+
+..... *Adicionar regra de política de exportação*: Opcionalmente, para uma política de exportação personalizada, você pode adicionar regras de política de exportação à política.
+
+
+.... *Compartilhamento CIFS*: Insira o nome do compartilhamento CIFS para fornecer acesso SMB.
+
+
+*** *Acesso por bloco*: Permite aos hosts que executam aplicativos empresariais críticos acesso ao volume usando o protocolo iSCSI.
++
+Preencha os campos a seguir para configurar o acesso de bloco ao volume.
+
++
+.... *Configuração iSCSI*: Forneça os seguintes detalhes para configurar iSCSI para bloquear o acesso ao volume.
++
+..... Selecione *criar um novo grupo de iniciadores* ou *mapear um grupo de iniciadores existente*.
+..... Selecione o *sistema operativo anfitrião* no menu pendente.
+..... Insira um *Nome do grupo do iniciador* para um novo grupo de iniciadores.
+..... Em iniciadores de host, adicione um ou mais iniciadores de host de nome qualificado iSCSI (IQN).
+
+
+
+
+
+
+
+
+. Sob a eficiência e a proteção, forneça os seguintes detalhes:
++
+.. *Eficiência de armazenamento*: Desativar ou ativar a eficiência de armazenamento.
++
+A eficiência de storage é obtida com a utilização de recursos de deduplicação e compactação do ONTAP. A deduplicação elimina blocos de dados duplicados. A compactação de dados compacta os blocos de dados para reduzir a quantidade de storage físico necessária.
+
+.. *Política de snapshot*: Selecione a política de snapshot para especificar a frequência e a retenção de snapshots.
++
+A seguir estão as políticas padrão da AWS. Para políticas de snapshot personalizadas, você deve associar um link.
+
++
+`default`:: Essa política cria automaticamente snapshots na programação a seguir, com as cópias snapshot mais antigas excluídas para abrir espaço para cópias mais recentes:
++
+--
+*** Um máximo de seis snapshots por hora feitos cinco minutos depois da hora.
+*** Um máximo de dois instantâneos diários tirados de segunda a sábado, 10 minutos após a meia-noite.
+*** Um máximo de dois instantâneos semanais tirados todos os domingos, 15 minutos após a meia-noite.
++
+
+NOTE: Os tempos de instantâneos baseiam-se no fuso horário do sistema de arquivos, que por padrão é Coordinated Universal Time (UTC). Para obter informações sobre como alterar o fuso horário, consulte a link:https://library.netapp.com/ecmdocs/ECMP1155684/html/GUID-E26E4C94-DF74-4E31-A6E8-1D2D2287A9A1.html["Apresentar e definir o fuso horário do sistema"^]documentação de suporte da NetApp.
+
+
+
+--
+`default-1weekly`:: Esta política funciona da mesma forma que a `default` política, exceto que só retém um instantâneo da programação semanal.
+`none`:: Esta política não tira instantâneos. Você pode atribuir essa diretiva a volumes para impedir que snapshots automáticos sejam feitos.
+
+
+.. *Política de disposição em categorias*: Selecione a política de disposição em categorias para os dados armazenados no volume.
++
+Auto é a política de disposição em camadas padrão ao criar um volume usando a interface do usuário. Para obter mais informações sobre políticas de disposição em camadas de volume, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidade de armazenamento de volume"^]documentação do AWS FSX for NetApp ONTAP.
+
+
+
+. Em Configuração avançada, forneça o seguinte:
++
+.. *Caminho de junção*: Insira o local no namespace da VM de armazenamento onde o volume é montado. O caminho de junção padrão é `/<volume-name>`.
+.. *Lista de agregados*: Apenas para volumes FlexGroup. Adicionar ou remover agregados. O número mínimo de agregados é um.
+.. *Número de componentes*: Apenas para volumes FlexGroup. Introduza o número de componentes por agregado. 100 GiB é exigido por constituinte.
+
+
+. Clique em *criar*.
+
+
+.Resultado
+A criação de volume é iniciada. Uma vez criado, o novo volume aparecerá na guia volumes.

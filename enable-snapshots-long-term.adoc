@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: enable-snapshots-long-term.html 
+keywords: snapshot long-term retention, enable long-term retention 
+summary: Altere a programação de replicação do volume de origem em uma relação de replicação. 
+---
+= Habilite e edite snapshots para retenção de longo prazo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Habilitar snapshots para retenção de longo prazo permite replicar snapshots específicos para recuperação de desastres de longo prazo.
+
+A retenção de longo prazo permite que os serviços empresariais continuem operando mesmo em caso de falha completa do local, dando suporte ao failover de aplicações de forma transparente, usando uma cópia secundária.
+
+As mesmas etapas se aplicam para habilitar e editar snapshots para retenção de longo prazo.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, clique no menu de três pontos do sistema de arquivos para atualizar e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *relacionamentos de replicação*.
+. Na guia relacionamentos de replicação, clique no menu três pontos da programação de relacionamento de replicação a ser alterada.
+. Selecione *Editar retenção a longo prazo*.
+. Na caixa de diálogo Editar retenção de longo prazo, ative ou desative snapshots para retenção de longo prazo.
+. Se você optar por desabilitar snapshots para retenção de longo prazo, clique em *aplicar* para concluir esta operação.
+. Se você optar por habilitar snapshots para retenção de longo prazo, escolha entre selecionar uma política existente ou criar uma nova política.
++
+.. Para uma política existente, selecione uma política existente no menu suspenso.
+.. Para criar uma nova política, forneça o seguinte:
++
+... *Nome da política*: Insira um nome de política.
+... *Políticas de snapshot*: Selecione uma ou mais políticas de snapshot.
+... *Cópias a reter*: Insira o número de cópias snapshot a serem mantidas no sistema de arquivos de destino.
+
+
+
+
+. Clique em *aplicar*.
+

@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: delete-replication.html 
+keywords: delete replication 
+summary: Exclua uma relação de replicação conforme necessário. 
+---
+= Excluir uma relação de replicação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Quando você exclui uma relação de replicação, ela remove a relação de replicação entre o volume de origem e destino. Após a exclusão da relação de replicação, ambos os volumes continuam a existir independentemente com os dados atuais que contêm.
+
+Quando você exclui uma relação de replicação, o FSX for ONTAP também exclui os snapshots de replicação comuns do volume de origem e destino.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, clique no menu de três pontos do sistema de arquivos para atualizar e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *relacionamentos de replicação*.
+. Na guia relacionamentos de replicação, clique no menu três pontos da relação de replicação a ser excluída.
+. Selecione *Eliminar*.
+. Na caixa de diálogo Excluir relacionamento, clique em *Excluir*.
+

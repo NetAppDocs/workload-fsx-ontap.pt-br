@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: update-throughput-capacity.html 
+keywords: update throughput, change throughput, throughput capacity 
+summary: Atualize a capacidade de transferência para um sistema de ficheiros FSX for ONTAP, conforme necessário. 
+---
+= Atualize a capacidade de transferência para um sistema de ficheiros
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Atualize a capacidade de transferência para um sistema de ficheiros FSX for ONTAP, conforme necessário.
+
+Para saber os limites de capacidade de taxa de transferência, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quotas"^]documentação do AWS FSX for NetApp ONTAP.
+
+.Passos
+. Faça login no console do Workload Factory.
+. Em armazenamento, clique em *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, clique no menu de três pontos do sistema de arquivos para atualizar a capacidade de taxa de transferência e selecione *Gerenciar*.
+. Em informações, clique no ícone de lápis ao lado de *capacidade de transferência*. O ícone de lápis aparece ao lado da seta suspensa quando o Mouse passa sobre a linha *capacidade de transferência*.
+. Na caixa de diálogo capacidade de throughput, selecione a capacidade de throughput que você precisa.
+. Clique em *aplicar*.
+

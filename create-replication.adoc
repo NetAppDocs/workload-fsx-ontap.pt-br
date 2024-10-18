@@ -1,0 +1,127 @@
+---
+sidebar: sidebar 
+permalink: create-replication.html 
+keywords: replication, replicate 
+summary: Crie uma relação de replicação para um sistema de arquivos FSX for ONTAP para evitar a perda de dados em caso de um desastre inesperado. 
+---
+= Crie uma relação de replicação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Crie uma relação de replicação para um sistema de arquivos FSX for ONTAP para evitar a perda de dados em caso de um desastre inesperado.
+
+.Sobre esta tarefa
+A replicação é uma camada adicional de proteção de dados que é essencial para o caso de uma região onde seus dados residem sofrer um desastre. A perda de dados pode ser evitada se você usar replicação entre regiões.
+
+Essa operação cria uma relação de replicação para um ou todos os volumes de origem em um sistema de arquivos FSX for ONTAP.
+
+Os volumes replicados no sistema de arquivos de destino seguem o formato de nomenclatura `{OriginalVolumeName}_copy`: .
+
+.Antes de começar
+Certifique-se de que cumpre os seguintes pré-requisitos antes de começar.
+
+* Você precisa ter dois sistemas de arquivos disponíveis no inventário de storage para criar uma relação de replicação.
+* Os dois sistemas de arquivos usados para a relação de replicação devem ter um link associado. Se os sistemas de arquivos não tiverem links existentes, link:create-link.html["primeiro crie um link"]. Para link:manage-links.html["associe um link"]nos sistemas de arquivos, clique em *associar link* em *Nome da conta*. Quando o link se associar em ambos os sistemas de arquivos, retorne a esta operação.
+
+
+Siga as etapas a seguir para replicar um único volume ou replicar todos os volumes em um sistema de arquivos.
+
+[role="tabbed-block"]
+====
+.Replique um único volume
+--
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos que contém o volume a ser replicado e selecione *Gerenciar*.
+. Na guia volumes, selecione o menu de três pontos do volume a ser replicado.
+. Selecione *ações de proteção de dados* e depois *replique dados de volume*.
+. Na página criar replicação, em destino replicação, forneça o seguinte:
++
+.. *FSX para sistema de arquivos ONTAP*: Selecione credenciais, região e nome do sistema de arquivos FSX for ONTAP para o sistema de arquivos FSX for ONTAP de destino.
+.. *Nome da VM de armazenamento*: Selecione a VM de armazenamento no menu suspenso.
+.. *Nome do volume*: O nome do volume de destino é gerado automaticamente com o seguinte `{OriginalVolumeName}_copy` formato . Pode utilizar o nome do volume gerado automaticamente ou introduzir outro nome de volume.
+.. *Política de disposição em categorias*: Selecione a política de disposição em categorias para os dados armazenados no volume de destino.
++
+_Auto_ é a política de disposição em camadas padrão ao criar um volume usando a interface de usuário do Workload Factory FSX for ONTAP. Para obter mais informações sobre políticas de disposição em camadas de volume, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidade de armazenamento de volume"^]documentação do AWS FSX for NetApp ONTAP.
+
+.. *Taxa máxima de transferência*: Selecione *limitada* e insira o limite máximo de transferência em MB/s. Em alternativa, selecione *Unlimited*.
++
+Sem um limite, o desempenho da rede e do aplicativo pode declinar. Como alternativa, recomendamos uma taxa de transferência ilimitada para os sistemas de arquivos FSX for ONTAP para cargas de trabalho críticas, por exemplo, aquelas que são usadas principalmente para recuperação de desastres.
+
+
+
+. Em Configurações de replicação, forneça o seguinte:
++
+.. *Intervalo de replicação*: Selecione a frequência em que os instantâneos são transferidos do volume de origem para o volume de destino.
+.. *Retenção de longo prazo*: Opcionalmente, habilite snapshots para retenção de longo prazo.
++
+Se você habilitar a retenção a longo prazo, selecione uma política existente ou crie uma nova política para definir os snapshots a serem replicados e o número a ser retido.
+
++
+... Para *escolha uma política existente*, selecione uma política existente no menu suspenso.
+... Para *criar uma nova política*, forneça o seguinte:
++
+.... *Nome da política*: Insira um nome de política.
+.... *Políticas de snapshot*: Na tabela, selecione a frequência da política de snapshot e o número de cópias a reter. Pode selecionar mais de uma política de instantâneos.
+
+
+
+
+
+
+. Clique em *criar*.
+
+
+--
+.Replique todos os volumes em um sistema de arquivos
+--
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia FSX for ONTAP, clique no menu de três pontos do sistema de arquivos com os volumes e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione *criar replicação*.
+. Na página criar replicação, em destino replicação, forneça o seguinte:
++
+.. *FSX para sistema de arquivos ONTAP*: Selecione credenciais, região e nome do sistema de arquivos FSX for ONTAP para o sistema de arquivos FSX for ONTAP de destino.
+.. *Nome da VM de armazenamento*: Selecione a VM de armazenamento no menu suspenso.
+.. *Nome do volume*: O nome do volume de destino é gerado automaticamente com o seguinte `{OriginalVolumeName}_copy` formato .
+.. *Política de disposição em categorias*: Selecione a política de disposição em categorias para os dados armazenados no volume de destino.
++
+_Auto_ é a política de disposição em camadas padrão ao criar um volume usando a interface de usuário do Workload Factory FSX for ONTAP. Para obter mais informações sobre políticas de disposição em camadas de volume, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidade de armazenamento de volume"^]documentação do AWS FSX for NetApp ONTAP.
+
+.. *Taxa máxima de transferência*: Selecione *limitada* e insira o limite máximo de transferência em MB/s. Em alternativa, selecione *Unlimited*.
++
+Sem um limite, o desempenho da rede e do aplicativo pode declinar. Como alternativa, recomendamos uma taxa de transferência ilimitada para os sistemas de arquivos FSX for ONTAP para cargas de trabalho críticas, por exemplo, aquelas que são usadas principalmente para recuperação de desastres.
+
+
+
+. Em Configurações de replicação, forneça o seguinte:
++
+.. *Intervalo de replicação*: Selecione a frequência em que os instantâneos são transferidos do volume de origem para o volume de destino.
+.. *Retenção de longo prazo*: Opcionalmente, habilite snapshots para retenção de longo prazo.
++
+Se você habilitar a retenção a longo prazo, selecione uma política existente ou crie uma nova política para definir os snapshots a serem replicados e o número a ser retido.
+
++
+... Para *escolha uma política existente*, selecione uma política existente no menu suspenso.
+... Para *criar uma nova política*, forneça o seguinte:
++
+.... *Nome da política*: Insira um nome de política.
+.... *Políticas de snapshot*: Na tabela, selecione a frequência da política de snapshot e o número de cópias a reter. Pode selecionar mais de uma política de instantâneos.
+
+
+
+
+
+
+. Clique em *criar*.
+
+
+--
+====
+.Resultado
+A relação de replicação aparece na guia *relacionamentos de replicação*.
