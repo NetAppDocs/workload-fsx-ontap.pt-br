@@ -926,10 +926,8 @@
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Dois</block>
   <block id="27c19be9febabd1e2fb82d7a39784f2d" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Adicione credenciais e permissões</block>
   <block id="ba8b072b83c1e6db56e40bf48ddb0871" category="inline-link-macro">modos operacionais</block>
-  <block id="f7598943d19e0d869abf49ffa1bf32a4" category="paragraph">Escolha entre _Basic_ e _Automate_ <block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
   <block id="fad2f7a49be756f98f3e7a34ef811e09" category="paragraph">Se você optar por operar no modo _básico_, não precisará ir mais longe. Você pode começar a usar o Workload Factory para FSX for ONTAP para copiar amostras de código parcialmente concluídas.</block>
   <block id="ce8e7e98b5597e78e8fd7d6bc94729cb" category="inline-link-macro">adicione credenciais a uma conta manualmente</block>
-  <block id="6b6bb5bfce611b62621235836da5c8a9" category="paragraph">Se você operar no modo _Automate_, precisará <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>selecionar os recursos de carga de trabalho, como bancos de dados e IA, e criar as políticas do IAM para garantir que você tenha as permissões corretas para operar no modo _Automate_.</block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">Três</block>
   <block id="8c163240a45cebe17c44b7359252c96a" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Crie um sistema de arquivos</block>
   <block id="1a65b15a79983b5b42d6a3158b5b81e9" category="inline-link-macro">Saiba como criar um sistema de arquivos</block>
@@ -1157,4 +1155,6 @@
   <block id="ef045d17e80274aec5be009d1f13f5a2" category="sidebar">Provisione IOPS para um sistema de arquivos</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">Referência</block>
   <block id="231cf4c70d866b616c21baddaeed0696" category="sidebar">Solução de problemas</block>
+  <block id="f14fbd72eb1c8ba39f23e290779d3ac7" category="paragraph">Escolha entre _basic_, _read_ e _automate_ <block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
+  <block id="9b0784be448bb1dc8f08485434f9a91a" category="paragraph">Se você operar no modo _read_ ou _Automate_, precisará <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>selecionar recursos de carga de trabalho, como bancos de dados e IA, e criar as políticas do IAM para garantir que você tenha as permissões corretas para operar no modo _read_ ou _Automate_.</block>
 </blocks>
