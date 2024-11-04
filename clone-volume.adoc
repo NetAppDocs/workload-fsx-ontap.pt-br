@@ -25,7 +25,8 @@ Para que um volume clonado contenha todos os dados do volume pai e quaisquer nov
 .Passos
 . Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Selecione a guia *volumes*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos FSX for ONTAP que contém o volume para clonar e selecione *Gerenciar*.
+. Na guia Visão geral do sistema de arquivos, selecione a guia *volumes*.
 . Na guia volumes, selecione o menu de três pontos do volume a ser clonado.
 . Selecione *ações de proteção de dados* e, em seguida, *volume Clone*.
 . Na caixa de diálogo Clone volume (Clonar volume), introduza um nome para o clone de volume.

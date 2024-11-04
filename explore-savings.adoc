@@ -123,8 +123,8 @@ Siga as etapas abaixo da guia para sua seleção de armazenamento.
 .Passos
 . Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
-. No inventário de armazenamento, selecione a guia *Elastic Block Store (EBS)*.
-. Selecione a(s) instância(s) para comparar com o FSX for ONTAP e clique em *explorar economia*.
+. No inventário de armazenamento, selecione a guia *explorar economia*.
+. Na guia *Elastic Block Store (EBS)*, selecione a(s) instância(s) para comparar com o FSX for ONTAP e clique em *explorar economia*.
 . A calculadora de economia de armazenamento é exibida. As seguintes caraterísticas do sistema de storage são pré-preenchidas com base na(s) instância(s) selecionada(s):
 +
 .. *Caso de uso*: O caso de uso para sua configuração. Você pode alterar o caso de uso, se necessário.
@@ -142,7 +142,8 @@ Siga as etapas abaixo da guia para sua seleção de armazenamento.
 .Passos
 . Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
-. No inventário de armazenamento, selecione a guia *FSX for Windows File Server*.
+. No inventário de armazenamento, selecione a guia *explorar economia*.
+. Selecione a guia *FSX for Windows File Server*.
 . Selecione a(s) instância(s) para comparar com o FSX for ONTAP e clique em *explorar economia*.
 . A calculadora de economia de armazenamento é exibida. As seguintes características do sistema de storage são pré-preenchidas com base no tipo de implantação da(s) instância(s) selecionada(s):
 +
@@ -161,7 +162,8 @@ Siga as etapas abaixo da guia para sua seleção de armazenamento.
 .Passos
 . Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
-. No inventário de armazenamento, selecione a guia *Elastic File System (EFS)*.
+. No inventário de armazenamento, selecione a guia *explorar economia*.
+. Selecione a guia *Elastic File System (EFS)*.
 . Selecione a(s) instância(s) para comparar com o FSX for ONTAP e clique em *explorar economia*.
 . A calculadora de economia de armazenamento é exibida. As seguintes caraterísticas do sistema de storage são pré-preenchidas com base na(s) instância(s) selecionada(s):
 +

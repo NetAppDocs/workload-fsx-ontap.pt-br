@@ -96,7 +96,6 @@
   <block id="6c25e6a6da95b3d583c6ec4c3f82ed4d" category="list-text">Semanalmente</block>
   <block id="d8977131f7da0505ccdd8e33f901bb75" category="summary">Atualize a política de instantâneos de um volume a qualquer momento.</block>
   <block id="340f8dee912ac16b4fb008726d3ee88f" category="doc">Alterar a política de snapshot de um volume</block>
-  <block id="98a71d4244a8d2bc70cdcddc5cb64af6" category="paragraph">Esta operação atualiza a frequência de instantâneos obtidos para um volume ou desativa instantâneos automáticos.</block>
   <block id="53e6e67988f9acb9f1aab8ccad2c0340" category="paragraph">É necessário um link para exibir as políticas de snapshot existentes. Para associar um link, clique em *associar link* em *Nome da conta*. Em seguida, volte a esta operação.</block>
   <block id="6e1473c0de5b054e5e9236bbe796cc32" category="list-text">Selecione a guia *volumes*.</block>
   <block id="b7896e81066533818c46cd2b875eb7bf" category="list-text">Na guia *volumes*, selecione o menu de três pontos do volume para alterar a política de snapshot.</block>
@@ -596,7 +595,6 @@
   <block id="ed8b2920ddc5b14cb6c0ba24c4b6c3af" category="inline-link-macro">conceda permissões _automate_</block>
   <block id="87d163ac7ed334c52282a95bd5a124d9" category="paragraph">Para que o Workload Factory detete ambientes de armazenamento Amazon Elastic Block Store (EBS), Elastic File System (EFS) e FSX for Windows File Server em sua conta da AWS, verifique se você <block ref="d9270f60c282b5496f17a4b48a6da305" category="inline-link-macro-rx"></block> está em sua conta da AWS.</block>
   <block id="cb10bf47866edd2ac9fb6586867bd1f6" category="admonition">Esta opção de calculadora não suporta cálculos para snapshots do EBS e cópias de sombra do FSX para Windows File Server. Ao explorar a economia por meio da personalização, você pode fornecer detalhes de snapshot do EBS e do FSX para Windows File Server.</block>
-  <block id="9f9100c91adcf9dad4883f822e09cda9" category="list-text">No inventário de armazenamento, selecione a guia *Elastic Block Store (EBS)*.</block>
   <block id="4e6bb917970bfdc851c5092e11272217" category="list-text">Selecione a(s) instância(s) para comparar com o FSX for ONTAP e clique em *explorar economia*.</block>
   <block id="f59ef66ff04b00cacb36ef4c77c51958" category="list-text">A calculadora de economia de armazenamento é exibida. As seguintes caraterísticas do sistema de storage são pré-preenchidas com base na(s) instância(s) selecionada(s):</block>
   <block id="bca9e850c916e20118ab9da7a15e1ab7" category="list-text">*Caso de uso*: O caso de uso para sua configuração. Você pode alterar o caso de uso, se necessário.</block>
@@ -604,13 +602,11 @@
   <block id="6c52ebf14450d045b355a868931e1164" category="list-text">*Quantidade total de armazenamento (TIB)*: A quantidade de armazenamento por volume em TIB</block>
   <block id="304b6d4108ca48d891db9c471488358b" category="list-text">*IOPS total provisionado*: Para volumes de GP3, IO1 e IO2</block>
   <block id="8f5e9660dd3425492cf59bc6e12606d8" category="list-text">*Taxa de transferência total (MIB/s)*: Apenas para volumes GP3</block>
-  <block id="2da38d4eab31e419f29bebc00eb3d264" category="list-text">No inventário de armazenamento, selecione a guia *FSX for Windows File Server*.</block>
   <block id="15fc70bd68494b595c2e5441312916e5" category="list-text">A calculadora de economia de armazenamento é exibida. As seguintes características do sistema de storage são pré-preenchidas com base no tipo de implantação da(s) instância(s) selecionada(s):</block>
   <block id="a32ffe6360aa9a89cb9696c19f828d91" category="list-text">* Sistemas de arquivos selecionados</block>
   <block id="148f511d9c35e6ff4cb92ebc25a1c9cf" category="list-text">*Valor total de armazenamento (TIB)*</block>
   <block id="9dbb3393e470b57796b7ec491b66bdea" category="list-text">*IOPS SSD provisionado*</block>
   <block id="22706a4c75c6b61679dc073e45ec6e08" category="list-text">*Taxa de transferência (MIB/s)*</block>
-  <block id="ff878267bfd97975ad2ec503878325c1" category="list-text">No inventário de armazenamento, selecione a guia *Elastic File System (EFS)*.</block>
   <block id="a765aa8369baa37d4241f37483d8954c" category="list-text">* Total de sistemas de arquivos*</block>
   <block id="9285022230e927d788a11d636f2a52c4" category="list-text">*Taxa de transferência total provisionada (MIB/s)*</block>
   <block id="6aae74300e54ee6bdcfadde9a88345f6" category="list-text">* Taxa de transferência elástica total - leitura (GiB)*</block>
@@ -963,7 +959,6 @@
   <block id="edacd360980e63a5f2e01df2fa59b050" category="list-text">Na caixa de diálogo Redefinir senha do fsxadmin, insira uma nova senha do fsxadmin e insira-a novamente para confirmar.</block>
   <block id="279e520d9175d8e5591ed2ca3fc5acab" category="summary">Redefina a senha da VM de armazenamento quando necessário.</block>
   <block id="217c9f6fe263e655130a845fd58ccebe" category="doc">Redefina a senha de uma VM de armazenamento</block>
-  <block id="eda74f1b1bef1d5fd22f162e31e3f4c5" category="list-text">Selecione a guia *Storage VMs*.</block>
   <block id="a22a424f6f09fb9aab17350b24d152ce" category="list-text">Na guia Storage VMs (VMs de armazenamento), selecione o menu Three DOTS (três pontos) da VM de armazenamento para o qual redefinir a senha.</block>
   <block id="3930015dcc2810869591e35a2b5d714b" category="list-text">Selecione *Redefinir senha*.</block>
   <block id="0828ddc896996b7d41cc9ceb1e453764" category="list-text">Na caixa de diálogo Redefinir senha, forneça o seguinte:</block>
@@ -1157,4 +1152,21 @@
   <block id="231cf4c70d866b616c21baddaeed0696" category="sidebar">Solução de problemas</block>
   <block id="f14fbd72eb1c8ba39f23e290779d3ac7" category="paragraph">Escolha entre _basic_, _read_ e _automate_ <block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
   <block id="9b0784be448bb1dc8f08485434f9a91a" category="paragraph">Se você operar no modo _read_ ou _Automate_, precisará <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>selecionar recursos de carga de trabalho, como bancos de dados e IA, e criar as políticas do IAM para garantir que você tenha as permissões corretas para operar no modo _read_ ou _Automate_.</block>
+  <block id="31139fb3d548620b7d82f880e4660606" category="doc">Vistas de separador no inventário de armazenamento</block>
+  <block id="d4aa654cea4681dd5ca03650594006c6" category="paragraph">O inventário de armazenamento foi atualizado para uma vista de duas abas:</block>
+  <block id="71083868a2ec5abfee9a2647a74612c0" category="list-text">Guia FSX for ONTAP: Exibe os sistemas de arquivos FSX for ONTAP que você tem atualmente.</block>
+  <block id="1113c9108b3e58789456954d1c2ea9c2" category="list-text">Guia economia: Exibe os sistemas de armazenamento Elastic Block Store, FSX for Windows File Server e Elastic File Systems. A partir daí, você pode explorar as economias desses sistemas comparando-os com o FSX for ONTAP.</block>
+  <block id="62cf721f97d39a9aaf1ac7786071551c" category="paragraph">Atualize a frequência de instantâneos obtidos para um volume ou desative instantâneos automáticos a qualquer momento.</block>
+  <block id="110f1585246a580402f0c6b34d42e65a" category="list-text">Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos FSX for ONTAP que contém o volume com a política de snapshot para atualizar e selecione *Gerenciar*.</block>
+  <block id="fa8dc6e67f45bcde58853510e56ce6a1" category="list-text">Na guia Visão geral do sistema de arquivos, selecione a guia *volumes*.</block>
+  <block id="74e854d4ac135e193bafa7dfdf343efe" category="list-text">Em armazenamento, selecione *ir para inventário de armazenamento*.</block>
+  <block id="9df0f8cc7fbb70153a71c3d1657c3d81" category="list-text">Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos FSX for ONTAP que contém o volume para clonar e selecione *Gerenciar*.</block>
+  <block id="80ad1fda17ca981880509b63f91591c9" category="list-text">No inventário de armazenamento, selecione a guia *explorar economia*.</block>
+  <block id="a1e5470290e2e47a8295d8ae0b1e78af" category="list-text">Na guia *Elastic Block Store (EBS)*, selecione a(s) instância(s) para comparar com o FSX for ONTAP e clique em *explorar economia*.</block>
+  <block id="69664318bb60fdf05cfe25fa2b5a7242" category="list-text">Selecione a guia *FSX for Windows File Server*.</block>
+  <block id="5e172a101429002f6723f0f156cbd608" category="list-text">Selecione a guia *Elastic File System (EFS)*.</block>
+  <block id="78745d22af85f4409daf48ce5059c4c0" category="list-text">Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos FSX for ONTAP com a VM de armazenamento para atualizar e selecione *Gerenciar*.</block>
+  <block id="8c9880429b2df2018a366dbb14193026" category="list-text">Na guia Visão geral do sistema de arquivos, selecione a guia *Storage VMs*.</block>
+  <block id="ca677da26b1ef83b53f1decf3bf448d0" category="list-text">Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos FSX for ONTAP que contém o volume clonado para dividir e selecione *Gerenciar*.</block>
+  <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">3 de novembro de 2024</block>
 </blocks>

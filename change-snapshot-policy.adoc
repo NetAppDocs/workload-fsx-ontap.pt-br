@@ -11,10 +11,7 @@ summary: Atualize a política de instantâneos de um volume a qualquer momento.
 
 
 [role="lead"]
-Atualize a política de instantâneos de um volume a qualquer momento.
-
-.Sobre esta tarefa
-Esta operação atualiza a frequência de instantâneos obtidos para um volume ou desativa instantâneos automáticos.
+Atualize a frequência de instantâneos obtidos para um volume ou desative instantâneos automáticos a qualquer momento.
 
 .Antes de começar
 É necessário um link para exibir as políticas de snapshot existentes. Para associar um link, clique em *associar link* em *Nome da conta*. Em seguida, volte a esta operação.
@@ -22,6 +19,8 @@ Esta operação atualiza a frequência de instantâneos obtidos para um volume o
 .Passos
 . Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos FSX for ONTAP que contém o volume com a política de snapshot para atualizar e selecione *Gerenciar*.
+. Na guia Visão geral do sistema de arquivos, selecione a guia *volumes*.
 . Selecione a guia *volumes*.
 . Na guia *volumes*, selecione o menu de três pontos do volume para alterar a política de snapshot.
 . Selecione *ações de proteção de dados*, *Snapshots* e, em seguida, *Gerenciar políticas de snapshot*.
