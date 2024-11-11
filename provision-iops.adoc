@@ -11,23 +11,23 @@ summary: Provisione ou provisione manualmente o IOPS SSD para um sistema de arqu
 
 
 [role="lead"]
-Provisione ou provisione manualmente o IOPS SSD para um sistema de arquivos FSX for ONTAP.
+Provisione ou provisione manualmente o IOPS SSD para um sistema de arquivos FSX for ONTAP na fábrica de workloads do BlueXP .
 
 .Sobre esta tarefa
 Você pode ativar o provisionamento automático de IOPS SSD para um sistema de arquivos FSX ou provisionar manualmente IOPS.
 
-IOPS provisionadas automáticas são calculadas como 3 IOPS por GiB.
+IOPS provisionadas automaticamente são calculadas como 3 IOPS por GiB.
 
-Se você provisionar manualmente o IOPS, talvez seja necessário aumentar o IOPS antes de poder link:increase-file-system-capacity.html["aumentar a capacidade do sistema de arquivos"].
+Se você provisionar manualmente o IOPS, talvez seja necessário aumentar o IOPS antes link:increase-file-system-capacity.html["aumento da capacidade do sistema de arquivos"]do .
 
-Para saber os limites de IOPS, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quotas"^]documentação do AWS FSX for NetApp ONTAP.
+Para obter informações sobre os limites de IOPS, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quotas"^]documentação do AWS FSX for NetApp ONTAP.
 
 .Passos
-. Faça login no console do Workload Factory.
-. Em armazenamento, clique em *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, clique no menu de três pontos do sistema de arquivos para provisionar IOPS e selecione *Gerenciar*.
-. Em informações, clique no ícone de lápis ao lado de *Alocação de IOPS*. O ícone de lápis aparece ao lado da seta suspensa quando o Mouse passa sobre a linha *Alocação de IOPS*.
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos para provisionar IOPS e selecione *Gerenciar*.
+. Em informações, selecione o ícone de lápis que aparece ao lado da seta suspensa quando o Mouse passa sobre a linha *Alocação de IOPS*.
 . Na caixa de diálogo IOPS provisionado, selecione *Automático* ou *fornecido pelo usuário*.
-. Se você selecionar *User provisioned*, digite o valor *IOPS*.
-. Clique em *aplicar*.
+. Se você selecionar *User provisioned*, digite o valor *IOPS* desejado.
+. Selecione *aplicar*.
 

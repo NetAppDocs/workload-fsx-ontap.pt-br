@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-volume-from-snapshot.html 
 keywords: create volume from snapshot, new volume 
-summary: Crie um snapshot manual de um volume do FSX for ONTAP. Os instantâneos são versões pontuais do conteúdo do seu volume. 
+summary: Crie um snapshot manual de um volume do FSX for ONTAP na fábrica de cargas de trabalho do BlueXP . Os instantâneos são versões pontuais do conteúdo do seu volume. 
 ---
 = Crie um novo volume do FSX for ONTAP a partir de um snapshot
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Crie um snapshot manual de um volume do FSX for ONTAP. Os instantâneos
 
 
 [role="lead"]
-Crie um novo volume do FSX for ONTAP a partir de um snapshot para permitir a recuperação pontual.
+Crie um novo volume do FSX for ONTAP a partir de um snapshot na fábrica de workloads do BlueXP  para permitir a recuperação pontual.
 
 .Sobre esta tarefa
 Um snapshot é uma imagem somente leitura de um volume do FSX for ONTAP tirada em um ponto no tempo. A criação de um novo volume a partir de um snapshot faz uma cópia de um volume inteiro em poucos segundos, independentemente do tamanho do volume. A cópia recém-criada representa um novo volume.
@@ -24,12 +24,12 @@ Considere as seguintes limitações antes de criar um volume a partir de um inst
 
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, clique no menu de três pontos do sistema de arquivos com o instantâneo de volume e selecione *Gerenciar*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o snapshot de volume e selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. Na guia volumes, clique no menu três pontos para o volume que tem o instantâneo do qual você deseja criar um volume.
+. Na guia volumes, selecione o menu de três pontos para o volume que tem o instantâneo do qual você deseja criar um volume.
 . Selecione *ações de proteção de dados*, *instantâneos* e, em seguida, *criar um volume a partir de um instantâneo*.
 . Na caixa de diálogo criar volume a partir de um instantâneo, introduza o nome do instantâneo.
-. Clique em *criar*.
+. Selecione *criar*.
 

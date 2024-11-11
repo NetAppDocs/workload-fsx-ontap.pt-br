@@ -2,31 +2,31 @@
 sidebar: sidebar 
 permalink: increase-volume-capacity.html 
 keywords: increase capacity, volume capacity 
-summary: Aumente manualmente a capacidade de volume de um volume a qualquer momento. 
+summary: Aumente manualmente a capacidade de volume de um volume na fábrica de workloads da BlueXP  a qualquer momento. 
 ---
-= Aumentar a capacidade de volume
+= Aumente a capacidade do volume no workload da BlueXP  de fábrica
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Aumente manualmente a capacidade de volume de um volume a qualquer momento.
+Aumente manualmente a capacidade de volume de um volume a qualquer momento na fábrica de workloads da BlueXP .
 
-Opcionalmente, você pode link:edit-volume-autogrow.html["ative o recurso de crescimento automático"]permitir que o Workload Factory gerencie a capacidade de volume para você.
+Opcionalmente, você pode link:edit-volume-autogrow.html["ative o recurso de crescimento automático"]permitir que o workload gerencie de fábrica a capacidade do volume para você.
 
 .Sobre esta tarefa
 Para um iSCSI LUN, esta operação aumenta o tamanho do LUN do host. Depois que a capacidade aumentar, siga o procedimento fornecido pelo sistema operacional host para descobrir o novo tamanho do LUN e expandir o sistema de arquivos do LUN.
 
 .Antes de começar
-Para aumentar a capacidade do volume, é link:manage-links.html["associe um link"]necessário . Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, clique em *associar link* em *nome da conta*. Assim que o link se associar, volte a esta operação.
+Para aumentar a capacidade do volume, é link:manage-links.html["associe um link"]necessário . Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, selecione *associar link* sob *nome da conta*. Assim que o link se associar, volte a esta operação.
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
 . Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume a ser atualizado e selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. Na guia volumes, selecione o menu de três pontos do volume para o qual aumentar a capacidade.
+. No separador volumes, selecione o menu de três pontos do volume para aumentar a capacidade.
 . Selecione *ações básicas* e, em seguida, *aumentar a capacidade do volume*.
 . Na caixa de diálogo aumentar a capacidade do volume, forneça o seguinte:
 +
@@ -34,5 +34,5 @@ Para aumentar a capacidade do volume, é link:manage-links.html["associe um link
 .. Substitua a unidade, se necessário.
 
 
-. Clique em *aumentar*.
+. Selecione *aumentar*.
 

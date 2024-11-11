@@ -1,20 +1,20 @@
 ---
 sidebar: sidebar 
-permalink: change-nfs-export-policy.html 
+permalink: manage-nfs-export-policy.html 
 keywords: NFS, nfs, export policy, change export policy, update export policy, modify export policy 
-summary: Altere a política de exportação NFS para um volume que usa tipos de protocolo NFSv3 ou NFSv4,1. 
+summary: Gerenciar a política de exportação de NFS para um volume que usa tipos de protocolo NFSv3 ou NFSv4,1 na fábrica de workloads do BlueXP . 
 ---
-= Altere a política de exportação NFS de um volume
+= Gerenciar a política de exportação de NFS para um volume na fábrica de workloads do BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Altere a política de exportação NFS para um volume que usa tipos de protocolo NFSv3 ou NFSv4,1.
+Gerenciar a política de exportação de NFS para um volume que usa tipos de protocolo NFSv3 ou NFSv4,1 na fábrica de workloads do BlueXP .
 
 .Sobre esta tarefa
-A alteração da política de exportação de um volume envolve a adição de regras de política de exportação que detalham as especificações do cliente, o controle de acesso, o acesso do super usuário e a versão NFS. Você pode adicionar mais de uma política de exportação e priorizá-la.
+O gerenciamento da política de exportação de um volume envolve a adição de regras de política de exportação que detalham as especificações do cliente, controle de acesso, acesso a super usuário e versão NFS. Você pode adicionar mais de uma política de exportação e priorizá-la.
 
 .Antes de começar
 Determine as especificações do cliente para as regras de política de exportação. Os valores válidos para a especificação do cliente são os seguintes:
@@ -28,11 +28,11 @@ Determine as especificações do cliente para as regras de política de exporta�
 
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
 . Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume a ser atualizado e selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. Na guia volumes, clique no menu três pontos para o volume para alterar a política de exportação NFS.
+. Na guia volumes, selecione o menu de três pontos para o volume para o qual deseja alterar a política de exportação NFS.
 . Selecione *ações avançadas* e, em seguida, *Editar política de exportação NFS*.
 . Na página Editar política de exportação NFS, forneça o seguinte:
 +
@@ -51,5 +51,5 @@ Em alternativa, pode selecionar *sem acesso ao volume*.
 
 
 
-. Clique em *aplicar*.
+. Selecione *aplicar*.
 

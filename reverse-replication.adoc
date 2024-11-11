@@ -4,14 +4,14 @@ permalink: reverse-replication.html
 keywords: reverse replication, change replication 
 summary: Inverta uma relação de replicação para que o volume de destino se torne o volume de origem. 
 ---
-= Inverta uma relação de replicação
+= Inverta uma relação de replicação na fábrica de workloads do BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Inverta uma relação de replicação para que o volume de destino se torne o volume de origem.
+Inverta uma relação de replicação na fábrica de workloads do BlueXP  para que o volume de destino se torne o volume de origem.
 
 Depois de interromper a replicação e fazer alterações no volume de destino, é possível replicar essas alterações de volta para o volume de origem. Esse processo é comum em um cenário de recuperação de desastres no qual você opera no volume alvo por um tempo e deseja alternar funções dos volumes.
 
@@ -25,11 +25,11 @@ NOTE: Os dados gravados no volume de origem original entre a última replicaçã
 Certifique-se de conhecer as funções atuais e futuras dos volumes de origem e destino, pois as alterações no novo volume de destino são substituídas pelo novo volume de origem. Se usado incorretamente, você pode experimentar perda não intencional de dados.
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, clique no menu de três pontos do sistema de arquivos para atualizar e selecione *Gerenciar*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos a ser atualizado e selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *relacionamentos de replicação*.
-. Na guia relacionamentos de replicação, clique no menu três pontos da relação de replicação para reverter.
+. Na guia relacionamentos de replicação, selecione o menu de três pontos da relação de replicação para reverter.
 . Selecione *Reverse Relationship*.
-. Na caixa de diálogo Reverse Relationship, clique em *Reverse*.
+. Na caixa de diálogo Reverse Relationship, selecione *Reverse*.
 

@@ -2,25 +2,26 @@
 sidebar: sidebar 
 permalink: stop-replication.html 
 keywords: stop replication, break replication 
-summary: Parar uma relação de replicação entre os volumes de origem e destino. 
+summary: Interromper uma relação de replicação entre os volumes de origem e destino no workload da BlueXP  de fábrica. 
 ---
-= Parar uma relação de replicação
+= Interrompa uma relação de replicação no workload do BlueXP  de fábrica
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Quando você interrompe uma replicação, a replicação agendada é atualizada do volume de origem para a pausa do volume de destino. O volume de destino passa de somente leitura para leitura e gravação.
+Interrompa uma relação de replicação no workload do BlueXP  de fábrica. Quando você interrompe uma relação de replicação, a replicação agendada é atualizada do volume de origem para a pausa do volume de destino. O volume de destino passa de somente leitura para leitura e gravação.
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, clique no menu de três pontos do sistema de arquivos para atualizar e selecione *Gerenciar*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos a ser atualizado e selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *relacionamentos de replicação*.
-. Na guia relacionamentos de replicação, clique no menu três pontos da relação de replicação a ser interrompida.
+. Na guia relacionamentos de replicação, selecione o menu de três pontos da relação de replicação a ser interrompida.
 . Selecione *Break*.
 . Na caixa de diálogo quebrar replicação, selecione *quebrar*.
 
 
+.Resultado
 O status da replicação do volume muda para *Broken*. O volume de destino torna-se gravável.

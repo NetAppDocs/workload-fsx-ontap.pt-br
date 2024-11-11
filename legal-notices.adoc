@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Avisos legais
+= Avisos legais para a fábrica de carga de trabalho da BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

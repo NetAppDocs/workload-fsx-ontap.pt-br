@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: manage-backup-schedule.html 
+keywords: backup schedule, backup policy, update backups, update backup schedule, FSx for ONTAP backup 
+summary: Gerencie o agendamento de backup de um sistema de arquivos FSX for ONTAP na fábrica de carga de trabalho do BlueXP , quando necessário. 
+---
+= Gerencie o agendamento de backup de um sistema de arquivos FSX for ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gerencie o agendamento de backup de um sistema de arquivos FSX for ONTAP na fábrica de carga de trabalho do BlueXP .
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos para atualizar o agendamento de backup e selecione *Gerenciar*.
+. Em informações, selecione o ícone de lápis ao lado de *FSX for ONTAP backup*. O ícone de lápis aparece ao lado da seta suspensa quando o Mouse paira sobre a linha *FSX for ONTAP backup*.
+. Na caixa de diálogo *FSX for ONTAP backup*, forneça o seguinte:
++
+.. * Backups automáticos diários*: Ativar ou desativar o recurso. Se desativar a funcionalidade, selecione *Apply* (aplicar). Se você ativar o recurso, execute as etapas a seguir.
+.. *Período de retenção de backup automático*: Insira o número de dias para reter backups automáticos.
+.. *Janela de backup automático diário*: Selecione *sem preferência* (uma hora de início de backup diário está selecionada para você) ou *Selecione hora de início para backups diários* e especifique uma hora de início.
+.. *Janela de manutenção semanal*: Selecione *Nenhuma preferência* (uma hora de início semanal da janela de manutenção está selecionada para você) ou *Selecione hora de início para a janela de manutenção semanal de 30 minutos* e especifique uma hora de início.
+
+
+. Selecione *aplicar*.
+

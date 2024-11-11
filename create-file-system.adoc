@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
 permalink: create-file-system.html 
-keywords: create, FSx file system, ONTAP file system, Workload Factory, storage 
-summary: Usando o Workload Factory, você pode criar um sistema de arquivos FSX for ONTAP para adicionar e gerenciar volumes e serviços de dados adicionais. 
+keywords: create, FSx file system, ONTAP file system, workload factory, storage 
+summary: Usando a fábrica de carga de trabalho do BlueXP , você pode criar um sistema de arquivos FSX for ONTAP para adicionar e gerenciar volumes e serviços de dados adicionais. 
 ---
-= Crie um sistema de arquivos FSX for ONTAP
+= Crie um sistema de arquivos FSX for ONTAP na fábrica de cargas de trabalho do BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Usando o Workload Factory, você pode criar um sistema de arquivos FSX for ONTAP para adicionar e gerenciar volumes e serviços de dados adicionais.
+Usando a fábrica de carga de trabalho do BlueXP , você pode criar um sistema de arquivos FSX for ONTAP para adicionar e gerenciar volumes e serviços de dados adicionais.
 
 .Sobre esta tarefa
 Uma VM de storage é criada quando você cria um sistema de arquivos.
@@ -19,7 +19,7 @@ Uma VM de storage é criada quando você cria um sistema de arquivos.
 .Antes de começar
 Antes de criar seu sistema de arquivos FSX for ONTAP, você precisará de:
 
-* O ARN de uma função do IAM que dá ao Workload Factory as permissões necessárias para criar um sistema de arquivos FSX for ONTAP. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Saiba como conceder permissões a uma conta da AWS"^].
+* O ARN de uma função do IAM que dá à fábrica de carga de trabalho as permissões necessárias para criar um sistema de arquivos FSX for ONTAP. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Saiba como conceder permissões a uma conta da AWS"^].
 * A região e as informações de VPC para onde você criará a instância do FSX for ONTAP.
 
 
@@ -39,7 +39,7 @@ NOTE: Ao usar o Terraform do Codebox, o código que você copia ou baixa oculta 
 O Quick Create permite que você use uma configuração recomendada de práticas recomendadas. Você pode alterar a maioria das configurações depois de criar um sistema de arquivos FSX for ONTAP.
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No armazenamento, selecione *criar FSX para ONTAP*.
 . Na página criar FSX para ONTAP, selecione *criar rápido*.
 +
@@ -47,7 +47,7 @@ Você também pode carregar uma configuração salva.
 
 . Em Configuração geral do sistema de arquivos, forneça o seguinte:
 +
-.. *Credenciais da AWS*: Selecione para adicionar credenciais da AWS no Workload Factory ou continuar sem credenciais.
+.. *Credenciais da AWS*: Selecione para adicionar credenciais da AWS na fábrica de carga de trabalho ou continuar sem credenciais.
 .. *Nome do sistema de arquivos*: Insira um nome para o sistema de arquivos.
 .. *Topologia de implantação*: Selecione uma topologia de implantação.
 +
@@ -109,7 +109,7 @@ Se você criou o sistema de arquivos, agora você pode visualizar o sistema de a
 Com o Advanced Create, você define todas as opções de configuração, incluindo disponibilidade, segurança, backups e manutenção.
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No armazenamento, selecione *criar FSX para ONTAP*.
 . Na página criar FSX para ONTAP, selecione *criar avançado*.
 +
@@ -117,7 +117,7 @@ Você também pode carregar uma configuração salva.
 
 . Em Configuração geral do sistema de arquivos, forneça o seguinte:
 +
-.. *Credenciais da AWS*: Selecione para adicionar credenciais da AWS no Workload Factory ou continuar sem credenciais.
+.. *Credenciais da AWS*: Selecione para adicionar credenciais da AWS na fábrica de carga de trabalho ou continuar sem credenciais.
 .. *Nome do sistema de arquivos*: Insira um nome para o sistema de arquivos.
 .. *Topologia de implantação*: Selecione uma topologia de implantação.
 +

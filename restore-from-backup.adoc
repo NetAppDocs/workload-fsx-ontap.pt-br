@@ -4,21 +4,21 @@ permalink: restore-from-backup.html
 keywords: restore backup, new volume, volume restoration, backup 
 summary: Restaure um volume de um backup para qualquer sistema de arquivos do FSX for ONTAP na sua conta da AWS. 
 ---
-= Restaurar um volume a partir de uma cópia de segurança
+= Restaurar um volume de um backup no workload do BlueXP  de fábrica
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Restaure um volume de um backup para qualquer sistema de arquivos do FSX for ONTAP na sua conta da AWS.
+Na fábrica de carga de trabalho do BlueXP , você pode restaurar um volume de um backup para qualquer sistema de arquivos do FSX for ONTAP na sua conta da AWS.
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, clique no menu de três pontos do sistema de arquivos com o volume e selecione *Gerenciar*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume e selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. Na guia *volumes*, clique no menu três pontos para o volume restaurar a partir de um backup.
+. No separador *volumes*, selecione o menu de três pontos para o volume a restaurar a partir de uma cópia de segurança.
 . Selecione *ações de proteção de dados*, *FSX for ONTAP backup* e, em seguida, *Restaurar a partir de um backup*.
 . Na caixa de diálogo Restaurar a partir de uma cópia de segurança, forneça o seguinte:
 +
@@ -28,5 +28,5 @@ Restaure um volume de um backup para qualquer sistema de arquivos do FSX for ONT
 .. *Nome do volume restaurado*: Insira o nome do volume restaurado.
 
 
-. Clique em *Restaurar*.
+. Selecione *Restaurar*.
 

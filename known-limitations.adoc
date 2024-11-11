@@ -2,22 +2,22 @@
 sidebar: sidebar 
 permalink: known-limitations.html 
 keywords: limitations, fsx, ontap 
-summary: As limitações conhecidas identificam plataformas, dispositivos ou funções que não são suportadas por esta versão do produto ou que não interoperam corretamente com ele. Revise essas limitações com cuidado. 
+summary: As limitações conhecidas identificam plataformas, dispositivos ou funções que não são suportadas por esta versão do produto ou que não interoperam corretamente com ele. 
 ---
-= Limitações conhecidas
+= Limitações conhecidas do Amazon FSX for NetApp ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-As limitações conhecidas identificam plataformas, dispositivos ou funções que não são suportadas por esta versão do produto no Workload Factory ou que não interoperam corretamente com ele. Revise essas limitações com cuidado.
+As limitações conhecidas identificam plataformas, dispositivos ou funções que não são suportadas por esta versão do produto ou que não interoperam corretamente com ele. Revise essas limitações com cuidado.
 
 
 
 == Link
 
-Um link é necessário para concluir algumas operações como replicação na interface de usuário do Workload Factory.
+Um link é necessário para concluir algumas operações, como replicação na interface de usuário de fábrica de carga de trabalho.
 
 
 
@@ -54,7 +54,7 @@ As seguintes regiões suportam capacidade máxima de até 3 GB/s e 6 GB/s para i
 
 == VMs de storage
 
-O número de VMs de armazenamento é limitado por SKU. A criação de VMs de armazenamento além da limitação não é suportada no Workload Factory. 1
+O número de VMs de armazenamento é limitado por SKU. A criação de VMs de armazenamento além da limitação não é suportada na fábrica de cargas de trabalho. 1
 
 Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["Gerenciando o FSX para máquinas virtuais de armazenamento ONTAP"^]na documentação da AWS o número máximo de SVMs por sistema de arquivos.
 
@@ -94,6 +94,12 @@ A calculadora de economia de armazenamento não calcula as economias de custo pa
 * Elastic Block Store (EBS): ST1, SC1 e tipos de volume padrão
 * Elastic File System (EFS): Modo de taxa de transferência de estouro
 
+
+
+
+== System Manager
+
+O System Manager não oferece suporte a links para a conetividade do FSX for ONTAP.
 
 Nota:
 

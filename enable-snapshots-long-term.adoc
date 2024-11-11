@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: enable-snapshots-long-term.html 
 keywords: snapshot long-term retention, enable long-term retention 
-summary: Altere a programação de replicação do volume de origem em uma relação de replicação. 
+summary: Habilite snapshots para retenção de longo prazo, o que permite replicar snapshots específicos para recuperação de desastres de longo prazo. 
 ---
 = Habilite e edite snapshots para retenção de longo prazo
 :allow-uri-read: 
@@ -11,24 +11,24 @@ summary: Altere a programação de replicação do volume de origem em uma rela�
 
 
 [role="lead"]
-Habilitar snapshots para retenção de longo prazo permite replicar snapshots específicos para recuperação de desastres de longo prazo.
+Na fábrica do workload do BlueXP , você pode habilitar snapshots para retenção a longo prazo, o que permite replicar snapshots específicos para recuperação de desastres a longo prazo.
 
-A retenção de longo prazo permite que os serviços empresariais continuem operando mesmo em caso de falha completa do local, dando suporte ao failover de aplicações de forma transparente, usando uma cópia secundária.
+A retenção de longo prazo permite que os serviços de negócios continuem operando mesmo em caso de falha completa do local, dando suporte a failover transparente de aplicações usando uma cópia secundária.
 
 As mesmas etapas se aplicam para habilitar e editar snapshots para retenção de longo prazo.
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, clique no menu de três pontos do sistema de arquivos para atualizar e selecione *Gerenciar*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos a ser atualizado e selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *relacionamentos de replicação*.
-. Na guia relacionamentos de replicação, clique no menu três pontos da programação de relacionamento de replicação a ser alterada.
+. Na guia relacionamentos de replicação, selecione o menu de três pontos da programação de relacionamento de replicação a ser alterada.
 . Selecione *Editar retenção a longo prazo*.
 . Na caixa de diálogo Editar retenção de longo prazo, ative ou desative snapshots para retenção de longo prazo.
-. Se você optar por desabilitar snapshots para retenção de longo prazo, clique em *aplicar* para concluir esta operação.
+. Se você optar por desabilitar snapshots para retenção de longo prazo, selecione *aplicar* para concluir esta operação.
 . Se você optar por habilitar snapshots para retenção de longo prazo, escolha entre selecionar uma política existente ou criar uma nova política.
 +
-.. Para uma política existente, selecione uma política existente no menu suspenso.
+.. Para usar uma política existente, selecione-a no menu suspenso.
 .. Para criar uma nova política, forneça o seguinte:
 +
 ... *Nome da política*: Insira um nome de política.
@@ -38,5 +38,5 @@ As mesmas etapas se aplicam para habilitar e editar snapshots para retenção de
 
 
 
-. Clique em *aplicar*.
+. Selecione *aplicar*.
 

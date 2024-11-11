@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-link.html 
 keywords: links, add, add links, add link, create link 
-summary: Você pode criar e gerenciar links para fornecer uma relação de confiança e conetividade entre uma conta de fábrica de carga de trabalho e um ou mais sistemas de arquivos FSX for ONTAP. 
+summary: Você pode criar e gerenciar links para fornecer uma relação de confiança e conetividade entre uma conta de fábrica de carga de trabalho do BlueXP  e um ou mais sistemas de arquivos do FSX for ONTAP. 
 ---
-= Crie um link
+= Criar um link na fábrica de carga de trabalho do BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Você pode criar e gerenciar links para fornecer uma relação de confiança e conetividade entre uma conta de fábrica de carga de trabalho e um ou mais sistemas de arquivos FSX for ONTAP. Isso permite que você monitore e gerencie certos recursos diretamente do sistema de arquivos FSX for ONTAP que não estão disponíveis através da API do AWS FSX for ONTAP.
+Você pode criar e gerenciar links para fornecer um relacionamento de confiança e conetividade entre uma conta de fábrica de carga de trabalho e um ou mais sistemas de arquivos FSX for ONTAP na fábrica de carga de trabalho do BlueXP . Isso permite que você monitore e gerencie certos recursos diretamente do sistema de arquivos FSX for ONTAP que não estão disponíveis através da API do AWS FSX for ONTAP.
 
 link:links-overview.html["Saiba mais sobre links"].
 
@@ -24,7 +24,7 @@ Você precisará iniciar uma pilha do AWS CloudFormation na sua conta da AWS par
 
 Você tem duas opções para criar links - automaticamente ou manualmente.
 
-* Automaticamente: Cria um link com Registro automático via Workload Factory. Um link criado automaticamente requer tokens para a automação do Workload Factory e o código do CloudFormation é de curta duração. Só pode ser usado por até 6 horas.
+* Automaticamente: Cria um link com Registro automático via fábrica de carga de trabalho. Um link criado automaticamente requer tokens para automação de fábrica de carga de trabalho e o código do CloudFormation é de curta duração. Só pode ser usado por até 6 horas.
 * Manualmente: Cria uma ligação com o registo manual. O código do CloudFormation persiste, dando-lhe mais tempo para concluir a operação. Isso é útil ao trabalhar com equipes diferentes, como Segurança e DevOps, que podem primeiro precisar conceder as permissões necessárias para concluir a criação de links.
 
 
@@ -75,10 +75,10 @@ Você tem duas opções para criar links - automaticamente ou manualmente.
 ====
 .Criar automaticamente
 --
-Use o CloudFormation para criar e Registrar automaticamente o link no Workload Factory.
+Use o CloudFormation para criar e Registrar automaticamente o link na fábrica da carga de trabalho.
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
 . Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos para associar um link e selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione *Link associado*.
@@ -92,14 +92,14 @@ A conta da AWS e as informações adicionais do grupo conta, localização e Seg
 
 
 
-. Clique em *criar*.
+. Selecione *criar*.
 +
 A caixa de diálogo Redirecionar para o CloudFormation é exibida e explica como criar o link do serviço do AWS CloudFormation.
 
 . Selecione *continuar* para abrir o Console de Gerenciamento da AWS e, em seguida, faça login na conta da AWS para este sistema de arquivos FSX for ONTAP.
 . Na página de pilha de criação rápida, em recursos, selecione *reconheço que o AWS CloudFormation pode criar recursos do IAM*.
 +
-Observe que três permissões são concedidas ao Lambda quando você inicia o modelo do CloudFormation. O Workload Factory usa essas permissões ao usar links.
+Observe que três permissões são concedidas ao Lambda quando você inicia o modelo do CloudFormation. A fábrica de carga de trabalho usa essas permissões ao usar links.
 
 +
 [source, json]
@@ -108,51 +108,34 @@ Observe que três permissões são concedidas ao Lambda quando você inicia o mo
 "lambda:GetFunction",
 "lambda:UpdateFunctionCode"
 ----
-. Selecione *criar pilha* e, em seguida, selecione *continuar*.
+. Selecione *criar pilha* e selecione *continuar*.
 +
 Você pode monitorar o status da criação do link na página Eventos. Isso não deve levar mais de 5 minutos.
 
-. Retorne à interface de fábrica de carga de trabalho e você verá que o link está associado ao sistema de arquivos FSX for ONTAP.
+. Retorne à interface de fábrica da carga de trabalho e você verá que o link está associado ao sistema de arquivos FSX for ONTAP.
 
 
 --
 .Criar manualmente
 --
-Com essa opção, você extrai o ARN para o link do AWS CloudFormation e o informa aqui. O Workload Factory Registra manualmente o link para você.
+Com essa opção, você extrai o ARN para o link do AWS CloudFormation e o informa aqui. A fábrica de carga de trabalho Registra manualmente o link para você.
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos para associar um link e selecione *Gerenciar*.
-. Na visão geral do sistema de arquivos, selecione *Link associado*.
-. Na caixa de diálogo associar, selecione *criar um novo link* e selecione *continuar*.
-. Na página criar link, forneça o seguinte:
-+
-.. *Link name*: Insira o nome que deseja usar para esse link. O nome deve ser exclusivo na sua conta.
-.. *Tags*: Opcionalmente, adicione quaisquer tags que você deseja associar a este link para que você possa categorizar mais facilmente seus recursos. Por exemplo, você pode adicionar uma tag que identifique esse link como sendo usado pelo FSX para sistemas de arquivos ONTAP.
-.. *Link registration*: Clique na seta suspensa para expandir as instruções de como Registrar o link no serviço AWS CloudFormation. Siga as instruções.
-+
-Observe que três permissões são concedidas ao Lambda quando você inicia o modelo do CloudFormation. O Workload Factory usa essas permissões ao usar links.
+Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^]. . Em armazenamento, selecione *ir para inventário de armazenamento*. . Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos para associar um link e selecione *Gerenciar*. . Na visão geral do sistema de arquivos, selecione *Link associado*. . Na caixa de diálogo associar, selecione *criar um novo link* e selecione *continuar*. . Na página criar link, forneça o seguinte: .. *Link name*: Insira o nome que deseja usar para esse link. O nome deve ser exclusivo na sua conta. .. *Tags*: Opcionalmente, adicione quaisquer tags que você deseja associar a este link para que você possa categorizar mais facilmente seus recursos. Por exemplo, você pode adicionar uma tag que identifique esse link como sendo usado pelo FSX para sistemas de arquivos ONTAP. .. *Link registration*: Selecione na seta suspensa para expandir as instruções de como Registrar o link no serviço AWS CloudFormation. Siga as instruções.
 
-+
+Observe que três permissões são concedidas ao Lambda quando você inicia o modelo do CloudFormation. A fábrica de carga de trabalho usa essas permissões ao usar links.
+
+E
+
 [source, json]
 ----
 "lambda:InvokeFunction",
 "lambda:GetFunction",
 "lambda:UpdateFunctionCode"
 ----
-+
-Depois de criar a pilha com êxito, cole o ARN do Lambda na caixa de texto.
+Depois de criar a pilha com êxito, cole o ARN do Lambda na caixa de texto. .. A conta da AWS e as informações adicionais do grupo conta, localização e Segurança são recuperadas automaticamente com base no sistema de arquivos FSX for ONTAP. . Selecione *criar*.
 
-.. A conta da AWS e as informações adicionais do grupo conta, localização e Segurança são recuperadas automaticamente com base no sistema de arquivos FSX for ONTAP.
-
-
-. Clique em *criar*.
-+
-Você pode monitorar o status da criação do link na página Eventos. Isso não deve levar mais de 5 minutos.
-
-. Retorne à interface de fábrica de carga de trabalho e você verá que o link está associado ao sistema de arquivos FSX for ONTAP.
-
+Você pode monitorar o status da criação do link na página Eventos. Isso não deve levar mais de 5 minutos. . Retorne à interface de fábrica da carga de trabalho e você verá que o link está associado ao sistema de arquivos FSX for ONTAP.
 
 --
 ====

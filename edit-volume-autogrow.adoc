@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: edit-volume-autogrow.html 
 keywords: volume autogrow, increase volume capacity, enable autogrow 
-summary: Ative o volume com crescimento automático para permitir que o Workload Factory gerencie a capacidade de volume para você. Você pode desativá-lo a qualquer momento. 
+summary: Habilite o crescimento automático de volume para permitir que o BlueXP  Workload gerencie a capacidade de volume de fábrica para você. Você pode desativá-lo a qualquer momento. 
 ---
-= Ativar volume com crescimento automático
+= Habilite o volume com crescimento automático no workload da BlueXP  de fábrica
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Ative o volume com crescimento automático para permitir que o Workload Factory gerencie a capacidade de volume para você. Você pode desativá-lo a qualquer momento.
+Habilite o crescimento automático de volume para permitir que o BlueXP  Workload gerencie a capacidade de volume de fábrica para você. Você pode desativá-lo a qualquer momento.
 
 Opcionalmente, você pode aumentar manualmente a capacidade de volume de um volume a qualquer momento usando o link:increase-volume-capacity.html["recurso de aumento de capacidade de volume"].
 
@@ -19,15 +19,15 @@ Opcionalmente, você pode aumentar manualmente a capacidade de volume de um volu
 NOTE: O volume com crescimento automático não é suportado para volumes iSCSI.
 
 .Antes de começar
-Para ativar o volume com crescimento automático, é link:manage-links.html["associe um link"]necessário . Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, clique em *associar link* em *nome da conta*. Assim que o link se associar, volte a esta operação.
+Para ativar o volume com crescimento automático, é link:manage-links.html["associe um link"]necessário . Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, selecione *associar link* sob *nome da conta*. Assim que o link se associar, volte a esta operação.
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
 . Na guia FSX for ONTAP, selecione o menu de três pontos do sistema de arquivos com o volume a ser atualizado e selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. Na guia volumes, selecione o menu três pontos para o volume que deseja modificar.
+. No separador volumes, selecione o menu de três pontos para o volume que pretende modificar.
 . Selecione *ações básicas* e, em seguida, *Editar volume com crescimento automático*.
 . Na caixa de diálogo Editar crescimento automático, ative o volume com crescimento automático.
-. Clique em *aplicar*.
+. Selecione *aplicar*.
 

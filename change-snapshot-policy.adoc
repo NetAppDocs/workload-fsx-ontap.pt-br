@@ -2,27 +2,27 @@
 sidebar: sidebar 
 permalink: change-snapshot-policy.html 
 keywords: snapshot policy, snapshot schedule, modify snapshot policy, edit snapshot policy, change snapshot policy 
-summary: Atualize a política de instantâneos de um volume a qualquer momento. 
+summary: Atualize a política de snapshot de um volume na fábrica de workloads do BlueXP  a qualquer momento. 
 ---
-= Alterar a política de snapshot de um volume
+= Alterar a política de snapshot de um volume no workload do BlueXP  de fábrica
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Atualize a frequência de instantâneos obtidos para um volume ou desative instantâneos automáticos a qualquer momento.
+Atualize a frequência dos instantâneos obtidos para um volume ou desative os instantâneos automáticos a qualquer momento na fábrica de cargas de trabalho do BlueXP .
 
 .Antes de começar
-É necessário um link para exibir as políticas de snapshot existentes. Para associar um link, clique em *associar link* em *Nome da conta*. Em seguida, volte a esta operação.
+Para exibir políticas de snapshot existentes, você precisa associar um link. Para associar um link, selecione *associar link* em *Nome da conta*. Em seguida, volte a esta operação.
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
 . Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos FSX for ONTAP que contém o volume com a política de snapshot para atualizar e selecione *Gerenciar*.
 . Na guia Visão geral do sistema de arquivos, selecione a guia *volumes*.
 . Selecione a guia *volumes*.
-. Na guia *volumes*, selecione o menu de três pontos do volume para alterar a política de snapshot.
+. Na guia *volumes*, selecione o menu de três pontos do volume para alterar a política de instantâneos.
 . Selecione *ações de proteção de dados*, *Snapshots* e, em seguida, *Gerenciar políticas de snapshot*.
 . Na página de gerenciamento de políticas de snapshot, selecione *alterar uma política de snapshot existente*.
 . No campo *Nome da política de instantâneo* , selecione uma política de instantâneo diferente para este volume.
@@ -32,5 +32,5 @@ Para desativar instantâneos automáticos, `none` selecione .
 +
 Se não existirem outras políticas de snapshotlink:create-snapshot-policy.html["crie uma nova política de snapshot para esse volume"], .
 
-. Clique em *aplicar*.
+. Selecione *Apply* para salvar as alterações.
 

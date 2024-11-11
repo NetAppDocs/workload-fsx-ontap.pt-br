@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: change-replication-schedule.html 
 keywords: change replication schedule, update replication schedule, edit replication schedule 
-summary: Altere a programação de replicação do volume de origem em uma relação de replicação. 
+summary: Altere a programação de replicação do volume de origem em uma relação de replicação na fábrica de workloads da BlueXP . 
 ---
 = Alterar o agendamento de replicação de um volume de origem
 :allow-uri-read: 
@@ -11,16 +11,16 @@ summary: Altere a programação de replicação do volume de origem em uma rela�
 
 
 [role="lead"]
-Altere a programação de replicação do volume de origem em uma relação de replicação.
+Altere a programação de replicação do volume de origem em uma relação de replicação na fábrica de workloads da BlueXP .
 
 Escolha com que frequência os snapshots do volume de origem são transferidos para o volume replicado para corresponder aos objetivos de ponto (RPOs) necessários.
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, clique no menu de três pontos do sistema de arquivos para atualizar e selecione *Gerenciar*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos a ser atualizado e selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *relacionamentos de replicação*.
-. Na guia relacionamentos de replicação, clique no menu três pontos da programação de relacionamento de replicação a ser alterada.
+. Na guia relacionamentos de replicação, selecione o menu de três pontos da programação de relacionamento de replicação a ser alterada.
 . Selecione *Editar intervalo de replicação*.
 . Na caixa de diálogo Editar intervalo de replicação, selecione a frequência da transferência de instantâneos a partir do volume de origem. Pode selecionar entre as seguintes frequências:
 +
@@ -31,5 +31,5 @@ Escolha com que frequência os snapshots do volume de origem são transferidos p
 ** Semanalmente
 
 
-. Clique em *aplicar*.
+. Selecione *aplicar*.
 

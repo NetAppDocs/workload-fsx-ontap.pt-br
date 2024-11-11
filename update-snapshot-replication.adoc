@@ -11,14 +11,14 @@ summary: Atualize manualmente os dados instantâneos transferidos entre os volum
 
 
 [role="lead"]
-Uma relação de replicação tem um agendamento de replicação definido, mas você pode atualizar manualmente os dados instantâneos transferidos entre os volumes de origem e destino, quando necessário.
+Uma relação de replicação tem um agendamento definido de replicação, mas você pode atualizar manualmente os dados instantâneos transferidos entre os volumes de origem e destino no workload do BlueXP  a qualquer momento.
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, clique no menu de três pontos do sistema de arquivos para atualizar e selecione *Gerenciar*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos a ser atualizado e selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *relacionamentos de replicação*.
-. Na guia relacionamentos de replicação, clique no menu três pontos da relação de replicação a ser atualizada.
+. Na guia relacionamentos de replicação, selecione o menu de três pontos da relação de replicação a ser atualizada.
 . Selecione *Atualizar agora*.
-. Na caixa de diálogo Atualizar, clique em *Atualizar agora*.
+. Na caixa de diálogo Atualizar, selecione *Atualizar agora*.
 

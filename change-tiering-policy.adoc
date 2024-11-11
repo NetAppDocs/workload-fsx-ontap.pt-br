@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: change-tiering-policy.html 
 keywords:  
-summary: Altere a política de disposição em categorias para realocar dados da camada de storage primário de alto desempenho para a camada de storage do pool de capacidade secundária. 
+summary: Altere a política de disposição em camadas na fábrica de workloads do BlueXP  para realocar dados da camada de storage primário de alta performance para a camada de storage do pool de capacidade secundária. 
 ---
-= Alterar a política de disposição em camadas de um volume
+= Alterar a política de disposição em camadas de um volume no workload da BlueXP  de fábrica
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Altere a política de disposição em categorias para realocar automaticamente os dados da camada de storage primário de alto desempenho para a camada de storage do pool de capacidade secundária.
+Na fábrica do workload do BlueXP , você pode alterar a política de disposição em categorias para realocar automaticamente os dados da categoria de storage primário de alta performance para a camada de storage do pool de capacidade secundária.
 
 .Sobre esta tarefa
 Você pode alterar a política de disposição em categorias de um volume a qualquer momento. A política de disposição em categorias é definida por volume.
@@ -38,11 +38,11 @@ Revise as quatro políticas de disposição em categorias disponíveis antes de 
 Observe que algumas políticas de disposição em categorias têm um período de resfriamento mínimo associado que define o tempo, ou _dias de resfriamento_, que os dados do usuário em um volume devem permanecer inativos para que os dados sejam considerados "frios" e movidos para a camada de storage do pool de capacidade. O período de resfriamento começa quando os dados são gravados no disco.
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
 . Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume a ser atualizado e selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. Na guia volumes, clique no menu três pontos do volume para alterar a política de disposição em categorias.
+. Na guia volumes, selecione o menu de três pontos do volume para alterar a política de disposição em camadas.
 . Selecione *ações avançadas* e, em seguida, *alterar política de disposição em camadas*.
 . Na página alterar política de disposição em categorias, selecione uma das seguintes políticas de disposição em categorias:
 +
@@ -52,5 +52,5 @@ Observe que algumas políticas de disposição em categorias têm um período de
 ** *Todos*
 
 
-. Clique em *aplicar*.
+. Selecione *aplicar*.
 

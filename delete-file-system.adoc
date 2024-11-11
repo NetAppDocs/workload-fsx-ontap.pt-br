@@ -2,24 +2,24 @@
 sidebar: sidebar 
 permalink: delete-file-system.html 
 keywords: file system, delete file system, file system deletion 
-summary: Para excluir um sistema de arquivos, primeiro você deve excluir quaisquer volumes, VMs de armazenamento ou relações de replicação associadas ao sistema de arquivos. 
+summary: Para excluir um sistema de arquivos no workload do BlueXP  de fábrica, primeiro exclua volumes, máquinas virtuais de storage ou relações de replicação associadas ao sistema de arquivos. 
 ---
-= Eliminar um sistema de ficheiros
+= Exclua um sistema de arquivos na fábrica de carga de trabalho do BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Para excluir um sistema de arquivos, primeiro você deve excluir quaisquer volumes, VMs de armazenamento ou relações de replicação associadas ao sistema de arquivos.
+Para excluir um sistema de arquivos no workload do BlueXP  de fábrica, primeiro exclua volumes, máquinas virtuais de storage ou relações de replicação associadas ao sistema de arquivos.
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, clique no menu de três pontos do sistema de arquivos FSX for ONTAP que você deseja excluir.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos FSX for ONTAP que você deseja excluir.
 . Selecione *Gerenciar*.
-. Na guia *Visão geral*, clique no menu três pontos.
-. Clique em *Excluir*.
+. Na guia *Visão geral*, selecione o menu de três pontos.
+. Selecione *Eliminar*.
 . Na caixa de diálogo Excluir FSX for ONTAP sistema de arquivos, digite o nome do sistema de arquivos FSX for ONTAP para excluir.
-. Clique em *Excluir*.
+. Selecione *Eliminar*.
 
