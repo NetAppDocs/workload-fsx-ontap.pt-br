@@ -81,10 +81,15 @@ Se tiver selecionado uma política de exportação existente, introduza um novo 
 ..... *Adicionar regra de política de exportação*: Opcionalmente, para uma política de exportação personalizada, você pode adicionar regras de política de exportação à política.
 
 
-.... *Compartilhamento CIFS*: Insira o nome do compartilhamento CIFS para fornecer acesso SMB.
+.... *Compartilhamento CIFS*: Forneça o seguinte:
++
+..... *Nome*: Insira o nome do compartilhamento CIFS para fornecer acesso SMB.
+..... *Permissões*: Selecione Controle completo, leitura/gravação, leitura ou sem acesso e insira os usuários ou grupos separados por ponto e vírgula ( ; ). Usuários ou grupos são sensíveis a maiúsculas e minúsculas e o domínio do usuário deve ser incluído usando o formato "domínio/nome de usuário".
 
 
-*** *Acesso por bloco*: Permite aos hosts que executam aplicativos empresariais críticos acesso ao volume usando o protocolo iSCSI.
+
+
+*** *Acesso por bloco*: Permite aos hosts que executam aplicativos empresariais críticos acesso ao volume usando o protocolo iSCSI. O acesso a bloco só está disponível quando a implantação com escalabilidade horizontal do sistema de arquivos tiver 6 pares de HA ou menos.
 +
 Preencha os campos a seguir para configurar o acesso de bloco ao volume.
 

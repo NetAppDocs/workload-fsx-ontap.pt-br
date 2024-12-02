@@ -15,15 +15,9 @@ As limitações conhecidas identificam plataformas, dispositivos ou funções qu
 
 
 
-== Link
+== Link necessário para operações ONTAP avançadas
 
 Um link é necessário para concluir algumas operações, como replicação na interface de usuário de fábrica de carga de trabalho.
-
-
-
-== Eficiência de storage
-
-A eficiência de storage não pode ser desativada ou ativada após a criação do volume.
 
 
 
@@ -37,7 +31,7 @@ As seguintes regiões suportam capacidade máxima de até 4 GB/s para implantaç
 
 
 
-== Implantações com escalabilidade horizontal
+=== Implantações com escalabilidade horizontal
 
 As seguintes regiões suportam capacidade máxima de até 3 GB/s e 6 GB/s para implantações de escalabilidade horizontal: Leste DOS EUA (Norte da Virgínia), Leste dos EUA (Ohio), Oeste dos EUA (Oregon), Europa (Irlanda) e Pacífico Asiático (Sydney).
 
@@ -62,7 +56,6 @@ Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.ht
 
 == Suporte ao protocolo iSCSI
 
-* O protocolo iSCSI só é suportado para implantações de escalabilidade vertical. 1
 * O protocolo iSCSI só está disponível para volumes FlexVol. 1
 * Apenas um único LUN pode ser configurado por volume.
 

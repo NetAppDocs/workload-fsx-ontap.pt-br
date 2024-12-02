@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: update-storage-efficiency.html 
+keywords: storage efficiency change, update storage efficiency 
+summary: Na fábrica do workload do BlueXP , você pode atualizar a configuração de eficiência de storage após a criação do volume. 
+---
+= Atualizar a configuração de eficiência de armazenamento de um volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Na fábrica do workload do BlueXP , você pode atualizar a configuração de eficiência de storage após a criação do volume.
+
+.Sobre esta tarefa
+O recurso de eficiência de storage inclui deduplicação, compressão de dados e compactação de dados para obter a melhor economia de espaço em um FlexVol volume. A deduplicação elimina blocos de dados duplicados. A compactação de dados compacta os blocos de dados para reduzir a quantidade de storage físico necessária. A compactação de dados armazena mais dados em menos espaço para aumentar a eficiência de storage.
+
+Se você optar por não ativar a eficiência de storage ao criar um volume, poderá habilitar a configuração para economia de espaço e custos em potencial a qualquer momento.
+
+Os volumes usam thin Provisioning, independentemente de você habilitar ou desabilitar a eficiência de storage.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume a ser atualizado e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
+. Na guia volumes, selecione o menu de três pontos do volume para alterar a política de disposição em camadas.
+. Selecione *ações avançadas* e, em seguida, *Definir eficiência de armazenamento*.
+. Opte por ativar ou desativar a eficiência de armazenamento de volume.
+. Selecione *Apply* (aplicar) para guardar a alteração.
+

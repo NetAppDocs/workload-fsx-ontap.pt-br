@@ -1,0 +1,159 @@
+---
+sidebar: sidebar 
+permalink: use-onprem-data.html 
+keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP 
+summary: Descubra e replique dados ONTAP locais na fábrica de workloads da BlueXP  para que eles possam ser usados para enriquecer bases de conhecimento de AI. 
+---
+= Use dados de cluster do ONTAP no local na fábrica de workloads do BlueXP 
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Descubra e replique dados ONTAP locais na fábrica de workloads da BlueXP  para que eles possam ser usados para enriquecer bases de conhecimento de AI.
+
+.Sobre esta tarefa
+Para usar dados de um cluster ONTAP on-premises, você primeiro precisa descobrir o cluster ONTAP on-premises. Depois de descobrir um cluster do ONTAP no local, você pode usar os dados para qualquer um dos seguintes casos de uso.
+
+Casos de uso:: Observe que o principal caso de uso para a carga de trabalho do GenAI é o foco dessa série de tarefas.
++
+--
+* *Carga de trabalho do GenAI*: Replique dados de volume no local do ONTAP para um sistema de arquivos FSX for ONTAP para que os dados possam ser usados link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html["Enriquecer as bases de conhecimento de IA"^]no .
+* *Backup e migração para a nuvem*: Os dados de volume ONTAP replicados no local para um sistema de arquivos FSX for ONTAP podem ser usados como backup na nuvem.
+* *Disposição em camadas de dados*: Após a replicação, os dados de volume ONTAP no local com pouca frequência podem ser dispostos da camada de storage SSD para a camada de storage do pool de capacidade.
+
+
+--
+
+
+
+
+== Descubra um cluster ONTAP no local
+
+Descubra um cluster ONTAP local na fábrica de workloads do BlueXP  para que você possa replicar os dados para um sistema de arquivos do Amazon FSX for NetApp ONTAP.
+
+.Antes de começar
+Certifique-se de que tem o seguinte antes de começar:
+
+* Um sistema de arquivos FSX for ONTAP para replicação.
+* Um link conetado para se associar ao cluster no local descoberto. Se você não tem um link, você precisará link:create-link.html["crie um"].
+* Credenciais de usuário do ONTAP com permissões necessárias.
+* ONTAP on-premises versão 9,8 e superior.
+* Conetividade como mostrado no diagrama a seguir.
++
+image:screenshot-on-prem-connectivity.png["Captura de tela que mostra como um cluster ONTAP local deve ser conetado para o caminho de gerenciamento e o caminho de dados para o Amazon Web Services Cloud"]
+
+
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Selecione a guia *On-Premises ONTAP*.
+. Selecione *Discover*.
+. Reveja os pré-requisitos e selecione *seguinte*.
+. Na página Discover ONTAP on-premises, forneça o seguinte em *Configuração de cluster*:
++
+.. *Link*: Selecione um link. O link será associado ao cluster no local para criar conectividade entre o cluster e a fábrica da carga de trabalho.
++
+Se você não criou um link, siga as instruções e, em seguida, retorne a esta operação e selecione o link.
+
+.. *Endereço IP do cluster*: Forneça o endereço IP para que o cluster ONTAP local seja replicado.
+.. *Credenciais ONTAP*: Insira as credenciais ONTAP para o cluster ONTAP no local. Certifique-se de que o usuário tem as permissões necessárias.
+
+
+. Selecione *Discover* para iniciar o processo de descoberta.
+
+
+.Resultado
+O cluster ONTAP no local é descoberto e agora aparece na guia *On-Premise ONTAP*.
+
+Agora você pode visualizar os dados no cluster do ONTAP no local e <<Replique dados de volume de um cluster ONTAP no local,Replique os dados para um sistema de arquivos do FSX for ONTAP>>no .
+
+
+
+== Replique dados de volume de um cluster ONTAP no local
+
+Replique dados de volume de um cluster do ONTAP no local para um sistema de arquivos FSX for ONTAP. Depois de replicados, os dados podem ser usados para enriquecer as bases de conhecimento de AI.
+
+.Antes de começar
+* Você precisa descobrir um cluster do ONTAP no local para replicar seus dados de volume.
+* Você deve ter um sistema de arquivos FSX for ONTAP disponível para ser o destino para a replicação.
+* Tanto o cluster ONTAP no local quanto o sistema de arquivos FSX for ONTAP que você usa para a relação de replicação devem ter um link associado. Se um ou ambos clusters no local e no FSX for ONTAP não tiverem links existentes, link:create-link.html["primeiro crie um link"]. Para link:manage-links.html["associe um link"]nos sistemas de ficheiros, selecione *ligação associada* em *Nome da conta*. Depois que o link se associar ao cluster do ONTAP no local e ao sistema de arquivos FSX for ONTAP, retorne a esta operação.
+
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Selecione a guia *On-Premises ONTAP*.
+. Para encontrar volumes por VM de armazenamento, você pode *Selecionar VM de armazenamento* no menu suspenso.
+. Selecione um ou mais volumes para replicar e, em seguida, selecione *replicar*.
+. Na página criar replicação, em destino replicação, forneça o seguinte:
++
+.. *FSX para sistema de arquivos ONTAP*: Selecione credenciais, região e nome do sistema de arquivos FSX for ONTAP para o sistema de arquivos FSX for ONTAP de destino.
+.. *Nome da VM de armazenamento*: Selecione a VM de armazenamento no menu suspenso.
+.. *Nome do volume*: O nome do volume de destino é gerado automaticamente com o seguinte `{OriginalVolumeName}_copy` formato . Pode utilizar o nome do volume gerado automaticamente ou introduzir outro nome de volume.
+.. *Dados em categorias*: Selecione a política de disposição em camadas para os dados armazenados no volume de destino.
++
+*** *Automático*: A política de disposição em camadas padrão ao criar um volume usando a interface de usuário FSX for ONTAP de fábrica de carga de trabalho. Categoriza todos os dados inativos, incluindo dados de usuário e snapshots na categoria de storage do pool de capacidade por um período de tempo específico.
+*** *Somente snapshot*: Categoriza somente os dados snapshot para a camada de storage do pool de capacidade.
+*** *Nenhum*: Mantém todos os dados do seu volume na camada de storage primário.
+*** *All*: Marca todos os dados do usuário e dados instantâneos como inativos e os armazena na camada de armazenamento do pool de capacidade.
++
+Observe que algumas políticas de disposição em categorias têm um período de resfriamento mínimo associado que define o tempo, ou _dias de resfriamento_, que os dados do usuário em um volume devem permanecer inativos para que os dados sejam considerados "frios" e movidos para a camada de storage do pool de capacidade. O período de resfriamento começa quando os dados são gravados no disco.
+
++
+Para obter mais informações sobre políticas de disposição em camadas de volume, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidade de armazenamento de volume"^]documentação do AWS FSX for NetApp ONTAP.
+
+
+
+.. *Taxa máxima de transferência*: Selecione *limitada* e insira o limite máximo de transferência em MIB/s. Em alternativa, selecione *Unlimited*.
++
+Sem um limite, o desempenho da rede e do aplicativo pode declinar. Como alternativa, recomendamos uma taxa de transferência ilimitada para os sistemas de arquivos FSX for ONTAP para cargas de trabalho críticas, por exemplo, aquelas que são usadas principalmente para recuperação de desastres.
+
+
+
+. Em Configurações de replicação, forneça o seguinte:
++
+.. *Intervalo de replicação*: Selecione a frequência em que os instantâneos são transferidos do volume de origem para o volume de destino.
+.. *Retenção de longo prazo*: Opcionalmente, habilite snapshots para retenção de longo prazo.
++
+Se você habilitar a retenção a longo prazo, selecione uma política existente ou crie uma nova política para definir os snapshots a serem replicados e o número a ser retido.
+
++
+*** Para uma política existente, selecione *escolha uma política existente* e, em seguida, selecione a política existente no menu suspenso.
+*** Para uma nova política, selecione *criar uma nova política* e forneça o seguinte:
++
+**** *Nome da política*: Insira um nome de política.
+**** *Políticas de snapshot*: Na tabela, selecione a frequência da política de snapshot e o número de cópias a reter. Pode selecionar mais de uma política de instantâneos.
+
+
+
+
+
+
+. Selecione *criar*.
+
+
+.Resultado
+A relação de replicação aparece na guia *relacionamentos de replicação* no sistema de arquivos FSX for ONTAP de destino.
+
+
+
+== Remover um cluster ONTAP no local da fábrica de workloads da BlueXP 
+
+Remover um cluster ONTAP no local da fábrica de workloads do BlueXP , quando necessário.
+
+.Antes de começar
+É necessário link:delete-replication.html["eliminar todas as relações de replicação existentes"] para quaisquer volumes no cluster do ONTAP no local antes de remover o cluster para que não haja relacionamentos quebrados.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Selecione a guia *On-Premises ONTAP*.
+. Selecione o cluster ONTAP local a ser removido.
+. Selecione o menu de três pontos e selecione *Remover da fábrica de carga de trabalho*.
+
+
+.Resultado
+O cluster do ONTAP no local é removido do workload do BlueXP .

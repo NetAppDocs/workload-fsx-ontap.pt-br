@@ -27,6 +27,8 @@ Explore a economia por meio da personalização: Você fornece as configuraçõe
 
 Explore a economia para ambientes de storage detetados: Links de fábrica de carga de trabalho para seus ambientes de storage existentes da AWS e acesse os detalhes para a calculadora para comparação automática. Você precisará conceder permissões de automação para usar o modo automático. Você pode alterar o caso de uso, mas todos os outros detalhes são determinados automaticamente no cálculo.
 
+Além disso, você pode link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Adicionar credenciais da AWS"^]melhorar a precisão da análise da calculadora. Selecione *Calcule a poupança com base nos recursos existentes*. Você será redirecionado para a página Adicionar credenciais. Depois de adicionar credenciais, selecione os recursos existentes para comparar com o FSX for ONTAP e selecione *explorar economia*.
+
 
 
 == Explore as poupanças através da personalização
@@ -100,7 +102,12 @@ Siga as etapas abaixo da guia para sua seleção de armazenamento.
 ====
 Depois de fornecer detalhes sobre a configuração do sistema de storage, revise os cálculos e recomendações fornecidos na página.
 
-Além disso, role para baixo até a parte inferior da página para *Exportar PDF* ou *Exibir os cálculos*.
+Além disso, role para baixo até a parte inferior da página para exibir o relatório selecionando uma das seguintes opções:
+
+* * Exportar PDF*
+* *Enviar por e-mail*
+* *Veja os cálculos*
+
 
 Para mudar para o FSX for ONTAP, siga as instruções <<Implante o FSX para sistemas de arquivos ONTAP,Implante o FSX para sistemas de arquivos ONTAP>>para .
 
@@ -179,7 +186,12 @@ Siga as etapas abaixo da guia para sua seleção de armazenamento.
 ====
 Depois de fornecer detalhes sobre a configuração do sistema de storage, revise os cálculos e recomendações fornecidos na página.
 
-Além disso, role para baixo até a parte inferior da página para *Exportar PDF* ou *Exibir os cálculos*.
+Além disso, role para baixo até a parte inferior da página para exibir o relatório selecionando uma das seguintes opções:
+
+* * Exportar PDF*
+* *Enviar por e-mail*
+* *Veja os cálculos*
+
 
 
 

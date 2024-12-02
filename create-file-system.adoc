@@ -59,6 +59,9 @@ Você também pode carregar uma configuração salva.
 +
 *** Para implantações de escalabilidade vertical, você só pode ter um par de HA.
 *** Para implantações de escalabilidade horizontal, é possível ter entre dois a doze pares de HA.
++
+Para provisionar volumes de bloco iSCSI no sistema de arquivos, selecione não mais de 6 pares de HA.
+
 
 
 .. *Tipo de implantação*: Selecione um tipo de implantação.
@@ -129,6 +132,9 @@ Você também pode carregar uma configuração salva.
 +
 *** Para implantações de escalabilidade vertical, você só pode ter um par de HA.
 *** Para implantações de escalabilidade horizontal, é possível ter entre dois a doze pares de HA.
++
+Para provisionar volumes de bloco iSCSI no sistema de arquivos, selecione não mais de 6 pares de HA.
+
 
 
 .. *Tipo de implantação*: Selecione um tipo de implantação.

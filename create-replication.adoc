@@ -62,11 +62,11 @@ Sem um limite, o desempenho da rede e do aplicativo pode declinar. Como alternat
 Se você habilitar a retenção a longo prazo, selecione uma política existente ou crie uma nova política para definir os snapshots a serem replicados e o número a ser retido.
 
 +
-... Para *escolha uma política existente*, selecione uma política existente no menu suspenso.
-... Para *criar uma nova política*, forneça o seguinte:
+*** Para *escolha uma política existente*, selecione uma política existente no menu suspenso.
+*** Para *criar uma nova política*, forneça o seguinte:
 +
-.... *Nome da política*: Insira um nome de política.
-.... *Políticas de snapshot*: Na tabela, selecione a frequência da política de snapshot e o número de cópias a reter. Pode selecionar mais de uma política de instantâneos.
+**** *Nome da política*: Insira um nome de política.
+**** *Políticas de snapshot*: Na tabela, selecione a frequência da política de snapshot e o número de cópias a reter. Pode selecionar mais de uma política de instantâneos.
 
 
 
@@ -93,7 +93,7 @@ Se você habilitar a retenção a longo prazo, selecione uma política existente
 +
 _Auto_ é a política de disposição em camadas padrão ao criar um volume usando a interface de usuário do FSX for ONTAP de fábrica de carga de trabalho. Para obter mais informações sobre políticas de disposição em camadas de volume, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidade de armazenamento de volume"^]documentação do AWS FSX for NetApp ONTAP.
 
-.. *Taxa máxima de transferência*: Selecione *limitada* e insira o limite máximo de transferência em MB/s. Em alternativa, selecione *Unlimited*.
+.. *Taxa máxima de transferência*: Selecione *limitada* e insira o limite máximo de transferência em MIB/s. Em alternativa, selecione *Unlimited*.
 +
 Sem um limite, o desempenho da rede e do aplicativo pode declinar. Como alternativa, recomendamos uma taxa de transferência ilimitada para os sistemas de arquivos FSX for ONTAP para cargas de trabalho críticas, por exemplo, aquelas que são usadas principalmente para recuperação de desastres.
 
@@ -107,11 +107,11 @@ Sem um limite, o desempenho da rede e do aplicativo pode declinar. Como alternat
 Se você habilitar a retenção a longo prazo, selecione uma política existente ou crie uma nova política para definir os snapshots a serem replicados e o número a ser retido.
 
 +
-... Para *escolha uma política existente*, selecione uma política existente no menu suspenso.
-... Para *criar uma nova política*, forneça o seguinte:
+*** Para *escolha uma política existente*, selecione uma política existente no menu suspenso.
+*** Para *criar uma nova política*, forneça o seguinte:
 +
-.... *Nome da política*: Insira um nome de política.
-.... *Políticas de snapshot*: Na tabela, selecione a frequência da política de snapshot e o número de cópias a reter. Pode selecionar mais de uma política de instantâneos.
+**** *Nome da política*: Insira um nome de política.
+**** *Políticas de snapshot*: Na tabela, selecione a frequência da política de snapshot e o número de cópias a reter. Pode selecionar mais de uma política de instantâneos.
 
 
 
@@ -124,4 +124,4 @@ Se você habilitar a retenção a longo prazo, selecione uma política existente
 --
 ====
 .Resultado
-A relação de replicação aparece na guia *relacionamentos de replicação*.
+A relação de replicação aparece na guia *relacionamentos de replicação* no sistema de arquivos FSX for ONTAP de destino.

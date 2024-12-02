@@ -38,8 +38,6 @@
   <block id="f76864e1c2588ae3d6373b6ab95e2209" category="list-text">Na visão geral do sistema de arquivos, selecione a guia *volumes*.</block>
   <block id="2ca869b68be8f2b6e678f47d25c26fb7" category="list-text">Selecione *ações avançadas* e, em seguida, *Editar compartilhamento CIFS*.</block>
   <block id="736934ebc3ee8de296f3d5213e79430e" category="list-text">Na página Editar compartilhamento CIFS, forneça o seguinte:</block>
-  <block id="59d0fdf4151cde9e812dd005074026a6" category="list-text">*Usuários ou grupos*: Insira usuários e grupos válidos. Separe cada entrada por um ponto e vírgula ";".</block>
-  <block id="e57960b090437945cad74087551739a4" category="list-text">*Permissões*: Selecione *Controle completo*, *leitura/gravação*, *leitura* ou *sem acesso*.</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">Sobre esta tarefa</block>
   <block id="4c9aa322b281bc41d9f93e03b1223838" category="paragraph">Determine as especificações do cliente para as regras de política de exportação. Os valores válidos para a especificação do cliente são os seguintes:</block>
   <block id="1d9e509ddb93a176b7d369a91ad7deaf" category="list-text">Endereços IP</block>
@@ -246,7 +244,6 @@
   <block id="c2ca79898f24b0041abe0a50f8a67aec" category="open-title">Replique todos os volumes em um sistema de arquivos</block>
   <block id="932ea72af08ac8563c34e80a7a85d205" category="list-text">Na visão geral do sistema de arquivos, selecione *criar replicação*.</block>
   <block id="8642bd9871818efa86fdfbc89b47d7fe" category="list-text">*Nome do volume*: O nome do volume de destino é gerado automaticamente com o seguinte<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block> formato .</block>
-  <block id="27178687718ce0fb69f45347b32592a7" category="paragraph">A relação de replicação aparece na guia *relacionamentos de replicação*.</block>
   <block id="a008632064f344e2df83272a479135d3" category="doc">Crie uma política de snapshot para o FSX for ONTAP volumes</block>
   <block id="8044f667bde3c7c59b4115402b5eaf0b" category="paragraph">Você pode criar uma política de snapshot personalizada que difere das três políticas de snapshot internas do FSX for ONTAP:</block>
   <block id="980ef1c1aa7d1456ee087df02119341e" category="list-text"><block ref="c21f969b5f03d33d43e04f8f136e7682" prefix="" category="inline-code"></block></block>
@@ -309,8 +306,6 @@
   <block id="60d0b377e23eff27c022e227c86f5dd8" category="paragraph">Se você selecionou uma política de exportação personalizada, selecione um nome de política existente no menu suspenso.</block>
   <block id="2c55176e07be69c565e1c2c03d514cf2" category="paragraph">Se tiver selecionado uma política de exportação existente, introduza um novo nome de política.</block>
   <block id="6925697406a52f10c0897464bf6b8ce9" category="list-text">*Adicionar regra de política de exportação*: Opcionalmente, para uma política de exportação personalizada, você pode adicionar regras de política de exportação à política.</block>
-  <block id="88d72087f7214769d97c6467f6f5c337" category="list-text">*Compartilhamento CIFS*: Insira o nome do compartilhamento CIFS para fornecer acesso SMB.</block>
-  <block id="002f70daceb1af048541c69bc0b3c655" category="list-text">*Acesso por bloco*: Permite aos hosts que executam aplicativos empresariais críticos acesso ao volume usando o protocolo iSCSI.</block>
   <block id="40519cf86659d77977d5ff7930ae23e0" category="paragraph">Preencha os campos a seguir para configurar o acesso de bloco ao volume.</block>
   <block id="03ddda000e99a192f6ff8b3f46b455d2" category="list-text">*Configuração iSCSI*: Forneça os seguintes detalhes para configurar iSCSI para bloquear o acesso ao volume.</block>
   <block id="15a68f4c283396b684880bba6f9b33b2" category="list-text">Selecione *criar um novo grupo de iniciadores* ou *mapear um grupo de iniciadores existente*.</block>
@@ -455,7 +450,6 @@
   <block id="926c8d33ae17cfb0c9de244b298580fa" category="list-text">*Modo de throughput*: Opcional. Selecione *throughput provisionado* ou *throughput elástico*.</block>
   <block id="e48527e4152c0871d86e420d6389eb16" category="list-text">*Throughput (MIB/s)*: Opcional. Insira a taxa de transferência em MIB/s.</block>
   <block id="6a882e9e3ebbb1d673beb5404c763122" category="paragraph">Depois de fornecer detalhes sobre a configuração do sistema de storage, revise os cálculos e recomendações fornecidos na página.</block>
-  <block id="224be392ef5d5444786fa1dea246184d" category="paragraph">Além disso, role para baixo até a parte inferior da página para *Exportar PDF* ou *Exibir os cálculos*.</block>
   <block id="c279c48e63fa7d3f3bb448fc48e33d03" category="inline-xref">Implante o FSX para sistemas de arquivos ONTAP</block>
   <block id="c0c6f43c72d4131a3142969ee1f93961" category="paragraph">Para mudar para o FSX for ONTAP, siga as instruções <block ref="d4d3e2c1446af85f31cda9e1ddaf30d7" category="inline-xref-macro-rx"></block>para .</block>
   <block id="b531032648e600a642b682616d2a0bdd" category="section-title">Explore a economia para ambientes de storage detetados</block>
@@ -580,9 +574,6 @@
   <block id="18e73e557ecb75c57d1d16ca781cbfbe" category="list-text">Selecione *Inicializar*.</block>
   <block id="1eba71d64e6c5e410e558530711e835b" category="summary">As limitações conhecidas identificam plataformas, dispositivos ou funções que não são suportadas por esta versão do produto ou que não interoperam corretamente com ele. Revise essas limitações com cuidado.</block>
   <block id="482723983a4f2af954e36ff41e567451" category="doc">Limitações conhecidas</block>
-  <block id="97e7c9a7d06eac006a28bf05467fcc8b" category="section-title">Link</block>
-  <block id="fd18465573ec21a6218982055981f6b1" category="section-title">Eficiência de storage</block>
-  <block id="573994bf2d443bf682f6d3d34a979de0" category="paragraph">A eficiência de storage não pode ser desativada ou ativada após a criação do volume.</block>
   <block id="488044172f20eab904aecc2827c019b4" category="section-title">Suporte a região de capacidade de taxa de transferência</block>
   <block id="0a27e957ebaf89bce02c66c147da7966" category="section-title">Implantações com escalabilidade vertical</block>
   <block id="24aa3b91eee064e4bbffa941e071bd95" category="paragraph">As seguintes regiões suportam capacidade máxima de até 4 GB/s para implantações de escalabilidade vertical: Região Leste DOS EUA (Ohio), região Leste dos EUA (Norte da Virgínia), região Oeste dos EUA (Oregon) e Europa (Irlanda).</block>
@@ -595,7 +586,6 @@
   <block id="2204b0f79985b7b0565114e8305937a5" category="section-title">VMs de storage</block>
   <block id="b1c8cb58e124bead4ca2e09fa1c20c9b" category="paragraph">Consulte <block ref="17ef0d7491a925205e8443311f7ef122" category="inline-link-macro-rx"></block>na documentação da AWS o número máximo de SVMs por sistema de arquivos.</block>
   <block id="3a448e496404b548627a97fc00da8e23" category="section-title">Suporte ao protocolo iSCSI</block>
-  <block id="33060a985f3ea357dedca3b638c9dedc" category="list-text">O protocolo iSCSI só é suportado para implantações de escalabilidade vertical. 1</block>
   <block id="50fa5062b83d0f575448ba449245fa17" category="list-text">O protocolo iSCSI só está disponível para volumes FlexVol. 1</block>
   <block id="53c858a11ae23c19aee107fb913f096a" category="list-text">Apenas um único LUN pode ser configurado por volume.</block>
   <block id="044dbc650d6316ed90f739b69dfff7ee" category="section-title">Suporte regional</block>
@@ -653,14 +643,6 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Código aberto</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">Os arquivos de aviso fornecem informações sobre direitos autorais de terceiros e licenças usadas no software NetApp.</block>
-  <block id="22e5a7336ebe77138f0282cedcb069ab" category="inline-link">Fábrica da carga de trabalho</block>
-  <block id="7ffcbeca3b450b8d05f9cf0eedb617f8" category="list-text"><block ref="7ffcbeca3b450b8d05f9cf0eedb617f8" category="inline-link-rx"></block></block>
-  <block id="887f800d53dc2cd5a7894464a6f60a6b" category="inline-link">Fábrica da carga de trabalho para bancos de dados</block>
-  <block id="7e505d4c691d86e5bd415f9ccb849966" category="list-text"><block ref="7e505d4c691d86e5bd415f9ccb849966" category="inline-link-rx"></block></block>
-  <block id="9591e2d54c998ae1c9d48fd5be7762e9" category="inline-link">Fábrica de carga de trabalho para GenAI</block>
-  <block id="f38c7416013fc239c3dd3288d40a40c0" category="list-text"><block ref="f38c7416013fc239c3dd3288d40a40c0" category="inline-link-rx"></block></block>
-  <block id="404a5efb62a3a3f22b02593091042608" category="inline-link">Fábrica de carga de trabalho para VMware</block>
-  <block id="9a211183d3fa82368d76fdbab5abdeda" category="list-text"><block ref="9a211183d3fa82368d76fdbab5abdeda" category="inline-link-rx"></block></block>
   <block id="c2afadd6bca5968317f2f7f1a7e37514" category="doc">Limite a taxa máxima de transferência de uma relação de replicação</block>
   <block id="091ab8de8bd05d3d281793c55240d887" category="paragraph">Limitar a taxa máxima de transferência é opcional, mas recomendado. Sem um limite, o desempenho da rede e do aplicativo pode declinar.</block>
   <block id="4cb1e25c015161bf2183f7f8af361d6a" category="paragraph">Como alternativa, recomendamos uma taxa de transferência ilimitada para os sistemas de arquivos FSX for ONTAP para cargas de trabalho críticas, por exemplo, aquelas que são usadas principalmente para recuperação de desastres.</block>
@@ -1209,4 +1191,111 @@
   <block id="baae6cbba4c997ef4c9035394e7dbd9e" category="sidebar">Gerenciar o compartilhamento CIFS</block>
   <block id="11c0aa7596d4f4521c9a98f708c34cc4" category="sidebar">Gerenciar tags de VM de armazenamento</block>
   <block id="e4b304b6d81189c09bd7e999a18522e8" category="sidebar">Gerencie o agendamento de backup do FSX for ONTAP</block>
+  <block id="c4f10a04f7aa75535a8a0475261393eb" category="doc">Armazenamento de bloco para sistemas de arquivos FSX para ONTAP com escalabilidade horizontal</block>
+  <block id="152983842f852ef5bae46ac675caec95" category="paragraph">Agora você pode provisionar o armazenamento em bloco no FSX for ONTAP ao usar uma implantação de sistema de arquivos com escalabilidade horizontal com até 6 pares de HA.</block>
+  <block id="8cce6f6c21973d5dff1898076cddb209" category="paragraph"><block ref="8cce6f6c21973d5dff1898076cddb209" category="inline-link-macro-rx"></block></block>
+  <block id="609b2d9256f15ecb9d57d3f545d91174" category="section-title">Comando de montagem disponível</block>
+  <block id="67ba5d91692276a76737790f2df885ec" category="paragraph">Os comandos de montagem agora estão disponíveis para acesso NFS e CIFS a um volume. Você pode obter o ponto de montagem para um volume dentro de um sistema de arquivos FSX for ONTAP selecionando *ações básicas* e depois *Exibir comando de montagem*.</block>
+  <block id="f12470a0bbf95a722b70847640bd40c9" category="inline-image-macro">Captura de tela que mostra para exibir o comando de montagem entrando em um sistema de arquivos fsx for ONTAP, selecionando o menu de volume, selecionando ações básicas e, em seguida, selecionando o comando view mount. A caixa de diálogo de comando mount é exibida e exibe o comando mount para acesso CIFS ou NFS.</block>
+  <block id="21817bf964617ea4f875252102707119" category="paragraph"><block ref="21817bf964617ea4f875252102707119" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0087bca38db021c2b14c65d5893a9339" category="inline-link-macro">Exibir o comando de montagem para um volume</block>
+  <block id="41cd808fdcb8411a8a73071649aca98e" category="paragraph"><block ref="41cd808fdcb8411a8a73071649aca98e" category="inline-link-macro-rx"></block></block>
+  <block id="70bf70871888ae321ee591627f1f149f" category="section-title">Atualizar a eficiência de storage após a criação de volume</block>
+  <block id="4b1987aeb3ee9f5859457d872de9697a" category="paragraph">Agora você pode ativar ou desativar a eficiência de storage para volumes FlexVol após a criação de volume. A eficiência de storage inclui deduplicação, compressão de dados e compactação de dados. Ao ativar a eficiência de storage, você economiza espaço ideal em um FlexVol volume.</block>
+  <block id="b8ae90ddbb68f3303ee755cd1d9b5819" category="inline-link-macro">Atualizar a eficiência de storage de um volume</block>
+  <block id="d26d51c8a86d1db1cfe8dd0317cc6274" category="paragraph"><block ref="d26d51c8a86d1db1cfe8dd0317cc6274" category="inline-link-macro-rx"></block></block>
+  <block id="aadb8a2a44b75c1333f5a52c2ceb1516" category="section-title">Detecção e replicação de clusters ONTAP no local</block>
+  <block id="490a30e9496a9d55f2cfdb934812658b" category="paragraph">Descubra e replique dados de cluster do ONTAP no local para um sistema de arquivos FSX for ONTAP para que ele possa ser usado para enriquecer bases de conhecimento de IA. Todos os fluxos de trabalho de descoberta e replicação no local são possíveis a partir da nova guia *On-Premise ONTAP* no inventário de armazenamento.</block>
+  <block id="c6f905e067bdaa7ba33a58a907e59477" category="inline-link-macro">Descubra um cluster ONTAP no local</block>
+  <block id="b169507cd10826b5a52f573e2f75ad2c" category="paragraph"><block ref="b169507cd10826b5a52f573e2f75ad2c" category="inline-link-macro-rx"></block></block>
+  <block id="67e962050c9494ada1eab84c21826e3c" category="section-title">As credenciais da AWS melhoram a análise da calculadora de economia</block>
+  <block id="81e738c909aeee7a4a781716391eae27" category="paragraph">Agora você tem a opção de adicionar credenciais da AWS a partir da calculadora de economia. Adicionar credenciais melhora a precisão da análise de calculadora de economia de seus ambientes de armazenamento Amazon Elastic Block Store, Elastic File Systems e FSX for Windows File Server em comparação com o FSX for ONTAP.</block>
+  <block id="f98d47c0920e02232d981da56f082627" category="paragraph"><block ref="f98d47c0920e02232d981da56f082627" category="inline-link-macro-rx"></block></block>
+  <block id="9d16201337a7183b0ef0f80fcb36b5c2" category="paragraph">Você também pode obter o ponto de montagem para volumes no workload da BlueXP  de fábrica.</block>
+  <block id="81433468b8608aba73a2350afe41ac5a" category="section-title">Obter ponto de montagem para volumes no workload da BlueXP  de fábrica</block>
+  <block id="06e52dae2c3e09e69a906c2fba89ed66" category="paragraph">Obtenha o ponto de montagem de um volume para montar um compartilhamento em um compartilhamento CIFS ou cliente NFS.</block>
+  <block id="4a6574ab96645d28cf548ed8372c655c" category="list-text">Na guia volumes, selecione o menu de três pontos para o volume, depois *ações básicas* e, em seguida, *View mount command*.</block>
+  <block id="bd95ac5b25f35af153096a48803b03b4" category="list-text">Na caixa de diálogo montar comando, selecione *Copiar* para copiar o comando. Você vai inserir o comando copiado no seu terminal.</block>
+  <block id="4a553bf9ebe9a32a6743c78be912cfbc" category="list-text">Selecione *Fechar*.</block>
+  <block id="0206587910cd5147f80c048ba00193af" category="paragraph">Para provisionar volumes de bloco iSCSI no sistema de arquivos, selecione não mais de 6 pares de HA.</block>
+  <block id="f3b270238d8c3f46a0b10d724c916e7d" category="list-text">*Taxa máxima de transferência*: Selecione *limitada* e insira o limite máximo de transferência em MIB/s. Em alternativa, selecione *Unlimited*.</block>
+  <block id="5ef8b0a1c66a4b2210971848d2ce9752" category="paragraph">A relação de replicação aparece na guia *relacionamentos de replicação* no sistema de arquivos FSX for ONTAP de destino.</block>
+  <block id="c866bd28f46aae4b063d835d59832e65" category="list-text">*Compartilhamento CIFS*: Forneça o seguinte:</block>
+  <block id="fbd8f4b666e0f634caa63d615cae9514" category="list-text">*Nome*: Insira o nome do compartilhamento CIFS para fornecer acesso SMB.</block>
+  <block id="a0eaddecd9cba85df3eb61984ad9d41b" category="list-text">*Permissões*: Selecione Controle completo, leitura/gravação, leitura ou sem acesso e insira os usuários ou grupos separados por ponto e vírgula ( ; ). Usuários ou grupos são sensíveis a maiúsculas e minúsculas e o domínio do usuário deve ser incluído usando o formato "domínio/nome de usuário".</block>
+  <block id="a1e344db18a7a956afd7ebcb57bcefa2" category="list-text">*Acesso por bloco*: Permite aos hosts que executam aplicativos empresariais críticos acesso ao volume usando o protocolo iSCSI. O acesso a bloco só está disponível quando a implantação com escalabilidade horizontal do sistema de arquivos tiver 6 pares de HA ou menos.</block>
+  <block id="388660e21a97a90db2571da848fc61df" category="inline-link-macro">Adicionar credenciais da AWS</block>
+  <block id="df33a8a514c43741a17399e9c12a0427" category="paragraph">Além disso, você pode <block ref="10c34fa86244e9acc4f29a59fb8b09f7" category="inline-link-macro-rx"></block>melhorar a precisão da análise da calculadora. Selecione *Calcule a poupança com base nos recursos existentes*. Você será redirecionado para a página Adicionar credenciais. Depois de adicionar credenciais, selecione os recursos existentes para comparar com o FSX for ONTAP e selecione *explorar economia*.</block>
+  <block id="914666cc05a2f50a3cbff56ab4c0d87c" category="paragraph">Além disso, role para baixo até a parte inferior da página para exibir o relatório selecionando uma das seguintes opções:</block>
+  <block id="037fbb0239239f2168489bba99e09b67" category="list-text">* Exportar PDF*</block>
+  <block id="10acfa1cd5e4b3b5f4da60bba2257672" category="list-text">*Enviar por e-mail*</block>
+  <block id="3902a76bb589f831b404ce1ec9865654" category="list-text">*Veja os cálculos*</block>
+  <block id="01887ff057face34cde00a98753d7347" category="section-title">Link necessário para operações ONTAP avançadas</block>
+  <block id="428b0b39be2352757edeb5f9f12a7bdd" category="inline-link">Carga de trabalho de fábrica da BlueXP</block>
+  <block id="7cf449620aa459bc5c449db69b07e507" category="paragraph"><block ref="7cf449620aa459bc5c449db69b07e507" category="inline-link-rx"></block></block>
+  <block id="a32b59044667570495820281f09cfa10" category="list-text">*Nome*: Insira o nome do compartilhamento CIFS.</block>
+  <block id="a983c99827c51cfd1ffcfd3882536018" category="list-text">Selecione aplicar.</block>
+  <block id="aa6a9af5d2170a7e2225e0d97aefef52" category="paragraph">As alterações podem fazer com que os usuários ou grupos atuais percam o acesso ao compartilhamento CIFS.</block>
+  <block id="e58fa167b6770841b720711ad8a12b1a" category="list-text">Selecione *continuar* para salvar as alterações.</block>
+  <block id="f6db14d0bad35a9b610208b53b06c1ca" category="paragraph">São aplicadas alterações ao compartilhamento CIFS.</block>
+  <block id="8772abd9ec2ca5593300708cb88b5426" category="summary">Na fábrica do workload do BlueXP , você pode atualizar a configuração de eficiência de storage após a criação do volume.</block>
+  <block id="b31795226510baf520db5a5e2287b56e" category="doc">Atualizar a configuração de eficiência de armazenamento de um volume</block>
+  <block id="07834469705cb1cae603dc37fac50539" category="paragraph">O recurso de eficiência de storage inclui deduplicação, compressão de dados e compactação de dados para obter a melhor economia de espaço em um FlexVol volume. A deduplicação elimina blocos de dados duplicados. A compactação de dados compacta os blocos de dados para reduzir a quantidade de storage físico necessária. A compactação de dados armazena mais dados em menos espaço para aumentar a eficiência de storage.</block>
+  <block id="6949ed855da826654fa3e3a2e2a18279" category="paragraph">Se você optar por não ativar a eficiência de storage ao criar um volume, poderá habilitar a configuração para economia de espaço e custos em potencial a qualquer momento.</block>
+  <block id="3561512c31eaec9705db4d98de971d93" category="paragraph">Os volumes usam thin Provisioning, independentemente de você habilitar ou desabilitar a eficiência de storage.</block>
+  <block id="b3f2ba455947e37d7a336d7b339ee3cf" category="list-text">Selecione *ações avançadas* e, em seguida, *Definir eficiência de armazenamento*.</block>
+  <block id="fc86913f9636c03cbcbb4e3e03d4b332" category="list-text">Opte por ativar ou desativar a eficiência de armazenamento de volume.</block>
+  <block id="b755b7c9e5db773b9578d24d7b40b61d" category="list-text">Selecione *Apply* (aplicar) para guardar a alteração.</block>
+  <block id="4b5106453aabbf759975ebe8415f9dca" category="summary">Descubra e replique dados ONTAP locais na fábrica de workloads da BlueXP  para que eles possam ser usados para enriquecer bases de conhecimento de AI.</block>
+  <block id="bbe131cae781cb02f20f1bff02911991" category="doc">Use dados de cluster do ONTAP no local na fábrica de workloads do BlueXP </block>
+  <block id="124cb3fd3d0a35a1abf1c0f90f37e8a9" category="paragraph">Para usar dados de um cluster ONTAP on-premises, você primeiro precisa descobrir o cluster ONTAP on-premises. Depois de descobrir um cluster do ONTAP no local, você pode usar os dados para qualquer um dos seguintes casos de uso.</block>
+  <block id="2a3b399798aa16ecfbc1425cc560bfad" category="list-text">Casos de uso</block>
+  <block id="ef63a3d009f11deff50f4dc327b32173" category="list-text">Observe que o principal caso de uso para a carga de trabalho do GenAI é o foco dessa série de tarefas.</block>
+  <block id="809c357d304bbfa1cd4446574b270af8" category="inline-link-macro">Enriquecer as bases de conhecimento de IA</block>
+  <block id="9cce19ad5b8f6c533905f11c61df97c8" category="list-text">*Carga de trabalho do GenAI*: Replique dados de volume no local do ONTAP para um sistema de arquivos FSX for ONTAP para que os dados possam ser usados <block ref="f591db1a99ea9ae06218a2a67c7815b6" category="inline-link-macro-rx"></block>no .</block>
+  <block id="f15192f8afdcf438f7b1ccf0cda2b436" category="list-text">*Backup e migração para a nuvem*: Os dados de volume ONTAP replicados no local para um sistema de arquivos FSX for ONTAP podem ser usados como backup na nuvem.</block>
+  <block id="5b5a84720ff8905504e8a45fbc52fb73" category="list-text">*Disposição em camadas de dados*: Após a replicação, os dados de volume ONTAP no local com pouca frequência podem ser dispostos da camada de storage SSD para a camada de storage do pool de capacidade.</block>
+  <block id="0fd8af6af12775b851e6156334372818" category="paragraph">Descubra um cluster ONTAP local na fábrica de workloads do BlueXP  para que você possa replicar os dados para um sistema de arquivos do Amazon FSX for NetApp ONTAP.</block>
+  <block id="4185f116d64b1130e6f9ba4250b147fa" category="paragraph">Certifique-se de que tem o seguinte antes de começar:</block>
+  <block id="7e496dd07644d2f06f315e4fa164cc69" category="list-text">Um sistema de arquivos FSX for ONTAP para replicação.</block>
+  <block id="165a2e236f1aabd383e31c0b94f74338" category="inline-link-macro">crie um</block>
+  <block id="96c11fa75af4ee186742d94b8c4312d1" category="list-text">Um link conetado para se associar ao cluster no local descoberto. Se você não tem um link, você precisará <block ref="fde76afbe668994cedb59a1786140b8f" category="inline-link-macro-rx"></block>.</block>
+  <block id="d9475c746638e60d2b7ab26ca255f52c" category="list-text">Credenciais de usuário do ONTAP com permissões necessárias.</block>
+  <block id="08964fe3be5deba1b9687a253e630608" category="list-text">ONTAP on-premises versão 9,8 e superior.</block>
+  <block id="23850e6cb293edf3ae576c2cd44e4966" category="list-text">Conetividade como mostrado no diagrama a seguir.</block>
+  <block id="83e32e548e13c6454cf00928e1e27eec" category="inline-image-macro">Captura de tela que mostra como um cluster ONTAP local deve ser conetado para o caminho de gerenciamento e o caminho de dados para o Amazon Web Services Cloud</block>
+  <block id="ee8491e0fa59a945f11048b87d7cde35" category="paragraph"><block ref="ee8491e0fa59a945f11048b87d7cde35" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9528f87db447698374dc42a5acad7283" category="list-text">Selecione a guia *On-Premises ONTAP*.</block>
+  <block id="6717014f0e48b7ab08c9846925b42c93" category="list-text">Selecione *Discover*.</block>
+  <block id="4df09781d0339837ee9af988af1317c6" category="list-text">Reveja os pré-requisitos e selecione *seguinte*.</block>
+  <block id="a94ba7c755ae23b126e888fda5f83d7b" category="list-text">Na página Discover ONTAP on-premises, forneça o seguinte em *Configuração de cluster*:</block>
+  <block id="a256638e063d95d3879716a329eda540" category="list-text">*Link*: Selecione um link. O link será associado ao cluster no local para criar conectividade entre o cluster e a fábrica da carga de trabalho.</block>
+  <block id="db442d2f15cc5ca62b25c302ecc39e4d" category="paragraph">Se você não criou um link, siga as instruções e, em seguida, retorne a esta operação e selecione o link.</block>
+  <block id="d6c619de487035b86fe99726a4142c96" category="list-text">*Endereço IP do cluster*: Forneça o endereço IP para que o cluster ONTAP local seja replicado.</block>
+  <block id="5284e36227d3576d0531d813669d810f" category="list-text">*Credenciais ONTAP*: Insira as credenciais ONTAP para o cluster ONTAP no local. Certifique-se de que o usuário tem as permissões necessárias.</block>
+  <block id="10f4ba1588812227f6775ff4cdd8731a" category="list-text">Selecione *Discover* para iniciar o processo de descoberta.</block>
+  <block id="9107799f71b772409d2dda6a954c2b55" category="paragraph">O cluster ONTAP no local é descoberto e agora aparece na guia *On-Premise ONTAP*.</block>
+  <block id="c0bb7503a06a72052adfacae53dc8968" category="inline-xref">Replique os dados para um sistema de arquivos do FSX for ONTAP</block>
+  <block id="d8656001c9a7903c7967c4f00f9dd267" category="paragraph">Agora você pode visualizar os dados no cluster do ONTAP no local e <block ref="21efd3440e5c8575cf2acdff77601bf0" category="inline-xref-macro-rx"></block>no .</block>
+  <block id="f4a663f98fdbf7294b4d7065fe81028d" category="section-title">Replique dados de volume de um cluster ONTAP no local</block>
+  <block id="99f4cb77b09904f65d27606598e1d1d2" category="paragraph">Replique dados de volume de um cluster do ONTAP no local para um sistema de arquivos FSX for ONTAP. Depois de replicados, os dados podem ser usados para enriquecer as bases de conhecimento de AI.</block>
+  <block id="a979d07ec6790355c195ac942aac0f7a" category="list-text">Você precisa descobrir um cluster do ONTAP no local para replicar seus dados de volume.</block>
+  <block id="bbaf3e2bb6ee0562252678dc510975b4" category="list-text">Você deve ter um sistema de arquivos FSX for ONTAP disponível para ser o destino para a replicação.</block>
+  <block id="5fc398b3211d605127c144291f3eda23" category="list-text">Tanto o cluster ONTAP no local quanto o sistema de arquivos FSX for ONTAP que você usa para a relação de replicação devem ter um link associado. Se um ou ambos clusters no local e no FSX for ONTAP não tiverem links existentes, <block ref="1bb172d13e94db502d24bfc1c5a4fc0a" category="inline-link-macro-rx"></block>. Para <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>nos sistemas de ficheiros, selecione *ligação associada* em *Nome da conta*. Depois que o link se associar ao cluster do ONTAP no local e ao sistema de arquivos FSX for ONTAP, retorne a esta operação.</block>
+  <block id="aea1c4ebf571d37a1b92fbbf08a1d97c" category="list-text">Para encontrar volumes por VM de armazenamento, você pode *Selecionar VM de armazenamento* no menu suspenso.</block>
+  <block id="e03b6f62981f4a86c7a1c627e22e63e8" category="list-text">Selecione um ou mais volumes para replicar e, em seguida, selecione *replicar*.</block>
+  <block id="72106a023ea21862c78ae92b6102ff34" category="list-text">*Dados em categorias*: Selecione a política de disposição em camadas para os dados armazenados no volume de destino.</block>
+  <block id="5f80f89e32023b75a946369589efc7db" category="list-text">*Automático*: A política de disposição em camadas padrão ao criar um volume usando a interface de usuário FSX for ONTAP de fábrica de carga de trabalho. Categoriza todos os dados inativos, incluindo dados de usuário e snapshots na categoria de storage do pool de capacidade por um período de tempo específico.</block>
+  <block id="606156d99b6306c9a4135ba1dbe3f5e8" category="paragraph">Para obter mais informações sobre políticas de disposição em camadas de volume, consulte a <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block>documentação do AWS FSX for NetApp ONTAP.</block>
+  <block id="4814d993ecb870a2261a2819e47b0371" category="list-text">Para uma política existente, selecione *escolha uma política existente* e, em seguida, selecione a política existente no menu suspenso.</block>
+  <block id="a4f4dcbfc1fe91a36caaac04506e0179" category="list-text">Para uma nova política, selecione *criar uma nova política* e forneça o seguinte:</block>
+  <block id="6ec6b573aef4b43427215b26f7b1db91" category="section-title">Remover um cluster ONTAP no local da fábrica de workloads da BlueXP </block>
+  <block id="f2b13eb0b412655e8697e5140bff3b74" category="paragraph">Remover um cluster ONTAP no local da fábrica de workloads do BlueXP , quando necessário.</block>
+  <block id="3b1c3bad959c6c151d464eb6b626f56f" category="paragraph">É necessário <block ref="fa9c4758a74309c74eff4644a0675063" category="inline-link-macro-rx"></block> para quaisquer volumes no cluster do ONTAP no local antes de remover o cluster para que não haja relacionamentos quebrados.</block>
+  <block id="78ce280a4b77e37298d71642a4457c0a" category="list-text">Selecione o cluster ONTAP local a ser removido.</block>
+  <block id="5b4dad1d897213eb27b108cb47f3a75d" category="list-text">Selecione o menu de três pontos e selecione *Remover da fábrica de carga de trabalho*.</block>
+  <block id="a8cf8ae4f9fef4837824fb9409537e5d" category="paragraph">O cluster do ONTAP no local é removido do workload do BlueXP .</block>
+  <block id="6ad17d07338dffda7982d8efdad3a276" category="section-title">01 de dezembro de 2024</block>
+  <block id="aab28bb522b1a572add493963001b88d" category="sidebar">Uso de dados ONTAP on-premises</block>
+  <block id="5d831b6559b5decf8f758715856498b9" category="sidebar">Atualizar a eficiência do storage</block>
 </blocks>

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: change-tiering-policy.html 
-keywords:  
+keywords: tiering policy, change tier, change tiers, tier policy update 
 summary: Altere a política de disposição em camadas na fábrica de workloads do BlueXP  para realocar dados da camada de storage primário de alta performance para a camada de storage do pool de capacidade secundária. 
 ---
 = Alterar a política de disposição em camadas de um volume no workload da BlueXP  de fábrica
