@@ -29,7 +29,7 @@ Obtenha o ponto de montagem de um volume para montar um compartilhamento em um c
 . Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume e selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
 . Na guia volumes, selecione o menu de três pontos para o volume, depois *ações básicas* e, em seguida, *View mount command*.
-. Na caixa de diálogo montar comando, selecione *Copiar* para copiar o comando. Você vai inserir o comando copiado no seu terminal.
+. Na caixa de diálogo montar comando, selecione *Copy* para copiar o comando para o ponto de montagem NFS ou compartilhamento CIFS. Você vai inserir o comando copiado no seu terminal.
 . Selecione *Fechar*.
 
 

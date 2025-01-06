@@ -27,7 +27,7 @@ Um link é necessário para concluir algumas operações, como replicação na i
 
 === Implantações com escalabilidade vertical
 
-As seguintes regiões suportam capacidade máxima de até 4 GB/s para implantações de escalabilidade vertical: Região Leste DOS EUA (Ohio), região Leste dos EUA (Norte da Virgínia), região Oeste dos EUA (Oregon) e Europa (Irlanda).
+As configurações de escalabilidade vertical são compatíveis com até 2 GB/s em todas as regiões. As seguintes regiões suportam capacidade máxima de até 4 GB/s para implantações de escalabilidade vertical: Região Leste DOS EUA (Ohio), região Leste dos EUA (Norte da Virgínia), região Oeste dos EUA (Oregon) e Europa (Irlanda).
 
 
 
@@ -62,19 +62,11 @@ Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.ht
 
 
 
-== Suporte regional
-
-* Canada West (Calgary) região não é atualmente suportada.
-
-
-
-
 == Proteção de dados
 
 * Os instantâneos não podem ser eliminados.
-* Somente a replicação entre o FSX for ONTAP sistemas de arquivos é suportada.
 * Quando você replica um sistema de arquivos, todos os volumes no sistema de arquivos usam a mesma política de replicação.
-* Apenas o último instantâneo está disponível para restauração.
+* Para relacionamentos de replicação de retenção de longo prazo, apenas o último snapshot está disponível para restauração.
 
 
 

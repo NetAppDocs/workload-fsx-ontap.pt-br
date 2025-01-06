@@ -47,7 +47,7 @@ sidebar:
       - title: Crie um volume
         url: "/create-volume.html"
       - title: Acesse seus dados
-        url: access-data.html
+        url: "/access-data.html"
     - title: Crie uma VM de storage
       url: "/create-storage-vm.html"
     - title: Proteja seus dados
@@ -77,7 +77,7 @@ sidebar:
         - title: Inicializar uma relação de replicação
           url: "/initialize-replication.html"
       - title: Clonar um volume
-        url: clone-volume.html
+        url: "/clone-volume.html"
       - title: Uso de dados ONTAP on-premises
         url: "/use-onprem-data.html"
   - title: Administrar e monitorar
@@ -92,16 +92,16 @@ sidebar:
         url: "/manage-volume-tags.html"
       - title: Rebalancear a capacidade de um volume
         url: "/rebalance-volume.html"
-      - title: Alterar a política de disposição em camadas
+      - title: Alterar uma política de disposição em camadas
         url: "/change-tiering-policy.html"
       - title: Atualizar a eficiência do storage
         url: "/update-storage-efficiency.html"
-      - title: Gerenciar a política de exportação NFS
+      - title: Gerenciar políticas de exportação de NFS
         url: "/manage-nfs-export-policy.html"
-      - title: Gerenciar o compartilhamento CIFS
+      - title: Gerenciar compartilhamentos CIFS
         url: "/manage-cifs-share.html"
       - title: Divida um volume clonado
-        url: split-cloned-volume.html
+        url: "/split-cloned-volume.html"
       - title: Eliminar um volume
         url: "/delete-volume.html"
     - title: Administração do sistema de arquivos
@@ -123,13 +123,13 @@ sidebar:
       - title: Gerenciar tags de VM de armazenamento
         url: "/manage-svm-tags.html"
       - title: Repor a palavra-passe da VM de armazenamento
-        url: reset-svm-password.html
+        url: "/reset-svm-password.html"
       - title: Exclua uma VM de armazenamento
         url: "/delete-svm.html"
     - title: Administração da proteção de dados
       entries:
       - title: Alterar a política de snapshot de um volume
-        url: change-snapshot-policy.html
+        url: "/change-snapshot-policy.html"
       - title: Gerencie o agendamento de backup do FSX for ONTAP
         url: "/manage-backup-schedule.html"
       - title: Habilite e edite snapshots para retenção de longo prazo

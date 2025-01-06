@@ -41,13 +41,16 @@ A fábrica da carga de trabalho requer um link para exibir algumas informações
 
 Os recursos que exigem um link incluem:
 
-* Exiba a versão do ONTAP que está instalada em um sistema de arquivos FSX for ONTAP
-* Gerir volumes iSCSI no sistema
-* Ative e desative o recurso de crescimento automático para volumes
-* Criar e gerenciar políticas de snapshot
-* Configurar relações de replicação e replicar volumes entre sistemas de arquivos
-* Configurar relações de backup e fazer backup dos dados de volume no storage de nuvem
-* Clonar volumes dentro de um sistema de arquivos
-* Exibir métricas adicionais diretamente do ONTAP (as métricas padrão são coletadas pelo Amazon CloudWatch)
+* Exibindo a versão do ONTAP que está instalada em um sistema de arquivos FSX for ONTAP
+* Gerenciamento de volumes iSCSI em um sistema de arquivos FSX for ONTAP
+* Recurso de crescimento automático para volumes
+* Criação e gerenciamento de políticas de snapshot
+* Configuração da relação de replicação
+* Replicação de volume entre o FSX para sistemas de arquivos ONTAP
+* Configuração da relação de backup
+* Backups de dados de volume para o storage de nuvem
+* Clones de volume em um sistema de arquivos FSX for ONTAP
+* Exibição de métricas adicionais diretamente do ONTAP (métricas padrão são coletadas pelo Amazon CloudWatch)
 * Gerenciamento de políticas de exportação de NFS
+* Gerenciamento de compartilhamentos CIFS
 
