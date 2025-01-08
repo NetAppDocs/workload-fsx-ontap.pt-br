@@ -36,10 +36,27 @@ A personalização de uma política permite especificar quando criar snapshots, 
 
 
 .Passos
-Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^]. . Em *armazenamento*, selecione *ir para inventário de armazenamento*. . Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume e selecione *Gerenciar*. . Na visão geral do sistema de arquivos, selecione a guia *volumes*. . Na guia *volumes*, selecione o menu de três pontos para o volume a ser protegido com instantâneos programados. . Selecione *ações de proteção de dados*, *Snapshots* e, em seguida, *Gerenciar políticas de snapshot*. . Na página de gerenciamento de políticas de snapshot, selecione *criar uma nova política de snapshot*. . No campo *Nome da política de instantâneo*, insira um nome para a política de instantâneo. . Opcional: No campo *Description*, insira uma descrição para a política de snapshot. . Em *Agendar*, selecione quando criar instantâneos. Por exemplo, a cada minuto ou hora.
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Em *armazenamento*, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
+. Na guia *volumes*, selecione o menu de três pontos para o volume a ser protegido com instantâneos programados.
+. Selecione *ações de proteção de dados*, *Snapshots* e, em seguida, *Gerenciar políticas de snapshot*.
+. Na página de gerenciamento de políticas de snapshot, selecione *criar uma nova política de snapshot*.
+. No campo *Nome da política de instantâneo*, insira um nome para a política de instantâneo.
+. Opcional: No campo *Description*, insira uma descrição para a política de snapshot.
+. Em *Agendar*, selecione quando criar instantâneos. Por exemplo, a cada minuto ou hora.
++
+Pode selecionar mais de uma frequência.
 
-Você pode selecionar mais de uma frequência. . Em *número de cópias*, introduza o número de cópias a reter.
+. Em *número de cópias*, introduza o número de cópias a reter.
++
+O número máximo de cópias é 1.023.
 
-O número máximo de cópias é de 1.023. . Opcional: Em *convenção de nomenclatura*, insira um *prefixo* para a política. . *Etiqueta de retenção* é preenchida automaticamente.
+. Opcional: Em *convenção de nomenclatura*, insira um *prefixo* para a política.
+. *Etiqueta de retenção* é preenchida automaticamente.
++
+Este rótulo refere-se ao SnapMirror, ou rótulo de replicação, usado para selecionar apenas snapshots especificados para replicação da origem para o sistema de arquivos de destino.
 
-Este rótulo refere-se ao SnapMirror, ou rótulo de replicação, usado para selecionar apenas snapshots especificados para replicação da origem para o sistema de arquivos de destino. . Selecione *aplicar*.
+. Selecione *aplicar*.
+
