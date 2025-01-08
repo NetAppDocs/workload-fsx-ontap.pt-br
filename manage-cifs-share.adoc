@@ -11,13 +11,13 @@ summary: O gerenciamento do compartilhamento CIFS de um volume na fábrica de wo
 
 
 [role="lead"]
-O gerenciamento do compartilhamento CIFS de um volume na fábrica de workloads do BlueXP  inclui a criação de compartilhamento CIFS, determinando os usuários e grupos a dar acesso e o tipo de acesso a eles e a exclusão de compartilhamento CIFS.
+O gerenciamento do compartilhamento CIFS de um volume na fábrica de workloads do BlueXP  inclui a criação de compartilhamento CIFS, determinando os usuários e grupos a dar acesso e o nível de permissões a serem concedidas e a exclusão de compartilhamento CIFS.
 
 .Antes de começar
 Antes de começar, faça o seguinte:
 
 * Para gerenciar compartilhamentos CIFS, é link:manage-links.html["associe um link"]necessário . Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, selecione *associar link* sob *nome da conta*. Assim que o link se associar, volte a esta operação.
-* Determine os usuários ou grupos a dar acesso e o tipo de acesso a eles.
+* Determine os usuários ou grupos para dar acesso e o nível de permissões para dar a eles.
 
 
 
