@@ -82,6 +82,8 @@ sidebar:
         url: "/use-onprem-data.html"
   - title: Administrar e monitorar
     entries:
+    - title: Monitore as operações com o Tracker
+      url: "/monitor-operations.html"
     - title: Administração de volumes
       entries:
       - title: Edite o volume com crescimento automático

@@ -33,8 +33,7 @@ NOTE: Ao usar o Terraform do Codebox, o código que você copia ou baixa oculta 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia FSX for ONTAP, selecione o menu de três pontos do sistema de arquivos para criar uma VM de armazenamento e selecione *Gerenciar*.
-. Na visão geral do sistema de arquivos, selecione *criar uma VM de armazenamento*.
+. Na guia FSX for ONTAP, selecione o menu de três pontos do sistema de arquivos para criar uma VM de armazenamento e selecione *criar uma VM de armazenamento*.
 . Na página Storage VM, em Storage VM Configuration, forneça o seguinte:
 +
 .. *Nome*: Insira um nome para a VM de armazenamento.

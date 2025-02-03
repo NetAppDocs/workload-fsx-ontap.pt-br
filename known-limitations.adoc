@@ -21,6 +21,14 @@ Um link é necessário para concluir algumas operações, como replicação na i
 
 
 
+== Adição de limitações de pares de HA
+
+* Esta operação pode demorar cerca de 30 minutos a concluir.
+* A adição de pares de HA limita as seguintes operações: Adicionar mais pares de HA, provisionar IOPS, aumentar a capacidade das SSD e atualizar a capacidade da taxa de transferência.
+
+
+
+
 == Suporte a região de capacidade de taxa de transferência
 
 

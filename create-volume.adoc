@@ -36,11 +36,19 @@ Reveja os seguintes pré-requisitos antes de criar um volume:
 
 
 
+
+
+== Crie um volume
+
+Você pode criar um volume usando as seguintes ferramentas disponíveis na Codebox: API REST, CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Saiba como usar o Codebox para automação"^].
+
+
+NOTE: Ao usar o Terraform do Codebox, o código que você copia ou baixa oculta `fsxadmin` e `vsadmin` senhas. Você precisará digitar novamente as senhas quando executar o código.
+
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos no qual você deseja criar um volume e selecione *Gerenciar*.
-. Na guia *Visão geral*, selecione *criar volume*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos no qual você deseja criar um volume e selecione *criar volume*.
 . Na página criar volume em Detalhes gerais, forneça os seguintes detalhes:
 +
 .. *Nome do volume*: Insira um nome para o volume.
@@ -113,6 +121,58 @@ Preencha os campos a seguir para configurar o acesso de bloco ao volume.
 .. *Eficiência de armazenamento*: Desativar ou ativar a eficiência de armazenamento.
 +
 A eficiência de storage é obtida com a utilização de recursos de deduplicação e compactação do ONTAP. A deduplicação elimina blocos de dados duplicados. A compactação de dados compacta os blocos de dados para reduzir a quantidade de storage físico necessária.
+
+.. *Arquivos immutáveis*: Esse recurso, também conhecido como SnapLock, está desativado por padrão. A ativação de arquivos imutáveis impede que os dados sejam excluídos ou substituídos por um período de tempo especificado. Ativar esta funcionalidade só é possível durante a criação de volume. Uma vez ativado, esta funcionalidade não pode ser desativada. Este é um recurso premium para o FSX for ONTAP que carrega um custo adicional. Para obter mais informações, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["Como o SnapLock funciona"^]documentação do Amazon FSX for NetApp ONTAP.
++
+A ativação do recurso arquivos imutáveis vincula permanentemente os arquivos neste volume para um estado WORM imutável (write-once-read-many).
+
++
+Modos de retenção:: Você pode selecionar entre dois modos de retenção - _Enterprise_ ou _Compliance_.
++
+--
+*** No modo _Enterprise_, um administrador de arquivos imutáveis, ou SnapLock, pode excluir um arquivo durante seu período de retenção.
+*** No modo _Compliance_, um arquivo WORM não pode ser excluído antes que seu período de retenção expire. Da mesma forma, o volume imutável não pode ser excluído até que os períodos de retenção de todos os arquivos dentro do volume expirem.
+
+
+--
+Período de retenção:: O período de retenção tem duas configurações - _política de retenção_ e _períodos de retenção_. A política de retenção _define quanto tempo reter arquivos em um estado WORM imutável. Você pode especificar sua própria política de retenção ou usar a política de retenção padrão (não especificada) que é de 30 anos. Os _períodos de retenção mínimo e máximo_ definem o intervalo de tempo permitido para bloquear arquivos.
++
+--
+NOTA:: Mesmo após o período de retenção expirar, você não pode modificar um arquivo WORM. Só é possível excluí-lo ou definir um novo período de retenção para ativar a proteção WORM novamente.
+
+
+--
+AUTOCOMMIT:: Você terá a opção de ativar o recurso de confirmação automática. O recurso de confirmação automática vincula um arquivo ao estado WORM em um volume SnapLock se o arquivo não for alterado durante o período de confirmação automática. O recurso de confirmação automática está desativado por padrão. Os arquivos que você deseja confirmar automaticamente devem residir em um volume SnapLock.
+Modo de adição de volume:: Não é possível modificar dados existentes em um arquivo protegido WORM. No entanto, os arquivos imutáveis permitem manter a proteção de dados existentes usando arquivos anexados WORM. Por exemplo, você pode gerar arquivos de log ou preservar dados de streaming de áudio ou vídeo enquanto grava dados para eles de forma incremental. link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append["Saiba mais sobre o modo de adição de volume"^] Na documentação do Amazon FSX for NetApp ONTAP.
++
+--
+.Etapas para arquivos imutáveis
+... Selecione para ativar *ficheiros immutáveis alimentados pelo SnapLock*.
+... Clique na caixa para concordar e prosseguir.
+... Clique em *Ativar*.
+... *Modo de retenção*: Selecione o modo *Enterprise* ou *Compliance*.
+... *Período de retenção*:
++
+**** Selecione a política de retenção:
++
+***** *Não especificado*: Define a política de retenção para 30 anos.
+***** *Especificar período*: Insira o número de segundos, minutos, horas, dias, meses ou anos para definir sua própria política de retenção.
+
+
+**** Selecione os períodos de retenção mínimo e máximo:
++
+***** *Mínimo*: Insira o número de segundos, minutos, horas, dias, meses ou anos para definir o período mínimo de retenção.
+***** *Máximo*: Insira o número de segundos, minutos, horas, dias, meses ou anos para definir o período máximo de retenção.
+
+
+
+
+... *AUTOCOMMIT*: Desativar ou ativar o autocommit. Se você ativar a confirmação automática, defina o período de confirmação automática.
+... *Modo de adição de volume*: Desativar ou ativar. Permite adicionar novo conteúdo a arquivos WORM.
+
+
+--
+
 
 .. *Política de snapshot*: Selecione a política de snapshot para especificar a frequência e a retenção de snapshots.
 +

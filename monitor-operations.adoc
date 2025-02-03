@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: monitor-operations.html 
+keywords: monitor databases, monitor jobs, track database jobs 
+summary: Acompanhe o FSX para ONTAP, credenciais e operações de link e monitore o progresso do trabalho com o Rastreador na fábrica de carga de trabalho do BlueXP  para armazenamento. 
+---
+= Monitore as operações de storage com o Tracker na fábrica de workloads da BlueXP 
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Monitore e acompanhe a execução do FSX for ONTAP, credenciais e operações de link e monitore o progresso das tarefas com o Rastreador na fábrica de carga de trabalho do BlueXP .
+
+.Sobre esta tarefa
+A fábrica de carga de trabalho fornece o Rastreador, um recurso de monitoramento, para que você possa monitorar e acompanhar o progresso e o status do FSX for ONTAP, credenciais e operações de link, analisar detalhes de tarefas e subtarefas operacionais, diagnosticar problemas ou falhas, editar parâmetros para operações com falha e tentar novamente operações com falha. Pode filtrar trabalhos por tipo e estado, localizar trabalhos utilizando a função de pesquisa e transferir a tabela trabalhos.
+
+O Tracker suporta até três níveis de monitoramento, dependendo da operação. Cada tarefa, como a implantação do sistema de arquivos, exibe a descrição da tarefa, status, hora de início, duração da tarefa, usuário, região, recurso proxy, ID da tarefa e todas as subtarefas relacionadas.
+
+Monitore níveis de tarefa com exemplos::
++
+--
+* Nível 1 (trabalho pai): Rastreia a implantação de um sistema de arquivos.
+* Nível 2 (subtarefa): Monitoriza os subtrabalhos relacionados com a implementação do sistema de ficheiros.
+* Nível 3 (tarefa): Lista a sequência de ações realizadas em cada recurso.
+
+
+--
+Estado da operação:: O status da operação no Rastreador é o seguinte _em andamento_, _sucesso_ e _falha_.
++
+--
+Frequência de funcionamento:: A frequência de funcionamento baseia-se no tipo de trabalho e na programação de trabalhos.
+
+
+--
+Retenção de eventos:: Os eventos são mantidos na interface do usuário por 30 dias.
+
+
+
+
+== Monitorizar e monitorizar as operações
+
+Acompanhe e monitore operações no BlueXP  com o Rastreador.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. No inventário de armazenamento, selecione o menu de configurações de conta e, em seguida, selecione *Tracker*.
++
+image:screenshot-menu-tracker-option.png["Uma captura de tela do menu de configurações da conta com a opção Rastreador realçada."]
+
+. Na guia Rastreador, use os filtros ou a pesquisa para restringir os resultados do trabalho. Também pode transferir um relatório de trabalhos.
+
+
+
+
+== Exibir solicitação de API
+
+Visualize a solicitação de API na caixa de código para uma tarefa no Tracker.
+
+.Passos
+. No Rastreador, selecione uma tarefa.
+. Selecione o menu de três pontos e, em seguida, selecione *View API Request*.
+
+
+
+
+== Tente novamente uma operação com falha
+
+Tente novamente uma operação com falha no Tracker. Você também pode copiar a mensagem de erro de uma operação com falha.
+
+
+NOTE: Apenas o número x de tentativas é permitido para uma operação com falha.
+
+.Passos
+. No Rastreador, selecione uma operação com falha.
+. Selecione o menu de três pontos e, em seguida, selecione *Repetir*.
+
+
+.Resultado
+A operação é reiniciada.
+
+
+
+== Edite e tente novamente uma operação com falha
+
+Edite os parâmetros da operação com falha e tente novamente a operação fora do Rastreador.
+
+.Passos
+. No Rastreador, selecione uma operação com falha.
+. Selecione o menu de três pontos e, em seguida, selecione *Editar e tentar novamente*.
++
+Você é redirecionado para a página de operação, onde você pode editar os parâmetros e tentar novamente a operação.
+
+
+
+.Resultado
+A operação é reiniciada. Aceda a Rastreador para ver o estado da operação.

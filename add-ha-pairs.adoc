@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: add-ha-pairs.html 
+keywords: add high-availability pairs, add HA pairs, add HA pair, add high-availability pair, scale out, file system, fsx for ontap 
+summary: Adicione pares de alta disponibilidade a um sistema de arquivos no workload do BlueXP  de fábrica para fazer escalabilidade horizontal do sistema de arquivos. 
+---
+= Adicionar pares de HA a um sistema de arquivos no workload da BlueXP  de fábrica
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Adicione pares de alta disponibilidade (HA) para escalar um sistema de arquivos único AZ de segunda geração do FSX for ONTAP na fábrica de workloads do BlueXP  para aumentar a performance e a capacidade. Essa expansão oferece mais escalabilidade e flexibilidade de performance em relação aos sistemas de arquivos de primeira geração.
+
+.Sobre esta tarefa
+Os novos pares de HA são adicionados usando o mesmo SKU e a mesma capacidade por par de HA.
+
+A adição de pares de HA não é suportada para o seguinte:
+
+* Implantações de HA multi-AZ ou sistemas de arquivos FSX para ONTAP de primeira geração
+* Sistemas de arquivos FSX para ONTAP com mais de 5 VMs de armazenamento
+* FSX para sistemas de arquivos ONTAP com iSCSI LUNs
+* Configurações que têm capacidade máxima ou próxima da capacidade máxima de SSD ou atingiram os limites de alocação de e/S
+
+
+Considere o seguinte sobre a adição de pares de HA:
+
+* Remoção do par HA: Os pares HA não podem ser removidos depois de adicionados ao sistema de arquivos.
+* Tempo de operação e limitações: A adição de pares de HA pode levar aproximadamente 30 minutos. Considere adicionar pares de HA durante uma janela de manutenção ou durante períodos de baixa atividade. Além disso, a adição de pares de HA limita outras operações, como adicionar mais pares de HA, provisionar IOPS, aumentar a capacidade do SSD e atualizar a capacidade da taxa de transferência.
+* Alocação de e/S: A alocação automática de e/S depende da capacidade total de armazenamento. A alocação de e/S configurada pelo usuário é multiplicada pela quantidade de pares de HA adicionados.
+* Cache NVMe: Ao adicionar pares de HA, o cache NVMe é habilitado por padrão. Recomendamos desativar o cache NVMe para cargas de trabalho pesadas.
+* Número de pares de HA: Recomendamos que você expanda seu sistema de arquivos para um número par de pares de HA para uma distribuição equilibrada de dados entre pares de HA.
+* Criação de LUN: A criação de LUN é possível em um sistema de arquivos Single-AZ de segunda geração somente se ainda não existirem LUNs no sistema de arquivos ao adicionar pares de HA. A criação de LUN só é suportada em um sistema de arquivos com 6 pares de HA ou menos.
+
+
+.Antes de começar
+Faça o seguinte antes de adicionar pares de HA a um sistema de arquivos:
+
+* Remova todos os iSCSI LUNs para escalar o sistema de arquivos.
+* Certifique-se de que o sistema de arquivos não tenha mais de 5 VMs de storage.
+
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, em *informações*, selecione o ícone de lápis ao lado de *HA Pairs*.
+. Na caixa de diálogo *Adicionar pares de HA*, selecione o número de pares de HA a serem adicionados ao sistema de arquivos.
+. Selecione *Add* para confirmar a adição dos pares HA.
+
+
+.Resultado
+A fábrica de carga de trabalho inicia o processo para adicionar o(s) par(s) de HA ao sistema de arquivos. O sistema de arquivos não está disponível para outras operações, como criação de volume, até que os pares de HA sejam adicionados. Pode monitorizar o progresso da operação no separador *Tracker*.
