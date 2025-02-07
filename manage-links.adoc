@@ -11,7 +11,7 @@ summary: Você pode exibir links associados à sua conta, associar um link e rem
 
 
 [role="lead"]
-Gerencie os links que você associou à sua conta de fábrica de carga de trabalho do BlueXP .
+Gerencie os links que você associou à sua conta de fábrica de carga de trabalho do BlueXP . Você pode visualizar links associados a um sistema de arquivos FSX for ONTAP, associar um link com um sistema de arquivos FSX for ONTAP, editar um link e remover um link.
 
 link:links-overview.html["Saiba mais sobre links"] ou link:create-link.html["crie um link"].
 

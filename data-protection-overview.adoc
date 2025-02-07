@@ -4,14 +4,14 @@ permalink: data-protection-overview.html
 keywords: overview 
 summary: O FSX para ONTAP oferece suporte a snapshots, backups de volume e replicação de volume na fábrica de workloads do BlueXP . 
 ---
-= Proteção de dados na fábrica de workloads da BlueXP 
+= Tipos de proteção de dados na fábrica de workloads da BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-O FSX para ONTAP oferece suporte a snapshots para criar imagens pontuais e somente leitura de um volume, backups de volume para criar backups off-line com longa retenção de volumes e replicação de volume para criar espelhos assíncronos do seu volume em diferentes regiões.
+O FSX para ONTAP oferece suporte a snapshots, backups e replicação para proteção de dados. Recomendamos que você use uma combinação de tipos de proteção de dados para se preparar para o inevitável e proteger seus dados.
 
 
 
