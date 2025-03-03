@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: delete-volume.html 
 keywords: delete volume, volume deletion 
-summary: Você pode excluir um volume em seu sistema de arquivos FSX for ONTAP a qualquer momento. Esta operação é irreversível. 
+summary: Exclua um volume no seu sistema de arquivos FSX for ONTAP que não é mais necessário e para liberar espaço. Esta operação é irreversível. 
 ---
 = Exclua um volume na fábrica da carga de trabalho do BlueXP 
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Você pode excluir um volume em seu sistema de arquivos FSX for ONTAP a
 
 
 [role="lead"]
-Você pode excluir um volume em seu sistema de arquivos FSX for ONTAP a qualquer momento. Esta operação é irreversível.
+Exclua um volume no seu sistema de arquivos FSX for ONTAP que não é mais necessário e para liberar espaço. Esta operação é irreversível.
 
 .Antes de começar
 Considere o seguinte antes de excluir um volume:
@@ -19,7 +19,7 @@ Considere o seguinte antes de excluir um volume:
 * Relacionamentos de replicação: É necessário link:delete-replication.html["eliminar todas as relações de replicação existentes"] para esse volume antes de excluir o volume para que não haja relacionamentos quebrados.
 * Snapshots locais: Todos os snapshots associados a este sistema de arquivos FSX for ONTAP serão excluídos permanentemente.
 * Backup do FSX para ONTAP: As cópias de backup do FSX for ONTAP permanecerão e você ainda poderá usá-las.
-* Arquivos imutáveis: Os volumes que contêm arquivos imutáveis alimentados pelo SnapLock não podem ser excluídos até que o período de retenção expire.
+* Arquivos e snapshots imutáveis: Os volumes que contêm arquivos e snapshots imutáveis não podem ser excluídos até que o período de retenção termine.
 
 
 .Passos

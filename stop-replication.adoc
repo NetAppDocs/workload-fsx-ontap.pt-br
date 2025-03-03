@@ -11,7 +11,7 @@ summary: Interromper uma relação de replicação entre os volumes de origem e 
 
 
 [role="lead"]
-Interrompa uma relação de replicação no workload do BlueXP  de fábrica. Quando você interrompe uma relação de replicação, a replicação agendada é atualizada do volume de origem para a pausa do volume de destino. O volume de destino passa de somente leitura para leitura e gravação.
+Interrompa uma relação de replicação no workload do BlueXP  de fábrica. Quando você interrompe uma relação de replicação, a replicação agendada é atualizada do volume de origem para a pausa do volume de destino. O volume de destino passa de somente leitura para leitura/gravação.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].

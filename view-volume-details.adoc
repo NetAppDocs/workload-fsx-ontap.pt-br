@@ -22,7 +22,7 @@ Os detalhes do volume só aparecem depois de um volume ter sido criado em um sis
 . Selecione *ações básicas* e depois *Exibir detalhes do volume*.
 . Em *Detalhes do volume*, selecione as guias para exibir os seguintes detalhes do volume:
 +
-.. *Detalhes gerais*: Inclui nome do volume, UUUID do volume, ID do volume, tempo de criação, estado, tipo de volume (leitura-gravação/proteção de dados (RW/DP) ou somente leitura), nome da política de snapshot, VM de armazenamento de hospedagem (SVM) e tags.
+.. *Detalhes gerais*: Inclui nome do volume, UUUID do volume, ID do volume, tempo de criação, estado, tipo de volume (proteção de leitura/gravação/dados (RW/DP) ou somente leitura), nome da política de snapshot, VM de armazenamento de hospedagem (SVM) e tags.
 .. *Distribuição*: Inclui agregados de hospedagem, estilo de volume (FlexGroup ou FlexVol), constituintes (somente FlexGroup) e taxa de rebalanceamento (somente FlexGroup -alto, médio ou baixo).
 .. * Consumo*: Inclui tamanho, SSD usado, pool de capacidade usado, configuração de crescimento automático, tamanho máximo de crescimento, configuração de eficiência de armazenamento, espaço de compactação economizado, espaço de deduplicação economizado, política de disposição em camadas e dias de resfriamento.
 .. *Acesso*: Inclui caminho de junção, estilo de segurança, política de exportação e versão NFS para NFS e ative Directory, nome de compartilhamento CIFS, usuários ou grupos e permissões para SMB/CIFS e IQNs de grupo de iniciadores e host para iSCSI.

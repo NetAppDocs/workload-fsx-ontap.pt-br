@@ -18,7 +18,7 @@ A replicação é uma camada adicional de proteção de dados que é essencial p
 
 Essa operação cria uma relação de replicação para um ou todos os volumes de origem em um sistema de arquivos FSX for ONTAP.
 
-Os volumes replicados no sistema de arquivos de destino seguem o formato de nomenclatura `{OriginalVolumeName}_copy`: .
+Os volumes replicados no sistema de arquivos de destino são volumes de proteção de dados (DP) e seguem o formato de nomenclatura: `{OriginalVolumeName}_copy`.
 
 .Antes de começar
 Certifique-se de que cumpre os seguintes pré-requisitos antes de começar.
@@ -33,11 +33,13 @@ Siga as etapas a seguir para replicar um único volume ou replicar todos os volu
 ====
 .Replique um único volume
 --
+É possível replicar um volume de origem (leitura/gravação) ou um volume de proteção de dados (DP). Não é possível criar uma segunda réplica de um volume DP.
+
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
 . Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos que contém o volume a ser replicado e selecione *replique dados de volume*.
-. Na página criar replicação, em destino replicação, forneça o seguinte:
+. Na página replicar dados, em destino replicação, forneça o seguinte:
 +
 .. *FSX para sistema de arquivos ONTAP*: Selecione credenciais, região e nome do sistema de arquivos FSX for ONTAP para o sistema de arquivos FSX for ONTAP de destino.
 .. *Nome da VM de armazenamento*: Selecione a VM de armazenamento no menu suspenso.
@@ -60,10 +62,16 @@ Sem um limite, o desempenho da rede e do aplicativo pode declinar. Como alternat
 Se você habilitar a retenção a longo prazo, selecione uma política existente ou crie uma nova política para definir os snapshots a serem replicados e o número a ser retido.
 
 +
-*** Para *escolha uma política existente*, selecione uma política existente no menu suspenso.
-*** Para *criar uma nova política*, forneça o seguinte:
+*** *Escolha uma política existente*: Selecione uma política existente no menu suspenso.
+*** *Crie uma nova política*: Forneça o seguinte:
 +
 **** *Nome da política*: Insira um nome de política.
+**** Opcional: Ativar instantâneos imutáveis.
++
+***** Selecione *Ativar instantâneos imutáveis* para evitar que os instantâneos obtidos nesta política sejam excluídos durante o período de retenção.
+***** Defina o *período de retenção* em número de horas, dias, meses ou anos.
+
+
 **** *Políticas de snapshot*: Na tabela, selecione a frequência da política de snapshot e o número de cópias a reter. Pode selecionar mais de uma política de instantâneos.
 
 
@@ -77,12 +85,17 @@ Se você habilitar a retenção a longo prazo, selecione uma política existente
 --
 .Replique todos os volumes em um sistema de arquivos
 --
+É possível replicar todos os volumes de origem (leitura/gravação) e proteção de dados (DP) em um sistema de arquivos.
+
+
+NOTE: A replicação de um volume de proteção de dados é suportada uma vez.
+
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
 . Na guia FSX for ONTAP, selecione o menu de três pontos do sistema de arquivos com os volumes e selecione *Gerenciar*.
-. Na visão geral do sistema de arquivos, selecione *criar replicação*.
-. Na página criar replicação, em destino replicação, forneça o seguinte:
+. Na visão geral do sistema de arquivos, selecione *replique dados*.
+. Na página replicar dados, em destino replicação, forneça o seguinte:
 +
 .. *FSX para sistema de arquivos ONTAP*: Selecione credenciais, região e nome do sistema de arquivos FSX for ONTAP para o sistema de arquivos FSX for ONTAP de destino.
 .. *Nome da VM de armazenamento*: Selecione a VM de armazenamento no menu suspenso.
@@ -105,8 +118,8 @@ Sem um limite, o desempenho da rede e do aplicativo pode declinar. Como alternat
 Se você habilitar a retenção a longo prazo, selecione uma política existente ou crie uma nova política para definir os snapshots a serem replicados e o número a ser retido.
 
 +
-*** Para *escolha uma política existente*, selecione uma política existente no menu suspenso.
-*** Para *criar uma nova política*, forneça o seguinte:
+*** *Escolha uma política existente*: Selecione uma política existente no menu suspenso.
+*** *Crie uma nova política*: Forneça o seguinte:
 +
 **** *Nome da política*: Insira um nome de política.
 **** *Políticas de snapshot*: Na tabela, selecione a frequência da política de snapshot e o número de cópias a reter. Pode selecionar mais de uma política de instantâneos.
@@ -116,7 +129,7 @@ Se você habilitar a retenção a longo prazo, selecione uma política existente
 
 
 
-. Selecione *criar*.
+. Selecione *replicar*.
 
 
 --

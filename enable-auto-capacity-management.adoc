@@ -14,12 +14,16 @@ summary: A ativação desse recurso permite que a carga de trabalho adicione aut
 A ativação desse recurso permite que a fábrica de carga de trabalho do BlueXP  adicione automaticamente armazenamento incremental a um sistema de arquivos do FSX for ONTAP, conforme as necessidades de capacidade mudam ao longo do tempo.
 
 .Sobre esta tarefa
+Uma verificação do sistema de arquivos FSX for ONTAP ocorre a cada 30 minutos para determinar se o armazenamento incremental precisa ser adicionado e para verificar se há inodes de volume disponíveis, ou o número máximo de arquivos e pastas em um volume, para que sua contagem aumente de acordo com os limites de gerenciamento automático de capacidade configurados.
+
 Somente uma conta pode gerenciar esse recurso.
 
 A quantidade máxima de capacidade de armazenamento SSD para todos os sistemas de arquivos FSX for ONTAP é de 524.288 GiB. Para solicitar um aumento de cota, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quotas"^]documentação do AWS FSX for NetApp ONTAP.
 
 .Antes de começar
 Você deve ter credenciais com permissões _Automate_ na fábrica de carga de trabalho para concluir esta tarefa.
+
+Para garantir que os inodes de volume aumentem junto com a capacidade de armazenamento, você deve link:manage-links.html["associe um link"]. Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, selecione *associar link* sob *nome da conta*. Após os associados da ligação, volte a esta operação.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
@@ -40,3 +44,6 @@ Em alternativa, desative a funcionalidade. Se você precisar aumentar a capacida
 
 . Selecione *aplicar*.
 
+
+.Resultado
+Uma verificação do sistema de arquivos ocorre a cada 30 minutos para determinar se o sistema de arquivos precisa de capacidade adicional.

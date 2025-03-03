@@ -90,6 +90,8 @@ sidebar:
         url: "/edit-volume-autogrow.html"
       - title: Aumentar a capacidade de volume
         url: "/increase-volume-capacity.html"
+      - title: Gerenciar arquivos imutáveis
+        url: "/manage-immutable-files.html"
       - title: Gerenciar tags de volume
         url: "/manage-volume-tags.html"
       - title: Rebalancear a capacidade de um volume
@@ -130,24 +132,34 @@ sidebar:
         url: "/delete-svm.html"
     - title: Administração da proteção de dados
       entries:
-      - title: Alterar a política de snapshot de um volume
-        url: "/change-snapshot-policy.html"
-      - title: Gerencie o agendamento de backup do FSX for ONTAP
-        url: "/manage-backup-schedule.html"
-      - title: Habilite e edite snapshots para retenção de longo prazo
-        url: "/enable-snapshots-long-term.html"
-      - title: Inverta uma relação de replicação
-        url: "/reverse-replication.html"
-      - title: Alterar o agendamento de replicação de um volume de origem
-        url: "/change-replication-schedule.html"
-      - title: Limite a taxa máxima de transferência de uma relação de replicação
-        url: "/limit-transfer-rate.html"
-      - title: Atualização manual de dados instantâneos numa relação de replicação
-        url: "/update-snapshot-replication.html"
-      - title: Parar uma relação de replicação
-        url: "/stop-replication.html"
-      - title: Excluir uma relação de replicação
-        url: "/delete-replication.html"
+      - title: Instantâneos
+        entries:
+        - title: Gerenciar políticas de snapshot
+          url: "/manage-snapshot-policy.html"
+        - title: Habilite e edite snapshots para retenção de longo prazo
+          url: "/enable-snapshots-long-term.html"
+      - title: Backups
+        entries:
+        - title: Gerencie o agendamento de backup do FSX for ONTAP
+          url: "/manage-backup-schedule.html"
+      - title: Replicação
+        entries:
+        - title: Inverta uma relação de replicação
+          url: "/reverse-replication.html"
+        - title: Alterar o agendamento de replicação de um volume de origem
+          url: "/change-replication-schedule.html"
+        - title: Limite a taxa máxima de transferência de uma relação de replicação
+          url: "/limit-transfer-rate.html"
+        - title: Atualização manual de dados instantâneos numa relação de replicação
+          url: "/update-snapshot-replication.html"
+        - title: Replicar um volume de proteção de dados
+          url: "/cascade-replication.html"
+        - title: Pausar e retomar uma relação de replicação
+          url: "/pause-resume-replication.html"
+        - title: Parar uma relação de replicação
+          url: "/stop-replication.html"
+        - title: Excluir uma relação de replicação
+          url: "/delete-replication.html"
     - title: Administração da performance
       entries:
       - title: Provisione IOPS para um sistema de arquivos

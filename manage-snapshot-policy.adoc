@@ -1,0 +1,120 @@
+---
+sidebar: sidebar 
+permalink: manage-snapshot-policy.html 
+keywords: manage snapshot policy, change snapshot policy, snapshot policies, snapshot schedule, update 
+summary: Gerencie políticas de snapshot do FSX for ONTAP volumes na fábrica de workloads do BlueXP . Uma política de snapshot define como o sistema cria snapshots para um volume. 
+---
+= Gerenciar políticas de snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gerencie políticas de snapshot do FSX for ONTAP volumes na fábrica de workloads do BlueXP . Uma política de snapshot define como o sistema cria snapshots para um volume.
+
+.Sobre esta tarefa
+Operações de gerenciamento de snapshot como atribuição, alteração e exclusão de políticas de snapshot para volumes em um sistema de arquivos FSX for ONTAP são gerenciadas no nível de VM de armazenamento. As políticas de snapshot podem ser compartilhadas com uma única VM de storage ou com todas as VMs de storage.
+
+Algumas tarefas de gerenciamento exigem que você link:manage-links.html["associe um link"]acesse o sistema de arquivos FSX for ONTAP. Se você não tiver um link existente, link:create-link.html["crie um link"].
+
+Por padrão, cada volume está associado à política de snapshot do sistema de arquivos `default`. Recomendamos o uso desta política para a maioria das cargas de trabalho.
+
+
+
+== Alterar uma política de snapshot
+
+Você pode alterar o nome da política de snapshot, o agendamento e o número de cópias a serem mantidas e ativar ou desativar snapshots imutáveis. Não é possível ativar ou desativar o compartilhamento de políticas entre VMs de armazenamento. Esta opção está disponível apenas durante a criação da política de instantâneos.
+
+.Antes de começar
+Para exibir políticas de snapshot existentes, você precisa associar um link. Para associar um link, selecione *associar link* em *Nome da conta*. Em seguida, volte a esta operação.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Em *armazenamento*, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *Storage VMs*.
+. Na guia *Storage VMs*, selecione o menu de três pontos para a VM de armazenamento que contém o volume para proteger com snapshots programados, depois *ações avançadas* e, em seguida, *Gerenciar políticas de snapshot*.
+. Na página de gerenciamento de políticas de captura instantânea, selecione o menu de três pontos para a política de captura instantânea ser alterada e selecione *Editar*.
+. Na caixa de diálogo Editar política de instantâneos, faça as alterações necessárias à política de instantâneos.
+. Selecione *aplicar*.
+
+
+.Resultado
+A política de instantâneos é atualizada.
+
+
+
+== Atribua uma política de snapshot a um volume
+
+Você pode atribuir uma política de snapshot a um único volume para criar snapshots programados para o volume.
+
+.Antes de começar
+Tem de link:manage-links.html["associe um link"]atribuir uma política de instantâneos. Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, selecione *associar link* sob *nome da conta*. Após os associados da ligação, volte a esta operação.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Em *armazenamento*, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos que contém o volume para atribuir uma política de snapshot e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *Storage VMs*.
+. Na guia *Storage VMs*, selecione o menu de três pontos para a VM de armazenamento que contém o volume para proteger com snapshots programados, depois *ações avançadas* e, em seguida, *Gerenciar políticas de snapshot*.
+. Na página de gerenciamento de políticas de captura instantânea, selecione o menu de três pontos da política de captura instantânea e selecione *Assign policy to volume*.
+. Na caixa de diálogo atribuir política de instantâneos, selecione uma política de instantâneos a atribuir ao volume e reveja a programação da política.
++
+Se a política contiver snapshots imutáveis e você quiser usá-la, aceite a declaração.
+
+. Selecione *Assign*.
+
+
+.Resultado
+A política de instantâneos é atribuída ao volume.
+
+
+
+== Ativar instantâneos imutáveis
+
+Bloqueie instantâneos para evitar que sejam excluídos durante o período de retenção.
+
+.Antes de começar
+Você deve link:manage-links.html["associe um link"]habilitar snapshots imutáveis. Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, selecione *associar link* sob *nome da conta*. Assim que o link se associar, volte a esta operação.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Em *armazenamento*, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos que contém o volume para bloquear snapshots e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
+. No separador *volumes*, selecione o menu de três pontos para o volume a proteger.
+. Selecione *ações de proteção de dados*, *Snapshots* e, em seguida, *tornar um snapshot imutável*.
+. Na caixa de diálogo tornar um instantâneo imutável, faça o seguinte:
++
+.. *Nome do instantâneo*: Selecione o instantâneo a bloquear.
+.. Defina o *período de retenção* em número de horas, dias, meses ou anos.
+.. Aceite a declaração.
+
+
+. Selecione *aplicar*.
+
+
+.Resultado
+O instantâneo do volume está agora bloqueado.
+
+
+
+== Eliminar uma política de instantâneos
+
+Exclua uma política de snapshot quando você não precisar mais dela.
+
+Não é possível excluir uma política de snapshot atribuída a mais de um volume.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Em *armazenamento*, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *Storage VMs*.
+. Na guia *Storage VMs*, selecione o menu de três pontos da VM de armazenamento com a política de snapshot a ser excluída, depois *ações avançadas* e, em seguida, *Gerenciar políticas de snapshot*.
+. Na página de gerenciamento de políticas de captura instantânea, selecione o menu de três pontos para a política de captura instantânea excluir e selecione *Excluir*.
+. Na caixa de diálogo Excluir, selecione *Excluir* para excluir a política.
+
+
+.Resultado
+A política de instantâneos é eliminada.

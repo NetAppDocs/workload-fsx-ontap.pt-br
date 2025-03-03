@@ -16,7 +16,7 @@ O gerenciamento do compartilhamento CIFS de um volume na fábrica de workloads d
 .Antes de começar
 Antes de começar, faça o seguinte:
 
-* Para gerenciar compartilhamentos CIFS, é link:manage-links.html["associe um link"]necessário . Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, selecione *associar link* sob *nome da conta*. Assim que o link se associar, volte a esta operação.
+* Para gerenciar compartilhamentos CIFS, é link:manage-links.html["associe um link"]necessário . Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, selecione *associar link* sob *nome da conta*. Após os associados da ligação, volte a esta operação.
 * Determine os usuários ou grupos para dar acesso e o nível de permissões para dar a eles.
 
 

@@ -26,10 +26,20 @@ Você deve link:manage-links.html["associe um link"]criar um instantâneo. Se vo
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em *armazenamento*, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume e selecione *Gerenciar*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos que contém o volume para criar um snapshot e selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. No separador *volumes*, selecione o menu de três pontos para o volume a proteger.
-. Selecione *ações de proteção de dados*, *instantâneos* e, em seguida, *criar volume a partir de um instantâneo*.
-. Na caixa de diálogo criar volume a partir de um instantâneo, no campo *Nome do instantâneo*, insira um nome do instantâneo.
+. No separador *volumes*, selecione o menu de três pontos para o volume a proteger com instantâneos.
+. Selecione *ações de proteção de dados*, *Snapshots* e, em seguida, *criar um snapshot*.
+. Na caixa de diálogo criar um instantâneo, insira um nome de instantâneo no campo *Nome do instantâneo*.
+. Opcional: Torne o snapshot imutável para impedir que o snapshot seja excluído durante o período de retenção.
++
+.. Ativar *instantâneos immutáveis*.
+.. Defina o *período de retenção* como um número de horas, dias, meses ou anos.
+.. Aceite a declaração sobre snapshots imutáveis.
+
+
 . Selecione *criar*.
 
+
+.Resultado
+O volume tem uma cópia instantânea.

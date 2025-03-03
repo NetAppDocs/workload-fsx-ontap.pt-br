@@ -4,7 +4,7 @@ permalink: use-onprem-data.html
 keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP 
 summary: Descubra e replique dados ONTAP locais na fábrica de workloads da BlueXP  para que eles possam ser usados para enriquecer bases de conhecimento de AI. 
 ---
-= Use dados de cluster do ONTAP no local na fábrica de workloads do BlueXP 
+= Use dados de cluster do ONTAP on-premises na fábrica de workloads da BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -31,7 +31,7 @@ Casos de uso:: Observe que o principal caso de uso para a carga de trabalho do G
 
 == Descubra um cluster ONTAP no local
 
-Descubra um cluster ONTAP local na fábrica de workloads do BlueXP  para que você possa replicar os dados para um sistema de arquivos do Amazon FSX for NetApp ONTAP.
+Descubra um cluster ONTAP no local na fábrica de workloads do BlueXP  para que você possa replicar os dados para um sistema de arquivos do Amazon FSX for NetApp ONTAP.
 
 .Antes de começar
 Certifique-se de que tem o seguinte antes de começar:
@@ -74,7 +74,7 @@ Agora você pode visualizar os dados no cluster do ONTAP no local e <<Replique d
 
 == Replique dados de volume de um cluster ONTAP no local
 
-Replique dados de volume de um cluster do ONTAP no local para um sistema de arquivos FSX for ONTAP. Depois de replicados, os dados podem ser usados para enriquecer as bases de conhecimento de AI.
+Replique dados de volume de um cluster do ONTAP no local para um sistema de arquivos FSX for ONTAP. Após a replicação, os dados podem ser usados para enriquecer as bases de conhecimento de IA.
 
 .Antes de começar
 * Você precisa descobrir um cluster do ONTAP no local para replicar seus dados de volume.
@@ -95,7 +95,7 @@ Replique dados de volume de um cluster do ONTAP no local para um sistema de arqu
 .. *Nome do volume*: O nome do volume de destino é gerado automaticamente com o seguinte `{OriginalVolumeName}_copy` formato . Pode utilizar o nome do volume gerado automaticamente ou introduzir outro nome de volume.
 .. *Dados em categorias*: Selecione a política de disposição em camadas para os dados armazenados no volume de destino.
 +
-*** *Automático*: A política de disposição em camadas padrão ao criar um volume usando a interface de usuário FSX for ONTAP de fábrica de carga de trabalho. Categoriza todos os dados inativos, incluindo dados de usuário e snapshots na categoria de storage do pool de capacidade por um período de tempo específico.
+*** *Automático*: A política de disposição em camadas padrão ao criar um volume usando a interface de usuário FSX for ONTAP de fábrica de carga de trabalho. Categoriza todos os dados inativos que incluem dados de usuário e snapshots na categoria de storage do pool de capacidade por um período de tempo específico.
 *** *Somente snapshot*: Categoriza somente os dados snapshot para a camada de storage do pool de capacidade.
 *** *Nenhum*: Mantém todos os dados do seu volume na camada de storage primário.
 *** *All*: Marca todos os dados do usuário e dados instantâneos como inativos e os armazena na camada de armazenamento do pool de capacidade.

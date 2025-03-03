@@ -24,7 +24,7 @@ Você precisará iniciar uma pilha do AWS CloudFormation na sua conta da AWS par
 
 Você tem duas opções para criar links - automaticamente ou manualmente.
 
-* Automaticamente: Cria um link com Registro automático via fábrica de carga de trabalho. Um link criado automaticamente requer tokens para automação de fábrica de carga de trabalho e o código do CloudFormation é de curta duração. Só pode ser usado por até 6 horas.
+* Automaticamente: Cria um link com Registro automático via fábrica de carga de trabalho. Um link criado automaticamente requer tokens para automação de fábrica de carga de trabalho e o código do CloudFormation é de curta duração. Ele só pode ser usado por até seis horas.
 * Manualmente: Cria uma ligação com o registo manual. O código do CloudFormation persiste, dando-lhe mais tempo para concluir a operação. Isso é útil ao trabalhar com equipes diferentes, como Segurança e DevOps, que podem primeiro precisar conceder as permissões necessárias para concluir a criação de links.
 
 

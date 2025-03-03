@@ -30,7 +30,7 @@ Reveja os seguintes pré-requisitos antes de criar um volume:
 * Você precisa ter uma VM de storage.
 * Para acesso ao protocolo, execute o seguinte:
 +
-** Para configurar o acesso ao volume, é link:manage-links.html["associe um link"]necessário . Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, selecione *associar link* sob *nome da conta*. Assim que o link se associar, volte a esta operação.
+** Para configurar o acesso ao volume, é link:manage-links.html["associe um link"]necessário . Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, selecione *associar link* sob *nome da conta*. Após os associados da ligação, volte a esta operação.
 ** Tem de configurar o acesso para o protocolo selecionado, seja CIFS, NFS ou iSCSI.
 
 
@@ -97,7 +97,7 @@ Se tiver selecionado uma política de exportação existente, introduza um novo 
 
 
 
-*** *Acesso por bloco*: Permite aos hosts que executam aplicativos empresariais críticos acesso ao volume usando o protocolo iSCSI. O acesso a bloco só está disponível quando a implantação com escalabilidade horizontal do sistema de arquivos tiver 6 pares de HA ou menos.
+*** *Acesso por bloco*: Permite aos hosts que executam aplicativos empresariais críticos acesso ao volume usando o protocolo iSCSI. O acesso a bloco só está disponível quando a implantação com escalabilidade horizontal do sistema de arquivos tiver seis pares de HA ou menos.
 +
 Preencha os campos a seguir para configurar o acesso de bloco ao volume.
 
@@ -122,7 +122,7 @@ Preencha os campos a seguir para configurar o acesso de bloco ao volume.
 +
 A eficiência de storage é obtida com a utilização de recursos de deduplicação e compactação do ONTAP. A deduplicação elimina blocos de dados duplicados. A compactação de dados compacta os blocos de dados para reduzir a quantidade de storage físico necessária.
 
-.. *Arquivos immutáveis*: Esse recurso, também conhecido como SnapLock, está desativado por padrão. A ativação de arquivos imutáveis impede que os dados sejam excluídos ou substituídos por um período de tempo especificado. Ativar esta funcionalidade só é possível durante a criação de volume. Uma vez ativado, esta funcionalidade não pode ser desativada. Este é um recurso premium para o FSX for ONTAP que carrega um custo adicional. Para obter mais informações, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["Como o SnapLock funciona"^]documentação do Amazon FSX for NetApp ONTAP.
+.. *Arquivos immutáveis*: Esse recurso, também conhecido como SnapLock, está desativado por padrão. A ativação de arquivos imutáveis impede que os dados sejam excluídos ou substituídos por um período de tempo especificado. Ativar esta funcionalidade só é possível durante a criação de volume. Depois que o recurso estiver ativado, ele não poderá ser desativado. Este é um recurso premium para o FSX for ONTAP que carrega um custo adicional. Para obter mais informações, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["Como o SnapLock funciona"^]documentação do Amazon FSX for NetApp ONTAP.
 +
 A ativação do recurso arquivos imutáveis vincula permanentemente os arquivos neste volume para um estado WORM imutável (write-once-read-many).
 
@@ -135,7 +135,7 @@ Modos de retenção:: Você pode selecionar entre dois modos de retenção - _En
 
 
 --
-Período de retenção:: O período de retenção tem duas configurações - _política de retenção_ e _períodos de retenção_. A política de retenção _define quanto tempo reter arquivos em um estado WORM imutável. Você pode especificar sua própria política de retenção ou usar a política de retenção padrão (não especificada) que é de 30 anos. Os _períodos de retenção mínimo e máximo_ definem o intervalo de tempo permitido para bloquear arquivos.
+Período de retenção:: O período de retenção tem duas configurações - _política de retenção_ e _períodos de retenção_. A política de retenção _define quanto tempo reter arquivos em um estado WORM imutável. Você pode especificar sua própria política de retenção ou usar a política de retenção padrão (não especificada), que é de 30 anos. Os _períodos de retenção mínimo e máximo_ definem o intervalo de tempo permitido para bloquear arquivos.
 +
 --
 NOTA:: Mesmo após o período de retenção expirar, você não pode modificar um arquivo WORM. Só é possível excluí-lo ou definir um novo período de retenção para ativar a proteção WORM novamente.
@@ -148,8 +148,8 @@ Modo de adição de volume:: Não é possível modificar dados existentes em um 
 --
 .Etapas para arquivos imutáveis
 ... Selecione para ativar *ficheiros immutáveis alimentados pelo SnapLock*.
-... Clique na caixa para concordar e prosseguir.
-... Clique em *Ativar*.
+... Selecione a caixa para concordar e prosseguir.
+... Selecione *Ativar*.
 ... *Modo de retenção*: Selecione o modo *Enterprise* ou *Compliance*.
 ... *Período de retenção*:
 +
