@@ -21,9 +21,8 @@ O Tracker suporta até três níveis de monitoramento, dependendo da operação.
 Monitore níveis de tarefa com exemplos::
 +
 --
-* Nível 1 (trabalho pai): Rastreia a implantação de um sistema de arquivos.
-* Nível 2 (subtarefa): Monitoriza os subtrabalhos relacionados com a implementação do sistema de ficheiros.
-* Nível 3 (tarefa): Lista a sequência de ações realizadas em cada recurso.
+* Nível 1 (tarefa): Controla a implantação do sistema de arquivos.
+* Nível 2 (subtarefa): Controla as subtarefas relacionadas com a implementação do sistema de ficheiros.
 
 
 --
