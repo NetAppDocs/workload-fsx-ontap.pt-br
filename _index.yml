@@ -30,3 +30,11 @@ indexpage:
       url: "/support-registration.html"
     - title: Obtenha ajuda
       url: "/get-help.html"
+  - title: Blogs & comunidade
+    links:
+    - title: Comunidade NetApp
+      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
+    - title: BlueXP  blogs
+      url: https://bluexp.netapp.com/blog
+    - title: Webinars na nuvem
+      url: https://bluexp.netapp.com/events
