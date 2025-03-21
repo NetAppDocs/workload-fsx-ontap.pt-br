@@ -45,32 +45,6 @@ A política de instantâneos é atualizada.
 
 
 
-== Atribua uma política de snapshot a um volume
-
-Você pode atribuir uma política de snapshot a um único volume para criar snapshots programados para o volume.
-
-.Antes de começar
-Tem de link:manage-links.html["associe um link"]atribuir uma política de instantâneos. Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, selecione *associar link* sob *nome da conta*. Após os associados da ligação, volte a esta operação.
-
-.Passos
-. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em *armazenamento*, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos que contém o volume para atribuir uma política de snapshot e selecione *Gerenciar*.
-. Na visão geral do sistema de arquivos, selecione a guia *Storage VMs*.
-. Na guia *Storage VMs*, selecione o menu de três pontos para a VM de armazenamento que contém o volume para proteger com snapshots programados, depois *ações avançadas* e, em seguida, *Gerenciar políticas de snapshot*.
-. Na página de gerenciamento de políticas de captura instantânea, selecione o menu de três pontos da política de captura instantânea e selecione *Assign policy to volume*.
-. Na caixa de diálogo atribuir política de instantâneos, selecione uma política de instantâneos a atribuir ao volume e reveja a programação da política.
-+
-Se a política contiver snapshots imutáveis e você quiser usá-la, aceite a declaração.
-
-. Selecione *Assign*.
-
-
-.Resultado
-A política de instantâneos é atribuída ao volume.
-
-
-
 == Ativar instantâneos imutáveis
 
 Bloqueie instantâneos para evitar que sejam excluídos durante o período de retenção.
@@ -100,11 +74,60 @@ O instantâneo do volume está agora bloqueado.
 
 
 
+== Atribua uma política de snapshot a um volume
+
+Você pode atribuir uma política de snapshot a um único volume para criar snapshots programados para o volume.
+
+.Antes de começar
+Tem de link:manage-links.html["associe um link"]atribuir uma política de instantâneos. Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, selecione *associar link* sob *nome da conta*. Após os associados da ligação, volte a esta operação.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Em *armazenamento*, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos que contém o volume para atribuir uma política de snapshot e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *Storage VMs*.
+. Na guia *Storage VMs*, selecione o menu de três pontos para a VM de armazenamento que contém o volume para proteger com snapshots programados, depois *ações avançadas* e, em seguida, *Gerenciar políticas de snapshot*.
+. Na página de gerenciamento de políticas de captura instantânea, selecione o menu de três pontos da política de captura instantânea e selecione *Assign policy to volume*.
+. Na caixa de diálogo atribuir política de instantâneos, selecione uma política de instantâneos a atribuir ao volume e reveja a programação da política.
++
+Se a política contiver snapshots imutáveis e você quiser usá-la, aceite a declaração.
+
+. Selecione *Assign*.
+
+
+.Resultado
+A política de instantâneos é atribuída ao volume.
+
+
+
+== Remover uma política de snapshot de um volume
+
+Remover uma política de snapshot de um volume porque você não deseja mais snapshots do volume ou porque deseja excluir uma política de snapshot atribuída a vários volumes. Para <<Eliminar uma política de instantâneos,eliminar uma política de instantâneos>> isso é atribuído a mais de um volume, você deve removê-lo manualmente de todos os volumes.
+
+.Antes de começar
+Você deve link:manage-links.html["associe um link"]remover uma política de snapshot. Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, selecione *associar link* sob *nome da conta*. Após os associados da ligação, volte a esta operação.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Em *armazenamento*, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos que contém o volume para atribuir uma política de snapshot e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *Storage VMs*.
+. Na guia *Storage VMs*, selecione o menu de três pontos para a VM de armazenamento que contém o volume para proteger com snapshots programados, depois *ações avançadas* e, em seguida, *Gerenciar políticas de snapshot*.
+. Na página de gerenciamento de políticas de captura instantânea, selecione o menu de três pontos da política de captura instantânea e selecione *Assign policy to volume*.
+. Na caixa de diálogo atribuir política de instantâneos, selecione *nenhum* para remover a política de instantâneos.
+. Selecione *Assign*.
+
+
+.Resultado
+A política de instantâneos é removida do volume.
+
+
+
 == Eliminar uma política de instantâneos
 
 Exclua uma política de snapshot quando você não precisar mais dela.
 
-Não é possível excluir uma política de snapshot atribuída a mais de um volume.
+Quando uma política de snapshot é atribuída a mais de um volume, você deve manualmente <<Remover uma política de snapshot de um volume,retire-o.>> de todos os volumes para excluir a política de snapshot. Alternativamente, você pode <<Atribua uma política de snapshot a um volume,atribua uma política de snapshot diferente>> para os volumes.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
