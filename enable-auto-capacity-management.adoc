@@ -38,8 +38,9 @@ Para garantir que os inodes de volume aumentem junto com a capacidade de armazen
 +
 Em alternativa, desative a funcionalidade. Se você precisar aumentar a capacidade do sistema de arquivos, primeiro desative o gerenciamento automático de capacidade.
 
-.. *Limite de capacidade*: Insira o tamanho máximo do sistema de arquivos FSX for ONTAP.
-.. *Incrementos de aumento de capacidade*: Insira a porcentagem para aumentar a capacidade de forma incremental.
+.. *Aumento de limiar*: Insira o tamanho máximo para o sistema de arquivos FSX for ONTAP.
+.. *Aumento incremental*: Insira a porcentagem para aumentar a capacidade de forma incremental.
+.. Opcional: Habilite o gerenciamento automático de inodes para garantir que a capacidade de arquivo por volume aumente aumentando o número de inodes (arquivos) até o limite permitido.
 
 
 . Selecione *aplicar*.
