@@ -55,6 +55,17 @@ Siga as etapas a seguir para replicar um único volume ou replicar todos os volu
 
 
 *** Outros
++
+Além disso, a seleção de caso de uso determina a política de replicação ou a política de SnapMirror (ONTAP). Os termos usados para descrever políticas de replicação vêm link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["Documentação do ONTAP 9"^]do .
+
++
+**** Para migração e outros, a política de replicação é chamada _MirrorAllSnapshots_. _MirrorAllSnapshots_ é uma política assíncrona para espelhar todos os snapshots e o sistema de arquivos ativo mais recente.
+**** Para recuperação de desastres de arquivos, inativos ou quentes, a política de replicação é chamada _MirrorAndVault_. _MirrorAndVault_ é uma política assíncrona e de cofre para espelhar o mais recente sistema de arquivos ativo e instantâneos diários e semanais.
++
+Para todos os casos de uso, se você habilitar snapshots para retenção de longo prazo, a política de replicação padrão é _MirrorAndVault_.
+
+
+
 
 
 .. *Política de disposição em categorias*: Selecione a política de disposição em categorias para os dados armazenados no volume de destino. A política de disposição em categorias padrão é a política de disposição em categorias recomendada para o caso de uso selecionado.
@@ -127,6 +138,17 @@ NOTE: A replicação de um volume de proteção de dados é suportada uma vez.
 
 
 *** Outros
++
+Além disso, a seleção de caso de uso determina a política de replicação ou a política de SnapMirror (ONTAP). Os termos usados para descrever políticas de replicação vêm link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["Documentação do ONTAP 9"^]do .
+
++
+**** Para migração e outros, a política de replicação é chamada _MirrorAllSnapshots_. _MirrorAllSnapshots_ é uma política assíncrona para espelhar todos os snapshots e o sistema de arquivos ativo mais recente.
+**** Para recuperação de desastres de arquivos, inativos ou quentes, a política de replicação é chamada _MirrorAndVault_. _MirrorAndVault_ é uma política assíncrona e de cofre para espelhar o mais recente sistema de arquivos ativo e instantâneos diários e semanais.
++
+Para todos os casos de uso, se você habilitar snapshots para retenção de longo prazo, a política de replicação padrão é _MirrorAndVault_.
+
+
+
 
 
 .. *Política de disposição em categorias*: Selecione a política de disposição em categorias para os dados armazenados no volume de destino. A política de disposição em categorias padrão é a política de disposição em categorias recomendada para o caso de uso selecionado.
