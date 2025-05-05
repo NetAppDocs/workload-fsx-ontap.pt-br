@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: configuration-analysis.html 
+keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
+summary: A fábrica de carga de trabalho do BlueXP  analisa regularmente as configurações do sistema de arquivos do Amazon FSX for NetApp ONTAP para determinar se há algum problema. 
+---
+= Análise de configuração para sistemas de arquivos FSX for ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+A fábrica de carga de trabalho do BlueXP  analisa regularmente as configurações do sistema de arquivos do Amazon FSX for NetApp ONTAP para determinar se há algum problema. Quando os problemas são encontrados, a fábrica de workloads mostra quais são os problemas e explica o que precisa ser alterado para garantir que o storage do seu sistema de arquivos atinja o máximo de desempenho, economia e conformidade com as práticas recomendadas.
+
+Os principais recursos incluem:
+
+* Análise de configuração diária
+* Validações automáticas de melhores práticas
+* Observabilidade proativa
+* Insights para ação
+* Consultor do AWS Well-Architected Framework
+
+
+
+
+== Status bem arquitetado
+
+No console de fábrica da carga de trabalho no nível do sistema de arquivos, o status bem arquitetado é listado para todos os sistemas de arquivos FSX for ONTAP. Os Estados bem arquitetados são categorizados como "questões", "não analisadas" ou "bem arquitetadas". A seleção do status bem arquitetado redireciona você para a guia de status bem arquitetado dentro do sistema de arquivos, onde você pode encontrar a pontuação bem arquitetada, categorias de configuração, todas as configurações para o sistema de arquivos.
+
+Pontuação bem arquitetada:: A pontuação inclui todas as configurações analisadas atualmente e aparece como uma porcentagem. Uma pontuação de 25% significa que 25% das configurações do sistema de arquivos são bem arquitetadas.
+Categorias de configuração:: As configurações do sistema de arquivos são organizadas em categorias alinhadas com os cinco pilares a seguir do AWS Well-Architected Framework.
++
+--
+* _Confiabilidade_: Garante que as cargas de trabalho executem suas funções pretendidas de forma correta e consistente, mesmo quando há interrupções. Um exemplo de configuração é o FSX for ONTAP backups.
+* _Security_: Enfatiza a proteção de dados, sistemas e ativos por meio de avaliações de risco e estratégias de mitigação.
+* _Excelência operacional_: Concentra-se em fornecer a arquitetura e o valor de negócios mais ideais.
+* _Otimização de custos_: Visa fornecer valor de negócio ao mesmo tempo que minimiza custos.
+* _Eficiência de desempenho_: Se concentra em usar recursos de forma eficiente para atender aos requisitos do sistema e manter o desempenho ideal à medida que as demandas mudam.
+
+
+--
+
+
+
+
+== Requisitos de análise
+
+Para uma análise completa do sistema de arquivos, você deve associar um link. A conectividade de link permite que o workload analise de fábrica todas as configurações do sistema de arquivos, como proteção de dados e performance.
+
+link:create-link.html["Saiba como criar um link."]
+
+.O que vem a seguir
+link:improve-configurations.html["Melhore as configurações para implantações do FSX for ONTAP"]

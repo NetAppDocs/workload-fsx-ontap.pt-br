@@ -37,29 +37,58 @@ image:screenshot-view-link-details.png["Uma captura de tela que mostra os sistem
 
 
 
-== Associe um link com um sistema de arquivos FSX for ONTAP
-
-Depois de criar um link, você pode associá-lo aos seus sistemas de arquivos FSX for ONTAP. Cada sistema de arquivos pode ser associado a apenas um link em uma única conta do NetApp, mas um link pode ser associado a muitos sistemas de arquivos.
-
-.Passos
-. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos para associar um link e selecione *Gerenciar*.
-. Na visão geral do sistema de arquivos, selecione *Link associado*.
-. Na página associar link, selecione *associar um link existente*, selecione o link e selecione *aplicar*.
-
-
-.Resultado
-O link está associado ao sistema de arquivos FSX for ONTAP e você pode executar operações avançadas do ONTAP.
-
-
-
 == Edite um link
 
 Não é possível editar um link a partir da interface de fábrica da carga de trabalho. Se você precisar fazer uma alteração em um link, será necessário criar um novo link e associá-lo ao seu sistema de arquivos.
 
 
 NOTE: Você pode editar a configuração de rede do Lambda (por exemplo, VPC, sub-redes e grupos de segurança) usando o console da AWS e as alterações serão refletidas na IU de gerenciamento de links. No entanto, essas alterações podem levar a problemas de conetividade entre o Lambda e o ONTAP, e não são recomendadas.
+
+
+
+== Autentique um link
+
+Forneça uma senha de usuário administrativo para credenciais de fábrica de carga de trabalho ou um ARN secreto do AWS Secrets Manager para conetar o link a um sistema de arquivos FSX for ONTAP.
+
+O AWS Secrets Manager não é suportado ao usar um conetor.
+
+
+NOTE: Apenas um método de autenticação é suportado por link. Por exemplo, se você selecionar a autenticação de link com o AWS Secrets Manager, não será possível alterar o método de autenticação mais tarde.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos para associar um link e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione *Authenticate the link*.
+. Na página Authenticate link, selecione um modo de autenticação:
++
+** Fábrica da carga de trabalho: Introduza a palavra-passe duas vezes.
+** AWS Secrets Manager: Insira o ARN secreto.
+
+
+. Selecione *aplicar*.
+
+
+.Resultado
+O link é autenticado e você pode executar operações avançadas do ONTAP
+
+
+
+== Atualize a senha para autenticação de link
+
+Quando a senha administrativa for inválida, atualize a senha para conetar o link ao sistema de arquivos FSX for ONTAP.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Em armazenamento, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos para associar um link e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione *Atualizar senha*.
+. Na página Authenticate link (autenticar ligação), introduza a nova palavra-passe duas vezes.
+. Selecione *aplicar*.
+
+
+.Resultado
+A senha é atualizada e o link agora está conetado ao sistema de arquivos FSX for ONTAP.
 
 
 

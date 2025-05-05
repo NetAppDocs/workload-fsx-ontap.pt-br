@@ -1,49 +1,39 @@
 ---
 sidebar: sidebar 
-permalink: create-replication.html 
-keywords: replication, replicate 
-summary: Crie uma relação de replicação para um sistema de arquivos FSX for ONTAP para evitar a perda de dados em caso de um desastre inesperado. 
+permalink: cascade-replication.html 
+keywords: replicate, cascade, cascade replication, cascade deployment, data protection, volume replication, replicate data protection volume 
+summary: Replique volumes de proteção de dados, ou faça cascata na replicação de dados de volume, para estender a proteção de dados para sistemas terciários ou migrar seus dados. 
 ---
-= Criar uma relação de replicação na fábrica de workloads do BlueXP 
+= Replique volumes de proteção de dados na fábrica de workloads da BlueXP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Crie uma relação de replicação para um sistema de arquivos FSX for ONTAP na fábrica de cargas de trabalho do BlueXP  para evitar a perda de dados em caso de um desastre inesperado.
+Replique volumes de proteção de dados, ou faça cascata na replicação de dados de volume, para estender a proteção de dados para sistemas terciários ou migrar seus dados.
 
 .Sobre esta tarefa
-A replicação é uma camada adicional de proteção de dados que é essencial para o caso de uma região onde seus dados residem sofrer um desastre. A perda de dados pode ser evitada se você usar replicação entre regiões.
+A fábrica de workloads do BlueXP  dá suporte à replicação de volumes de proteção de dados, também chamados de _implantações em cascata_. Uma implementação de _cascata_ consiste em uma cadeia de relacionamentos em que um volume de origem é espelhado para um volume secundário (primeiro salto), e o volume secundário é espelhado para um volume terciário (segundo salto). Se o volume secundário ficar indisponível, é possível sincronizar a relação entre os volumes primário e terciário sem efetuar uma nova transferência de linha de base.
 
-Essa operação cria uma relação de replicação para um ou todos os volumes de origem em um sistema de arquivos FSX for ONTAP.
+Esse recurso é compatível com o FSX para sistemas de arquivos ONTAP com o ONTAP versão 9,6 e posterior. link:https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html#snapmirror-disaster-recovery-relationships["Documentação do ONTAP para versões compatíveis do ONTAP"^]Consulte a .
 
-Os volumes replicados no sistema de arquivos de destino são volumes de proteção de dados (DP) e seguem o formato de nomenclatura: `{OriginalVolumeName}_copy`.
+Saiba mais link:https://docs.netapp.com/us-en/ontap/data-protection/supported-deployment-config-concept.html#how-cascade-deployments-work["como as implantações em cascata funcionam"^]sobre o .
 
 .Antes de começar
-Certifique-se de que cumpre os seguintes pré-requisitos antes de começar.
+Considere o seguinte antes de começar:
 
-* Você precisa ter dois sistemas de arquivos disponíveis no inventário de storage para criar uma relação de replicação.
-* Os dois sistemas de arquivos usados para a relação de replicação devem ter um link associado. Se os sistemas de arquivos não tiverem links existentes, link:create-link.html["primeiro crie um link"]. Para link:manage-links.html["associe um link"]nos sistemas de ficheiros, selecione *ligação associada* em *Nome da conta*. Quando o link se associar em ambos os sistemas de arquivos, retorne a esta operação.
+* Esteja ciente de que os volumes que fazem parte de uma configuração em cascata podem levar mais tempo para ressincronizar.
+* Se o volume de origem da relação for um volume de proteção de dados e for um alvo de outra relação, reverter a relação de replicação não é suportado.
+* É suportada uma réplica de um volume de proteção de dados (ou um segundo salto). Não é considerada prática recomendada criar uma segunda réplica de um volume de proteção de dados (ou um terceiro salto).
 
-
-Siga as etapas a seguir para replicar volumes selecionados ou replicar todos os volumes em um sistema de arquivos.
-
-É possível replicar um volume de origem (leitura/gravação) ou um volume de proteção de dados (DP). A replicação em cascata é compatível, mas um terceiro salto não é. Saiba mais link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html["replicação em cascata"^]sobre o .
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
 . Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos que contém o(s) volume(s) para replicar e selecione *Gerenciar*.
-. Replique todos os volumes em um sistema de arquivos ou replique volumes selecionados.
-+
-** Para replicar todos os volumes em um sistema de arquivos: Na visão geral do sistema de arquivos, selecione *replique dados*.
-** Para replicar volumes selecionados: Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-+
-Na tabela volumes, selecione um ou mais volumes e, em seguida, selecione *replique dados*.
-
-
-
+. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
+. Na tabela volumes, selecione um ou mais volumes de proteção de dados (DP/volumes replicados) e, em seguida, selecione *replique dados*.
 . Na página replicar dados, em destino replicação, forneça o seguinte:
 +
 .. *FSX para sistema de arquivos ONTAP*: Selecione credenciais, região e nome do sistema de arquivos FSX for ONTAP para o sistema de arquivos FSX for ONTAP de destino.
@@ -60,17 +50,6 @@ Na tabela volumes, selecione um ou mais volumes e, em seguida, selecione *repliq
 
 
 *** Outros
-+
-Além disso, a seleção de caso de uso determina a política de replicação ou a política de SnapMirror (ONTAP). Os termos usados para descrever políticas de replicação vêm link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["Documentação do ONTAP 9"^]do .
-
-+
-**** Para migração e outros, a política de replicação é chamada _MirrorAllSnapshots_. _MirrorAllSnapshots_ é uma política assíncrona para espelhar todos os snapshots e o sistema de arquivos ativo mais recente.
-**** Para recuperação de desastres de arquivos, inativos ou quentes, a política de replicação é chamada _MirrorAndVault_. _MirrorAndVault_ é uma política assíncrona e de cofre para espelhar o mais recente sistema de arquivos ativo e instantâneos diários e semanais.
-+
-Para todos os casos de uso, se você habilitar snapshots para retenção de longo prazo, a política de replicação padrão é _MirrorAndVault_.
-
-
-
 
 
 .. *Política de disposição em categorias*: Selecione a política de disposição em categorias para os dados armazenados no volume de destino. A política de disposição em categorias padrão é a política de disposição em categorias recomendada para o caso de uso selecionado.
@@ -119,4 +98,4 @@ NOTE: Rótulos de origem e destino correspondentes são necessários para reten�
 
 
 .Resultado
-A relação de replicação aparece na guia *relacionamentos de replicação* no sistema de arquivos FSX for ONTAP de destino.
+O volume ou volumes replicados replicam e aparecem na guia *relacionamentos de replicação* no sistema de arquivos FSX for ONTAP de destino.

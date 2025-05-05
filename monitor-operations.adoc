@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: monitor-operations.html 
-keywords: monitor databases, monitor jobs, track database jobs 
+keywords: monitor databases, monitor jobs, track storage jobs, track jobs 
 summary: Acompanhe o FSX para ONTAP, credenciais e operações de link e monitore o progresso do trabalho com o Rastreador na fábrica de carga de trabalho do BlueXP  para armazenamento. 
 ---
 = Monitore as operações de storage com o Tracker na fábrica de workloads da BlueXP 
@@ -14,9 +14,11 @@ summary: Acompanhe o FSX para ONTAP, credenciais e operações de link e monitor
 Monitore e acompanhe a execução do FSX for ONTAP, credenciais e operações de link e monitore o progresso das tarefas com o Rastreador na fábrica de carga de trabalho do BlueXP .
 
 .Sobre esta tarefa
-A fábrica de carga de trabalho fornece o Rastreador, um recurso de monitoramento, para que você possa monitorar e acompanhar o progresso e o status do FSX for ONTAP, credenciais e operações de link, analisar detalhes de tarefas e subtarefas operacionais, diagnosticar problemas ou falhas, editar parâmetros para operações com falha e tentar novamente operações com falha. Pode filtrar trabalhos por tipo e estado, localizar trabalhos utilizando a função de pesquisa e transferir a tabela trabalhos.
+A fábrica de carga de trabalho fornece o Rastreador, um recurso de monitoramento, para que você possa monitorar e acompanhar o progresso e o status do FSX for ONTAP, credenciais e vincular operações, analisar detalhes de tarefas e subtarefas operacionais e diagnosticar problemas ou falhas.
 
-O Tracker suporta até três níveis de monitoramento, dependendo da operação. Cada tarefa, como a implantação do sistema de arquivos, exibe a descrição da tarefa, status, hora de início, duração da tarefa, usuário, região, recurso proxy, ID da tarefa e todas as subtarefas relacionadas.
+Várias ações estão disponíveis no Tracker. Você pode filtrar tarefas por período de tempo (últimas 24 horas, 7 dias, 14 dias ou 30 dias), carga de trabalho, status e usuário; encontrar trabalhos usando a função de pesquisa; e fazer download da tabela de tarefas como um arquivo CSV. Você pode atualizar o Tracker a qualquer momento. E você pode tentar novamente rapidamente uma operação com falha ou editar parâmetros para uma operação com falha e tentar a operação novamente.
+
+O Tracker suporta dois níveis de monitoramento, dependendo da operação. Cada tarefa, como a implantação do sistema de arquivos, exibe a descrição da tarefa, status, hora de início, duração da tarefa, usuário, região, recurso proxy, ID da tarefa e todas as subtarefas relacionadas. Você pode visualizar as respostas da API para entender o que aconteceu durante a operação.
 
 Monitore níveis de tarefa com exemplos::
 +

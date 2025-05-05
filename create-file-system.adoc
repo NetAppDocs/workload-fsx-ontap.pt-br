@@ -77,7 +77,10 @@ Para provisionar volumes de bloco iSCSI no sistema de arquivos, selecione não m
 . Em *Detalhes do sistema de arquivos*, forneça o seguinte:
 +
 .. *Capacidade de armazenamento SSD*: Introduza a capacidade de armazenamento e selecione a unidade de capacidade de armazenamento.
-.. *Credenciais ONTAP*: Insira seu nome de usuário e senha do ONTAP.
+.. *Credenciais ONTAP*: Opcional. Introduza o nome de utilizador e a palavra-passe do ONTAP. A senha pode ser definida agora ou mais tarde.
++
+Se o usuário que você fornecer não for o usuário fsxadmin, e mais tarde você precisar redefinir a senha do fsxadmin, você poderá fazer isso no console da AWS.
+
 .. *Configuração SMB/CIFS*: Opcional. Se você planeja usar o protocolo SMB/CIFS para acessar volumes, configure o ative Directory para a VM de storage durante a criação do sistema de arquivos. Forneça os detalhes a seguir para a VM de storage criada para esse sistema de arquivos.
 +
 ... *Domínio do ative Directory para ingressar*: Insira o nome de domínio totalmente qualificado (FQDN) para o ative Directory.
@@ -169,8 +172,11 @@ Para um novo grupo de segurança, consulte <<Detalhes do grupo de segurança,det
 .. *Capacidade de armazenamento SSD*: Introduza a capacidade de armazenamento e selecione a unidade de capacidade de armazenamento.
 .. *IOPS provisionados*: Selecione *Automático* ou *aprovisionado pelo usuário*.
 .. *Capacidade de taxa de transferência por par de HA*: Selecione a capacidade de taxa de transferência por par de HA.
-.. *Credenciais ONTAP*: Insira seu nome de usuário e senha do ONTAP.
-.. * Credenciais de armazenamento de VM*: Insira seu nome de usuário. A palavra-passe pode ser específica para este sistema de ficheiros ou caso utilize a mesma palavra-passe introduzida para as credenciais ONTAP.
+.. *Credenciais ONTAP*: Opcional. Introduza o nome de utilizador e a palavra-passe do ONTAP. A senha pode ser definida agora ou mais tarde.
++
+Se o usuário que você fornecer não for o usuário fsxadmin, e mais tarde você precisar redefinir a senha do fsxadmin, você poderá fazer isso no console da AWS.
+
+.. * Credenciais de armazenamento de VM*: Opcional. Introduza o seu nome de utilizador. A palavra-passe pode ser específica para este sistema de ficheiros ou pode utilizar a mesma palavra-passe introduzida para as credenciais ONTAP. A senha pode ser definida agora ou mais tarde.
 .. *Configuração SMB/CIFS*: Opcional. Se você planeja usar o protocolo SMB/CIFS para acessar volumes, configure o ative Directory para a VM de storage durante a criação do sistema de arquivos. Forneça os detalhes a seguir para a VM de storage criada para esse sistema de arquivos.
 +
 ... *Domínio do ative Directory para ingressar*: Insira o nome de domínio totalmente qualificado (FQDN) para o ative Directory.

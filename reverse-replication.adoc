@@ -13,6 +13,12 @@ summary: Inverta uma relação de replicação para que o volume de destino se t
 [role="lead"]
 Inverta uma relação de replicação na fábrica de workloads do BlueXP  para que o volume de destino se torne o volume de origem.
 
+As operações de reversão são suportadas para o seguinte:
+
+* Dois sistemas de arquivos FSX para ONTAP
+* Um sistema de arquivos FSX para ONTAP e um cluster ONTAP no local
+
+
 Depois de interromper a replicação e fazer alterações no volume de destino, é possível replicar essas alterações de volta para o volume de origem. Esse processo é comum em um cenário de recuperação de desastres no qual você opera no volume alvo por um tempo e deseja alternar funções dos volumes.
 
 .Sobre esta tarefa

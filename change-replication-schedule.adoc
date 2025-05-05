@@ -15,6 +15,8 @@ Altere a programação de replicação do volume de origem em uma relação de r
 
 Escolha com que frequência os snapshots do volume de origem são transferidos para o volume replicado para corresponder aos objetivos de ponto (RPOs) necessários.
 
+Quando um cluster ONTAP no local é o destino para a relação de replicação, a alteração da programação de replicação não é suportada.
+
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.

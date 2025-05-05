@@ -11,7 +11,7 @@ summary: Um link de fábrica de carga de trabalho cria uma relação de confian�
 
 
 [role="lead"]
-Um link de fábrica da carga de trabalho do BlueXP  cria uma relação de confiança e conetividade entre uma conta de fábrica de carga de trabalho e um ou mais sistemas de arquivos do FSX for ONTAP. Isso permite que você monitore e gerencie certos recursos do sistema de arquivos diretamente das chamadas da API REST do ONTAP que não estão disponíveis por meio da API do Amazon FSX for ONTAP.
+Um link de fábrica da carga de trabalho do BlueXP  cria uma relação de confiança e conetividade entre uma conta de fábrica de carga de trabalho e um ou mais sistemas de arquivos do FSX for ONTAP. Isso permite que você monitore e gerencie certos recursos do sistema de arquivos diretamente das chamadas da API REST do ONTAP que não estão disponíveis através da API do Amazon FSX for ONTAP.
 
 Você não precisa de um link para começar a trabalhar na fábrica de cargas de trabalho, mas em alguns casos você precisará criar um link para desbloquear todos os recursos de fábrica de cargas de trabalho e recursos de carga de trabalho.
 
@@ -24,6 +24,8 @@ Os links aproveitam o AWS Lambda. O Lambda executa código em resposta a eventos
 Depois de criar um link, você pode associá-lo a um ou muitos sistemas de arquivos FSX for ONTAP. Cada sistema de arquivos pode ser associado apenas a um link na mesma conta do NetApp. Se você tiver várias contas do NetApp, um único sistema de arquivos pode ser associado a links adicionais em diferentes contas do NetApp.
 
 Você cria links a partir das páginas do sistema de arquivos FSX for ONTAP na fábrica de carga de trabalho. link:create-link.html["Saiba como criar links"] para mais detalhes.
+
+Você pode fazer links autênticos usando credenciais armazenadas no serviço de credenciais de fábrica de carga de trabalho ou com suas credenciais armazenadas no AWS Secrets Manager. A fábrica de carga de trabalho não suporta a alteração dos modos de autenticação.
 
 
 

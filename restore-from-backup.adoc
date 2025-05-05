@@ -13,6 +13,8 @@ summary: Restaure um volume de um backup para qualquer sistema de arquivos do FS
 [role="lead"]
 Na fábrica de carga de trabalho do BlueXP , você pode restaurar um volume de um backup para qualquer sistema de arquivos do FSX for ONTAP na sua conta da AWS.
 
+A fábrica de carga de trabalho determina se você tem capacidade suficiente para a restauração e pode adicionar automaticamente a capacidade da camada de storage SSD, caso não o faça.
+
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
@@ -26,6 +28,15 @@ Na fábrica de carga de trabalho do BlueXP , você pode restaurar um volume de 
 .. *Target storage VM*: Selecione a VM de armazenamento de destino no menu suspenso.
 .. *Nome da cópia de segurança*: Selecione o nome da cópia de segurança no menu pendente.
 .. *Nome do volume restaurado*: Insira o nome do volume restaurado.
+
+
+. Verifique a capacidade do sistema de arquivos para a operação de restauração.
++
+Quando a capacidade do sistema de arquivos é limitada, pode ocorrer o seguinte:
+
++
+** A restauração pode empurrar a capacidade usada sobre o limite especificado. Você pode concluir a operação de restauração. Considere link:increase-file-system-capacity.html["Adicionar manualmente a capacidade da camada de storage SSD"] ou selecione a fábrica do workload para adicionar automaticamente a capacidade da camada de storage SSD.
+** A restauração requer capacidade SSD adicional. Para continuar, você deve selecionar o workload de fábrica para adicionar automaticamente a capacidade da camada de storage SSD.
 
 
 . Selecione *Restaurar*.

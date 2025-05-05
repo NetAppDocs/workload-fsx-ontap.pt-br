@@ -106,6 +106,12 @@ A calculadora de economia de armazenamento não calcula as economias de custo pa
 
 O System Manager não oferece suporte a links para a conetividade do FSX for ONTAP.
 
+
+
+== Suporte ao AWS Secrets Manager
+
+O AWS Secrets Manager não é suportado ao usar um conetor.
+
 Nota:
 
 . Aplica-se ao Amazon FSX for NetApp ONTAP

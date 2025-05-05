@@ -22,13 +22,16 @@ A proteção de dados para seus workloads ajuda a garantir que você se recupere
 .Instantâneos
 Um instantâneo cria uma imagem pontual e somente leitura de um volume dentro do volume de origem como uma cópia instantânea. Você pode usar a cópia snapshot para recuperar arquivos individuais ou restaurar todo o conteúdo de um volume. Os instantâneos são a base de todos os métodos de backup. A cópia snapshot criada no volume é usada para manter o volume replicado e o arquivo de backup sincronizados com as alterações feitas no volume de origem.
 
-.Backups
-Você pode criar backups de seus dados na nuvem para fins de proteção e retenção de longo prazo. Se necessário, você pode restaurar um volume, pasta ou arquivos individuais do backup para o mesmo sistema de arquivos em funcionamento ou diferente.
+.Proteção autônoma contra ransomware
+O Autonomous ransomware Protection (ARP) usa análise de workload em ambientes nas (NFS/SMB) para detectar e avisar sobre atividades anormais que podem ser um ataque. Quando um ataque é suspeito, o ARP também cria novos snapshots imutáveis, além da proteção existente fornecida por snapshots programados.
 
 .Replicação
 A replicação cria uma cópia secundária de seus dados em outro sistema de arquivos do FSX for ONTAP e atualiza continuamente os dados secundários. Seus dados permanecem atuais e disponíveis sempre que você precisar, como para recuperação de desastres.
 
 Você pode optar por criar volumes replicados em outro sistema de arquivos do FSX for ONTAP e arquivos de backup na nuvem. Ou você pode escolher apenas criar volumes replicados ou arquivos de backup - é sua escolha.
+
+.Backups
+Você pode criar backups de seus dados na nuvem para fins de proteção e retenção de longo prazo. Se necessário, você pode restaurar um volume, pasta ou arquivos individuais do backup para o mesmo sistema de arquivos em funcionamento ou diferente.
 
 O diagrama a seguir mostra uma representação visual da proteção de dados do FSX for ONTAP storage usando snapshots, replicação entre regiões e backup para armazenamento de objetos.
 
@@ -62,6 +65,12 @@ A replicação de volume cria uma cópia dos dados mais recentes de um volume, i
 
 
 
+== Proteja os dados da sua carga de trabalho com o Autonomous ransomware Protection
+
+O ARP atua como uma importante camada adicional de defesa se o software antivírus não conseguir detetar uma intrusão. A definição de uma política ARP permite a TI para todas as VMs de armazenamento e todos os volumes existentes e recém-criados. Uma vez ativado, o ARP deteta e protege todos os volumes e VMs de armazenamento. Se uma extensão de arquivo for sinalizada como anormal, você deve avaliar o alerta.
+
+
+
 == Recomendações para proteger os dados de workload
 
 Considere as recomendações a seguir para proteger seus dados de workload.
@@ -69,4 +78,6 @@ Considere as recomendações a seguir para proteger seus dados de workload.
 * Usar backups de volume em conjunto com snapshots: Usar os dois recursos juntos garante que você seja capaz de restaurar seus arquivos de snapshots e realizar restaurações completas em caso de perda de volume usando backups.
 * Definir uma política de backup de volume: Certifique-se de que a política de backup atenda aos requisitos da sua empresa para idade e frequência de backup. Recomendamos manter um mínimo de dois backups diários para cada volume.
 * Definir uma programação de instantâneos: Os instantâneos mais antigos têm menos probabilidade de serem usados para restaurar dados. Recomendamos que você defina um agendamento de snapshot que leve em consideração os retornos decrescentes de manter snapshots antigos em relação ao custo para capacidade adicional de snapshot.
+* Monitore seus volumes para que você esteja ciente de possíveis ataques de ransomware.
+* Ative a política ARP para suas VMs e volumes de storage a fim de adicionar uma camada adicional de proteção para proteger seus dados contra ataques de ransomware.
 
