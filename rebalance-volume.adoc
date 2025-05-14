@@ -16,14 +16,14 @@ Verificar o equilíbrio da capacidade de volume do FlexGroup e rebalancear a cap
 .Sobre esta tarefa
 A capacidade de volume do FlexGroup está espalhada por vários componentes em um sistema de arquivos FSX for ONTAP com dois ou mais pares de alta disponibilidade (HA). Cada constituinte é um recipiente que dita o tamanho máximo de arquivo único. O FSX para ONTAP distribui arquivos em todos os componentes de forma uniforme, para que todos os nós participem da carga de trabalho de um único volume FlexGroup.
 
-Quando os componentes não são distribuídos uniformemente por todos os nós, o desempenho do volume do FlexGroup diminui.
+Quando os constituintes não são distribuídos uniformemente em todos os nós, o desempenho do volume do FlexGroup diminui.
 
 A verificação do equilíbrio da capacidade do volume FlexGroup inclui a avaliação da disposição atual dos componentes. Ao rebalancear a capacidade do volume, o workload da BlueXP  projeta um novo layout constituinte com um número par de componentes para distribuir os dados uniformemente entre todos os pares de HA. O serviço executa o plano de rebalancear, que por sua vez melhora as operações de leitura e gravação.
 
-O rebalanceamento de um volume redistribui a capacidade quando os desequilíbrios se desenvolvem ao longo do tempo devido à adição de novos arquivos e ao crescimento de arquivos. Depois de iniciar manualmente a operação de rebalanceamento, selecionamos os arquivos e os movemos automaticamente e sem interrupções.
+O rebalanceamento de um volume redistribui a capacidade quando os desequilíbrios se desenvolvem ao longo do tempo devido à adição de novos arquivos e ao crescimento de arquivos. Depois de iniciar manualmente a operação de rebalanceamento, selecionamos os arquivos e os movemos automaticamente e sem interrupções. As operações de transferência de volume consomem recursos do sistema de arquivos.
 
 
-NOTE: O rebalanceamento de um volume só é compatível com volumes FlexGroup.
+NOTE: O rebalanceamento é compatível apenas para volumes FlexGroup, mas não para volumes iSCSI ou NVMe FlexGroup.
 
 
 
@@ -53,20 +53,44 @@ Quando um volume FlexGroup estiver desequilibrado, considere <<Rebalancear um vo
 
 == Rebalancear um volume FlexGroup
 
-<<Verifique o equilíbrio de um volume FlexGroup,Verifique o equilíbrio de um volume FlexGroup>> antes de reequilibrar volumes.
+Reequilibrar um ou mais volumes desequilibrados. Os dados redistribuem-se pelos volumes de membros para rebalancear o volume FlexGroup. Dependendo do layout de distribuição de dados que você preferir, a operação de rebalanceamento pode adicionar volumes membros do FlexGroup e aumentar o tamanho dos volumes provisionados.
+
+
+NOTE: Um administrador de fábrica de carga de trabalho pode parar o rebalanceamento durante a operação.
 
 .Antes de começar
-Para rebalancear um volume, é link:manage-links.html["associe um link"]necessário . Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, selecione *associar link* sob *nome da conta*. Após os associados da ligação, volte a esta operação.
+* <<Verifique o equilíbrio de um volume FlexGroup,Verifique o equilíbrio de um volume FlexGroup>> antes de reequilibrar volumes.
+* Para rebalancear um volume, é link:manage-links.html["associe um link"]necessário . Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, selecione *associar link* sob *nome da conta*. Após os associados da ligação, volte a esta operação.
+* Observe que os snapshots existentes nos volumes que você rebalancear se tornam parciais e não podem ser usados para restaurar dados de volume, mas novos snapshots obtidos após o rebalanceamento podem ser usados para restaurar dados de volume.
+
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em *armazenamento*, selecione *ir para inventário de armazenamento*.
 . Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos que contém o volume para reequilibrar e selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. No separador volumes, selecione o menu de três pontos do volume a reequilibrar.
-. Selecione *ações avançadas* e, em seguida, *Reequilibrar volume*.
-. Na caixa de diálogo Reequilibrar volume, selecione *Reequilibrar*.
+. Na guia volumes, selecione *verificar saldo FlexGroup* na parte superior da tabela.
+. Na janela balanço do FlexGroup, selecione *Rebalancamento* para reequilibrar um ou mais volumes desequilibrados.
+. No assistente de rebalanceamento, selecione o layout de distribuição de dados que você preferir.
++
+** *Desempenho otimizado* (recomendado): Aumenta o número de volumes de membros do FlexGroup e o tamanho provisionado do volume. Segue as melhores práticas do NetApp.
+** *Restrito*: Suporta volumes em uma relação de replicação. O número de volumes membros do FlexGroup e o tamanho dos volumes provisionados permanecem os mesmos. Selecionado por padrão se todos os volumes selecionados participarem de uma relação de replicação.
+** *Manual*: Selecione o número desejado de volumes de membros do FlexGroup por par de HA. Dependendo da sua seleção, o número de volumes de membros do FlexGroup e o tamanho provisionado do volume podem aumentar.
+
+
+. *Limitação*: Opcional. Desativado por padrão. Ative a limitação para limitar a largura de banda de uma movimentação de volume no sistema de arquivos e diminuir o tráfego de replicação de volume de saída.
++
+Introduza o valor do acelerador em MB/s.
+
+. Selecione uma vista de comparação de esquemas e, em seguida, selecione *seguinte*.
++
+** Comparação do layout do volume
+** Comparação de layout do FSX for ONTAP
+
+
+. Opcionalmente, baixe uma lista de movimentos de volume antes de reequilibrar.
+. Selecione *Rebalancamento*.
 
 
 .Resultado
-A capacidade do volume FlexGroup rebalanceia.
+Dependendo de quantos volumes membros do FlexGroup são adicionados ao FlexGroup, uma única operação de movimentação de membro de volume do FlexGroup ocorre de cada vez. Quando a operação for concluída, o sistema de arquivos será reduzido de volta ao valor original.
