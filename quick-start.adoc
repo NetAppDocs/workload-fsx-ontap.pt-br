@@ -23,13 +23,13 @@ Você vai precisar link:https://docs.netapp.com/us-en/workload-setup-admin/sign-
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Adicione credenciais e permissões
 [role="quick-margin-para"]
-Escolha entre _basic_, _read_ e _automate_ link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modos operacionais"^]
+Escolha entre _básico_, _somente leitura_ e _leitura/gravação_ link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modos operacionais"^]
 
 [role="quick-margin-para"]
 Se você optar por operar no modo _básico_, não precisará ir mais longe. Você pode começar a usar a fábrica de carga de trabalho do FSX for ONTAP para copiar amostras de código parcialmente concluídas.
 
 [role="quick-margin-para"]
-Se você operar no modo _read_ ou _Automate_, será necessário link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["adicione credenciais a uma conta manualmente"^]selecionar recursos de carga de trabalho, como bancos de dados e IA, e criar as políticas do IAM para garantir que você tenha as permissões corretas para operar no modo _read_ ou _Automate_.
+Se você operar no modo _somente leitura_ ou _leitura/gravação_, você precisará link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["adicione credenciais a uma conta manualmente"^] isso inclui selecionar recursos de carga de trabalho, como bancos de dados e IA, e criar políticas de IAM para garantir que você tenha as permissões corretas para operar no modo _somente leitura_ ou _leitura/gravação_.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] Crie um sistema de arquivos
 [role="quick-margin-para"]

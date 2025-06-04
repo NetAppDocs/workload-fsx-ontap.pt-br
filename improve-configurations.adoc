@@ -33,7 +33,7 @@ O que é analisado:: A fábrica de carga de trabalho analisa o status bem arquit
 
 
 .Antes de começar
-* Você deve ter credenciais com permissões somente leitura ou leitura/gravação. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Saiba como conceder permissões na sua conta da AWS"^].
+* Você deve ter credenciais com permissões _somente leitura_ ou _leitura/gravação_. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Saiba como conceder permissões na sua conta da AWS"^].
 * Certifique-se de rever cada recomendação cuidadosamente antes de selecionar para corrigir uma configuração ou configuração.
 
 

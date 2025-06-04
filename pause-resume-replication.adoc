@@ -11,12 +11,12 @@ summary: Pausar e retomar uma relação de replicação para que o volume de des
 
 
 [role="lead"]
-Pausar uma relação de replicação para interromper as atualizações de replicação agendadas do volume de origem para o volume de destino. O volume de destino passa de somente leitura para leitura e gravação. Ambos os volumes continuam a compartilhar o snapshot de replicação mais recente como uma nova linha de base para ressincronização posterior.
+Pausar uma relação de replicação para interromper as atualizações de replicação agendadas do volume de origem para o volume de destino. O volume de destino passa de somente leitura para leitura/gravação. Ambos os volumes continuam a compartilhar o snapshot de replicação mais recente como uma nova linha de base para ressincronização posterior.
 
 .Sobre esta tarefa
 Quando pausada, a relação de replicação entre o volume de origem e o volume de destino continua a existir. As transferências de dados são interrompidas e os volumes se tornam independentes. Para reativar a transferência de alterações do volume de origem para o volume de destino, retome a replicação.
 
-Quando você retoma uma replicação, todas as alterações no volume de destino são desfeitas e o workload do BlueXP  rehabilita a replicação de fábrica. O volume de destino faz a transição de leitura-gravação para somente leitura e recebe atualizações do volume de origem no intervalo de replicação programado novamente. Quando você retoma uma relação de replicação, o volume de destino volta para o instantâneo de replicação inicial mais recente, momento em que o processo de replicação de volume termina.
+Quando você retoma uma replicação, todas as alterações no volume de destino são desfeitas e o workload do BlueXP  rehabilita a replicação de fábrica. O volume de destino passa de leitura/gravação para somente leitura e recebe atualizações do volume de origem no intervalo de replicação agendado novamente. Quando você retoma uma relação de replicação, o volume de destino volta para o instantâneo de replicação inicial mais recente, momento em que o processo de replicação de volume termina.
 
 .Antes de começar
 Se você pausar quando uma transferência estiver em andamento, a transferência não será afetada e a relação se tornará "Quiescente" até que a transferência seja concluída. Se a transferência atual for cancelada, será agora uma transferência futura e não será reiniciada.

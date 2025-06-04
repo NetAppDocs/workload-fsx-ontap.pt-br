@@ -29,7 +29,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-immutable-files.htm
 === Aprimoramentos na replicação de dados
 
 * Replicação entre contas: A replicação entre duas contas da AWS é compatível com o console de fábrica do workload do BlueXP , bem como o gerenciamento de replicação.
-* Pausar e retomar a replicação: Você pode pausar (quiesce) atualizações de replicação agendadas do volume de origem para o volume de destino e, em seguida, retomar a programação de replicação quando estiver pronto. Durante a pausa, os volumes de origem e destino tornam-se independentes e o volume de destino faz a transição de somente leitura para leitura e gravação.
+* Pausar e retomar a replicação: Você pode pausar (quiesce) atualizações de replicação agendadas do volume de origem para o volume de destino e, em seguida, retomar a programação de replicação quando estiver pronto. Durante a pausa, os volumes de origem e destino se tornam independentes, e o volume de destino passa de somente leitura para leitura/gravação.
 +
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/pause-resume-replication.html["Pausar e retomar uma relação de replicação"]
 
