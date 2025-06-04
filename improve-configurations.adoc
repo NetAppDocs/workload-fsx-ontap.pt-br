@@ -24,8 +24,9 @@ O que é analisado:: A fábrica de carga de trabalho analisa o status bem arquit
 * Limite de capacidade SSD
 * Categorização de dados
 * Instantâneos locais programados
-* Backups do FSX para ONTAP, e.
+* FSx para backups ONTAP
 * Replicação de dados remota
+* Eficiência de storage
 
 
 --
@@ -57,4 +58,4 @@ Quando *Exibir e corrigir* for uma opção, selecione os volumes afetados a sere
 
 
 .Resultado
-O processo para corrigir o problema é iniciado. Selecione o separador *monitorização de trabalhos* para ver o estado da operação.
+O processo para corrigir o problema é iniciado. Selecione o menu de configurações da conta e depois selecione *Rastreador* para visualizar o status da operação.

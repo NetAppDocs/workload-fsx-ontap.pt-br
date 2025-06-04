@@ -91,6 +91,9 @@ Sem um limite, o desempenho da rede e do aplicativo pode declinar. Como alternat
 .. *Intervalo de replicação*: Selecione a frequência em que os instantâneos são transferidos do volume de origem para o volume de destino.
 .. *Retenção de longo prazo*: Opcionalmente, habilite snapshots para retenção de longo prazo. A retenção de longo prazo permite que os serviços empresariais continuem operando mesmo em caso de falha completa do local, dando suporte ao failover de aplicações de forma transparente, usando uma cópia secundária.
 +
+Replicações sem retenção de longo prazo usam a política _MirrorAllSnapshots_. Habilitar a retenção de longo prazo atribui a política _MirrorAndVault_ à replicação.
+
++
 Se você habilitar a retenção a longo prazo, selecione uma política existente ou crie uma nova política para definir os snapshots a serem replicados e o número a ser retido.
 
 +

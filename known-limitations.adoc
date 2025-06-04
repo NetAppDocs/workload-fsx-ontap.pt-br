@@ -15,12 +15,6 @@ As limitações conhecidas identificam plataformas, dispositivos ou funções qu
 
 
 
-== Link necessário para operações ONTAP avançadas
-
-Um link é necessário para concluir algumas operações, como replicação na interface de usuário de fábrica de carga de trabalho.
-
-
-
 == Adição de limitações de pares de HA
 
 * Esta operação poderá demorar cerca de 30 minutos a concluir.
@@ -41,7 +35,7 @@ As configurações de escalabilidade vertical são compatíveis com até 2 GB/s 
 
 === Implantações com escalabilidade horizontal
 
-As seguintes regiões suportam capacidade máxima de até 3 GB/s e 6 GB/s para implantações de escalabilidade horizontal: Leste DOS EUA (Norte da Virgínia), Leste dos EUA (Ohio), Oeste dos EUA (Oregon), Europa (Irlanda) e Pacífico Asiático (Sydney).
+As seguintes regiões oferecem suporte a até 6 GB/s de capacidade máxima de transferência para implantações de expansão: Leste dos EUA (Norte da Virgínia e Ohio), Oeste dos EUA (Norte da Califórnia e Oregon), Europa (Frankfurt, Irlanda e Estocolmo) e Ásia-Pacífico (Cingapura e Sydney).
 
 
 
@@ -50,6 +44,7 @@ As seguintes regiões suportam capacidade máxima de até 3 GB/s e 6 GB/s para i
 * A funcionalidade de volume com crescimento automático não é atualmente suportada para o protocolo iSCSI.
 * Quando o recurso de gerenciamento automático de capacidade está sendo executado, o aumento manual de capacidade não é permitido.
 * Desativar o recurso de gerenciamento automático de capacidade só é possível com as mesmas permissões usadas para ativá-lo.
+* Quando o gerenciamento automático de capacidade está habilitado, um link é necessário para garantir que os inodes de volume aumentem junto com a capacidade de armazenamento.
 
 
 

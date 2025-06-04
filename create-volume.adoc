@@ -2,19 +2,19 @@
 sidebar: sidebar 
 permalink: create-volume.html 
 keywords: create volume, FSx for ONTAP volume 
-summary: Depois de configurar seu sistema de arquivos FSX for ONTAP, crie o FSX for ONTAP volumes na fábrica de carga de trabalho do BlueXP . 
+summary: Depois de configurar seu sistema de arquivos FSx para ONTAP, crie volumes FSx para ONTAP na fábrica de carga de trabalho. 
 ---
-= Crie um volume FSX for ONTAP na fábrica de cargas de trabalho do BlueXP 
+= Crie um FSx para volume ONTAP na fábrica de carga de trabalho
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Depois de configurar seu sistema de arquivos FSX for ONTAP, crie o FSX for ONTAP volumes na fábrica de carga de trabalho do BlueXP .
+Depois de configurar seu sistema de arquivos FSx para ONTAP, crie volumes FSx para ONTAP no workload factory como recursos virtuais para agrupar seus dados.
 
 .Sobre esta tarefa
-O FSX para ONTAP volumes são recursos virtuais usados para agrupar dados, determinar como os dados são armazenados e determinar o tipo de acesso aos seus dados. Os volumes não consomem a capacidade de storage do sistema de arquivos. Os dados armazenados em um volume consomem principalmente o armazenamento SSD. Dependendo da política de disposição em camadas do volume, os dados também podem consumir o storage do pool de capacidade. Você define o tamanho de um volume ao criá-lo e pode alterar seu tamanho mais tarde.
+Os volumes do FSx for ONTAP agrupa dados virtualmente, determina como os dados são armazenados e determina o tipo de acesso aos seus dados. Os volumes não consomem a capacidade de storage do sistema de arquivos. Os dados armazenados em um volume consomem principalmente o armazenamento SSD. Dependendo da política de disposição em camadas do volume, os dados também podem consumir o storage do pool de capacidade. Você define o tamanho de um volume ao criá-lo e pode alterar seu tamanho mais tarde.
 
 Os seguintes protocolos podem ser usados para seus volumes:
 
@@ -63,6 +63,10 @@ O tamanho do volume FlexGroup depende do número de componentes. 100 GiB é exig
 .. *Tamanho do volume*: Introduza o tamanho do volume e a unidade.
 +
 Opcionalmente, ative o volume com crescimento automático. Esta opção está disponível quando você seleciona *Acesso a arquivos* como o tipo de acesso de volume.
+
+.. *Aumento automático de volume*: Opcionalmente, ative o aumento automático de volume para expandir automaticamente a capacidade do volume até que ele atinja o tamanho máximo. Este recurso permite o aumento do uso de dados, garantindo operações ininterruptas.
++
+Especifique o tamanho máximo de crescimento do volume e a unidade. O tamanho máximo de crescimento não pode ser menor que o tamanho do volume atual.
 
 .. *Tags*: Opcionalmente, você pode adicionar até 50 tags.
 
@@ -119,7 +123,7 @@ Preencha os campos a seguir para configurar o acesso de bloco ao volume.
 
 . Sob a eficiência e a proteção, forneça os seguintes detalhes:
 +
-.. *Eficiência de armazenamento*: Desativar ou ativar a eficiência de armazenamento.
+.. *Eficiência de armazenamento*: Habilitado por padrão. Selecione para desabilitar o recurso.
 +
 A eficiência de storage é obtida com a utilização de recursos de deduplicação e compactação do ONTAP. A deduplicação elimina blocos de dados duplicados. A compactação de dados compacta os blocos de dados para reduzir a quantidade de storage físico necessária.
 
