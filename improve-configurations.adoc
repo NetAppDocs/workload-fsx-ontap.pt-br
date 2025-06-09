@@ -27,6 +27,7 @@ O que é analisado:: A fábrica de carga de trabalho analisa o status bem arquit
 * FSx para backups ONTAP
 * Replicação de dados remota
 * Eficiência de storage
+* Gerenciamento automático de capacidade
 
 
 --
