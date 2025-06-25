@@ -21,7 +21,7 @@ O FSX para ONTAP volumes usa cópia-on-write just-in-time para que todos os arqu
 NOTE: Os snapshots não são cópias de seus dados. Se você quiser fazer cópias de seus dados, considere usar os backups do FSX for ONTAP ou os recursos de replicação de volume.
 
 .Antes de começar
-Você deve link:manage-links.html["associe um link"]criar um instantâneo. Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, selecione *associar link* sob *nome da conta*. Assim que o link se associar, volte a esta operação.
+Você deve associar um link para criar um instantâneo manual de um volume. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após os associados da ligação, volte a esta operação.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].

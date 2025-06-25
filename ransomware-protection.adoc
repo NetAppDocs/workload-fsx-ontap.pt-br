@@ -61,7 +61,7 @@ Ativar o ARP para um sistema de arquivos adiciona proteção para todos os volum
 Depois de ativar o ARP, se um ataque ocorrer e você identificar que o ataque é real, a fábrica de carga de trabalho do BlueXP  configura automaticamente uma política de snapshot que leva até seis snapshots a cada quatro horas. Cada snapshot é bloqueado por 2-5 dias.
 
 .Antes de começar
-Para ativar o ARP para um sistema de arquivos, é link:manage-links.html["associe um link"]necessário . Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, selecione *associar link* sob *nome da conta*. Após os associados da ligação, volte a esta operação.
+Para habilitar o ARP para um sistema de arquivos, você deve associar um link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após os associados da ligação, volte a esta operação.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].

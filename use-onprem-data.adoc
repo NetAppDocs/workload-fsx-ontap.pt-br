@@ -79,7 +79,7 @@ Replique dados de volume de um cluster do ONTAP no local para um sistema de arqu
 .Antes de começar
 * Você precisa descobrir um cluster do ONTAP no local para replicar seus dados de volume.
 * Você deve ter um sistema de arquivos FSX for ONTAP disponível para ser o destino para a replicação.
-* Tanto o cluster ONTAP no local quanto o sistema de arquivos FSX for ONTAP que você usa para a relação de replicação devem ter um link associado. Se um ou ambos clusters no local e no FSX for ONTAP não tiverem links existentes, link:create-link.html["primeiro crie um link"]. Para link:manage-links.html["associe um link"]nos sistemas de ficheiros, selecione *ligação associada* em *Nome da conta*. Depois que o link se associar ao cluster do ONTAP no local e ao sistema de arquivos FSX for ONTAP, retorne a esta operação.
+* Tanto o cluster ONTAP no local quanto o sistema de arquivos FSX for ONTAP que você usa para a relação de replicação devem ter um link associado. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após os associados da ligação, volte a esta operação.
 
 
 .Passos

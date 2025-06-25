@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-snapshot-policy.html 
 keywords: manage snapshot policy, change snapshot policy, snapshot policies, snapshot schedule, update 
-summary: Gerencie políticas de snapshot do FSX for ONTAP volumes na fábrica de workloads do BlueXP . Uma política de snapshot define como o sistema cria snapshots para um volume. 
+summary: Gerenciar políticas de snapshot para volumes FSx for ONTAP na fábrica de carga de trabalho. Uma política de snapshot define como o sistema cria snapshots para um volume. 
 ---
 = Gerenciar políticas de snapshot
 :allow-uri-read: 
@@ -11,12 +11,12 @@ summary: Gerencie políticas de snapshot do FSX for ONTAP volumes na fábrica de
 
 
 [role="lead"]
-Gerencie políticas de snapshot do FSX for ONTAP volumes na fábrica de workloads do BlueXP . Uma política de snapshot define como o sistema cria snapshots para um volume.
+Gerenciar políticas de snapshot para volumes FSx for ONTAP na fábrica de carga de trabalho. Uma política de snapshot define como o sistema cria snapshots para um volume.
 
 .Sobre esta tarefa
 Operações de gerenciamento de snapshot como atribuição, alteração e exclusão de políticas de snapshot para volumes em um sistema de arquivos FSX for ONTAP são gerenciadas no nível de VM de armazenamento. As políticas de snapshot podem ser compartilhadas com uma única VM de storage ou com todas as VMs de storage.
 
-Algumas tarefas de gerenciamento exigem que você link:manage-links.html["associe um link"]acesse o sistema de arquivos FSX for ONTAP. Se você não tiver um link existente, link:create-link.html["crie um link"].
+Algumas tarefas de gerenciamento exigem que você associe um link ao sistema de arquivos FSx para ONTAP. link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Saiba mais sobre os links da fábrica de carga de trabalho"].
 
 Por padrão, cada volume está associado à política de snapshot do sistema de arquivos `default`. Recomendamos o uso desta política para a maioria das cargas de trabalho.
 
@@ -27,7 +27,7 @@ Por padrão, cada volume está associado à política de snapshot do sistema de 
 Você pode alterar o nome da política de snapshot, o agendamento e o número de cópias a serem mantidas e ativar ou desativar snapshots imutáveis. Não é possível ativar ou desativar o compartilhamento de políticas entre VMs de armazenamento. Esta opção está disponível apenas durante a criação da política de instantâneos.
 
 .Antes de começar
-Para exibir políticas de snapshot existentes, você precisa associar um link. Para associar um link, selecione *associar link* em *Nome da conta*. Em seguida, volte a esta operação.
+Para exibir políticas de instantâneo existentes, você deve associar um link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após os associados da ligação, volte a esta operação.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
@@ -50,7 +50,7 @@ A política de instantâneos é atualizada.
 Bloqueie instantâneos para evitar que sejam excluídos durante o período de retenção.
 
 .Antes de começar
-Você deve link:manage-links.html["associe um link"]habilitar snapshots imutáveis. Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, selecione *associar link* sob *nome da conta*. Assim que o link se associar, volte a esta operação.
+Você deve associar um link para habilitar snapshots imutáveis. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após os associados da ligação, volte a esta operação.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
@@ -79,7 +79,7 @@ O instantâneo do volume está agora bloqueado.
 Você pode atribuir uma política de snapshot a um único volume para criar snapshots programados para o volume.
 
 .Antes de começar
-Tem de link:manage-links.html["associe um link"]atribuir uma política de instantâneos. Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, selecione *associar link* sob *nome da conta*. Após os associados da ligação, volte a esta operação.
+Você deve associar um link para atribuir uma política de instantâneo. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após os associados da ligação, volte a esta operação.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
@@ -105,7 +105,7 @@ A política de instantâneos é atribuída ao volume.
 Remover uma política de snapshot de um volume porque você não deseja mais snapshots do volume ou porque deseja excluir uma política de snapshot atribuída a vários volumes. Para <<Eliminar uma política de instantâneos,eliminar uma política de instantâneos>> isso é atribuído a mais de um volume, você deve removê-lo manualmente de todos os volumes.
 
 .Antes de começar
-Você deve link:manage-links.html["associe um link"]remover uma política de snapshot. Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, selecione *associar link* sob *nome da conta*. Após os associados da ligação, volte a esta operação.
+Você deve associar um link para remover uma política de instantâneo. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após os associados da ligação, volte a esta operação.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].

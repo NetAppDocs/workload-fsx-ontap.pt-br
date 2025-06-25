@@ -24,7 +24,7 @@ A quantidade máxima de capacidade de armazenamento SSD para todos os sistemas d
 Considere o seguinte antes de começar:
 
 * Você deve ter credenciais com permissões de _leitura/gravação_ no workload factory para concluir esta tarefa.
-* Para garantir que os inodes de volume aumentem junto com a capacidade de armazenamento, você deve link:manage-links.html["associe um link"]. Se você não tiver um link existente, link:create-link.html["crie um link"]. Para associar um link no sistema de arquivos, selecione *associar link* sob *nome da conta*. Após os associados da ligação, volte a esta operação.
+* Para garantir que os inodes de volume aumentem junto com a capacidade de armazenamento, você deve associar um link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após os associados da ligação, volte a esta operação.
 * Você não deve habilitar esse recurso durante a migração de dados, pois a AWS impõe um período mínimo de resfriamento de seis horas entre os aumentos de capacidade do SSD. Essa restrição pode atrasar os ajustes, portanto, planeje-se adequadamente.
 
 

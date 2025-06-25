@@ -2,18 +2,18 @@
 sidebar: sidebar 
 permalink: manage-links.html 
 keywords: links, accounts, lambda, creating, associating, disassociating, deleting, editing 
-summary: Você pode exibir links associados à sua conta, associar um link e remover um link na fábrica de carga de trabalho do BlueXP . 
+summary: Você pode visualizar links associados à sua conta, atualizar senhas para autenticação de links e remover um link no BlueXP Workload Factory. 
 ---
-= Gerenciar os links de fábrica do workload do BlueXP 
+= Gerenciar links de fábrica de carga de trabalho
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Gerencie os links que você associou à sua conta de fábrica de carga de trabalho do BlueXP . Você pode visualizar links associados a um sistema de arquivos FSX for ONTAP, associar um link com um sistema de arquivos FSX for ONTAP, editar um link e remover um link.
+Gerencie os links que você associou à sua conta da Workload Factory. Você pode visualizar links associados a um sistema de arquivos FSx para ONTAP, fornecer senhas usadas para autenticação de links e remover links do console da Workload Factory.
 
-link:links-overview.html["Saiba mais sobre links"] ou link:create-link.html["crie um link"].
+link:links-overview.html["Saiba mais sobre links"] ou link:create-link.html["criar e associar um link"].
 
 
 
