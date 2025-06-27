@@ -1694,7 +1694,6 @@
   <block id="b9000423f3d632810a4d8c3550eb4119" category="list-text">AWS Secrets Manager: Insira o ARN secreto.</block>
   <block id="0481a079b29497027474b2f22074dd5a" category="paragraph">O ARN secreto deve incluir os seguintes pares de chaves válidos:</block>
   <block id="91a73bc4f293d9fc4712c2770316ae08" category="list-text">O sistema de arquivos FSX_filesystem_id</block>
-  <block id="508e0beab9fc0c907eb4adcaa7a736f7" category="list-text">Usuário: FSX_user</block>
   <block id="db1e2f706f83d7a3a9a03793db05422a" category="list-text">palavra-passe: user_password</block>
   <block id="3179fc8078925ef0503270fd907af44c" category="paragraph">O link está associado ao sistema de arquivos FSX for ONTAP. Você pode executar operações ONTAP avançadas.</block>
   <block id="db9a0ca8d6bb6376ddaad7f254b049aa" category="section-title">Solucionar problemas com a autenticação de link do AWS Secrets Manager</block>
@@ -1938,4 +1937,5 @@
   <block id="2ccb6b87f6c03ced811ff29d2a5f5ede" category="paragraph">Para replicar uma VM de armazenamento para outro sistema de arquivos FSx for ONTAP, você deve associar um link. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Após os associados da ligação, volte a esta operação.</block>
   <block id="99ae6104ba82455197d215357b50f2f1" category="list-text">Para dividir um volume clonado, você deve associar um link. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Após os associados da ligação, volte a esta operação.</block>
   <block id="21bd8c562c1d6ae4caf8a36f6d06c516" category="list-text">Tanto o cluster ONTAP no local quanto o sistema de arquivos FSX for ONTAP que você usa para a relação de replicação devem ter um link associado. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Após os associados da ligação, volte a esta operação.</block>
+  <block id="316509fcb5a8d1b5e1280f3f64c594f2" category="list-text">nome de usuário = FSx_user</block>
 </blocks>

@@ -212,7 +212,7 @@ O ARN secreto deve incluir os seguintes pares de chaves válidos:
 
 +
 *** O sistema de arquivos FSX_filesystem_id
-*** Usuário: FSX_user
+*** nome de usuário = FSx_user
 *** palavra-passe: user_password
 
 
@@ -248,7 +248,7 @@ Problema:: O segredo não está no formato certo.
 O segredo deve conter os seguintes pares de chaves válidos:
 
 * O sistema de arquivos FSX_filesystem_id
-* Usuário: FSX_user
+* nome de usuário = FSx_user
 * palavra-passe: user_password
 
 
