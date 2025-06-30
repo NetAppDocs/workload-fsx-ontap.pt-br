@@ -31,10 +31,10 @@ NOTE: O AWS Secrets Manager não é suportado ao usar um conetor.
 
 Associar um novo link inclui criação e associação de links.
 
-Você tem duas opções para criar links - automaticamente ou manualmente. Você precisará iniciar uma pilha do AWS CloudFormation na sua conta da AWS para criar o link.
+Você tem duas opções para criar links neste fluxo de trabalho: automática ou manualmente. Você precisará iniciar uma pilha do AWS CloudFormation na sua conta da AWS para criar o link.
 
 * Automaticamente: Cria um link com Registro automático via fábrica de carga de trabalho. Um link criado automaticamente requer tokens para automação de fábrica de carga de trabalho e o código do CloudFormation é de curta duração. Ele só pode ser usado por até seis horas.
-* Manualmente: Cria uma ligação com o registo manual. O código do CloudFormation persiste, dando-lhe mais tempo para concluir a operação. Isso é útil ao trabalhar com equipes diferentes, como Segurança e DevOps, que podem primeiro precisar conceder as permissões necessárias para concluir a criação de links.
+* Manualmente: Cria um link com registro manual usando CloudFormation ou Terraform a partir do Codebox. O código persiste, dando a você mais tempo para concluir a operação. Isso é útil ao trabalhar com equipes diferentes, como Segurança e DevOps, que podem primeiro precisar conceder as permissões necessárias para concluir a criação de links.
 
 
 .Antes de começar
@@ -110,6 +110,25 @@ Você pode criar segredos em alinhamento com as permissões padrão ou atribuir 
 +
 *Configurar endpoint privado VPC para o AWS Secrets Manager* está desativado por padrão. Selecionar essa opção armazena o segredo usando o endpoint privado VPC em vez de armazená-lo localmente.
 
+.. *Permissões de link*: Selecione uma das seguintes opções para permissões de link:
++
+*** *Automático*: selecione esta opção para que o código do AWS CloudFormation ou Terraform crie automaticamente a política de permissão e a função de execução do Lambda.
+*** *Fornecido pelo usuário*: Selecione esta opção para atribuir uma função de execução do Lambda específica e suas políticas anexadas ao link do Lambda. As seguintes permissões são necessárias para a política de permissões do Lambda .  `secretsmanager:GetSecretValue` a permissão será necessária somente se você tiver habilitado o AWS Secrets Manager.
++
+[source, json]
+----
+"ec2:CreateNetworkInterface",
+"ec2:DescribeNetworkInterfaces",
+"ec2:DeleteNetworkInterface",
+"ec2:AssignPrivateIpAddresses",
+"ec2:UnassignPrivateIpAddresses",
+"secretsmanager:GetSecretValue"
+----
++
+Insira o ARN da função de execução do Lambda na caixa de texto.
+
+
+
 .. *Tags*: Opcionalmente, adicione quaisquer tags que você deseja associar a este link para que você possa categorizar mais facilmente seus recursos. Por exemplo, você pode adicionar uma tag que identifique esse link como sendo usado pelo FSX para sistemas de arquivos ONTAP.
 +
 A conta da AWS e as informações adicionais do grupo conta, localização e Segurança são recuperadas automaticamente com base no sistema de arquivos FSX for ONTAP.
@@ -142,7 +161,7 @@ Você pode monitorar o status da criação do link na página Eventos. Isso não
 --
 .Criar manualmente
 --
-Com essa opção, você extrai o ARN para o link do AWS CloudFormation e o informa aqui. A fábrica de carga de trabalho Registra manualmente o link para você.
+Com esta opção, você extrai o ARN do link e o informa aqui. A fábrica de carga de trabalho Registra manualmente o link para você. Você pode criar um link usando duas ferramentas de Infraestrutura como Código (IaC) do Codebox: CloudFormation ou Terraform.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
@@ -162,8 +181,27 @@ Você pode criar segredos em alinhamento com as permissões padrão ou atribuir 
 +
 *Configurar endpoint privado VPC para o AWS Secrets Manager* está desativado por padrão. Selecionar essa opção armazena o segredo usando o endpoint privado VPC em vez de armazená-lo localmente.
 
+.. *Permissões de link*: Selecione uma das seguintes opções para permissões de link:
++
+*** *Automático*: selecione esta opção para que o código do AWS CloudFormation ou Terraform crie automaticamente a política de permissão e a função de execução do Lambda.
+*** *Fornecido pelo usuário*: Selecione esta opção para atribuir uma função de execução do Lambda específica e suas políticas anexadas ao link do Lambda. As seguintes permissões são necessárias para a política de permissões do Lambda .  `secretsmanager:GetSecretValue` a permissão será necessária somente se você tiver habilitado o AWS Secrets Manager.
++
+[source, json]
+----
+"ec2:CreateNetworkInterface",
+"ec2:DescribeNetworkInterfaces",
+"ec2:DeleteNetworkInterface",
+"ec2:AssignPrivateIpAddresses",
+"ec2:UnassignPrivateIpAddresses"
+"secretsmanager:GetSecretValue"
+----
++
+Insira o ARN da função de execução do Lambda na caixa de texto.
+
+
+
 .. *Tags*: Opcionalmente, adicione quaisquer tags que você deseja associar a este link para que você possa categorizar mais facilmente seus recursos. Por exemplo, você pode adicionar uma tag que identifique esse link como sendo usado pelo FSX para sistemas de arquivos ONTAP.
-.. *Link registration*: Selecione na seta suspensa para expandir as instruções de como Registrar o link no serviço AWS CloudFormation. Siga as instruções.
+.. *Registro de link*: selecione na seta suspensa para expandir as instruções sobre como registrar o link no serviço AWS CloudFormation ou usando o Terraform. Siga as instruções.
 +
 Observe que três permissões são concedidas ao Lambda quando você inicia o modelo do CloudFormation. A fábrica de carga de trabalho usa essas permissões ao usar links.
 

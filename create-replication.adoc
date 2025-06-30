@@ -20,6 +20,8 @@ Essa operação cria uma relação de replicação para um ou todos os volumes d
 
 Os volumes replicados no sistema de arquivos de destino são volumes de proteção de dados (DP) e seguem o formato de nomenclatura: `{OriginalVolumeName}_copy`.
 
+Ao replicar um volume de origem com arquivos imutáveis, o volume de destino e o sistema de arquivos ficam bloqueados até que o período de retenção dos arquivos imutáveis no volume de origem termine. O recurso de arquivos imutáveis está disponível quando você link:create-volume.html["criar um volume"] para um sistema de arquivos FSx para ONTAP.
+
 .Antes de começar
 Certifique-se de que cumpre os seguintes pré-requisitos antes de começar.
 
@@ -47,7 +49,7 @@ Na tabela volumes, selecione um ou mais volumes e, em seguida, selecione *repliq
 . Na página replicar dados, em destino replicação, forneça o seguinte:
 +
 .. *FSX para sistema de arquivos ONTAP*: Selecione credenciais, região e nome do sistema de arquivos FSX for ONTAP para o sistema de arquivos FSX for ONTAP de destino.
-.. *Nome da VM de armazenamento*: Selecione a VM de armazenamento no menu suspenso.
+.. *Nome da VM de armazenamento*: Selecione a VM de armazenamento no menu suspenso. A VM de armazenamento selecionada é o destino para todos os volumes selecionados neste relacionamento de replicação.
 .. *Nome do volume*: O nome do volume de destino é gerado automaticamente com o seguinte `{OriginalVolumeName}_copy` formato . Pode utilizar o nome do volume gerado automaticamente ou introduzir outro nome de volume.
 .. *Caso de uso*: Selecione um dos seguintes casos de uso para a replicação. Dependendo do caso de uso selecionado, a fábrica de carga de trabalho preenche o formulário com os valores recomendados de acordo com as práticas recomendadas. Você pode aceitar os valores recomendados ou fazer alterações ao preencher o formulário.
 +
@@ -102,16 +104,13 @@ NOTE: Rótulos de origem e destino correspondentes são necessários para reten�
 
 +
 *** *Escolha uma política existente*: Selecione uma política existente no menu suspenso.
-*** *Crie uma nova política*: Forneça o seguinte:
-+
-**** *Nome da política*: Insira um nome de política.
-**** Opcional: Ativar instantâneos imutáveis.
-+
-***** Selecione *Ativar instantâneos imutáveis* para evitar que os instantâneos obtidos nesta política sejam excluídos durante o período de retenção.
-***** Defina o *período de retenção* em número de horas, dias, meses ou anos.
+*** *Criar uma nova política*: insira um *nome de política*.
 
 
-**** *Políticas de snapshot*: Na tabela, selecione a frequência da política de snapshot e o número de cópias a reter. Pode selecionar mais de uma política de instantâneos.
+.. *Snapshots imutáveis*: Opcional. Selecione *Ativar instantâneos imutáveis* para evitar que os instantâneos obtidos nesta política sejam excluídos durante o período de retenção.
++
+*** Defina o *período de retenção* em número de horas, dias, meses ou anos.
+*** *Políticas de snapshot*: Na tabela, selecione a frequência da política de snapshot e o número de cópias a reter. Pode selecionar mais de uma política de instantâneos.
 
 
 

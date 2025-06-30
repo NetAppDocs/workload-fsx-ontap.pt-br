@@ -26,7 +26,7 @@ Os seguintes protocolos podem ser usados para seus volumes:
 .Antes de começar
 Reveja os seguintes pré-requisitos antes de criar um volume:
 
-* Você deve ter um sistema de arquivos FSX for ONTAP na fábrica de carga de trabalho.
+* Você deve ter um sistema de arquivos FSx para ONTAP no console do factory de carga de trabalho.
 * Você precisa ter uma VM de storage.
 * Para acesso ao protocolo, execute o seguinte:
 +
@@ -58,7 +58,7 @@ NOTE: Ao usar o Terraform do Codebox, o código que você copia ou baixa oculta 
 O estilo FlexVol volume é selecionado por padrão.
 
 +
-O tamanho do volume FlexGroup depende do número de componentes. 100 GiB é exigido por constituinte.
+O tamanho do volume do FlexGroup depende do número de constituintes, exigindo 100 GiB por constituinte.
 
 .. *Tamanho do volume*: Introduza o tamanho do volume e a unidade.
 +
@@ -66,7 +66,7 @@ Opcionalmente, ative o volume com crescimento automático. Esta opção está di
 
 .. *Aumento automático de volume*: Opcionalmente, ative o aumento automático de volume para expandir automaticamente a capacidade do volume até que ele atinja o tamanho máximo. Este recurso permite o aumento do uso de dados, garantindo operações ininterruptas.
 +
-Especifique o tamanho máximo de crescimento do volume e a unidade. O tamanho máximo de crescimento não pode ser menor que o tamanho do volume atual.
+Especifique o tamanho máximo de crescimento do volume e a unidade. Você não pode definir o tamanho máximo de crescimento menor que o tamanho do volume atual
 
 .. *Tags*: Opcionalmente, você pode adicionar até 50 tags.
 
@@ -125,9 +125,35 @@ Preencha os campos a seguir para configurar o acesso de bloco ao volume.
 +
 .. *Eficiência de armazenamento*: Habilitado por padrão. Selecione para desabilitar o recurso.
 +
-A eficiência de storage é obtida com a utilização de recursos de deduplicação e compactação do ONTAP. A deduplicação elimina blocos de dados duplicados. A compactação de dados compacta os blocos de dados para reduzir a quantidade de storage físico necessária.
+O ONTAP atinge eficiência de armazenamento usando recursos de desduplicação e compactação. A deduplicação elimina blocos de dados duplicados. A compactação de dados compacta os blocos de dados para reduzir a quantidade de storage físico necessária.
 
-.. *Arquivos immutáveis*: Esse recurso, também conhecido como SnapLock, está desativado por padrão. A ativação de arquivos imutáveis impede que os dados sejam excluídos ou substituídos por um período de tempo especificado. Ativar esta funcionalidade só é possível durante a criação de volume. Depois que o recurso estiver ativado, ele não poderá ser desativado. Este é um recurso premium para o FSX for ONTAP que carrega um custo adicional. Para obter mais informações, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["Como o SnapLock funciona"^]documentação do Amazon FSX for NetApp ONTAP.
+.. *Política de snapshot*: Selecione a política de snapshot para especificar a frequência e a retenção de snapshots.
++
+A seguir estão as políticas padrão da AWS. Para políticas de instantâneo personalizadas, você deve link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["associe um link"] .
+
++
+`default`:: Essa política cria automaticamente snapshots na programação a seguir, com as cópias snapshot mais antigas excluídas para abrir espaço para cópias mais recentes:
++
+--
+*** Um máximo de seis snapshots por hora feitos cinco minutos depois da hora.
+*** Um máximo de dois instantâneos diários tirados de segunda a sábado, 10 minutos após a meia-noite.
+*** Um máximo de dois instantâneos semanais tirados todos os domingos, 15 minutos após a meia-noite.
++
+
+NOTE: Os tempos de instantâneos baseiam-se no fuso horário do sistema de arquivos, que por padrão é Coordinated Universal Time (UTC). Para obter informações sobre como alterar o fuso horário, consulte a link:https://library.netapp.com/ecmdocs/ECMP1155684/html/GUID-E26E4C94-DF74-4E31-A6E8-1D2D2287A9A1.html["Apresentar e definir o fuso horário do sistema"^]documentação de suporte da NetApp.
+
+
+
+--
+`default-1weekly`:: Esta política funciona da mesma forma que a `default` política, exceto que só retém um instantâneo da programação semanal.
+`none`:: Esta política não tira instantâneos. Você pode atribuir essa diretiva a volumes para impedir que snapshots automáticos sejam feitos.
+
+
+.. *Política de disposição em categorias*: Selecione a política de disposição em categorias para os dados armazenados no volume.
++
+_Balanced (Auto)_ é a política de disposição em camadas padrão ao criar um volume usando o console de fábrica da carga de trabalho. Para obter mais informações sobre políticas de disposição em camadas de volume, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidade de armazenamento de volume"^]documentação do AWS FSX for NetApp ONTAP. Observe que a fábrica do workload usa nomes baseados em casos de uso no console de fábrica de carga de trabalho para políticas de disposição em camadas e inclui nomes de políticas de disposição em camadas do FSX for ONTAP entre parênteses.
+
+.. *Arquivos immutáveis*: Esse recurso, também conhecido como SnapLock, está desativado por padrão. Habilitar arquivos imutáveis impede a exclusão ou substituição de dados por um período definido. Ativar esta funcionalidade só é possível durante a criação de volume. Depois que o recurso estiver ativado, ele não poderá ser desativado. Este é um recurso premium para o FSX for ONTAP que carrega um custo adicional. Para obter mais informações, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["Como o SnapLock funciona"^]documentação do Amazon FSX for NetApp ONTAP.
 +
 A ativação do recurso arquivos imutáveis vincula permanentemente os arquivos neste volume para um estado WORM imutável (write-once-read-many).
 
@@ -147,7 +173,7 @@ NOTA:: Mesmo após o período de retenção expirar, você não pode modificar u
 
 
 --
-AUTOCOMMIT:: Você terá a opção de ativar o recurso de confirmação automática. O recurso de confirmação automática vincula um arquivo ao estado WORM em um volume SnapLock se o arquivo não for alterado durante o período de confirmação automática. O recurso de confirmação automática está desativado por padrão. Os arquivos que você deseja confirmar automaticamente devem residir em um volume SnapLock.
+AUTOCOMMIT:: Você terá a opção de ativar o recurso de confirmação automática. O recurso de confirmação automática vincula um arquivo ao estado WORM em um volume SnapLock se o arquivo não for alterado durante o período de confirmação automática. O recurso de confirmação automática está desativado por padrão. Você deve garantir que os arquivos que deseja confirmar automaticamente residam em um volume SnapLock.
 Modo de adição de volume:: Não é possível modificar dados existentes em um arquivo protegido WORM. No entanto, os arquivos imutáveis permitem manter a proteção de dados existentes usando arquivos anexados WORM. Por exemplo, você pode gerar arquivos de log ou preservar dados de streaming de áudio ou vídeo enquanto grava dados para eles de forma incremental. link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append["Saiba mais sobre o modo de adição de volume"^] Na documentação do Amazon FSX for NetApp ONTAP.
 +
 --
@@ -179,31 +205,15 @@ Modo de adição de volume:: Não é possível modificar dados existentes em um 
 --
 
 
-.. *Política de snapshot*: Selecione a política de snapshot para especificar a frequência e a retenção de snapshots.
+.. *ARP/AI*: A Proteção Autônoma contra Ransomware da NetApp com AI (ARP/AI) é ativada por padrão quando um link é associado ao sistema de arquivos. link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html["Saiba mais sobre ARP/IA"]. Aceite a declaração para prosseguir.
 +
-A seguir estão as políticas padrão da AWS. Para políticas de instantâneo personalizadas, você deve link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["associe um link"] .
+Se o recurso não estiver disponível, é por um dos seguintes motivos:
 
 +
-`default`:: Essa política cria automaticamente snapshots na programação a seguir, com as cópias snapshot mais antigas excluídas para abrir espaço para cópias mais recentes:
-+
---
-*** Um máximo de seis snapshots por hora feitos cinco minutos depois da hora.
-*** Um máximo de dois instantâneos diários tirados de segunda a sábado, 10 minutos após a meia-noite.
-*** Um máximo de dois instantâneos semanais tirados todos os domingos, 15 minutos após a meia-noite.
-+
+*** Um link não está associado ao sistema de arquivos. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após os associados da ligação, volte a esta operação.
+*** Volumes com arquivos imutáveis e volumes com protocolos iSCSI e NVMe não são suportados para ARP/AI.
+*** O sistema de arquivos já tem uma política ARP/AI.
 
-NOTE: Os tempos de instantâneos baseiam-se no fuso horário do sistema de arquivos, que por padrão é Coordinated Universal Time (UTC). Para obter informações sobre como alterar o fuso horário, consulte a link:https://library.netapp.com/ecmdocs/ECMP1155684/html/GUID-E26E4C94-DF74-4E31-A6E8-1D2D2287A9A1.html["Apresentar e definir o fuso horário do sistema"^]documentação de suporte da NetApp.
-
-
-
---
-`default-1weekly`:: Esta política funciona da mesma forma que a `default` política, exceto que só retém um instantâneo da programação semanal.
-`none`:: Esta política não tira instantâneos. Você pode atribuir essa diretiva a volumes para impedir que snapshots automáticos sejam feitos.
-
-
-.. *Política de disposição em categorias*: Selecione a política de disposição em categorias para os dados armazenados no volume.
-+
-_Balanced (Auto)_ é a política de disposição em camadas padrão ao criar um volume usando o console de fábrica da carga de trabalho. Para obter mais informações sobre políticas de disposição em camadas de volume, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidade de armazenamento de volume"^]documentação do AWS FSX for NetApp ONTAP. Observe que a fábrica do workload usa nomes baseados em casos de uso no console de fábrica de carga de trabalho para políticas de disposição em camadas e inclui nomes de políticas de disposição em camadas do FSX for ONTAP entre parênteses.
 
 
 
@@ -218,4 +228,4 @@ _Balanced (Auto)_ é a política de disposição em camadas padrão ao criar um 
 
 
 .Resultado
-A criação de volume é iniciada. Uma vez criado, o novo volume aparecerá na guia volumes.
+A fábrica de carga de trabalho inicia a criação do volume. Após a criação, o sistema exibe o novo volume na aba "Volumes".
