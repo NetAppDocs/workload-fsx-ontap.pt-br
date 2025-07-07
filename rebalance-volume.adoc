@@ -61,7 +61,7 @@ Verifique o equilíbrio dos volumes FlexVol ou FlexGroup em um sistema de arquiv
 ** Volumes FlexGroup
 ** Volumes FlexVol
 +
-Quando um volume está desbalanceado, considere <<Rebalance a volume,reequilibrá-lo>> .
+Quando um volume está desbalanceado, considere <<Capacidade de volume de rebalanceamento,reequilibrá-lo>> .
 
 
 
