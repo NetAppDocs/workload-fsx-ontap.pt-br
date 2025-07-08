@@ -63,6 +63,3 @@ NOTE: Rótulos de origem e destino correspondentes são necessários para reten�
 
 
 
-
-. Selecione *criar*.
-
