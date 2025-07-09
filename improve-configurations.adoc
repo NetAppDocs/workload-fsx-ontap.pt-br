@@ -11,12 +11,14 @@ summary: A fábrica de carga de trabalho do BlueXP  para bancos de dados verifi
 
 
 [role="lead"]
-Usando insights e recomendações de análise de configuração, aproveite a fábrica de carga de trabalho do BlueXP  para implementar as práticas recomendadas para seus sistemas de arquivos FSX for ONTAP. Você pode facilmente encontrar problemas e agir para melhorar a arquitetura de qualquer sistema que não seja otimizado para confiabilidade, segurança, eficiência, desempenho e custo.
+Usando insights e recomendações de análise de configuração, aproveite a fábrica de carga de trabalho para implementar as melhores práticas para seus sistemas de arquivos FSx para ONTAP . Você pode facilmente revisar o status da arquitetura, aprender sobre problemas com suas configurações e tomar medidas para melhorar a arquitetura de quaisquer sistemas que não estejam otimizados para confiabilidade, segurança, eficiência, desempenho e custo.
+
+link:configuration-analysis.html["Aprenda sobre a análise de configuração e o status bem arquitetado na fábrica de carga de trabalho."]
 
 .Sobre esta tarefa
-O BlueXP  analisa diariamente as configurações de implantação do sistema de arquivos do Amazon FSX for NetApp ONTAP. A análise diária fornece insights e recomendações com opções para corrigir problemas de configuração automaticamente para que seu sistema de arquivos atenda às práticas recomendadas.
+A Workload Factory analisa diariamente as configurações de implantação do sistema de arquivos Amazon FSx for NetApp ONTAP . A análise diária fornece o status bem arquitetado, além de insights e recomendações, com opções para corrigir automaticamente problemas de configuração, para que seu sistema de arquivos atenda às práticas recomendadas.
 
-Você tem opções para analisar as recomendações para problemas de configuração com seus sistemas de arquivos e corrigir esses problemas do inventário de storage no console de fábrica do workload.
+Você tem opções para revisar as recomendações para problemas de configuração com seus sistemas de arquivos e corrigir os problemas do inventário de armazenamento no console do Workload Factory.
 
 O que é analisado:: A fábrica de carga de trabalho analisa o status bem arquitetado das seguintes configurações para os sistemas de arquivos FSX for ONTAP:
 +
