@@ -17,15 +17,27 @@ Você não precisa de um link para começar a trabalhar na fábrica de cargas de
 
 
 
+== Por que os links são benéficos
+
+Os links são benéficos porque permitem que a fábrica de carga de trabalho execute operações que não estão disponíveis nativamente por meio da API do Amazon FSx para ONTAP . Eles habilitam recursos e automações avançados do ONTAP , que aprimoram o gerenciamento dos sistemas de arquivos do FSx para ONTAP .
+
+Aqui estão alguns benefícios de usar links:
+
+* O link permite que o BlueXP envie comandos ONTAP diretamente para o seu sistema de arquivos FSx for ONTAP , trazendo recursos ONTAP avançados além do que a AWS oferece nativamente.
+* Os links utilizam o AWS Lambda para executar código em resposta a eventos. Essa abordagem sem servidor elimina a dependência de uma instância em execução na sua VPC.
+
+
+
+
 == Como os links funcionam
 
 Os links aproveitam o AWS Lambda. O Lambda executa código em resposta a eventos e gerencia automaticamente os recursos de computação exigidos por esse código. Os links que você cria fazem parte da sua conta do NetApp e são associados a uma conta da AWS.
 
-Depois de criar um link, você pode associá-lo a um ou muitos sistemas de arquivos FSX for ONTAP. Cada sistema de arquivos pode ser associado apenas a um link na mesma conta do NetApp. Se você tiver várias contas do NetApp, um único sistema de arquivos pode ser associado a links adicionais em diferentes contas do NetApp.
+Depois de criar um link, você pode associá-lo a um ou vários sistemas de arquivos FSx for ONTAP . Cada sistema de arquivos pode ser associado apenas a um link na mesma conta do NetApp. Se você tiver várias contas do NetApp, um único sistema de arquivos pode ser associado a links adicionais em diferentes contas do NetApp.
 
-Você cria links a partir das páginas do sistema de arquivos FSX for ONTAP na fábrica de carga de trabalho. link:create-link.html["Saiba como criar links"] para mais detalhes.
+Você cria e associa links da carga de trabalho de armazenamento no workload factory.
 
-Você pode fazer links autênticos usando credenciais armazenadas no serviço de credenciais de fábrica de carga de trabalho ou com suas credenciais armazenadas no AWS Secrets Manager. A fábrica de carga de trabalho não suporta a alteração dos modos de autenticação.
+Você pode autenticar links usando credenciais armazenadas no serviço de credenciais do Workload Factory ou com suas credenciais armazenadas no AWS Secrets Manager. A fábrica de carga de trabalho não suporta a alteração dos modos de autenticação.
 
 
 
@@ -39,20 +51,21 @@ link:https://aws.amazon.com/lambda/pricing/["Saiba mais sobre os custos relacion
 
 == Quando um link é necessário
 
-A fábrica da carga de trabalho requer um link para exibir algumas informações e executar algumas tarefas. Se você tentar executar uma operação que requer um link e você não associou um link ao sistema de arquivos FSX for ONTAP, você verá uma mensagem informando que a operação requer um link. Você pode adicionar um novo link ou associar o sistema de arquivos FSX for ONTAP a um link existente naquele momento para que você possa executar a operação.
+A fábrica da carga de trabalho requer um link para exibir algumas informações e executar algumas tarefas. Se você tentar executar uma operação que requer um link e não tiver associado um link ao sistema de arquivos FSx para ONTAP , o Workload Factory notificará você de que a operação requer um link.
 
 Os recursos que exigem um link incluem:
 
-* Exibindo a versão do ONTAP que está instalada em um sistema de arquivos FSX for ONTAP
+* Status bem arquitetado do FSx para configurações do sistema de arquivos ONTAP para manutenção proativa, confiabilidade e otimização de custo-desempenho
+* Proteção Autônoma contra Ransomware da NetApp (ARP/AI)
+* Capacidade de observação holística aprimorada no FSx para sistemas de arquivos ONTAP
+* Replicação, gerenciamento e monitoramento de dados de VM de volume e armazenamento
+* Ações SMB/CIFS e provisionamento e gestão de políticas de exportação NFS
 * Gerenciamento de volumes iSCSI em um sistema de arquivos FSX for ONTAP
-* Recurso de crescimento automático para volumes
-* Criação e gerenciamento de políticas de snapshot
-* Configuração da relação de replicação
-* Replicação de volume entre o FSX para sistemas de arquivos ONTAP
-* Configuração da relação de backup
-* Backups de dados de volume para o storage de nuvem
-* Clones de volume em um sistema de arquivos FSX for ONTAP
-* Exibição de métricas adicionais diretamente do ONTAP (métricas padrão são coletadas pelo Amazon CloudWatch)
-* Gerenciamento de políticas de exportação de NFS
-* Gerenciamento de compartilhamentos CIFS
+* Criação e gerenciamento de políticas de snapshot para SLA de proteção personalizado
+* Melhorias no gerenciamento de inodes para gerenciamento automático de capacidade
+* Crescimento automático de volume para dimensionamento elástico
+* Criação e gerenciamento de clones para clonagem instantânea de dados no local
+* Exibindo métricas adicionais diretamente do ONTAP , como a versão do ONTAP
 
+
+Aprenda a link:create-link.html["conectar um link a um sistema de arquivos FSx para ONTAP"].

@@ -569,8 +569,6 @@
   <block id="0c2c6a9c149348bd95ea113c9e333baa" category="paragraph">Em alternativa, selecione *Unlimited*.</block>
   <block id="87684df341e5a7d9f280a7bdf2048a6e" category="section-title">Como os links funcionam</block>
   <block id="5abd3a6ae198e27e4c8402463411560f" category="paragraph">Os links aproveitam o AWS Lambda. O Lambda executa código em resposta a eventos e gerencia automaticamente os recursos de computação exigidos por esse código. Os links que você cria fazem parte da sua conta do NetApp e são associados a uma conta da AWS.</block>
-  <block id="ff5c41103f48a7b4755ac57734036d05" category="paragraph">Depois de criar um link, você pode associá-lo a um ou muitos sistemas de arquivos FSX for ONTAP. Cada sistema de arquivos pode ser associado apenas a um link na mesma conta do NetApp. Se você tiver várias contas do NetApp, um único sistema de arquivos pode ser associado a links adicionais em diferentes contas do NetApp.</block>
-  <block id="7d6d7edbcee228f35d85531a33a68076" category="inline-link-macro">Saiba como criar links</block>
   <block id="66096c22a6220952b7aef731ef78c167" category="section-title">Custos</block>
   <block id="0ab8cd7f04804af6d53be93ef7bd5345" category="inline-link-macro">Saiba mais sobre os custos relacionados ao uso do AWS Lambda</block>
   <block id="70f0040e444997fbb4beeeae8bd03d34" category="paragraph"><block ref="70f0040e444997fbb4beeeae8bd03d34" category="inline-link-macro-rx"></block></block>
@@ -745,7 +743,6 @@
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">O que há de novo</block>
   <block id="7aa1575aeeddba65d55707b41584cd4a" category="sidebar">Use o Amazon FSX para NetApp ONTAP</block>
   <block id="2553f0a003cdfb6c46e0fb29cca1c670" category="sidebar">Use links</block>
-  <block id="95818c359b553f6f2db093ae431dd5be" category="sidebar">Descrição geral da ligação</block>
   <block id="e2439a8512b353f75391ba9c346bc84d" category="sidebar">Gerenciar volumes</block>
   <block id="dc88dce8ec264777b2f90ec0af744f43" category="sidebar">Crie um volume</block>
   <block id="e5787a3a7b79c3cdbeb01e163f0a84de" category="sidebar">Gerenciar snapshots</block>
@@ -914,8 +911,6 @@
   <block id="de401cd5994804b12e8c1734d1ee027c" category="summary">Um link de fábrica de carga de trabalho cria uma relação de confiança e conetividade entre uma conta de fábrica de carga de trabalho e um ou mais sistemas de arquivos FSX for ONTAP.</block>
   <block id="12565ed510f1f762365915b3fa807454" category="doc">Saiba mais sobre os links de fábrica da carga de trabalho do BlueXP </block>
   <block id="691199ddecf65c4783496c94612dd07f" category="paragraph">Você não precisa de um link para começar a trabalhar na fábrica de cargas de trabalho, mas em alguns casos você precisará criar um link para desbloquear todos os recursos de fábrica de cargas de trabalho e recursos de carga de trabalho.</block>
-  <block id="c1dad4a74a18053a2db1d6f5da393921" category="paragraph">Você cria links a partir das páginas do sistema de arquivos FSX for ONTAP na fábrica de carga de trabalho. <block ref="e9a88ae15a9584972e43294d65e9c8ac" category="inline-link-macro-rx"></block> para mais detalhes.</block>
-  <block id="895a7d895aa3866c9188fcd255af1541" category="paragraph">A fábrica da carga de trabalho requer um link para exibir algumas informações e executar algumas tarefas. Se você tentar executar uma operação que requer um link e você não associou um link ao sistema de arquivos FSX for ONTAP, você verá uma mensagem informando que a operação requer um link. Você pode adicionar um novo link ou associar o sistema de arquivos FSX for ONTAP a um link existente naquele momento para que você possa executar a operação.</block>
   <block id="20cbf23ff8204cff465470ae4144d936" category="summary">Gerencie o agendamento de backup de um sistema de arquivos FSX for ONTAP na fábrica de carga de trabalho do BlueXP , quando necessário.</block>
   <block id="53fe87832fd05bf7a8e9f1e1bad4aa86" category="doc">Gerencie o agendamento de backup de um sistema de arquivos FSX for ONTAP</block>
   <block id="e8333245618d8dbca5436b9e71370d58" category="paragraph">Gerencie o agendamento de backup de um sistema de arquivos FSX for ONTAP na fábrica de carga de trabalho do BlueXP .</block>
@@ -1117,18 +1112,7 @@
   <block id="e13a5649dfef3a1c76c4be8e463226d7" category="list-text">No canto superior direito do console de fábrica da carga de trabalho, selecione *Ajuda &gt; suporte*.</block>
   <block id="42236277fa3913ec4d1fd1e17b26874c" category="paragraph">As configurações de escalabilidade vertical são compatíveis com até 2 GB/s em todas as regiões. As seguintes regiões suportam capacidade máxima de até 4 GB/s para implantações de escalabilidade vertical: Região Leste DOS EUA (Ohio), região Leste dos EUA (Norte da Virgínia), região Oeste dos EUA (Oregon) e Europa (Irlanda).</block>
   <block id="f23f9e699754fa9634675e68ddb2477a" category="list-text">Para relacionamentos de replicação de retenção de longo prazo, apenas o último snapshot está disponível para restauração.</block>
-  <block id="3566e30d1125b1cc489403b83380b16e" category="list-text">Exibindo a versão do ONTAP que está instalada em um sistema de arquivos FSX for ONTAP</block>
   <block id="70b71b7616d1607e66f58defc9384bf3" category="list-text">Gerenciamento de volumes iSCSI em um sistema de arquivos FSX for ONTAP</block>
-  <block id="dd7d7ae00fef8de94b69aa7b5b540cb1" category="list-text">Recurso de crescimento automático para volumes</block>
-  <block id="3351e8dc51e33708d3280516a366bf4f" category="list-text">Criação e gerenciamento de políticas de snapshot</block>
-  <block id="bc405b20c5dce6dc67910950f2591510" category="list-text">Configuração da relação de replicação</block>
-  <block id="900f24520b234a239d52bc47e673bdd5" category="list-text">Replicação de volume entre o FSX para sistemas de arquivos ONTAP</block>
-  <block id="2886577fc59b2d9df21dd1d41704de71" category="list-text">Configuração da relação de backup</block>
-  <block id="ab8c429c03a3887588677f966f3e8c48" category="list-text">Backups de dados de volume para o storage de nuvem</block>
-  <block id="0fb8fbbbeb74e2e76be7a39d75ecdcda" category="list-text">Clones de volume em um sistema de arquivos FSX for ONTAP</block>
-  <block id="981bc65604544a529c511adc06cb441f" category="list-text">Exibição de métricas adicionais diretamente do ONTAP (métricas padrão são coletadas pelo Amazon CloudWatch)</block>
-  <block id="310e8bd2aa0fbf766664a8fadbb86083" category="list-text">Gerenciamento de políticas de exportação de NFS</block>
-  <block id="9d19d65b5c0b11e65c72a68e686c8efc" category="list-text">Gerenciamento de compartilhamentos CIFS</block>
   <block id="5b4240cc70ef93fd3963a5a4a1489114" category="summary">O gerenciamento do compartilhamento CIFS de um volume na fábrica de workloads do BlueXP  inclui criação, determinação do acesso a usuários e grupos e exclusão.</block>
   <block id="ed2b1c265309f7d9a2006128f317479e" category="paragraph">Antes de começar, faça o seguinte:</block>
   <block id="0162ca60ba3c63c1058d5815f318b75b" category="section-title">Crie um compartilhamento CIFS para um volume</block>
@@ -1711,7 +1695,6 @@
   <block id="45b5dce37159255d07342e3102124571" category="list-text">Selecione *continuar* para corrigir o problema de configuração.</block>
   <block id="20086b220eeb33caf74bd6e628cfcd8c" category="section-title">Suporte ao AWS Secrets Manager</block>
   <block id="ffe2f2a5c6f5c2a7a4d95da829cd5cb4" category="paragraph">Um link de fábrica da carga de trabalho do BlueXP  cria uma relação de confiança e conetividade entre uma conta de fábrica de carga de trabalho e um ou mais sistemas de arquivos do FSX for ONTAP. Isso permite que você monitore e gerencie certos recursos do sistema de arquivos diretamente das chamadas da API REST do ONTAP que não estão disponíveis através da API do Amazon FSX for ONTAP.</block>
-  <block id="8f30a77efbeaeec8415337994a976197" category="paragraph">Você pode fazer links autênticos usando credenciais armazenadas no serviço de credenciais de fábrica de carga de trabalho ou com suas credenciais armazenadas no AWS Secrets Manager. A fábrica de carga de trabalho não suporta a alteração dos modos de autenticação.</block>
   <block id="eee5751928fa32e80cacc3177eabff02" category="section-title">Autentique um link</block>
   <block id="e9efd53f2fa290402dc3f6be4a32cc68" category="paragraph">Forneça uma senha de usuário administrativo para credenciais de fábrica de carga de trabalho ou um ARN secreto do AWS Secrets Manager para conetar o link a um sistema de arquivos FSX for ONTAP.</block>
   <block id="696ea928d9d3c6e9a7783d23ab82a78a" category="admonition">Apenas um método de autenticação é suportado por link. Por exemplo, se você selecionar a autenticação de link com o AWS Secrets Manager, não será possível alterar o método de autenticação mais tarde.</block>
@@ -2020,4 +2003,26 @@
   <block id="61e6079323dfdf994259df13eb1f5bea" category="paragraph">A Workload Factory analisa diariamente as configurações de implantação do sistema de arquivos Amazon FSx for NetApp ONTAP . A análise diária fornece o status bem arquitetado, além de insights e recomendações, com opções para corrigir automaticamente problemas de configuração, para que seu sistema de arquivos atenda às práticas recomendadas.</block>
   <block id="9fa762c3e56dd52eab735970b481c743" category="paragraph">Você tem opções para revisar as recomendações para problemas de configuração com seus sistemas de arquivos e corrigir os problemas do inventário de armazenamento no console do Workload Factory.</block>
   <block id="bfebf248126ee0c8c192d7442b03e1a1" category="sidebar">Visualize o status bem arquitetado do seu FSx para sistemas de arquivos ONTAP</block>
+  <block id="65050310e57f3790fef3c72eb48d33fe" category="section-title">Por que os links são benéficos</block>
+  <block id="4e5ad1c2c7f1e4eb79418c584549c8db" category="paragraph">Os links são benéficos porque permitem que a fábrica de carga de trabalho execute operações que não estão disponíveis nativamente por meio da API do Amazon FSx para ONTAP . Eles habilitam recursos e automações avançados do ONTAP , que aprimoram o gerenciamento dos sistemas de arquivos do FSx para ONTAP .</block>
+  <block id="abca8c391b472ef4e80c6577b5d5eb2a" category="paragraph">Aqui estão alguns benefícios de usar links:</block>
+  <block id="964a29c1cbea0c1c51aa60608d960a3e" category="list-text">O link permite que o BlueXP envie comandos ONTAP diretamente para o seu sistema de arquivos FSx for ONTAP , trazendo recursos ONTAP avançados além do que a AWS oferece nativamente.</block>
+  <block id="92d3d2d26bd62a6b2959d23585ef12a2" category="list-text">Os links utilizam o AWS Lambda para executar código em resposta a eventos. Essa abordagem sem servidor elimina a dependência de uma instância em execução na sua VPC.</block>
+  <block id="e721a1904dd1a2a54d259deb8d176230" category="paragraph">Depois de criar um link, você pode associá-lo a um ou vários sistemas de arquivos FSx for ONTAP . Cada sistema de arquivos pode ser associado apenas a um link na mesma conta do NetApp. Se você tiver várias contas do NetApp, um único sistema de arquivos pode ser associado a links adicionais em diferentes contas do NetApp.</block>
+  <block id="f022b18c277e4963edee6e68adbb6444" category="paragraph">Você cria e associa links da carga de trabalho de armazenamento no workload factory.</block>
+  <block id="54e67484027376a69b47aa1c0db7f038" category="paragraph">Você pode autenticar links usando credenciais armazenadas no serviço de credenciais do Workload Factory ou com suas credenciais armazenadas no AWS Secrets Manager. A fábrica de carga de trabalho não suporta a alteração dos modos de autenticação.</block>
+  <block id="92ed487a00f33b78311d56c6c063ea86" category="paragraph">A fábrica da carga de trabalho requer um link para exibir algumas informações e executar algumas tarefas. Se você tentar executar uma operação que requer um link e não tiver associado um link ao sistema de arquivos FSx para ONTAP , o Workload Factory notificará você de que a operação requer um link.</block>
+  <block id="d078fe237d087bff0fe3c19efd14fa54" category="list-text">Status bem arquitetado do FSx para configurações do sistema de arquivos ONTAP para manutenção proativa, confiabilidade e otimização de custo-desempenho</block>
+  <block id="c6501747b7c38b1e25460b13a727ec7c" category="list-text">Proteção Autônoma contra Ransomware da NetApp (ARP/AI)</block>
+  <block id="489e0dc0c162e1aff5f0f664bf2ea756" category="list-text">Capacidade de observação holística aprimorada no FSx para sistemas de arquivos ONTAP</block>
+  <block id="b97b322b8cb0f9b187eb7b966c9ff886" category="list-text">Replicação, gerenciamento e monitoramento de dados de VM de volume e armazenamento</block>
+  <block id="147d85abf5db68a53249c95e1a68cedb" category="list-text">Ações SMB/CIFS e provisionamento e gestão de políticas de exportação NFS</block>
+  <block id="0ff428418a3d64cc69a6ee68906a8959" category="list-text">Criação e gerenciamento de políticas de snapshot para SLA de proteção personalizado</block>
+  <block id="c92f4938531f7fd55dc831a93892d29a" category="list-text">Melhorias no gerenciamento de inodes para gerenciamento automático de capacidade</block>
+  <block id="3b5c7e283e0b752d51311178d3fa06f1" category="list-text">Crescimento automático de volume para dimensionamento elástico</block>
+  <block id="6cdde78d80d6fbbd8f3706a9bcac599e" category="list-text">Criação e gerenciamento de clones para clonagem instantânea de dados no local</block>
+  <block id="7cacd07dfdd5c4feadcbf23d19f9972d" category="list-text">Exibindo métricas adicionais diretamente do ONTAP , como a versão do ONTAP</block>
+  <block id="30f1ae8a88bc842cdf5e493350ae7eb1" category="inline-link-macro">conectar um link a um sistema de arquivos FSx para ONTAP</block>
+  <block id="f86bb6aab3a49998f4db8fa07a49d81a" category="paragraph">Aprenda a <block ref="e658cbfbd30fb261626bc7c82308a713" category="inline-link-macro-rx"></block>.</block>
+  <block id="78f8c00f462b0fbe742eab283e3fdf7a" category="sidebar">Saiba mais sobre links</block>
 </blocks>
