@@ -96,6 +96,23 @@ Se tiver selecionado uma política de exportação existente, introduza um novo 
 .... *Compartilhamento CIFS*: Forneça o seguinte:
 +
 ..... *Nome*: Insira o nome do compartilhamento CIFS para fornecer acesso SMB.
+..... *Caminho*: Defina o caminho usando o nome do volume padrão ou forneça um compartilhamento para um diretório interno.
++
+As entradas de caminho válidas para o nome do volume, por exemplo "abacate", são as seguintes:
+
++
+****** /abacate
+****** /abacate/pasta
+****** /abacate/pasta/subpasta
+****** /abacate/nome-do-arquivo
++
+As entradas de caminho válidas para o nome do compartilhamento, por exemplo "Servidor", são as seguintes:
+
+****** \\Servidor
+****** \\Servidor\Projetos
+****** \\Servidor\Projetos\Recursos compartilhados
+
+
 ..... *Permissões*: Selecione Controle completo, leitura/gravação, leitura ou sem acesso e insira os usuários ou grupos separados por ponto e vírgula ( ; ). Usuários ou grupos são sensíveis a maiúsculas e minúsculas e o domínio do usuário deve ser incluído usando o formato "domínio/nome de usuário".
 
 
