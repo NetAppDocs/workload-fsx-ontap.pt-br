@@ -109,7 +109,7 @@ sidebar:
         url: "/update-storage-efficiency.html"
       - title: Gerenciar políticas de exportação de NFS
         url: "/manage-nfs-export-policy.html"
-      - title: Gerenciar compartilhamentos CIFS
+      - title: Gerenciar compartilhamentos SMB/CIFS
         url: "/manage-cifs-share.html"
       - title: Divida um volume clonado
         url: "/split-cloned-volume.html"
