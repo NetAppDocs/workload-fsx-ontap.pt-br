@@ -1630,7 +1630,6 @@
   <block id="69ed1cf6539793c15a93584373cddf2a" category="inline-link-macro">Ativação de cargas de trabalho multiprotocolo com o Amazon FSX for NetApp ONTAP</block>
   <block id="5b9f6dc6990c28e364a2622ffeadc327" category="list-text">*Estilo de segurança*: Para volumes de protocolo duplo, selecione o estilo de segurança UNIX ou NTFS. UNIX é o estilo de segurança padrão para volumes de protocolo duplo. Para obter orientações detalhadas sobre o mapeamento de usuários nesse contexto, consulte o artigo do blog da AWS <block ref="2c1778bd252c045607257b2888dcb7e7" category="inline-link-macro-rx"></block>.</block>
   <block id="49441c63fc169d06940470ec9c0e4b1f" category="paragraph">Quando um cluster ONTAP no local é o destino para a relação de replicação, a alteração de snapshots para retenção de longo prazo não é compatível.</block>
-  <block id="820e39a5de0a231b1bdee7ce11de7c77" category="summary">A fábrica de carga de trabalho do BlueXP  para bancos de dados verifica as configurações do Microsoft SQL Server, fornecendo informações e recomendações para ajudá-lo a alcançar a excelência operacional.</block>
   <block id="cf6372133f01401bdd9aefc7bead4b10" category="doc">Implemente configurações de sistema de arquivos bem arquitetadas</block>
   <block id="681f8e0d48f8a5609d29d038dfdb7354" category="list-text">O que é analisado</block>
   <block id="ee519805bc36a437f398c40154b9f4f0" category="list-text">A fábrica de carga de trabalho analisa o status bem arquitetado das seguintes configurações para os sistemas de arquivos FSX for ONTAP:</block>
@@ -2115,4 +2114,5 @@
   <block id="eaba2a7eb36250fc59ebf37ea423ebd5" category="paragraph">Quando há suspeita de um ataque, o sistema tira um instantâneo do volume naquele momento e bloqueia essa cópia.  Se o ataque for confirmado posteriormente, os arquivos afetados ou o volume inteiro poderão ser restaurados usando o snapshot ARP/AI.</block>
   <block id="613abd0d9da6f7ee37d283174e11fcaf" category="section-title">03 de agosto de 2025</block>
   <block id="1595965c84afe577a4228c0f8a132a00" category="sidebar">Gerenciar compartilhamentos SMB/CIFS</block>
+  <block id="b8bfbf72dc92e989a0b91cd409144076" category="summary">A fábrica de carga de trabalho verifica o Amazon FSx for NetApp ONTAP, fornecendo insights e recomendações para ajudar você a atingir excelência operacional.</block>
 </blocks>
