@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-snapshot-policy.html 
 keywords: create 
-summary: Criar uma política de snapshot personalizada para uma VM de storage na fábrica de workloads do BlueXP . 
+summary: Crie uma política de snapshot personalizada para uma VM de armazenamento no workload factory. 
 ---
-= Criar uma política de snapshot para VMs de storage na fábrica de workloads do BlueXP 
+= Crie uma política de snapshot para VMs de armazenamento na fábrica de carga de trabalho
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Criar uma política de snapshot personalizada para VMs de storage na fábrica de workloads do BlueXP . Uma política de snapshot define como o sistema cria snapshots para uma VM de storage. Você pode criar uma política de snapshot para uma VM de armazenamento em um sistema de arquivos FSX for ONTAP. Você também pode compartilhar a política em várias VMs de storage.
+Crie uma política de snapshot personalizada para VMs de armazenamento na fábrica de carga de trabalho para gerenciar a criação e a retenção de snapshots.  Uma política de snapshot define como o sistema cria snapshots para uma VM de armazenamento.  Você pode criar uma política de snapshot para uma VM de armazenamento em um sistema de arquivos FSx para ONTAP .  Você também pode compartilhar a política entre várias VMs de armazenamento.
 
 .Sobre esta tarefa
 Você pode criar uma política de snapshot personalizada que difere das três políticas de snapshot internas do FSX for ONTAP:
@@ -65,6 +65,3 @@ A ativação de instantâneos imutáveis bloqueia todos os instantâneos nesta p
 . *Compartilhar entre VMs de armazenamento*: Habilitado por padrão. Quando ativada, a política de snapshot é compartilhada em todas as VMs de armazenamento no sistema de arquivos. Desative para criar uma política de snapshot para uma única VM de armazenamento.
 . Selecione *criar*.
 
-
-.Resultado
-A política de instantâneos é criada.

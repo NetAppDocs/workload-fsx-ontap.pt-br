@@ -219,13 +219,8 @@
   <block id="c9f265881e56f4c52918525bdcb9205d" category="list-text">*Nome*: Insira um nome para a VM de armazenamento.</block>
   <block id="42a49281a2c075c2004f1e73852b27e3" category="list-text">* Credenciais de armazenamento de VM*: Forneça uma senha para o usuário desta VM de armazenamento<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> ou use as credenciais de usuário do sistema de arquivos<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block>.</block>
   <block id="34cc44a6e06f592c6033a57f8671a67a" category="list-text">* Estilo de segurança de volume raiz*: Selecione o estilo de segurança de volume raiz dependendo do tipo de clientes que acessam seus dados - UNIX (clientes Linux), NTFS (clientes Windows) ou Mixed.</block>
-  <block id="1bc82fa8aedf24369834db8950935e12" category="doc">Crie um novo volume do FSX for ONTAP a partir de um snapshot</block>
-  <block id="94bf5ecde85890bdfbccd00fad3fbd70" category="paragraph">Um snapshot é uma imagem somente leitura de um volume do FSX for ONTAP tirada em um ponto no tempo. A criação de um novo volume a partir de um snapshot faz uma cópia de um volume inteiro em poucos segundos, independentemente do tamanho do volume. A cópia recém-criada representa um novo volume.</block>
   <block id="dd92a94c350d15b3e750c8345c72be14" category="paragraph">Considere as seguintes limitações antes de criar um volume a partir de um instantâneo:</block>
   <block id="aa598f48818753dcf8598b6294e34d5b" category="list-text">Alterações nos modelos de permissão: Se você usar essa operação para alternar o tipo de protocolo nas (Network-Attached Storage), ela também pode alternar o modelo de permissão fornecido pelo estilo de segurança. Você pode ter problemas de permissão de acesso a arquivos, que você só pode corrigir manualmente com acesso de administrador usando as ferramentas de cliente nas para configuração de permissões.</block>
-  <block id="0d9c537067f7d4fbde0af7c35b682638" category="list-text">Maior consumo de volume: Depois de criar um volume a partir de um snapshot, você terá dois volumes independentes e ambos consomem capacidade do sistema de arquivos do host.</block>
-  <block id="749bb7d7b85b238efdd51a2af6612da7" category="list-text">Selecione *ações de proteção de dados*, *instantâneos* e, em seguida, *criar um volume a partir de um instantâneo*.</block>
-  <block id="7703989c08fa05b728e233f271b4650e" category="list-text">Na caixa de diálogo criar volume a partir de um instantâneo, introduza o nome do instantâneo.</block>
   <block id="25b72c08a4a289e6b89fc38db06792a9" category="doc">Crie um volume FSX for ONTAP</block>
   <block id="8a1e5168feb60a6391f96310159dca9a" category="list-text">NFS: Protocolo de armazenamento de arquivos para sistemas operacionais Unix</block>
   <block id="ec38854bd667a882fa1d0b62579b5079" category="list-text">ISCSI: Protocolo de armazenamento de bloco</block>
@@ -471,16 +466,11 @@
   <block id="bb6d5d351525342dd6b3cf4d15b6f298" category="list-text">* Fechar caso*: Forneça detalhes sobre por que você está fechando o caso e selecione *Fechar caso*.</block>
   <block id="e93217b2f709a398ce3c0fb753beb05f" category="inline-image-macro">Uma captura de tela que mostra as ações que você pode realizar depois de selecionar o menu na última coluna da tabela.</block>
   <block id="6f7cf78e14aa346236a87d9541221fb2" category="paragraph"><block ref="6f7cf78e14aa346236a87d9541221fb2" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0a2f587a53fd97b6d49adac14c5ef1b6" category="summary">Aumente manualmente a capacidade de armazenamento SSD de um sistema de arquivos FSX for ONTAP quando a quantidade de capacidade de armazenamento SSD usada exceder um limite especificado.</block>
   <block id="d1c1f85063b5f4742efda82442c2ddff" category="doc">Aumentar a capacidade do sistema de arquivos</block>
   <block id="7db52e1b6d399a07ae2a24a19f03a6ad" category="inline-link-macro">ative o recurso de gerenciamento automático de capacidade</block>
-  <block id="bdccdc17ac819f178e84be61503a0de2" category="paragraph">O aumento da capacidade do sistema de arquivos afeta o IOPS do seu sistema de arquivos FSX for ONTAP.</block>
   <block id="11df76043d9d8bb3a76f1f7e71096a92" category="inline-link-macro">Provisionamento de IOPS</block>
-  <block id="b39f472a8f42e6a145c20b290f2c0f7b" category="paragraph">Quando você <block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block>automaticamente para um sistema de arquivos, o IOPS aumenta em 3 IOPS a cada aumento de 1 GiB na capacidade do SSD.</block>
   <block id="ffc888e5ff626bf410d67b62a9e8a9a8" category="paragraph">Para saber os limites de capacidade de armazenamento SSD, consulte a <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block>documentação do AWS FSX for NetApp ONTAP.</block>
   <block id="3fa4dafc00a14f08641efa3389891289" category="inline-link-macro">desativar o gerenciamento automático de capacidade</block>
-  <block id="e58acd1760f609c958f436e6f19a798d" category="paragraph">Para aumentar a capacidade de um sistema de arquivos, primeiro é necessário <block ref="8c3635bc720b3de661de28059e4ae780" category="inline-link-macro-rx"></block>.</block>
-  <block id="3f43f703da21affaf8c9fe7bb0026712" category="list-text">Na caixa de diálogo tamanho do armazenamento SSD, insira um número para *capacidade provisionada*.</block>
   <block id="bb38e8f0462bc33d127ff7d217a31149" category="list-text">Selecione a unidade para a capacidade provisionada.</block>
   <block id="ceadc0f7d6f2330af477eb47568a259b" category="doc">Aumentar a capacidade de volume</block>
   <block id="eacbf9150c5d9c7a7032185805a236b8" category="inline-link-macro">ative o recurso de crescimento automático</block>
@@ -626,11 +616,7 @@
   <block id="c5cce99928ce0d8af5b82b7d22ea310e" category="list-text">*Nome do volume restaurado*: Insira o nome do volume restaurado.</block>
   <block id="67b0d8b6788b457b2c8385033f28756f" category="summary">Restaure um volume FSX for ONTAP de um snapshot quando o volume contém arquivos excluídos ou corrompidos.</block>
   <block id="c90683522eadafc05ec442d8c440363f" category="doc">Restaurar um volume a partir de um instantâneo</block>
-  <block id="028c5ca154a90ad525b01ec66b26fa3f" category="paragraph">Essa operação restaura os dados de um snapshot para um novo volume.</block>
   <block id="71fa8628af6f2038af0eab0c8ca9c4cf" category="paragraph">Só é possível restaurar um volume a partir de um instantâneo se tiver uma cópia instantânea existente do volume.</block>
-  <block id="4905114f3925ed2863baa2d94439902b" category="paragraph">Certifique-se de que tem capacidade suficiente para concluir esta operação.</block>
-  <block id="3d7743d27e7346a7094199a8317979a9" category="list-text">Selecione *ações de proteção de dados*, *instantâneos* e, em seguida, *Restaurar volume de um instantâneo*.</block>
-  <block id="cd311f58436ee68a7677fa7444318b66" category="list-text">Na caixa de diálogo Restaurar volume a partir de um instantâneo, no campo *Nome do instantâneo*, selecione o instantâneo a ser restaurado no menu suspenso.</block>
   <block id="dfb1565e1ec2734dcbcb24e6b43c9919" category="list-text">No campo *Nome do volume restaurado*, insira um nome exclusivo para o volume a ser restaurado.</block>
   <block id="4f1846b15b8a356a7b4e9cd679e14ad1" category="summary">Inverta uma relação de replicação para que o volume de destino se torne o volume de origem.</block>
   <block id="11d688dbb6757a0fe68e53ad308bce54" category="doc">Inverta uma relação de replicação</block>
@@ -743,10 +729,7 @@
   <block id="e5787a3a7b79c3cdbeb01e163f0a84de" category="sidebar">Gerenciar snapshots</block>
   <block id="af9c364e0933200b7b8c1e7e13947ccf" category="sidebar">Criar um instantâneo</block>
   <block id="e807ebdf213353b8a415f991a2cade81" category="sidebar">Criar uma política de snapshot</block>
-  <block id="ea8c9a66e2636ce9b98d1a110a02791e" category="sidebar">Criar um novo volume a partir de um instantâneo</block>
-  <block id="cb230ad17b1cab1fba2436fdf9a4222a" category="sidebar">Gerenciar backups para o storage de objetos</block>
   <block id="c650dc131eb6eb56a3ed637559a17a3f" category="sidebar">Crie uma cópia de segurança manual</block>
-  <block id="3baac809cc5d7dd36919afed53778b41" category="sidebar">Gerenciar a replicação</block>
   <block id="5eb43e1edd4f0757c83c6d6f6632ff94" category="sidebar">Administrar e monitorar</block>
   <block id="8cf9dbe17cb44a10f0622b63961c131d" category="sidebar">Administração de volumes</block>
   <block id="56994f1db86bfe709cbe47f96bde566f" category="sidebar">Edite o volume com crescimento automático</block>
@@ -828,9 +811,6 @@
   <block id="4da97157b6693eaf9968b187d7b8259c" category="paragraph">Crie uma VM de armazenamento (SVM) para um sistema de arquivos FSX for ONTAP para acessar serviços de armazenamento e dados praticamente para suas cargas de trabalho na fábrica de workloads do BlueXP .</block>
   <block id="54f16768a20bbfb09d736f2fa0a731aa" category="paragraph">As VMs de storage são servidores de arquivos isolados que você pode usar para acessar os dados de cada workload no storage de fábrica. Cada SVM tem suas próprias credenciais administrativas e pontos de extremidade para administração e acesso aos dados.</block>
   <block id="08e2fd9fd4dc9adfe3d5f817b3499842" category="paragraph">Você pode criar uma VM de storage a partir do console de fábrica de workload. Você também pode usar as seguintes ferramentas disponíveis na Codebox: API REST, CloudFormation e Terraform. <block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>.</block>
-  <block id="55a23b72fe4aee5e2f0024c790d7eaba" category="paragraph">Crie um novo volume do FSX for ONTAP a partir de um snapshot na fábrica de workloads do BlueXP  para permitir a recuperação pontual.</block>
-  <block id="8d34a33f34659b0ea11833ac0b8fac52" category="list-text">Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o snapshot de volume e selecione *Gerenciar*.</block>
-  <block id="3ce528a1818baf0bbf2f6b362b1f7d58" category="list-text">Na guia volumes, selecione o menu de três pontos para o volume que tem o instantâneo do qual você deseja criar um volume.</block>
   <block id="96a5899d90dd9b81319f168f67bcb5ae" category="summary">Para excluir um sistema de arquivos no workload do BlueXP  de fábrica, primeiro exclua volumes, máquinas virtuais de storage ou relações de replicação associadas ao sistema de arquivos.</block>
   <block id="378213b58b31bfb9d173e8b2ad3c0968" category="doc">Exclua um sistema de arquivos na fábrica de carga de trabalho do BlueXP </block>
   <block id="a3101c3638d17143df93e5cfcc3c3a0a" category="list-text">Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos FSX for ONTAP que você deseja excluir.</block>
@@ -869,10 +849,7 @@
   <block id="b136689ec8046bd4fb76df787393258d" category="list-text">No modo _Automate_, você pode implantar o sistema de arquivos FSX for ONTAP diretamente da fábrica de carga de trabalho. Você também pode copiar o conteúdo da janela do Codebox e implantar o sistema usando um dos métodos do Codebox.</block>
   <block id="42342e81c625fd1c1141771fe2b6b202" category="summary">A NetApp fornece suporte para a fábrica de workloads e seus serviços de nuvem de várias maneiras. Amplas opções gratuitas de suporte autônomo estão disponíveis 24 horas por dia, 7 dias por semana, como artigos da base de conhecimento (KB) e um fórum da comunidade. O seu registo de suporte inclui suporte técnico remoto através de Bilheteira na Web.</block>
   <block id="cf0e6c8d239f09812e12102f2415bb94" category="doc">Obtenha ajuda para o FSX for ONTAP para fábrica de carga de trabalho</block>
-  <block id="4788b71d4c5e86a9696627d3c900127a" category="doc">Aumente a capacidade do sistema de arquivos no workload do BlueXP  de fábrica</block>
   <block id="9d5344a986b0470d38d0c3e88e507b26" category="paragraph">Como alternativa, você pode <block ref="2bbbc5acd5fd256837600f63916b0e57" category="inline-link-macro-rx"></block>gerenciar de fábrica a capacidade do sistema de arquivos para você.</block>
-  <block id="1eacd22d13fd6fa8174d7a166e0e9e6b" category="list-text">Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos para aumentar a capacidade.</block>
-  <block id="b809bcb34d202de3370d7e6db448a949" category="list-text">Em informações, selecione o ícone de lápis ao lado de *distribuição de capacidade*. O ícone de lápis aparece ao lado da seta suspensa quando o Mouse passa sobre a linha *distribuição de capacidade*.</block>
   <block id="56878af0f0856af0f2eb7d58b284ec98" category="summary">Aumente manualmente a capacidade de volume de um volume na fábrica de workloads da BlueXP  a qualquer momento.</block>
   <block id="9a043b713e882184d11ad1a7919816bc" category="doc">Aumente a capacidade do volume no workload da BlueXP  de fábrica</block>
   <block id="9aebf119a4043534b3bad38302a5a426" category="paragraph">Aumente manualmente a capacidade de volume de um volume a qualquer momento na fábrica de workloads da BlueXP .</block>
@@ -964,8 +941,6 @@
   <block id="a961210a0ba733961532745ff6f57f44" category="paragraph">Na fábrica de carga de trabalho do BlueXP , você pode restaurar um volume de um backup para qualquer sistema de arquivos do FSX for ONTAP na sua conta da AWS.</block>
   <block id="81d97c35dd4fb198942dc29738189b53" category="list-text">No separador *volumes*, selecione o menu de três pontos para o volume a restaurar a partir de uma cópia de segurança.</block>
   <block id="f77361b272ce81d8275727f7b1a756a8" category="list-text">Selecione *Restaurar*.</block>
-  <block id="c044800449646a715ebe323cce453c98" category="doc">Restaurar um volume de um snapshot no workload do BlueXP  de fábrica</block>
-  <block id="52f33bacfd6c28493dc1bdae553bb3cd" category="paragraph">Na fábrica de carga de trabalho do BlueXP , você pode restaurar um volume do FSX for ONTAP de um snapshot quando o volume contém arquivos excluídos ou corrompidos.</block>
   <block id="e17e241599862dc1177ef32c2eeba1d6" category="list-text">Na guia *volumes*, selecione o menu de três pontos para o volume a ser restaurado a partir de um instantâneo.</block>
   <block id="ce4e51fb870a92120876371d3bddc3aa" category="doc">Inverta uma relação de replicação na fábrica de workloads do BlueXP </block>
   <block id="b3c4745e4516364034e0070ca832f670" category="paragraph">Inverta uma relação de replicação na fábrica de workloads do BlueXP  para que o volume de destino se torne o volume de origem.</block>
@@ -1259,9 +1234,6 @@
   <block id="78c187892204fa9a888a00a5635447c9" category="list-text">Opcional: Ativar instantâneos imutáveis.</block>
   <block id="bac08643512e190f9a6a6c2a8e9b983b" category="list-text">Selecione *Ativar instantâneos imutáveis* para evitar que os instantâneos obtidos nesta política sejam excluídos durante o período de retenção.</block>
   <block id="4e41f89501d754d5c6885a51e74ac5f0" category="list-text">Defina o *período de retenção* em número de horas, dias, meses ou anos.</block>
-  <block id="58defc647621cf2147bca50eba3d13f5" category="summary">Criar uma política de snapshot personalizada para uma VM de storage na fábrica de workloads do BlueXP .</block>
-  <block id="2a07132290664925d6acf392c1b389ba" category="doc">Criar uma política de snapshot para VMs de storage na fábrica de workloads do BlueXP </block>
-  <block id="2f8e07938edc25be83cf584fa9baa96b" category="paragraph">Criar uma política de snapshot personalizada para VMs de storage na fábrica de workloads do BlueXP . Uma política de snapshot define como o sistema cria snapshots para uma VM de storage. Você pode criar uma política de snapshot para uma VM de armazenamento em um sistema de arquivos FSX for ONTAP. Você também pode compartilhar a política em várias VMs de storage.</block>
   <block id="cf6066b0e9e3a71171e38923cf6da6f9" category="list-text">Na visão geral do sistema de arquivos, selecione a guia *Storage VMs*.</block>
   <block id="f74e735c048e3c0f84c80e2fade1fb56" category="list-text">Na guia *Storage VMs*, selecione o menu de três pontos para o volume a proteger com snapshots programados, depois *ações avançadas* e, em seguida, *Gerenciar políticas de snapshot*.</block>
   <block id="c92307c84c3661374297e6b2cb6a8af4" category="list-text">Na página de gerenciamento de políticas de instantâneos, selecione *criar política de instantâneos*.</block>
@@ -1271,16 +1243,10 @@
   <block id="c4f08518809bffff8a2b5046db374241" category="list-text">Opcional: Ative *instantâneos immutáveis* para qualquer horário que você precisar, defina o *período de retenção* para cada horário e aceite a instrução para continuar.</block>
   <block id="fbe63591e4efcbefdcee988dc8bc46ae" category="paragraph">A ativação de instantâneos imutáveis bloqueia todos os instantâneos nesta política de instantâneos para impedir que os instantâneos sejam excluídos durante o período de retenção.</block>
   <block id="67e792ffec4a29b646fa11aff1d8c441" category="list-text">*Compartilhar entre VMs de armazenamento*: Habilitado por padrão. Quando ativada, a política de snapshot é compartilhada em todas as VMs de armazenamento no sistema de arquivos. Desative para criar uma política de snapshot para uma única VM de armazenamento.</block>
-  <block id="bcdd10c1cff7243af519e9d8eec8dbd8" category="paragraph">A política de instantâneos é criada.</block>
   <block id="c30e0acb90fa2137d90a80462f560839" category="list-text">Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos que contém o volume para criar um snapshot e selecione *Gerenciar*.</block>
   <block id="fefc3b8b375d96e8bf83d73c262aab57" category="list-text">No separador *volumes*, selecione o menu de três pontos para o volume a proteger com instantâneos.</block>
-  <block id="f01fa636d7ab2112e7dd3793a4da0345" category="list-text">Selecione *ações de proteção de dados*, *Snapshots* e, em seguida, *criar um snapshot*.</block>
-  <block id="84c4fbf0889e2d552cef58742fbb6561" category="list-text">Na caixa de diálogo criar um instantâneo, insira um nome de instantâneo no campo *Nome do instantâneo*.</block>
-  <block id="6ed24439c49aa780b53884f3cee8e455" category="list-text">Opcional: Torne o snapshot imutável para impedir que o snapshot seja excluído durante o período de retenção.</block>
-  <block id="497a3a6d6896389f61471114110cc7fe" category="list-text">Ativar *instantâneos immutáveis*.</block>
   <block id="be418a0bf2ad3249acf7833b04db3bd5" category="list-text">Defina o *período de retenção* como um número de horas, dias, meses ou anos.</block>
   <block id="6612ee3812a7ecc1b61dc6f585b1c26f" category="list-text">Aceite a declaração sobre snapshots imutáveis.</block>
-  <block id="a07e25b28678b53fe808a082369fda80" category="paragraph">O volume tem uma cópia instantânea.</block>
   <block id="86ee35c0029c920dce9ef56d88935e8e" category="paragraph">Os seguintes protocolos podem ser usados para seus volumes:</block>
   <block id="8feb9be2f7d30e723f1c8aa899250dae" category="list-text">*Acesso por bloco*: Permite aos hosts que executam aplicativos empresariais críticos acesso ao volume usando o protocolo iSCSI. O acesso a bloco só está disponível quando a implantação com escalabilidade horizontal do sistema de arquivos tiver seis pares de HA ou menos.</block>
   <block id="f122287653386d74229199bd670f4990" category="list-text">O período de retenção tem duas configurações - _política de retenção_ e _períodos de retenção_. A política de retenção _define quanto tempo reter arquivos em um estado WORM imutável. Você pode especificar sua própria política de retenção ou usar a política de retenção padrão (não especificada), que é de 30 anos. Os _períodos de retenção mínimo e máximo_ definem o intervalo de tempo permitido para bloquear arquivos.</block>
@@ -2115,4 +2081,94 @@
   <block id="613abd0d9da6f7ee37d283174e11fcaf" category="section-title">03 de agosto de 2025</block>
   <block id="1595965c84afe577a4228c0f8a132a00" category="sidebar">Gerenciar compartilhamentos SMB/CIFS</block>
   <block id="b8bfbf72dc92e989a0b91cd409144076" category="summary">A fábrica de carga de trabalho verifica o Amazon FSx for NetApp ONTAP, fornecendo insights e recomendações para ajudar você a atingir excelência operacional.</block>
+  <block id="d1e5e17e5a4cb355117a41318746c4a4" category="doc">Melhorias no relatório de inventário de armazenamento</block>
+  <block id="b749705b43261f48fe8b1309cb366d90" category="paragraph">O Workload Factory aprimorou os dados relatados para seus sistemas de arquivos FSx para ONTAP .  O relatório para download na página de inventário do FSx para ONTAP inclui as seguintes novas colunas:</block>
+  <block id="c61468edc77ab93ea17568f678793bdd" category="list-text">SSD usado: mostra o valor da capacidade do SSD usada</block>
+  <block id="a1a4ea0fabd62225adb4786dd703d1a7" category="list-text">Utilização do SSD: mostra a porcentagem da capacidade do SSD em uso</block>
+  <block id="c016cb9916988a0ea698d070fd6b702a" category="list-text">Utilização da taxa de transferência: mostra a utilização média e máxima dos últimos 30 dias</block>
+  <block id="197af635c10bcbf35ba56184f54cb088" category="list-text">Utilização de E/S: mostra a utilização média e máxima de E/S dos últimos 30 dias</block>
+  <block id="92bce71ffaebc031ec78d565e6ad7032" category="list-text">Utilização da CPU: mostra a utilização média e máxima da CPU nos últimos 30 dias</block>
+  <block id="95851c89a4d869fdb94916625564bb6c" category="section-title">Melhorias no gerenciamento de instantâneos</block>
+  <block id="fbb3322fb25c1109310e7be3bcc20fd5" category="paragraph">O Workload Factory fez vários aprimoramentos para visualizar detalhes de instantâneos de volume e gerenciar instantâneos de volume.  Essas melhorias facilitam a compreensão do status dos seus instantâneos e a proteção dos seus dados.</block>
+  <block id="3ecb130f0ffe2d8e485cb11c629b90b5" category="inline-image-macro">Captura de tela que mostra o menu de volume do FSx para ONTAP com ações básicas e, em seguida, exibe detalhes do volume.</block>
+  <block id="d26eb7e0d00b2e5069d790d2b9be49ba" category="paragraph"><block ref="d26eb7e0d00b2e5069d790d2b9be49ba" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cb34ab44253ae9c736786f23dc173879" category="paragraph">Itens adicionais aparecem em Detalhes do volume, na guia Proteção:</block>
+  <block id="6d4b26be686dd37e202e23010a22bf04" category="list-text">Nome da política de instantâneo</block>
+  <block id="a81cec6ec43470b1419a033e0457112d" category="list-text">Reserva de espaço instantâneo</block>
+  <block id="c04d4554f0391d80036dceaa0e930ee2" category="list-text">Capacidade de reserva de espaço instantâneo</block>
+  <block id="06fd2134099fd30808caa961b2bc9b21" category="inline-image-macro">Captura de tela que mostra detalhes do volume do FSx para ONTAP com a aba de proteção aberta.</block>
+  <block id="b52491919b24cba6fd1efad7447c7798" category="paragraph"><block ref="b52491919b24cba6fd1efad7447c7798" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e987130d3b26cda391ff2f1e5149f444" category="paragraph">A nova tela de gerenciamento de instantâneos pode ser acessada de um volume; ela fornece informações sobre a política de instantâneos do volume e inclui uma tabela com todos os instantâneos do volume.  A tabela exibe os seguintes detalhes do instantâneo: hora de criação, tamanho, hora de expiração, proteção imutável do instantâneo e rótulos.  Na tela de gerenciamento, você pode alterar a política de snapshot do volume, criar um snapshot manualmente e editar, acessar, restaurar e excluir snapshots.</block>
+  <block id="ad8f55b88a50703984e58a23e36e9026" category="inline-image-macro">Captura de tela que mostra a tela de gerenciamento de instantâneos.</block>
+  <block id="404a59509c6a806310ecbd1d601e0ee6" category="paragraph"><block ref="404a59509c6a806310ecbd1d601e0ee6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="52574bdc9ce79e7e568096fa39264d72" category="section-title">Diminuição da capacidade de armazenamento SSD disponível</block>
+  <block id="0cc6e64eaa35165d8791def1903c483a" category="paragraph">A fábrica de carga de trabalho oferece suporte à redução da capacidade da unidade de estado sólido (SSD) dos seus sistemas de arquivos de primeira e segunda geração.  Com a capacidade elástica do sistema de arquivos, você pode ajustar dinamicamente a capacidade dos seus sistemas de arquivos para atender às necessidades das suas cargas de trabalho.</block>
+  <block id="298ae1d1e13ebe1f0f22936b7ea9ce33" category="inline-link-macro">Ajustar a capacidade do sistema de arquivos</block>
+  <block id="6b4be3b501bf6ae8984293c02d4d610b" category="paragraph"><block ref="6b4be3b501bf6ae8984293c02d4d610b" category="inline-link-macro-rx"></block></block>
+  <block id="14fc4cc175abaf53d8e3d6a080ba96e8" category="summary">Crie uma política de snapshot personalizada para uma VM de armazenamento no workload factory.</block>
+  <block id="12b776fb2d015f7638890feb17b66bf6" category="doc">Crie uma política de snapshot para VMs de armazenamento na fábrica de carga de trabalho</block>
+  <block id="2908297e977ab153ee0bec5fba041d6f" category="paragraph">Crie uma política de snapshot personalizada para VMs de armazenamento na fábrica de carga de trabalho para gerenciar a criação e a retenção de snapshots.  Uma política de snapshot define como o sistema cria snapshots para uma VM de armazenamento.  Você pode criar uma política de snapshot para uma VM de armazenamento em um sistema de arquivos FSx para ONTAP .  Você também pode compartilhar a política entre várias VMs de armazenamento.</block>
+  <block id="1528c852e43be2a99e8719b76138fb44" category="list-text">Selecione *Ações de proteção de dados* e depois *Gerenciar instantâneos*.</block>
+  <block id="f4a331106cfb59d634afb478ec8cfccb" category="list-text">Na página Gerenciar instantâneos, selecione *Criar instantâneo*.</block>
+  <block id="75aba4f0296caf05917e327be4ed5543" category="list-text">Na caixa de diálogo Criar um instantâneo, faça o seguinte:</block>
+  <block id="0322f0a521f84e22afd1df9ed7f765db" category="list-text">Digite um nome de instantâneo no campo *Nome do instantâneo*.</block>
+  <block id="4c01998cfbe91538bc592922c3e8734f" category="list-text">Opcionalmente, selecione um rótulo ou crie um novo rótulo.</block>
+  <block id="923a0a2b244437dc531c8a64263b0020" category="list-text">Opcional: *Torne este snapshot imutável* para evitar que ele seja excluído durante o período de retenção.</block>
+  <block id="f7485ffd44c64cac23a73493d66e3cf4" category="summary">Ajuste manualmente a capacidade de armazenamento SSD de um sistema de arquivos FSx para ONTAP para atender às necessidades de suas cargas de trabalho baseadas em projetos com conjuntos de trabalho ativos variados.</block>
+  <block id="f091318898763a58ec22bd1c8c205e0b" category="doc">Ajustar a capacidade do sistema de arquivos na fábrica de carga de trabalho</block>
+  <block id="36ce9e23b4485aac42f272cf012cfd85" category="paragraph">Ajuste manualmente a capacidade de armazenamento da unidade de estado sólido (SSD) de um sistema de arquivos FSx para ONTAP para atender às necessidades de suas cargas de trabalho baseadas em projeto com conjuntos de trabalho ativos variáveis.</block>
+  <block id="383573d373c886b1029b549fd3ab5636" category="paragraph">Aumente a capacidade de armazenamento SSD de um sistema de arquivos FSx para ONTAP quando a quantidade de capacidade de armazenamento SSD usada exceder um limite especificado ou diminua a capacidade de armazenamento SSD quando os conjuntos de trabalho estiverem inativos para melhorar a eficiência de custos.</block>
+  <block id="3c600356591a28f18cc21513190e4cb5" category="paragraph">Com a capacidade elástica do sistema de arquivos, você pode ajustar dinamicamente a capacidade dos seus sistemas de arquivos para atender às necessidades das suas cargas de trabalho.</block>
+  <block id="33f1d74921ddc533e52016f4d1a89af9" category="paragraph">Ajustar a capacidade do sistema de arquivos afeta o IOPS do seu sistema de arquivos FSx para ONTAP .</block>
+  <block id="fa86270fd952d04b42ae4b5586eabdef" category="paragraph">Quando você automaticamente<block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> para um sistema de arquivos, o IOPS aumenta ou diminui em 3 IOPS a cada aumento ou diminuição de 1 GiB na capacidade do SSD.</block>
+  <block id="7c4988a80f96ebde3a91c80963bb725d" category="paragraph">Para ajustar a capacidade de um sistema de arquivos, você deve primeiro<block ref="8c3635bc720b3de661de28059e4ae780" category="inline-link-macro-rx"></block> .</block>
+  <block id="c58a7814e09e2136ba19c01a85ca87cb" category="list-text">No Painel, selecione *Ajustar capacidade do SSD*.</block>
+  <block id="22bc230291a62283fe347ecaef11e64d" category="list-text">Selecione o sistema de arquivos cuja capacidade você deseja ajustar e então selecione *Continuar*.</block>
+  <block id="c68dcfd2e9aa85bd2ccb1ef7efb36856" category="paragraph">*Potencial de economia* é a recomendação para diminuir a capacidade.</block>
+  <block id="ab60333415618ec9fe15bd79adf222ee" category="list-text">Na caixa de diálogo Ajustar capacidade do SSD, insira um número para *Capacidade provisionada*.</block>
+  <block id="a7c0ac9b435ae713a713a271638a992c" category="summary">Edite as configurações de snapshot, habilite o acesso ao diretório e exclua snapshots para gerenciar seus snapshots e proteção de dados na fábrica de carga de trabalho.</block>
+  <block id="3893740c49122217b62d6529f246ffc7" category="doc">Gerenciar snapshots de um volume FSx para ONTAP</block>
+  <block id="57e53df8f66509e4ecdabdca5294937b" category="section-title">Editar um instantâneo</block>
+  <block id="5c5cf4cdf8dd88c1f0fa6aea2ecac35e" category="paragraph">Edite o nome, o rótulo e o período de retenção de um snapshot.  Se o snapshot ainda não for imutável, você poderá torná-lo imutável.</block>
+  <block id="c0f24431ed90baa037117b26a5a22d22" category="list-text">Na aba *Volumes*, selecione o menu de três pontos para o volume com o instantâneo a ser editado.</block>
+  <block id="a8221bf4844208248f5cb74e74c739fd" category="list-text">Na página Gerenciar instantâneos, selecione o menu de três pontos do instantâneo a ser editado e, em seguida, selecione *Editar*.</block>
+  <block id="bea584725867b5b5e974a646929f56b4" category="list-text">Na caixa de diálogo Editar um instantâneo, você pode editar o seguinte:</block>
+  <block id="22d1cb21d295d88b771f81456e349920" category="list-text">Alterar o nome.</block>
+  <block id="3cdc796d3f8c10c8504e7f62ac85a560" category="list-text">Alterar o rótulo.</block>
+  <block id="c51b9f8bfc3d25cb60ce2f85fa473dab" category="list-text">Alterar o período de retenção.</block>
+  <block id="a461891ce745b6e53163499dd6a76301" category="paragraph">Se o instantâneo já for imutável, você não poderá editar esta configuração.</block>
+  <block id="56581c15d8f7e3ec52e678e2807f1810" category="section-title">Acessar um instantâneo</block>
+  <block id="1733a9f5d8e959e38355a0dbe35d5065" category="paragraph">Habilite o acesso ao diretório de snapshots para dar aos usuários a capacidade de acessar snapshots de forma autônoma.</block>
+  <block id="85e036beddd0153b2b24fc252c5930af" category="list-text">Na aba *Volumes*, selecione o menu de três pontos para o volume com o instantâneo a ser acessado.</block>
+  <block id="5221d99ac8e89eb52e64918972f35b5a" category="list-text">Na página Gerenciar instantâneos, selecione o menu de três pontos do instantâneo a ser acessado e, em seguida, selecione *Acesso*.</block>
+  <block id="07c4a8c1c625be343c227870575c8d87" category="list-text">Na caixa de diálogo Acessar instantâneo, selecione *Habilitar acesso ao diretório de instantâneos* para acessar este instantâneo de volume e todos os instantâneos do volume.</block>
+  <block id="b222a1837d5e9867712802dd2a235a98" category="list-text">Para volumes NFS: selecione *Caminho de acesso NFS* para visualizar o caminho NFS para o snapshot.</block>
+  <block id="3dae4cd8dcc7270203f2f8ea0d079815" category="list-text">Para volumes SMB/CIFS: Selecione *Caminho de acesso SMB* para visualizar o caminho SMB para o snapshot.</block>
+  <block id="8695344671e89445641e5521e94e092a" category="list-text">Copie o caminho de acesso.</block>
+  <block id="f4b128dfa4315b7560d911b08c3653c2" category="section-title">Restaurar dados de um instantâneo</block>
+  <block id="05f173e81abaca211df63916cfac7a74" category="paragraph">Você tem a opção de restaurar dados de um instantâneo para um volume existente ou para um novo volume.</block>
+  <block id="6520c3672c5d01c2976ef1980c6c4f4b" category="paragraph"><block ref="6520c3672c5d01c2976ef1980c6c4f4b" category="inline-link-macro-rx"></block></block>
+  <block id="efb44cfe1d5b8d9954ea045385675c66" category="section-title">Excluir um instantâneo</block>
+  <block id="6dbf69edbee88e5a8078a8a4e008a3b8" category="paragraph">Exclua um instantâneo para liberar espaço.</block>
+  <block id="65231a1c4b836cdc3226241028b6f5c1" category="paragraph">Snapshots imutáveis não podem ser excluídos até que o período de retenção termine.</block>
+  <block id="ea6e0fbfc66a50ad275a34ced4baee30" category="list-text">Na aba *Volumes*, selecione o menu de três pontos para o volume com o instantâneo a ser excluído.</block>
+  <block id="18c5c678d2db682d1c0c828b0712359a" category="list-text">Na página Gerenciar instantâneos, selecione o menu de três pontos do instantâneo a ser excluído e, em seguida, selecione *Excluir*.</block>
+  <block id="89e6716d68072489564767a766ad91b4" category="list-text">Na caixa de diálogo Excluir instantâneo, digite "excluir".</block>
+  <block id="6b7a52834d577f2e4ac4d587036728f4" category="list-text">Selecione *Excluir* para confirmar a exclusão.</block>
+  <block id="30f60d67f457bb040dffde52197a54da" category="list-title">Informações relacionadas</block>
+  <block id="6d2771dfb9453c665603cef4b0fbb11a" category="list-text"><block ref="6d2771dfb9453c665603cef4b0fbb11a" category="inline-link-macro-rx"></block></block>
+  <block id="83920bb8c8a04a2372e330bd4db6becc" category="list-text"><block ref="83920bb8c8a04a2372e330bd4db6becc" category="inline-link-macro-rx"></block></block>
+  <block id="2e5c50a11ce0216fa9a931d0e31f38fb" category="list-text"><block ref="2e5c50a11ce0216fa9a931d0e31f38fb" category="inline-link-macro-rx"></block></block>
+  <block id="5555c9991f89f798392b8981015a49d6" category="doc">Restaurar um volume de um snapshot na fábrica de carga de trabalho</block>
+  <block id="fedae93e45eef0cf99ae9d3e2dbff802" category="paragraph">No Workload Factory, você pode restaurar dados de um snapshot para um volume existente ou para um novo volume.  A operação de restauração permite a recuperação em um determinado momento quando um volume contém arquivos excluídos ou corrompidos.</block>
+  <block id="d53b53fb3880fbcc2120f4ebdcb4b727" category="paragraph">A criação de um novo volume a partir de um instantâneo faz uma cópia de um volume inteiro em poucos segundos, independentemente do tamanho do volume.  A cópia recém-criada representa um novo volume.</block>
+  <block id="22509908f6a972a65b5370b282ed646c" category="list-text">Maior consumo de volume: depois de criar um volume a partir de um instantâneo, você tem dois volumes independentes, e ambos consomem capacidade do sistema de arquivos do host.  Certifique-se de que você tem capacidade suficiente para concluir esta operação.</block>
+  <block id="8babf692a891c5060bb678dacf1bb2ad" category="list-text">Na página Gerenciar instantâneos, selecione o menu de três pontos do instantâneo a ser restaurado e, em seguida, selecione *Restaurar*.</block>
+  <block id="0c5f6f3cf9344efbd61695ffdf90106f" category="list-text">Na caixa de diálogo Restaurar volume de um instantâneo, selecione entre as seguintes opções:</block>
+  <block id="63421d2e7769a33701821702ab1b0be8" category="list-text">Alterne para selecionar *Restaurar como um novo volume*.</block>
+  <block id="2321232f7bb400db057064cec47f4904" category="list-text">Restaurar dados de um instantâneo para um volume existente.  Esta operação exclui permanentemente quaisquer dados que foram modificados após o momento da criação do instantâneo.</block>
+  <block id="b271a75b2d121a8cb5f59ae458394323" category="section-title">09 de setembro de 2025</block>
+  <block id="62486fa65fc31c383ace8989549632ad" category="sidebar">Usar instantâneos</block>
+  <block id="b8d3d1ca4d4975c76eec10109e85c77f" category="sidebar">Use backups para armazenamento de objetos</block>
+  <block id="fe355a62d144a6a42805c3eb5698310a" category="sidebar">Usar replicação</block>
 </blocks>

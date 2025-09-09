@@ -53,7 +53,7 @@ sidebar:
       entries:
       - title: Visão geral da proteção de dados
         url: "/data-protection-overview.html"
-      - title: Gerenciar snapshots
+      - title: Usar instantâneos
         entries:
         - title: Criar um instantâneo
           url: "/create-snapshot.html"
@@ -61,15 +61,13 @@ sidebar:
           url: "/create-snapshot-policy.html"
         - title: Restaurar um volume a partir de um instantâneo
           url: "/restore-volume-from-snapshot.html"
-        - title: Criar um novo volume a partir de um instantâneo
-          url: "/create-volume-from-snapshot.html"
-      - title: Gerenciar backups para o storage de objetos
+      - title: Use backups para armazenamento de objetos
         entries:
         - title: Crie uma cópia de segurança manual
           url: "/create-backup.html"
         - title: Restaurar um volume a partir de uma cópia de segurança
           url: "/restore-from-backup.html"
-      - title: Gerenciar a replicação
+      - title: Usar replicação
         entries:
         - title: Crie uma relação de replicação
           url: "/create-replication.html"
@@ -145,6 +143,8 @@ sidebar:
           url: "/manage-snapshot-policy.html"
         - title: Habilite e edite snapshots para retenção de longo prazo
           url: "/enable-snapshots-long-term.html"
+        - title: Gerenciar snapshots
+          url: "/manage-snapshots.html"
       - title: Backups
         entries:
         - title: Gerencie o agendamento de backup do FSX for ONTAP

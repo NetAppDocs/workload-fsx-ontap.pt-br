@@ -1,0 +1,103 @@
+---
+sidebar: sidebar 
+permalink: manage-snapshots.html 
+keywords: snapshot, snapshots, manage snapshots, edit snapshots, access snapshots, delete snapshots, remove snapshots 
+summary: Edite as configurações de snapshot, habilite o acesso ao diretório e exclua snapshots para gerenciar seus snapshots e proteção de dados na fábrica de carga de trabalho. 
+---
+= Gerenciar snapshots de um volume FSx para ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Edite as configurações de snapshot, habilite o acesso ao diretório e exclua snapshots para gerenciar seus snapshots e proteção de dados na fábrica de carga de trabalho.
+
+
+
+== Editar um instantâneo
+
+Edite o nome, o rótulo e o período de retenção de um snapshot.  Se o snapshot ainda não for imutável, você poderá torná-lo imutável.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Em *armazenamento*, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
+. Na aba *Volumes*, selecione o menu de três pontos para o volume com o instantâneo a ser editado.
+. Selecione *Ações de proteção de dados* e depois *Gerenciar instantâneos*.
+. Na página Gerenciar instantâneos, selecione o menu de três pontos do instantâneo a ser editado e, em seguida, selecione *Editar*.
+. Na caixa de diálogo Editar um instantâneo, você pode editar o seguinte:
++
+.. Alterar o nome.
+.. Alterar o rótulo.
+.. Alterar o período de retenção.
+.. Opcional: *Torne este snapshot imutável* para evitar que ele seja excluído durante o período de retenção.
++
+Se o instantâneo já for imutável, você não poderá editar esta configuração.
+
++
+Aceite a declaração sobre snapshots imutáveis.
+
+
+
+. Selecione *aplicar*.
+
+
+
+
+== Acessar um instantâneo
+
+Habilite o acesso ao diretório de snapshots para dar aos usuários a capacidade de acessar snapshots de forma autônoma.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Em *armazenamento*, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
+. Na aba *Volumes*, selecione o menu de três pontos para o volume com o instantâneo a ser acessado.
+. Selecione *Ações de proteção de dados* e depois *Gerenciar instantâneos*.
+. Na página Gerenciar instantâneos, selecione o menu de três pontos do instantâneo a ser acessado e, em seguida, selecione *Acesso*.
+. Na caixa de diálogo Acessar instantâneo, selecione *Habilitar acesso ao diretório de instantâneos* para acessar este instantâneo de volume e todos os instantâneos do volume.
++
+** Para volumes NFS: selecione *Caminho de acesso NFS* para visualizar o caminho NFS para o snapshot.
+** Para volumes SMB/CIFS: Selecione *Caminho de acesso SMB* para visualizar o caminho SMB para o snapshot.
+
+
+. Copie o caminho de acesso.
+. Selecione *aplicar*.
+
+
+
+
+== Restaurar dados de um instantâneo
+
+Você tem a opção de restaurar dados de um instantâneo para um volume existente ou para um novo volume.
+
+link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_snapshot-mgmt/restore-volume-from-snapshot.html["Restaurar um volume a partir de um instantâneo"]
+
+
+
+== Excluir um instantâneo
+
+Exclua um instantâneo para liberar espaço.
+
+Snapshots imutáveis não podem ser excluídos até que o período de retenção termine.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Em *armazenamento*, selecione *ir para inventário de armazenamento*.
+. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume e selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
+. Na aba *Volumes*, selecione o menu de três pontos para o volume com o instantâneo a ser excluído.
+. Selecione *Ações de proteção de dados* e depois *Gerenciar instantâneos*.
+. Na página Gerenciar instantâneos, selecione o menu de três pontos do instantâneo a ser excluído e, em seguida, selecione *Excluir*.
+. Na caixa de diálogo Excluir instantâneo, digite "excluir".
+. Selecione *Excluir* para confirmar a exclusão.
+
+
+.Informações relacionadas
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-snapshot.html["Criar um instantâneo"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-snapshot-policy.html["Criar uma política de snapshot"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapshot.html["Restaurar um volume a partir de um instantâneo"]
+

@@ -4,22 +4,27 @@ permalink: restore-volume-from-snapshot.html
 keywords: restore volume, snapshot 
 summary: Restaure um volume FSX for ONTAP de um snapshot quando o volume contém arquivos excluídos ou corrompidos. 
 ---
-= Restaurar um volume de um snapshot no workload do BlueXP  de fábrica
+= Restaurar um volume de um snapshot na fábrica de carga de trabalho
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Na fábrica de carga de trabalho do BlueXP , você pode restaurar um volume do FSX for ONTAP de um snapshot quando o volume contém arquivos excluídos ou corrompidos.
+No Workload Factory, você pode restaurar dados de um snapshot para um volume existente ou para um novo volume.  A operação de restauração permite a recuperação em um determinado momento quando um volume contém arquivos excluídos ou corrompidos.
 
 .Sobre esta tarefa
-Essa operação restaura os dados de um snapshot para um novo volume.
+Você tem a opção de restaurar dados de um instantâneo para um volume existente ou para um novo volume.
+
+A criação de um novo volume a partir de um instantâneo faz uma cópia de um volume inteiro em poucos segundos, independentemente do tamanho do volume.  A cópia recém-criada representa um novo volume.
 
 .Antes de começar
-Só é possível restaurar um volume a partir de um instantâneo se tiver uma cópia instantânea existente do volume.
+Considere as seguintes limitações antes de criar um volume a partir de um instantâneo:
 
-Certifique-se de que tem capacidade suficiente para concluir esta operação.
+* Só é possível restaurar um volume a partir de um instantâneo se tiver uma cópia instantânea existente do volume.
+* Alterações nos modelos de permissão: Se você usar essa operação para alternar o tipo de protocolo nas (Network-Attached Storage), ela também pode alternar o modelo de permissão fornecido pelo estilo de segurança. Você pode ter problemas de permissão de acesso a arquivos, que você só pode corrigir manualmente com acesso de administrador usando as ferramentas de cliente nas para configuração de permissões.
+* Maior consumo de volume: depois de criar um volume a partir de um instantâneo, você tem dois volumes independentes, e ambos consomem capacidade do sistema de arquivos do host.  Certifique-se de que você tem capacidade suficiente para concluir esta operação.
+
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
@@ -27,8 +32,19 @@ Certifique-se de que tem capacidade suficiente para concluir esta operação.
 . Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume e selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
 . Na guia *volumes*, selecione o menu de três pontos para o volume a ser restaurado a partir de um instantâneo.
-. Selecione *ações de proteção de dados*, *instantâneos* e, em seguida, *Restaurar volume de um instantâneo*.
-. Na caixa de diálogo Restaurar volume a partir de um instantâneo, no campo *Nome do instantâneo*, selecione o instantâneo a ser restaurado no menu suspenso.
-. No campo *Nome do volume restaurado*, insira um nome exclusivo para o volume a ser restaurado.
+. Selecione *Ações de proteção de dados* e depois *Gerenciar instantâneos*.
+. Na página Gerenciar instantâneos, selecione o menu de três pontos do instantâneo a ser restaurado e, em seguida, selecione *Restaurar*.
+. Na caixa de diálogo Restaurar volume de um instantâneo, selecione entre as seguintes opções:
++
+** Alterne para selecionar *Restaurar como um novo volume*.
++
+No campo *Nome do volume restaurado*, insira um nome exclusivo para o volume a ser restaurado.
+
+** Restaurar dados de um instantâneo para um volume existente.  Esta operação exclui permanentemente quaisquer dados que foram modificados após o momento da criação do instantâneo.
++
+Aceite a declaração para prosseguir.
+
+
+
 . Selecione *Restaurar*.
 

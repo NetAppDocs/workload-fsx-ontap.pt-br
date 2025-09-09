@@ -1,39 +1,45 @@
 ---
 sidebar: sidebar 
 permalink: increase-file-system-capacity.html 
-keywords: increase capacity, increase file system capacity, increase FSx capacity 
-summary: Aumente manualmente a capacidade de armazenamento SSD de um sistema de arquivos FSX for ONTAP quando a quantidade de capacidade de armazenamento SSD usada exceder um limite especificado. 
+keywords: adjust capacity, elastic file system capacity, increase file system capacity, increase FSx capacity, decrease file system capacity, decrease FSx capacity 
+summary: Ajuste manualmente a capacidade de armazenamento SSD de um sistema de arquivos FSx para ONTAP para atender às necessidades de suas cargas de trabalho baseadas em projetos com conjuntos de trabalho ativos variados. 
 ---
-= Aumente a capacidade do sistema de arquivos no workload do BlueXP  de fábrica
+= Ajustar a capacidade do sistema de arquivos na fábrica de carga de trabalho
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Aumente manualmente a capacidade de armazenamento SSD de um sistema de arquivos FSX for ONTAP quando a quantidade de capacidade de armazenamento SSD usada exceder um limite especificado.
+Ajuste manualmente a capacidade de armazenamento da unidade de estado sólido (SSD) de um sistema de arquivos FSx para ONTAP para atender às necessidades de suas cargas de trabalho baseadas em projeto com conjuntos de trabalho ativos variáveis.
+
+Aumente a capacidade de armazenamento SSD de um sistema de arquivos FSx para ONTAP quando a quantidade de capacidade de armazenamento SSD usada exceder um limite especificado ou diminua a capacidade de armazenamento SSD quando os conjuntos de trabalho estiverem inativos para melhorar a eficiência de custos.
 
 Como alternativa, você pode link:enable-auto-capacity-management.html["ative o recurso de gerenciamento automático de capacidade"]gerenciar de fábrica a capacidade do sistema de arquivos para você.
 
 .Sobre esta tarefa
-O aumento da capacidade do sistema de arquivos afeta o IOPS do seu sistema de arquivos FSX for ONTAP.
+Com a capacidade elástica do sistema de arquivos, você pode ajustar dinamicamente a capacidade dos seus sistemas de arquivos para atender às necessidades das suas cargas de trabalho.
 
-Quando você link:provision-iops.html["Provisionamento de IOPS"]automaticamente para um sistema de arquivos, o IOPS aumenta em 3 IOPS a cada aumento de 1 GiB na capacidade do SSD.
+Ajustar a capacidade do sistema de arquivos afeta o IOPS do seu sistema de arquivos FSx para ONTAP .
+
+Quando você automaticamentelink:provision-iops.html["Provisionamento de IOPS"] para um sistema de arquivos, o IOPS aumenta ou diminui em 3 IOPS a cada aumento ou diminuição de 1 GiB na capacidade do SSD.
 
 Quando link:provision-iops.html["Provisionamento de IOPS"] você manualmente, talvez seja necessário aumentar a alocação de IOPS para oferecer suporte ao aumento da capacidade do sistema de arquivos.
 
 Para saber os limites de capacidade de armazenamento SSD, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quotas"^]documentação do AWS FSX for NetApp ONTAP.
 
 .Antes de começar
-Para aumentar a capacidade de um sistema de arquivos, primeiro é necessário link:enable-auto-capacity-management.html["desativar o gerenciamento automático de capacidade"].
+Para ajustar a capacidade de um sistema de arquivos, você deve primeirolink:enable-auto-capacity-management.html["desativar o gerenciamento automático de capacidade"] .
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos para aumentar a capacidade.
-. Selecione *Gerenciar*.
-. Em informações, selecione o ícone de lápis ao lado de *distribuição de capacidade*. O ícone de lápis aparece ao lado da seta suspensa quando o Mouse passa sobre a linha *distribuição de capacidade*.
-. Na caixa de diálogo tamanho do armazenamento SSD, insira um número para *capacidade provisionada*.
+. No Painel, selecione *Ajustar capacidade do SSD*.
+. Selecione o sistema de arquivos cuja capacidade você deseja ajustar e então selecione *Continuar*.
++
+*Potencial de economia* é a recomendação para diminuir a capacidade.
+
+. Na caixa de diálogo Ajustar capacidade do SSD, insira um número para *Capacidade provisionada*.
 . Selecione a unidade para a capacidade provisionada.
 . Selecione *aplicar*.
 
