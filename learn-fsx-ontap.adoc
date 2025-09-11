@@ -70,9 +70,17 @@ A AWS mantém sua conta no FSX for ONTAP, não a carga de fábrica. link:https:/
 
 
 
-== Regiões suportadas
+== Regiões
 
-https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Exibir regiões da Amazon compatíveis."^]
+A fábrica de carga de trabalho é suportada em todas as regiões comerciais onde o FSx para ONTAP é suportado.link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Exibir regiões da Amazon compatíveis."^]
+
+As seguintes regiões da AWS não são suportadas:
+
+* Regiões da China
+* Regiões GovCloud (EUA)
+* Nuvem Secreta
+* Nuvem Top Secret
+
 
 
 

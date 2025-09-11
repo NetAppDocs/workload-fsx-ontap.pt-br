@@ -15,6 +15,18 @@ As limitações conhecidas identificam plataformas, dispositivos ou funções qu
 
 
 
+== Suporte regional
+
+As seguintes regiões da AWS não são suportadas:
+
+* Regiões da China
+* Regiões GovCloud (EUA)
+* Nuvem Secreta
+* Nuvem Top Secret
+
+
+
+
 == Adição de limitações de pares de HA
 
 * Esta operação poderá demorar cerca de 30 minutos a concluir.
