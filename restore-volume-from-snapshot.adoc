@@ -23,7 +23,6 @@ Considere as seguintes limitações antes de criar um volume a partir de um inst
 
 * Só é possível restaurar um volume a partir de um instantâneo se tiver uma cópia instantânea existente do volume.
 * Alterações nos modelos de permissão: Se você usar essa operação para alternar o tipo de protocolo nas (Network-Attached Storage), ela também pode alternar o modelo de permissão fornecido pelo estilo de segurança. Você pode ter problemas de permissão de acesso a arquivos, que você só pode corrigir manualmente com acesso de administrador usando as ferramentas de cliente nas para configuração de permissões.
-* Maior consumo de volume: depois de criar um volume a partir de um instantâneo, você tem dois volumes independentes, e ambos consomem capacidade do sistema de arquivos do host.  Certifique-se de que você tem capacidade suficiente para concluir esta operação.
 
 
 .Passos
