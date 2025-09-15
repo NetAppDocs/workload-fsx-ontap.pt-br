@@ -17,6 +17,9 @@ Aumente a capacidade de armazenamento SSD de um sistema de arquivos FSx para ONT
 
 Como alternativa, você pode link:enable-auto-capacity-management.html["ative o recurso de gerenciamento automático de capacidade"]gerenciar de fábrica a capacidade do sistema de arquivos para você.
 
+
+NOTE: A redução da capacidade de armazenamento do SSD só é suportada em sistemas de arquivos de segunda geração.
+
 .Sobre esta tarefa
 Com a capacidade elástica do sistema de arquivos, você pode ajustar dinamicamente a capacidade dos seus sistemas de arquivos para atender às necessidades das suas cargas de trabalho.
 
