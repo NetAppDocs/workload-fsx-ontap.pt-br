@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: configure-active-directory.html 
 keywords: configure AD, configure active directory, update ad, edit active directory 
-summary: Configure e atualize o ative Directory para uma VM de armazenamento em um sistema de arquivos FSX for ONTAP na fábrica de carga de trabalho do BlueXP . 
+summary: Configure e atualize o Active Directory para uma VM de armazenamento em um sistema de arquivos FSx para ONTAP no NetApp Workload Factory. 
 ---
 = Configurar e atualizar o ative Directory para uma VM de armazenamento
 :allow-uri-read: 
@@ -11,17 +11,18 @@ summary: Configure e atualize o ative Directory para uma VM de armazenamento em 
 
 
 [role="lead"]
-Configure e atualize o ative Directory para uma VM de armazenamento em um sistema de arquivos FSX for ONTAP na fábrica de carga de trabalho do BlueXP .
+Configure e atualize o Active Directory para uma VM de armazenamento em um sistema de arquivos FSx para ONTAP no NetApp Workload Factory.
 
 .Sobre esta tarefa
 As mesmas etapas se aplicam à configuração e atualização do ative Directory para uma VM de armazenamento.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com a VM de armazenamento para atualizar e selecione *Gerenciar*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com a VM de armazenamento a ser atualizada e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *Storage VMs*.
-. Na guia Storage VMs (VMs de armazenamento), selecione o menu de três pontos da VM de armazenamento para a qual deseja configurar o ative Directory.
+. Na guia VMs de armazenamento, selecione o menu de ações da VM de armazenamento para a qual deseja configurar o Active Directory.
 . Selecione *Gerenciar configuração do AD*.
 . Na página Gerenciar configuração do AD, forneça o seguinte:
 +

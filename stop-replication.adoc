@@ -2,23 +2,24 @@
 sidebar: sidebar 
 permalink: stop-replication.html 
 keywords: stop replication, break replication 
-summary: Interromper uma relação de replicação entre os volumes de origem e destino no workload da BlueXP  de fábrica. 
+summary: Interrompa um relacionamento de replicação entre volumes de origem e destino no NetApp Workload Factory. 
 ---
-= Interrompa uma relação de replicação no workload do BlueXP  de fábrica
+= Interromper um relacionamento de replicação no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Interrompa uma relação de replicação no workload do BlueXP  de fábrica. Quando você interrompe uma relação de replicação, a replicação agendada é atualizada do volume de origem para a pausa do volume de destino. O volume de destino passa de somente leitura para leitura/gravação.
+Interrompa um relacionamento de replicação no NetApp Workload Factory.  Quando você interrompe um relacionamento de replicação, as atualizações de replicação agendadas do volume de origem para o volume de destino são pausadas.  O volume de destino passa de somente leitura para leitura/gravação.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos a ser atualizado e selecione *Gerenciar*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos a ser atualizado e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *relacionamentos de replicação*.
-. Na guia relacionamentos de replicação, selecione o menu de três pontos da relação de replicação a ser interrompida.
+. Na guia Relacionamentos de replicação, selecione o menu de ações do relacionamento de replicação a ser interrompido.
 . Selecione *Break*.
 . Na caixa de diálogo quebrar replicação, selecione *quebrar*.
 

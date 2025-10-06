@@ -4,14 +4,14 @@ permalink: initialize-replication.html
 keywords: initialize replication, begin replication, start replication 
 summary: Inicialize uma relação de replicação entre os volumes de origem e destino. 
 ---
-= Inicializar um relacionamento de replicação na fábrica de carga de trabalho do BlueXP 
+= Inicializar um relacionamento de replicação no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Inicialize uma relação de replicação entre os volumes de origem e destino para transferir o snapshot e todos os blocos de dados na fábrica de carga de trabalho do BlueXP .
+Inicialize um relacionamento de replicação entre os volumes de origem e de destino para transferir o snapshot e todos os blocos de dados no NetApp Workload Factory.
 
 .Sobre esta tarefa
 A inicialização executa uma transferência _Baseline_: Ele faz um instantâneo do volume de origem e, em seguida, transfere o instantâneo e todos os blocos de dados que ele faz referência ao volume de destino.
@@ -21,10 +21,11 @@ Considere quando você optar por concluir esta operação. A inicialização pod
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos a ser atualizado e selecione *Gerenciar*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos a ser atualizado e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *relacionamentos de replicação*.
-. Na guia relacionamentos de replicação, selecione o menu de três pontos da relação de replicação a ser inicializada.
+. Na guia Relacionamentos de replicação, selecione o menu de ações do relacionamento de replicação a ser inicializado.
 . Selecione *Inicializar*.
 . Na caixa de diálogo Inicializar relacionamento, selecione *Inicializar*.
 

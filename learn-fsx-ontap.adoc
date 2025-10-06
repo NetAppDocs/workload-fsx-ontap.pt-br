@@ -2,20 +2,20 @@
 sidebar: sidebar 
 permalink: learn-fsx-ontap.html 
 keywords: Amazon FSx for NetApp ONTAP, FSx, storage, aws 
-summary: O Amazon FSX for NetApp ONTAP é um serviço totalmente gerenciado que permite que os clientes iniciem e executem sistemas de arquivos como o back-end de armazenamento para suas cargas de trabalho na fábrica de cargas de trabalho. 
+summary: O Amazon FSx for NetApp ONTAP é um serviço totalmente gerenciado que permite aos clientes iniciar e executar sistemas de arquivos como backend de armazenamento para suas cargas de trabalho no Workload Factory. 
 ---
-= Saiba mais sobre o Amazon FSX for NetApp ONTAP na fábrica de cargas de trabalho do BlueXP 
+= Saiba mais sobre o Amazon FSx for NetApp ONTAP no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-O Amazon FSX for NetApp ONTAP é um serviço de armazenamento de dados totalmente gerenciado e baseado na nuvem que oferece recursos avançados de gerenciamento de dados e desempenho altamente escalável. O FSX para ONTAP permite que você crie e gerencie sistemas de arquivos como o back-end de armazenamento para todas as suas cargas de trabalho na fábrica de cargas de trabalho do BlueXP .
+O Amazon FSx for NetApp ONTAP é um serviço de armazenamento de dados totalmente gerenciado e baseado em nuvem que fornece recursos avançados de gerenciamento de dados e desempenho altamente escalável.  O FSx for ONTAP permite que você crie e gerencie sistemas de arquivos como backend de armazenamento para todas as suas cargas de trabalho no NetApp Workload Factory.
 
 O FSX para ONTAP oferece os mesmos recursos, performance e funcionalidades administrativas que os clientes da NetApp usam no local hoje, com a simplicidade, agilidade, segurança e escalabilidade de um serviço AWS nativo.
 
-O FSX para ONTAP é o componente _Storage_ na fábrica de cargas de trabalho.
+FSx para ONTAP é o componente _Armazenamento_ no Workload Factory.
 
 
 
@@ -23,7 +23,7 @@ O FSX para ONTAP é o componente _Storage_ na fábrica de cargas de trabalho.
 
 O FSX para ONTAP oferece os seguintes recursos:
 
-* *Serviço totalmente gerenciado*: Fornece um serviço totalmente gerenciado integrado ao console de fábrica da carga de trabalho.
+* *Serviço totalmente gerenciado*: fornece um serviço totalmente gerenciado integrado ao console do Workload Factory.
 * *Alta disponibilidade*: Fornece alta disponibilidade para cada sistema de arquivos FSX for ONTAP, suportando implantações de zonas de disponibilidade única e múltipla.
 * *Instantâneos automatizados*: Protege os dados com snapshots automatizados e eficientes, que são cópias pontuais e quase instantâneas do sistema de arquivos ou volumes, com uso eficiente de espaço.
 * *Replicação de volume*: Fornece recuperação de desastres com replicação entre regiões na Amazon Web Services.
@@ -40,7 +40,7 @@ O FSX para ONTAP oferece os seguintes recursos:
 
 
 
-== Recursos adicionais na fábrica de workloads
+== Recursos adicionais no Workload Factory
 
 * * Calculadora de comparação de custos de armazenamento*: Compara os custos de armazenamento do Amazon Elastic Block Store (EBS), Elastic File System (EFS) e FSX para Windows File Server com o FSX for ONTAP. A partir da calculadora, você pode ver como as configurações de armazenamento do FSX for ONTAP oferecem economias potenciais e Planejar sua migração para o FSX for ONTAP.
 * *Interface de usuário do Workload Factory*: Fornece opções de modo de implantação _Quick Create_ e _Advanced Create_. O Quick Create inclui a AWS, o NetApp e as práticas recomendadas padrão do setor para suas configurações de storage.
@@ -49,24 +49,24 @@ O FSX para ONTAP oferece os seguintes recursos:
 
 
 
-== Ferramentas para usar o workload de fábrica
+== Ferramentas para usar o NetApp Workload Factory
 
-Você pode usar a fábrica do workload do BlueXP  com as seguintes ferramentas:
+Você pode usar o NetApp Workload Factory com as seguintes ferramentas:
 
-* * Console de fábrica de carga de trabalho*: O console de fábrica de carga de trabalho fornece uma visão visual e holística de seus aplicativos e projetos.
-* * BlueXP  console*: O console BlueXP  oferece uma experiência de interface híbrida para que você possa usar a carga de trabalho BlueXP  de fábrica junto com outros serviços BlueXP .
-* *Pergunte-me*: Use o assistente de inteligência artificial perguntar-me para fazer perguntas e saber mais sobre a fábrica de carga de trabalho sem sair da interface web da fábrica de carga de trabalho. Acesse Pergunte-me no menu de ajuda de fábrica da carga de trabalho.
-* *CLI do CloudShell*: A fábrica de carga de trabalho inclui uma CLI do CloudShell para gerenciar e operar ambientes AWS e NetApp em contas a partir de uma única CLI baseada em navegador. Acesse o CloudShell a partir da barra superior do console de fábrica de carga de trabalho.
-* *API REST*: Use as APIs REST de fábrica de carga de trabalho para implantar e gerenciar seus sistemas de arquivos FSX for ONTAP e outros recursos da AWS.
-* *CloudFormation*: Use o código do AWS CloudFormation para executar as ações definidas no console de fábrica de carga de trabalho para modelar, provisionar e gerenciar recursos da AWS e de terceiros a partir da pilha do CloudFormation em sua conta da AWS.
-* *Fornecedor de fábrica de carga de trabalho do Terraform BlueXP *: Use o Terraform para criar e gerenciar fluxos de trabalho de infraestrutura gerados no console de fábrica de carga de trabalho.
+* *Console do Workload Factory*: O console do Workload Factory fornece uma visão visual e holística de seus aplicativos e projetos.
+* * NetApp Console*: O NetApp Console oferece uma experiência de interface híbrida para que você possa usar o Workload Factory junto com outros serviços de dados do NetApp .
+* *Pergunte-me*: use o assistente de IA Ask me para fazer perguntas e saber mais sobre o Workload Factory sem sair do console do Workload Factory. Acesse Pergunte-me no menu de ajuda do Workload Factory.
+* *CloudShell CLI*: O Workload Factory inclui um CloudShell CLI para gerenciar e operar ambientes AWS e NetApp em todas as contas a partir de um único CLI baseado em navegador. Acesse o CloudShell na barra superior do console do Workload Factory.
+* *API REST*: Use as APIs REST do Workload Factory para implantar e gerenciar seu FSx para sistemas de arquivos ONTAP e outros recursos da AWS.
+* *CloudFormation*: use o código do AWS CloudFormation para executar as ações definidas no console do Workload Factory para modelar, provisionar e gerenciar recursos da AWS e de terceiros da pilha do CloudFormation na sua conta da AWS.
+* *Provedor do Terraform NetApp Workload Factory*: use o Terraform para criar e gerenciar fluxos de trabalho de infraestrutura gerados no console do Workload Factory.
 
 
 
 
 == Custo
 
-A AWS mantém sua conta no FSX for ONTAP, não a carga de fábrica. link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Definição de preço do Amazon FSX for NetApp ONTAP"^]Consulte a .
+A AWS mantém sua conta FSx para ONTAP , não o Workload Factory. Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Definição de preço do Amazon FSX for NetApp ONTAP"^] .
 
 
 
@@ -88,4 +88,4 @@ As seguintes regiões da AWS não são suportadas:
 
 O Amazon FSX for NetApp ONTAP é uma solução exclusiva da AWS. Para dúvidas ou problemas de suporte técnico associados ao ONTAP sistema de arquivos, infraestrutura ou qualquer solução usando este serviço, use a Central de suporte no Console de Gerenciamento da AWS para abrir um caso de suporte com a AWS. Selecione o serviço "FSX for ONTAP" e a categoria apropriada. Forneça as informações restantes necessárias para criar seu caso de suporte da AWS.
 
-Para obter perguntas gerais sobre os aplicativos e serviços de fábrica de carga de trabalho ou de fábrica, link:get-help.html["Obtenha ajuda para o FSX for ONTAP para fábrica de carga de trabalho"]consulte .
+Para perguntas gerais sobre o Workload Factory ou aplicativos e serviços do Workload Factory, consultelink:get-help.html["Obtenha ajuda para FSx para ONTAP para Workload Factory"] .

@@ -11,7 +11,7 @@ summary: Provisione ou provisione manualmente o IOPS SSD para um sistema de arqu
 
 
 [role="lead"]
-Provisione ou provisione manualmente o IOPS SSD para um sistema de arquivos FSX for ONTAP na fábrica de workloads do BlueXP .
+Provisione automaticamente ou manualmente IOPS SSD para um sistema de arquivos FSx para ONTAP no NetApp Workload Factory.
 
 .Sobre esta tarefa
 Você pode ativar o provisionamento automático de IOPS SSD para um sistema de arquivos FSX ou provisionar manualmente IOPS.
@@ -24,8 +24,9 @@ Para obter informações sobre os limites de IOPS, consulte a link:https://docs.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos para provisionar IOPS e selecione *Gerenciar*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos para provisionar IOPS e, em seguida, selecione *Gerenciar*.
 . Em informações, selecione o ícone de lápis que aparece ao lado da seta suspensa quando o Mouse passa sobre a linha *Alocação de IOPS*.
 . Na caixa de diálogo IOPS provisionado, selecione *Automático* ou *fornecido pelo usuário*.
 . Se você selecionar *User provisioned*, digite o valor *IOPS* desejado.

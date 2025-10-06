@@ -15,20 +15,21 @@ Você pode acessar seus sistemas de arquivos FSX for ONTAP no local, montando vo
 
 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html["Acesso aos dados"^] Na documentação do Amazon FSX for NetApp ONTAP, você encontrará tópicos sobre como acessar dados para sua referência.
 
-Você também pode obter o ponto de montagem para volumes no workload da BlueXP  de fábrica.
+Você também pode obter o ponto de montagem para volumes no NetApp Workload Factory.
 
 
 
-== Obter ponto de montagem para volumes no workload da BlueXP  de fábrica
+== Obter ponto de montagem para volumes no NetApp Workload Factory
 
 Obtenha o ponto de montagem de um volume para montar um compartilhamento em um compartilhamento CIFS ou cliente NFS.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume e selecione *Gerenciar*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. Na guia volumes, selecione o menu de três pontos para o volume, depois *ações básicas* e, em seguida, *View mount command*.
+. Na guia Volumes, selecione o menu de ações do volume, depois *Ações básicas* e, por fim, *Exibir comando de montagem*.
 . Na caixa de diálogo montar comando, selecione *Copy* para copiar o comando para o ponto de montagem NFS ou compartilhamento CIFS. Você vai inserir o comando copiado no seu terminal.
 . Selecione *Fechar*.
 

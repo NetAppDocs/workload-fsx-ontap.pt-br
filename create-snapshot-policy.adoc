@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-snapshot-policy.html 
 keywords: create 
-summary: Crie uma política de snapshot personalizada para uma VM de armazenamento no workload factory. 
+summary: Crie uma política de snapshot personalizada para uma VM de armazenamento no Workload Factory. 
 ---
-= Crie uma política de snapshot para VMs de armazenamento na fábrica de carga de trabalho
+= Crie uma política de snapshot para VMs de armazenamento no Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Crie uma política de snapshot personalizada para VMs de armazenamento na fábrica de carga de trabalho para gerenciar a criação e a retenção de snapshots.  Uma política de snapshot define como o sistema cria snapshots para uma VM de armazenamento.  Você pode criar uma política de snapshot para uma VM de armazenamento em um sistema de arquivos FSx para ONTAP .  Você também pode compartilhar a política entre várias VMs de armazenamento.
+Crie uma política de snapshot personalizada para VMs de armazenamento no Workload Factory para gerenciar a criação e a retenção de snapshots. Uma política de snapshot define como o sistema cria snapshots para uma VM de armazenamento. Você pode criar uma política de snapshot para uma VM de armazenamento em um sistema de arquivos FSx para ONTAP . Você também pode compartilhar a política entre várias VMs de armazenamento.
 
 .Sobre esta tarefa
 Você pode criar uma política de snapshot personalizada que difere das três políticas de snapshot internas do FSX for ONTAP:
@@ -38,10 +38,11 @@ A personalização de uma política permite especificar quando criar snapshots, 
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em *armazenamento*, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume e selecione *Gerenciar*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *Storage VMs*.
-. Na guia *Storage VMs*, selecione o menu de três pontos para o volume a proteger com snapshots programados, depois *ações avançadas* e, em seguida, *Gerenciar políticas de snapshot*.
+. Na guia *VMs de armazenamento*, selecione o menu de ações do volume a ser protegido com instantâneos agendados, depois *Ações avançadas* e, por fim, *Gerenciar políticas de instantâneos*.
 . Na página de gerenciamento de políticas de instantâneos, selecione *criar política de instantâneos*.
 . No campo *Nome da política de instantâneo*, insira um nome para a política de instantâneo.
 . Opcionalmente, insira uma descrição para a política de snapshot.

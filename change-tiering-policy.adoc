@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: change-tiering-policy.html 
 keywords: tiering policy, change tier, change tiers, tier policy update 
-summary: Altere a política de disposição em camadas na fábrica de workloads do BlueXP  para realocar dados da camada de storage primário de alta performance para a camada de storage do pool de capacidade secundária. 
+summary: Altere a política de camadas no NetApp Workload Factory para realocar dados da camada de armazenamento primário de alto desempenho para a camada de armazenamento do pool de capacidade secundária. 
 ---
-= Alterar a política de disposição em camadas de um volume no workload da BlueXP  de fábrica
+= Alterar a política de camadas de um volume no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Na fábrica do workload do BlueXP , você pode alterar a política de disposição em categorias para realocar automaticamente os dados da categoria de storage primário de alta performance para a camada de storage do pool de capacidade secundária.
+No NetApp Workload Factory, você pode alterar a política de camadas para realocar automaticamente os dados da camada de armazenamento primário de alto desempenho para a camada de armazenamento do pool de capacidade secundária.
 
 .Sobre esta tarefa
 Você pode alterar a política de disposição em categorias de um volume a qualquer momento. A política de disposição em categorias é definida por volume.
@@ -39,10 +39,11 @@ Observe que algumas políticas de disposição em categorias têm um período de
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume a ser atualizado e selecione *Gerenciar*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume a ser atualizado e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. Na guia volumes, selecione o menu de três pontos do volume para alterar a política de disposição em camadas.
+. Na guia Volumes, selecione o menu de ações do volume para alterar a política de camadas.
 . Selecione *ações avançadas* e, em seguida, *alterar política de disposição em camadas*.
 . Na página alterar política de disposição em camadas, selecione para copiar a política de disposição em camadas do volume de origem ou selecione uma das seguintes políticas de disposição em camadas:
 +

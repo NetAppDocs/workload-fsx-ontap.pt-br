@@ -11,7 +11,7 @@ summary: Habilite snapshots para retenção de longo prazo, o que permite replic
 
 
 [role="lead"]
-Na fábrica do workload do BlueXP , você pode habilitar snapshots para retenção a longo prazo, o que permite replicar snapshots específicos para recuperação de desastres a longo prazo.
+No NetApp Workload Factory, você pode habilitar snapshots para retenção de longo prazo, o que permite replicar snapshots específicos para recuperação de desastres de longo prazo.
 
 A retenção de longo prazo permite que os serviços de negócios continuem operando mesmo em caso de falha completa do local, dando suporte a failover transparente de aplicações usando uma cópia secundária.
 
@@ -21,10 +21,11 @@ Quando um cluster ONTAP no local é o destino para a relação de replicação, 
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos a ser atualizado e selecione *Gerenciar*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos a ser atualizado e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *relacionamentos de replicação*.
-. Na guia relacionamentos de replicação, selecione o menu de três pontos da programação de relacionamento de replicação a ser alterada.
+. Na guia Relacionamentos de replicação, selecione o menu de ações do agendamento de relacionamento de replicação a ser alterado.
 . Selecione *Editar retenção a longo prazo*.
 . Na caixa de diálogo Editar retenção de longo prazo, ative ou desative snapshots para retenção de longo prazo.
 . Se você optar por desabilitar snapshots para retenção de longo prazo, selecione *aplicar* para concluir esta operação.

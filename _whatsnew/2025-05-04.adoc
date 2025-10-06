@@ -44,7 +44,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["Crie u
 
 ==== Replicação reversa com suporte do FSX for ONTAP para no local
 
-A replicação reversa agora está disponível a partir de um sistema de arquivos FSX for ONTAP para um cluster ONTAP no local a partir do console de fábrica de carga de trabalho.
+A replicação reversa agora está disponível de um sistema de arquivos FSx para ONTAP para um cluster ONTAP local no console do Workload Factory.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/reverse-replication.html["Replicação reversa"]
 

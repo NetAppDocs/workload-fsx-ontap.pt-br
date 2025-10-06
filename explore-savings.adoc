@@ -4,7 +4,7 @@ permalink: explore-savings.html
 keywords: cost, savings, compare costs, EBS, EFS, FSx for Windows file servers FSx for ONTAP 
 summary: 'Explore a economia para suas cargas de trabalho de armazenamento no armazenamento Amazon Elastic Block Store (EBS), Elastic File System (EFS) e FSX para servidores de arquivos do Windows em comparação com o AWS FSX for NetApp ONTAP.' 
 ---
-= Explore as economias com o FSX for ONTAP na fábrica de cargas de trabalho do BlueXP 
+= Explore as economias com o FSx para ONTAP no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -13,9 +13,9 @@ summary: 'Explore a economia para suas cargas de trabalho de armazenamento no ar
 [role="lead"]
 Explore as economias para suas cargas de trabalho de armazenamento que usam o Amazon Elastic Block Store (EBS), o Elastic File System (EFS) e o FSX for Windows File Server contra o FSX for NetApp ONTAP.
 
-A fábrica de carga de trabalho do BlueXP  inclui uma calculadora de economia de armazenamento para comparar os ambientes de armazenamento da Amazon com o FSX for ONTAP. Você pode explorar a economia com ou sem fornecer suas credenciais da AWS e personalizar as configurações para seu ambiente de storage. Ao fornecer credenciais da AWS, você pode selecionar uma ou mais instâncias do Amazon Elastic Block Store, por exemplo, e permitir que a fábrica da carga de trabalho faça a comparação automaticamente. Seja manual ou automaticamente, a calculadora determina qual serviço de armazenamento oferece o menor custo para suas necessidades de armazenamento.
+O NetApp Workload Factory inclui uma calculadora de economia de armazenamento para comparar ambientes de armazenamento da Amazon com o FSx para ONTAP.  Você pode explorar economias fornecendo ou não suas credenciais da AWS e personalizar as configurações para seu ambiente de armazenamento.  Ao fornecer credenciais da AWS, você pode selecionar uma ou mais instâncias do Amazon Elastic Block Store, por exemplo, e deixar que o Workload Factory faça a comparação automaticamente.  Seja manual ou automaticamente, a calculadora determina qual serviço de armazenamento oferece o menor custo para suas necessidades de armazenamento.
 
-Se a calculadora de armazenamento determinar que o armazenamento mais econômico é o FSX for ONTAP, você pode criar ou salvar as configurações do FSX for ONTAP e usar a caixa de código para gerar modelos de infraestrutura como código, independentemente das permissões concedidas à fábrica de carga de trabalho.
+Se a calculadora de armazenamento determinar que o armazenamento mais econômico é o FSx para ONTAP, você pode criar ou salvar configurações do FSx para ONTAP e usar o Codebox para gerar modelos de infraestrutura como código, independentemente das permissões concedidas ao Workload Factory.
 
 
 
@@ -25,7 +25,7 @@ Duas opções de calculadora estão disponíveis para fazer a comparação de cu
 
 Explore a economia por meio da personalização: Você fornece as configurações para um ambiente de storage, incluindo o caso de uso, região, número de volumes ou sistemas de arquivos, quantidade de armazenamento, frequência de instantâneos, quantidade alterada por snapshot, IOPS provisionadas, taxa de transferência e muito mais.
 
-Explore a economia para ambientes de storage detetados: Links de fábrica de carga de trabalho para seus ambientes de storage existentes da AWS e acesse os detalhes para a calculadora para comparação automática. Você precisará conceder permissões de automação para usar o modo automático. Você pode alterar o caso de uso, mas todos os outros detalhes são determinados automaticamente no cálculo.
+Explore economias para ambientes de armazenamento detectados: o Workload Factory vincula-se aos seus ambientes de armazenamento AWS existentes e extrai os detalhes para a calculadora para comparação automática.  Você precisará conceder permissões de automação para usar o modo automático.  Você pode alterar o caso de uso, mas todos os outros detalhes são determinados automaticamente no cálculo.
 
 Além disso, você pode link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Adicionar credenciais da AWS"^]melhorar a precisão da análise da calculadora. Selecione *Calcule a poupança com base nos recursos existentes*. Você será redirecionado para a página Adicionar credenciais. Depois de adicionar credenciais, selecione os recursos existentes para comparar com o FSX for ONTAP e selecione *explorar economia*.
 
@@ -41,7 +41,7 @@ Siga as etapas abaixo da guia para sua seleção de armazenamento.
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *Explore savings* e depois *Amazon Elastic Block Store (EBS)*.
+. No bloco Armazenamento, selecione *Explorar economias* e depois *Amazon Elastic Block Store (EBS)*.
 . Na calculadora de economia de armazenamento, forneça os seguintes detalhes:
 +
 .. *Caso de uso*: Obrigatório. Selecione um caso de uso no menu suspenso. O caso de uso selecionado determina as caraterísticas do sistema de arquivos FSX for ONTAP para comparação.
@@ -62,7 +62,7 @@ Siga as etapas abaixo da guia para sua seleção de armazenamento.
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *Explore poupança* e depois *Amazon FSX para Windows File Server*.
+. No bloco Armazenamento, selecione *Explorar economias* e depois * Amazon FSx for Windows File Server*.
 . Na calculadora de economia de armazenamento, forneça os seguintes detalhes:
 +
 .. *Caso de uso*: Obrigatório. Selecione um caso de uso no menu suspenso. O caso de uso selecionado determina as caraterísticas do sistema de arquivos FSX for ONTAP para comparação.
@@ -84,7 +84,7 @@ Siga as etapas abaixo da guia para sua seleção de armazenamento.
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No armazenamento, selecione *Explore Savings* e depois *Amazon Elastic File System (EFS)*.
+. No bloco Armazenamento, selecione *Explorar economias* e depois *Amazon Elastic File System (EFS)*.
 . Na calculadora de economia de armazenamento, forneça os seguintes detalhes:
 +
 .. *Caso de uso*: Obrigatório. Selecione um caso de uso no menu suspenso. O caso de uso selecionado determina as caraterísticas do sistema de arquivos FSX for ONTAP para comparação.
@@ -116,7 +116,7 @@ Para mudar para o FSX for ONTAP, siga as instruções <<Implante o FSX para sist
 == Explore a economia para ambientes de storage detetados
 
 .Antes de começar
-Para que a fábrica da carga de trabalho detete ambientes de armazenamento Amazon Elastic Block Store (EBS), Elastic File System (EFS) e FSX for Windows File Server em sua conta da AWS, verifique se você link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["conceder permissões _somente leitura_"^] está em sua conta da AWS.
+Para que o Workload Factory detecte os ambientes de armazenamento do Amazon Elastic Block Store (EBS), Elastic File System (EFS) e FSx para Windows File Server em sua conta da AWS, certifique-se delink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["conceder permissões _somente leitura_"^] na sua conta da AWS.
 
 
 NOTE: Esta opção de calculadora não suporta cálculos para snapshots do EBS e cópias de sombra do FSX para Windows File Server. Ao explorar a economia por meio da personalização, você pode fornecer detalhes de snapshot do EBS e do FSX para Windows File Server.
@@ -129,8 +129,8 @@ Siga as etapas abaixo da guia para sua seleção de armazenamento.
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. No inventário de armazenamento, selecione a guia *explorar economia*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *Explorar economias*.
 . Na guia *Elastic Block Store (EBS)*, selecione a(s) instância(s) para comparar com o FSX for ONTAP e selecione *Explore savings*.
 . A calculadora de economia de armazenamento é exibida. As seguintes caraterísticas do sistema de storage são pré-preenchidas com base na(s) instância(s) selecionada(s):
 +
@@ -148,13 +148,13 @@ Siga as etapas abaixo da guia para sua seleção de armazenamento.
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. No inventário de armazenamento, selecione a guia *explorar economia*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *Explorar economias*.
 . Na guia *Amazon FSX para servidor de arquivos do Windows*, selecione a(s) instância(s) para comparar com o FSX for ONTAP e selecione *explorar economia*.
 . A calculadora de economia de armazenamento é exibida. As seguintes características do sistema de storage são pré-preenchidas com base no tipo de implantação da(s) instância(s) selecionada(s):
 +
 .. *Caso de uso*: O caso de uso para sua configuração. Você pode alterar o caso de uso, se necessário.
-.. * Sistemas de arquivos selecionados
+.. *Sistemas de arquivos selecionados*
 .. *Valor total de armazenamento (TIB)*
 .. *IOPS SSD provisionado*
 .. *Taxa de transferência (MIB/s)*
@@ -167,8 +167,8 @@ Siga as etapas abaixo da guia para sua seleção de armazenamento.
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. No inventário de armazenamento, selecione a guia *explorar economia*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *Explorar economias*.
 . Na guia *Elastic File System (EFS)*, selecione a(s) instância(s) para comparar com o FSX for ONTAP e selecione *Explore savings*.
 . A calculadora de economia de armazenamento é exibida. As seguintes caraterísticas do sistema de storage são pré-preenchidas com base na(s) instância(s) selecionada(s):
 +
@@ -199,7 +199,7 @@ Além disso, role para baixo até a parte inferior da página para exibir o rela
 
 Se você quiser mudar para o FSX for ONTAP para obter economia de custos, selecione *Create* para criar o(s) sistema(s) de arquivos diretamente do assistente Create an FSX for ONTAP file system ou selecione *Save* para salvar a(s) configuração(s) recomendada(s) para mais tarde.
 
-Métodos de implantação:: No modo _Automate_, você pode implantar o sistema de arquivos FSX for ONTAP diretamente da fábrica de carga de trabalho. Você também pode copiar o conteúdo da janela do Codebox e implantar o sistema usando um dos métodos do Codebox.
+Métodos de implantação:: No modo _automatizar_, você pode implantar o sistema de arquivos FSx para ONTAP diretamente do Workload Factory.  Você também pode copiar o conteúdo da janela Codebox e implantar o sistema usando um dos métodos do Codebox.
 +
 --
 No modo _básico_, você pode copiar o conteúdo da janela do Codebox e implantar o sistema de arquivos FSX for ONTAP usando um dos métodos do Codebox.

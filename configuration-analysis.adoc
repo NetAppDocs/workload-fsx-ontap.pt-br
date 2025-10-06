@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: configuration-analysis.html 
 keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
-summary: A fábrica de carga de trabalho do BlueXP  analisa regularmente as configurações do sistema de arquivos do Amazon FSX for NetApp ONTAP para determinar se há algum problema. 
+summary: O NetApp Workload Factory analisa regularmente as configurações do sistema de arquivos Amazon FSx for NetApp ONTAP para determinar se há algum problema. 
 ---
 = Análise de configuração para sistemas de arquivos FSX for ONTAP
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: A fábrica de carga de trabalho do BlueXP  analisa regularmente as con
 
 
 [role="lead"]
-A fábrica de carga de trabalho do BlueXP  analisa regularmente as configurações do sistema de arquivos do Amazon FSX for NetApp ONTAP para determinar se há algum problema. Quando os problemas são encontrados, a fábrica de workloads mostra quais são os problemas e explica o que precisa ser alterado para garantir que o storage do seu sistema de arquivos atinja o máximo de desempenho, economia e conformidade com as práticas recomendadas.
+O NetApp Workload Factory analisa regularmente as configurações do sistema de arquivos Amazon FSx for NetApp ONTAP para determinar se há algum problema.  Quando problemas são encontrados, o Workload Factory mostra quais são os problemas e explica o que precisa ser alterado para garantir que o armazenamento do seu sistema de arquivos atinja o desempenho máximo, a eficiência de custos e a conformidade com as práticas recomendadas.
 
 Os principais recursos incluem:
 
@@ -26,7 +26,7 @@ Os principais recursos incluem:
 
 == Status bem arquitetado
 
-No console de fábrica da carga de trabalho no nível do sistema de arquivos, o status bem arquitetado é listado para todos os sistemas de arquivos FSX for ONTAP. Os Estados bem arquitetados são categorizados como "questões", "não analisadas" ou "bem arquitetadas". A seleção do status bem arquitetado redireciona você para a guia de status bem arquitetado dentro do sistema de arquivos, onde você pode encontrar a pontuação bem arquitetada, categorias de configuração, todas as configurações para o sistema de arquivos.
+No console do Workload Factory, no nível do sistema de arquivos, o status bem arquitetado é listado para todos os sistemas de arquivos FSx para ONTAP .  Os status bem arquitetados são categorizados como "problemas", "não analisados" ou "bem arquitetados".  Selecionar o status bem-arquitetado redireciona você para a guia de status bem-arquitetado no sistema de arquivos, onde você pode encontrar a pontuação bem-arquitetada, categorias de configuração e todas as configurações do sistema de arquivos.
 
 Pontuação bem arquitetada:: A pontuação inclui todas as configurações analisadas atualmente e aparece como uma porcentagem. Uma pontuação de 25% significa que 25% das configurações do sistema de arquivos são bem arquitetadas.
 Categorias de configuração:: As configurações do sistema de arquivos são organizadas em categorias alinhadas com os cinco pilares a seguir do AWS Well-Architected Framework.
@@ -46,7 +46,7 @@ Categorias de configuração:: As configurações do sistema de arquivos são or
 
 == Requisitos de análise
 
-Para uma análise completa do sistema de arquivos, você deve associar um link. A conectividade de link permite que o workload analise de fábrica todas as configurações do sistema de arquivos, como proteção de dados e performance.
+Para uma análise completa do sistema de arquivos, você deve associar um link.  A conectividade de link permite que o Workload Factory analise todas as configurações do sistema de arquivos, como proteção de dados e desempenho.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"].
 

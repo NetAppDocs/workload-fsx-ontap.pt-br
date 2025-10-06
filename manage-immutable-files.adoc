@@ -4,7 +4,7 @@ permalink: manage-immutable-files.html
 keywords: enable immutable files, disable immutable files, lock files, unlock files 
 summary: Você pode atualizar certas configurações de arquivos imutáveis quando o recurso estiver ativado. 
 ---
-= Gerencie arquivos imutáveis para um volume na fábrica de carga de trabalho do BlueXP 
+= Gerenciar arquivos imutáveis ​​para um volume no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -17,9 +17,10 @@ Observe que a ativação de arquivos imutáveis só é possível durante link:cr
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Selecione a guia *volumes*.
-. Na guia volumes, selecione o menu de três pontos do volume a ser clonado.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume a ser atualizado e, em seguida, selecione *Gerenciar*.
+. Na aba Volumes, selecione o menu de ações do volume a ser clonado.
 . Selecione *ações de proteção de dados* e, em seguida, *Gerenciar arquivos imutáveis*.
 . Na página Gerenciar arquivos immutáveis, você pode atualizar o seguinte:
 +
@@ -35,6 +36,7 @@ Observe que a ativação de arquivos imutáveis só é possível durante link:cr
 
 
 ** *AUTOCOMMIT*: Ative ou desative o recurso para enviar automaticamente arquivos para WORM que não foram modificados durante o período AUTOCOMMIT.
+** *Exclusão privilegiada*: habilita ou desabilita o recurso.  Habilitar o recurso permite que um administrador do SnapLock exclua um volume WORM não expirado.  Este recurso só é suportado no modo de retenção Enterprise.
 ** *Modo de adição de volume*: Ative ou desative o recurso. Ativar o modo de adição de volume permite adicionar novo conteúdo a arquivos WORM.
 
 

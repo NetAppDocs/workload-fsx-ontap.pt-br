@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: manage-cifs-share.html 
 keywords: cifs, smb, SMB/CIFS, cifs share, change, update, modify, delete, create 
-summary: Gerenciar o compartilhamento SMB/CIFS de um volume no workload factory inclui criação, determinação de acesso de usuários e grupos e exclusão. 
+summary: Gerenciar o compartilhamento SMB/CIFS de um volume no Workload Factory inclui criação, determinação de acesso de usuários e grupos e exclusão. 
 ---
-= Gerenciar o compartilhamento SMB/CIFS para um volume na fábrica de carga de trabalho
+= Gerenciar o compartilhamento SMB/CIFS para um volume no Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-O gerenciamento do compartilhamento SMB/CIFS de um volume no workload factory inclui a criação do compartilhamento SMB/CIFS, a determinação dos usuários e grupos aos quais será concedido acesso e o nível de permissões a serem concedidos a eles, além da exclusão do compartilhamento SMB/CIFS.
+O gerenciamento do compartilhamento SMB/CIFS de um volume no Workload Factory inclui a criação do compartilhamento SMB/CIFS, a determinação dos usuários e grupos aos quais será concedido acesso e o nível de permissões a serem concedidos a eles, além da exclusão do compartilhamento SMB/CIFS.
 
 .Antes de começar
 Antes de começar, faça o seguinte:
@@ -28,10 +28,11 @@ Siga as etapas para criar um compartilhamento SMB/CIFS para um volume.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume a ser atualizado e selecione *Gerenciar*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume a ser atualizado e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. No separador volumes, selecione o menu de três pontos do volume para o qual pretende alterar a partilha SMB.
+. Na guia Volumes, selecione o menu de ações do volume para alterar o compartilhamento SMB.
 . Selecione *Ações avançadas* e depois *Gerenciar compartilhamentos SMB/CIFS*.
 . Na página Gerenciar compartilhamentos SMB/CIFS, selecione *Criar compartilhamento SMB/CIFS*.
 . Na caixa de diálogo Criar compartilhamento SMB/CIFS, forneça o seguinte:
@@ -68,10 +69,10 @@ Siga as etapas para alterar as configurações de compartilhamento SMB/CIFS para
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume a ser atualizado e selecione *Gerenciar*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Na aba *FSx para ONTAP*, selecione o menu de ações do sistema de arquivos com o volume a ser atualizado e então selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. No separador volumes, selecione o menu de três pontos do volume para o qual pretende alterar a partilha SMB.
+. Na guia Volumes, selecione o menu de ações do volume para alterar o compartilhamento SMB.
 . Selecione *Ações avançadas* e depois *Gerenciar compartilhamentos SMB/CIFS*.
 . Na página Gerenciar compartilhamentos SMB/CIFS, selecione *Exibir e editar*.
 . Altere as permissões de acesso SMB/CIFS ou os usuários ou grupos aos quais deseja conceder permissões.
@@ -89,12 +90,12 @@ Siga as etapas para excluir um compartilhamento SMB/CIFS de um volume.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume a ser atualizado e selecione *Gerenciar*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Na aba *FSx para ONTAP*, selecione o menu de ações do sistema de arquivos com o volume a ser atualizado e então selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. No separador volumes, selecione o menu de três pontos do volume para o qual pretende alterar a partilha SMB.
+. Na guia Volumes, selecione o menu de ações do volume para alterar o compartilhamento SMB.
 . Selecione *Ações avançadas* e depois *Gerenciar compartilhamentos SMB/CIFS*.
-. Na página Gerenciar compartilhamentos SMB/CIFS, selecione o menu de três pontos do compartilhamento SMB/CIFS e selecione *Excluir*.
+. Na página Gerenciar compartilhamentos SMB/CIFS, selecione o menu de ações do compartilhamento SMB/CIFS e selecione *Excluir*.
 +
 Excluir o compartilhamento SMB/CIFS o torna indisponível e inacessível para qualquer usuário que queira montá-lo.
 

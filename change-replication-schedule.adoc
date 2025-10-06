@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: change-replication-schedule.html 
 keywords: change replication schedule, update replication schedule, edit replication schedule 
-summary: Altere a programação de replicação do volume de origem em uma relação de replicação na fábrica de workloads da BlueXP . 
+summary: Altere o agendamento de replicação do volume de origem em um relacionamento de replicação no NetApp Workload Factory. 
 ---
 = Alterar o agendamento de replicação de um volume de origem
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Altere a programação de replicação do volume de origem em uma rela�
 
 
 [role="lead"]
-Altere a programação de replicação do volume de origem em uma relação de replicação na fábrica de workloads da BlueXP .
+Altere o agendamento de replicação do volume de origem em um relacionamento de replicação no NetApp Workload Factory.
 
 Escolha com que frequência os snapshots do volume de origem são transferidos para o volume replicado para corresponder aos objetivos de ponto (RPOs) necessários.
 
@@ -19,10 +19,11 @@ Quando um cluster ONTAP no local é o destino para a relação de replicação, 
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos a ser atualizado e selecione *Gerenciar*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos a ser atualizado e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *relacionamentos de replicação*.
-. Na guia relacionamentos de replicação, selecione o menu de três pontos da programação de relacionamento de replicação a ser alterada.
+. Na guia Relacionamentos de replicação, selecione o menu de ações do agendamento do relacionamento de replicação a ser alterado.
 . Selecione *Editar intervalo de replicação*.
 . Na caixa de diálogo Editar intervalo de replicação, selecione a frequência da transferência de instantâneos a partir do volume de origem. Pode selecionar entre as seguintes frequências:
 +

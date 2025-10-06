@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: monitor-operations.html 
 keywords: monitor databases, monitor jobs, track storage jobs, track jobs 
-summary: Acompanhe o FSX para ONTAP, credenciais e operações de link e monitore o progresso do trabalho com o Rastreador na fábrica de carga de trabalho do BlueXP  para armazenamento. 
+summary: Rastreie o FSx para ONTAP, credenciais e operações de link e monitore o progresso do trabalho com o Tracker no NetApp Workload Factory para Storage. 
 ---
-= Monitore as operações de storage com o Tracker na fábrica de workloads da BlueXP 
+= Monitore as operações de armazenamento com o Tracker no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Monitore e acompanhe a execução do FSX for ONTAP, credenciais e operações de link e monitore o progresso das tarefas com o Rastreador na fábrica de carga de trabalho do BlueXP .
+Monitore e acompanhe a execução do FSx para ONTAP, credenciais e operações de link e monitore o progresso da tarefa com o Tracker no NetApp Workload Factory.
 
 .Sobre esta tarefa
 A fábrica de carga de trabalho fornece o Rastreador, um recurso de monitoramento, para que você possa monitorar e acompanhar o progresso e o status do FSX for ONTAP, credenciais e vincular operações, analisar detalhes de tarefas e subtarefas operacionais e diagnosticar problemas ou falhas.
@@ -42,12 +42,12 @@ Retenção de eventos:: Os eventos são mantidos na interface do usuário por 30
 
 == Monitorizar e monitorizar as operações
 
-Acompanhe e monitore operações no BlueXP  com o Rastreador.
+Rastreie e monitore operações no NetApp Console com o Tracker.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. No inventário de armazenamento, selecione o menu de configurações de conta e, em seguida, selecione *Tracker*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *Administração* e depois *Links*.
 +
 image:screenshot-menu-tracker-option.png["Uma captura de tela do menu de configurações da conta com a opção Rastreador realçada."]
 
@@ -62,7 +62,7 @@ Visualize a solicitação de API na caixa de código para uma tarefa no Tracker.
 
 .Passos
 . No Rastreador, selecione uma tarefa.
-. Selecione o menu de três pontos e, em seguida, selecione *View API Request*.
+. Selecione o menu de ações e depois selecione *Exibir solicitação de API*.
 
 
 
@@ -76,7 +76,7 @@ NOTE: Apenas o número x de tentativas é permitido para uma operação com falh
 
 .Passos
 . No Rastreador, selecione uma operação com falha.
-. Selecione o menu de três pontos e, em seguida, selecione *Repetir*.
+. Selecione o menu de ações e depois selecione *Repetir*.
 
 
 .Resultado
@@ -90,7 +90,7 @@ Edite os parâmetros da operação com falha e tente novamente a operação fora
 
 .Passos
 . No Rastreador, selecione uma operação com falha.
-. Selecione o menu de três pontos e, em seguida, selecione *Editar e tentar novamente*.
+. Selecione o menu de ações e depois selecione *Editar e tentar novamente*.
 +
 Você é redirecionado para a página de operação, onde você pode editar os parâmetros e tentar novamente a operação.
 

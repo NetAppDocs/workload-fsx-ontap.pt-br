@@ -4,21 +4,22 @@ permalink: manage-volume-tags.html
 keywords: volume tags, edit volume tags, edit tags 
 summary: As tags podem ajudá-lo a categorizar seus recursos. Você pode adicionar, editar e remover tags de volume a qualquer momento para o FSX for ONTAP volumes. 
 ---
-= Gerenciar tags de volume na fábrica de carga de trabalho do BlueXP 
+= Gerenciar tags de volume no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-As tags podem ajudá-lo a categorizar seus recursos. Você pode adicionar, editar e remover tags de volume a qualquer momento do FSX for ONTAP volumes na fábrica de carga de trabalho do BlueXP .
+As tags podem ajudar você a categorizar seus recursos.  Você pode adicionar, editar e remover tags de volume a qualquer momento para volumes FSx for ONTAP no NetApp Workload Factory.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume a ser atualizado e selecione *Gerenciar*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume a ser atualizado e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. No separador volumes, selecione o menu de três pontos para o volume para o qual pretende modificar as etiquetas.
+. Na guia Volumes, selecione o menu de ações do volume para modificar as tags.
 . Selecione *ações básicas* e, em seguida, *Editar etiquetas de volume*.
 . Na página Editar etiquetas de volume, adicione, edite ou remova tags.
 +

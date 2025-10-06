@@ -2,25 +2,26 @@
 sidebar: sidebar 
 permalink: delete-replication.html 
 keywords: delete replication 
-summary: Exclua uma relação de replicação na fábrica de workloads do BlueXP , conforme necessário. 
+summary: Exclua um relacionamento de replicação no NetApp Workload Factory conforme necessário. 
 ---
-= Excluir uma relação de replicação na fábrica de carga de trabalho do BlueXP 
+= Excluir um relacionamento de replicação no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Excluir uma relação de replicação na fábrica de carga de trabalho do BlueXP . Quando você exclui uma relação de replicação, ela remove a relação de replicação entre o volume de origem e destino. Após a exclusão da relação de replicação, ambos os volumes continuam a existir independentemente com os dados atuais que contêm.
+Excluir um relacionamento de replicação no NetApp Workload Factory.  Quando você exclui um relacionamento de replicação, ele remove o relacionamento de replicação entre os volumes de origem e de destino.  Após a exclusão do relacionamento de replicação, ambos os volumes continuam a existir independentemente com os dados atuais que eles contêm.
 
 Quando você exclui uma relação de replicação, o FSX for ONTAP também exclui os snapshots de replicação comuns do volume de origem e destino.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos a ser atualizado e selecione *Gerenciar*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos a ser atualizado e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *relacionamentos de replicação*.
-. Na guia relacionamentos de replicação, selecione o menu de três pontos da relação de replicação a ser excluída.
+. Na guia Relacionamentos de replicação, selecione o menu de ações do relacionamento de replicação a ser excluído.
 . Selecione *Eliminar*.
 . Na caixa de diálogo Excluir relacionamento, selecione *Excluir*.
 

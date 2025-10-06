@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: performance-reference.html 
 keywords: performance, FSx for ONTAP performance 
-summary: Referência de desempenho é fornecida para o FSX for ONTAP na fábrica de workloads do BlueXP . 
+summary: A referência de desempenho é fornecida para FSx para ONTAP no NetApp Workload Factory. 
 ---
-= Desempenho do FSX para ONTAP na fábrica de cargas de trabalho do BlueXP 
+= Desempenho do FSx para ONTAP no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

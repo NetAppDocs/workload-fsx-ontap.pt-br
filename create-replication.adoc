@@ -4,14 +4,14 @@ permalink: create-replication.html
 keywords: replication, replicate 
 summary: Crie uma relação de replicação para um sistema de arquivos FSX for ONTAP para evitar a perda de dados em caso de um desastre inesperado. 
 ---
-= Criar uma relação de replicação na fábrica de workloads do BlueXP 
+= Crie um relacionamento de replicação no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Crie uma relação de replicação para um sistema de arquivos FSX for ONTAP na fábrica de cargas de trabalho do BlueXP  para evitar a perda de dados em caso de um desastre inesperado.
+Crie um relacionamento de replicação para um sistema de arquivos FSx para ONTAP no NetApp Workload Factory para evitar perda de dados em caso de um desastre imprevisto.
 
 .Sobre esta tarefa
 A replicação é uma camada adicional de proteção de dados que é essencial para o caso de uma região onde seus dados residem sofrer um desastre. A perda de dados pode ser evitada se você usar replicação entre regiões.
@@ -25,7 +25,7 @@ Ao replicar um volume de origem com arquivos imutáveis, o volume de destino e o
 .Antes de começar
 Certifique-se de que cumpre os seguintes pré-requisitos antes de começar.
 
-* Você precisa ter dois sistemas de arquivos disponíveis no inventário de storage para criar uma relação de replicação.
+* Você deve ter dois sistemas de arquivos disponíveis no seu Armazenamento para criar um relacionamento de replicação.
 * Os dois sistemas de arquivos usados para a relação de replicação devem ter um link associado. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após os associados da ligação, volte a esta operação.
 
 
@@ -35,8 +35,9 @@ Siga as etapas a seguir para replicar volumes selecionados ou replicar todos os 
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos que contém o(s) volume(s) para replicar e selecione *Gerenciar*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos que contém o(s) volume(s) a ser(em) replicado(s) e, em seguida, selecione *Gerenciar*.
 . Replique todos os volumes em um sistema de arquivos ou replique volumes selecionados.
 +
 ** Para replicar todos os volumes em um sistema de arquivos: Na visão geral do sistema de arquivos, selecione *replique dados*.
@@ -51,7 +52,7 @@ Na tabela volumes, selecione um ou mais volumes e, em seguida, selecione *repliq
 .. *FSX para sistema de arquivos ONTAP*: Selecione credenciais, região e nome do sistema de arquivos FSX for ONTAP para o sistema de arquivos FSX for ONTAP de destino.
 .. *Nome da VM de armazenamento*: Selecione a VM de armazenamento no menu suspenso. A VM de armazenamento selecionada é o destino para todos os volumes selecionados neste relacionamento de replicação.
 .. *Nome do volume*: O nome do volume de destino é gerado automaticamente com o seguinte `{OriginalVolumeName}_copy` formato . Pode utilizar o nome do volume gerado automaticamente ou introduzir outro nome de volume.
-.. *Caso de uso*: Selecione um dos seguintes casos de uso para a replicação. Dependendo do caso de uso selecionado, a fábrica de carga de trabalho preenche o formulário com os valores recomendados de acordo com as práticas recomendadas. Você pode aceitar os valores recomendados ou fazer alterações ao preencher o formulário.
+.. *Caso de uso*: Selecione um dos seguintes casos de uso para a replicação.  Dependendo do caso de uso selecionado, o Workload Factory preenche o formulário com valores recomendados de acordo com as melhores práticas.  Você pode aceitar os valores recomendados ou fazer alterações à medida que preenche o formulário.
 +
 *** Migração: Transfere seus dados para o sistema de arquivos FSX for ONTAP de destino
 *** Recuperação de desastres quentes: Garante alta disponibilidade e recuperação rápida de desastres para cargas de trabalho críticas
@@ -77,10 +78,10 @@ Para todos os casos de uso, se você habilitar snapshots para retenção de long
 
 .. *Política de disposição em categorias*: Selecione a política de disposição em categorias para os dados armazenados no volume de destino. A política de disposição em categorias padrão é a política de disposição em categorias recomendada para o caso de uso selecionado.
 +
-_Balanced (Auto)_ é a política de disposição em camadas padrão ao criar um volume usando o console de fábrica da carga de trabalho. Para obter mais informações sobre políticas de disposição em camadas de volume, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidade de armazenamento de volume"^]documentação do AWS FSX for NetApp ONTAP. Observe que a fábrica do workload usa nomes baseados em casos de uso no console de fábrica de carga de trabalho para políticas de disposição em camadas e inclui nomes de políticas de disposição em camadas do FSX for ONTAP entre parênteses.
+_Balanceado (Automático)_ é a política de camadas padrão ao criar um volume usando o console do Workload Factory.  Para obter mais informações sobre políticas de níveis de volume, consultelink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidade de armazenamento de volume"^] na documentação do AWS FSx para NetApp ONTAP .  Observe que o Workload Factory usa nomes baseados em casos de uso no console do Workload Factory para políticas de camadas e inclui nomes de políticas de camadas do FSx para ONTAP entre parênteses.
 
 +
-Se você selecionou o caso de uso de migração, a fábrica de workload selecionará automaticamente para copiar a política de disposição em categorias do volume de origem para o volume de destino. Você pode desmarcar a opção para copiar a política de disposição em camadas e selecionar uma política de disposição em camadas que se aplique ao volume selecionado para replicação.
+Se você selecionou o caso de uso de migração, o Workload Factory seleciona automaticamente copiar a política de camadas do volume de origem para o volume de destino.  Você pode desmarcar a opção de copiar a política de camadas e selecionar uma política de camadas que se aplique ao volume selecionado para replicação.
 
 .. *Taxa máxima de transferência*: Selecione *limitada* e insira o limite máximo de transferência em MB/s. Em alternativa, selecione *Unlimited*.
 +

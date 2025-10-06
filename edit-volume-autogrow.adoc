@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: edit-volume-autogrow.html 
 keywords: volume autogrow, increase volume capacity, enable autogrow 
-summary: Habilite o crescimento automático de volume para permitir que a fábrica de carga de trabalho gerencie a capacidade de volume para você. Você pode desativá-lo a qualquer momento. 
+summary: Habilite o crescimento automático de volume para permitir que o Workload Factory gerencie a capacidade de volume para você.  Você pode desativá-lo a qualquer momento. 
 ---
-= Habilitar crescimento automático de volume na fábrica de carga de trabalho
+= Habilitar crescimento automático de volume no Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Habilite o crescimento automático de volume para permitir que a fábrica de carga de trabalho gerencie a capacidade de volume para você. Você pode desativá-lo a qualquer momento.
+Habilite o crescimento automático de volume para permitir que o Workload Factory gerencie a capacidade de volume para você.  Você pode desativá-lo a qualquer momento.
 
 Opcionalmente, você pode aumentar manualmente a capacidade de volume de um volume a qualquer momento usando o link:increase-volume-capacity.html["recurso de aumento de capacidade de volume"].
 
@@ -23,10 +23,11 @@ Para habilitar o crescimento automático de volume, você deve associar um link.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia FSX for ONTAP, selecione o menu de três pontos do sistema de arquivos com o volume a ser atualizado e selecione *Gerenciar*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume a ser atualizado e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. No separador volumes, selecione o menu de três pontos para o volume que pretende modificar.
+. Na guia Volumes, selecione o menu de ações do volume que você deseja modificar.
 . Selecione *Ações básicas* e depois *Definir aumento automático de volume*.
 . Na caixa de diálogo Definir crescimento automático, ative o crescimento automático de volume para expandir automaticamente a capacidade do volume até que ele atinja o tamanho máximo. Este recurso permite o aumento do uso de dados, garantindo operações ininterruptas.
 +

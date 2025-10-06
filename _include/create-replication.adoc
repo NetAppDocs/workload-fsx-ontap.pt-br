@@ -4,7 +4,7 @@
 
 . *Nome da VM de armazenamento*: Selecione a VM de armazenamento no menu suspenso. A VM de armazenamento selecionada é o destino para todos os volumes selecionados neste relacionamento de replicação.
 . *Nome do volume*: O nome do volume de destino é gerado automaticamente com o seguinte `{OriginalVolumeName}_copy` formato . Pode utilizar o nome do volume gerado automaticamente ou introduzir outro nome de volume.
-. *Caso de uso*: Selecione um dos seguintes casos de uso para a replicação. Dependendo do caso de uso selecionado, a fábrica de carga de trabalho preenche o formulário com os valores recomendados de acordo com as práticas recomendadas. Você pode aceitar os valores recomendados ou fazer alterações ao preencher o formulário.
+. *Caso de uso*: Selecione um dos seguintes casos de uso para a replicação.  Dependendo do caso de uso selecionado, o Workload Factory preenche o formulário com valores recomendados de acordo com as melhores práticas.  Você pode aceitar os valores recomendados ou fazer alterações à medida que preenche o formulário.
 +
 ** Migração: Transfere seus dados para o sistema de arquivos FSX for ONTAP de destino
 ** Recuperação de desastres quentes: Garante alta disponibilidade e recuperação rápida de desastres para cargas de trabalho críticas
@@ -30,10 +30,10 @@ Para todos os casos de uso, se você habilitar snapshots para retenção de long
 
 . *Política de disposição em categorias*: Selecione a política de disposição em categorias para os dados armazenados no volume de destino. A política de disposição em categorias padrão é a política de disposição em categorias recomendada para o caso de uso selecionado.
 +
-_Balanced (Auto)_ é a política de disposição em camadas padrão ao criar um volume usando o console de fábrica da carga de trabalho. Para obter mais informações sobre políticas de disposição em camadas de volume, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidade de armazenamento de volume"^]documentação do AWS FSX for NetApp ONTAP. Observe que a fábrica do workload usa nomes baseados em casos de uso no console de fábrica de carga de trabalho para políticas de disposição em camadas e inclui nomes de políticas de disposição em camadas do FSX for ONTAP entre parênteses.
+_Balanceado (Automático)_ é a política de camadas padrão ao criar um volume usando o console do Workload Factory.  Para obter mais informações sobre políticas de níveis de volume, consultelink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidade de armazenamento de volume"^] na documentação do AWS FSx para NetApp ONTAP .  Observe que o Workload Factory usa nomes baseados em casos de uso no console do Workload Factory para políticas de camadas e inclui nomes de políticas de camadas do FSx para ONTAP entre parênteses.
 
 +
-Se você selecionou o caso de uso de migração, a fábrica de workload selecionará automaticamente para copiar a política de disposição em categorias do volume de origem para o volume de destino. Você pode desmarcar a opção para copiar a política de disposição em camadas e selecionar uma política de disposição em camadas que se aplique ao volume selecionado para replicação.
+Se você selecionou o caso de uso de migração, o Workload Factory seleciona automaticamente copiar a política de camadas do volume de origem para o volume de destino.  Você pode desmarcar a opção de copiar a política de camadas e selecionar uma política de camadas que se aplique ao volume selecionado para replicação.
 
 . *Taxa máxima de transferência*: Selecione *limitada* e insira o limite máximo de transferência em MB/s. Em alternativa, selecione *Unlimited*.
 +

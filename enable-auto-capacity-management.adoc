@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: enable-auto-capacity-management.html 
 keywords: auto capacity, automatic capacity management, file system capacity 
-summary: A ativação desse recurso permite que a carga de trabalho adicione automaticamente armazenamento incremental a um sistema de arquivos FSX for ONTAP, conforme as necessidades de capacidade mudam ao longo do tempo. 
+summary: Habilitar esse recurso permite que o Workload Factory adicione automaticamente armazenamento incremental a um sistema de arquivos FSx para ONTAP conforme as necessidades de capacidade mudam ao longo do tempo. 
 ---
 = Ative o gerenciamento automático de capacidade para um sistema de arquivos FSX for ONTAP
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: A ativação desse recurso permite que a carga de trabalho adicione aut
 
 
 [role="lead"]
-A ativação do gerenciamento automático de capacidade permite que a fábrica de carga de trabalho do BlueXP adicione automaticamente armazenamento incremental a um sistema de arquivos FSx para ONTAP conforme as necessidades de capacidade mudam ao longo do tempo. Além disso, a ativação desse recurso elimina a necessidade de monitorar a capacidade manualmente e reduz o risco de leituras e gravações impactantes de dados do aplicativo.
+Habilitar o gerenciamento automático de capacidade permite que o NetApp Workload Factory adicione automaticamente armazenamento incremental a um sistema de arquivos FSx para ONTAP conforme as necessidades de capacidade mudam ao longo do tempo.  Além disso, habilitar esse recurso elimina a necessidade de monitorar a capacidade manualmente e reduz o risco de leituras e gravações impactantes de dados do aplicativo.
 
 .Sobre esta tarefa
 Uma verificação do sistema de arquivos FSX for ONTAP ocorre a cada 30 minutos para determinar se o armazenamento incremental precisa ser adicionado e para verificar se há inodes de volume disponíveis, ou o número máximo de arquivos e pastas em um volume, para que sua contagem aumente de acordo com os limites de gerenciamento automático de capacidade configurados.
@@ -23,15 +23,16 @@ A quantidade máxima de capacidade de armazenamento SSD para todos os sistemas d
 .Antes de começar
 Considere o seguinte antes de começar:
 
-* Você deve ter credenciais com permissões de _leitura/gravação_ no workload factory para concluir esta tarefa.
+* Você deve ter credenciais com permissões de _leitura/gravação_ no Workload Factory para concluir esta tarefa.
 * Para garantir que os inodes de volume aumentem junto com a capacidade de armazenamento, você deve associar um link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após os associados da ligação, volte a esta operação.
 * Você não deve habilitar esse recurso durante a migração de dados, pois a AWS impõe um período mínimo de resfriamento de seis horas entre os aumentos de capacidade do SSD. Essa restrição pode atrasar os ajustes, portanto, planeje-se adequadamente.
 
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos para habilitar o gerenciamento automático de capacidade.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos para habilitar o gerenciamento automático de capacidade.
 . Selecione *Gerenciar*.
 . Em informações, selecione o ícone de lápis ao lado de *Gerenciamento automático de capacidade*. O ícone de lápis aparece ao lado da seta suspensa quando o Mouse passa sobre a linha *Gerenciamento automático de capacidade*.
 . Na caixa de diálogo *Gerenciamento automático de capacidade*, forneça o seguinte:

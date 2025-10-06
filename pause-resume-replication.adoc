@@ -4,7 +4,7 @@ permalink: pause-resume-replication.html
 keywords: pause replication, quiesce replication, resume replication 
 summary: Pausar e retomar uma relação de replicação para que o volume de destino se torne o volume de origem. 
 ---
-= Faça uma pausa e retome uma relação de replicação na fábrica do workload do BlueXP 
+= Pausar e retomar um relacionamento de replicação no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -16,7 +16,7 @@ Pausar uma relação de replicação para interromper as atualizações de repli
 .Sobre esta tarefa
 Quando pausada, a relação de replicação entre o volume de origem e o volume de destino continua a existir. As transferências de dados são interrompidas e os volumes se tornam independentes. Para reativar a transferência de alterações do volume de origem para o volume de destino, retome a replicação.
 
-Quando você retoma uma replicação, todas as alterações no volume de destino são desfeitas e o workload do BlueXP  rehabilita a replicação de fábrica. O volume de destino passa de leitura/gravação para somente leitura e recebe atualizações do volume de origem no intervalo de replicação agendado novamente. Quando você retoma uma relação de replicação, o volume de destino volta para o instantâneo de replicação inicial mais recente, momento em que o processo de replicação de volume termina.
+Quando você retoma uma replicação, todas as alterações no volume de destino são desfeitas e o NetApp Workload Factory reativa a replicação.  O volume de destino passa de leitura/gravação para somente leitura e recebe atualizações do volume de origem no intervalo de replicação agendado novamente.  Quando você retoma um relacionamento de replicação, o volume de destino reverte para o instantâneo de replicação inicial mais recente e, nesse ponto, o processo de replicação do volume é reiniciado.
 
 .Antes de começar
 Se você pausar quando uma transferência estiver em andamento, a transferência não será afetada e a relação se tornará "Quiescente" até que a transferência seja concluída. Se a transferência atual for cancelada, será agora uma transferência futura e não será reiniciada.
@@ -27,10 +27,11 @@ Se você pausar quando uma transferência estiver em andamento, a transferência
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos a ser atualizado e selecione *Gerenciar*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos a ser atualizado e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *relacionamentos de replicação*.
-. Na guia relacionamentos de replicação, selecione o menu de três pontos da relação de replicação a ser pausada.
+. Na guia Relacionamentos de replicação, selecione o menu de ações do relacionamento de replicação a ser pausado.
 . Selecione *Pausa (quiesce)*.
 . Na caixa de diálogo *quiesce relation*, selecione *quiesce*.
 
@@ -49,10 +50,11 @@ NOTE: Os dados gravados no volume de origem original entre a última replicaçã
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos a ser atualizado e selecione *Gerenciar*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos a ser atualizado e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *relacionamentos de replicação*.
-. Na guia relacionamentos de replicação, selecione o menu de três pontos da relação de replicação a ser retomada.
+. Na guia Relacionamentos de replicação, selecione o menu de ações do relacionamento de replicação a ser retomado.
 . Selecione *Resume*.
 . Na caixa de diálogo Retomar relacionamento, selecione *Resume*.
 

@@ -4,23 +4,24 @@ permalink: restore-from-backup.html
 keywords: restore backup, new volume, volume restoration, backup 
 summary: Restaure um volume de um backup para qualquer sistema de arquivos do FSX for ONTAP na sua conta da AWS. 
 ---
-= Restaurar um volume de um backup no workload do BlueXP  de fábrica
+= Restaurar um volume de um backup no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Na fábrica de carga de trabalho do BlueXP , você pode restaurar um volume de um backup para qualquer sistema de arquivos do FSX for ONTAP na sua conta da AWS.
+No NetApp Workload Factory, você pode restaurar um volume de um backup para qualquer sistema de arquivos FSx for ONTAP na sua conta da AWS.
 
 A fábrica de carga de trabalho determina se você tem capacidade suficiente para a restauração e pode adicionar automaticamente a capacidade da camada de storage SSD, caso não o faça.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em armazenamento, selecione *ir para inventário de armazenamento*.
-. Na guia *FSX for ONTAP*, selecione o menu de três pontos do sistema de arquivos com o volume e selecione *Gerenciar*.
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. No separador *volumes*, selecione o menu de três pontos para o volume a restaurar a partir de uma cópia de segurança.
+. Na aba *Volumes*, selecione o menu de ações para o volume a ser restaurado a partir de um backup.
 . Selecione *ações de proteção de dados*, *FSX for ONTAP backup* e, em seguida, *Restaurar a partir de um backup*.
 . Na caixa de diálogo Restaurar a partir de uma cópia de segurança, forneça o seguinte:
 +
@@ -35,8 +36,8 @@ A fábrica de carga de trabalho determina se você tem capacidade suficiente par
 Quando a capacidade do sistema de arquivos é limitada, pode ocorrer o seguinte:
 
 +
-** A restauração pode empurrar a capacidade usada sobre o limite especificado. Você pode concluir a operação de restauração. Considere link:increase-file-system-capacity.html["Adicionar manualmente a capacidade da camada de storage SSD"] ou selecione a fábrica do workload para adicionar automaticamente a capacidade da camada de storage SSD.
-** A restauração requer capacidade SSD adicional. Para continuar, você deve selecionar o workload de fábrica para adicionar automaticamente a capacidade da camada de storage SSD.
+** A restauração pode levar a capacidade utilizada além do limite especificado.  Você pode concluir a operação de restauração.  Considerarlink:increase-file-system-capacity.html["Adicionar manualmente a capacidade da camada de storage SSD"] ou selecionar o Workload Factory para adicionar automaticamente a capacidade do nível de armazenamento SSD.
+** A restauração requer capacidade SSD adicional.  Você deve selecionar o Workload Factory para adicionar automaticamente a capacidade de armazenamento SSD para continuar.
 
 
 . Selecione *Restaurar*.
