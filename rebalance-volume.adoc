@@ -124,7 +124,7 @@ Os dados redistribuem-se pelos volumes de membros para rebalancear o volume Flex
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em *Armazenamento*, selecione *Ir para Armazenamento
+. Em *Armazenamento*, selecione *Ir para Armazenamento*
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos que contém o volume a ser rebalanceado e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
