@@ -29,4 +29,4 @@ A Workload Factory oferece assistência na criação de uma arquitetura de cofre
 Envie um e-mail para ng-FSx-CyberVault@netapp.com para começar.
 
 .Informações relacionadas
-Para obter mais informações sobre cofres cibernéticos e como configurar essa arquitetura, consulte olink:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html["Documentação do cofre cibernético ONTAP"^] .
+Para obter mais informações sobre cofres cibernéticos e como configurar essa arquitetura, consulte o link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html["Documentação do cofre cibernético ONTAP"^].
