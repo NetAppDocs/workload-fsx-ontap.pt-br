@@ -30,8 +30,8 @@ Como os requisitos para configurações de armazenamento variam, você pode desc
 A fábrica de carga de trabalho analisa o status bem arquitetado das seguintes configurações para os sistemas de arquivos FSX for ONTAP:
 
 * Confiabilidade: limite de capacidade SSD, snapshots locais agendados, FSx para backups ONTAP , replicação remota de dados e confiabilidade de dados para retenção de longo prazo
-* Segurança: Proteção autônoma contra ransomware da NetApp com IA (ARP/AI)
-* Excelência operacional: eficiências de armazenamento, gerenciamento automático de capacidade e limite de utilização de capacidade de arquivo de volume
+* Segurança: Proteção autônoma contra ransomware da NetApp com IA (ARP/AI) e acesso não autorizado a volumes.
+* Excelência operacional: gerenciamento automático de capacidade, limite de utilização da capacidade de arquivos de volume e utilização de volume próxima da capacidade máxima.
 * Otimização de custos: eficiências de armazenamento e hierarquização de dados
 
 
@@ -42,7 +42,7 @@ A fábrica de carga de trabalho analisa o status bem arquitetado das seguintes c
 Você pode corrigir problemas de configuração para um sistema de arquivos FSx for ONTAP ou para volumes selecionados em um sistema de arquivos.  Você pode selecionar uma ou mais configurações para corrigir.
 
 .Antes de começar
-* Você deve ter credenciais com permissões _somente leitura_ ou _leitura/gravação_. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Saiba como conceder permissões na sua conta da AWS"^].
+* Você develink:link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["conceder permissões de _operações e remediação_"^] na sua conta da AWS.
 * O processo de correção pode causar tempos de inatividade da instância ou interrupções de serviço. Certifique-se de revisar cada recomendação cuidadosamente antes de decidir corrigir um problema de configuração.
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Conecte-se a um sistema de arquivos FSx para ONTAP usando um link"]para a análise mais abrangente dos recursos do seu sistema de arquivos.
 

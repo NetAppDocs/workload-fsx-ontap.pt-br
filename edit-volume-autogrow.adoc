@@ -13,7 +13,7 @@ summary: Habilite o crescimento automático de volume para permitir que o Worklo
 [role="lead"]
 Habilite o crescimento automático de volume para permitir que o Workload Factory gerencie a capacidade de volume para você.  Você pode desativá-lo a qualquer momento.
 
-Opcionalmente, você pode aumentar manualmente a capacidade de volume de um volume a qualquer momento usando o link:increase-volume-capacity.html["recurso de aumento de capacidade de volume"].
+Opcionalmente, você pode aumentar manualmente a capacidade de volume de um volume a qualquer momento usando olink:adjust-volume-capacity.html["recurso de ajuste de capacidade de volume"] .
 
 
 NOTE: O volume com crescimento automático não é suportado para volumes iSCSI.

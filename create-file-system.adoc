@@ -19,7 +19,7 @@ Uma VM de storage e um grupo de segurança são criados como parte da criação 
 .Antes de começar
 Antes de criar seu sistema de arquivos FSX for ONTAP, você precisará de:
 
-* O ARN de uma função do IAM que concede ao Workload Factory as permissões necessárias para criar um sistema de arquivos FSx para ONTAP . link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Saiba como conceder permissões a uma conta da AWS"^] .
+* Credenciais com permissões de _criação e exclusão de sistema de arquivos_ para criar um sistema de arquivos FSx para ONTAP . link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Saiba como conceder permissões a uma conta da AWS"^].
 * A região e as informações de VPC para onde você criará a instância do FSX for ONTAP.
 
 

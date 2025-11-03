@@ -23,13 +23,13 @@ Você precisarálink:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Adicione credenciais e permissões
 [role="quick-margin-para"]
-Escolha entre _básico_, _somente leitura_ e _leitura/gravação_ link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modos operacionais"^]
+Escolha olink:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["políticas de permissão"^] Para atender às suas necessidades.
 
 [role="quick-margin-para"]
-Se você optar por operar no modo _básico_, não precisará prosseguir.  Você pode começar a usar o Workload Factory for FSx for ONTAP para copiar amostras de código parcialmente concluídas.
+Caso opte por não conceder permissões, você poderá começar a usar o Workload Factory para FSx for ONTAP para copiar exemplos de código parcialmente concluídos.
 
 [role="quick-margin-para"]
-Se você operar no modo _somente leitura_ ou _leitura/gravação_, você precisará link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["adicione credenciais a uma conta manualmente"^] isso inclui selecionar recursos de carga de trabalho, como bancos de dados e IA, e criar políticas de IAM para garantir que você tenha as permissões corretas para operar no modo _somente leitura_ ou _leitura/gravação_.
+Se optar por conceder permissões, você precisarálink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["adicione credenciais a uma conta manualmente"^] Isso inclui selecionar as capacidades da carga de trabalho, como Bancos de Dados e IA, e criar as políticas de IAM para as permissões necessárias.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] Crie um sistema de arquivos
 [role="quick-margin-para"]

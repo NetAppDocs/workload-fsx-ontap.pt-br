@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: create-cyber-vault.html 
+keywords: create cyber vault, volume cyber vault, protect data cyber vault, cyber vault setup 
+summary: Saiba mais sobre os cofres cibernéticos da NetApp e como implementar uma arquitetura de cofre cibernético para proteger seus dados contra ransomware e outras ameaças cibernéticas. 
+---
+= Proteja seus dados com um cofre cibernético.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Um volume de cofre cibernético é um local de armazenamento isolado e seguro usado para guardar cópias de segurança dos seus dados, protegendo-os contra ataques de ransomware e outras ameaças cibernéticas.  Como parte da criação do cofre, você criará um volume de cofre cibernético, desativará todos os protocolos do cliente, configurará uma relação de replicação entre o volume de origem e o volume do cofre cibernético e criará snapshots imutáveis no volume do cofre cibernético.
+
+.O que é um cofre cibernético?
+Um cofre cibernético é uma técnica específica de proteção de dados que envolve o armazenamento de dados críticos em um ambiente isolado, separado da infraestrutura primária de TI.
+
+O cofre cibernético é um repositório de dados "isolado da internet", imutável e indelével, imune a ameaças que afetam a rede principal, como malware, ransomware ou mesmo ameaças internas.  Um cofre cibernético pode ser criado com instantâneos imutáveis e indeléveis.
+
+Os backups com air-gapping que usam métodos tradicionais envolvem a criação de espaço e a separação física das mídias primária e secundária. Ao mover a mídia para outro local e/ou cortar a conectividade, os criminosos não têm acesso aos dados. Isso protege os dados, mas pode levar a tempos de recuperação mais lentos.
+
+.FSx para cofres cibernéticos ONTAP
+O Amazon FSx for NetApp ONTAP é compatível como origem e destino de cofre cibernético.
+
+.Implementação
+A Workload Factory oferece assistência na criação de uma arquitetura de cofre cibernético.  Após você entrar em contato com a NetApp para manifestar seu interesse na implementação de um cofre cibernético, um especialista da NetApp entrará em contato para discutir suas necessidades.
+
+Envie um e-mail para ng-FSx-CyberVault@netapp.com para começar.
+
+.Informações relacionadas
+Para obter mais informações sobre cofres cibernéticos e como configurar essa arquitetura, consulte olink:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html["Documentação do cofre cibernético ONTAP"^] .

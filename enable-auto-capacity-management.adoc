@@ -1,29 +1,38 @@
 ---
 sidebar: sidebar 
 permalink: enable-auto-capacity-management.html 
-keywords: auto capacity, automatic capacity management, file system capacity 
-summary: Habilitar esse recurso permite que o Workload Factory adicione automaticamente armazenamento incremental a um sistema de arquivos FSx para ONTAP conforme as necessidades de capacidade mudam ao longo do tempo. 
+keywords: auto capacity, automatic capacity management, inodes management, file system capacity 
+summary: Habilitar esse recurso permite que o Workload Factory adicione automaticamente armazenamento incremental ou inodes a um sistema de arquivos FSx para ONTAP conforme as necessidades de capacidade mudam ao longo do tempo. 
 ---
-= Ative o gerenciamento automático de capacidade para um sistema de arquivos FSX for ONTAP
+= Habilitar o gerenciamento automático de capacidade e inodes para um sistema de arquivos.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Habilitar o gerenciamento automático de capacidade permite que o NetApp Workload Factory adicione automaticamente armazenamento incremental a um sistema de arquivos FSx para ONTAP conforme as necessidades de capacidade mudam ao longo do tempo.  Além disso, habilitar esse recurso elimina a necessidade de monitorar a capacidade manualmente e reduz o risco de leituras e gravações impactantes de dados do aplicativo.
+Habilitar o gerenciamento automático de capacidade e inodes permite que o NetApp Workload Factory adicione automaticamente armazenamento incremental ou inodes a um sistema de arquivos FSx para ONTAP conforme as necessidades de capacidade mudam ao longo do tempo.  Além disso, habilitar esse recurso elimina a necessidade de monitorar manualmente a capacidade e os inodes.
 
-.Sobre esta tarefa
-Uma verificação do sistema de arquivos FSX for ONTAP ocorre a cada 30 minutos para determinar se o armazenamento incremental precisa ser adicionado e para verificar se há inodes de volume disponíveis, ou o número máximo de arquivos e pastas em um volume, para que sua contagem aumente de acordo com os limites de gerenciamento automático de capacidade configurados.
+
+
+== Sobre esta tarefa
+
+A cada 30 minutos, é realizada uma varredura do sistema de arquivos FSx for ONTAP para determinar se é necessário adicionar armazenamento incremental e para verificar a disponibilidade de inodes de volume, o número máximo de arquivos e pastas em um volume, de modo que sua contagem aumente de acordo com os limites de gerenciamento automático de capacidade configurados.
 
 Somente uma conta pode gerenciar esse recurso.
 
 A quantidade máxima de capacidade de armazenamento SSD para todos os sistemas de arquivos FSX for ONTAP é de 524.288 GiB. Para solicitar um aumento de cota, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quotas"^]documentação do AWS FSX for NetApp ONTAP.
 
+
+
+== Ativar o gerenciamento automático de capacidade
+
+Habilite o gerenciamento automático de capacidade para adicionar armazenamento incremental automaticamente até o limite máximo de tamanho para um sistema de arquivos FSx para ONTAP .
+
 .Antes de começar
 Considere o seguinte antes de começar:
 
-* Você deve ter credenciais com permissões de _leitura/gravação_ no Workload Factory para concluir esta tarefa.
+* Você develink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Conceder credenciais com a política de permissão _visualizar, planejar e analisar_"^] No Workload Factory, para concluir esta tarefa.
 * Para garantir que os inodes de volume aumentem junto com a capacidade de armazenamento, você deve associar um link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após os associados da ligação, volte a esta operação.
 * Você não deve habilitar esse recurso durante a migração de dados, pois a AWS impõe um período mínimo de resfriamento de seis horas entre os aumentos de capacidade do SSD. Essa restrição pode atrasar os ajustes, portanto, planeje-se adequadamente.
 
@@ -42,9 +51,18 @@ Considere o seguinte antes de começar:
 +
 Em alternativa, desative a funcionalidade. Se você precisar aumentar a capacidade do sistema de arquivos, primeiro desative o gerenciamento automático de capacidade.
 
-.. *Aumento de limiar*: Insira o tamanho máximo para o sistema de arquivos FSX for ONTAP.
-.. *Aumento incremental*: Insira a porcentagem para aumentar a capacidade de forma incremental.
-.. Opcional: Habilite o gerenciamento automático de inodes para garantir que a capacidade de arquivo por volume aumente aumentando o número de inodes (arquivos) até o limite permitido.
+.. *Limite de aviso*: Defina o limite de aviso abaixo do limite de aumento para acionar uma notificação do serviço de notificação do Workload Factory.  O valor padrão é 70%.
++
+A configuração do limite de aviso está disponível somente se vocêlink:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["ativou o serviço de notificação do Workload Factory"^] .
+
+.. *Aumento do limite*: Insira o aumento percentual máximo para o sistema de arquivos FSx para ONTAP .  O valor padrão é 80%.
++
+Este é o limite a partir do qual o Workload Factory aciona uma tarefa para aumentar a capacidade.  Por exemplo, se o sistema de arquivos atingir 80% da capacidade, o Workload Factory aumentará a capacidade.
+
+.. *Aumento incremental*: Insira a porcentagem para aumentar a capacidade incrementalmente.  O valor padrão é 10%.
++
+Esta é a porcentagem de aumento de capacidade que realizamos cada vez que o limite é atingido.  Por exemplo, se o sistema de arquivos estiver 80% cheio e o aumento incremental estiver definido para 10%, o Workload Factory aumentará a capacidade em 10%.
+
 
 
 . Selecione *aplicar*.
@@ -52,3 +70,48 @@ Em alternativa, desative a funcionalidade. Se você precisar aumentar a capacida
 
 .Resultado
 Uma verificação do sistema de arquivos ocorre a cada 30 minutos para determinar se o sistema de arquivos precisa de capacidade adicional.
+
+
+
+== Ativar o gerenciamento automático de inodes
+
+Habilite o gerenciamento automático de inodes para garantir que a capacidade de arquivos por volume aumente, incrementando o número de inodes (arquivos) até o limite permitido.
+
+
+NOTE: *Usuários do Terraform*: O Terraform possui uma limitação que exige que todas as operações sejam concluídas dentro do próprio Terraform.  O gerenciamento de inodes não é suportado no Terraform, mas você pode habilitar o gerenciamento automático de inodes no console do Workload Factory.
+
+.Antes de começar
+Considere o seguinte antes de começar:
+
+* Para gerenciar inodes de volume automaticamente, você deve associar um link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após o link associar, retorne a esta operação.
+* O gerenciamento automático de inodes pode ser configurado com um _limiar de aviso_ que aciona uma notificação do serviço de notificação do Workload Factory.  Para usar este recurso, você develink:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Ative o serviço de notificação do Workload Factory."^] primeiro.
+* Você develink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Conceder credenciais com a política de permissão _visualizar, planejar e analisar_"^] No Workload Factory, para concluir esta tarefa.
+
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx para ONTAP*, selecione o menu de ações do sistema de arquivos para ativar o gerenciamento automático de inodes.
+. Selecione *Gerenciar*.
+. Em Informações, selecione o ícone de lápis ao lado de *Gerenciamento automático de inodes*.  O ícone de lápis aparece ao lado da seta suspensa quando o cursor do mouse passa sobre a linha *Gerenciamento automático de inodes*.
+. Na caixa de diálogo *Gerenciamento automático de inodes*, forneça as seguintes informações:
++
+.. *Credenciais*: Selecione credenciais com permissões _Automate_ no menu suspenso.
+.. Selecione o botão Ativar para *Habilitar o gerenciamento automático de inodes*.
++
+Alternativamente, desative o recurso.  Se precisar aumentar o número de inodes, primeiro você deve desativar o gerenciamento automático de inodes.
+
+.. *Limite de aviso*: Defina o limite de aviso abaixo do limite de aumento para acionar uma notificação do serviço de notificação do Workload Factory.  O valor padrão é 70%.
++
+A configuração do limite de aviso está disponível somente se vocêlink:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["ativou o serviço de notificação do Workload Factory"^] .
+
+.. *Aumento do limite*: Insira o aumento percentual máximo para o número de inodes (arquivos) por volume.  O valor padrão é 80%.
+.. *Aumento incremental*: Insira a porcentagem para aumentar o número de inodes (arquivos) incrementalmente.  O valor padrão é 10%.
+
+
+. Selecione *aplicar*.
+
+
+.Resultado
+A cada 30 minutos é realizada uma varredura do sistema de arquivos para determinar se os volumes precisam de inodes (arquivos) adicionais por volume.
