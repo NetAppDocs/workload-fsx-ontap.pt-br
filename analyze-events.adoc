@@ -1,0 +1,108 @@
+---
+sidebar: sidebar 
+permalink: analyze-events.html 
+keywords: analyze events, events, FSx for ONTAP events, troubleshoot FSx for ONTAP 
+summary: Analise os eventos do EMS no NetApp Workload Factory para FSx para ONTAP. 
+---
+= Analise os eventos FSx para ONTAP EMS no NetApp Workload Factory.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilize o analisador de eventos inteligente para extrair e analisar automaticamente eventos do Sistema de Gerenciamento de Eventos (EMS) para sistemas de arquivos FSx para ONTAP no NetApp Workload Factory , permitindo identificar e resolver problemas rapidamente. A análise baseada em IA da Agentic requer integração com o Amazon Bedrock.
+
+
+
+== Sobre esta tarefa
+
+Os administradores de armazenamento geralmente respondem aos eventos do FSx para ONTAP EMS somente após reclamações de clientes ou criando scripts e alarmes personalizados.  Essa abordagem reativa atrasa a resolução de problemas, aumenta o tempo de inatividade e torna as operações menos eficientes.
+
+O analisador de eventos extrai eventos do FSx for ONTAP EMS e os analisa para ajudar você a manter a integridade e o desempenho dos sistemas de arquivos FSx for ONTAP .
+
+Os principais benefícios incluem:
+
+* Solução de problemas avançada: Utiliza IA para detectar e analisar eventos de forma proativa, fornecendo etapas claras de resolução para eventos do ONTAP EMS que exigem atenção.
+* Remediação de melhores práticas: Fornece etapas claras para corrigir problemas no FSx para ONTAP, com base no seu ambiente, para que qualquer pessoa possa resolver os problemas.
+
+
+Ao utilizar o analisador de eventos, você mantém o controle total do seu ambiente enquanto se beneficia de análises avançadas de IA.
+
+Para usar o analisador de eventos, você precisa ativar o Amazon Bedrock, selecionar o modelo que o Workload Factory utiliza, criar um endpoint privado para conectar-se ao Amazon Bedrock, adicionar permissões e criar uma licença corporativa.
+
+link:https://aws.amazon.com/bedrock/pricing/["Preços do Amazon Bedrock"^]
+
+
+
+=== Privacidade e segurança de dados
+
+O recurso garante a privacidade e a segurança dos dados com as seguintes medidas:
+
+.Soberania de dados
+Os dados e as agregações permanecem dentro da sua conta da AWS, comunicados por meio de um endpoint VPC privado (Amazon Bedrock), garantindo que não haja exposição pública na internet.
+
+.Sem treinamento de IA
+Os dados dos clientes não são usados para treinar ou aprimorar modelos.  O Amazon Bedrock processa eventos em tempo real, mas não é treinado com seus dados.  Os resultados são armazenados em seu ambiente apenas para referência.  Para obter mais detalhes, consulte olink:https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html["Documentação de proteção de dados do Amazon Bedrock"^] .
+
+
+
+== Antes de começar
+
+Para utilizar o analisador de eventos, você deve atender aos seguintes pré-requisitos:
+
+* Você develink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Conceder permissões de _visualização, planejamento e análise_"^] Na sua conta da AWS, você pode visualizar os eventos dos sistemas de arquivos FSx para ONTAP .
+* Você develink:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Conecte-se a um sistema de arquivos FSx para ONTAP usando um link."] Para usar o analisador de eventos EMS.
+* Você também precisa atender aos seguintes requisitos.  O sistema solicita que você conclua essas etapas ao analisar erros de registro.
++
+** *Ativação do Amazon Bedrock*
++
+O analisador de eventos utiliza APIs do Amazon Bedrock para fornecer insights baseados em IA para eventos do FSx para ONTAP .
+
++
+Modelo recomendado: Amazon Bedrock Model (anthropic.claude-sonnet-4-20250514-v1:0).  Você deve fornecer o ARN do perfil de inferência para este modelo na região selecionada.
+
+** *Link para o Workload Factory*
++
+Você precisa criar e associar um link a um sistema de arquivos FSx para ONTAP para habilitar a análise de eventos com inteligência artificial.  Este link cria uma relação de confiança entre o Workload Factory e um ou mais sistemas de arquivos FSx para ONTAP , utilizando o AWS Lambda.
+
++
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após o link associar, retorne a esta operação.
+
+** *Permissões do AWS IAM*
++
+Você deve adicionar as seguintes permissões à política associada à função IAM do Workload Factory.
+
++
+*** Permissões: `bedrock:InvokeModel` e `bedrock:InvokeModelWithResponseStream`
++
+Essas permissões permitem que o Workload Factory invoque modelos do Bedrock para investigação proativa de erros e orientação na correção dos mesmos. Este perfil também garante acesso seguro à IA para insights personalizados.
+
+*** Credenciais da AWS associadas ao Workload Factory: `bedrock:GetFoundationModelAvailability` e `bedrock:ListInferenceProfiles` permissões
++
+Essas permissões verificam a disponibilidade do modelo.
+
+
+
+
+
+
+
+
+
+== Visualize e analise eventos EMS para FSx para ONTAP.
+
+Utilize o console do Workload Factory para visualizar e analisar eventos do EMS para sistemas de arquivos FSx para ONTAP .
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *Análise*.
+. Na tela de Análise, selecione as contas, credenciais e regiões da AWS que contêm os sistemas de arquivos FSx para ONTAP que você deseja analisar.
++
+Somente sistemas de arquivos FSx para ONTAP exibem eventos na tela.
+
+. Caso necessário, complete os *requisitos de configuração da análise de IA* seguindo as instruções na tela para atender a quaisquer pré-requisitos ausentes.
+. Localize o sistema de arquivos FSx para ONTAP que deseja analisar e selecione *Exibir eventos*.
+. Analise as informações detalhadas do evento.
+

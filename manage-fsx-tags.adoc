@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: manage-fsx-tags.html 
+keywords: create fsx tags, create tags, edit fsx tags, fsx tags 
+summary: Adicione, atualize ou remova tags do sistema de arquivos FSx para ONTAP a qualquer momento. 
+---
+= Gerencie as tags do sistema de arquivos FSx para ONTAP no NetApp Workload Factory.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+As etiquetas podem ajudar você a categorizar seus recursos.  No NetApp Workload Factory, você pode adicionar, editar e remover tags de um sistema de arquivos a qualquer momento.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos que deseja atualizar e, em seguida, selecione *Gerenciar tags do sistema de arquivos*.
+. Na caixa de diálogo *Gerenciar tags do sistema de arquivos*, adicione, edite ou remova tags conforme necessário.
++
+O número máximo de tags que você pode aplicar a um sistema de arquivos é 50.
+
+. Selecione *aplicar*.
+

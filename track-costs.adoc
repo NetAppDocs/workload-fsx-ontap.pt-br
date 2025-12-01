@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: track-costs.html 
+keywords: cost, consumption, Cost Explorer 
+summary: Monitore os custos dos seus recursos do sistema de arquivos FSx para ONTAP no NetApp Workload Factory. 
+---
+= Monitore os custos dos seus recursos no NetApp Workload Factory.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilize o NetApp Workload Factory para monitorar os custos e o uso do sistema de arquivos FSx para ONTAP em uma visão consolidada.  Os dados de custos ajudam você a gerenciar orçamentos e otimizar recursos de forma eficaz.  O AWS Cost Explorer fornece os dados de custo.
+
+.Sobre esta tarefa
+Os dados de custo e utilização dos seus recursos do sistema de arquivos FSx for ONTAP são extraídos do AWS Cost Explorer usando as seguintes permissões:
+
+* `ce:GetCostAndUsage`
+* `ce:GetTags`
+
+
+.Antes de começar
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Conceder credenciais com a política de permissão _visualizar, planejar e analisar_"^]No Workload Factory, é possível rastrear os custos do FSx para ONTAP .
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. No menu Armazenamento, selecione *Custo*.
+. Na página Custo, filtre os dados de custo e capacidade dos seus recursos FSx para ONTAP fornecendo as seguintes informações:
++
+.. *Contas da AWS*: Selecione as contas para as quais deseja visualizar os dados de custo.
+.. *Credenciais*: Selecione as credenciais com permissões de _visualização, planejamento e análise_.
+.. *Regiões*: Selecione as regiões da AWS para as quais você deseja visualizar os dados de custo.
+.. *Intervalo de dados de custo*: Selecione o intervalo de tempo para visualizar os dados de custo.
+
+
+. Veja os *Detalhes de Custo* dos seus recursos FSx para ONTAP .
+

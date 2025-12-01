@@ -32,7 +32,8 @@ A fábrica de carga de trabalho analisa o status bem arquitetado das seguintes c
 * Confiabilidade: limite de capacidade SSD, snapshots locais agendados, FSx para backups ONTAP , replicação remota de dados e confiabilidade de dados para retenção de longo prazo
 * Segurança: Proteção autônoma contra ransomware da NetApp com IA (ARP/AI) e acesso não autorizado a volumes.
 * Excelência operacional: gerenciamento automático de capacidade, limite de utilização da capacidade de arquivos de volume e utilização de volume próxima da capacidade máxima.
-* Otimização de custos: eficiências de armazenamento e hierarquização de dados
+* Otimização de custos: eficiência de armazenamento, hierarquização de dados e exclusão desnecessária de snapshots.
+* Otimização de desempenho: reequilíbrio de volumes do FlexGroup
 
 
 

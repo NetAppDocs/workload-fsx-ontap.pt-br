@@ -4,20 +4,20 @@ permalink: manage-cache-volumes.html
 keywords: cache volumes, manage cache, FSx for ONTAP cache 
 summary: Gerencie os volumes de cache para um sistema de arquivos FSx for ONTAP no NetApp Workload Factory quando necessário. 
 ---
-= Gerencie os volumes de cache para um sistema de arquivos FSx para ONTAP.
+= Gerencie volumes de cache do FSx para ONTAP com o NetApp Workload Factory.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-A partir do console do NetApp Workload Factory , você pode gerenciar os volumes de cache para seus sistemas de arquivos FSx for ONTAP .  As tarefas de gerenciamento incluem editar o nome do cache, aumentar a capacidade do cache, editar a política de exportação, alterar o método de cache, pré-popular o cache e excluir o volume de cache quando ele não for mais necessário.
+Utilize o console do NetApp Workload Factory para gerenciar volumes de cache para sistemas de arquivos FSx para ONTAP .  O armazenamento em cache, um método para guardar dados temporariamente, melhora o desempenho do acesso aos dados, reduzindo o tempo de recuperação.  Você pode editar o nome do cache, ajustar a capacidade, alterar a política de exportação, selecionar um método de cache, preencher previamente o cache ou excluir volumes de cache.
 
 .Sobre esta tarefa
-Você pode gerenciar volumes de cache associados a relacionamentos de cache sem sair do console do NetApp Workload Factory .
+É possível gerenciar volumes de cache associados a relacionamentos de cache no console do NetApp Workload Factory .
 
 .Antes de começar
-* Você precisa associar um link para gerenciar volumes e relacionamentos de cache. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após o link associar, retorne a esta operação.
+* Você precisa associar um link para gerenciar volumes e relacionamentos de cache. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após associar o link, retorne a esta operação.
 * Você precisa ter um volume de cache existente para editar.
 
 
@@ -39,9 +39,9 @@ Altere o nome de um volume de cache existente a qualquer momento.
 
 
 
-== Aumentar a capacidade de um volume de cache
+== Ajustar a capacidade de um volume de cache
 
-Caso precise aumentar a capacidade de um volume de cache existente, você pode fazê-lo a qualquer momento.
+Você pode ajustar a capacidade de um volume de cache existente a qualquer momento.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
@@ -49,8 +49,8 @@ Caso precise aumentar a capacidade de um volume de cache existente, você pode f
 . No menu Armazenamento, selecione FSx para ONTAP.
 . No FSx para ONTAP, selecione o menu de ações do sistema de arquivos com o volume de cache e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *Relações de cache*.
-. Selecione o menu de ações para o volume de cache que deseja modificar e, em seguida, selecione *Aumentar a capacidade do cache*.
-. Na caixa de diálogo *Aumentar capacidade do cache*, insira a nova capacidade do volume do cache em porcentagem ou em unidade e selecione *Aplicar*.
+. Selecione o menu de ações para o volume de cache que deseja modificar e, em seguida, selecione *Ajustar capacidade do cache*.
+. Na caixa de diálogo *Ajustar capacidade do cache*, insira a nova capacidade do volume do cache em porcentagem ou em unidade e selecione *Aplicar*.
 
 
 
@@ -74,7 +74,7 @@ Alterar o caminho de montagem ou a política de exportação atribuída a um vol
 
 == Alterar o método de cache para um volume de cache
 
-Alterar o método ou modo de cache de um volume de cache existente para write-around ou write-back.
+Você pode alterar o funcionamento do cache de um volume de cache existente para write-around ou write-back.
 
 Saiba mais sobrelink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-flexcache.html["modos de escrita"^] .
 
@@ -92,7 +92,7 @@ Saiba mais sobrelink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-fle
 
 == Pré-popular um volume de cache
 
-Para acelerar o acesso aos dados em cache, pré-popular um volume de cache com dados do volume de origem antes de solicitá-lo.
+Preencha o volume de cache com dados do volume de origem antes de usá-lo para disponibilizar os dados em cache mais rapidamente.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
@@ -108,7 +108,7 @@ Para acelerar o acesso aos dados em cache, pré-popular um volume de cache com d
 
 == Excluir um volume de cache
 
-Excluir um volume de cache remove a relação de cache entre o volume de origem e o volume de cache.  Após a exclusão, os dados em cache deixam de estar disponíveis.
+Ao excluir um volume de cache, você remove o relacionamento de cache associado a ele.  Os dados em cache não estão mais disponíveis.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
