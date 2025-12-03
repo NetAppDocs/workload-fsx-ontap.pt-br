@@ -19,7 +19,7 @@ Utilize o analisador de eventos inteligente para extrair e analisar automaticame
 
 Os administradores de armazenamento geralmente respondem aos eventos do FSx para ONTAP EMS somente após reclamações de clientes ou criando scripts e alarmes personalizados.  Essa abordagem reativa atrasa a resolução de problemas, aumenta o tempo de inatividade e torna as operações menos eficientes.
 
-O analisador de eventos extrai eventos do FSx for ONTAP EMS e os analisa para ajudar você a manter a integridade e o desempenho dos sistemas de arquivos FSx for ONTAP .
+O analisador de eventos extrai eventos do FSx for ONTAP EMS e os analisa para ajudar você a manter a integridade e o desempenho dos sistemas de arquivos FSx for ONTAP . O Workload Factory exibe apenas os eventos que ocorreram nas últimas 72 horas.
 
 Os principais benefícios incluem:
 
@@ -51,13 +51,13 @@ Os dados dos clientes não são usados para treinar ou aprimorar modelos.  O Ama
 
 Para utilizar o analisador de eventos, você deve atender aos seguintes pré-requisitos:
 
-* Você develink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Conceder permissões de _visualização, planejamento e análise_"^] Na sua conta da AWS, você pode visualizar os eventos dos sistemas de arquivos FSx para ONTAP .
+* Você develink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["conceder permissões de _operações e remediação_"^] Na sua conta da AWS, você pode visualizar os eventos dos sistemas de arquivos FSx para ONTAP .
 * Você develink:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Conecte-se a um sistema de arquivos FSx para ONTAP usando um link."] Para usar o analisador de eventos EMS.
 * Você também precisa atender aos seguintes requisitos.  O sistema solicita que você conclua essas etapas ao analisar erros de registro.
 +
-** *Ativação do Amazon Bedrock*
+** *Modelo Amazon Bedrock*
 +
-O analisador de eventos utiliza APIs do Amazon Bedrock para fornecer insights baseados em IA para eventos do FSx para ONTAP .
+O analisador de eventos usa suas APIs do Amazon Bedrock para fornecer insights baseados em IA para eventos do FSx para ONTAP .
 
 +
 Modelo recomendado: Amazon Bedrock Model (anthropic.claude-sonnet-4-20250514-v1:0).  Você deve fornecer o ARN do perfil de inferência para este modelo na região selecionada.
@@ -78,7 +78,7 @@ Você deve adicionar as seguintes permissões à política associada à função
 +
 Essas permissões permitem que o Workload Factory invoque modelos do Bedrock para investigação proativa de erros e orientação na correção dos mesmos. Este perfil também garante acesso seguro à IA para insights personalizados.
 
-*** Credenciais da AWS associadas ao Workload Factory: `bedrock:GetFoundationModelAvailability` e `bedrock:ListInferenceProfiles` permissões
+*** Credenciais da AWS associadas ao Workload Factory: `bedrock:GetInferenceProfile` e `bedrock:ListInferenceProfiles` permissões
 +
 Essas permissões verificam a disponibilidade do modelo.
 
@@ -97,12 +97,10 @@ Utilize o console do Workload Factory para visualizar e analisar eventos do EMS 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco Armazenamento, selecione *Ir para Armazenamento*.
-. No menu Armazenamento, selecione *Análise*.
-. Na tela de Análise, selecione as contas, credenciais e regiões da AWS que contêm os sistemas de arquivos FSx para ONTAP que você deseja analisar.
-+
-Somente sistemas de arquivos FSx para ONTAP exibem eventos na tela.
-
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. Selecione o sistema de arquivos FSx para ONTAP que deseja analisar e, em seguida, selecione *Gerenciar*.
+. Selecione a aba *Análise*.
 . Caso necessário, complete os *requisitos de configuração da análise de IA* seguindo as instruções na tela para atender a quaisquer pré-requisitos ausentes.
-. Localize o sistema de arquivos FSx para ONTAP que deseja analisar e selecione *Exibir eventos*.
+. Selecione *Analisar*.
 . Analise as informações detalhadas do evento.
 
