@@ -241,5 +241,8 @@ Se o recurso não estiver disponível, é por um dos seguintes motivos:
 . Selecione *criar*.
 
 
-.Resultado
-A fábrica de carga de trabalho inicia a criação do volume. Após a criação, o sistema exibe o novo volume na aba "Volumes".
+.Informações relacionadas
+* link:adjust-volume-capacity.html["Ajuste a capacidade de volume no Workload Factory"]
+* link:change-tiering-policy.html["Alterar a política de hierarquização de volumes no Workload Factory"]
+* link:manage-s3-access-points.html["Gerencie os pontos de acesso S3 no Workload Factory."]
+

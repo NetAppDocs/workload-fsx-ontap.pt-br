@@ -1472,7 +1472,6 @@
   <block id="9e46846308a6940deed12bb97a4f8290" category="list-text">Um link não está associado ao sistema de arquivos. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Após os associados da ligação, volte a esta operação.</block>
   <block id="7c3e31cda0e937f8fa1edeeb89e9fe70" category="list-text">Volumes com arquivos imutáveis e volumes com protocolos iSCSI e NVMe não são suportados para ARP/AI.</block>
   <block id="df1195db43983cb33962d0fe23f28da4" category="list-text">O sistema de arquivos já tem uma política ARP/AI.</block>
-  <block id="0bce1227be581635db9bb209f22cf4e6" category="paragraph">A fábrica de carga de trabalho inicia a criação do volume. Após a criação, o sistema exibe o novo volume na aba "Volumes".</block>
   <block id="817a91472106a30911a7a081b0284ff7" category="paragraph">Verifique o equilíbrio da capacidade do volume FlexVol ou FlexGroup e rebalanceie a capacidade do volume para distribuir os arquivos uniformemente entre todos os volumes FlexVol em um nó ou entre todos os constituintes, para que todos os nós participem da carga de trabalho de um único volume FlexGroup.</block>
   <block id="46119f30376fd007e4806359f116810d" category="paragraph">O rebalanceamento da capacidade de volume é suportado para volumes FlexVol e FlexGroup. O rebalanceamento de um volume redistribui a capacidade quando os desequilíbrios se desenvolvem ao longo do tempo devido à adição de novos arquivos e ao crescimento de arquivos. Depois de iniciar manualmente a operação de rebalanceamento, selecionamos os arquivos e os movemos automaticamente e sem interrupções. As operações de transferência de volume consomem recursos do sistema de arquivos.</block>
   <block id="bbf6fdac51a56da72339e09ef6a7537c" category="paragraph">Cada tipo de volume e operações de rebalanceamento diferem da seguinte forma.</block>
@@ -2467,4 +2466,29 @@
   <block id="f553bab80aec86e43829abd15b816ce5" category="section-title">Limitação de pontos de acesso do Amazon S3</block>
   <block id="19dc991ee5919c74b5a565fe2ea70176" category="paragraph">O limite para o número de pontos de acesso S3 por máquina virtual de armazenamento é 4.000.</block>
   <block id="ef6c8d59ba70b1efd5437dd31e63efcb" category="section-title">04 de dezembro de 2025</block>
+  <block id="bf9dc967c38bf5f6366aea1d464016b5" category="inline-link-macro">Crie um volume usando pontos de acesso S3.</block>
+  <block id="9650d80f3b4a8975eb2cc3145efe97fd" category="list-text"><block ref="9650d80f3b4a8975eb2cc3145efe97fd" category="inline-link-macro-rx"></block></block>
+  <block id="3e2c74c8c2d6921bd86b94a0e3ce7846" category="inline-link-macro">Gerenciar pontos de acesso S3 para um volume</block>
+  <block id="bec075d59b91517943ea96b4d56e06de" category="list-text"><block ref="bec075d59b91517943ea96b4d56e06de" category="inline-link-macro-rx"></block></block>
+  <block id="a008e298246d26d679639f7bc96ba6ac" category="inline-link-macro">Ajuste a capacidade de volume no Workload Factory</block>
+  <block id="6397bacd7d32cf08e4bf24faa5700a5a" category="list-text"><block ref="6397bacd7d32cf08e4bf24faa5700a5a" category="inline-link-macro-rx"></block></block>
+  <block id="d8774a6076f48d902ee122d2219887a0" category="inline-link-macro">Alterar a política de hierarquização de volumes no Workload Factory</block>
+  <block id="15edb6ed53ce8a32fd0631a4517d7fc7" category="list-text"><block ref="15edb6ed53ce8a32fd0631a4517d7fc7" category="inline-link-macro-rx"></block></block>
+  <block id="d628678d4875b2f8f6ea7ca8dab6ade0" category="inline-link-macro">Gerencie os pontos de acesso S3 no Workload Factory.</block>
+  <block id="81cca59ad3bedd27880ab1c747ae8b70" category="list-text"><block ref="81cca59ad3bedd27880ab1c747ae8b70" category="inline-link-macro-rx"></block></block>
+  <block id="e89e0732eb8fbeb9c1bb216d5b1fe2c8" category="summary">Gerencie os pontos de acesso S3 para um volume no NetApp Workload Factory.</block>
+  <block id="7caacaed323c9582bdf146f33b338930" category="doc">Gerencie os pontos de acesso S3 para um volume no NetApp Workload Factory.</block>
+  <block id="c03be794767b179eaf0a48a2bc06884b" category="paragraph">Gerencie os pontos de acesso S3 para um volume no NetApp Workload Factory. Você pode usar o console do Workload Factory para atribuir pontos de acesso S3 a volumes existentes ou excluir pontos de acesso S3.</block>
+  <block id="1f26d72d95cf276540f7a69b509645fe" category="paragraph">Você precisa ter um volume existente com um ponto de acesso S3.</block>
+  <block id="be929bcd251acd28106548a34c8a067b" category="list-text">No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume que deseja atualizar e, em seguida, selecione *Gerenciar*.</block>
+  <block id="7fcc02a075c6d0b859fd9a03f5250e5f" category="list-text">Na guia Volumes, selecione o menu de ações do volume para o qual deseja gerenciar os pontos de acesso S3 e, em seguida, selecione *Ações avançadas* e depois *Gerenciar pontos de acesso S3*.</block>
+  <block id="056da7279a8392afebe1b20256f8656b" category="list-text">Na página Gerenciar pontos de acesso S3, você pode criar e anexar pontos de acesso ou excluir pontos de acesso existentes.</block>
+  <block id="4dc9fa88ed74bd072e88bad92a1f17c6" category="open-title">Criar e associar pontos de acesso S3 a um volume existente</block>
+  <block id="c57302a0d02305ff8c144fb37bb2fab9" category="list-text">Selecione *Criar e conectar ponto de acesso S3*.</block>
+  <block id="e979f8982cafd5647560686a5ec74a2a" category="list-text">Na caixa de diálogo *Criar e anexar ponto de acesso S3*, forneça as seguintes informações:</block>
+  <block id="0802ef324b114effd397e5e5ac619733" category="list-text">Selecione *Criar e anexar*.</block>
+  <block id="f4e2e090f540d174d8e07c3527c25962" category="open-title">Excluir pontos de acesso S3 existentes de um volume</block>
+  <block id="a87127d2d5ce747338342d2d926d9cc4" category="list-text">Selecione o menu de ações do ponto de acesso S3 que deseja excluir e, em seguida, selecione *Desanexar*.</block>
+  <block id="8d755d1f354bf995e33c13051ecdaeca" category="list-text">Na caixa de diálogo *Desanexar e remover um ponto de acesso S3*, selecione *Desanexar e remover* para excluir o ponto de acesso S3 do volume.</block>
+  <block id="f994c7e71102a3d5ed7af5975abfaa09" category="sidebar">Gerenciar pontos de acesso S3</block>
 </blocks>
