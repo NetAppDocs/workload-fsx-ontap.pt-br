@@ -25,8 +25,8 @@ Reveja o seguinte antes de eliminar uma VM de armazenamento:
 . No bloco Armazenamento, selecione *Ir para Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos a ser atualizado e, em seguida, selecione *Gerenciar*.
-. Na visão geral do sistema de arquivos, selecione a guia *Storage VMs*.
-. Na guia VMs de armazenamento, selecione o menu de ações da VM de armazenamento para a qual deseja configurar o Active Directory.
+. Na visão geral do sistema de arquivos em VMs de armazenamento, selecione *Gerenciar*.
+. Na tela Gerenciar VMs de armazenamento, selecione o menu de ações da VM de armazenamento que deseja excluir.
 . Selecione *Excluir VM de armazenamento*.
 . Na caixa de diálogo Excluir VM de armazenamento, digite "excluir" para excluir a VM de armazenamento.
 . Selecione *Excluir* para confirmar.

@@ -21,9 +21,8 @@ As mesmas etapas se aplicam à configuração e atualização do ative Directory
 . No bloco Armazenamento, selecione *Ir para Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com a VM de armazenamento a ser atualizada e, em seguida, selecione *Gerenciar*.
-. Na visão geral do sistema de arquivos, selecione a guia *Storage VMs*.
-. Na guia VMs de armazenamento, selecione o menu de ações da VM de armazenamento para a qual deseja configurar o Active Directory.
-. Selecione *Gerenciar configuração do AD*.
+. Na visão geral do sistema de arquivos em VMs de armazenamento, selecione *Gerenciar*.
+. Na tela Gerenciar VMs de armazenamento, selecione o menu de ações da VM de armazenamento para a qual deseja configurar o Active Directory e, em seguida, selecione *Ações básicas* > *Gerenciar configuração do AD*.
 . Na página Gerenciar configuração do AD, forneça o seguinte:
 +
 .. *Domínio do ative Directory para ingressar*: Insira o nome de domínio totalmente qualificado (FQDN) do seu ative Directory.

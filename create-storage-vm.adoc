@@ -34,8 +34,9 @@ NOTE: Ao usar o Terraform do Codebox, o código que você copia ou baixa oculta 
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco Armazenamento, selecione *Ir para Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
-. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos para criar uma VM de armazenamento e selecione *Criar uma VM de armazenamento*.
-. Na página Storage VM, em Storage VM Configuration, forneça o seguinte:
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos e, em seguida, selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos em VMs de armazenamento, selecione *Criar VM de armazenamento*.
+. Na página Criar VM de armazenamento, em Configuração da VM de armazenamento, forneça as seguintes informações:
 +
 .. *Nome*: Insira um nome para a VM de armazenamento.
 .. * Credenciais de armazenamento de VM*: Forneça uma senha para o usuário desta VM de armazenamento `vsadmin` ou use as credenciais de usuário do sistema de arquivos `fsxadmin`.

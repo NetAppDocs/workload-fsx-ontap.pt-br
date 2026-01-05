@@ -58,3 +58,9 @@ Aumente a capacidade de um dispositivo de bloco existente a qualquer momento.
 
 
 NOTE: Após aumentar o tamanho do dispositivo de bloco, siga o procedimento fornecido pelo sistema operacional do seu host para detectar o novo tamanho do dispositivo de bloco e expandir o sistema de arquivos nele.
+
+
+
+== Informações relacionadas
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html["Criar um dispositivo de bloco para um sistema de arquivos FSx para ONTAP"]

@@ -85,8 +85,6 @@
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="summary"></block>
   <block id="85a0e511a99369efd5c47890a946947b" category="doc">Configurar e atualizar o ative Directory para uma VM de armazenamento</block>
   <block id="c19f2fad6f0110c3951bd583edb5371f" category="paragraph">As mesmas etapas se aplicam à configuração e atualização do ative Directory para uma VM de armazenamento.</block>
-  <block id="3a7b10a42e70c562594e7593e84cfb0d" category="list-text">Na visão geral do sistema de arquivos, selecione a guia *Storage VMs*.</block>
-  <block id="584856da16c520c5370d79f390f47426" category="list-text">Selecione *Gerenciar configuração do AD*.</block>
   <block id="dcfecf722762bfcce19242fd2e38a2c2" category="list-text">Na página Gerenciar configuração do AD, forneça o seguinte:</block>
   <block id="a531f5a3e49319a6c1b23021b5a27417" category="list-text">*Domínio do ative Directory para ingressar*: Insira o nome de domínio totalmente qualificado (FQDN) do seu ative Directory.</block>
   <block id="194331d5ecf77bf506c810edab0a3cc7" category="list-text">*Endereços IP DNS*: Insira até três endereços IP separados por vírgulas.</block>
@@ -209,7 +207,6 @@
   <block id="bc7303a544a54859ef646aaae48578a5" category="paragraph">Com os SVMs, quando você acessa dados no FSX for ONTAP, seus clientes e estações de trabalho montam um volume, compartilhamento CIFS/SMB ou iSCSI LUN hospedado por uma SVM usando o endpoint (endereço IP) do SVM.</block>
   <block id="0be7879371b03da9f3e439c5431f1db2" category="inline-link-macro">Gerenciando o FSX para máquinas virtuais de armazenamento ONTAP</block>
   <block id="cbddd6713cb3317df938ea4a6fd2cd84" category="paragraph">Verifique o número suportado de VMs de storage por sistema de arquivos. Consulte <block ref="17ef0d7491a925205e8443311f7ef122" category="inline-link-macro-rx"></block>na documentação da AWS o número máximo de SVMs por sistema de arquivos.</block>
-  <block id="cdbc38b99c6a38c90c6623e1ac73a0fd" category="list-text">Na página Storage VM, em Storage VM Configuration, forneça o seguinte:</block>
   <block id="c9f265881e56f4c52918525bdcb9205d" category="list-text">*Nome*: Insira um nome para a VM de armazenamento.</block>
   <block id="42a49281a2c075c2004f1e73852b27e3" category="list-text">* Credenciais de armazenamento de VM*: Forneça uma senha para o usuário desta VM de armazenamento<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> ou use as credenciais de usuário do sistema de arquivos<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block>.</block>
   <block id="34cc44a6e06f592c6033a57f8671a67a" category="list-text">* Estilo de segurança de volume raiz*: Selecione o estilo de segurança de volume raiz dependendo do tipo de clientes que acessam seus dados - UNIX (clientes Linux), NTFS (clientes Windows) ou Mixed.</block>
@@ -308,7 +305,6 @@
   <block id="54ae4e9761548739e1dcb7a7a20751ad" category="paragraph">O backup permanecerá no sistema de arquivos até que você o exclua manualmente.</block>
   <block id="b1bb1fd299d4d0d5a0bcf89deacb85de" category="list-text">Digite "delete" para excluir o volume.</block>
   <block id="321fbbd6f40d9b084f632750d5190dc8" category="summary">Adicione, atualize ou remova tags de VM de armazenamento para uma VM de armazenamento a qualquer momento.</block>
-  <block id="856fd7298379e6a75a221ebc3af9cdec" category="list-text">Selecione *Editar tags de VM de armazenamento*.</block>
   <block id="14d8aa612c687d8708f6fefc5f554d22" category="list-text">Na página Editar tags de VM de armazenamento, adicione, edite ou remova tags.</block>
   <block id="2d1066d1fee53e98224fefca16751fd3" category="paragraph">O número máximo de tags que você pode aplicar a uma VM de armazenamento é 50.</block>
   <block id="2332ee8494d2f8246a961c95630281a2" category="admonition">O volume com crescimento automático não é suportado para volumes iSCSI.</block>
@@ -565,11 +561,9 @@
   <block id="89568baf7659b31a2110d1de7f69778d" category="paragraph">Com um sistema de arquivos em seu inventário de armazenamento, você pode <block ref="41a32458a6146c3b772c57ac70acc68e" category="inline-link-macro-rx"></block>gerenciar seu sistema de arquivos FSX for ONTAP e configurar a proteção de dados para seus recursos.</block>
   <block id="a509c58d8659a3366f3053048526e6ec" category="summary">Replicar uma VM de armazenamento para outro sistema de arquivos do FSX for ONTAP fornece uma camada protetora de acesso a dados em caso de perda de dados.</block>
   <block id="ec42d150d63ba9d69905da61ff84b59b" category="doc">Replique uma VM de armazenamento para outro sistema de arquivos FSX for ONTAP</block>
-  <block id="068ecbcf009e32427973dc04a3628cb7" category="list-text">Selecione *Replique storage VM*.</block>
   <block id="0e752dc97b5515d4bd6d0ef6482c2342" category="paragraph">Todos os volumes dentro da VM de storage são replicados para o sistema de arquivos de destino.</block>
   <block id="ff40dc19143c531bc7b8a932c148a848" category="list-text">Selecione *Redefinir senha fsxadmin*.</block>
   <block id="edacd360980e63a5f2e01df2fa59b050" category="list-text">Na caixa de diálogo Redefinir senha do fsxadmin, insira uma nova senha do fsxadmin e insira-a novamente para confirmar.</block>
-  <block id="3930015dcc2810869591e35a2b5d714b" category="list-text">Selecione *Redefinir senha*.</block>
   <block id="0828ddc896996b7d41cc9ceb1e453764" category="list-text">Na caixa de diálogo Redefinir senha, forneça o seguinte:</block>
   <block id="8d54082fcba7dd82063ffe4497f8c70d" category="list-text">*Nova senha*: Insira uma nova senha para a VM de armazenamento.</block>
   <block id="ebb4bf732c3ade314c393d5284af8715" category="list-text">*Confirm password*: Digite a nova senha novamente para confirmar.</block>
@@ -699,7 +693,6 @@
   <block id="71083868a2ec5abfee9a2647a74612c0" category="list-text">Guia FSX for ONTAP: Exibe os sistemas de arquivos FSX for ONTAP que você tem atualmente.</block>
   <block id="1113c9108b3e58789456954d1c2ea9c2" category="list-text">Guia economia: Exibe os sistemas de armazenamento Elastic Block Store, FSX for Windows File Server e Elastic File Systems. A partir daí, você pode explorar as economias desses sistemas comparando-os com o FSX for ONTAP.</block>
   <block id="fa8dc6e67f45bcde58853510e56ce6a1" category="list-text">Na guia Visão geral do sistema de arquivos, selecione a guia *volumes*.</block>
-  <block id="8c9880429b2df2018a366dbb14193026" category="list-text">Na guia Visão geral do sistema de arquivos, selecione a guia *Storage VMs*.</block>
   <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">3 de novembro de 2024</block>
   <block id="ddeb24aeadcd9bd34930d38c34152c03" category="paragraph">O Amazon FSX for NetApp ONTAP agora está disponível na fábrica de cargas de trabalho do BlueXP .</block>
   <block id="03b2cfc949418819e16b1dc5fa3660ae" category="list-text"><block ref="03b2cfc949418819e16b1dc5fa3660ae" category="inline-link-macro-rx"></block></block>
@@ -1411,7 +1404,6 @@
   <block id="3cb1fda07c1d6b96bda1c65f1996fc1f" category="list-text">Para criar uma política de snapshot personalizada, você deve associar um link. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Após os associados da ligação, volte a esta operação.</block>
   <block id="d49502975428f953533ab14ab9c02a5b" category="paragraph">Você deve associar um link para criar um instantâneo manual de um volume. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Após os associados da ligação, volte a esta operação.</block>
   <block id="6234e99ad9e8c051d4afaa47c5d4ff82" category="list-text">Para configurar o acesso ao volume, você deve associar um link. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Após os associados da ligação, volte a esta operação.</block>
-  <block id="0152fea6b73cbe86540a93515bf61029" category="paragraph">A seguir estão as políticas padrão da AWS. Para políticas de instantâneo personalizadas, você deve <block ref="6ac03ad394740d642419d1159fa121ff" category="inline-link-macro-rx"></block> .</block>
   <block id="2b34fc0bead4dcf64099078fdaf86d69" category="paragraph">Para habilitar o crescimento automático de volume, você deve associar um link. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Após os associados da ligação, volte a esta operação.</block>
   <block id="f8e03e36604030c79d6107b800f61804" category="list-text">Para garantir que os inodes de volume aumentem junto com a capacidade de armazenamento, você deve associar um link. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Após os associados da ligação, volte a esta operação.</block>
   <block id="2c793b5b15ea565983390f5625f7b85b" category="inline-link-macro">criar e associar um link</block>
@@ -1845,7 +1837,6 @@
   <block id="b0a0826c5a9c2b2e6c919de33e89dbfe" category="paragraph">No console do Workload Factory, no nível do sistema de arquivos, o status bem arquitetado é listado para todos os sistemas de arquivos FSx para ONTAP .  Os status bem arquitetados são categorizados como "problemas", "não analisados" ou "bem arquitetados".  Selecionar o status bem-arquitetado redireciona você para a guia de status bem-arquitetado no sistema de arquivos, onde você pode encontrar a pontuação bem-arquitetada, categorias de configuração e todas as configurações do sistema de arquivos.</block>
   <block id="93482e0e05af93f1f57953ff700f65af" category="summary">Configure e atualize o Active Directory para uma VM de armazenamento em um sistema de arquivos FSx para ONTAP no NetApp Workload Factory.</block>
   <block id="b517cd494437c46f189031b81fe054d1" category="list-text">No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com a VM de armazenamento a ser atualizada e, em seguida, selecione *Gerenciar*.</block>
-  <block id="55713424abf36138f2e5576255ae328d" category="list-text">Na guia VMs de armazenamento, selecione o menu de ações da VM de armazenamento para a qual deseja configurar o Active Directory.</block>
   <block id="e2978ebf10a51b553f9a074316b27b79" category="summary">Crie um backup manual de um volume no NetApp Workload Factory fora dos backups agendados regularmente.</block>
   <block id="54fe537cb8aa5bbba8b6f2002f13d69c" category="doc">Crie um backup manual de um volume no NetApp Workload Factory</block>
   <block id="4f43be2165dfc12e9cac6220645b9996" category="paragraph">Crie um backup manual de um volume fora dos backups agendados regularmente no NetApp Workload Factory.</block>
@@ -1880,7 +1871,6 @@
   <block id="673f61d59e74b38d8158f8338fec1e4b" category="paragraph">Crie uma VM de armazenamento (SVM) para um sistema de arquivos FSx for ONTAP para acessar serviços de armazenamento e dados virtualmente para suas cargas de trabalho no NetApp Workload Factory.</block>
   <block id="0f54202fd3d9422accef6305efaf73a6" category="paragraph">As VMs de armazenamento são servidores de arquivos isolados que você pode usar para acessar os dados de cada carga de trabalho no Workload Factory Storage.  Cada SVM tem suas próprias credenciais administrativas e endpoints para administrar e acessar dados.</block>
   <block id="176a501864ff4c70a2c1b132289ccad0" category="paragraph">Você pode criar uma VM de armazenamento no console do Workload Factory.  Você também pode usar as seguintes ferramentas disponíveis no Codebox: REST API, CloudFormation e Terraform. <block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block> .</block>
-  <block id="5a2fcba235cbe9725acb555b8a1ff973" category="list-text">No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos para criar uma VM de armazenamento e selecione *Criar uma VM de armazenamento*.</block>
   <block id="2c1104e8d18fa2476c3ec5d972050908" category="summary">Depois de configurar seu sistema de arquivos FSx para ONTAP , crie volumes FSx para ONTAP no Workload Factory.</block>
   <block id="b576330956781fec1fe9e230ce503cdc" category="doc">Crie um volume FSx para ONTAP no Workload Factory</block>
   <block id="d2c9fde6d19778c0e3d1e865ed1f22a8" category="paragraph">Depois de configurar seu sistema de arquivos FSx para ONTAP , crie volumes FSx para ONTAP no Workload Factory como recursos virtuais para agrupar seus dados.</block>
@@ -1911,7 +1901,6 @@
   <block id="1c9d39dfea82aa323f287c11668fb9ab" category="paragraph">Excluir um relacionamento de replicação no NetApp Workload Factory.  Quando você exclui um relacionamento de replicação, ele remove o relacionamento de replicação entre os volumes de origem e de destino.  Após a exclusão do relacionamento de replicação, ambos os volumes continuam a existir independentemente com os dados atuais que eles contêm.</block>
   <block id="06a91edaa8e77e04dfd0ccc1dee5a6c7" category="list-text">Na guia Relacionamentos de replicação, selecione o menu de ações do relacionamento de replicação a ser excluído.</block>
   <block id="ce1de3f28d8568be87cdce779516de02" category="doc">Excluir uma VM de armazenamento no NetApp Workload Factory</block>
-  <block id="17a5fbc49fda805ff4e98fd7a9af355a" category="list-text">Na guia VMs de armazenamento, selecione o menu de ações da VM de armazenamento para a qual deseja configurar o Active Directory.</block>
   <block id="d287f4840c4e2956b3e030d276822021" category="doc">Excluir um volume no NetApp Workload Factory</block>
   <block id="5d2b2d216923f677893f0a068bc1b92f" category="list-text">No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume a ser excluído e, em seguida, selecione *Gerenciar*.</block>
   <block id="1235950c75ed0fc0a7588ccae6518e39" category="list-text">Na guia Volumes, selecione o menu de ações do volume a ser excluído.</block>
@@ -2074,7 +2063,6 @@
   <block id="f1275ed085039c3832dda6dfba0ad9f2" category="list-text">Na página Gerenciar instantâneos, selecione o menu de ações do instantâneo a ser excluído e, em seguida, selecione *Excluir*.</block>
   <block id="b8b31b5d8488dcb7ebd8c2bb9ba38f50" category="doc">Gerenciar tags de VM de armazenamento no NetApp Workload Factory</block>
   <block id="0c950433d94be139f73fb59247d857a5" category="paragraph">As tags podem ajudar você a categorizar seus recursos.  Você pode adicionar, editar e remover tags de uma VM de armazenamento a qualquer momento no NetApp Workload Factory.</block>
-  <block id="9407fd42d3f2176c45d9212981f7f058" category="list-text">Na guia VMs de armazenamento, selecione o menu de ações da VM de armazenamento para editar as tags.</block>
   <block id="558281a06321bc8c7b90d170a463683f" category="doc">Gerenciar tags de volume no NetApp Workload Factory</block>
   <block id="693a8f663c39ae53134101e5d974fda8" category="paragraph">As tags podem ajudar você a categorizar seus recursos.  Você pode adicionar, editar e remover tags de volume a qualquer momento para volumes FSx for ONTAP no NetApp Workload Factory.</block>
   <block id="ff53601e946713a2f9385573998c76d7" category="list-text">Na guia Volumes, selecione o menu de ações do volume para modificar as tags.</block>
@@ -2114,7 +2102,6 @@
   <block id="59dfa377d2b15b40ba2bddd83dcb5c53" category="list-text">No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos que contém o volume a ser rebalanceado e, em seguida, selecione *Gerenciar*.</block>
   <block id="fbf1bac8c72be0440c190a08fabc8dc0" category="paragraph">A replicação de uma VM de armazenamento para outro sistema de arquivos FSx for ONTAP no NetApp Workload Factory fornece uma camada protetora de acesso a dados em caso de perda de dados.  Esta operação replica todos os volumes em uma VM de armazenamento para outro FSx para o sistema de arquivos ONTAP .</block>
   <block id="e42fc3e4b35126c00393bef5dd43abb0" category="list-text">No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com a VM de armazenamento a ser replicada e, em seguida, selecione *Gerenciar*.</block>
-  <block id="f762650128ec007cd0d70b6659361ba3" category="list-text">Na guia VMs de armazenamento, selecione o menu de ações da VM de armazenamento para a qual deseja replicar uma SVM.</block>
   <block id="60de20bb9aba6d637fe2c39698d63a93" category="paragraph">_Auto_ é a política de camadas padrão ao criar um volume usando a interface de usuário do Workload Factory FSx para ONTAP .  Para obter mais informações sobre políticas de níveis de volume, consulte<block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> na documentação do AWS FSx para NetApp ONTAP .</block>
   <block id="00e61784b4c0263d643d339751f948b5" category="summary">Redefina a senha do fsxadmin no NetApp Workload Factory quando necessário.</block>
   <block id="49504d649db43bbd86ff76609ad14e6b" category="doc">Redefinir a senha do fsxadmin no NetApp Workload Factory</block>
@@ -2125,8 +2112,6 @@
   <block id="423500f4bc14c3ceee3a5af733bedd61" category="summary">Redefina a senha de uma VM de armazenamento no NetApp Workload Factory quando necessário.</block>
   <block id="3c483a45ab5fea02162be0b6c6004287" category="doc">Redefinir a senha da VM de armazenamento no NetApp Workload Factory</block>
   <block id="bff8efadf7143427c1acb1b9e3330d81" category="list-text">Em Armazenamento, selecione *Ir para Armazenamento*.</block>
-  <block id="b3dd19bbbe1cbd4f108d8e41f40c783e" category="list-text">No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos FSx for ONTAP com a VM de armazenamento a ser atualizada e, em seguida, selecione *Gerenciar*.</block>
-  <block id="b841fe8526d10304e2b38270715c1b84" category="list-text">Na guia VMs de armazenamento, selecione o menu de ações da VM de armazenamento para redefinir a senha.</block>
   <block id="398b64d3ae2c039c62637d684fcbe30d" category="doc">Restaurar um volume de um backup no NetApp Workload Factory</block>
   <block id="19002cddfac8e15ce79f8ccad53b74e6" category="paragraph">No NetApp Workload Factory, você pode restaurar um volume de um backup para qualquer sistema de arquivos FSx for ONTAP na sua conta da AWS.</block>
   <block id="de32db8377dafaed047e32a0f5c78af1" category="list-text">Na aba *Volumes*, selecione o menu de ações para o volume a ser restaurado a partir de um backup.</block>
@@ -2491,4 +2476,68 @@
   <block id="a87127d2d5ce747338342d2d926d9cc4" category="list-text">Selecione o menu de ações do ponto de acesso S3 que deseja excluir e, em seguida, selecione *Desanexar*.</block>
   <block id="8d755d1f354bf995e33c13051ecdaeca" category="list-text">Na caixa de diálogo *Desanexar e remover um ponto de acesso S3*, selecione *Desanexar e remover* para excluir o ponto de acesso S3 do volume.</block>
   <block id="f994c7e71102a3d5ed7af5975abfaa09" category="sidebar">Gerenciar pontos de acesso S3</block>
+  <block id="bc5d3bf99236801351dc3a2d7c20aed7" category="paragraph">O Workload Factory analisa seus sistemas de arquivos FSx para ONTAP para as seguintes configurações:</block>
+  <block id="afc7c7589e5f20d86c03b5e089bbad6b" category="list-text">A proteção autônoma contra ransomware (ARP/AI) da NetApp desativada inclui dispositivos de bloco: verifica se o ARP/AI está desativado em volumes de dispositivos de bloco.</block>
+  <block id="2270e6ac2c31be458c93c87db612a494" category="list-text">Modo de gravação do relacionamento de cache: verifica se o modo de gravação é o ideal para a carga de trabalho do volume de cache.</block>
+  <block id="2125a9a589f0bc57c38acf63f5ffb150" category="list-text">Exclusão de backups desnecessários: verifica se os backups estão desatualizados ou são desnecessários e podem ser excluídos para reduzir custos.</block>
+  <block id="5e3b7f958129022f75fe2931c55615b2" category="section-title">Integração da página inicial do assistente de IA "Pergunte-me"</block>
+  <block id="65bcc541760e8f25e0281edbfdfbf7f3" category="paragraph">A página inicial do console do Workload Factory incorpora o assistente de IA "Pergunte-me", permitindo que você faça perguntas sobre seu próprio ambiente de armazenamento, obtenha insights personalizados diretamente do seu ambiente e consulte conversas anteriores. Você pode interagir com o recurso "Pergunte-me" para entender suas cargas de trabalho, solucionar problemas e aprender mais sobre o Workload Factory — tudo isso sem sair do console.</block>
+  <block id="270dd22752e2f3f31c99a49ff489774e" category="section-title">Utilização da entidade de usuário do IAM em políticas de permissão baseadas em recursos de vinculação do Lambda</block>
+  <block id="75141a4e46e0a646f4c8379f8d5e7b52" category="paragraph">Os links Lambda usados ​​para conectar sua conta do Workload Factory a um ou mais sistemas de arquivos FSx for ONTAP para executar operações avançadas do ONTAP agora usam a entidade de usuário do IAM para permissões de política baseadas em recursos. Essa mudança proporciona um melhor alinhamento com as melhores práticas do setor para acesso a recursos da AWS.</block>
+  <block id="b0dd04cf44137b432a8f89cb4f3c9919" category="section-title">Adicionada tela de análise para o analisador de IA para eventos de emergência médica.</block>
+  <block id="5cd27690d7988b2c3f04768e500459bb" category="paragraph">Uma nova tela de _Análise_ foi adicionada ao menu Armazenamento. A partir desta tela, você pode usar o analisador de IA para o recurso de eventos FSx para ONTAP EMS.</block>
+  <block id="a9b4b239246fd03c03ac43e963075319" category="section-title">Aprimoramentos de dispositivos de bloco no NetApp Workload Factory</block>
+  <block id="6ef37e3f05edf0fb9740ef851722a8f3" category="paragraph">As seguintes melhorias foram implementadas para dispositivos de bloco.</block>
+  <block id="0a32dfaa27bfe59db7152c5c5da72282" category="section-title">Criação de dispositivo de bloco</block>
+  <block id="8e8c152eb29cb88d5d80a375d44aee87" category="paragraph">O NetApp Workload Factory oferece suporte à criação de dispositivos de bloco usando o protocolo iSCSI em sistemas de arquivos FSx para ONTAP , permitindo que você ofereça melhor suporte aos seus aplicativos de linha de negócios (LOB) a partir do console do Workload Factory.</block>
+  <block id="0b5d1c04d20d94c2a21dacfa53d7354d" category="section-title">Melhorias no gerenciamento de dispositivos de bloco</block>
+  <block id="e578bac1e9f39054ae2eb2b16d807f71" category="inline-link-macro">gerenciando dispositivos de bloco</block>
+  <block id="e16cdf4dbd146007b4b40124e28ca1a2" category="paragraph">O NetApp Workload Factory inclui os seguintes aprimoramentos para <block ref="b08ca4e282a45fe2e49c9a019646bd36" category="inline-link-macro-rx"></block>. Agora você pode executar as seguintes tarefas no console do Workload Factory:</block>
+  <block id="f8b3baca819978515d628c6a5881eb4e" category="list-text">Gerenciar o acesso do cliente</block>
+  <block id="5338dad31c000cc89dea6cc573f1a242" category="list-text">Dados do dispositivo de bloco de arquivamento</block>
+  <block id="88073627bb09173d8e0b3fa15a27725b" category="list-text">Excluir dispositivo de bloco</block>
+  <block id="3c4600754ec66ef615c303417126da12" category="section-title">Suporte para ARP/AI em volumes FlexVol que contêm dispositivos de bloco</block>
+  <block id="3043237188bfe3f198084dbfe55d05c0" category="inline-link-macro">Proteção autônoma contra ransomware da NetApp com IA (ARP/AI)</block>
+  <block id="34f4bbf8697d1205da43ee612001efe7" category="paragraph">Você pode ativar <block ref="028271ae216dacdd20feb47aea2c131d" category="inline-link-macro-rx"></block> em volumes FlexVol que contêm dispositivos de bloco. Habilitar o ARP/AI detecta ataques de ransomware usando IA e auxilia na recuperação de dados.</block>
+  <block id="71a3ae3af23eb1b872f9026901ca4187" category="list-text">Na visão geral do sistema de arquivos em VMs de armazenamento, selecione *Gerenciar*.</block>
+  <block id="3e723486c5a3951bcc9cc4e9b31c7a1b" category="list-text">Na tela Gerenciar VMs de armazenamento, selecione o menu de ações da VM de armazenamento para a qual deseja configurar o Active Directory e, em seguida, selecione *Ações básicas* &gt; *Gerenciar configuração do AD*.</block>
+  <block id="3d19aa5c03e04bba25fa64fb693e9f98" category="summary">Crie dispositivos de bloco para atender aos requisitos de aplicativos da sua linha de negócios (LOB).</block>
+  <block id="3c1e85123bd6f772d273b23b09a26e74" category="doc">Crie um dispositivo de bloco para um sistema de arquivos no NetApp Workload Factory.</block>
+  <block id="7d004b13cdadf8e9ba5aa6e7fd56c9c9" category="paragraph">Somente volumes FlexVol são suportados para dispositivos de bloco no NetApp Workload Factory. Você pode criar dispositivos de bloco usando o protocolo iSCSI.</block>
+  <block id="454897ca790322f298897b4fdfc33941" category="paragraph">O tamanho do bloco deve ser menor que o FlexVol volume disponível.</block>
+  <block id="fb02a89efec565f92916696e97a69514" category="list-text">Você precisa associar um link para criar dispositivos de bloco. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Após associar o link, retorne a esta operação.</block>
+  <block id="b517955ef14866b28544f7b2807b497d" category="list-text">Selecione *Criar dispositivo de bloco*.</block>
+  <block id="c494d1f97c8af593b2547e971cde7048" category="list-text">Em *Detalhes do volume*, faça o seguinte:</block>
+  <block id="28d37ed4396c69863c777832e2dc985a" category="list-text">*Nome do volume*: Selecione uma das seguintes opções.</block>
+  <block id="def02085a38e856b98b13e533d3b840f" category="list-text">Crie um novo volume e insira o nome do volume.</block>
+  <block id="e5113669fd2a554528c1fff4b4a28162" category="list-text">Selecione um volume existente.</block>
+  <block id="f879102f0ab70ffbcdaf5ea3b09693dd" category="list-text">*VM de armazenamento*: Selecione uma VM de armazenamento.</block>
+  <block id="0bd1c4c69e2f0fa0ace2c5a2bc4bfb4f" category="list-text">*Estilo de volume*: O estilo de volume padrão é * FlexVol*.</block>
+  <block id="c68f7e5abbdc5e2d69f2654296febb52" category="list-text">*Volume desejado*: Insira o volume desejado e selecione a unidade. O tamanho máximo por FlexVol volume é de 100 TiB.</block>
+  <block id="f0ddb24224adb11c4c26879e00143b36" category="list-text">*Aumento automático de volume*: Opcionalmente, habilite o aumento automático de volume para permitir que o volume aumente de tamanho automaticamente quando atingir a capacidade máxima. O tamanho máximo de crescimento é de 300 TiB.</block>
+  <block id="ad2ab5f2c7e10afc96bd0e17739e1986" category="list-text">*Etiquetas*: Opcionalmente, adicione etiquetas para ajudar a organizar e categorizar seu dispositivo de bloco.</block>
+  <block id="66849c76f9938572ebbf346d93c18eea" category="list-text">Em *Detalhes do dispositivo de bloqueio*, faça o seguinte:</block>
+  <block id="a585842d038e5160ebfc3806b62044a6" category="list-text">*Nome do dispositivo de bloco*: Insira um nome para o dispositivo de bloco.</block>
+  <block id="6d73923747600d8280fb309f7bb705ea" category="list-text">*Tamanho do dispositivo de bloco*: Insira o tamanho do dispositivo de bloco e selecione a unidade. O tamanho do dispositivo de bloco deve ser menor que o tamanho do volume disponível.</block>
+  <block id="e9e005dffa12441a25899a863e99f0fa" category="list-text">Em *Acesso*, faça o seguinte:</block>
+  <block id="d4a692c93d71fdee64560b6ac04e9714" category="list-text">*Configuração iSCSI*: Selecione uma das seguintes opções.</block>
+  <block id="d9f80ec4d13936fdba78b793f44c184c" category="list-text">*Criar novo grupo de iniciadores*: Forneça o sistema operacional do host, o nome do grupo de iniciadores e adicione um ou mais iniciadores de host com nome qualificado iSCSI (IQN).</block>
+  <block id="104d3f014c0f2ca8498a2aa9f78b1864" category="list-text">*Mapear grupo de iniciadores existente*: Selecione um grupo de iniciadores existente, forneça o sistema operacional do host e selecione um ou mais iniciadores de host com nome qualificado iSCSI (IQN).</block>
+  <block id="db784c6694930c54da9655a9d31c365a" category="list-text">Em *Eficiência e proteção*, faça o seguinte:</block>
+  <block id="8cbc6c14a0474488d906dfdd17ce79c4" category="paragraph">A seguir, estão as políticas padrão da AWS. Para exibir as políticas de snapshot existentes, você deve <block ref="6ac03ad394740d642419d1159fa121ff" category="inline-link-macro-rx"></block>.</block>
+  <block id="4dd81c3ec298b3b3b12adbd43350c454" category="paragraph">_Balanced (Auto)_ é a política de armazenamento em camadas padrão ao criar um volume usando o console do Workload Factory. Para obter mais informações sobre políticas de escalonamento de volume, consulte: <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> Na documentação do AWS FSx para NetApp ONTAP . Observe que o Workload Factory usa nomes baseados em casos de uso no console do Workload Factory para políticas de tiering e inclui os nomes das políticas de tiering do FSx para ONTAP entre parênteses.</block>
+  <block id="eafa5af121307f6008fad4d24d6d9f14" category="list-text">Volumes com arquivos imutáveis e volumes com o protocolo NVMe não são suportados para ARP/AI.</block>
+  <block id="78b92538a82bd788a456f9cf838a5c11" category="paragraph"><block ref="78b92538a82bd788a456f9cf838a5c11" category="inline-link-macro-rx"></block></block>
+  <block id="1e3a8de3c21016b6778340215e821fb6" category="list-text">No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos e, em seguida, selecione *Gerenciar*.</block>
+  <block id="96271eab8824304349d49f716ef08b72" category="list-text">Na visão geral do sistema de arquivos em VMs de armazenamento, selecione *Criar VM de armazenamento*.</block>
+  <block id="355a4219717415b19bc0cfb3a299f9a8" category="list-text">Na página Criar VM de armazenamento, em Configuração da VM de armazenamento, forneça as seguintes informações:</block>
+  <block id="3b097ea48314307e283cb12e56ebf242" category="list-text">Na tela Gerenciar VMs de armazenamento, selecione o menu de ações da VM de armazenamento que deseja excluir.</block>
+  <block id="add6edc9de6a44472705a7a46e4fd5c2" category="inline-link-macro">Criar um dispositivo de bloco para um sistema de arquivos FSx para ONTAP</block>
+  <block id="a795e8e784620e60993a8b9e17168564" category="paragraph"><block ref="a795e8e784620e60993a8b9e17168564" category="inline-link-macro-rx"></block></block>
+  <block id="6a3dc4143a7da62f8900b495e210893d" category="list-text">Na tela Gerenciar VMs de armazenamento, selecione o menu de ações da VM de armazenamento para a qual deseja editar as tags e, em seguida, selecione *Ações básicas* &gt; *Editar tags da VM de armazenamento*.</block>
+  <block id="e8b970818f72fb7cf471fb0f9361d2fb" category="list-text">Na tela Gerenciar VMs de armazenamento, selecione o menu de ações da VM de armazenamento para a qual deseja replicar uma SVM e, em seguida, selecione *Ações avançadas* &gt; *Replicar VM de armazenamento*.</block>
+  <block id="f7c0292ee19b0ef8ab597e8587b490f2" category="list-text">No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com a senha da VM de armazenamento que deseja redefinir e, em seguida, selecione *Gerenciar*.</block>
+  <block id="d303726d253e10ceb3c3a9904bc4c18f" category="list-text">Na tela Gerenciar VMs de armazenamento, selecione o menu de ações da VM de armazenamento para a qual deseja redefinir a senha e, em seguida, selecione *Ações básicas* &gt; *Redefinir senha*.</block>
+  <block id="334f5b13a66630c66877aaf36ce24673" category="section-title">04 de janeiro de 2026</block>
+  <block id="04c5d70ed6312687a1e39677346bbaff" category="sidebar">Criar um dispositivo de bloco</block>
 </blocks>
