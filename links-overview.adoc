@@ -56,6 +56,7 @@ A fábrica de carga de trabalho requer um link para exibir algumas informações
 Os recursos que exigem um link incluem:
 
 * Status bem arquitetado do FSx para configurações do sistema de arquivos ONTAP para manutenção proativa, confiabilidade e otimização de custo-desempenho
+* Monitoramento e alerta de eventos do ONTAP EMS
 * Proteção Autônoma contra Ransomware da NetApp (ARP/AI)
 * Capacidade de observação holística aprimorada no FSx para sistemas de arquivos ONTAP
 * Replicação, gerenciamento e monitoramento de dados de VM de volume e armazenamento
