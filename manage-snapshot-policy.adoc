@@ -31,7 +31,7 @@ Para exibir políticas de instantâneo existentes, você deve associar um link. 
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em *Armazenamento*, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . Na aba *FSx para ONTAP*, selecione o menu de ações do sistema de arquivos e então selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *Storage VMs*.
 . Na guia *VMs de armazenamento*, selecione o menu de ações para a VM de armazenamento que contém o volume a ser protegido com instantâneos agendados, depois *Ações avançadas* e, por fim, *Gerenciar políticas de instantâneos*.
@@ -54,7 +54,7 @@ Você deve associar um link para habilitar snapshots imutáveis. link:https://do
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em *Armazenamento*, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . Na aba *FSx para ONTAP*, selecione o menu de ações do sistema de arquivos que contém o volume para bloquear snapshots e então selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
 . Na aba *Volumes*, selecione o botão de ação do volume a ser protegido.
@@ -83,7 +83,7 @@ Você deve associar um link para atribuir uma política de instantâneo. link:ht
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em *Armazenamento*, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . Na guia *FSx para ONTAP*, selecione o menu de ações do sistema de arquivos que contém o volume ao qual atribuir uma política de snapshot e selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *Storage VMs*.
 . Na guia *VMs de armazenamento*, selecione o menu de ações para a VM de armazenamento que contém o volume a ser protegido com instantâneos agendados, depois *Ações avançadas* e, por fim, *Gerenciar políticas de instantâneos*.
@@ -109,7 +109,7 @@ Você deve associar um link para remover uma política de instantâneo. link:htt
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em *Armazenamento*, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . Na guia *FSx para ONTAP*, selecione o menu de ações do sistema de arquivos que contém o volume ao qual atribuir uma política de snapshot e selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *Storage VMs*.
 . Na guia *VMs de armazenamento*, selecione o menu de ações para a VM de armazenamento que contém o volume a ser protegido com instantâneos agendados, depois *Ações avançadas* e, por fim, *Gerenciar políticas de instantâneos*.
@@ -131,7 +131,7 @@ Quando uma política de snapshot é atribuída a mais de um volume, você deve m
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em *Armazenamento*, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *Storage VMs*.

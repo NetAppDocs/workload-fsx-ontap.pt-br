@@ -29,7 +29,7 @@ Altere o nome de um volume de cache existente a qualquer momento.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione FSx para ONTAP.
 . No FSx para ONTAP, selecione o menu de ações do sistema de arquivos com o volume de cache e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *Relações de cache*.
@@ -45,7 +45,7 @@ Você pode ajustar a capacidade de um volume de cache existente a qualquer momen
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione FSx para ONTAP.
 . No FSx para ONTAP, selecione o menu de ações do sistema de arquivos com o volume de cache e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *Relações de cache*.
@@ -61,7 +61,7 @@ Alterar o caminho de montagem ou a política de exportação atribuída a um vol
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione FSx para ONTAP.
 . No FSx para ONTAP, selecione o menu de ações do sistema de arquivos com o volume de cache e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *Relações de cache*.
@@ -80,7 +80,7 @@ Saiba mais sobrelink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-fle
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione FSx para ONTAP.
 . No FSx para ONTAP, selecione o menu de ações do sistema de arquivos com o volume de cache e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *Relações de cache*.
@@ -96,7 +96,7 @@ Preencha o volume de cache com dados do volume de origem antes de usá-lo para d
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione FSx para ONTAP.
 . No FSx para ONTAP, selecione o menu de ações do sistema de arquivos com o volume de cache e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *Relações de cache*.
@@ -112,7 +112,7 @@ Ao excluir um volume de cache, você remove o relacionamento de cache associado 
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione FSx para ONTAP.
 . No FSx para ONTAP, selecione o menu de ações do sistema de arquivos com o volume de cache e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *Relações de cache*.

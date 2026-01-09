@@ -25,8 +25,7 @@ Obtenha o ponto de montagem de um volume para montar um compartilhamento em um c
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
-. No menu Armazenamento, selecione *FSx para ONTAP*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
 . Na guia Volumes, selecione o menu de ações do volume, depois *Ações básicas* e, por fim, *Exibir comando de montagem*.

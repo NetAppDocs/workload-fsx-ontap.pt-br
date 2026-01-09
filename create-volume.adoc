@@ -78,7 +78,7 @@ NOTE: Ao usar o Terraform do Codebox, o código que você copia ou baixa oculta 
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos no qual deseja criar um volume e selecione *Criar volume*.
 . Na página criar volume em Detalhes gerais, forneça os seguintes detalhes:
@@ -168,7 +168,7 @@ O ONTAP atinge eficiência de armazenamento usando recursos de desduplicação e
 
 .. *Política de snapshot*: Selecione a política de snapshot para especificar a frequência e a retenção de snapshots.
 +
-A seguir, estão as políticas padrão da AWS. Para exibir as políticas de snapshot existentes, você deve link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["associe um link"].
+A seguir, estão as políticas padrão da AWS. Para exibir as políticas de snapshot existentes, você deve link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["associe um link"].
 
 +
 `default`:: Essa política cria automaticamente snapshots na programação a seguir, com as cópias snapshot mais antigas excluídas para abrir espaço para cópias mais recentes:

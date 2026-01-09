@@ -56,7 +56,7 @@ NOTE: Apenas um método de autenticação é suportado por link. Por exemplo, se
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos ao qual deseja associar um link e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione *Authenticate the link*.
@@ -80,7 +80,7 @@ Quando a senha administrativa for inválida, atualize a senha para conetar o lin
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos ao qual deseja associar um link e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione *Atualizar senha*.
@@ -101,7 +101,7 @@ Observe que o link só é excluído do Workload Factory, não do seu ambiente AW
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *Administração* e depois *Links*.
 +
 Os links existentes aparecem na página Links.

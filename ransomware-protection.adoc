@@ -38,13 +38,15 @@ Aprendizagem e modos ativos:: O ARP/AI opera primeiro no _modo de aprendizagem_ 
 +
 No modo ativo, se uma extensão de arquivo for sinalizada como anormal, você deve avaliar o alerta. Você pode agir no alerta para proteger seus dados ou você pode marcar o alerta como um falso positivo. Marcar um alerta como falso positivo atualiza o perfil de alerta. Por exemplo, se o alerta for acionado por uma nova extensão de arquivo e você marcar o alerta como um falso positivo, você não receberá um alerta na próxima vez que essa extensão de arquivo for observada.
 
++
+Volumes FlexVol que contêm um dispositivo de bloco iniciam o ARP/AI no modo ativo.
+
 
 
 --
 Configurações não suportadas:: As configurações a seguir não suportam o uso de ARP/AI.
 +
 --
-* Volumes DE SAN/bloco
 * Volumes iSCSI
 * Volumes NVMe
 
@@ -69,7 +71,7 @@ Para habilitar ARP/AI para um sistema de arquivos ou um volume, você deve assoc
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos para habilitar ARP/AI e então selecione *Gerenciar*.
 . Em Informações, selecione o ícone de lápis ao lado de *Proteção Autônoma contra Ransomware*.  O ícone de lápis aparece ao lado da seta quando o mouse passa sobre a linha *Proteção Autônoma contra Ransomware*.
@@ -90,7 +92,7 @@ Para habilitar ARP/AI para um sistema de arquivos ou um volume, você deve assoc
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos para habilitar ARP/AI e então selecione *Gerenciar*.
 . Na guia Volumes, selecione o menu de ações do volume para habilitar ARP/AI, depois *Ações de proteção de dados* e depois *Gerenciar ARP/AI*.
@@ -114,7 +116,7 @@ Determine se um ataque é um falso alarme ou um incidente de ransomware genuíno
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o sistema de arquivos para validar ataques de ransomware.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
@@ -136,7 +138,7 @@ Com o conhecimento dos arquivos afetados e o tempo de ataque, é possível recup
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o sistema de arquivos para recuperar os dados.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.

@@ -42,8 +42,9 @@ Os sistemas de arquivos FSx de segunda geração para ONTAP são o tipo de impla
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Criar FSx para ONTAP*.
-. Na página criar FSX para ONTAP, selecione *criar rápido*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
+. No painel de controle de armazenamento, selecione *Criar sistema de arquivos*.
+. Na página Criar FSx para sistema de arquivos ONTAP , selecione *Criação rápida*.
 +
 Você também pode carregar uma configuração salva.
 
@@ -115,7 +116,7 @@ Com o Advanced Create, você define todas as opções de configuração, incluin
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco Armazenamento, selecione *Criar FSx para ONTAP*.
-. Na página criar FSX para ONTAP, selecione *criar avançado*.
+. Na página Criar sistema de arquivos FSx para ONTAP , selecione *Criação avançada*.
 +
 Você também pode carregar uma configuração salva.
 

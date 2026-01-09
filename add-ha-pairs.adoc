@@ -43,7 +43,7 @@ Faça o seguinte antes de adicionar pares de HA a um sistema de arquivos:
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . Em *FSx para ONTAP* em *Informações*, selecione o ícone de lápis ao lado de *pares HA*.
 . Na caixa de diálogo *Adicionar pares de HA*, selecione o número de pares de HA a serem adicionados ao sistema de arquivos.

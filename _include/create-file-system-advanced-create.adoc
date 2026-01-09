@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-. Na página criar FSX para ONTAP, selecione *criar avançado*.
+. Na página Criar sistema de arquivos FSx para ONTAP , selecione *Criação avançada*.
 +
 Você também pode carregar uma configuração salva.
 

@@ -35,7 +35,7 @@ Siga as etapas a seguir para replicar volumes selecionados ou replicar todos os 
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos que contém o(s) volume(s) a ser(em) replicado(s) e, em seguida, selecione *Gerenciar*.
 . Replique todos os volumes em um sistema de arquivos ou replique volumes selecionados.

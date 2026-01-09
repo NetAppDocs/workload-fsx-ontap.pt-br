@@ -21,7 +21,7 @@ Edite o nome, o rótulo e o período de retenção de um snapshot.  Se o snapsho
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em *Armazenamento*, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
@@ -53,7 +53,7 @@ Habilite o acesso ao diretório de snapshots para dar aos usuários a capacidade
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em *Armazenamento*, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
@@ -88,7 +88,7 @@ Snapshots imutáveis não podem ser excluídos até que o período de retenção
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Em *Armazenamento*, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.

@@ -30,10 +30,9 @@ Como os requisitos para configurações de armazenamento variam, você pode desc
 A fábrica de carga de trabalho analisa o status bem arquitetado das seguintes configurações para os sistemas de arquivos FSX for ONTAP:
 
 * Confiabilidade: limite de capacidade SSD, snapshots locais agendados, FSx para backups ONTAP , replicação remota de dados e confiabilidade de dados para retenção de longo prazo
-* Segurança: Proteção autônoma contra ransomware da NetApp com IA (ARP/AI) e acesso não autorizado a volumes.
-* Excelência operacional: gerenciamento automático de capacidade, limite de utilização da capacidade de arquivos de volume e utilização de volume próxima da capacidade máxima.
-* Otimização de custos: eficiência de armazenamento, hierarquização de dados e exclusão desnecessária de snapshots.
-* Otimização de desempenho: reequilíbrio de volumes do FlexGroup
+* Segurança: Proteção autônoma contra ransomware da NetApp com IA (ARP/AI) desativada e acesso não autorizado a volumes.
+* Excelência operacional: gerenciamento automático de capacidade, limite de utilização da capacidade do arquivo de volume, utilização do volume próxima da capacidade máxima e modo de gravação de relacionamento de cache.
+* Otimização de custos: eficiência de armazenamento, hierarquização de dados, exclusão desnecessária de snapshots e backups.
 
 
 
@@ -50,7 +49,7 @@ Você pode corrigir problemas de configuração para um sistema de arquivos FSx 
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos a ser atualizado e, em seguida, selecione *Gerenciar*.
 . Navegue da visão geral do sistema de arquivos FSx para ONTAP até a guia *Status bem arquitetado*.
@@ -84,7 +83,7 @@ Descartar para interromper uma análise de configuração indefinidamente para u
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos e depois *Gerenciar*.
 . Navegue da visão geral do sistema de arquivos FSx para ONTAP até a guia *Status bem arquitetado*.
@@ -97,7 +96,7 @@ Descartar para interromper uma análise de configuração indefinidamente para u
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos e depois *Gerenciar*.
 . Navegue da visão geral do sistema de arquivos FSx para ONTAP até a guia *Status bem arquitetado*.
@@ -131,7 +130,7 @@ Reative uma análise de configuração descartada a qualquer momento.  Você pod
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos e depois *Gerenciar*.
 . Navegue da visão geral do sistema de arquivos FSx para ONTAP até a guia *Status bem arquitetado*.
@@ -144,7 +143,7 @@ Reative uma análise de configuração descartada a qualquer momento.  Você pod
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos e depois *Gerenciar*.
 . Navegue da visão geral do sistema de arquivos FSx para ONTAP até a guia *Status bem arquitetado*.

@@ -94,7 +94,7 @@ Use o CloudFormation para criar e registrar automaticamente o link no Workload F
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos ao qual deseja associar um link e, em seguida, selecione *Associar link*.
 . Na caixa de diálogo associar, selecione *criar um novo link* e selecione *continuar*.
@@ -166,7 +166,7 @@ Você pode criar um link usando duas ferramentas de Infraestrutura como Código 
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos ao qual deseja associar um link e, em seguida, selecione *Associar link*.
 . Na caixa de diálogo associar, selecione *criar um novo link* e selecione *continuar*.
@@ -240,7 +240,7 @@ Depois de criar um link, associe-o a um ou mais sistema de arquivos FSX for ONTA
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos ao qual deseja associar um link e, em seguida, selecione *Associar link*.
 . Na página associar link, selecione *associar um link existente*, selecione o link e selecione *continuar*.

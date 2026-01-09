@@ -4,14 +4,14 @@ permalink: manage-block-devices.html
 keywords: block devices, manage luns, manage iscsi 
 summary: Gerencie dispositivos de bloco para um sistema de arquivos FSx para ONTAP no NetApp Workload Factory. 
 ---
-= Gerencie os dispositivos de bloco para um sistema de arquivos FSx para ONTAP.
+= Gerencie os dispositivos de bloco para um sistema de arquivos no NetApp Workload Factory.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-A partir do console do NetApp Workload Factory , você pode gerenciar os dispositivos de bloco para seus sistemas de arquivos FSx for ONTAP .  As tarefas de gerenciamento incluem visualizar detalhes do dispositivo de bloco e aumentar a capacidade.
+A partir do console do NetApp Workload Factory , você pode gerenciar os dispositivos de bloco para seus sistemas de arquivos FSx for ONTAP . As tarefas de gerenciamento incluem visualizar detalhes do dispositivo de bloco, aumentar a capacidade, gerenciar o acesso do cliente, arquivar dados do dispositivo de bloco e excluir dispositivos de bloco.
 
 .Sobre esta tarefa
 Dispositivos de bloco, ou LUNs (números de unidade lógica), são volumes que contêm sistemas de arquivos em um ambiente SAN e podem ser acessados por hosts através de uma rede.
@@ -31,7 +31,7 @@ Visualize os detalhes de um dispositivo de bloco existente a qualquer momento.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx para ONTAP*, selecione a guia *Dispositivos de bloco*.
 . Acesse o menu de ações do dispositivo de bloco e selecione *Exibir detalhes*.
@@ -48,7 +48,7 @@ Aumente a capacidade de um dispositivo de bloco existente a qualquer momento.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx para ONTAP*, selecione a guia *Dispositivos de bloco*.
 . Acesse o menu de ações do dispositivo de bloco e selecione *Aumentar capacidade*.
@@ -58,6 +58,63 @@ Aumente a capacidade de um dispositivo de bloco existente a qualquer momento.
 
 
 NOTE: Após aumentar o tamanho do dispositivo de bloco, siga o procedimento fornecido pelo sistema operacional do seu host para detectar o novo tamanho do dispositivo de bloco e expandir o sistema de arquivos nele.
+
+
+
+== Gerenciar o acesso do cliente para um dispositivo de bloco
+
+Você pode gerenciar o acesso do cliente a um dispositivo de bloco existente a qualquer momento, criando grupos de interface (igroups) e adicionando ou removendo dispositivos de bloco e iniciadores de host.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx para ONTAP*, selecione a guia *Dispositivos de bloco*.
+. Acesse o menu de ações do dispositivo de bloqueio e selecione *Gerenciar acesso do cliente*.
+. Se não existir nenhum grupo de interfaces (igroup), crie um novo selecionando *Criar grupo de interfaces* e, em seguida, faça o seguinte:
++
+.. *Nome do dispositivo de bloqueio*: Insira o nome do dispositivo de bloqueio. Você pode selecionar vários dispositivos de bloco para associar ao igroup.
+.. *Tipo de sistema operacional*: Selecione o tipo de sistema operacional.
+.. *Nome do grupo de igroup*: Insira um nome para o grupo de igroup.
+.. *Descrição do grupo de instâncias*: Opcionalmente, insira uma descrição para o grupo de instâncias.
+.. *Iniciadores do host*: Insira um ou mais iniciadores do host. Esses iniciadores devem seguir o formato iSCSI qualificado (IQN).
+.. Selecione *criar*.
+
+
+. Se já existir um grupo de interfaces (igroup), selecione *Editar acesso do cliente* para adicionar ou remover dispositivos de bloco e iniciadores de host do grupo de interfaces e, em seguida, selecione *Aplicar*.
+
+
+
+
+== Arquivar os dados de um dispositivo de bloco órfão
+
+Dispositivos de bloco que não estão mais mapeados para um cliente ou que não são usados por sete dias consecutivos são classificados como dispositivos de bloco órfãos. Você pode arquivar os dados de um dispositivo de bloco órfão na camada de pool de capacidade para recuperar capacidade do SSD.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx para ONTAP*, selecione a guia *Dispositivos de bloco*.
+. Em Dispositivos órfãos, selecione *Visualizar e recuperar capacidade*.
+. Na tela Recuperar espaço para dispositivos de bloco não utilizados, selecione um ou mais dispositivos de bloco para arquivar os dados e recuperar a capacidade.
+. Selecione *Arquivo*.
+
+
+
+
+== Excluir dispositivo de bloco
+
+Dispositivos de bloco que não estão mais mapeados para um cliente ou que não são usados ​​por sete dias consecutivos são classificados como dispositivos de bloco órfãos. Esta operação desvincula e exclui o dispositivo de bloco selecionado. Se o FlexVol volume do host não contiver nenhum dispositivo de bloco, o Workload Factory também o excluirá.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx para ONTAP*, selecione a guia *Dispositivos de bloco*.
+. Em Dispositivos órfãos, selecione *Visualizar e recuperar capacidade*.
+. Na tela Recuperar espaço para dispositivos de bloco não utilizados, selecione um ou mais dispositivos de bloco para arquivar os dados e recuperar a capacidade.
+. Selecione *Eliminar*.
+
 
 
 

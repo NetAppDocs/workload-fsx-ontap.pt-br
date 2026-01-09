@@ -48,7 +48,7 @@ image:screenshot-on-prem-connectivity.png["Captura de tela que mostra como um cl
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . Selecione a guia *On-Premises ONTAP*.
 . Selecione *Discover*.
 . Reveja os pré-requisitos e selecione *seguinte*.
@@ -84,7 +84,7 @@ Replique dados de volume de um cluster do ONTAP no local para um sistema de arqu
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *On-premises ONTAP*.
 . Para encontrar volumes por VM de armazenamento, você pode *Selecionar VM de armazenamento* no menu suspenso.
 . Selecione um ou mais volumes para replicar e, em seguida, selecione *replicar*.
@@ -149,7 +149,7 @@ Remova um cluster ONTAP local do NetApp Workload Factory quando necessário.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *On-premises ONTAP*.
 . Selecione o cluster ONTAP local a ser removido.
 . Selecione o menu de ações e selecione *Remover do Workload Factory*.

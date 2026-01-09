@@ -36,12 +36,9 @@ Para ajustar a capacidade de um sistema de arquivos, você deve primeirolink:ena
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No Painel, selecione *Ajustar capacidade do SSD*.
 . Selecione o sistema de arquivos cuja capacidade você deseja ajustar e então selecione *Continuar*.
-+
-*Potencial de economia* é a recomendação para diminuir a capacidade.
-
 . Na caixa de diálogo Ajustar capacidade do SSD, insira um número para *Capacidade provisionada*.
 . Selecione a unidade para a capacidade provisionada.
 . Selecione *aplicar*.

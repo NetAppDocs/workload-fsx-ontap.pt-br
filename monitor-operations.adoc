@@ -46,7 +46,7 @@ Rastreie e monitore operações no NetApp Console com o Tracker.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *Administração* e depois *Links*.
 +
 image:screenshot-menu-tracker-option.png["Uma captura de tela do menu de configurações da conta com a opção Rastreador realçada."]

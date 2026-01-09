@@ -15,7 +15,7 @@ As etiquetas podem ajudar você a categorizar seus recursos.  No NetApp Workload
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Armazenamento, selecione *Ir para Armazenamento*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos que deseja atualizar e, em seguida, selecione *Gerenciar tags do sistema de arquivos*.
 . Na caixa de diálogo *Gerenciar tags do sistema de arquivos*, adicione, edite ou remova tags conforme necessário.
