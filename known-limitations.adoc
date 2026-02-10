@@ -72,7 +72,6 @@ Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.ht
 == Suporte ao protocolo iSCSI
 
 * O protocolo iSCSI só está disponível para volumes FlexVol. 1
-* Apenas um único LUN pode ser configurado por volume.
 * A redução do tamanho do volume não é suportada para volumes iSCSI.
 
 
@@ -107,12 +106,6 @@ A calculadora de economia de armazenamento não calcula as economias de custo pa
 * Elastic Block Store (EBS): ST1, SC1 e tipos de volume padrão
 * Elastic File System (EFS): Modo de taxa de transferência de estouro
 
-
-
-
-== System Manager
-
-O System Manager não oferece suporte a links para a conetividade do FSX for ONTAP.
 
 
 

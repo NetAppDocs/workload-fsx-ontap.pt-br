@@ -461,7 +461,6 @@
   <block id="b1c8cb58e124bead4ca2e09fa1c20c9b" category="paragraph">Consulte <block ref="17ef0d7491a925205e8443311f7ef122" category="inline-link-macro-rx"></block>na documentação da AWS o número máximo de SVMs por sistema de arquivos.</block>
   <block id="3a448e496404b548627a97fc00da8e23" category="section-title">Suporte ao protocolo iSCSI</block>
   <block id="50fa5062b83d0f575448ba449245fa17" category="list-text">O protocolo iSCSI só está disponível para volumes FlexVol. 1</block>
-  <block id="53c858a11ae23c19aee107fb913f096a" category="list-text">Apenas um único LUN pode ser configurado por volume.</block>
   <block id="7e7397a7b79323762c61941fc0e6b5f9" category="section-title">Proteção de dados</block>
   <block id="3625bed0ef82516150cc87137582e2b5" category="list-text">Os instantâneos não podem ser eliminados.</block>
   <block id="fa0b5078a184e3a9f13892acdade9375" category="list-text">Quando você replica um sistema de arquivos, todos os volumes no sistema de arquivos usam a mesma política de replicação.</block>
@@ -723,8 +722,6 @@
   <block id="0e42938784ca54b8dc455284578841f0" category="list-text">Na caixa de diálogo Inicializar relacionamento, selecione *Inicializar*.</block>
   <block id="478b776fc28a60e8545a858eb7ca9a3e" category="summary">As limitações conhecidas identificam plataformas, dispositivos ou funções que não são suportadas por esta versão do produto ou que não interoperam corretamente com ele.</block>
   <block id="bd2e4cb8c94783198db1a525a87ae34a" category="doc">Limitações conhecidas do Amazon FSX for NetApp ONTAP</block>
-  <block id="26ed02718973e705cd69ee6e109400e0" category="section-title">System Manager</block>
-  <block id="9ee31cf2622a4d1606ccae84e2ba0742" category="paragraph">O System Manager não oferece suporte a links para a conetividade do FSX for ONTAP.</block>
   <block id="384c5c520d0877aaaaed76d75d973d99" category="list-text">* Calculadora de comparação de custos de armazenamento*: Compara os custos de armazenamento do Amazon Elastic Block Store (EBS), Elastic File System (EFS) e FSX para Windows File Server com o FSX for ONTAP. A partir da calculadora, você pode ver como as configurações de armazenamento do FSX for ONTAP oferecem economias potenciais e Planejar sua migração para o FSX for ONTAP.</block>
   <block id="f6858e5eadd0ed940450d85121838545" category="list-text">*Interface de usuário do Workload Factory*: Fornece opções de modo de implantação _Quick Create_ e _Advanced Create_. O Quick Create inclui a AWS, o NetApp e as práticas recomendadas padrão do setor para suas configurações de storage.</block>
   <block id="53fe87832fd05bf7a8e9f1e1bad4aa86" category="doc">Gerencie o agendamento de backup de um sistema de arquivos FSX for ONTAP</block>
@@ -2513,7 +2510,6 @@
   <block id="69fa9c087519616c715c1ff5cb8799b4" category="paragraph">Os administradores de armazenamento geralmente respondem aos eventos do FSx for ONTAP EMS somente após reclamações de clientes ou mantendo scripts e alarmes personalizados. Essa abordagem reativa pode reduzir a eficiência, atrasar a resolução de problemas e aumentar o tempo de inatividade.</block>
   <block id="ea0503aedfe2585b2372e8f13d9a188b" category="inline-link-macro">conectando-se ao sistema de arquivos usando um link</block>
   <block id="9d2246fd849af6e6265f4bfd88a1fae2" category="inline-link-macro">concedendo permissões de _visualização, planejamento e análise_</block>
-  <block id="2647b280de36025cc715dd5e1d5ccecf" category="paragraph">O analisador de eventos extrai automaticamente eventos de erro, aviso e emergência do EMS dos sistemas de arquivos FSx for ONTAP. Você pode visualizar esses eventos por <block ref="f91a3df34ad8b434c845af1c5c4599e2" category="inline-link-macro-rx"></block> e por <block ref="f7fcd176fbc4e82ec30b37b672d1e76e" category="inline-link-macro-rx"></block> em sua conta AWS. Os eventos são exibidos por 72 horas antes de serem removidos.</block>
   <block id="0ee3fcfb10a8d4af3c7cb550b6d9bc38" category="paragraph">Com a integração do Amazon Bedrock, o Workload Factory usa IA para analisar eventos e fornecer insights acionáveis para manter a integridade e o desempenho dos seus sistemas de arquivos FSx for ONTAP.</block>
   <block id="721c487e9ac5dc5fc37d25389a9c0866" category="list-text">Solução de problemas avançada: a IA identifica, analisa e fornece automaticamente informações para corrigir eventos do FSx for ONTAP EMS, reduzindo o tempo de investigação manual.</block>
   <block id="90fff3808b87c7068de0570f6b4692b6" category="list-text">Remediação de melhores práticas: o analisador de eventos fornece etapas claras e práticas para resolver eventos do FSx for ONTAP EMS.</block>
@@ -2553,11 +2549,9 @@
   <block id="76f77cbc01f0341dffcaaa5f6236eb73" category="section-title">Detalhes do bucket S3 disponíveis em Storage</block>
   <block id="c203e76297d071e4d8256e073c93dafb" category="paragraph">Com metadados ativados para os pontos de acesso do S3, NetApp Workload Factory verifica automaticamente seus buckets do AWS S3 e preenche as tabelas do S3 para fornecer uma visão clara de todos os objetos, seus metadados, atributos e tags. O acesso a esses detalhes ajuda você a manter controle, visibilidade e confiança nos dados pelos quais você é responsável, enquanto reduz a sobrecarga operacional.</block>
   <block id="cc7664945c125a51dd2e69095c8f8200" category="inline-link-macro">Veja detalhes dos pontos de acesso S3 em sistemas de arquivos FSx for ONTAP</block>
-  <block id="dd52e33b4320b655cb69fb76bc1e345f" category="paragraph"><block ref="dd52e33b4320b655cb69fb76bc1e345f" category="inline-link-macro-rx"></block></block>
   <block id="2249107cb1f4c202ef0253c53bcff598" category="section-title">Operações de gerenciamento adicionais para pontos de acesso S3</block>
   <block id="bf44c4671ee3bfbc818d505bb9a0e59a" category="paragraph">NetApp Workload Factory oferece operações de gerenciamento adicionais para pontos de acesso S3. Você pode visualizar detalhes do ponto de acesso, modificar pontos de acesso S3 existentes e adicionar ou remover tags de pontos de acesso S3 a partir da interface NetApp Workload Factory, simplificando suas tarefas de gerenciamento de storage de objetos.</block>
   <block id="366c32f0cbb2503b337e243eaa8c42b5" category="inline-link-macro">Gerencie os pontos de acesso S3 no NetApp Workload Factory</block>
-  <block id="d9ec48855b13e13fd489d2442f822e4d" category="paragraph"><block ref="d9ec48855b13e13fd489d2442f822e4d" category="inline-link-macro-rx"></block></block>
   <block id="e593953aaf04eebecfe2e26326145784" category="list-text">Otimizar o tamanho do volume de cache: verifica se o dimensionamento automático e a limpeza estão ativados nos volumes de cache para manter o tamanho ideal e concentrar o cache nos dados mais acessados para eficiência máxima.</block>
   <block id="00e21b809963a2e31abfc13c3aea34b6" category="list-text">Dispositivos de bloco órfãos: recomenda arquivar os dados do dispositivo de bloco ou excluir um dispositivo de bloco caso não tenha sido utilizado por sete dias consecutivos.</block>
   <block id="a872ae5d7fdb75042465788519d63c35" category="list-text">Relatório lógico de storage VM: verifica se a configuração padrão de relatório para uma storage VM está definida como lógica, o que proporciona melhor visibilidade do uso de storage no nível do volume.</block>
@@ -2566,13 +2560,10 @@
   <block id="2f09b86fd82a1603b2104c3d565e4187" category="list-text">Eficiências de armazenamento: exibe a capacidade de storage usada e disponível; a capacidade usada é discriminada por SSD e por níveis de storage do pool de capacidade.</block>
   <block id="075b9a975b25dba22b299c4edaf12834" category="list-text">Dispositivos protegidos: exibe a porcentagem de dispositivos de bloco com snapshots, replicação remota, NetApp Autonomous Ransomware Protection (ARP/AI) e backups.</block>
   <block id="46dd61e303a77cea00fc631287dfeab6" category="inline-link-macro">recuperar espaço para dispositivos de bloco não utilizados</block>
-  <block id="8e8a93bbbd6df5c04a7668748139ce7a" category="list-text">Dispositivos órfãos: exibe se algum dispositivo de bloco não foi usado por sete dias consecutivos, ajudando você a identificar e gerenciar recursos não utilizados com eficiência. A partir daqui, você pode <block ref="ddc66f326affa5fcec5ab8f0c0c76e68" category="inline-link-macro-rx"></block>.</block>
   <block id="9ebda12d23b72f4bdda3cbbcd05e0817" category="section-title">Suporte para criação e gerenciamento de grupos de iniciadores</block>
   <block id="de002c21193de456c56ce9ccecfc09ab" category="paragraph">NetApp Workload Factory oferece suporte à criação e ao gerenciamento de grupos de iniciadores (igroups) para armazenamento em bloco em FSx for ONTAP sistemas de arquivos. Os grupos de iniciadores conectam dispositivos de bloco (LUNs) aos recursos de computação que têm permissão para acessá-los, fornecendo uma camada de permissões para armazenamento em bloco em ambientes SAN.</block>
   <block id="e477df666bb45ae0a1fda1f7058551a2" category="inline-link-macro">Crie um grupo de iniciadores no NetApp Workload Factory</block>
-  <block id="5e85fc9bd832f8bc5366f7ffe4912a99" category="list-text"><block ref="5e85fc9bd832f8bc5366f7ffe4912a99" category="inline-link-macro-rx"></block></block>
   <block id="8933129f9a07c1370a31a0b9f2e53018" category="inline-link-macro">Gerencie os grupos de iniciadores existentes no NetApp Workload Factory</block>
-  <block id="b241a4baaecab76fcbba49cd24dc9185" category="list-text"><block ref="b241a4baaecab76fcbba49cd24dc9185" category="inline-link-macro-rx"></block></block>
   <block id="185698e1c6b71d12cf578fc402c84407" category="summary">Crie grupos de iniciadores para gerenciar o acesso do host aos dispositivos de bloco no NetApp Workload Factory.</block>
   <block id="b99c94539727b97b20142c5b655d47f4" category="doc">Crie um grupo de iniciadores para um sistema de arquivos no NetApp Workload Factory</block>
   <block id="7fa60554ae8bd6b13d23cabdd189c7c5" category="paragraph">Use NetApp Workload Factory para criar grupos de iniciadores e gerenciar o acesso do host aos dispositivos de bloco SAN.</block>
@@ -2663,4 +2654,10 @@
   <block id="d8ad6fc6096c88d41f98b91f0043eebe" category="sidebar">Crie um igroup</block>
   <block id="9a6576dfb2c795711c67df7e1a5b076a" category="sidebar">Administração de block storage</block>
   <block id="e77c03d49e828607828412709552dbd6" category="sidebar">Gerenciar igroups</block>
+  <block id="fdb38c6259208c2509d21f6a3f0beb02" category="paragraph"><block ref="fdb38c6259208c2509d21f6a3f0beb02" category="inline-link-macro-rx"></block></block>
+  <block id="cc97dddf7d9715fea79ba3e831f0fbca" category="paragraph"><block ref="cc97dddf7d9715fea79ba3e831f0fbca" category="inline-link-macro-rx"></block></block>
+  <block id="b55768d72b4883d58308aa15e30fc7ab" category="list-text">Dispositivos órfãos: exibe se algum dispositivo de bloco não foi usado por sete dias consecutivos, ajudando você a identificar e gerenciar recursos não utilizados com eficiência. A partir daqui, você pode <block ref="88cbe2cfb6c92276ca9f0b27df016fa5" category="inline-link-macro-rx"></block>.</block>
+  <block id="0352f037ca8dfca49383ddb908805d9a" category="list-text"><block ref="0352f037ca8dfca49383ddb908805d9a" category="inline-link-macro-rx"></block></block>
+  <block id="0a17c703284dc61149bdaf13e30980de" category="list-text"><block ref="0a17c703284dc61149bdaf13e30980de" category="inline-link-macro-rx"></block></block>
+  <block id="df267252f2595421cf837794528f006f" category="paragraph">O analisador de eventos extrai automaticamente erros, alertas e eventos de emergência do EMS dos sistemas de arquivos FSx for ONTAP. Você pode visualizar esses eventos por <block ref="f91a3df34ad8b434c845af1c5c4599e2" category="inline-link-macro-rx"></block> e por <block ref="f7fcd176fbc4e82ec30b37b672d1e76e" category="inline-link-macro-rx"></block> em sua conta AWS. Os eventos são exibidos por 72 horas antes de serem removidos.</block>
 </blocks>
