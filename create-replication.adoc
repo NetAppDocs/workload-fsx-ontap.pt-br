@@ -11,12 +11,12 @@ summary: Crie uma relação de replicação para um sistema de arquivos FSX for 
 
 
 [role="lead"]
-Crie uma relação de replicação para um sistema de arquivos FSx for ONTAP no NetApp Workload Factory para evitar perda de dados em caso de desastre imprevisto. A replicação é compatível entre dois sistemas de arquivos FSx for ONTAP e entre Cloud Volumes ONTAP ou um sistema ONTAP local e um sistema de arquivos FSx for ONTAP.
+Crie uma relação de replicação para um sistema de arquivos FSx for ONTAP no NetApp Workload Factory para evitar perda de dados em caso de desastre imprevisto. A replicação é suportada entre dois sistemas de arquivos FSx for ONTAP e entre um sistema ONTAP local e um sistema de arquivos FSx for ONTAP.
 
 .Sobre esta tarefa
-A replicação adiciona proteção contra perda de dados se a região onde seus dados residem sofrer um desastre.
+A replicação protege seus dados caso um desastre afete sua região.
 
-Esta operação cria uma relação de replicação para volumes de origem em um sistema de arquivos FSx for ONTAP, sistema ONTAP local ou sistema Cloud Volumes ONTAP.
+Esta operação cria uma relação de replicação para volumes de origem em um sistema de arquivos FSx for ONTAP ou em um sistema ONTAP local.
 
 Os volumes replicados no sistema de arquivos de destino são volumes de proteção de dados (DP) e seguem o formato de nomenclatura: `{OriginalVolumeName}_copy`.
 
@@ -30,7 +30,7 @@ Ao replicar um volume de origem com arquivos imutáveis, o volume de destino e o
 
 ====
 .Antes de começar
-Considere o seguinte antes de começar.
+Revise estes requisitos antes de começar.
 
 * Você deve ter um sistema de arquivos FSx for ONTAP para usar como destino na relação de replicação.
 * O sistema de arquivos FSx for ONTAP que você usa para a relação de replicação deve ter um link associado. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Depois de associar o link, retorne a esta operação.
