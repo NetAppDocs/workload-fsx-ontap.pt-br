@@ -1,0 +1,10 @@
+= 
+:allow-uri-read: 
+
+
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. Em *FSx for ONTAP*, selecione o sistema de arquivos que contém o(s) volume(s) a serem replicados.
+. Selecione a guia *Replication relationships*.
+. Na tabela de relações de replicação, selecione a relação de replicação para migrar e, em seguida, selecione *Migrar replicação*.
+. Analise as informações na caixa de diálogo Cut over replication e digite _cut over_ para confirmar.
+

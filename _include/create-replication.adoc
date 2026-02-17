@@ -5,6 +5,9 @@
 . *Caso de uso*: Selecione um dos seguintes casos de uso para a replicação.  Dependendo do caso de uso selecionado, o Workload Factory preenche o formulário com valores recomendados de acordo com as melhores práticas.  Você pode aceitar os valores recomendados ou fazer alterações à medida que preenche o formulário.
 +
 ** Migração: Transfere seus dados para o sistema de arquivos FSX for ONTAP de destino
++
+*Replicar configuração da VM de armazenamento*: Opcionalmente, selecione para replicar os dados e as configurações de uma única VM de armazenamento. Ao migrar dados e configurações simultaneamente, certifique-se de que a última replicação do volume foi concluída nas últimas 24 horas. Todos os volumes na mesma VM de armazenamento devem ser selecionados para usar esse recurso. A política de camadas para todos os volumes é definida por padrão como a política de camadas do volume de origem, o que é recomendado para caso de uso de migração.
+
 ** Recuperação de desastres quentes: Garante alta disponibilidade e recuperação rápida de desastres para cargas de trabalho críticas
 ** Recuperação de desastres fria ou arquivada:
 +

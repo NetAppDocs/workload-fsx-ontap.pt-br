@@ -19,6 +19,9 @@ As mesmas etapas se aplicam para habilitar e editar snapshots para retenção de
 
 Quando um cluster ONTAP no local é o destino para a relação de replicação, a alteração de snapshots para retenção de longo prazo não é compatível.
 
+
+NOTE: A edição da retenção de longo prazo não está disponível ao replicar dados e configurações de máquinas virtuais de armazenamento.
+
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.

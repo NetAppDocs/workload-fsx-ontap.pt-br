@@ -16,7 +16,7 @@ Reverta um relacionamento de replicação no NetApp Workload Factory para que o 
 As operações de reversão são suportadas para o seguinte:
 
 * Dois sistemas de arquivos FSX para ONTAP
-* Um sistema de arquivos FSX para ONTAP e um cluster ONTAP no local
+* Um sistema de arquivos FSx for ONTAP e um sistema ONTAP local
 
 
 Depois de interromper a replicação e fazer alterações no volume de destino, é possível replicar essas alterações de volta para o volume de origem. Esse processo é comum em um cenário de recuperação de desastres no qual você opera no volume alvo por um tempo e deseja alternar funções dos volumes.
@@ -24,9 +24,15 @@ Depois de interromper a replicação e fazer alterações no volume de destino, 
 .Sobre esta tarefa
 Quando você inverte e retoma uma replicação, ele alterna as funções de origem e destino dos seus volumes; o volume de destino se torna o novo volume de origem e o volume de origem se torna o novo volume de destino. A operação reversa também substitui o conteúdo do novo volume alvo com o conteúdo do novo volume de origem. Se você reverter uma replicação duas vezes, a direção de replicação original será restabelecida.
 
+[]
+====
+NOTA:
 
-NOTE: Os dados gravados no volume de origem original entre a última replicação de dados e a hora em que o volume de origem é desativado não são preservados.
+* Os dados gravados no volume de origem original entre a última replicação de dados e a hora em que o volume de origem é desativado não são preservados.
+* A replicação reversa não está disponível ao replicar dados e configurações de storage VM.
 
+
+====
 .Antes de começar
 Certifique-se de conhecer as funções atuais e futuras dos volumes de origem e destino, pois as alterações no novo volume de destino são substituídas pelo novo volume de origem. Se usado incorretamente, você pode experimentar perda não intencional de dados.
 
