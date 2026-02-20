@@ -86,9 +86,9 @@ Você pode gerenciar o acesso do cliente a um dispositivo de bloco existente a q
 
 
 
-== Arquivar os dados de um dispositivo de bloco órfão
+== Arquivar os dados de um dispositivo de bloco inativo
 
-Dispositivos de bloco que não estão mais mapeados para um cliente ou que não são usados por sete dias consecutivos são classificados como dispositivos de bloco órfãos. Você pode arquivar os dados de um dispositivo de bloco órfão na camada de pool de capacidade para recuperar capacidade do SSD.
+Dispositivos de bloco que não estão mais mapeados para um cliente ou que não são usados por sete dias consecutivos são classificados como dispositivos de bloco inativos. Você pode arquivar os dados de um dispositivo de bloco inativo na camada de pool de capacidade para recuperar capacidade de SSD.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
@@ -104,7 +104,7 @@ Dispositivos de bloco que não estão mais mapeados para um cliente ou que não 
 
 == Excluir dispositivo de bloco
 
-Dispositivos de bloco que não estão mais mapeados para um cliente ou que não são usados ​​por sete dias consecutivos são classificados como dispositivos de bloco órfãos. Esta operação desvincula e exclui o dispositivo de bloco selecionado. Se o FlexVol volume do host não contiver nenhum dispositivo de bloco, o Workload Factory também o excluirá.
+Dispositivos de bloco que não estão mais mapeados para um cliente ou que não foram usados por sete dias consecutivos são classificados como dispositivos de bloco inativos. Esta operação desmapeia e exclui o dispositivo de bloco selecionado. Se o volume FlexVol do host não contiver nenhum dispositivo de bloco, Workload Factory também o exclui.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].

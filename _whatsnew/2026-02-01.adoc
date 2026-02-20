@@ -45,7 +45,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-s3-access-points.ht
 O Workload Factory analisa seus sistemas de arquivos FSx para ONTAP para as seguintes configurações:
 
 * Otimizar o tamanho do volume de cache: verifica se o dimensionamento automático e a limpeza estão ativados nos volumes de cache para manter o tamanho ideal e concentrar o cache nos dados mais acessados para eficiência máxima.
-* Dispositivos de bloco órfãos: recomenda arquivar os dados do dispositivo de bloco ou excluir um dispositivo de bloco caso não tenha sido utilizado por sete dias consecutivos.
+* Dispositivos de bloco inativos: recomenda arquivar os dados do dispositivo de bloco ou excluir um dispositivo de bloco se ele não for usado por sete dias consecutivos.
 * Relatório lógico de storage VM: verifica se a configuração padrão de relatório para uma storage VM está definida como lógica, o que proporciona melhor visibilidade do uso de storage no nível do volume.
 
 
@@ -57,7 +57,7 @@ Três novos cartões foram adicionados à guia Dispositivos de bloco na carga de
 
 * Eficiências de armazenamento: exibe a capacidade de storage usada e disponível; a capacidade usada é discriminada por SSD e por níveis de storage do pool de capacidade.
 * Dispositivos protegidos: exibe a porcentagem de dispositivos de bloco com snapshots, replicação remota, NetApp Autonomous Ransomware Protection (ARP/AI) e backups.
-* Dispositivos órfãos: exibe se algum dispositivo de bloco não foi usado por sete dias consecutivos, ajudando você a identificar e gerenciar recursos não utilizados com eficiência. A partir daqui, você pode link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html#archive-the-data-of-an-orphaned-block-device["recuperar espaço para dispositivos de bloco não utilizados"].
+* Dispositivos órfãos: exibe se algum dispositivo de bloco não foi usado por sete dias consecutivos, ajudando você a identificar e gerenciar recursos não utilizados com eficiência. A partir daqui, você pode link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html#archive-the-data-of-an-inactive-block-device["recuperar espaço para dispositivos de bloco não utilizados"].
 
 
 
