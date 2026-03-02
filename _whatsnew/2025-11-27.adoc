@@ -8,7 +8,7 @@
 
 Gerencie seus dispositivos de bloco com mais eficiência graças ao novo suporte a dispositivos de bloco introduzido no NetApp Workload Factory.  Este recurso permite visualizar detalhes e aumentar a capacidade dos LUNs iSCSI, proporcionando maior flexibilidade para suas necessidades de armazenamento.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html["Gerencie dispositivos de bloco no Workload Factory"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html["Gerencie dispositivos de bloco no Workload Factory"]
 
 
 

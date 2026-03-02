@@ -91,6 +91,7 @@ Na tabela volumes, selecione um ou mais volumes e, em seguida, selecione *repliq
 +
 .. *Caso de uso*: Selecione um dos seguintes casos de uso para a replicação.  Dependendo do caso de uso selecionado, o Workload Factory preenche o formulário com valores recomendados de acordo com as melhores práticas.  Você pode aceitar os valores recomendados ou fazer alterações à medida que preenche o formulário.
 +
+*** Inteligência Artificial (IA) e aprendizado de máquina (ML): replique seus dados ONTAP locais para o FSx for ONTAP e crie pontos de acesso S3 para suportar o treinamento de IA e ML na nuvem
 *** Migração: Transfere seus dados para o sistema de arquivos FSX for ONTAP de destino
 +
 *Replicar configuração da VM de armazenamento*: Opcionalmente, selecione para replicar os dados e as configurações de uma única VM de armazenamento. Ao migrar dados e configurações simultaneamente, certifique-se de que a última replicação do volume foi concluída nas últimas 24 horas. Todos os volumes na mesma VM de armazenamento devem ser selecionados para usar esse recurso. A política de camadas para todos os volumes é definida por padrão como a política de camadas do volume de origem, o que é recomendado para caso de uso de migração.
@@ -163,7 +164,7 @@ NOTE: Rótulos de origem e destino correspondentes são necessários para reten�
 *** *Usuário*: Selecione um usuário existente com acesso ao volume ou crie um novo usuário.
 *** *Tipo de usuário*: Selecione *UNIX* ou *Windows* como o tipo de usuário.
 *** *Configuração de rede*: Selecione *Internet* ou *nuvem privada virtual (VPC)*. O tipo de rede que você escolher determina se o ponto de acesso é acessível pela internet ou restrito a uma VPC específica.
-*** *Habilitar metadados*: Habilitar metadados cria uma tabela S3 contendo todos os objetos acessíveis pelo ponto de acesso S3, que você pode usar para auditoria, governança, automação, análise e otimização. Habilitar metadados acarreta custos adicionais da AWS. Consulte link:https://aws.amazon.com/s3/pricing/["Documentação de preços do Amazon S3"^] para mais informações.
+*** *Habilitar tabela de inventário*: Ao habilitar a tabela de inventário no volume, o sistema gera metadados para todos os objetos acessíveis ao ponto de acesso S3 e incorre em custos de solicitação do AWS S3. Consulte link:https://aws.amazon.com/s3/pricing/["Documentação de preços do Amazon S3"^] para mais informações.
 
 
 .. *Etiquetas de ponto de acesso S3*: opcionalmente, você pode adicionar até 50 etiquetas.
