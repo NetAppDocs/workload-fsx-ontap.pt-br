@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: create-backup.html 
-keywords: create backup, volume backup, back up a volume 
+keywords: create backup, volume backup, back up a volume, FSx for ONTAP backup, manual backup 
 summary: Crie um backup manual de um volume no NetApp Workload Factory fora dos backups agendados regularmente. 
 ---
 = Crie um backup manual de um volume no NetApp Workload Factory
@@ -14,9 +14,9 @@ summary: Crie um backup manual de um volume no NetApp Workload Factory fora dos 
 Crie um backup manual de um volume fora dos backups agendados regularmente no NetApp Workload Factory.
 
 .Sobre esta tarefa
-Os backups do FSX para ONTAP são por volume, portanto, cada backup contém apenas os dados em um determinado volume.
+Os backups de volume são feitos por volume, portanto, cada backup contém apenas os dados em um volume específico.
 
-Os backups do FSX para ONTAP são incrementais, o que significa que apenas os dados no volume que foram alterados após o backup mais recente ser salvo. Isso minimiza o tempo necessário para criar o backup e o armazenamento necessários para o backup, o que economiza em custos de storage não duplicando dados.
+Os backups de volume são incrementais, o que significa que apenas os dados do volume que foram alterados após o backup mais recente são salvos. Isso minimiza o tempo necessário para criar o backup e o armazenamento necessário para o backup, o que reduz os custos de armazenamento ao não duplicar dados.
 
 .Antes de começar
 Para fazer backups de seus volumes, tanto o volume quanto o sistema de arquivos precisam ter capacidade de armazenamento SSD disponível suficiente para armazenar o snapshot de backup. Ao tirar um snapshot de backup, a capacidade de storage adicional consumida pelo snapshot não pode fazer com que o volume exceda 98% da utilização do storage SSD. Se isso acontecer, o backup falhará.
@@ -27,8 +27,8 @@ Para fazer backups de seus volumes, tanto o volume quanto o sistema de arquivos 
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. Na aba *Volumes*, selecione o botão de ação do volume para fazer backup.
-. Selecione *ações de proteção de dados*, *FSX for ONTAP backup* e, em seguida, *Backup manual*.
+. Na aba *Volumes*, selecione o menu de ações do volume para fazer backup.
+. Selecione *Ações de proteção de dados*, *Backups de volume* e, em seguida, *Backup manual*.
 . Na caixa de diálogo cópia de segurança manual, introduza um nome para a cópia de segurança.
 . Selecione *Backup*.
 

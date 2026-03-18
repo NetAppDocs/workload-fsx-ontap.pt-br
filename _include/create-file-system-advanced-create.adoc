@@ -97,7 +97,7 @@ Para um novo grupo de segurança, consulte <<Detalhes do grupo de segurança,det
 
 . Em Backup e manutenção, forneça o seguinte:
 +
-.. *FSX para backup ONTAP*: Backups automáticos diários são ativados por padrão. Desative, se desejado.
+.. *Backups de volume*: backups automáticos diários estão ativados por padrão. Desative se desejar.
 +
 ... *Período de retenção de backup automático*: Insira o número de dias para reter backups automáticos.
 ... *Janela de backup automático diário*: Selecione *sem preferência* (uma hora de início de backup diário está selecionada para você) ou *Selecione hora de início para backups diários* e especifique uma hora de início.

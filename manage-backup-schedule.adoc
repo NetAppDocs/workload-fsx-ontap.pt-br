@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: manage-backup-schedule.html 
-keywords: backup schedule, backup policy, update backups, update backup schedule, FSx for ONTAP backup 
+keywords: backup schedule, backup policy, update backups, update backup schedule, volume backups, FSx for ONTAP backups 
 summary: Gerencie o agendamento de backup de um sistema de arquivos FSx para ONTAP no NetApp Workload Factory quando necessário. 
 ---
 = Gerencie o agendamento de backup de um sistema de arquivos FSX for ONTAP
@@ -18,8 +18,8 @@ Gerencie o agendamento de backup para um sistema de arquivos FSx para ONTAP no N
 . Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos para atualizar o agendamento de backup e, em seguida, selecione *Gerenciar*.
-. Em informações, selecione o ícone de lápis ao lado de *FSX for ONTAP backup*. O ícone de lápis aparece ao lado da seta suspensa quando o Mouse paira sobre a linha *FSX for ONTAP backup*.
-. Na caixa de diálogo *FSX for ONTAP backup*, forneça o seguinte:
+. Em Informações, selecione o ícone de lápis ao lado de *Volume backups*. O ícone de lápis aparece ao lado da seta suspensa quando o cursor do mouse passa sobre a linha *Volume backups*.
+. Na caixa de diálogo *Volume backups*, forneça o seguinte:
 +
 .. * Backups automáticos diários*: Ativar ou desativar o recurso. Se desativar a funcionalidade, selecione *Apply* (aplicar). Se você ativar o recurso, execute as etapas a seguir.
 .. *Período de retenção de backup automático*: Insira o número de dias para reter backups automáticos.
