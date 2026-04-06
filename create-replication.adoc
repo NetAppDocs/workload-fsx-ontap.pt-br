@@ -209,4 +209,7 @@ Revise estes requisitos antes de começar.
 
 
 .Resultado
-Após a migração, os volumes de origem são excluídos e os volumes de destino tornam-se leitura/gravação. Você pode link:change-tiering-policy.html["modificar a política de hierarquização"] para os volumes de destino após a migração.
+Após a migração, a storage VM de origem fica offline.
+
+.Informações relacionadas
+link:change-tiering-policy.html["Modificar a política de tiering"] para o(s) volume(s) alvo após a transição.

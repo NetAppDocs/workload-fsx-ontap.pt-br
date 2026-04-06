@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: delete-s3-access-points.html 
+keywords: S3, s3, access points, delete access points, remove access points 
+summary: Exclua os pontos de acesso S3 para um volume no NetApp Workload Factory. 
+---
+= Exclua os pontos de acesso S3 para um volume no NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Excluir pontos de acesso S3 existentes de um volume em NetApp Workload Factory.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume que deseja atualizar e, em seguida, selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
+. Na guia Volumes, selecione o menu de ações do volume para o qual deseja gerenciar pontos de acesso S3, depois selecione *Ações avançadas* e, em seguida, *Gerenciar pontos de acesso S3*.
+. Selecione o menu de ações para o ponto de acesso S3 a ser excluído e, em seguida, selecione *Excluir*.
+. Na caixa de diálogo *Excluir um ponto de acesso S3*, selecione *Excluir* para excluir o ponto de acesso S3 do volume.
++
+O Workload Factory não exclui a tabela de inventário ou a tabela de diário, mas você pode removê-las manualmente no AWS Management Console.
+
+

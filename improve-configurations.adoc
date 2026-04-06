@@ -35,7 +35,7 @@ A fábrica de carga de trabalho analisa o status bem arquitetado das seguintes c
 * Confiabilidade: limite de capacidade do SSD, snapshots locais agendados, backups de volume agendados, replicação remota de dados e confiabilidade dos dados para retenção de longo prazo
 * Segurança: Proteção autônoma contra ransomware da NetApp com IA (ARP/AI) desativada e acesso não autorizado a volumes.
 * Excelência operacional: gerenciamento automático de capacidade, limite de utilização da capacidade de arquivos do volume, utilização do volume próxima da capacidade máxima, modo de gravação de relacionamento de cache, otimização do tamanho do volume de cache e relatórios de capacidade lógica do volume
-* Otimização de custos: eficiências de storage, hierarquização de dados, exclusão de snapshots e backups desnecessários, dispositivos de bloco inativos e capacidade subutilizada de SSD
+* Otimização de custos: eficiências de storage, hierarquização de dados, exclusão de snapshots e backups desnecessários, dispositivos de bloco inativos, capacidade subutilizada de SSD e volumes NAS inativos
 
 
 

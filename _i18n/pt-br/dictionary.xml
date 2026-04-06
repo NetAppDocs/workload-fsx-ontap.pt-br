@@ -211,7 +211,6 @@
   <block id="62e91320f9cdbfe080b1002592de785b" category="list-text">*Nome do volume*: Insira um nome para o volume.</block>
   <block id="b2e658eb3f11776899234dd87caf3823" category="list-text">*Storage VM name*: Opcionalmente, insira um nome de VM de armazenamento.</block>
   <block id="71a8fe56183b62227c11ca4ce811f166" category="list-text">*Estilo de volume*: Selecione o volume *FlexVol* ou *FlexGroup*.</block>
-  <block id="cb69a576eebf4d27436ae39122a9562c" category="paragraph">O estilo FlexVol volume é selecionado por padrão.</block>
   <block id="ffe3253d848af0e44a26ba39fba69329" category="list-text">*Tamanho do volume*: Introduza o tamanho do volume e a unidade.</block>
   <block id="b46ad6f5a61764c118c979f2583ab630" category="paragraph">Opcionalmente, ative o volume com crescimento automático. Esta opção está disponível quando você seleciona *Acesso a arquivos* como o tipo de acesso de volume.</block>
   <block id="53ebc36ae845935202fde349f39b2e17" category="list-text">Em Access (somente para sistemas de arquivos com links associados), forneça os seguintes detalhes:</block>
@@ -241,7 +240,6 @@
   <block id="bbcc4e18576e310acdd3a82682875a7f" category="list-text">Esta política funciona da mesma forma que a<block ref="c21f969b5f03d33d43e04f8f136e7682" prefix=" " category="inline-code"></block> política, exceto que só retém um instantâneo da programação semanal.</block>
   <block id="e3944f065f8a736803ad0b4de4b49f84" category="list-text">Esta política não tira instantâneos. Você pode atribuir essa diretiva a volumes para impedir que snapshots automáticos sejam feitos.</block>
   <block id="b206a5f8985f80349f02e0144a4a341d" category="list-text">*Política de disposição em categorias*: Selecione a política de disposição em categorias para os dados armazenados no volume.</block>
-  <block id="057899be9192508684a0a7c0ddce247b" category="list-text">Em Configuração avançada, forneça o seguinte:</block>
   <block id="31bc68ca566d500bf92a8cab85ec5ae3" category="list-text">*Caminho de junção*: Insira o local no namespace da VM de armazenamento onde o volume é montado. O caminho de junção padrão é<block ref="efef91582c9b0099c391a47d56e741d2" prefix=" " category="inline-code"></block>.</block>
   <block id="a481fc89f2e7d4e062f18bfa2b0d4c70" category="list-text">*Lista de agregados*: Apenas para volumes FlexGroup. Adicionar ou remover agregados. O número mínimo de agregados é um.</block>
   <block id="688711a00683b1f80450615a64ae5765" category="list-text">*Número de componentes*: Apenas para volumes FlexGroup. Introduza o número de componentes por agregado. 100 GiB é exigido por constituinte.</block>
@@ -623,9 +621,6 @@
   <block id="201080500e946070a2e4873042507c77" category="paragraph">A confirmação envia sua solicitação à NetApp e recomenda que você crie uma conta do site de suporte da NetApp.</block>
   <block id="cc8b0535948da368f832027c19b7f853" category="list-text">Certifique-se de copiar o número de série da conta (960xxxx) usado acima para o campo de número de série. Isto irá acelerar o processamento da conta.</block>
   <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">O NetApp deve entrar em Contato com você durante esse processo. Este é um exercício de integração única para novos usuários.</block>
-  <block id="fa6e79d91adacad3ba5d3684079b4ea1" category="summary">A documentação do Amazon FSX for NetApp ONTAP hospeda tópicos de solução de problemas para sua referência.</block>
-  <block id="025110220989dd80d639c418b593cad3" category="inline-link-macro">Solução de problemas do Amazon FSX for NetApp ONTAP</block>
-  <block id="aa3f4a232768328d892056c200f23b5f" category="paragraph"><block ref="39d4d71bb679e33c9314f282da47094c" category="inline-link-macro-rx"></block>Consulte para obter mais informações.</block>
   <block id="fb4531252f707fbda1308840e3c7d6af" category="summary">Atualize manualmente os dados instantâneos transferidos entre os volumes de origem e destino em uma relação de replicação a qualquer momento.</block>
   <block id="9ff8251e97123d13337c62b2b74bbe1e" category="doc">Atualizar dados instantâneos em uma relação de replicação</block>
   <block id="fa0604fd5c522ae5ab642bebf836c3d0" category="list-text">Selecione *Atualizar agora*.</block>
@@ -670,7 +665,6 @@
   <block id="267e5e88580f97af56a5fa2b981a6a67" category="sidebar">Administração da performance</block>
   <block id="ef045d17e80274aec5be009d1f13f5a2" category="sidebar">Provisione IOPS para um sistema de arquivos</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">Referência</block>
-  <block id="231cf4c70d866b616c21baddaeed0696" category="sidebar">Solução de problemas</block>
   <block id="31139fb3d548620b7d82f880e4660606" category="doc">Vistas de separador no inventário de armazenamento</block>
   <block id="d4aa654cea4681dd5ca03650594006c6" category="paragraph">O inventário de armazenamento foi atualizado para uma vista de duas abas:</block>
   <block id="71083868a2ec5abfee9a2647a74612c0" category="list-text">Guia FSX for ONTAP: Exibe os sistemas de arquivos FSX for ONTAP que você tem atualmente.</block>
@@ -1414,7 +1408,6 @@
   <block id="dd9c72ad3bbeb047b573638ce62d0cc6" category="list-text">*Fornecido pelo usuário*: Selecione esta opção para atribuir uma função de execução do Lambda específica e suas políticas anexadas ao link do Lambda. As seguintes permissões são necessárias para a política de permissões do Lambda . <block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block> a permissão será necessária somente se você tiver habilitado o AWS Secrets Manager.</block>
   <block id="5f3b3b380e02766e8ad7eca5c6b37840" category="paragraph">Insira o ARN da função de execução do Lambda na caixa de texto.</block>
   <block id="38adbad92c37166c4ce64da1eb51513b" category="inline-link-macro">criar um volume</block>
-  <block id="1626bc194a1c6fb76d8a47eba39add09" category="paragraph">O tamanho do volume do FlexGroup depende do número de constituintes, exigindo 100 GiB por constituinte.</block>
   <block id="f80d67f0a6951b3f6c1185e7c7f39c30" category="paragraph">Especifique o tamanho máximo de crescimento do volume e a unidade. Você não pode definir o tamanho máximo de crescimento menor que o tamanho do volume atual</block>
   <block id="d932719afe063ca8fcfe0eb63f1b6ec9" category="paragraph">O ONTAP atinge eficiência de armazenamento usando recursos de desduplicação e compactação. A deduplicação elimina blocos de dados duplicados. A compactação de dados compacta os blocos de dados para reduzir a quantidade de storage físico necessária.</block>
   <block id="9d083d8cac2f7524236aec0400de23bf" category="inline-link-macro">Saiba mais sobre ARP/IA</block>
@@ -2074,7 +2067,6 @@
   <block id="fb9b6bbcab5fb396a13f67594a0ba1ee" category="list-text">Certifique-se de copiar o número de série da conta NetApp (960xxxx) usado acima para o campo de número de série. Isso acelerará o processamento da conta.</block>
   <block id="40eff8559acd41057187b6cb11fa1919" category="list-text">Associe sua nova conta NSS ao login do NetApp Console concluindo as etapas em<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block> .</block>
   <block id="f335678326583cea28377216c5515221" category="paragraph">Depois de ter sua conta do Site de Suporte NetApp , associe a conta ao seu login do Console NetApp concluindo as etapas em<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block> .</block>
-  <block id="2b769f5862082021bf11a857697aa4ce" category="doc">Solução de problemas do FSx para ONTAP no NetApp Workload Factory</block>
   <block id="fbd561748c9b594e4d65b8ccf21f5769" category="paragraph">Um relacionamento de replicação tem um cronograma de replicação definido, mas você pode atualizar manualmente os dados de snapshot transferidos entre os volumes de origem e de destino no NetApp Workload Factory a qualquer momento.</block>
   <block id="1d27ede7e22b617fbd392a02ca413a78" category="list-text">Na guia Relacionamentos de replicação, selecione o menu de ações do relacionamento de replicação a ser atualizado.</block>
   <block id="0b81b68aa4b4da3fc81b7541c9557525" category="summary">No NetApp Workload Factory, você pode atualizar a configuração de eficiência de armazenamento após a criação do volume.</block>
@@ -2338,16 +2330,7 @@
   <block id="15edb6ed53ce8a32fd0631a4517d7fc7" category="list-text"><block ref="15edb6ed53ce8a32fd0631a4517d7fc7" category="inline-link-macro-rx"></block></block>
   <block id="d628678d4875b2f8f6ea7ca8dab6ade0" category="inline-link-macro">Gerencie os pontos de acesso S3 no Workload Factory.</block>
   <block id="81cca59ad3bedd27880ab1c747ae8b70" category="list-text"><block ref="81cca59ad3bedd27880ab1c747ae8b70" category="inline-link-macro-rx"></block></block>
-  <block id="e89e0732eb8fbeb9c1bb216d5b1fe2c8" category="summary">Gerencie os pontos de acesso S3 para um volume no NetApp Workload Factory.</block>
-  <block id="7caacaed323c9582bdf146f33b338930" category="doc">Gerencie os pontos de acesso S3 para um volume no NetApp Workload Factory.</block>
-  <block id="1f26d72d95cf276540f7a69b509645fe" category="paragraph">Você precisa ter um volume existente com um ponto de acesso S3.</block>
   <block id="be929bcd251acd28106548a34c8a067b" category="list-text">No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume que deseja atualizar e, em seguida, selecione *Gerenciar*.</block>
-  <block id="7fcc02a075c6d0b859fd9a03f5250e5f" category="list-text">Na guia Volumes, selecione o menu de ações do volume para o qual deseja gerenciar os pontos de acesso S3 e, em seguida, selecione *Ações avançadas* e depois *Gerenciar pontos de acesso S3*.</block>
-  <block id="4dc9fa88ed74bd072e88bad92a1f17c6" category="open-title">Criar e associar pontos de acesso S3 a um volume existente</block>
-  <block id="c57302a0d02305ff8c144fb37bb2fab9" category="list-text">Selecione *Criar e conectar ponto de acesso S3*.</block>
-  <block id="e979f8982cafd5647560686a5ec74a2a" category="list-text">Na caixa de diálogo *Criar e anexar ponto de acesso S3*, forneça as seguintes informações:</block>
-  <block id="0802ef324b114effd397e5e5ac619733" category="list-text">Selecione *Criar e anexar*.</block>
-  <block id="f4e2e090f540d174d8e07c3527c25962" category="open-title">Excluir pontos de acesso S3 existentes de um volume</block>
   <block id="f994c7e71102a3d5ed7af5975abfaa09" category="sidebar">Gerenciar pontos de acesso S3</block>
   <block id="bc5d3bf99236801351dc3a2d7c20aed7" category="paragraph">O Workload Factory analisa seus sistemas de arquivos FSx para ONTAP para as seguintes configurações:</block>
   <block id="afc7c7589e5f20d86c03b5e089bbad6b" category="list-text">A proteção autônoma contra ransomware (ARP/AI) da NetApp desativada inclui dispositivos de bloco: verifica se o ARP/AI está desativado em volumes de dispositivos de bloco.</block>
@@ -2432,13 +2415,11 @@
   <block id="c7d27c61cfd9d94c94e936b1785769dd" category="section-title">Gerenciar o acesso do cliente para um dispositivo de bloco</block>
   <block id="679f0d3f635a07fd97dff3c93833dc50" category="paragraph">Você pode gerenciar o acesso do cliente a um dispositivo de bloco existente a qualquer momento, criando grupos de interface (igroups) e adicionando ou removendo dispositivos de bloco e iniciadores de host.</block>
   <block id="ac40a086c14a9eef79fce5123e9bd49c" category="list-text">Acesse o menu de ações do dispositivo de bloqueio e selecione *Gerenciar acesso do cliente*.</block>
-  <block id="2ea858957b4333f86af5869e62f5efe5" category="list-text">Se não existir nenhum grupo de interfaces (igroup), crie um novo selecionando *Criar grupo de interfaces* e, em seguida, faça o seguinte:</block>
   <block id="d66126919f51b95d3c2330d837b5f66c" category="list-text">*Nome do dispositivo de bloqueio*: Insira o nome do dispositivo de bloqueio. Você pode selecionar vários dispositivos de bloco para associar ao igroup.</block>
   <block id="e29d6df132d9efce7dfdd9c017453c6a" category="list-text">*Tipo de sistema operacional*: Selecione o tipo de sistema operacional.</block>
   <block id="7d73711421384d2485630673ab93b662" category="list-text">*Nome do grupo de igroup*: Insira um nome para o grupo de igroup.</block>
   <block id="e220387578f5151d1653ad1ff2b5a002" category="list-text">*Descrição do grupo de instâncias*: Opcionalmente, insira uma descrição para o grupo de instâncias.</block>
   <block id="d719073ebb477e6cf9934f806cd15577" category="list-text">*Iniciadores do host*: Insira um ou mais iniciadores do host. Esses iniciadores devem seguir o formato iSCSI qualificado (IQN).</block>
-  <block id="2614a90f09c2b1321e872a7622f7f888" category="list-text">Se já existir um grupo de interfaces (igroup), selecione *Editar acesso do cliente* para adicionar ou remover dispositivos de bloco e iniciadores de host do grupo de interfaces e, em seguida, selecione *Aplicar*.</block>
   <block id="68d85c073028f0fd978bc424d69ee8fd" category="list-text">Em Dispositivos órfãos, selecione *Visualizar e recuperar capacidade*.</block>
   <block id="f6841052bd0d86548318f9b2df118ea3" category="list-text">Na tela Recuperar espaço para dispositivos de bloco não utilizados, selecione um ou mais dispositivos de bloco para arquivar os dados e recuperar a capacidade.</block>
   <block id="2c77adf5fa1de4ed37a6e14d2212f074" category="list-text">Selecione *Arquivo*.</block>
@@ -2484,11 +2465,8 @@
   <block id="b04638337aac148655a104c2db6c4766" category="section-title">Aprimoramentos do ponto de acesso S3 em Storage</block>
   <block id="f76e736f45740f58cc12ec666b824eb2" category="paragraph">Diversas melhorias foram implementadas nos recursos de gerenciamento de pontos de acesso S3 na carga de trabalho de storage para NetApp Workload Factory. Você pode inserir detalhes de configuração de rede para seus pontos de acesso S3 e adicionar tags de ponto de acesso S3. Melhorias adicionais incluem a capacidade de visualizar detalhes do bucket S3 e realizar mais ações para gerenciar pontos de acesso S3.</block>
   <block id="76f77cbc01f0341dffcaaa5f6236eb73" category="section-title">Detalhes do bucket S3 disponíveis em Storage</block>
-  <block id="c203e76297d071e4d8256e073c93dafb" category="paragraph">Com metadados ativados para os pontos de acesso do S3, NetApp Workload Factory verifica automaticamente seus buckets do AWS S3 e preenche as tabelas do S3 para fornecer uma visão clara de todos os objetos, seus metadados, atributos e tags. O acesso a esses detalhes ajuda você a manter controle, visibilidade e confiança nos dados pelos quais você é responsável, enquanto reduz a sobrecarga operacional.</block>
-  <block id="cc7664945c125a51dd2e69095c8f8200" category="inline-link-macro">Veja detalhes dos pontos de acesso S3 em sistemas de arquivos FSx for ONTAP</block>
   <block id="2249107cb1f4c202ef0253c53bcff598" category="section-title">Operações de gerenciamento adicionais para pontos de acesso S3</block>
   <block id="bf44c4671ee3bfbc818d505bb9a0e59a" category="paragraph">NetApp Workload Factory oferece operações de gerenciamento adicionais para pontos de acesso S3. Você pode visualizar detalhes do ponto de acesso, modificar pontos de acesso S3 existentes e adicionar ou remover tags de pontos de acesso S3 a partir da interface NetApp Workload Factory, simplificando suas tarefas de gerenciamento de storage de objetos.</block>
-  <block id="366c32f0cbb2503b337e243eaa8c42b5" category="inline-link-macro">Gerencie os pontos de acesso S3 no NetApp Workload Factory</block>
   <block id="e593953aaf04eebecfe2e26326145784" category="list-text">Otimizar o tamanho do volume de cache: verifica se o dimensionamento automático e a limpeza estão ativados nos volumes de cache para manter o tamanho ideal e concentrar o cache nos dados mais acessados para eficiência máxima.</block>
   <block id="a872ae5d7fdb75042465788519d63c35" category="list-text">Relatório lógico de storage VM: verifica se a configuração padrão de relatório para uma storage VM está definida como lógica, o que proporciona melhor visibilidade do uso de storage no nível do volume.</block>
   <block id="40fbd58cc84d2567a5be7db0e1e48224" category="section-title">Placas adicionais para dispositivos de bloco</block>
@@ -2545,30 +2523,17 @@
   <block id="a7d242b126bf6ced54231e71dba71bda" category="list-text">Na caixa de diálogo Excluir grupo iniciador (igroup), digite "delete" para confirmar que deseja excluir o igroup e, em seguida, selecione *Excluir*.</block>
   <block id="4d7b443b927537bbc33ca3690bbcaed1" category="inline-link-macro">Crie um igroup para um sistema de arquivos FSx for ONTAP</block>
   <block id="34fc9e9b0a58447e45d29d99c376a3ec" category="paragraph"><block ref="34fc9e9b0a58447e45d29d99c376a3ec" category="inline-link-macro-rx"></block></block>
-  <block id="1ef8cc6eec11f56d70880a4ca54620d0" category="paragraph">Gerencie os pontos de acesso S3 para um volume no NetApp Workload Factory. Você pode usar o console do Workload Factory para atribuir pontos de acesso S3 a volumes existentes, visualizar detalhes dos seus buckets S3, fazer alterações em pontos de acesso existentes ou excluir pontos de acesso S3.</block>
-  <block id="d33d3fec0d0cc42bf9722d3406ba5aa2" category="paragraph">Certifique-se de que você atende aos seguintes requisitos:</block>
   <block id="69b8b9524d643674b889fa70c17e1cc8" category="inline-link-macro">Conceda credenciais com a política de permissão _operações e remediação_</block>
   <block id="8c378042ad1ba655fb1f5cd941dc98b6" category="list-text">Você deve <block ref="c6ffb720e530188ab1b1bff284837062" category="inline-link-macro-rx"></block> no Workload Factory para concluir esta tarefa.</block>
-  <block id="f1834a86a3431bfc71aeab4c9747192d" category="paragraph">Crie e anexe pontos de acesso S3 a um volume existente no NetApp Workload Factory.</block>
   <block id="0a76b0d6a11006d8a1c5f62db933ddb6" category="list-text">Em *FSx for ONTAP*, selecione o sistema de arquivos com o volume a ser atualizado.</block>
-  <block id="6e9783376d951cfd780e9fdb67a0f02c" category="section-title">Ver detalhes</block>
-  <block id="6210aebae6ddd596486bcb13eb5ef89a" category="list-text">Na tela *Gerenciar pontos de acesso S3*, selecione o menu de ações e depois selecione *Exibir detalhes*.</block>
-  <block id="6ed5516949fd4560f1570e0f701efbac" category="section-title">Editar ponto de acesso</block>
-  <block id="803c8783e877d292e1c22e5a3d7cd78a" category="paragraph">Altere o usuário e o tipo de usuário de um ponto de acesso S3 existente associado a um volume. Você também pode ativar ou desativar metadados para o ponto de acesso.</block>
   <block id="37068c532170e23c2a91d4d23699dd31" category="list-text">Na tela *Gerenciar pontos de acesso S3*, selecione o menu de ações e depois selecione *Editar ponto de acesso*.</block>
   <block id="076804dea9fcf3467cf7c699f9811498" category="list-text">Faça as atualizações e depois selecione *Apply*.</block>
-  <block id="e41ac5d896a0e6edc27784d233dfbc29" category="section-title">Gerenciar tags de ponto de acesso S3</block>
-  <block id="287f73523996b72469d9fd36d0cb155c" category="paragraph">Adicionar ou remover tags de um ponto de acesso S3 existente associado a um volume.</block>
-  <block id="6e5f33fd29d5f7477e4a80a8769b962b" category="list-text">Na tela *Gerenciar pontos de acesso S3*, selecione o menu de ações e depois selecione *Gerenciar tags*.</block>
-  <block id="3fa8b09c93230485435b89bed0fa2e87" category="list-text">Na caixa de diálogo Gerenciar tags do ponto de acesso S3, você pode adicionar até 50 tags ou remover tags para o ponto de acesso S3.</block>
   <block id="f6e1df464413e09857979a0ca8b75a4b" category="paragraph">Excluir pontos de acesso S3 existentes de um volume em NetApp Workload Factory.</block>
   <block id="d1fabbd85b7cc34641739e525d26f652" category="section-title">01 de fevereiro de 2026</block>
   <block id="2855f13e1a4620842b40a36c5090209b" category="sidebar">Criar recursos de storage em bloco</block>
   <block id="d8ad6fc6096c88d41f98b91f0043eebe" category="sidebar">Crie um igroup</block>
   <block id="9a6576dfb2c795711c67df7e1a5b076a" category="sidebar">Administração de block storage</block>
   <block id="e77c03d49e828607828412709552dbd6" category="sidebar">Gerenciar igroups</block>
-  <block id="fdb38c6259208c2509d21f6a3f0beb02" category="paragraph"><block ref="fdb38c6259208c2509d21f6a3f0beb02" category="inline-link-macro-rx"></block></block>
-  <block id="cc97dddf7d9715fea79ba3e831f0fbca" category="paragraph"><block ref="cc97dddf7d9715fea79ba3e831f0fbca" category="inline-link-macro-rx"></block></block>
   <block id="0352f037ca8dfca49383ddb908805d9a" category="list-text"><block ref="0352f037ca8dfca49383ddb908805d9a" category="inline-link-macro-rx"></block></block>
   <block id="0a17c703284dc61149bdaf13e30980de" category="list-text"><block ref="0a17c703284dc61149bdaf13e30980de" category="inline-link-macro-rx"></block></block>
   <block id="df267252f2595421cf837794528f006f" category="paragraph">O analisador de eventos extrai automaticamente erros, alertas e eventos de emergência do EMS dos sistemas de arquivos FSx for ONTAP. Você pode visualizar esses eventos por <block ref="f91a3df34ad8b434c845af1c5c4599e2" category="inline-link-macro-rx"></block> e por <block ref="f7fcd176fbc4e82ec30b37b672d1e76e" category="inline-link-macro-rx"></block> em sua conta AWS. Os eventos são exibidos por 72 horas antes de serem removidos.</block>
@@ -2609,8 +2574,6 @@
   <block id="782b2627ed10262abe4e368b33d508dc" category="list-text">Certifique-se de que todos os volumes de origem não estejam servindo nenhum dado antes de alternar a replicação.</block>
   <block id="dda7c50cacac64812ef938f4d803c3a5" category="list-text">Certifique-se de que os dados estejam sincronizados entre os volumes de origem e destino antes de alternar a replicação.</block>
   <block id="882f34227a47a95827c88036c610642f" category="list-text">Selecione *Cut over*.</block>
-  <block id="7b626244b5e77ec8426207a79760602c" category="inline-link-macro">modificar a política de hierarquização</block>
-  <block id="10356b2b96c443d8a19edb3095962df2" category="paragraph">Após a migração, os volumes de origem são excluídos e os volumes de destino tornam-se leitura/gravação. Você pode <block ref="3a64959985d458e07b4f09b2f2e0e438" category="inline-link-macro-rx"></block> para os volumes de destino após a migração.</block>
   <block id="51123444304b31165de4e3a52117437d" category="admonition">A edição da retenção de longo prazo não está disponível ao replicar dados e configurações de máquinas virtuais de armazenamento.</block>
   <block id="f08a7d33d3e9fe4faf87ad7235d0c02a" category="list-text">Um sistema de arquivos FSx for ONTAP e um sistema ONTAP local</block>
   <block id="9b9935ad5969c28de13381a2e512b47c" category="paragraph">NOTA:</block>
@@ -2623,7 +2586,6 @@
   <block id="3d8f5698e4ea8cae76ec64ff32d1aa8a" category="list-text">Inteligência Artificial (IA) e aprendizado de máquina (ML): replique seus dados ONTAP locais para o FSx for ONTAP e crie pontos de acesso S3 para suportar o treinamento de IA e ML na nuvem</block>
   <block id="911879fb512486e8b5af8019b65a8205" category="list-text">*Habilitar tabela de inventário*: Ao habilitar a tabela de inventário no volume, o sistema gera metadados para todos os objetos acessíveis ao ponto de acesso S3 e incorre em custos de solicitação do AWS S3. Consulte <block ref="af9c8757ba81fcc825b028513d05dce7" category="inline-link-macro-rx"></block> para mais informações.</block>
   <block id="aa72376768d67d3c8a77216621fb5316" category="paragraph"><block ref="aa72376768d67d3c8a77216621fb5316" category="inline-link-macro-rx"></block></block>
-  <block id="b810156a51d2ff011de686d088c6dcce" category="list-text">Dispositivos órfãos: exibe se algum dispositivo de bloco não foi usado por sete dias consecutivos, ajudando você a identificar e gerenciar recursos não utilizados com eficiência. A partir daqui, você pode <block ref="04044e5382e57a877bbf97c227fa9ee4" category="inline-link-macro-rx"></block>.</block>
   <block id="b4faaa513060331f5bb7705e042e49cd" category="list-text">Capacidade SSD subutilizada: verifica se a camada de capacidade SSD está subutilizada e recomenda diminuir a capacidade SSD para otimizar custos.</block>
   <block id="01b065251159f3c3b86f7d49511f1bf7" category="list-text">Agende backups de volumes: O NetApp Workload Factory aprimora a recomendação de configuração e adiciona opções para ativar o FSx for ONTAP backup ou o AWS Backup. FSx for ONTAP backup aplica uma política padrão a todos os volumes em um sistema de arquivos, criando backups diários mantidos por até 90 dias. AWS Backup permite escolher diferentes períodos de retenção para cada volume no plano de backup.</block>
   <block id="9ad8abc81514723f5439d23cac33f67b" category="section-title">O Workload Factory oferece suporte ao caso de uso de IA e ML para replicação</block>
@@ -2633,7 +2595,6 @@
   <block id="42fe2ab7947c044bb47fb357526022c2" category="section-title">Editando pontos de acesso S3 existentes</block>
   <block id="33c5aa1872cfcc4e8c7c5850619e6f87" category="paragraph">Você pode alterar o usuário e o tipo de usuário de um ponto de acesso S3 existente conectado a um volume. Você também pode ativar ou desativar metadados para o ponto de acesso.</block>
   <block id="7525bd4fe22d4a212fea8807fb8d750b" category="inline-link-macro">Editar pontos de acesso S3 no NetApp Workload Factory</block>
-  <block id="88d72467009c25b9669edfef18e21df3" category="paragraph"><block ref="88d72467009c25b9669edfef18e21df3" category="inline-link-macro-rx"></block></block>
   <block id="692b5b6f757e38d7e4d1dd3f957a20f0" category="section-title">Diagrama de armazenamento em bloco adicionado</block>
   <block id="55d6cb6b45d9aaa08c53b22b5ac8a617" category="paragraph">Se você estiver usando block storage, poderá visualizar o diagrama de block storage para visualizar como os block devices se conectam aos nodes e igroups. O diagrama ajuda você a entender e gerenciar seu block storage.</block>
   <block id="e852955e53f52fa18c0de4a24d22f4af" category="inline-link-macro">Gerencie o armazenamento em blocos no NetApp Workload Factory</block>
@@ -2652,7 +2613,6 @@
   <block id="3b40a61896ac7bb071b70913553072f1" category="inline-link-macro">Gerencie o armazenamento em blocos para um FSx for ONTAP sistema de arquivos</block>
   <block id="72a58cc21323626d7784d44077612a4a" category="paragraph"><block ref="72a58cc21323626d7784d44077612a4a" category="inline-link-macro-rx"></block></block>
   <block id="16f2ae5a8a2de6f12ddc298127a4ddb7" category="list-text">Confiabilidade: limite de capacidade do SSD, snapshots locais agendados, backups de volume agendados, replicação remota de dados e confiabilidade dos dados para retenção de longo prazo</block>
-  <block id="b6680821568b93d1977b91f8852a2201" category="list-text">Otimização de custos: eficiências de storage, hierarquização de dados, exclusão de snapshots e backups desnecessários, dispositivos de bloco inativos e capacidade subutilizada de SSD</block>
   <block id="cfcff7e4ca0a4496f029a99d812c3cb3" category="doc">Ajuste manualmente a capacidade do sistema de arquivos no Workload Factory</block>
   <block id="59f5126fcebfa1b4b592a46994a99827" category="paragraph">Aumente a capacidade de storage SSD quando o uso exceder o limite especificado. Reduza a capacidade de storage SSD quando não estiver usando os conjuntos de trabalho para economizar dinheiro.</block>
   <block id="eb6c620cfb7e9a2b2d272cbd7de4add5" category="inline-link-macro">ativar gerenciamento de capacidade automática</block>
@@ -2702,14 +2662,10 @@
   <block id="d38a17b6c80e0c89c1d9fcf60a993290" category="paragraph">Anexe pontos de acesso S3 a volumes NFS e SMB em um sistema de arquivos FSx for ONTAP para que os serviços da AWS acessem os arquivos como se estivessem em um bucket S3. Ao anexar o ponto de acesso, defina um ID exclusivo, selecione o tipo de acesso a arquivos (UNIX ou Windows) e adicione um nome de usuário para autorização de acesso.</block>
   <block id="050fbf0b45be1573711ea227653f0c71" category="paragraph">Após conectar o ponto de acesso S3, ele aparece no Console de Gerenciamento da AWS com um alias exclusivo. Use esse alias como o nome do bucket S3 para serviços da AWS, como Amazon Bedrock, para acessar arquivos no volume FSx for ONTAP.</block>
   <block id="5fdffd86a20eb0d0630a1c07876def30" category="paragraph">Você pode conectar vários pontos de acesso S3 a um único FSx for ONTAP volume, cada um com um nível de acesso exclusivo, para se conectar a vários serviços AWS.</block>
-  <block id="2b66ddc2a8e489f0bdc3cdbd31ddcb5b" category="list-text">Na guia Volumes, selecione o menu de ações do volume para o qual deseja gerenciar os pontos de acesso S3 e, em seguida, selecione *Advanced actions* e, em seguida, *Manage S3 access points*.</block>
-  <block id="dd3517c1da70fae4b3b5b4c3901aeaef" category="paragraph">Você pode visualizar o alias, o ARN e o S3 URI como detalhes do ponto de acesso quando a tabela de inventário não estiver habilitada.</block>
-  <block id="77bfd97469b79623f26d2442c8591082" category="paragraph">Com a tabela de inventário habilitada no volume, você pode visualizar detalhes do ponto de acesso, da tabela de inventário e do bucket da tabela dos pontos de acesso S3 existentes conectados ao volume. O sistema também fornece um link para a tabela de inventário no Console de Gerenciamento da AWS.</block>
   <block id="a0433002dc542bdc0aaeba81d4c088db" category="paragraph">Você pode copiar os detalhes do ponto de acesso para uso em outros aplicativos.</block>
   <block id="08995153fcac85dd0ea3390effc2faf7" category="list-text">Na guia Volumes, selecione o menu de ações do volume para o qual deseja gerenciar pontos de acesso S3, depois selecione *Ações avançadas* e, em seguida, *Gerenciar pontos de acesso S3*.</block>
   <block id="e017a7ea48404bb134394eb7fe78d1af" category="list-text">Selecione o menu de ações para o ponto de acesso S3 a ser excluído e, em seguida, selecione *Excluir*.</block>
   <block id="95922585c37177ee9b8a541e7e22ca06" category="list-text">Na caixa de diálogo *Excluir um ponto de acesso S3*, selecione *Excluir* para excluir o ponto de acesso S3 do volume.</block>
-  <block id="495751a17f4061798aca8d3f98638c0c" category="paragraph">O console do Workload Factory não remove metadados, mas você pode removê-los no AWS Management Console.</block>
   <block id="4aa1f4ce7ff97e69b143fbe399631234" category="section-title">01 de março de 2026</block>
   <block id="f9b8d8043e7f357d7b5805e6dfd01b25" category="sidebar">Gerenciar storage em bloco</block>
   <block id="90fbacfd00a759e142437ac247a4317c" category="sidebar">Ajuste manualmente a capacidade do sistema de arquivos</block>
@@ -2786,4 +2742,264 @@
   <block id="6eb18ebccbf4fe18669aca55778990e0" category="sidebar">Gerenciar agendamento de backup de volume</block>
   <block id="0961e27231cdfd5dc9ef441903dabe01" category="doc">Limitações conhecidas do Amazon FSx para NetApp ONTAP no NetApp Workload Factory</block>
   <block id="b6a0b5ebabfe42c8ed27e9b4c0efda76" category="paragraph">As limitações conhecidas identificam plataformas, dispositivos ou funções que não são compatíveis com esta versão do produto ou que não interoperam corretamente com ela. As limitações a seguir são específicas do Amazon FSx for NetApp ONTAP no NetApp Workload Factory. Analise estas limitações cuidadosamente.</block>
+  <block id="373a2f1d901c2d939efc602830f01830" category="paragraph">A nova tabela de Inventário examina automaticamente seus buckets do AWS S3 e preenche as tabelas do S3 para fornecer uma visão geral clara de todos os objetos, seus metadados, atributos e tags. O acesso a esses detalhes ajuda você a manter o controle, a visibilidade e a confiança nos dados pelos quais você é responsável, enquanto reduz a sobrecarga operacional. Você pode ativar o recurso ao criar e anexar pontos de acesso ao S3 ou ao editar pontos de acesso existentes.</block>
+  <block id="89431b722804b6b5729917d710d8bca9" category="inline-link-macro">Crie e anexe um ponto de acesso S3 para um volume no NetApp Workload Factory</block>
+  <block id="479e84ecf4496e9113dbf4e4caa47328" category="paragraph"><block ref="479e84ecf4496e9113dbf4e4caa47328" category="inline-link-macro-rx"></block></block>
+  <block id="0695b468968701e6133374525567ebb8" category="list-text">Dispositivos de bloco inativos: exibe se algum dispositivo de bloco não foi usado por sete dias consecutivos, ajudando você a identificar e gerenciar recursos não utilizados com eficiência. A partir daqui, você pode <block ref="04044e5382e57a877bbf97c227fa9ee4" category="inline-link-macro-rx"></block>.</block>
+  <block id="0ba338e49aa7425a86cae293804b2d70" category="paragraph"><block ref="0ba338e49aa7425a86cae293804b2d70" category="inline-link-macro-rx"></block></block>
+  <block id="97c89cdac712f1b76105f91dee0572f0" category="paragraph">O Workload Factory analisa seus sistemas de arquivos FSx for ONTAP em busca de *volumes NAS inativos*. A análise de configuração identifica volumes NAS que não estão sendo usados ativamente e recomenda ações para otimizar a utilização do storage e reduzir custos.</block>
+  <block id="8fed534b92837766d0beda280a6179f0" category="inline-link-macro">Implementar FSx bem arquitetado para sistemas de arquivos ONTAP</block>
+  <block id="aa9fc3ddfcff516e1422d829fd2d4138" category="paragraph"><block ref="aa9fc3ddfcff516e1422d829fd2d4138" category="inline-link-macro-rx"></block></block>
+  <block id="51d8364219eb8c2bcde5564c48004466" category="section-title">Funcionalidade de tabela de diário para pontos de acesso S3</block>
+  <block id="5693755c177f4efee6db3867cf164616" category="paragraph">O recurso de tabela de diário oferece uma maneira de gerenciar FSx ONTAP S3 storage de objetos em escala, permitindo auditar facilmente os eventos de acesso do usuário e as operações em objetos nos seus buckets. Com o Workload Factory, você pode configurar varreduras automáticas dos seus buckets e tabelas S3 para manter um registro de eventos, mostrando todos os objetos, seus detalhes e as ações do usuário.</block>
+  <block id="f5605effc9ff1f2b6b56333b91b9188b" category="inline-link-macro">Configure a infraestrutura da tabela de diários para NetApp Workload Factory</block>
+  <block id="15ee03197182e575bb603c90e93b0f1d" category="paragraph"><block ref="15ee03197182e575bb603c90e93b0f1d" category="inline-link-macro-rx"></block></block>
+  <block id="7a492c4bebdd8855719e33759860ec85" category="section-title">Suporte para gerenciamento de igroups existentes</block>
+  <block id="8770963e84c3458575dd2cb30097ea59" category="paragraph">O Workload Factory oferece suporte ao gerenciamento de igroups existentes. Você pode adicionar ou remover dispositivos de bloco e iniciadores de host para entregar sua carga de trabalho implantada no prazo.</block>
+  <block id="fb848967e18d6d577c43fdac12d36dae" category="section-title">Suporte para especificar o agregado para volumes FlexVol</block>
+  <block id="d5df323db0a76ed62a683b9faace70ee" category="paragraph">O Workload Factory permite criar volumes FlexVol em um agregado escolhido. Isso possibilita dividir a carga de capacidade e desempenho entre todos os recursos do sistema de arquivos.</block>
+  <block id="dfe0bf59b17a7c242e3e57ed9983cadf" category="inline-link-macro">Crie um FlexVol volume no NetApp Workload Factory</block>
+  <block id="438b9ce1f05f60505d31940eb7d80713" category="paragraph"><block ref="438b9ce1f05f60505d31940eb7d80713" category="inline-link-macro-rx"></block></block>
+  <block id="934fd3399568391e103ee0d773bf954d" category="list-text">*Volumes NAS inativos*</block>
+  <block id="ad888b2fc1946f3bc7c47013f4399476" category="paragraph">A análise de configuração identifica volumes NAS que não estão sendo usados ativamente e recomenda a exclusão ou arquivamento desses volumes para reduzir custos.</block>
+  <block id="27bbb381f95a5892aac5e6fa577ad167" category="list-text">*Nome do agregado*: Selecione o agregado que hospedará o novo volume.</block>
+  <block id="bbe174274b18d7c6c98e45b8076c38f3" category="paragraph">Após a migração, a storage VM de origem fica offline.</block>
+  <block id="aadb221d48ad5912d16ae10d1a2f7515" category="inline-link-macro">Modificar a política de tiering</block>
+  <block id="de12e179e610f435272079f58d2c6bf8" category="paragraph"><block ref="7a3d97c05742e0c35a808e39b9ae9bf1" category="inline-link-macro-rx"></block> para o(s) volume(s) alvo após a transição.</block>
+  <block id="9991602752d2f7a5f66a5872be6ec903" category="summary">Crie pontos de acesso S3 para um volume no NetApp Workload Factory.</block>
+  <block id="66c9abf800da7c775d1c85a15372ac8a" category="doc">Crie pontos de acesso S3 para um volume no NetApp Workload Factory</block>
+  <block id="d5f104656aed233be9a593de789bbebd" category="paragraph">Crie e anexe pontos de acesso S3 para um volume no NetApp Workload Factory.</block>
+  <block id="9dcfa34c623752899d0cd665d6921df4" category="paragraph">Cumpra os seguintes requisitos antes de começar.</block>
+  <block id="a3e0a4d34abe4cb6242fd1657cb155d4" category="inline-link-macro">Crie um volume com um ponto de acesso S3</block>
+  <block id="6f6ccfdfe231ae2138827786254112c2" category="list-text">Você precisa ter um volume existente com um ponto de acesso S3. <block ref="c7b581e6d0e133046496fe0baeb0e257" category="inline-link-macro-rx"></block></block>
+  <block id="450d84b08c6958224dd89ed70bc5e196" category="list-text">Na guia Volumes, selecione o menu de ações do volume que deseja usar, depois selecione *Ações avançadas* e, em seguida, *Gerenciar pontos de acesso S3*.</block>
+  <block id="1ab0f92903be1ffc4bfffd2b16c9822b" category="list-text">Na página Gerenciar pontos de acesso S3, selecione *Criar e anexar ponto de acesso S3*.</block>
+  <block id="d4e1585a083abcd993be7dae0c424273" category="list-text">Na página *Criar e conectar ponto de acesso S3*, forneça as seguintes informações:</block>
+  <block id="8f3e222b23e17bc1bb1082500f8b04e5" category="list-text">*Configuração de rede*: Selecione *Internet* ou *nuvem privada (VPC)*. O tipo de rede que você escolher determina se o ponto de acesso será acessível pela internet ou restrito a uma VPC específica. Para usar o recurso de tabela Journal, você deve selecionar *Internet* como configuração de rede.</block>
+  <block id="4b0fad635cf8179faf708fd1c02a8c74" category="list-text">*Tabela de inventário*: Opcional. Requer a <block ref="7bc9c2ce1ace9cb69dc8583727298aa5" prefix=" " category="inline-code"></block> permissão. Habilite a tabela de inventário no volume para gerar metadados para todos os objetos acessíveis ao ponto de acesso S3 e isso acarreta custos de solicitação do AWS S3. Consulte <block ref="af9c8757ba81fcc825b028513d05dce7" category="inline-link-macro-rx"></block> para obter mais informações. A tabela é atualizada a cada 24 horas.</block>
+  <block id="138bd218889d182c485797c551c9e401" category="paragraph">Opcionalmente, você pode usar o recurso de tabela de registro (Journal table) com pontos de acesso S3 no Workload Factory. A infraestrutura da tabela de registro captura e armazena logs de auditoria de eventos de acesso do usuário e operações de objetos em pontos de acesso de volume do Amazon FSx para ONTAP. Para habilitar o recurso de tabela de registro, você deve configurar a infraestrutura AWS necessária, incluindo AWS CloudTrail, AWS CloudWatch, buckets do AWS S3, grupos de logs do AWS CloudWatch e funções e políticas do AWS Identity and Access Management (IAM). <block ref="86eb473c6e9139cc69adeb6635c94df0" category="inline-link-macro-rx"></block>.</block>
+  <block id="ded1ddb4cefc23e05b9056875b8f60f2" category="paragraph">Outros tópicos relacionados:</block>
+  <block id="ce2c045b9972b366e21ce322585243c1" category="inline-link-macro">Editar pontos de acesso S3 para um volume no NetApp Workload Factory</block>
+  <block id="6ab180dbd7d796cef71ba054a1f9dfbe" category="list-text"><block ref="6ab180dbd7d796cef71ba054a1f9dfbe" category="inline-link-macro-rx"></block></block>
+  <block id="9487230e4f8371a9b9f378d1d39b9ee9" category="inline-link-macro">Exclua os pontos de acesso S3 para um volume no NetApp Workload Factory</block>
+  <block id="947655aca5d5b945e754b785894bd687" category="list-text"><block ref="947655aca5d5b945e754b785894bd687" category="inline-link-macro-rx"></block></block>
+  <block id="8a1536ab9b29e8a78ccc890fc9c2f457" category="list-text">Um _FlexVol volume_ é um tipo de storage lógico no ONTAP que permite gerenciar dados. Os volumes FlexVol podem ser movidos entre agregados ou nós dentro da mesma máquina virtual de storage (SVM) sem interromper o acesso do cliente. O estilo de volume FlexVol é selecionado por padrão.</block>
+  <block id="2725753901ab5f4d4cb3e6f957b07d14" category="list-text">Um volume _FlexGroup_ é um contêiner NAS com escalabilidade horizontal que oferece alto desempenho, juntamente com distribuição automática de carga e escalabilidade. Ele consiste em vários volumes membros (constituintes), que são volumes FlexVol subjacentes que compartilham o tráfego de forma transparente.</block>
+  <block id="f5f0f9ccd160bcb2aece2a01ea2af06c" category="paragraph">+ O tamanho do volume FlexGroup depende do número de componentes, sendo necessários 100 GiB por componente.</block>
+  <block id="5c02d2d98076787a0793a0f4e49b2a25" category="list-text">Em Configuração avançada, insira os seguintes detalhes. Os campos desta seção variam de acordo com o estilo de volume selecionado.</block>
+  <block id="5695b68c52927a5c6607b4889a131e0c" category="list-text">*Nome do agregado*: Somente para FlexVol volumes. Selecione o agregado que hospedará o novo volume.</block>
+  <block id="c7fd6103a481528ad5b9c60b269f1ab2" category="summary">Exclua os pontos de acesso S3 para um volume no NetApp Workload Factory.</block>
+  <block id="465c16b78dbf848c4ef504aabfafa05b" category="doc">Exclua os pontos de acesso S3 para um volume no NetApp Workload Factory</block>
+  <block id="c2e690e1e88bf68a1329d006ca0abba1" category="paragraph">O Workload Factory não exclui a tabela de inventário ou a tabela de diário, mas você pode removê-las manualmente no AWS Management Console.</block>
+  <block id="601896e24afca68bcb4b7e50c7a3fd9a" category="summary">Edite os pontos de acesso S3 para um volume no NetApp Workload Factory.</block>
+  <block id="d2352112ab40045cec0375e016ea4229" category="doc">Edite os pontos de acesso S3 para um volume no NetApp Workload Factory</block>
+  <block id="4f2481bead84c7e45263bffec42a080f" category="paragraph">Atualize os detalhes do ponto de acesso S3 e gerencie as tags de um volume no NetApp Workload Factory.</block>
+  <block id="a2872fa19a103aff070420e355911099" category="paragraph">Você também pode habilitar ou desabilitar a *Inventory table* para o ponto de acesso. A inventory table gera metadados para todos os objetos acessíveis ao ponto de acesso S3 e incorre em custos de solicitação do AWS S3. Consulte <block ref="af9c8757ba81fcc825b028513d05dce7" category="inline-link-macro-rx"></block> para obter mais informações.</block>
+  <block id="fdc1e49b1bc817c660403950b89e1054" category="list-text">Na guia Volumes, selecione o menu de ações do volume para o qual deseja editar os pontos de acesso S3, depois selecione *Ações avançadas* e, em seguida, *Gerenciar pontos de acesso S3*.</block>
+  <block id="c0945892db5abb8e13b1125b34afb488" category="inline-link-macro">Aprenda como configurar a infraestrutura da tabela Journal para NetApp Workload Factory</block>
+  <block id="ad40f635e61a919e5fb283214c26e631" category="paragraph">Para configurar a infraestrutura para o recurso de tabela de diário, você deve selecionar *Internet* como a configuração de rede para o ponto de acesso S3. <block ref="4575008aa3349eefa1ff140f7e1ef1a5" category="inline-link-macro-rx"></block>.</block>
+  <block id="bd01d52efa7861fe563eb75b30ae42db" category="list-text">Otimização de custos: eficiências de storage, hierarquização de dados, exclusão de snapshots e backups desnecessários, dispositivos de bloco inativos, capacidade subutilizada de SSD e volumes NAS inativos</block>
+  <block id="e5eaf9094fc3ae9a063c974472917f15" category="list-text">Se não existir nenhum igroup, crie um novo igroup selecionando *Map igroup &gt; Create igroup* e, em seguida, faça o seguinte:</block>
+  <block id="cd7bfadfb1480ea2e4e23f8c5b8ec668" category="list-text">Se um igroup já existir, selecione *Mapear igroup &gt; Mapear igroup existente* para adicionar ou remover dispositivos de bloco e iniciadores de host do igroup e, em seguida, selecione *Mapear*.</block>
+  <block id="cc3aa8207a3047098fb0a9e50930dc27" category="summary">Configure a infraestrutura da tabela de diário para pontos de acesso S3 no NetApp Workload Factory.</block>
+  <block id="4869b41fa1d8d8c7a4ca3326d581a992" category="doc">Configure a infraestrutura da tabela de diário para NetApp Workload Factory</block>
+  <block id="fb84b838e667358e5556cb53ea951043" category="paragraph">Configure a infraestrutura da tabela Journal para capturar e armazenar logs de auditoria de eventos de acesso de usuários e operações de objetos em pontos de acesso de volumes do Amazon FSx for ONTAP. Várias etapas são necessárias para configurar a infraestrutura para serviços AWS como AWS CloudTrail, AWS CloudWatch, AWS S3 Buckets, AWS CloudWatch log group, AWS Identity and Access Management (IAM) e AWS S3 Tables, para que os eventos de log sejam transmitidos corretamente pelo pipeline e lidos pelo Workload Factory.</block>
+  <block id="480173409cda6dfbfe14f44d35e908ef" category="paragraph">O recurso de tabela de diário captura eventos do plano de dados do S3 (PutObject, GetObject, DeleteObject, etc.) para pontos de acesso S3 do FSx for ONTAP monitorados. Ele utiliza uma cadeia de serviços da AWS implantada em sua conta da AWS. Quando a infraestrutura está configurada corretamente, ela se conecta ao ponto de acesso ao volume do FSx for ONTAP e estabelece o pipeline que captura eventos de auditoria de acesso do usuário e operação de objeto na tabela de diário.</block>
+  <block id="3e1f0faf43de8e4b1f92a2dcb1cd6512" category="paragraph">A tabela a seguir lista os serviços da AWS que fazem parte da infraestrutura, seus respectivos padrões de nomenclatura de recursos e a finalidade do serviço no pipeline.</block>
+  <block id="6ce50df88b622198e679f77e2c9b34f2" category="cell">Serviço AWS</block>
+  <block id="a8cf084e0995da67b2530fe5fd33f3eb" category="cell">Padrão de nome de recurso</block>
+  <block id="261addf78c7b2c961032b3dd08ba0b1f" category="cell">Propósito</block>
+  <block id="8679a1944db93938a65e47107be5d2b8" category="cell">AWS CloudFormation</block>
+  <block id="08d96c4fa5b18191111c42c8d3e0fff0" category="cell">netapp-metadata-*</block>
+  <block id="d109a8ce6dc5f1fa8e43b69a51f12dc6" category="cell">Implanta toda a infraestrutura como uma pilha</block>
+  <block id="dacc597de1ff25fe3f4c99ddca3ee24e" category="cell">Bucket S3 da AWS</block>
+  <block id="cdb69dc2853537d31a07fbf7dfab6757" category="cell">netapp-metadata-cloudtrail-events-logs-{uuid}</block>
+  <block id="960ce1851018d0db921178419d194461" category="cell">Armazena arquivos de log brutos do CloudTrail</block>
+  <block id="26ca9b29af36f84c577a85a80a58a381" category="cell">AWS CloudTrail</block>
+  <block id="1bf2c526fba25615493648244da21313" category="cell">netapp-metadata-journal-data-events-trail-{uuid}</block>
+  <block id="66b6d6563a2c7baf57554c386fa898cf" category="cell">Captura eventos de dados S3 para pontos de acesso específicos</block>
+  <block id="54c46974005cb6a579c5f80a0d1f4236" category="cell">Grupo de logs da AWS CloudWatch</block>
+  <block id="a09d9836c7e975f3fc3dcbf1bd450af3" category="cell">eventos de dados de diário de metadados netapp-{uuid}</block>
+  <block id="7bc3a60483fc66e99b403f789205c302" category="cell">Recebe CloudTrail eventos como entradas de log estruturadas</block>
+  <block id="bef5f130edd0f036b2ca659d3295d5c7" category="cell">Funções do IAM</block>
+  <block id="c54e5f47607237dd23ffa87810586d1a" category="list-text">netapp-metadata-cloudtrail-cw-role-{uuid}</block>
+  <block id="884ec9e905762feedf1cbfd3a6cc2a81" category="list-text">netapp-metadata-s3table-integration-role-{uuid}</block>
+  <block id="ed429e87b8f48521ace6c236f70941c6" category="cell">Integração ativa</block>
+  <block id="0d9f475bc36a861d305105af0c166782" category="cell">ObservabilityAdmin</block>
+  <block id="dbfaee866f5b9a3c2aa7c2a6a2ead2a2" category="cell">S3TableIntegration</block>
+  <block id="f553a2ab7ae4ae018c2e96c7445b107c" category="cell">Integra os Logs do CloudWatch em uma tabela do S3 Tables</block>
+  <block id="8fd20e70f8cfe7b4bb7cfbbdab188f28" category="cell">Tabelas S3</block>
+  <block id="69a6da8e3057b2fc397a8583020cfbf2" category="cell">bucket aws-cloudwatch → logs.aws_cloudtrail__data</block>
+  <block id="bcc7da78895c21f670e81ed8a262f465" category="cell">Armazena eventos CloudTrail estruturados e consultáveis no formato Iceberg</block>
+  <block id="879dd7a9b77ace45aca7823b176d494e" category="paragraph">O {uuid} é um identificador aleatório de 8 caracteres gerado quando o modelo é criado.</block>
+  <block id="b3cf46a72aa2712b902917aa8edd528b" category="paragraph">Para ativar o recurso de tabela de diário, siga estes passos:</block>
+  <block id="7dd5f4cb0a5173bab714471707528207" category="list-text">Possuo um volume existente com um ponto de acesso S3. <block ref="c7b581e6d0e133046496fe0baeb0e257" category="inline-link-macro-rx"></block></block>
+  <block id="5bfdf0b458e21e7b279a700232966f84" category="inline-link-macro">Editar a configuração de rede para o ponto de acesso S3</block>
+  <block id="874a559cddbe3d880b3b3f030a4107c5" category="list-text">Defina a configuração de rede como *Internet* para o ponto de acesso S3. <block ref="d4dbc6ef9541fd6cdb144f928aed07a9" category="inline-link-macro-rx"></block>.</block>
+  <block id="a8679885e73648ab5faedee9828c5b82" category="inline-link-macro">Conceda as permissões de _operações e remediação_</block>
+  <block id="10265503ad4154aa0d463ede0d207291" category="list-text"><block ref="a7a3720492cd37e2e97b596f29b12116" category="inline-link-macro-rx"></block>às suas credenciais do Workload Factory.</block>
+  <block id="72f26542288a74925afe209f90721746" category="list-text">Adicione as seguintes permissões de política do IAM à conta da AWS que você usa para executar a implantação do CloudFormation para configurar a tabela Journal.</block>
+  <block id="8a3af9acf77bc2d1c523769ccfb9d02a" category="example-title">Permissões de política IAM para configuração da tabela de diário</block>
+  <block id="4b4299209f4cfca6b0ced53fbb875922" category="section-title">Configure a infraestrutura da tabela de diários</block>
+  <block id="43ec6f35ca2ab03a81f2ea216fb53592" category="paragraph">Configure a infraestrutura para capturar eventos de serviço da AWS a partir do ponto de acesso S3 na tabela de registro (journal).</block>
+  <block id="6c6bdb9e64962766080b453ac5399c0b" category="list-text">Na caixa de diálogo *Editar ponto de acesso S3*, verifique se a configuração de rede está definida como *Internet*.</block>
+  <block id="81d0eefd16c03b5f5ec8e749720517e4" category="list-text">Siga as instruções na caixa de diálogo para configurar a infraestrutura para o recurso de tabela de journal.</block>
+  <block id="99efbd47a50ba6f535a8200791561bb3" category="list-text">Baixe o modelo CloudFormation.</block>
+  <block id="2f6dabbdb98dce21d04afe199ae5f5ea" category="list-text">Implante a pilha CloudFormation em sua conta da AWS.</block>
+  <block id="c1d628e3526732a7df245aa48d5c48a1" category="list-text">Salve o modelo JSON em um arquivo.</block>
+  <block id="6933cc8b32b041ef9586d20cb2dcd2e6" category="list-text">Implante o modelo usando a AWS CLI ou o Console de Gerenciamento da AWS.</block>
+  <block id="5cb966e5247c525746877f0025dfe7e6" category="list-text">Aguarde até que a pilha atinja <block ref="4d1e1d4a1296383246ae7a9a73103a7f" prefix=" " category="inline-code"></block> status.</block>
+  <block id="cf199e47a86606d6a3d6fb37f9b27c49" category="list-text">Obtenha o CloudTrail ARN a partir das saídas da pilha.</block>
+  <block id="34847192ce0b60124e0f7168d1583693" category="list-text">Retorne ao console do Workload Factory e volte ao volume para gerenciar os pontos de acesso S3.</block>
+  <block id="ce70b2050a1073565c099a6fbd3b065f" category="list-text">Selecione *Ver detalhes* no menu de ações de volume.</block>
+  <block id="9382fbb062e863792dfd15cbe61c84e7" category="list-text">Na aba *Tabela de diário*, insira o CloudTrail ARN.</block>
+  <block id="adb49c9f19393797db3a880e8a584bdf" category="inline-xref">solucionar problemas de configuração de infraestrutura para a tabela de diário</block>
+  <block id="1e39bd1a00a790bdc9da556553475561" category="paragraph">Se alguma das etapas falhar, <block ref="e13861f05778285d9b52658ff8c7a4e4" category="inline-xref-macro-rx"></block> ou entre em contato com o suporte da NetApp para obter ajuda.</block>
+  <block id="080a5a3e40ce46b4145a580d7b2f73b1" category="section-title">Solucionar problemas na configuração da infraestrutura da tabela de diário</block>
+  <block id="104419ea1730bd4a3aa0c64a52b07bdb" category="paragraph">Você pode usar o Console de Gerenciamento da AWS ou a AWS CLI para solucionar problemas durante a implantação da pilha CloudFormation e dos recursos que ela cria.</block>
+  <block id="a6e5ed0cef87feff8ebec1aded14f069" category="paragraph">Após resolver o problema, envie o CloudTrail ARN novamente para reiniciar a configuração da tabela de registro.</block>
+  <block id="eb3ade3351abab40569af496936c9233" category="section-title">Falhas comuns de implantação do CloudFormation</block>
+  <block id="0dfe55c5ca2a84937a86a09887f27d09" category="section-title">Permissões IAM insuficientes</block>
+  <block id="2aa89303e835424a2cbec47a2984fc6d" category="paragraph">A função/usuário que realiza a implantação precisa de um conjunto específico de permissões. Consulte <block ref="3744d798ea179f12a35f01ad2377ca14" category="inline-xref-macro-rx"></block> para a política completa.</block>
+  <block id="ff4581318d257964b332c15c8c5d0203" category="paragraph">Se a pilha falhar com um<block ref="cbcc0759909213e7cdba1f0cbf253126" prefix=" " category="inline-code"></block> ou<block ref="871b8552f8bb64f4bc348f239b580097" prefix=" " category="inline-code"></block> erro, verifique os eventos da pilha e procure pela permissão ausente no campo <block ref="b5d355fec3069ae353fa2ccfd2b7230d" prefix=" " category="inline-code"></block>.</block>
+  <block id="09b3ca5533ed443e260c98ab00ff3b54" category="section-title">CloudTrail limite</block>
+  <block id="d4a5bda661968689c309e4b5638b449f" category="paragraph">A AWS impõe um limite padrão de 5 trilhas por região. Se a conta já tiver 5 trilhas,<block ref="3dd7fd672908a85d60b0dab857b9aae6" prefix=" " category="inline-code"></block> o recurso falhará com: Número máximo de trilhas (5) excedido. Você pode verificar o número de trilhas em nível regional com o seguinte comando:</block>
+  <block id="349124f192f2fae86b306946ded74f66" category="list-title">Opções de resolução</block>
+  <block id="a2ebaca53dc16344da545f5f09909cf3" category="list-text">Opção 1: exclua uma trilha não utilizada na região para liberar espaço.</block>
+  <block id="6cc90dcd18b526d1d0b82f26c13c8001" category="list-text">Opção 2: Use uma trilha existente. Remova os recursos <block ref="42a534cc1039d65526d6e1e32221e571" prefix=" " category="inline-code"></block>,<block ref="0486802ddfa776141e49f23c0da359c3" prefix=" " category="inline-code"></block>,<block ref="3b87876334e530cfca7a489521608c5a" prefix=" " category="inline-code"></block> e <block ref="5a80676cbbbff2ba0a66f1a049a6f4bc" prefix=" " category="inline-code"></block> do modelo antes de implantar a pilha CloudFormation novamente. Em seguida, passe o ARN da sua trilha existente durante a etapa de inicialização. A trilha existente deve ter um CloudWatch Log Group configurado, uma S3TableIntegration associada ao grupo de logs e estar registrando eventos de dados.</block>
+  <block id="82c0016f5a4395118d57dbad88a0dd78" category="section-title">A integração com a tabela S3 já existe</block>
+  <block id="d76ebd11f350fad0f23d59f8223cb050" category="paragraph">Se a conta já possuir uma S3TableIntegration para a fonte de dados aws_cloudtrail, o recurso LogsToS3TableIntegration falhará.</block>
+  <block id="b5a4b64b2aa505bd7c11f79b8a9f458d" category="paragraph-title">Resolução</block>
+  <block id="31a5513bd3f88e5d174c548c5d2ef475" category="paragraph">Remova os <block ref="381eb029c83231e2cd5d11cb6b1263de" prefix=" " category="inline-code"></block> e <block ref="7d656f1698c163699e7ddd7dad92d20d" prefix=" " category="inline-code"></block> recursos do modelo antes de implantar a pilha CloudFormation novamente. O sistema usa automaticamente a integração existente, desde que você a configure para eventos de dados do aws_cloudtrail.</block>
+  <block id="aee0800db72b1ecc5f7164b83e954a01" category="paragraph">Para verificar se já existe uma integração:</block>
+  <block id="3895643f8d2c137f3b955c39e2e201da" category="section-title">O nome do bucket S3 já existe</block>
+  <block id="5a6ae38ee8f24c3794ec9a0816e9eb69" category="paragraph">O nome do bucket<block ref="cdb69dc2853537d31a07fbf7dfab6757" prefix=" " category="inline-code"></block> é globalmente único. Se houver conflito, solicite novamente o template para obter um novo UUID.</block>
+  <block id="a0495ad17b794a5010e57547a919c710" category="section-title">A função IAM já existe</block>
+  <block id="c37edadecc507cdab971e11e67ed8b57" category="paragraph">Se uma implantação parcial anterior deixou funções do IAM com o <block ref="08d96c4fa5b18191111c42c8d3e0fff0" prefix=" " category="inline-code"></block> padrão de nome, a criação da função falhará. Exclua primeiro as funções órfãs:</block>
+  <block id="55b93fa687702387be9d297169c296d2" category="section-title">Falhas após capacitação da tabela Journal</block>
+  <block id="881de5afa89439976c3434ce287ec4c2" category="paragraph">Após o envio do ARN do CloudTrail, o Workload Factory valida todo o pipeline de recursos enviando automaticamente um _seed_, ou evento de teste. Se bem-sucedido, o evento seed chega na tabela S3 Tables. O teste leva aproximadamente 10 minutos.</block>
+  <block id="57ae3dab0bbc63364ba791755305ea7c" category="paragraph">Se a validação do teste falhar, você poderá receber uma das seguintes mensagens de erro:</block>
+  <block id="e20cbb947afcf84cf58de1358ee1068d" category="cell">Mensagem de erro</block>
+  <block id="7277de5f2ed6f17c61f1f25594591a82" category="cell">Significado</block>
+  <block id="71d9363aa200e5d6b1483674cbfeae3d" category="cell">A tabela aws_cloudtrail__data não foi criada em {bucket}. Verifique as permissões da tabela s3.</block>
+  <block id="32fece5df4fecfd00ae2b345328ebf70" category="cell">S3TableIntegration não criou a tabela gerenciada pelo CloudWatch. O pipeline entre os logs do CloudWatch e as tabelas do S3 está interrompido.</block>
+  <block id="668b0fbd371f31b34fd0a515830f7b37" category="cell">A tabela existe, mas o evento inicial do diário não aparece. Verifique as permissões do CloudTrail e do CloudWatch.</block>
+  <block id="ecbcb2d5385478ad81dabfb0f4ab49ca" category="cell">A tabela existe, mas o evento de inicialização específico nunca chegou. O pipeline está interrompido entre CloudTrail e a tabela S3 Tables.</block>
+  <block id="09a9ba4aed38541d2db585d9af87ee80" category="cell">Falha ao iniciar a configuração do diário. ...</block>
+  <block id="b438b0bb3583c8372563f1600bb752ac" category="cell">Ocorreu um erro durante o fluxo de inicialização/verificação em segundo plano. Verifique a mensagem subsequente para obter detalhes.</block>
+  <block id="874aa46aa7bff3cd7406845ddfe7ec3a" category="paragraph-title">Etapas de resolução</block>
+  <block id="97d91b5bc1070913cafc109a679f4010" category="paragraph">Quando o registro atingir o status FAILED, rastreie o evento inicial através dos estágios do pipeline para identificar exatamente onde ele parou. Cada etapa corresponde a um recurso específico da AWS criado pelo template.</block>
+  <block id="18a2ae1fb26af8f92d55adc4b65e8290" category="list-text">Verifique o bucket S3 do CloudTrail.</block>
+  <block id="3359efe5d8da87f977eb88c9627599a3" category="paragraph">O processo de trilha grava os registros de eventos brutos no bucket S3<block ref="fa0a08bf0287e3558d34ed7f39ef0c18" prefix=" " category="inline-code"></block>. Procure por arquivos de registro recentes.</block>
+  <block id="74c5d257e55cddf9dc4e42ea5da78be1" category="paragraph">Se não existirem arquivos de log, então o CloudTrail não está capturando eventos. Verifique o seguinte:</block>
+  <block id="a3f42d0fd09319a415334959ee0fdf43" category="list-text">A trilha está registrando <block ref="9588023fb5490571cd5e166d4fb845ec" prefix="(" category="inline-code"></block>)</block>
+  <block id="6034fec4ec3760aac22f338aacdf6f80" category="list-text">Os seletores de eventos avançados incluem o ARN do ponto de acesso correto</block>
+  <block id="a9d7518dcf9e4b0776909f6ee0d5e277" category="list-text">Os seletores de eventos avançados incluem os filtros para<block ref="8c9637acdb24718ffd8530639b23ec2f" prefix=" " category="inline-code"></block> e<block ref="1efcab11a55e39809ed4739b2cad52e6" prefix=" " category="inline-code"></block></block>
+  <block id="a448581897f558c44c39151f81a700cd" category="list-text">Verifique o grupo de logs do CloudWatch.</block>
+  <block id="69052e40a21cf07938062dc4e53e51b7" category="paragraph">A trilha também entrega eventos ao CloudWatch Log Group. O nome do grupo de registros começa com <block ref="75aaaa6def99fdfbcb66a1f2475e97fd" prefix=" " category="inline-code"></block>.</block>
+  <block id="ce0e87e82f8d4f23d5a4c37389a92104" category="list-text">Se o grupo de logs estiver vazio, então o CloudTrail não está entregando eventos ao CloudWatch. Verifique se a função do <block ref="5a80676cbbbff2ba0a66f1a049a6f4bc" prefix=" " category="inline-code"></block> IAM existe e possui <block ref="9294f7e303ba3ddc420e24b7e47eab2c" prefix=" " category="inline-code"></block> e <block ref="3ba3376e55a3bdd26ed9c2519b4b9e6a" prefix=" " category="inline-code"></block> permissões, e se o trail está configurado com o <block ref="0690e7e714fe324377f54309182bb16b" prefix=" " category="inline-code"></block> e <block ref="6fc05480186b087fe531c37b0a014cec" prefix=" " category="inline-code"></block> corretos.</block>
+  <block id="64e40540a992f6c227488e364d03ca83" category="list-text">Se o evento inicial aparecer no grupo de logs, o problema está a jusante — prossiga para a Etapa 3.</block>
+  <block id="28ace9ce6c794d9e4e4720a56ea24e5c" category="list-text">Consulte a tabela S3 Tables <block ref="2c2c37985634e28bc5d99984a53d7b37" prefix="(" category="inline-code"></block>).</block>
+  <block id="d88ed1c5cea3096d335f8ac296b07ad9" category="paragraph">A S3TableIntegration cria automaticamente um bucket de tabela chamado aws-cloudwatch e preenche uma tabela em logs.aws_cloudtrail__data. Essa tabela só é criada após o primeiro evento ser processado.</block>
+  <block id="69d1ebe089e7ee7091ba937331471da7" category="list-text">Se o bucket da tabela aws-cloudwatch não existir, então o <block ref="7d656f1698c163699e7ddd7dad92d20d" prefix=" " category="inline-code"></block> está sem permissões. Ele precisa de <block ref="00246fed3ef66165d3ba3d6bfdd371cc" prefix=" " category="inline-code"></block>, <block ref="82242c740e8fb14071b4907c5f9796aa" prefix=" " category="inline-code"></block> e <block ref="b0a6eb48f73351a252096302ea696228" prefix=" " category="inline-code"></block> — todos com escopo para <block ref="be3e806fd006ff77fc6f5df51b0b15fc" prefix=" " category="inline-code"></block>.</block>
+  <block id="4cbe6af7965ecc41148f2f932fa3c00a" category="list-text">Se o bucket da tabela existir mas <block ref="b1f2a28029574848e2434a748ff62c91" prefix=" " category="inline-code"></block> não existir, então a integração não está roteando eventos. A integração deve mostrar <block ref="3f8d62dd572d46eacdb644bc7dd5a773" prefix=" " category="inline-code"></block> e incluir <block ref="2a562909c4995db56ef8bf77c1dd2947" prefix=" " category="inline-code"></block> como uma fonte de log.</block>
+  <block id="31f70976094cbc00378315152e208476" category="list-text">Se a tabela existir, mas o evento inicial não estiver nela, o evento pode ainda estar em trânsito. A ingestão de tabelas S3 tem alguma latência. Aguarde mais alguns minutos. Se ainda não aparecer após 15-20 minutos, a integração pode estar interrompida.</block>
+  <block id="ccc135431e07764b8b70db477f74d247" category="list-text">Consulte o evento inicial diretamente.</block>
+  <block id="fd041db7c2772c6b04caa39367714c83" category="list-text">Abra as tabelas do S3 no Console de Gerenciamento da AWS.</block>
+  <block id="ffb4bafe4deefe3efb2537959dd77fc0" category="list-text">Navegue até o bucket da tabela aws-cloudwatch → tabela aws_cloudtrail__data e use o botão *Preview* para executar uma consulta rápida diretamente no navegador.</block>
+  <block id="dcbbd0b7f6de94cefc0f1d9997be5055" category="list-text">Se o evento estiver presente na tabela, mas o diário ainda mostrar<block ref="b9e14d9b2886bcff408b85aefa780419" prefix=" " category="inline-code"></block>, então a janela de pesquisa pode ter expirado antes da chegada do evento.</block>
+  <block id="92254d246118fa5399d3859349adf6c6" category="inline-xref">Iniciando a configuração da tabela de diário</block>
+  <block id="35d86d167f6b9d35a772dbcf9a7c9f08" category="paragraph">Após resolver o problema, retorne ao console do Workload Factory. Tente <block ref="c5fcc47ac12a05dd4c0f04f5c2336d01" category="inline-xref-macro-rx"></block> novamente enviando o Trail ARN.</block>
+  <block id="b2547e14f7d714181a745f654128a3b3" category="list-text">Se a configuração continuar a falhar, entre em contato com o suporte da NetApp para obter assistência.</block>
+  <block id="810181631483521b4977c3caefad85b1" category="section-title">Referência de permissões para a configuração da tabela de diário</block>
+  <block id="0cec117b5b4db2a8973e274cd81d053c" category="paragraph">A função do IAM que implementa a pilha CloudFormation para habilitar o recurso de tabela Journal precisa das seguintes permissões. Consulte <block ref="3744d798ea179f12a35f01ad2377ca14" category="inline-xref-macro-rx"></block> para uma política JSON copiável com as permissões necessárias.</block>
+  <block id="d0423a5ad6ad03a5309cfb5cebda08c6" category="section-title">Operações de pilha</block>
+  <block id="ed5dea09095f671b801bee34ea28a319" category="cell">Permissão</block>
+  <block id="be8545ae7ab0276e15898aae7acfbd7a" category="cell">Recurso</block>
+  <block id="91164770fc34b877cc56ccaf61d6eee8" category="cell">Por que</block>
+  <block id="6ccfab5404f73a6b0bacb222665e72d7" category="cell">cloudformation:CreateStack</block>
+  <block id="5053fe952165ea085a46bcb9738b0ee7" category="cell">arn:aws:cloudformation:*:*:stack/netapp-metadata-*/*</block>
+  <block id="0ce910ff5d5bb901cb52c6d55b780310" category="cell">Crie a pilha</block>
+  <block id="f404fc6d0850472807e4fcd86203a313" category="cell">cloudformation:DescribeStacks</block>
+  <block id="3dbc9fe0eeb9cf87ea850bc6f5eff9df" category="cell">Monitorar o status da pilha</block>
+  <block id="da044dbe1821a39f63f98e823344b062" category="cell">cloudformation:DescribeStackEvents</block>
+  <block id="924fe230741efe6d0c6ec61fa965cfed" category="cell">Diagnosticar falhas em nível de recurso no cloudformation:GetTemplateSummary * Validação prévia do template</block>
+  <block id="92fbbd5478621cf8f70624389759b44c" category="section-title">CloudTrail</block>
+  <block id="cea2689ef0cfba4faf16baec914e3c15" category="cell">cloudtrail:CreateTrail</block>
+  <block id="556d5bb69b65d50075a09a028fdc6ee6" category="cell">arn:aws:cloudtrail:*:*:trail/netapp-metadata-*</block>
+  <block id="fba1f9e04005a1c87f4c392c74a06cf0" category="cell">Crie a trilha</block>
+  <block id="0d5b0b239bbd6239c00d900ec3ec62fe" category="cell">cloudtrail:StartLogging</block>
+  <block id="c218ee1f0300a1c69a0f97d6d2872fde" category="cell">Ativar registro de logs</block>
+  <block id="4a1eb91814ee961864b614589f0138ef" category="cell">cloudtrail:AddTags</block>
+  <block id="f6b5a2e7a02d0e507846c6b134a09574" category="cell">Aplique a etiqueta de identificação</block>
+  <block id="89aa68fffda7d587077f8069ae60e59f" category="cell">cloudtrail:PutEventSelectors</block>
+  <block id="90ba3828cc3d219ca2729b513bca36e5" category="cell">Configurar captura de eventos de dados</block>
+  <block id="ec0eeb3f4d79ae881dd378823884b3fa" category="cell">cloudtrail:DescribeTrails</block>
+  <block id="3389dae361af79b04c9c8e7057f60cc6" category="cell">*</block>
+  <block id="641ee695f3b7fd9d4b5a39e82ae7d2c1" category="cell">Resolver ARN de trilha para saída de stack</block>
+  <block id="e2ab7c65b21ed8cc1c3b642b5e36429e" category="section-title">S3</block>
+  <block id="d0e4bee632dc55607e492853b76d8194" category="cell">s3:CreateBucket</block>
+  <block id="e9ce2b97e7a7127b4ba5bd9ba11548f1" category="cell">arn:aws:s3:::netapp-metadata-*</block>
+  <block id="3b7aa575d0f171a194ad74f241764046" category="cell">Crie o bucket de logs CloudTrail</block>
+  <block id="4b9c42bf1853fa25d534302dbc43f035" category="cell">s3:PutBucketPolicy</block>
+  <block id="f6ff4374754cdfb9764e89358c6f937a" category="cell">Permitir que o CloudTrail grave logs</block>
+  <block id="f7e22455b86c7ea94ba86cc949d37161" category="cell">s3:PutBucketTagging</block>
+  <block id="41dff7155cc7aeb11c06434f6a450bb3" category="section-title">IAM</block>
+  <block id="3b8d1aa9f2727ee5948e48b70e7ea00b" category="cell">iam:CreateRole</block>
+  <block id="9437ab907170f0c3bc599aca914b6164" category="cell">arn:aws:iam::*:role/netapp-metadata-*</block>
+  <block id="9bdb3bfe2aa8daa3a7d0ae0042ae07ae" category="cell">Crie ambas as funções do IAM</block>
+  <block id="a6e64d0684dcf803ad58d40684383bb9" category="cell">iam:PutRolePolicy</block>
+  <block id="6c909cd008777d24aebff08499a3146b" category="cell">Anexar políticas embutidas</block>
+  <block id="7f862a4b8fc22b0af5dda5c9ababa346" category="cell">iam:TagRole</block>
+  <block id="9dcf380856979ca5b723d30e996e1f95" category="cell">iam:GetRole</block>
+  <block id="5a75ea23f120d0e764f419a06826ac37" category="cell">Confirme se a função está ativa</block>
+  <block id="f6ae0a8a1321975a6474722dcafe1322" category="cell">iam:PassRole</block>
+  <block id="861c0a280cc43cd23d3971f9ac4a1cb0" category="cell">arn:aws:iam::*:role/netapp-metadata-* (condição: PassedToService = cloudtrail.amazonaws.com, logs.amazonaws.com)</block>
+  <block id="5000d87838eb7e94d812ed5f6d18896c" category="cell">Atribuir funções ao CloudTrail e aos CloudWatch Logs</block>
+  <block id="a8c600be214ced26950e704d39c3ca21" category="section-title">Logs do CloudWatch</block>
+  <block id="4011ea392d4bd2f3136eea1bbb00683d" category="cell">logs:CreateLogGroup</block>
+  <block id="ba643d240ea518faad40426a1f54ef42" category="cell">arn:aws:logs:*:*:log-group:netapp-metadata-*</block>
+  <block id="8fa369fb6ddf5fdad9cc1d944b8a818b" category="cell">Crie o grupo de logs</block>
+  <block id="7a9b9ad62305b466cf303f08fa08127f" category="cell">logs:DeleteLogGroup</block>
+  <block id="2a5778b1dcf8d129409861f984d9b3cb" category="cell">Limpar o grupo de logs se a criação falhar</block>
+  <block id="9c72603737d6e2074ae7fab048b5d3d1" category="cell">registros:PutRetentionPolicy</block>
+  <block id="c74bf2009d8f729c1aa55fdf8dfaa80c" category="cell">Defina retenção de 30 dias</block>
+  <block id="dc344e1b51ae9e5aff7a5efaf286df5a" category="cell">registros:TagResource</block>
+  <block id="5ed87b55605578a6bca78a049d6afb0f" category="cell">logs:AssociateSourceToS3TableIntegration</block>
+  <block id="aa5547149267bde3159275741ad451a4" category="cell">Vincular a fonte CloudTrail às tabelas S3</block>
+  <block id="99a70cb6d5b807589a0a1aa9bbcfea7d" category="cell">registros:DescribeLogGroups</block>
+  <block id="498608f8d83df246026e7cd4bb58df5e" category="cell">Verificar a existência do grupo de logs</block>
+  <block id="069eff0bd2f373ac9bbcdfbfa4931470" category="cell">logs:ListSourcesForS3TableIntegration</block>
+  <block id="64d515eca6e1dbad68b5cae6d11ad480" category="cell">Confirmar associação de integração</block>
+  <block id="95afe0df7096b504cd3d5d80bd97eb75" category="cell">observabilityadmin:CreateS3TableIntegration</block>
+  <block id="6a825d68a19916ea8e00b8e3abef5385" category="cell">Crie a ponte CloudWatch → Tabelas S3</block>
+  <block id="2175594d7fe808b3bdd968869b5bc7c7" category="cell">observabilityadmin:GetS3TableIntegration</block>
+  <block id="be2f330d2e5db93e954568e0985de050" category="cell">Confirme se a integração está ativa</block>
+  <block id="6d4aadc33145ce0baf8ff11f6fb18474" category="cell">observabilityadmin:TagResource</block>
+  <block id="127621ab6b40d381b424cf9ede76795c" category="cell">observabilityadmin:ListTagsForResource</block>
+  <block id="d2bf8d4292916f6760d456561e3ed9b8" category="cell">Detecção de deriva</block>
+  <block id="00246fed3ef66165d3ba3d6bfdd371cc" category="cell">s3tables:CreateTableBucket</block>
+  <block id="be3e806fd006ff77fc6f5df51b0b15fc" category="cell">arn:aws:s3tables:*:*:bucket/aws-cloudwatch</block>
+  <block id="e627f0f312d7a03630a01f865738f445" category="cell">Crie o bucket de tabelas S3 (via função de integração)</block>
+  <block id="82242c740e8fb14071b4907c5f9796aa" category="cell">s3tables:PutTableBucketEncryption</block>
+  <block id="4da06b5b2b57a157e92fb5c3213bbf50" category="cell">Configurar criptografia AES256</block>
+  <block id="b0a6eb48f73351a252096302ea696228" category="cell">s3tables:PutTableBucketPolicy</block>
+  <block id="b1ad085edd3140c672ff2109d9242452" category="cell">Permitir acesso aos registros do CloudWatch</block>
+  <block id="4d565cafb7f83c16708d52b5ab6f97af" category="summary">Visualize os detalhes dos pontos de acesso S3 para um volume no NetApp Workload Factory.</block>
+  <block id="0508a20ce5214e259576cd4e33683ed1" category="doc">Visualize os detalhes dos pontos de acesso S3 para um volume no NetApp Workload Factory</block>
+  <block id="b83eea7e75edc796e98ee57692e03801" category="paragraph">Visualize detalhes do ponto de acesso S3, como o alias, o ARN e o URI do S3. Com as tabelas de inventário e registro em diário ativadas, você pode visualizar metadados e registros de auditoria de eventos de acesso do usuário e operações de objetos em todos os pontos de acesso S3.</block>
+  <block id="cf3c11cd7ad93f5d574a0699e780188f" category="paragraph">Quando a tabela de inventário está habilitada no volume, você pode visualizar os detalhes do ponto de acesso, da tabela de inventário e do bucket da tabela dos pontos de acesso S3 existentes conectados ao volume. O sistema também fornece um link para a tabela de inventário no Console de Gerenciamento da AWS.</block>
+  <block id="5a8fb625347b548bdba1297afcb24588" category="paragraph">Quando a tabela de registro (journal table) está habilitada, o Workload Factory gera logs nos pontos de acesso em uma tabela para sua referência. A tabela inclui CloudTrail eventos, trilhas (um registro das atividades da AWS), CloudTrail filtros, CloudWatch grupos de logs e muito mais.</block>
+  <block id="b7371f693c4933ae68bcd3c1e54d8f2c" category="list-text">Em *FSx para ONTAP*, selecione o sistema de arquivos com o volume para o qual deseja visualizar os detalhes.</block>
+  <block id="595b711bbed1bfb14aeeae9906c0c67a" category="list-text">Na aba Volumes, selecione o menu de ações do volume para o qual deseja visualizar os detalhes, depois selecione *Ações avançadas* e, em seguida, *Visualizar detalhes*.</block>
+  <block id="9f4713f4c145950631eb9253132c7ada" category="paragraph">Os detalhes aparecem em quatro abas: *Ponto de acesso*, *Tabela de inventário*, *Tabela de diário* e *Bucket da tabela*.</block>
+  <block id="4b00d53749c72d6e6e220e24c308c29e" category="list-text">Se o status para tabelas de inventário ou diário estiver habilitado, mas você não tiver a <block ref="c38e323a00a79423dcc6c063c22b63fc" prefix=" " category="inline-code"></block> permissão, siga as instruções na caixa de diálogo para adicionar a permissão exigida.</block>
+  <block id="9b2b2c4b41fe590fbaaf09e74f892891" category="list-text">Quando o status da tabela de registro em diário estiver pendente, você deverá fornecer o CloudTrail ARN para conectar a tabela de registro em diário à infraestrutura criada. Siga as instruções para implantar a pilha CloudFormation usando a AWS CLI ou o Console de Gerenciamento da AWS e, em seguida, retorne ao console do Workload Factory para inserir o CloudTrail ARN.</block>
+  <block id="372a7f52608ee07741b6f86a497e9fd1" category="inline-link-macro">Configure a infraestrutura da tabela de diários e solucione problemas de configuração da tabela de diários no NetApp Workload Factory.</block>
+  <block id="f33f64df042b527511c8608dc9749078" category="list-text"><block ref="f33f64df042b527511c8608dc9749078" category="inline-link-macro-rx"></block></block>
+  <block id="7f65119c79afd09b7f99936d13e97909" category="section-title">06 de abril de 2026</block>
+  <block id="df9cb9b9a707c3ace18761ef83751ee6" category="sidebar">Criar e associar pontos de acesso S3</block>
+  <block id="087b2bf3ee9925d6feea388b7dfd398a" category="sidebar">Editar pontos de acesso S3</block>
+  <block id="462be4711361458eea73842ce954eb91" category="sidebar">Veja detalhes sobre os pontos de acesso S3</block>
+  <block id="bc8efabe5bb393ec04bcc82dbbfe36c2" category="sidebar">Excluir pontos de acesso S3</block>
 </blocks>

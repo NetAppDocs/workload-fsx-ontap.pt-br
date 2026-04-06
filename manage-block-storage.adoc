@@ -135,7 +135,7 @@ Você pode gerenciar o acesso do cliente a um dispositivo de bloco existente a q
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx para ONTAP*, selecione a guia *Dispositivos de bloco*.
 . Acesse o menu de ações do dispositivo de bloqueio e selecione *Gerenciar acesso do cliente*.
-. Se não existir nenhum grupo de interfaces (igroup), crie um novo selecionando *Criar grupo de interfaces* e, em seguida, faça o seguinte:
+. Se não existir nenhum igroup, crie um novo igroup selecionando *Map igroup > Create igroup* e, em seguida, faça o seguinte:
 +
 .. *Nome do dispositivo de bloqueio*: Insira o nome do dispositivo de bloqueio. Você pode selecionar vários dispositivos de bloco para associar ao igroup.
 .. *Tipo de sistema operacional*: Selecione o tipo de sistema operacional.
@@ -145,7 +145,7 @@ Você pode gerenciar o acesso do cliente a um dispositivo de bloco existente a q
 .. Selecione *criar*.
 
 
-. Se já existir um grupo de interfaces (igroup), selecione *Editar acesso do cliente* para adicionar ou remover dispositivos de bloco e iniciadores de host do grupo de interfaces e, em seguida, selecione *Aplicar*.
+. Se um igroup já existir, selecione *Mapear igroup > Mapear igroup existente* para adicionar ou remover dispositivos de bloco e iniciadores de host do igroup e, em seguida, selecione *Mapear*.
 
 
 

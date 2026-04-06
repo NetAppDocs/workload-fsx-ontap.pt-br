@@ -172,6 +172,10 @@ Após um dispositivo de bloco não ser usado por sete dias, a Workload Factory r
 +
 Uma camada de capacidade SSD subutilizada pode estar gerando custos desnecessários. Workload Factory recomenda reduzir a capacidade da camada SSD, mantendo um buffer de espaço livre de 20% acima da capacidade atualmente utilizada. Uma operação de redução pode levar de várias horas a vários dias, e outras operações do sistema de arquivos não são suportadas durante esse período.
 
+* *Volumes NAS inativos*
++
+A análise de configuração identifica volumes NAS que não estão sendo usados ativamente e recomenda a exclusão ou arquivamento desses volumes para reduzir custos.
+
 
 
 .O que vem a seguir

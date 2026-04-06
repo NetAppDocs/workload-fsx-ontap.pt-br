@@ -87,14 +87,16 @@ NOTE: Ao usar o Terraform do Codebox, o código que você copia ou baixa oculta 
 .. *Storage VM name*: Opcionalmente, insira um nome de VM de armazenamento.
 .. *Estilo de volume*: Selecione o volume *FlexVol* ou *FlexGroup*.
 +
-O estilo FlexVol volume é selecionado por padrão.
+*** Um _FlexVol volume_ é um tipo de storage lógico no ONTAP que permite gerenciar dados. Os volumes FlexVol podem ser movidos entre agregados ou nós dentro da mesma máquina virtual de storage (SVM) sem interromper o acesso do cliente. O estilo de volume FlexVol é selecionado por padrão.
+*** Um volume _FlexGroup_ é um contêiner NAS com escalabilidade horizontal que oferece alto desempenho, juntamente com distribuição automática de carga e escalabilidade. Ele consiste em vários volumes membros (constituintes), que são volumes FlexVol subjacentes que compartilham o tráfego de forma transparente.
 
-+
-O tamanho do volume do FlexGroup depende do número de constituintes, exigindo 100 GiB por constituinte.
 
 .. *Tamanho do volume*: Introduza o tamanho do volume e a unidade.
 +
 Opcionalmente, ative o volume com crescimento automático. Esta opção está disponível quando você seleciona *Acesso a arquivos* como o tipo de acesso de volume.
+
++
++ O tamanho do volume FlexGroup depende do número de componentes, sendo necessários 100 GiB por componente.
 
 .. *Aumento automático de volume*: Opcionalmente, ative o aumento automático de volume para expandir automaticamente a capacidade do volume até que ele atinja o tamanho máximo. Este recurso permite o aumento do uso de dados, garantindo operações ininterruptas.
 +
@@ -234,9 +236,10 @@ Se o recurso não estiver disponível, é por um dos seguintes motivos:
 
 
 
-. Em Configuração avançada, forneça o seguinte:
+. Em Configuração avançada, insira os seguintes detalhes. Os campos desta seção variam de acordo com o estilo de volume selecionado.
 +
 .. *Caminho de junção*: Insira o local no namespace da VM de armazenamento onde o volume é montado. O caminho de junção padrão é `/<volume-name>`.
+.. *Nome do agregado*: Somente para FlexVol volumes. Selecione o agregado que hospedará o novo volume.
 .. *Lista de agregados*: Apenas para volumes FlexGroup. Adicionar ou remover agregados. O número mínimo de agregados é um.
 .. *Número de componentes*: Apenas para volumes FlexGroup. Introduza o número de componentes por agregado. 100 GiB é exigido por constituinte.
 

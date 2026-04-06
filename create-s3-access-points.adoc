@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: create-s3-access-points.html 
+keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points 
+summary: Crie pontos de acesso S3 para um volume no NetApp Workload Factory. 
+---
+= Crie pontos de acesso S3 para um volume no NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Crie e anexe pontos de acesso S3 para um volume no NetApp Workload Factory.
+
+.Sobre esta tarefa
+Amazon FSx for NetApp ONTAP permite que sistemas de arquivos NFS e SMB acessem dados do S3 e se conectem a serviços da AWS como Amazon Bedrock, SageMaker, Athena, AWS Glue e mais. Você pode conectar serviços da AWS a todos os seus dados de storage de objetos.
+
+Anexe pontos de acesso S3 a volumes NFS e SMB em um sistema de arquivos FSx for ONTAP para que os serviços da AWS acessem os arquivos como se estivessem em um bucket S3. Ao anexar o ponto de acesso, defina um ID exclusivo, selecione o tipo de acesso a arquivos (UNIX ou Windows) e adicione um nome de usuário para autorização de acesso.
+
+Após conectar o ponto de acesso S3, ele aparece no Console de Gerenciamento da AWS com um alias exclusivo. Use esse alias como o nome do bucket S3 para serviços da AWS, como Amazon Bedrock, para acessar arquivos no volume FSx for ONTAP.
+
+Você pode conectar vários pontos de acesso S3 a um único FSx for ONTAP volume, cada um com um nível de acesso exclusivo, para se conectar a vários serviços AWS.
+
+.Antes de começar
+Cumpra os seguintes requisitos antes de começar.
+
+* Você precisa ter um volume existente com um ponto de acesso S3. link:create-volume.html["Crie um volume com um ponto de acesso S3"]
+* Você deve link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Conceda credenciais com a política de permissão _operações e remediação_"^] no Workload Factory para concluir esta tarefa.
+
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. Em *FSx for ONTAP*, selecione o sistema de arquivos com o volume a ser atualizado.
+. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
+. Na guia Volumes, selecione o menu de ações do volume que deseja usar, depois selecione *Ações avançadas* e, em seguida, *Gerenciar pontos de acesso S3*.
+. Na página Gerenciar pontos de acesso S3, selecione *Criar e anexar ponto de acesso S3*.
+. Na página *Criar e conectar ponto de acesso S3*, forneça as seguintes informações:
++
+** *Nome do ponto de acesso S3*: Insira o nome do ponto de acesso S3.
+** *Usuário*: Selecione um usuário existente com acesso ao volume ou crie um novo usuário.
+** *Tipo de usuário*: Selecione *UNIX* ou *Windows* como o tipo de usuário.
+** *Configuração de rede*: Selecione *Internet* ou *nuvem privada (VPC)*. O tipo de rede que você escolher determina se o ponto de acesso será acessível pela internet ou restrito a uma VPC específica. Para usar o recurso de tabela Journal, você deve selecionar *Internet* como configuração de rede.
+** *Tabela de inventário*: Opcional. Requer a  `getObject` permissão. Habilite a tabela de inventário no volume para gerar metadados para todos os objetos acessíveis ao ponto de acesso S3 e isso acarreta custos de solicitação do AWS S3. Consulte link:https://aws.amazon.com/s3/pricing/["Documentação de preços do Amazon S3"^] para obter mais informações. A tabela é atualizada a cada 24 horas.
+** *Tags de ponto de acesso S3*: Opcionalmente, você pode adicionar até 50 tags ou remover tags.
+
+
+. Selecione *criar*.
+
+
+.Informações relacionadas
+Opcionalmente, você pode usar o recurso de tabela de registro (Journal table) com pontos de acesso S3 no Workload Factory. A infraestrutura da tabela de registro captura e armazena logs de auditoria de eventos de acesso do usuário e operações de objetos em pontos de acesso de volume do Amazon FSx para ONTAP. Para habilitar o recurso de tabela de registro, você deve configurar a infraestrutura AWS necessária, incluindo AWS CloudTrail, AWS CloudWatch, buckets do AWS S3, grupos de logs do AWS CloudWatch e funções e políticas do AWS Identity and Access Management (IAM). link:setup-journal-table.adoc["Configure a infraestrutura da tabela de diários para NetApp Workload Factory"^].
+
+Outros tópicos relacionados:
+
+* link:edit-s3-access-points.html["Editar pontos de acesso S3 para um volume no NetApp Workload Factory"]
+* link:delete-s3-access-points.html["Exclua os pontos de acesso S3 para um volume no NetApp Workload Factory"]
+

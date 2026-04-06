@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: edit-s3-access-points.html 
+keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points 
+summary: Edite os pontos de acesso S3 para um volume no NetApp Workload Factory. 
+---
+= Edite os pontos de acesso S3 para um volume no NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Atualize os detalhes do ponto de acesso S3 e gerencie as tags de um volume no NetApp Workload Factory.
+
+Você também pode habilitar ou desabilitar a *Inventory table* para o ponto de acesso. A inventory table gera metadados para todos os objetos acessíveis ao ponto de acesso S3 e incorre em custos de solicitação do AWS S3. Consulte link:https://aws.amazon.com/s3/pricing/["Documentação de preços do Amazon S3"^] para obter mais informações.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume que deseja atualizar e, em seguida, selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
+. Na guia Volumes, selecione o menu de ações do volume para o qual deseja editar os pontos de acesso S3, depois selecione *Ações avançadas* e, em seguida, *Gerenciar pontos de acesso S3*.
+. Na tela *Gerenciar pontos de acesso S3*, selecione o menu de ações e depois selecione *Editar ponto de acesso*.
+. Faça as atualizações e depois selecione *Apply*.
++
+Para configurar a infraestrutura para o recurso de tabela de diário, você deve selecionar *Internet* como a configuração de rede para o ponto de acesso S3. link:setup-journal-table.adoc["Aprenda como configurar a infraestrutura da tabela Journal para NetApp Workload Factory"].
+
+

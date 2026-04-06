@@ -1,0 +1,500 @@
+---
+sidebar: sidebar 
+permalink: setup-journal-table.html 
+keywords: S3, s3, access points, journal table, setup journal table, NetApp Workload Factory 
+summary: Configure a infraestrutura da tabela de diário para pontos de acesso S3 no NetApp Workload Factory. 
+---
+= Configure a infraestrutura da tabela de diário para NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Configure a infraestrutura da tabela Journal para capturar e armazenar logs de auditoria de eventos de acesso de usuários e operações de objetos em pontos de acesso de volumes do Amazon FSx for ONTAP. Várias etapas são necessárias para configurar a infraestrutura para serviços AWS como AWS CloudTrail, AWS CloudWatch, AWS S3 Buckets, AWS CloudWatch log group, AWS Identity and Access Management (IAM) e AWS S3 Tables, para que os eventos de log sejam transmitidos corretamente pelo pipeline e lidos pelo Workload Factory.
+
+
+
+== Sobre esta tarefa
+
+O recurso de tabela de diário captura eventos do plano de dados do S3 (PutObject, GetObject, DeleteObject, etc.) para pontos de acesso S3 do FSx for ONTAP monitorados. Ele utiliza uma cadeia de serviços da AWS implantada em sua conta da AWS. Quando a infraestrutura está configurada corretamente, ela se conecta ao ponto de acesso ao volume do FSx for ONTAP e estabelece o pipeline que captura eventos de auditoria de acesso do usuário e operação de objeto na tabela de diário.
+
+A tabela a seguir lista os serviços da AWS que fazem parte da infraestrutura, seus respectivos padrões de nomenclatura de recursos e a finalidade do serviço no pipeline.
+
+[cols="1,1,1"]
+|===
+| Serviço AWS | Padrão de nome de recurso | Propósito 
+
+
+| AWS CloudFormation | netapp-metadata-* | Implanta toda a infraestrutura como uma pilha 
+
+
+| Bucket S3 da AWS | netapp-metadata-cloudtrail-events-logs-{uuid} | Armazena arquivos de log brutos do CloudTrail 
+
+
+| AWS CloudTrail | netapp-metadata-journal-data-events-trail-{uuid} | Captura eventos de dados S3 para pontos de acesso específicos 
+
+
+| Grupo de logs da AWS CloudWatch | eventos de dados de diário de metadados netapp-{uuid} | Recebe CloudTrail eventos como entradas de log estruturadas 
+
+
+| Funções do IAM  a| 
+* netapp-metadata-cloudtrail-cw-role-{uuid}
+* netapp-metadata-s3table-integration-role-{uuid}
+
+| Integração ativa 
+
+
+| ObservabilityAdmin | S3TableIntegration | Integra os Logs do CloudWatch em uma tabela do S3 Tables 
+
+
+| Tabelas S3 | bucket aws-cloudwatch → logs.aws_cloudtrail__data | Armazena eventos CloudTrail estruturados e consultáveis no formato Iceberg 
+|===
+O {uuid} é um identificador aleatório de 8 caracteres gerado quando o modelo é criado.
+
+
+
+== Antes de começar
+
+Para ativar o recurso de tabela de diário, siga estes passos:
+
+* Possuo um volume existente com um ponto de acesso S3. link:create-volume.html["Crie um volume com um ponto de acesso S3"]
+* Defina a configuração de rede como *Internet* para o ponto de acesso S3. link:edit-s3-access-point.adoc["Editar a configuração de rede para o ponto de acesso S3"].
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Conceda as permissões de _operações e remediação_"^]às suas credenciais do Workload Factory.
+* Adicione as seguintes permissões de política do IAM à conta da AWS que você usa para executar a implantação do CloudFormation para configurar a tabela Journal.
++
+.Permissões de política IAM para configuração da tabela de diário
+[%collapsible]
+====
+[source, json]
+----
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "CFNStack",
+            "Effect": "Allow",
+            "Action": [
+                "cloudformation:CreateStack",
+                "cloudformation:DescribeStacks",
+                "cloudformation:DescribeStackEvents"
+            ],
+            "Resource": "arn:aws:cloudformation:*:*:stack/netapp-metadata-*/*"
+        },
+        {
+            "Sid": "StarResources",
+            "Effect": "Allow",
+            "Action": [
+                "cloudformation:GetTemplateSummary",
+                "cloudtrail:DescribeTrails",
+                "logs:DescribeLogGroups",
+                "logs:ListSourcesForS3TableIntegration",
+                "observabilityadmin:CreateS3TableIntegration",
+                "observabilityadmin:GetS3TableIntegration",
+                "observabilityadmin:TagResource",
+                "observabilityadmin:ListTagsForResource"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "S3Bucket",
+            "Effect": "Allow",
+            "Action": [
+                "s3:CreateBucket",
+                "s3:PutBucketPolicy",
+                "s3:PutBucketTagging"
+            ],
+            "Resource": "arn:aws:s3:::netapp-metadata-*"
+        },
+        {
+            "Sid": "IAMRoles",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateRole",
+                "iam:PutRolePolicy",
+                "iam:TagRole",
+                "iam:GetRole"
+            ],
+            "Resource": "arn:aws:iam::*:role/netapp-metadata-*"
+        },
+        {
+            "Sid": "PassRole",
+            "Effect": "Allow",
+            "Action": "iam:PassRole",
+            "Resource": "arn:aws:iam::*:role/netapp-metadata-*",
+            "Condition": {
+                "StringEquals": {
+                    "iam:PassedToService": [
+                        "cloudtrail.amazonaws.com",
+                        "logs.amazonaws.com"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "CloudTrail",
+            "Effect": "Allow",
+            "Action": [
+                "cloudtrail:CreateTrail",
+                "cloudtrail:StartLogging",
+                "cloudtrail:AddTags",
+                "cloudtrail:PutEventSelectors"
+            ],
+            "Resource": "arn:aws:cloudtrail:*:*:trail/netapp-metadata-*"
+        },
+        {
+            "Sid": "CWLogGroup",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:DeleteLogGroup",
+                "logs:PutRetentionPolicy",
+                "logs:TagResource",
+                "logs:AssociateSourceToS3TableIntegration"
+            ],
+            "Resource": "arn:aws:logs:*:*:log-group:netapp-metadata-*"
+        },
+        {
+            "Sid": "S3Table",
+            "Effect": "Allow",
+            "Action": [
+                "s3tables:CreateTableBucket",
+                "s3tables:PutTableBucketEncryption",
+                "s3tables:PutTableBucketPolicy"
+            ],
+            "Resource": "arn:aws:s3tables:*:*:bucket/aws-cloudwatch"
+        }
+    ]
+}
+----
+====
+
+
+
+
+== Configure a infraestrutura da tabela de diários
+
+Configure a infraestrutura para capturar eventos de serviço da AWS a partir do ponto de acesso S3 na tabela de registro (journal).
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume que deseja atualizar e, em seguida, selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
+. Na guia Volumes, selecione o menu de ações do volume para o qual deseja gerenciar pontos de acesso S3, depois selecione *Ações avançadas* e, em seguida, *Gerenciar pontos de acesso S3*.
+. Na tela *Gerenciar pontos de acesso S3*, selecione o menu de ações e depois selecione *Editar ponto de acesso*.
+. Na caixa de diálogo *Editar ponto de acesso S3*, verifique se a configuração de rede está definida como *Internet*.
+. Siga as instruções na caixa de diálogo para configurar a infraestrutura para o recurso de tabela de journal.
+. Baixe o modelo CloudFormation.
+. Implante a pilha CloudFormation em sua conta da AWS.
++
+.. Salve o modelo JSON em um arquivo.
+.. Implante o modelo usando a AWS CLI ou o Console de Gerenciamento da AWS.
+.. Aguarde até que a pilha atinja  `CREATE_COMPLETE` status.
+.. Obtenha o CloudTrail ARN a partir das saídas da pilha.
+
+
+. Retorne ao console do Workload Factory e volte ao volume para gerenciar os pontos de acesso S3.
+. Selecione *Ver detalhes* no menu de ações de volume.
+. Na aba *Tabela de diário*, insira o CloudTrail ARN.
+. Selecione *aplicar*.
+
+
+Se alguma das etapas falhar, <<Troubleshoot the infrastructure setup,solucionar problemas de configuração de infraestrutura para a tabela de diário>> ou entre em contato com o suporte da NetApp para obter ajuda.
+
+
+
+== Solucionar problemas na configuração da infraestrutura da tabela de diário
+
+Você pode usar o Console de Gerenciamento da AWS ou a AWS CLI para solucionar problemas durante a implantação da pilha CloudFormation e dos recursos que ela cria.
+
+Após resolver o problema, envie o CloudTrail ARN novamente para reiniciar a configuração da tabela de registro.
+
+
+
+=== Falhas comuns de implantação do CloudFormation
+
+
+
+==== Permissões IAM insuficientes
+
+A função/usuário que realiza a implantação precisa de um conjunto específico de permissões. Consulte <<Antes de começar,Antes de começar>> para a política completa.
+
+Se a pilha falhar com um `AccessDenied` ou `InsufficientPermission` erro, verifique os eventos da pilha e procure pela permissão ausente no campo  `ResourceStatusReason`.
+
+
+
+==== CloudTrail limite
+
+A AWS impõe um limite padrão de 5 trilhas por região. Se a conta já tiver 5 trilhas, `the FsxDataEventTrail` o recurso falhará com: Número máximo de trilhas (5) excedido. Você pode verificar o número de trilhas em nível regional com o seguinte comando:
+
+[source, cli]
+----
+aws cloudtrail describe-trails \
+  --no-include-shadow-trails \
+  --region <region> \
+  --query "length(trailList)"
+----
+.Opções de resolução
+* Opção 1: exclua uma trilha não utilizada na região para liberar espaço.
+* Opção 2: Use uma trilha existente. Remova os recursos  `FsxDataEventTrail`, `CloudTrailBucket`, `CloudTrailBucketPolicy` e  `CloudTrailToCloudWatchRole` do modelo antes de implantar a pilha CloudFormation novamente. Em seguida, passe o ARN da sua trilha existente durante a etapa de inicialização. A trilha existente deve ter um CloudWatch Log Group configurado, uma S3TableIntegration associada ao grupo de logs e estar registrando eventos de dados.
+
+
+
+
+==== A integração com a tabela S3 já existe
+
+Se a conta já possuir uma S3TableIntegration para a fonte de dados aws_cloudtrail, o recurso LogsToS3TableIntegration falhará.
+
+.Resolução
+Remova os  `LogsToS3TableIntegration` e  `S3TableIntegrationRole` recursos do modelo antes de implantar a pilha CloudFormation novamente. O sistema usa automaticamente a integração existente, desde que você a configure para eventos de dados do aws_cloudtrail.
+
+Para verificar se já existe uma integração:
+
+[source, cli]
+----
+aws observabilityadmin list-s3-table-integrations --region <your-region>
+----
+
+
+==== O nome do bucket S3 já existe
+
+O nome do bucket `netapp-metadata-cloudtrail-events-logs-{uuid}` é globalmente único. Se houver conflito, solicite novamente o template para obter um novo UUID.
+
+
+
+==== A função IAM já existe
+
+Se uma implantação parcial anterior deixou funções do IAM com o  `netapp-metadata-*` padrão de nome, a criação da função falhará. Exclua primeiro as funções órfãs:
+
+[source, json]
+----
+aws iam delete-role-policy \
+  --role-name netapp-metadata-cloudtrail-cw-role-<uuid> \
+  --policy-name <policy-name>
+aws iam delete-role \
+  --role-name netapp-metadata-cloudtrail-cw-role-<uuid>
+----
+
+
+=== Falhas após capacitação da tabela Journal
+
+Após o envio do ARN do CloudTrail, o Workload Factory valida todo o pipeline de recursos enviando automaticamente um _seed_, ou evento de teste. Se bem-sucedido, o evento seed chega na tabela S3 Tables. O teste leva aproximadamente 10 minutos.
+
+Se a validação do teste falhar, você poderá receber uma das seguintes mensagens de erro:
+
+[cols="1,1"]
+|===
+| Mensagem de erro | Significado 
+
+
+| A tabela aws_cloudtrail__data não foi criada em {bucket}. Verifique as permissões da tabela s3. | S3TableIntegration não criou a tabela gerenciada pelo CloudWatch. O pipeline entre os logs do CloudWatch e as tabelas do S3 está interrompido. 
+
+
+| A tabela existe, mas o evento inicial do diário não aparece. Verifique as permissões do CloudTrail e do CloudWatch. | A tabela existe, mas o evento de inicialização específico nunca chegou. O pipeline está interrompido entre CloudTrail e a tabela S3 Tables. 
+
+
+| Falha ao iniciar a configuração do diário. ... | Ocorreu um erro durante o fluxo de inicialização/verificação em segundo plano. Verifique a mensagem subsequente para obter detalhes. 
+|===
+.Etapas de resolução
+Quando o registro atingir o status FAILED, rastreie o evento inicial através dos estágios do pipeline para identificar exatamente onde ele parou. Cada etapa corresponde a um recurso específico da AWS criado pelo template.
+
+. Verifique o bucket S3 do CloudTrail.
++
+O processo de trilha grava os registros de eventos brutos no bucket S3 `netapp-metadata-cloudtrail-events-logs`. Procure por arquivos de registro recentes.
+
++
+Se não existirem arquivos de log, então o CloudTrail não está capturando eventos. Verifique o seguinte:
+
++
+** A trilha está registrando (`IsLogging: true`)
+** Os seletores de eventos avançados incluem o ARN do ponto de acesso correto
+** Os seletores de eventos avançados incluem os filtros para `eventCategory = Data` e `resources.type = AWS::S3::AccessPoint`
+
+
+. Verifique o grupo de logs do CloudWatch.
++
+A trilha também entrega eventos ao CloudWatch Log Group. O nome do grupo de registros começa com  `netapp-metadata-journal-data-events-<uuid>`.
+
++
+** Se o grupo de logs estiver vazio, então o CloudTrail não está entregando eventos ao CloudWatch. Verifique se a função do  `CloudTrailToCloudWatchRole` IAM existe e possui  `logs:CreateLogStream` e  `logs:PutLogEvents` permissões, e se o trail está configurado com o  `CloudWatchLogsLogGroupArn` e  `CloudWatchLogsRoleArn` corretos.
+** Se o evento inicial aparecer no grupo de logs, o problema está a jusante — prossiga para a Etapa 3.
+
+
+. Consulte a tabela S3 Tables (`aws-cloudwatch`).
++
+A S3TableIntegration cria automaticamente um bucket de tabela chamado aws-cloudwatch e preenche uma tabela em logs.aws_cloudtrail__data. Essa tabela só é criada após o primeiro evento ser processado.
+
++
+** Se o bucket da tabela aws-cloudwatch não existir, então o  `S3TableIntegrationRole` está sem permissões. Ele precisa de  `s3tables:CreateTableBucket`,  `s3tables:PutTableBucketEncryption` e  `s3tables:PutTableBucketPolicy` — todos com escopo para  `arn:aws:s3tables:*:*:bucket/aws-cloudwatch`.
+** Se o bucket da tabela existir mas  `logs.aws_cloudtrail__data` não existir, então a integração não está roteando eventos. A integração deve mostrar  `Status: ACTIVE` e incluir  `aws_cloudtrail` como uma fonte de log.
+** Se a tabela existir, mas o evento inicial não estiver nela, o evento pode ainda estar em trânsito. A ingestão de tabelas S3 tem alguma latência. Aguarde mais alguns minutos. Se ainda não aparecer após 15-20 minutos, a integração pode estar interrompida.
+
+
+. Consulte o evento inicial diretamente.
++
+.. Abra as tabelas do S3 no Console de Gerenciamento da AWS.
+.. Navegue até o bucket da tabela aws-cloudwatch → tabela aws_cloudtrail__data e use o botão *Preview* para executar uma consulta rápida diretamente no navegador.
+.. Se o evento estiver presente na tabela, mas o diário ainda mostrar `FAILED`, então a janela de pesquisa pode ter expirado antes da chegada do evento.
+
+
+
+
+Após resolver o problema, retorne ao console do Workload Factory. Tente <<Configure a infraestrutura da tabela de diários,Iniciando a configuração da tabela de diário>> novamente enviando o Trail ARN.
+
+. Se a configuração continuar a falhar, entre em contato com o suporte da NetApp para obter assistência.
+
+
+
+
+== Referência de permissões para a configuração da tabela de diário
+
+A função do IAM que implementa a pilha CloudFormation para habilitar o recurso de tabela Journal precisa das seguintes permissões. Consulte <<Antes de começar,Antes de começar>> para uma política JSON copiável com as permissões necessárias.
+
+
+
+=== Operações de pilha
+
+[cols="1,1,1"]
+|===
+| Permissão | Recurso | Por que 
+
+
+| cloudformation:CreateStack | arn:aws:cloudformation:*:*:stack/netapp-metadata-*/* | Crie a pilha 
+
+
+| cloudformation:DescribeStacks | arn:aws:cloudformation:*:*:stack/netapp-metadata-*/* | Monitorar o status da pilha 
+
+
+| cloudformation:DescribeStackEvents | arn:aws:cloudformation:*:*:stack/netapp-metadata-*/* | Diagnosticar falhas em nível de recurso no cloudformation:GetTemplateSummary * Validação prévia do template 
+|===
+
+
+=== CloudTrail
+
+[cols="1,1,1"]
+|===
+| Permissão | Recurso | Por que 
+
+
+| cloudtrail:CreateTrail | arn:aws:cloudtrail:*:*:trail/netapp-metadata-* | Crie a trilha 
+
+
+| cloudtrail:StartLogging | arn:aws:cloudtrail:*:*:trail/netapp-metadata-* | Ativar registro de logs 
+
+
+| cloudtrail:AddTags | arn:aws:cloudtrail:*:*:trail/netapp-metadata-* | Aplique a etiqueta de identificação 
+
+
+| cloudtrail:PutEventSelectors | arn:aws:cloudtrail:*:*:trail/netapp-metadata-* | Configurar captura de eventos de dados 
+
+
+| cloudtrail:DescribeTrails | * | Resolver ARN de trilha para saída de stack 
+|===
+
+
+=== S3
+
+[cols="1,1,1"]
+|===
+| Permissão | Recurso | Por que 
+
+
+| s3:CreateBucket | arn:aws:s3:::netapp-metadata-* | Crie o bucket de logs CloudTrail 
+
+
+| s3:PutBucketPolicy | arn:aws:s3:::netapp-metadata-* | Permitir que o CloudTrail grave logs 
+
+
+| s3:PutBucketTagging | arn:aws:s3:::netapp-metadata-* | Aplique a etiqueta de identificação 
+|===
+
+
+=== IAM
+
+[cols="1,1,1"]
+|===
+| Permissão | Recurso | Por que 
+
+
+| iam:CreateRole | arn:aws:iam::*:role/netapp-metadata-* | Crie ambas as funções do IAM 
+
+
+| iam:PutRolePolicy | arn:aws:iam::*:role/netapp-metadata-* | Anexar políticas embutidas 
+
+
+| iam:TagRole | arn:aws:iam::*:role/netapp-metadata-* | Aplique a etiqueta de identificação 
+
+
+| iam:GetRole | arn:aws:iam::*:role/netapp-metadata-* | Confirme se a função está ativa 
+
+
+| iam:PassRole | arn:aws:iam::*:role/netapp-metadata-* (condição: PassedToService = cloudtrail.amazonaws.com, logs.amazonaws.com) | Atribuir funções ao CloudTrail e aos CloudWatch Logs 
+|===
+
+
+=== Logs do CloudWatch
+
+[cols="1,1,1"]
+|===
+| Permissão | Recurso | Por que 
+
+
+| logs:CreateLogGroup | arn:aws:logs:*:*:log-group:netapp-metadata-* | Crie o grupo de logs 
+
+
+| logs:DeleteLogGroup | arn:aws:logs:*:*:log-group:netapp-metadata-* | Limpar o grupo de logs se a criação falhar 
+
+
+| registros:PutRetentionPolicy | arn:aws:logs:*:*:log-group:netapp-metadata-* | Defina retenção de 30 dias 
+
+
+| registros:TagResource | arn:aws:logs:*:*:log-group:netapp-metadata-* | Aplique a etiqueta de identificação 
+
+
+| logs:AssociateSourceToS3TableIntegration | arn:aws:logs:*:*:log-group:netapp-metadata-* | Vincular a fonte CloudTrail às tabelas S3 
+
+
+| registros:DescribeLogGroups | * | Verificar a existência do grupo de logs 
+
+
+| logs:ListSourcesForS3TableIntegration | * | Confirmar associação de integração 
+|===
+
+
+=== ObservabilityAdmin
+
+[cols="1,1,1"]
+|===
+| Permissão | Recurso | Por que 
+
+
+| observabilityadmin:CreateS3TableIntegration | * | Crie a ponte CloudWatch → Tabelas S3 
+
+
+| observabilityadmin:GetS3TableIntegration | * | Confirme se a integração está ativa 
+
+
+| observabilityadmin:TagResource | * | Aplique a etiqueta de identificação 
+
+
+| observabilityadmin:ListTagsForResource | * | Detecção de deriva 
+|===
+
+
+=== Tabelas S3
+
+[cols="1,1,1"]
+|===
+| Permissão | Recurso | Por que 
+
+
+| s3tables:CreateTableBucket | arn:aws:s3tables:*:*:bucket/aws-cloudwatch | Crie o bucket de tabelas S3 (via função de integração) 
+
+
+| s3tables:PutTableBucketEncryption | arn:aws:s3tables:*:*:bucket/aws-cloudwatch | Configurar criptografia AES256 
+
+
+| s3tables:PutTableBucketPolicy | arn:aws:s3tables:*:*:bucket/aws-cloudwatch | Permitir acesso aos registros do CloudWatch 
+|===
