@@ -35,5 +35,5 @@ Os detalhes aparecem em quatro abas: *Ponto de acesso*, *Tabela de inventário*,
 
 
 .Informações relacionadas
-* link:setup-journal-table.html["Configure a infraestrutura da tabela de diários e solucione problemas de configuração da tabela de diários no NetApp Workload Factory."]
+* link:setup-journal-table.html["Configure a infraestrutura da tabela de diários"]
 

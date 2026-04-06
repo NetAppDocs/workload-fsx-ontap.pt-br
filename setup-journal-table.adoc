@@ -59,7 +59,7 @@ O {uuid} é um identificador aleatório de 8 caracteres gerado quando o modelo �
 Para ativar o recurso de tabela de diário, siga estes passos:
 
 * Possuo um volume existente com um ponto de acesso S3. link:create-volume.html["Crie um volume com um ponto de acesso S3"]
-* Defina a configuração de rede como *Internet* para o ponto de acesso S3. link:edit-s3-access-point.adoc["Editar a configuração de rede para o ponto de acesso S3"].
+* Defina a configuração de rede como *Internet* para o ponto de acesso S3. link:edit-s3-access-points.html["Editar a configuração de rede para o ponto de acesso S3"].
 * link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Conceda as permissões de _operações e remediação_"^]às suas credenciais do Workload Factory.
 * Adicione as seguintes permissões de política do IAM à conta da AWS que você usa para executar a implantação do CloudFormation para configurar a tabela Journal.
 +
@@ -201,7 +201,7 @@ Configure a infraestrutura para capturar eventos de serviço da AWS a partir do 
 . Selecione *aplicar*.
 
 
-Se alguma das etapas falhar, <<Troubleshoot the infrastructure setup,solucionar problemas de configuração de infraestrutura para a tabela de diário>> ou entre em contato com o suporte da NetApp para obter ajuda.
+Se alguma das etapas falhar, <<Solucionar problemas na configuração da infraestrutura da tabela de diário,solucionar problemas de configuração de infraestrutura para a tabela de diário>> ou entre em contato com o suporte da NetApp para obter ajuda.
 
 
 

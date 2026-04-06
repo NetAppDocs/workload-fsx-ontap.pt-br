@@ -25,6 +25,6 @@ Você também pode habilitar ou desabilitar a *Inventory table* para o ponto de 
 . Na tela *Gerenciar pontos de acesso S3*, selecione o menu de ações e depois selecione *Editar ponto de acesso*.
 . Faça as atualizações e depois selecione *Apply*.
 +
-Para configurar a infraestrutura para o recurso de tabela de diário, você deve selecionar *Internet* como a configuração de rede para o ponto de acesso S3. link:setup-journal-table.adoc["Aprenda como configurar a infraestrutura da tabela Journal para NetApp Workload Factory"].
+Para configurar a infraestrutura para o recurso de tabela de diário, você deve selecionar *Internet* como a configuração de rede para o ponto de acesso S3. link:setup-journal-table.html["Aprenda como configurar a infraestrutura da tabela Journal para NetApp Workload Factory"].
 
 

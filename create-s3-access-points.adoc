@@ -51,7 +51,7 @@ Cumpra os seguintes requisitos antes de começar.
 
 
 .Informações relacionadas
-Opcionalmente, você pode usar o recurso de tabela de registro (Journal table) com pontos de acesso S3 no Workload Factory. A infraestrutura da tabela de registro captura e armazena logs de auditoria de eventos de acesso do usuário e operações de objetos em pontos de acesso de volume do Amazon FSx para ONTAP. Para habilitar o recurso de tabela de registro, você deve configurar a infraestrutura AWS necessária, incluindo AWS CloudTrail, AWS CloudWatch, buckets do AWS S3, grupos de logs do AWS CloudWatch e funções e políticas do AWS Identity and Access Management (IAM). link:setup-journal-table.adoc["Configure a infraestrutura da tabela de diários para NetApp Workload Factory"^].
+Opcionalmente, você pode usar o recurso de tabela de registro (Journal table) com pontos de acesso S3 no Workload Factory. A infraestrutura da tabela de registro captura e armazena logs de auditoria de eventos de acesso do usuário e operações de objetos em pontos de acesso de volume do Amazon FSx para ONTAP. Para habilitar o recurso de tabela de registro, você deve configurar a infraestrutura AWS necessária, incluindo AWS CloudTrail, AWS CloudWatch, buckets do AWS S3, grupos de logs do AWS CloudWatch e funções e políticas do AWS Identity and Access Management (IAM). link:setup-journal-table.html["Configure a infraestrutura da tabela de diários para NetApp Workload Factory"^].
 
 Outros tópicos relacionados:
 
