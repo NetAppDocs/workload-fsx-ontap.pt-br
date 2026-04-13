@@ -1941,7 +1941,6 @@
   <block id="df22e5c72d75cea7ae766daf660bd529" category="summary">Gerencie o agendamento de backup de um sistema de arquivos FSx para ONTAP no NetApp Workload Factory quando necessário.</block>
   <block id="be1c92aa6bef23dd57df3395c46827bb" category="paragraph">Gerencie o agendamento de backup para um sistema de arquivos FSx para ONTAP no NetApp Workload Factory.</block>
   <block id="93ae473ca3e8f97f82687e6f98eab1da" category="list-text">No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos para atualizar o agendamento de backup e, em seguida, selecione *Gerenciar*.</block>
-  <block id="da0f0bd52c148eab60b2dfefe8e25fa3" category="summary">Gerenciar o compartilhamento SMB/CIFS de um volume no Workload Factory inclui criação, determinação de acesso de usuários e grupos e exclusão.</block>
   <block id="f73fd134806728f0a5ac79982e11ead7" category="doc">Gerenciar o compartilhamento SMB/CIFS para um volume no Workload Factory</block>
   <block id="c69f3e9214ff94aa0825993b6fb1b85a" category="paragraph">O gerenciamento do compartilhamento SMB/CIFS de um volume no Workload Factory inclui a criação do compartilhamento SMB/CIFS, a determinação dos usuários e grupos aos quais será concedido acesso e o nível de permissões a serem concedidos a eles, além da exclusão do compartilhamento SMB/CIFS.</block>
   <block id="4b898528f057698b461041b6d7447cfe" category="list-text">Na guia Volumes, selecione o menu de ações do volume para alterar o compartilhamento SMB.</block>
@@ -3001,4 +3000,7 @@
   <block id="58ff05ec25b45f54f79eb1afc9e31b9c" category="list-text">Defina a configuração de rede como *Internet* para o ponto de acesso S3. <block ref="f5b1c6fb53ebc8db45e1c55bd4e00f01" category="inline-link-macro-rx"></block>.</block>
   <block id="559b775ce267386e1398935c6753e6f3" category="paragraph">Se alguma das etapas falhar, <block ref="05993fa90b9226bcf7edb149f0761729" category="inline-xref-macro-rx"></block> ou entre em contato com o suporte da NetApp para obter ajuda.</block>
   <block id="e520cc743022825140834d2b02cc8cba" category="list-text"><block ref="e520cc743022825140834d2b02cc8cba" category="inline-link-macro-rx"></block></block>
+  <block id="d08fabf4c0fdff2290096692a4ffa28a" category="section-title">Último tempo de acesso para dispositivos de bloco</block>
+  <block id="fa4bdc942217a8579f785220b2742233" category="paragraph">O Workload Factory registra o último tempo de acesso aos dispositivos de bloco. Esse tempo é baseado no último acesso ao igroup no Workload Factory. Saber quando cada dispositivo de bloco foi usado pela última vez permite otimizar seus recursos.</block>
+  <block id="9b6ea8e99ee787981ebaca2de09e7c7f" category="summary">O gerenciamento do compartilhamento SMB ou CIFS no Workload Factory inclui a criação, a determinação do acesso de usuários e grupos e a exclusão.</block>
 </blocks>
