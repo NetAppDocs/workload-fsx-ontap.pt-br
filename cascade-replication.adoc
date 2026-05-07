@@ -26,6 +26,7 @@ Considere o seguinte antes de começar:
 * Esteja ciente de que os volumes que fazem parte de uma configuração em cascata podem levar mais tempo para ressincronizar.
 * Se o volume de origem da relação for um volume de proteção de dados e for um alvo de outra relação, reverter a relação de replicação não é suportado.
 * É suportada uma réplica de um volume de proteção de dados (ou um segundo salto). Não é considerada prática recomendada criar uma segunda réplica de um volume de proteção de dados (ou um terceiro salto).
+* Certifique-se de abrir as portas TCP 11104 e 11105 para permitir transferência de dados e gerenciamento seguros entre os sistemas de armazenamento.
 
 
 .Passos
