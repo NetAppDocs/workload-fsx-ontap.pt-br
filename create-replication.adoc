@@ -67,6 +67,7 @@ Replicar dados entre dois sistemas de arquivos FSx for ONTAP, entre um sistema O
 Revise estes requisitos antes de começar.
 
 * Certifique-se de que um sistema de arquivos FSx for ONTAP esteja disponível para uso como destino na relação de replicação.
+* Certifique-se de abrir as portas TCP 11105 e 11105 para permitir transferência de dados e gerenciamento seguros entre os sistemas de armazenamento.
 * O sistema de arquivos FSx for ONTAP que você usa para a relação de replicação deve ter um link associado. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Depois de associar o link, retorne a esta operação.
 * Para replicação de um sistema ONTAP local para um sistema de arquivos FSx for ONTAP, certifique-se de ter descoberto o sistema ONTAP local.
 * A replicação não é suportada para volumes em um estado diferente de disponível, criado ou com configuração incorreta, e quando a versão do ONTAP não é compatível.
@@ -218,7 +219,12 @@ Após criar a relação de replicação para um caso de uso de migração, você
 Considere o seguinte ao planejar a operação de transição para casos de uso de migração.
 
 * *Suporte à versão de replicação*: Os sistemas de storage de origem e destino devem ter a mesma versão principal do ONTAP. Por exemplo, se o sistema de origem estiver executando a versão do ONTAP 9.18.1, o sistema de destino também deverá executar uma versão 9.18.1.
-* *Configurações da VM de armazenamento*: A operação de migração não migra todas as configurações da VM de armazenamento para a VM de destino. Por exemplo, as configurações de iSCSI, MTU do domínio de broadcast e DNS não são migradas. Atualize essas configurações manualmente na VM de destino após a migração. Para mais detalhes, consulte a seção <<Atualize as configurações de configuração após a migração,Atualize as configurações de configuração após a migração>>.
+* *Configurações da VM de armazenamento*:
++
+** A operação de cutover não migra todas as configurações da máquina virtual de armazenamento para a máquina virtual de armazenamento de destino. Por exemplo, as configurações de iSCSI, MTU do domínio de broadcast e DNS não são migradas. Atualize essas configurações manualmente na máquina virtual de armazenamento de destino após o cutover. Para mais detalhes, consulte a seção <<Atualize as configurações de configuração após a migração,Atualize as configurações de configuração após a migração>>.
+** Se a sua máquina virtual de armazenamento usa autenticação de domínio-túnel, configure e habilite um túnel de domínio no sistema de arquivos de destino antes de iniciar a migração.
+
+
 * *Clones*: Os clones são migrados como volumes individuais e, portanto, consumirão mais espaço no sistema de arquivos FSx for ONTAP de destino. Considere excluir os clones antes da migração para evitar o aumento da capacidade no destino.
 * *Volumes de cache*: Para ONTAP FlexCache 9.17.x ou inferior. VMs de armazenamento de origem que contêm volumes de cache não são compatíveis para cutover. Remova a relação ONTAP FlexCache antes do cutover para evitar falhas na migração.
 * *Pontos de acesso AWS S3*: A replicação de transição para casos de uso de migração não é compatível com volumes que possuem pontos de acesso S3. Exclua os pontos de acesso S3 do volume de origem para evitar falhas na migração.
