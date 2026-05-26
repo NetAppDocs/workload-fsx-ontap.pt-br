@@ -68,7 +68,7 @@ O ONTAP atinge eficiência de armazenamento usando recursos de desduplicação e
 
 .. *Política de snapshot*: Selecione a política de snapshot para especificar a frequência e a retenção de snapshots.
 +
-A seguir, estão as políticas padrão da AWS. Para exibir as políticas de snapshot existentes, você deve link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["associe um link"].
+A seguir, estão as políticas padrão da AWS. Para exibir as políticas de snapshot existentes, você deve link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["associe um link"].
 
 +
 `default`:: Essa política cria automaticamente snapshots na programação a seguir, com as cópias snapshot mais antigas excluídas para abrir espaço para cópias mais recentes:

@@ -29,7 +29,7 @@ Se você replicar um volume de origem com arquivos imutáveis, o volume de desti
 
 [NOTE]
 ====
-É possível replicar um volume de origem (leitura/gravação) ou um volume de proteção de dados (DP). A replicação em cascata é compatível, mas um terceiro salto não é. Saiba mais link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html["replicação em cascata"^]sobre o .
+Você pode replicar um volume de origem (leitura/gravação) ou um volume de proteção de dados (DP). A replicação em cascata é suportada, mas um terceiro salto não é. Saiba mais sobre link:https://docs.netapp.com/us-en/workload-fsx-ontap/cascade-replication.html["replicação em cascata"].
 
 ====
 

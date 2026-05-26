@@ -1224,7 +1224,6 @@
   <block id="ecc4c534126952c05eb3829106343643" category="list-text">O segredo não contém credenciais ONTAP válidas para autenticação do sistema de arquivos.</block>
   <block id="b94462bb135856834e40d9c982dbbc8b" category="paragraph">* Resolução*: Forneça credenciais que podem autenticar o FSX para sistemas de arquivos ONTAP no AWS Secrets Manager.</block>
   <block id="db02b80a9dd5a7c959ec87fdf41baa91" category="inline-link-macro">replicação em cascata</block>
-  <block id="cb7048e2d3bbe74eff8dc77537e6b3cb" category="paragraph">É possível replicar um volume de origem (leitura/gravação) ou um volume de proteção de dados (DP). A replicação em cascata é compatível, mas um terceiro salto não é. Saiba mais <block ref="70f3f574eb9d2048e3113fc3bf26173a" category="inline-link-macro-rx"></block>sobre o .</block>
   <block id="a9349d3c10a82990ac0a1fc539e5f621" category="list-text">Replique todos os volumes em um sistema de arquivos ou replique volumes selecionados.</block>
   <block id="ccbd024216a98284de9e40d4f35c7a8e" category="list-text">Para replicar todos os volumes em um sistema de arquivos: Na visão geral do sistema de arquivos, selecione *replique dados*.</block>
   <block id="8c2ef6be41e1306ff1553a6b77895cad" category="list-text">Para replicar volumes selecionados: Na visão geral do sistema de arquivos, selecione a guia *volumes*.</block>
@@ -1535,7 +1534,6 @@
   <block id="743828d5c9c11b38d3dbbf76d787f497" category="section-title">Melhorias na criação e gerenciamento de compartilhamentos SMB/CIFS</block>
   <block id="421075462886e558113f14b52fe22487" category="paragraph">Agora você pode criar compartilhamentos SMB/CIFS que apontam para diretórios dentro de um volume.  Dentro do volume, você poderá ver quais compartilhamentos existem, para onde os compartilhamentos estão apontando e as permissões concedidas a usuários e grupos específicos.</block>
   <block id="4662a232249c09ca958781da08211b0c" category="paragraph">Para volumes de proteção de dados, o fluxo de criação de um compartilhamento SMB/CIFS agora inclui a criação de um caminho de junção para o volume para fins de montagem.</block>
-  <block id="5f08db4267e771ad7b348d338d92e0e6" category="paragraph"><block ref="5f08db4267e771ad7b348d338d92e0e6" category="inline-link-macro-rx"></block></block>
   <block id="952da3361b1e3ca5daa8c23a39780e18" category="list-text">Manualmente: cria um link com registro manual usando o CloudFormation ou o Terraform a partir do Codebox.  O código persiste, dando a você mais tempo para concluir a operação.  Isso é útil ao trabalhar com equipes diferentes, como Segurança e DevOps, que podem primeiro precisar conceder as permissões necessárias para concluir a criação do link.</block>
   <block id="d244d1524bd960c99e9fef848ac5ce4a" category="paragraph">Você pode criar um link usando duas ferramentas de Infraestrutura como Código (IaC) do Codebox: CloudFormation ou Terraform.  Com esta opção, você extrai o ARN do link do AWS CloudFormation e o informa aqui.  A fábrica de carga de trabalho registra manualmente o link para você.</block>
   <block id="272404907923a583d38661d1f77a2a8c" category="list-text">Na página Criar link, selecione CloudFormation ou Terraform na Caixa de código e forneça o seguinte:</block>
@@ -1665,7 +1663,6 @@
   <block id="8695344671e89445641e5521e94e092a" category="list-text">Copie o caminho de acesso.</block>
   <block id="f4b128dfa4315b7560d911b08c3653c2" category="section-title">Restaurar dados de um instantâneo</block>
   <block id="05f173e81abaca211df63916cfac7a74" category="paragraph">Você tem a opção de restaurar dados de um instantâneo para um volume existente ou para um novo volume.</block>
-  <block id="6520c3672c5d01c2976ef1980c6c4f4b" category="paragraph"><block ref="6520c3672c5d01c2976ef1980c6c4f4b" category="inline-link-macro-rx"></block></block>
   <block id="efb44cfe1d5b8d9954ea045385675c66" category="section-title">Excluir um instantâneo</block>
   <block id="6dbf69edbee88e5a8078a8a4e008a3b8" category="paragraph">Exclua um instantâneo para liberar espaço.</block>
   <block id="65231a1c4b836cdc3226241028b6f5c1" category="paragraph">Snapshots imutáveis não podem ser excluídos até que o período de retenção termine.</block>
@@ -2371,7 +2368,6 @@
   <block id="d9f80ec4d13936fdba78b793f44c184c" category="list-text">*Criar novo grupo de iniciadores*: Forneça o sistema operacional do host, o nome do grupo de iniciadores e adicione um ou mais iniciadores de host com nome qualificado iSCSI (IQN).</block>
   <block id="104d3f014c0f2ca8498a2aa9f78b1864" category="list-text">*Mapear grupo de iniciadores existente*: Selecione um grupo de iniciadores existente, forneça o sistema operacional do host e selecione um ou mais iniciadores de host com nome qualificado iSCSI (IQN).</block>
   <block id="db784c6694930c54da9655a9d31c365a" category="list-text">Em *Eficiência e proteção*, faça o seguinte:</block>
-  <block id="8cbc6c14a0474488d906dfdd17ce79c4" category="paragraph">A seguir, estão as políticas padrão da AWS. Para exibir as políticas de snapshot existentes, você deve <block ref="6ac03ad394740d642419d1159fa121ff" category="inline-link-macro-rx"></block>.</block>
   <block id="4dd81c3ec298b3b3b12adbd43350c454" category="paragraph">_Balanced (Auto)_ é a política de armazenamento em camadas padrão ao criar um volume usando o console do Workload Factory. Para obter mais informações sobre políticas de escalonamento de volume, consulte: <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> Na documentação do AWS FSx para NetApp ONTAP . Observe que o Workload Factory usa nomes baseados em casos de uso no console do Workload Factory para políticas de tiering e inclui os nomes das políticas de tiering do FSx para ONTAP entre parênteses.</block>
   <block id="eafa5af121307f6008fad4d24d6d9f14" category="list-text">Volumes com arquivos imutáveis e volumes com o protocolo NVMe não são suportados para ARP/AI.</block>
   <block id="1e3a8de3c21016b6778340215e821fb6" category="list-text">No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos e, em seguida, selecione *Gerenciar*.</block>
@@ -3072,6 +3068,7 @@
   <block id="eeb77472aa3a83d51f0873ec83e22572" category="list-text">*Configurações da VM de armazenamento*:</block>
   <block id="0abde7f01f46e5ae295493bf4b280687" category="list-text">A operação de cutover não migra todas as configurações da máquina virtual de armazenamento para a máquina virtual de armazenamento de destino. Por exemplo, as configurações de iSCSI, MTU do domínio de broadcast e DNS não são migradas. Atualize essas configurações manualmente na máquina virtual de armazenamento de destino após o cutover. Para mais detalhes, consulte a seção <block ref="af05d35e02c20d22f4e6b1df9b57e0a2" category="inline-xref-macro-rx"></block>.</block>
   <block id="893700039eb02078c7602e997d7f9922" category="list-text">Se a sua máquina virtual de armazenamento usa autenticação de domínio-túnel, configure e habilite um túnel de domínio no sistema de arquivos de destino antes de iniciar a migração.</block>
-  <block id="ec76bc02c6a3a5c32e0e22c2926d0319" category="list-text">Certifique-se de abrir as portas TCP 11104 e 11105 para permitir transferência de dados e gerenciamento seguros entre os sistemas de armazenamento.</block>
   <block id="8ee47478c07b40fab9e5a6a34028629c" category="list-text">Abra as portas TCP 11104 e 11105 para transferência de dados e gerenciamento seguros entre sistemas de armazenamento. ICMP é opcional, mas pode auxiliar na verificação e solução de problemas de rede.</block>
+  <block id="fa8b213a52b4f0e35de875db4340e809" category="paragraph"><block ref="fa8b213a52b4f0e35de875db4340e809" category="inline-link-macro-rx"></block></block>
+  <block id="e9df00e078102fb55394d13dad9115a4" category="paragraph">Você pode replicar um volume de origem (leitura/gravação) ou um volume de proteção de dados (DP). A replicação em cascata é suportada, mas um terceiro salto não é. Saiba mais sobre <block ref="a7ce0f55df6d6b86426266d8a7eeb328" category="inline-link-macro-rx"></block>.</block>
 </blocks>
