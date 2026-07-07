@@ -20,7 +20,6 @@ As limitações conhecidas identificam plataformas, dispositivos ou funções qu
 As seguintes regiões da AWS não são suportadas:
 
 * Regiões da China
-* Regiões GovCloud (EUA)
 * Nuvem Secreta
 * Nuvem Top Secret
 

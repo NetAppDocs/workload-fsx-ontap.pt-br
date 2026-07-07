@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: set-volume-latency-thresholds.html 
+keywords: latency, latency thresholds, alerts, volume latency, read latency, write latency 
+summary: Defina limites de latência para os volumes para receber alertas quando a latência de leitura ou gravação exceder os valores especificados. 
+---
+= Defina os limites de latência de volume no NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Defina limites de latência para os volumes para receber alertas quando a latência de leitura ou gravação exceder os valores especificados.
+
+.Sobre esta tarefa
+Você pode configurar limites de latência para cada volume individualmente, a fim de monitorar o desempenho e receber alertas quando os valores de latência excederem os limites definidos. O Workload Factory monitora tanto a latência de leitura quanto a de gravação e gera alertas quando qualquer um dos limites é excedido.
+
+Ao definir limites de latência, o Workload Factory monitora o seguinte:
+
+* *Latência de leitura*: aciona um alerta quando as operações de leitura excedem o limite especificado em milissegundos.
+* *Latência de gravação*: aciona um alerta quando as operações de gravação excedem o limite especificado em milissegundos.
+
+
+O monitoramento de latência utiliza os seguintes parâmetros padrão:
+
+* *Limite de IOPS*: 100 IOPS (leitura/gravação)
+* *Intervalo de tempo*: 10 minutos
+
+
+Um alerta é gerado quando o limite de latência é excedido e o limite de IOPS é atingido durante o intervalo de tempo especificado.
+
+
+NOTE: Você pode visualizar eventos de latência e receber alertas sem uma conexão de internet. No entanto, para analisar eventos e receber insights e recomendações baseados em IA, você deve link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Conecte-se ao sistema de arquivos usando um link"].
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume que deseja configurar e, em seguida, selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
+. Na aba Volumes, selecione o menu de ações do volume para o qual deseja definir os limites de latência.
+. Selecione *Ações de alertas* e, em seguida, *Definir limite de latência*.
+. Na caixa de diálogo Definir limite de latência, configure o seguinte:
++
+.. *Latência de leitura*: insira o valor limite em milissegundos (ms) para operações de leitura.
+.. *Latência de gravação*: insira o valor limite em milissegundos (ms) para operações de gravação.
+
+
+. Selecione *Salvar* para aplicar os limites de latência.
+
+
+.Resultado
+O Workload Factory monitora o volume e gera alertas quando a latência de leitura ou gravação excede os limites configurados. Você pode visualizar eventos de latência a partir do link:analyze-events.html["Tela de análise"].
+
+.Informações relacionadas
+* link:analyze-events.html["Analise eventos do FSx for ONTAP no NetApp Workload Factory"]
+* link:adjust-volume-capacity.html["Ajuste a capacidade de volume no Workload Factory"]
+

@@ -1,32 +1,38 @@
 ---
 sidebar: sidebar 
 permalink: analyze-events.html 
-keywords: analyze events, events, FSx for ONTAP events, EMS, troubleshoot FSx for ONTAP 
-summary: Analise os eventos do EMS no NetApp Workload Factory para FSx para ONTAP. 
+keywords: analyze events, events, FSx for ONTAP events, EMS, troubleshoot FSx for ONTAP, latency 
+summary: Analise eventos no NetApp Workload Factory para FSx para ONTAP. 
 ---
-= Analise os eventos FSx para ONTAP EMS no NetApp Workload Factory.
+= Analise eventos do FSx for ONTAP no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Identifique e resolva rapidamente problemas do sistema de arquivos FSx for ONTAP com o analisador de eventos inteligente no NetApp Workload Factory. O analisador de eventos extrai e analisa automaticamente eventos do Sistema de Gerenciamento de Eventos (EMS) do FSx for ONTAP, aproveitando a Agentic AI com integração ao Amazon Bedrock.
+Identifique e resolva rapidamente problemas do sistema de arquivos FSx for ONTAP com o analisador de eventos inteligente no NetApp Workload Factory. O analisador de eventos extrai e analisa automaticamente eventos do Sistema de Gerenciamento de Eventos (EMS) e eventos de latência do FSx for ONTAP, aproveitando a IA Agentic com integração ao Amazon Bedrock.
 
 
 
 == Sobre esta tarefa
 
-Os administradores de armazenamento geralmente respondem aos eventos do FSx for ONTAP EMS somente após reclamações de clientes ou mantendo scripts e alarmes personalizados. Essa abordagem reativa pode reduzir a eficiência, atrasar a resolução de problemas e aumentar o tempo de inatividade.
+Os administradores de armazenamento geralmente respondem a eventos do FSx for ONTAP somente após reclamações de clientes ou mantendo scripts e alarmes personalizados. Essa abordagem reativa pode reduzir a eficiência, atrasar a resolução de problemas e aumentar o tempo de inatividade.
 
-O analisador de eventos extrai automaticamente erros, alertas e eventos de emergência do EMS dos sistemas de arquivos FSx for ONTAP. Você pode visualizar esses eventos por link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["conectando-se ao sistema de arquivos usando um link"] e por link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["concedendo permissões de _visualização, planejamento e análise_"^] em sua conta AWS. Os eventos são exibidos por 72 horas antes de serem removidos.
+O analisador de eventos extrai automaticamente os seguintes tipos de eventos dos sistemas de arquivos FSx for ONTAP:
+
+* *Eventos EMS*: Eventos de erro, alerta e emergência do ONTAP Event Management System. Para visualizar e analisar eventos EMS, você deve link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Conecte-se ao sistema de arquivos usando um link"].
+* *Eventos de latência*: eventos de latência de leitura/gravação. Os eventos de latência podem ser visualizados sem uma conexão de link. Para analisar eventos de latência e receber insights baseados em IA, você deve link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Conecte-se ao sistema de arquivos usando um link"].
+
+
+Para visualizar os eventos, você deve link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Conceder permissões de _visualização, planejamento e análise_"^] em sua conta da AWS. Os eventos são exibidos por 72 horas antes de serem removidos.
 
 Com a integração do Amazon Bedrock, o Workload Factory usa IA para analisar eventos e fornecer insights acionáveis para manter a integridade e o desempenho dos seus sistemas de arquivos FSx for ONTAP.
 
 Os principais benefícios incluem:
 
-* Solução de problemas avançada: a IA identifica, analisa e fornece automaticamente informações para corrigir eventos do FSx for ONTAP EMS, reduzindo o tempo de investigação manual.
-* Remediação de melhores práticas: o analisador de eventos fornece etapas claras e práticas para resolver eventos do FSx for ONTAP EMS.
+* Solução de problemas avançada: a IA identifica, analisa e fornece automaticamente informações para corrigir eventos de EMS e latência no FSx for ONTAP, reduzindo o tempo de investigação manual.
+* Remediação de melhores práticas: o analisador de eventos fornece etapas claras e práticas para resolver eventos de EMS e latência do FSx for ONTAP.
 
 
 Ao usar o analisador de eventos, você tem controle total do seu ambiente enquanto se beneficia da análise avançada de IA.
@@ -51,17 +57,30 @@ Para mais detalhes, consulte o link:https://docs.aws.amazon.com/bedrock/latest/u
 
 == Antes de começar
 
-Para usar o analisador de eventos, certifique-se do seguinte:
 
-* Você tem link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["_operações e remediação_ permissions"^] na sua conta da AWS para analisar eventos para sistemas de arquivos FSx for ONTAP.
+
+=== Ver eventos
+
+Para visualizar eventos de latência, você deve link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Conceder permissões de _visualização, planejamento e análise_"^] na sua conta da AWS.
+
+Para visualizar os eventos do EMS, você também deve link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Conecte-se ao sistema de arquivos usando um link"].
+
+
+
+=== Analisar eventos
+
+Para analisar eventos de EMS e latência e receber insights e recomendações baseados em IA, certifique-se do seguinte:
+
+* Você tem link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["_operações e remediação_ permissions"^] em sua conta AWS.
+* Você tem link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["conectado ao sistema de arquivos usando um link"].
 * A porta 22 (SSH) está aberta no grupo de segurança associado ao seu sistema de arquivos FSx for ONTAP.
 
 
-Requisitos adicionais (o sistema solicitará durante a análise de erros de registro):
+Requisitos adicionais (o sistema solicitará durante a análise do evento):
 
 * *Modelo Amazon Bedrock*
 +
-Configure as APIs do Amazon Bedrock para cada conta da AWS. As APIs do Amazon BedRock são usadas para fornecer insights para eventos do FSx for ONTAP.
+Configure as APIs do Amazon Bedrock para cada conta da AWS. As APIs do Amazon Bedrock são usadas para fornecer informações sobre eventos do FSx for ONTAP.
 
 +
 Modelo recomendado: `anthropic.claude-sonnet-4-20250514-v1:0`. Forneça o ARN do perfil de inferência para a região selecionada.
@@ -97,19 +116,35 @@ Essas permissões verificam a disponibilidade do modelo.
 
 
 
-== Visualize e analise eventos EMS para FSx para ONTAP.
+== Visualize e analise eventos do FSx para ONTAP
 
-Utilize o console do Workload Factory para visualizar e analisar eventos do EMS para sistemas de arquivos FSx para ONTAP .
+Utilize o console do Workload Factory para visualizar e analisar eventos de EMS e de latência para sistemas de arquivos FSx for ONTAP.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . No menu Armazenamento, selecione *Análise*.
-. Na tela de Análise, selecione as contas, credenciais e regiões da AWS que contêm os sistemas de arquivos FSx para ONTAP que você deseja analisar.
+. Na tela de Análise, selecione as contas, credenciais e regiões da AWS que contêm os sistemas de arquivos FSx for ONTAP que você deseja visualizar.
 +
-Somente sistemas de arquivos FSx para ONTAP exibem eventos na tela.
+Somente sistemas de arquivos FSx for ONTAP que possuem eventos são exibidos.
 
-. Caso necessário, complete os requisitos de configuração da análise de IA seguindo as instruções na tela para atender a quaisquer pré-requisitos ausentes.
-. Localize o sistema de arquivos FSx para ONTAP que deseja analisar e selecione *Exibir eventos*.
-. Analise as informações detalhadas do evento.
+. Selecione o sistema de arquivos FSx for ONTAP que você deseja visualizar.
++
+A tabela de eventos mostra todos os eventos para esse sistema de arquivos.
+
+. Confira os detalhes do evento na tabela.
+. Para analisar eventos, faça um dos seguintes procedimentos:
++
+** Para analisar vários eventos, selecione as caixas de seleção ao lado dos eventos e selecione *Analisar* na tabela.
+** Para analisar um evento e visualizar insights no painel lateral, selecione o nome do evento e, em seguida, selecione *Analisar* no painel. Os insights e recomendações são exibidos no painel.
+** Para analisar um evento da tabela, selecione *Analisar* na linha do evento e, em seguida, selecione o nome do evento para visualizar os insights e recomendações.
++
+Caso necessário, complete os requisitos de configuração da análise de IA seguindo as instruções na tela para atender a quaisquer pré-requisitos ausentes.
+
+
+
+
+
+.Informações relacionadas
+* link:set-volume-latency-thresholds.html["Defina os limites de latência de volume no Workload Factory"]
 

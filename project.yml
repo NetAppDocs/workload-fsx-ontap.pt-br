@@ -75,10 +75,8 @@ sidebar:
           url: "/create-backup.html"
         - title: Restaurar um volume a partir de uma cópia de segurança
           url: "/restore-from-backup.html"
-      - title: Usar replicação
-        entries:
-        - title: Replique dados
-          url: "/create-replication.html"
+      - title: Replique dados
+        url: "/create-replication.html"
       - title: Proteja os dados com a proteção Autonomous ransomware
         url: "/ransomware-protection.html"
       - title: Clonar um volume
@@ -105,6 +103,8 @@ sidebar:
         url: "/edit-volume-autogrow.html"
       - title: Ajustar capacidade de volume
         url: "/adjust-volume-capacity.html"
+      - title: Defina os limites de latência de volume
+        url: "/set-volume-latency-thresholds.html"
       - title: Capacidade de volume de rebalanceamento
         url: "/rebalance-volume.html"
       - title: Gerenciar arquivos imutáveis
@@ -185,20 +185,10 @@ sidebar:
         entries:
         - title: Replicar um volume de proteção de dados
           url: "/cascade-replication.html"
-        - title: Inverta uma relação de replicação
-          url: "/reverse-replication.html"
-        - title: Alterar o agendamento de replicação de um volume de origem
-          url: "/change-replication-schedule.html"
-        - title: Limite a taxa máxima de transferência de uma relação de replicação
-          url: "/limit-transfer-rate.html"
-        - title: Atualização manual de dados instantâneos numa relação de replicação
-          url: "/update-snapshot-replication.html"
-        - title: Pausar e retomar uma relação de replicação
-          url: "/pause-resume-replication.html"
-        - title: Parar uma relação de replicação
-          url: "/stop-replication.html"
-        - title: Excluir uma relação de replicação
-          url: "/delete-replication.html"
+        - title: Acompanhe atrasos na replicação
+          url: "/track-replication-delays.html"
+        - title: Gerenciar relações de replicação
+          url: "/manage-replication.html"
     - title: Administração da performance
       entries:
       - title: Provisione IOPS para um sistema de arquivos

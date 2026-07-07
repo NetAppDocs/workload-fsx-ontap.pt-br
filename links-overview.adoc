@@ -39,6 +39,8 @@ Você cria e associa links da carga de trabalho de armazenamento no Workload Fac
 
 Você pode autenticar links usando credenciais armazenadas no serviço de credenciais do Workload Factory ou com suas credenciais armazenadas no AWS Secrets Manager.  A fábrica de carga de trabalho não oferece suporte à alteração dos modos de autenticação.
 
+A conectividade de links para contas GovCloud é suportada. O NetApp Workload Factory usa chaves de autenticação GovCloud, permitindo acesso seguro e sem agente ao FSx for ONTAP para operações ONTAP por meio de mecanismos aprovados GovCloud.
+
 
 
 == Custos
@@ -67,6 +69,7 @@ Os recursos que exigem um link incluem:
 * Crescimento automático de volume para dimensionamento elástico
 * Criação e gerenciamento de clones para clonagem instantânea de dados no local
 * Exibindo métricas adicionais diretamente do ONTAP , como a versão do ONTAP
+* Exibindo detalhes da LIF da storage VM e do cluster, incluindo funções, endpoints, nós, endereços IP e status
 
 
 Aprenda a link:create-link.html["conectar um link a um sistema de arquivos FSx para ONTAP"].

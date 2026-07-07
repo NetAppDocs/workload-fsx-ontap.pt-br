@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: track-replication-delays.html 
+keywords: replication, track replication, replication lag, replication delay, delay, monitor replication, replication threshold, lag notification 
+summary: Ative o rastreamento para monitorar os atrasos em todos os relacionamentos de replicação da sua conta. 
+---
+= Acompanhe atrasos na replicação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ative o rastreamento para monitorar os atrasos de replicação em sua conta. Workload Factory alerta você quando os atrasos ultrapassam um limite definido. Por padrão, o limite é 150% do intervalo de replicação para permitir um tempo de transferência normal e reduzir alarmes falsos. Você pode ajustar o limite para corresponder ao seu RPO e receber notificações quando os atrasos o excederem. Você também pode exportar os dados para um arquivo CSV para análise posterior.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos a ser atualizado e, em seguida, selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione a guia *relacionamentos de replicação*.
+. Selecione *Ativar rastreamento*.
+. Na caixa de diálogo Enable replication lag history, selecione *Enable*.
+. De volta ao bloco de histórico de atraso de replicação, selecione *Personalizar limite* para definir seu limite preferido.
+. Na caixa de diálogo "Personalizar limite de tempo de atraso", insira o limite em horas e minutos.
+. Opcionalmente, selecione *Ativar notificações de atraso* para receber notificações quando os atrasos de replicação excederem o limite.
++
+As notificações chegam por e-mail e incluem:
+
++
+** Sistema de arquivos de origem
+** Volume de origem
+** Sistema de arquivos de destino
+** Volume alvo
+** Limite de tempo de atraso que foi excedido
+** Link para a relação de replicação
+
+
+. Selecione *aplicar*.
+
+
+.Informações relacionadas
+link:manage-replication.html["Gerenciar relações de replicação"^]

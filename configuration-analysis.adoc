@@ -96,6 +96,10 @@ Os rótulos da política de snapshot do volume de origem e os rótulos da polít
 +
 O limite de capacidade de arquivos deve ser aumentado para evitar atingir o limite de capacidade do volume. Baixa capacidade de arquivos (inodes) impede a gravação de dados adicionais no volume. Workload Factory recomenda manter a utilização da capacidade de arquivos disponível abaixo de 80% de forma contínua. A capacidade de arquivos disponível é necessária para criar novos arquivos no volume.
 
+* *Conecte o host ao nó de failover*
++
+A NetApp Workload Factory recomenda conectar os hosts ao nó de failover para manter a conectividade e evitar interrupções durante failovers.
+
 
 
 
@@ -175,6 +179,18 @@ Uma camada de capacidade SSD subutilizada pode estar gerando custos desnecessár
 * *Volumes NAS inativos*
 +
 A análise de configuração identifica volumes NAS que não estão sendo usados ativamente e recomenda a exclusão ou arquivamento desses volumes para reduzir custos.
+
+
+
+
+
+=== Eficiência de desempenho
+
+A eficiência de desempenho concentra-se no uso eficiente dos recursos de TI e computação.
+
+* *Conecte o host ao nó preferido*
++
+Em um modelo de implantação FSx for ONTAP de alta disponibilidade, os hosts devem ser conectados diretamente ao nó que atende o dispositivo de bloco para garantir acesso direto e desempenho ideal.
 
 
 

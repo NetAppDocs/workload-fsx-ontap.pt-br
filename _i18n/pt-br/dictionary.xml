@@ -658,7 +658,6 @@
   <block id="463b6a907cababadde63e20d0a9d0a30" category="sidebar">Replique uma VM de storage para outro sistema de arquivos</block>
   <block id="b7f48cbd151b44682a0f2a8ffa114d0f" category="sidebar">Repor a palavra-passe da VM de armazenamento</block>
   <block id="7f8d84e7d0adb2682a7102214e49dee2" category="sidebar">Administração da proteção de dados</block>
-  <block id="ecbd50a07d840bace484b62056499032" category="sidebar">Atualização manual de dados instantâneos numa relação de replicação</block>
   <block id="267e5e88580f97af56a5fa2b981a6a67" category="sidebar">Administração da performance</block>
   <block id="ef045d17e80274aec5be009d1f13f5a2" category="sidebar">Provisione IOPS para um sistema de arquivos</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">Referência</block>
@@ -776,7 +775,6 @@
   <block id="a94ba7c755ae23b126e888fda5f83d7b" category="list-text">Na página Discover ONTAP on-premises, forneça o seguinte em *Configuração de cluster*:</block>
   <block id="db442d2f15cc5ca62b25c302ecc39e4d" category="paragraph">Se você não criou um link, siga as instruções e, em seguida, retorne a esta operação e selecione o link.</block>
   <block id="d6c619de487035b86fe99726a4142c96" category="list-text">*Endereço IP do cluster*: Forneça o endereço IP para que o cluster ONTAP local seja replicado.</block>
-  <block id="5284e36227d3576d0531d813669d810f" category="list-text">*Credenciais ONTAP*: Insira as credenciais ONTAP para o cluster ONTAP no local. Certifique-se de que o usuário tem as permissões necessárias.</block>
   <block id="10f4ba1588812227f6775ff4cdd8731a" category="list-text">Selecione *Discover* para iniciar o processo de descoberta.</block>
   <block id="9107799f71b772409d2dda6a954c2b55" category="paragraph">O cluster ONTAP no local é descoberto e agora aparece na guia *On-Premise ONTAP*.</block>
   <block id="c0bb7503a06a72052adfacae53dc8968" category="inline-xref">Replique os dados para um sistema de arquivos do FSX for ONTAP</block>
@@ -1202,7 +1200,6 @@
   <block id="05a2e668e80fd3ace12e9585ebc06578" category="paragraph">Associar um novo link inclui criação e associação de links.</block>
   <block id="de786693aed7955f1cb538f51e25f7d6" category="paragraph">Você pode criar segredos em alinhamento com as permissões padrão ou atribuir suas permissões personalizadas para a política de links.</block>
   <block id="49af4dcead2678507453b9bff6c332f1" category="paragraph">*Configurar endpoint privado VPC para o AWS Secrets Manager* está desativado por padrão. Selecionar essa opção armazena o segredo usando o endpoint privado VPC em vez de armazená-lo localmente.</block>
-  <block id="c3b24be1571207cf6200f2d8b54ee7c0" category="paragraph">Depois de criar a pilha com êxito, cole o ARN do Lambda na caixa de texto.</block>
   <block id="48457d7f94975228307244f863f96fee" category="section-title">Associe um link existente com um sistema de arquivos FSX for ONTAP</block>
   <block id="531d680092609d3ec7794cd6dd8c39fe" category="paragraph">Depois de criar um link, associe-o a um ou mais sistema de arquivos FSX for ONTAP.</block>
   <block id="447f36846a239be6be0faf7dc1fa0364" category="list-text">Na página associar link, selecione *associar um link existente*, selecione o link e selecione *continuar*.</block>
@@ -1365,7 +1362,6 @@
   <block id="99ae6104ba82455197d215357b50f2f1" category="list-text">Para dividir um volume clonado, você deve associar um link. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Após os associados da ligação, volte a esta operação.</block>
   <block id="21bd8c562c1d6ae4caf8a36f6d06c516" category="list-text">Tanto o cluster ONTAP no local quanto o sistema de arquivos FSX for ONTAP que você usa para a relação de replicação devem ter um link associado. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Após os associados da ligação, volte a esta operação.</block>
   <block id="316509fcb5a8d1b5e1280f3f64c594f2" category="list-text">nome de usuário = FSx_user</block>
-  <block id="562c87a680d962135f8e44bc0d159259" category="list-text">*Nome da VM de armazenamento*: Selecione a VM de armazenamento no menu suspenso. A VM de armazenamento selecionada é o destino para todos os volumes selecionados neste relacionamento de replicação.</block>
   <block id="11f24c2a8c13499208f4d69098436bd2" category="paragraph">Sem um limite, o desempenho da rede e do aplicativo pode declinar. Como alternativa, recomendamos uma taxa de transferência ilimitada para os sistemas de arquivos FSX for ONTAP para cargas de trabalho críticas, por exemplo, aquelas que são usadas principalmente para recuperação de desastres. . Em Configurações de replicação, forneça o seguinte:</block>
   <block id="fca40712560cec2d2b7a47110cfecda1" category="list-text">*Criar uma nova política*: insira um *nome de política*.</block>
   <block id="0546ab198c101c424e412d1355272bcd" category="list-text">*Snapshots imutáveis*: Opcional. Selecione *Ativar instantâneos imutáveis* para evitar que os instantâneos obtidos nesta política sejam excluídos durante o período de retenção.</block>
@@ -1398,7 +1394,6 @@
   <block id="ee6e43b0904c4672da5651009001b259" category="list-text">*IOPS provisionados*: Selecione uma das seguintes opções:</block>
   <block id="2c8c409e84df8a5368e9fc203dacd0e0" category="list-text">*Automático*: Para automático, para cada GiB criado, 3 IOPS são adicionados.</block>
   <block id="080138c9fde9abc63b7003839106198b" category="list-text">*Provisionado pelo usuário*: para provisionado pelo usuário, insira o valor de IOPS.</block>
-  <block id="7392fd7ce1aac825ec2bdccdf93b5ad8" category="paragraph">Você tem duas opções para criar links neste fluxo de trabalho: automática ou manualmente. Você precisará iniciar uma pilha do AWS CloudFormation na sua conta da AWS para criar o link.</block>
   <block id="2f33e5a4fe58163ac0df8f3b097df4db" category="list-text">*Permissões de link*: Selecione uma das seguintes opções para permissões de link:</block>
   <block id="dd9c72ad3bbeb047b573638ce62d0cc6" category="list-text">*Fornecido pelo usuário*: Selecione esta opção para atribuir uma função de execução do Lambda específica e suas políticas anexadas ao link do Lambda. As seguintes permissões são necessárias para a política de permissões do Lambda . <block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block> a permissão será necessária somente se você tiver habilitado o AWS Secrets Manager.</block>
   <block id="5f3b3b380e02766e8ad7eca5c6b37840" category="paragraph">Insira o ARN da função de execução do Lambda na caixa de texto.</block>
@@ -1496,7 +1491,6 @@
   <block id="2f50ceaec248a408742379493bc7731b" category="paragraph">O Workload Factory recupera automaticamente a conta, o local e o grupo de segurança da AWS com base no sistema de arquivos FSx para ONTAP .</block>
   <block id="bab25954c067653929b889d687bcb718" category="paragraph">A caixa de diálogo Redirecionar para CloudFormation é exibida e explica como criar o link do serviço AWS CloudFormation.</block>
   <block id="a37cbff3921a52bcde5c7689c912e1f4" category="paragraph">Você pode monitorar o status da criação do link na página Eventos.  Isso não deve levar mais de 5 minutos.</block>
-  <block id="305994fbfd694e4b407718361492a83c" category="paragraph">A fábrica de carga de trabalho associa o link ao sistema de arquivos FSx para ONTAP .  Você pode executar operações ONTAP avançadas.</block>
   <block id="9a5abe8b855a4f42f1c70c4b367d9bce" category="paragraph">Certifique-se de que o ARN secreto contém os seguintes pares de chaves válidos, embora o _filesystemID_ seja opcional.</block>
   <block id="1023373ba9dff02b999882804d6dc2ef" category="list-text">filesystemID = FSx_filesystem_id (opcional)</block>
   <block id="508e0beab9fc0c907eb4adcaa7a736f7" category="list-text">usuário = FSx_user</block>
@@ -1679,11 +1673,9 @@
   <block id="b271a75b2d121a8cb5f59ae458394323" category="section-title">09 de setembro de 2025</block>
   <block id="62486fa65fc31c383ace8989549632ad" category="sidebar">Usar instantâneos</block>
   <block id="b8d3d1ca4d4975c76eec10109e85c77f" category="sidebar">Use backups para armazenamento de objetos</block>
-  <block id="fe355a62d144a6a42805c3eb5698310a" category="sidebar">Usar replicação</block>
   <block id="044dbc650d6316ed90f739b69dfff7ee" category="section-title">Suporte regional</block>
   <block id="468469fded9ecf5cf0e132a6daa62d32" category="paragraph">As seguintes regiões da AWS não são suportadas:</block>
   <block id="cc6dcf46ebcb08f1caa420526cc0ab18" category="list-text">Regiões da China</block>
-  <block id="1411debdb32e6b128ca27ec92a708cbd" category="list-text">Regiões GovCloud (EUA)</block>
   <block id="ecd96786b112acf6970d6aaf3be575ca" category="list-text">Nuvem Secreta</block>
   <block id="151ef168e17772f7a361db78a0c86552" category="list-text">Nuvem Top Secret</block>
   <block id="5948f3347ebc02ebc690227c059661e1" category="section-title">Regiões</block>
@@ -1787,7 +1779,6 @@
   <block id="40be05127ecd2439f7ee7256f055873a" category="list-text">No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos ao qual deseja associar um link e, em seguida, selecione *Associar link*.</block>
   <block id="939a8d22db4ccfbdde48d35119ad37a3" category="list-text">*AWS Secrets Manager*: Opcional.  Permite que o Workload Factory busque credenciais de acesso do FSx para ONTAP no seu AWS Secrets Manager.</block>
   <block id="7580bfe7832e708a7a254e231956ba42" category="list-text">Retorne à interface do Workload Factory e você verá que o link está associado ao sistema de arquivos FSx para ONTAP .</block>
-  <block id="5886618b54dcea7acc4beb5fbd5a3159" category="list-text">No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos ao qual deseja associar um link e, em seguida, selecione *Associar link*.</block>
   <block id="3d607d93b8532423a7bbebf948091168" category="summary">Crie uma política de snapshot personalizada para uma VM de armazenamento no Workload Factory.</block>
   <block id="0e4f989c75a10776b672b4a9f108bfc9" category="doc">Crie uma política de snapshot para VMs de armazenamento no Workload Factory</block>
   <block id="ab9a6ebd2e1e5562fa11ba5a014fc247" category="paragraph">Crie uma política de snapshot personalizada para VMs de armazenamento no Workload Factory para gerenciar a criação e a retenção de snapshots. Uma política de snapshot define como o sistema cria snapshots para uma VM de armazenamento. Você pode criar uma política de snapshot para uma VM de armazenamento em um sistema de arquivos FSx para ONTAP . Você também pode compartilhar a política entre várias VMs de armazenamento.</block>
@@ -2236,8 +2227,6 @@
   <block id="aed1296ef373ba8df468af355d85d3ce" category="paragraph">Você pode aumentar e diminuir a capacidade dos volumes de cache no console do Workload Factory.</block>
   <block id="012110073acf8459d2a77ef54f547130" category="inline-link-macro">Gerencie volumes de cache no Workload Factory</block>
   <block id="cfd839007fdba7ba7d7a5a35de4aa55a" category="paragraph"><block ref="cfd839007fdba7ba7d7a5a35de4aa55a" category="inline-link-macro-rx"></block></block>
-  <block id="07236cc47c70c5fd568c5a75720db649" category="summary">Analise os eventos do EMS no NetApp Workload Factory para FSx para ONTAP.</block>
-  <block id="12f4e0399e2df3c2e6f5c6d078ccfcb7" category="doc">Analise os eventos FSx para ONTAP EMS no NetApp Workload Factory.</block>
   <block id="950a30dbe6160d51c93dd8570573b0b1" category="paragraph">Os principais benefícios incluem:</block>
   <block id="888aee60b948bfcee3f85cb52d4d62f0" category="inline-link-macro">Preços do Amazon Bedrock</block>
   <block id="2064dc6bc6a42df41c5d58cafe4e5108" category="paragraph"><block ref="2064dc6bc6a42df41c5d58cafe4e5108" category="inline-link-macro-rx"></block></block>
@@ -2247,9 +2236,6 @@
   <block id="72fa279f5dbab8677f6a4a2b563e0629" category="paragraph"><block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Após o link associar, retorne a esta operação.</block>
   <block id="7ed47c99073de0aed63f1c44842de720" category="list-text">*Permissões do AWS IAM*</block>
   <block id="3fc6364e2f4555bc71d109a7ba02fef1" category="paragraph">Essas permissões verificam a disponibilidade do modelo.</block>
-  <block id="3c9bac4bc86cac9a309d9792f5bb65df" category="section-title">Visualize e analise eventos EMS para FSx para ONTAP.</block>
-  <block id="6baf937b798e7ea8fa07c50ef6c201f9" category="paragraph">Utilize o console do Workload Factory para visualizar e analisar eventos do EMS para sistemas de arquivos FSx para ONTAP .</block>
-  <block id="dacb27092cd2afb431a6b906c5beb313" category="list-text">Analise as informações detalhadas do evento.</block>
   <block id="2a29012d549070ee593fcda2b2383198" category="paragraph">Você pode gerenciar dispositivos de bloco para sistemas de arquivos FSx para ONTAP que utilizam o protocolo iSCSI.</block>
   <block id="934c3d38b90775eafeecd6f5f7490e2c" category="section-title">Ver detalhes do dispositivo de bloco</block>
   <block id="12a66c1ef123e6c23c139c511d70f3f4" category="paragraph">Visualize os detalhes de um dispositivo de bloco existente a qualquer momento.</block>
@@ -2279,16 +2265,7 @@
   <block id="9b3a1ad5abecf153aceb732b418aab4f" category="list-text">Na caixa de diálogo *Gerenciar tags do sistema de arquivos*, adicione, edite ou remova tags conforme necessário.</block>
   <block id="e8c1165d9931bb1b1cf9a7e8b496158d" category="paragraph">O número máximo de tags que você pode aplicar a um sistema de arquivos é 50.</block>
   <block id="4e9dffb84355d8e05d841ef09cb0b14f" category="paragraph">Escolha o<block ref="7cb8f01033b9f51b50ad23ef165f92b6" category="inline-link-macro-rx"></block> Para atender às suas necessidades.</block>
-  <block id="01fae763ec208cbe8aba55abc3b09866" category="summary">Monitore os custos dos seus recursos do sistema de arquivos FSx para ONTAP no NetApp Workload Factory.</block>
-  <block id="032c10b11ebbd33bcfb1d9c697658530" category="doc">Monitore os custos dos seus recursos no NetApp Workload Factory.</block>
-  <block id="d4c186d67cf8c08158cf00710c119d5c" category="paragraph">Utilize o NetApp Workload Factory para monitorar os custos e o uso do sistema de arquivos FSx para ONTAP em uma visão consolidada.  Os dados de custos ajudam você a gerenciar orçamentos e otimizar recursos de forma eficaz.  O AWS Cost Explorer fornece os dados de custo.</block>
-  <block id="a9e1e30ff98d7ffed745988d1a4fc1fb" category="paragraph">Os dados de custo e utilização dos seus recursos do sistema de arquivos FSx for ONTAP são extraídos do AWS Cost Explorer usando as seguintes permissões:</block>
-  <block id="2340e78cb09237db2f23f58bd9bd22a3" category="list-text"><block ref="bba6542a0e46014b21a818003b1e41d2" prefix="" category="inline-code"></block></block>
-  <block id="eb31a5b8779c15ebaec006efc85981a3" category="list-text"><block ref="f74e5982a82afd7d2755b24355dd08c6" prefix="" category="inline-code"></block></block>
-  <block id="c5722965ac58717f7a4510137bda582a" category="inline-link-macro">Conceder credenciais com a política de permissão _visualizar, planejar e analisar_</block>
-  <block id="108b346d0d8c9cf596528ad0d2a7de34" category="paragraph"><block ref="5763d95ed6eefefde40388c1a7624c69" category="inline-link-macro-rx"></block>No Workload Factory, é possível rastrear os custos do FSx para ONTAP .</block>
   <block id="45eecb5efbc4c958be178611070d560c" category="list-text">No menu Armazenamento, selecione *Custo*.</block>
-  <block id="a95a893b7dafb6da5604234e0936ce1c" category="list-text">Na página Custo, filtre os dados de custo e capacidade dos seus recursos FSx para ONTAP fornecendo as seguintes informações:</block>
   <block id="f4654cadb5477c95a6a0e93a5be01b7b" category="list-text">*Contas da AWS*: Selecione as contas para as quais deseja visualizar os dados de custo.</block>
   <block id="5ef42bc94075bca2b4d7247474fbb5f3" category="list-text">*Credenciais*: Selecione as credenciais com permissões de _visualização, planejamento e análise_.</block>
   <block id="63d9c4239e3de8cd030beef46a2ba8c6" category="list-text">*Regiões*: Selecione as regiões da AWS para as quais você deseja visualizar os dados de custo.</block>
@@ -2389,10 +2366,7 @@
   <block id="342a19841e494c61bf9c06a5879eaffa" category="inline-image-macro">O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração.</block>
   <block id="757a7ffb20a279d7239febb013141ad5" category="list-text">Selecione o menu <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> Em seguida, selecione *Armazenamento*.</block>
   <block id="7f4aea97afc4fe9bca082673b0935315" category="list-text">No menu Armazenamento, selecione *Análise*.</block>
-  <block id="50d875c26d87da128f69cb933227d1a5" category="list-text">Na tela de Análise, selecione as contas, credenciais e regiões da AWS que contêm os sistemas de arquivos FSx para ONTAP que você deseja analisar.</block>
-  <block id="3508b6e4bf84f2b46e5223cd82593789" category="paragraph">Somente sistemas de arquivos FSx para ONTAP exibem eventos na tela.</block>
   <block id="aa56579381807f7a0875c83ea40e95f6" category="list-text">Caso necessário, complete os requisitos de configuração da análise de IA seguindo as instruções na tela para atender a quaisquer pré-requisitos ausentes.</block>
-  <block id="0b8feb0f50822d2155836ac6630dcff8" category="list-text">Localize o sistema de arquivos FSx para ONTAP que deseja analisar e selecione *Exibir eventos*.</block>
   <block id="2d35ddb4d21997f4aa6c33cc82b9e218" category="list-text">No painel de controle de armazenamento, selecione *Criar sistema de arquivos*.</block>
   <block id="2500dbf9595976bd1314c2eaa3c7cdb1" category="paragraph">A seguir, estão as políticas padrão da AWS. Para exibir as políticas de snapshot existentes, você deve <block ref="6e2abc793876f9e04717a19a42b0bb65" category="inline-link-macro-rx"></block>.</block>
   <block id="4df0f1805985e10746c9c4f0c93c1972" category="list-text">No menu Armazenamento, selecione *Explorar economias* e, em seguida, selecione a guia *Amazon Elastic Block Store (EBS)*.</block>
@@ -2412,25 +2386,15 @@
   <block id="2c77adf5fa1de4ed37a6e14d2212f074" category="list-text">Selecione *Arquivo*.</block>
   <block id="33e155c9d3cab85dd1499ba63bd9d34d" category="paragraph">Volumes FlexVol que contêm um dispositivo de bloco iniciam o ARP/AI no modo ativo.</block>
   <block id="aca2e051b8b58a53ee4cf20a78bdde8a" category="list-text">O link deve ser capaz de se conectar ao seguinte endpoint: https://api.workloads.netapp.com. O console baseado na web contata este endpoint para interagir com as APIs do Workload Factory, a fim de gerenciar e operar cargas de trabalho do FSx para ONTAP .</block>
-  <block id="ae7bbdf37f2fa18593f3db57d284b5eb" category="paragraph">Identifique e resolva rapidamente problemas do sistema de arquivos FSx for ONTAP com o analisador de eventos inteligente no NetApp Workload Factory. O analisador de eventos extrai e analisa automaticamente eventos do Sistema de Gerenciamento de Eventos (EMS) do FSx for ONTAP, aproveitando a Agentic AI com integração ao Amazon Bedrock.</block>
-  <block id="69fa9c087519616c715c1ff5cb8799b4" category="paragraph">Os administradores de armazenamento geralmente respondem aos eventos do FSx for ONTAP EMS somente após reclamações de clientes ou mantendo scripts e alarmes personalizados. Essa abordagem reativa pode reduzir a eficiência, atrasar a resolução de problemas e aumentar o tempo de inatividade.</block>
-  <block id="ea0503aedfe2585b2372e8f13d9a188b" category="inline-link-macro">conectando-se ao sistema de arquivos usando um link</block>
-  <block id="9d2246fd849af6e6265f4bfd88a1fae2" category="inline-link-macro">concedendo permissões de _visualização, planejamento e análise_</block>
   <block id="0ee3fcfb10a8d4af3c7cb550b6d9bc38" category="paragraph">Com a integração do Amazon Bedrock, o Workload Factory usa IA para analisar eventos e fornecer insights acionáveis para manter a integridade e o desempenho dos seus sistemas de arquivos FSx for ONTAP.</block>
-  <block id="721c487e9ac5dc5fc37d25389a9c0866" category="list-text">Solução de problemas avançada: a IA identifica, analisa e fornece automaticamente informações para corrigir eventos do FSx for ONTAP EMS, reduzindo o tempo de investigação manual.</block>
-  <block id="90fff3808b87c7068de0570f6b4692b6" category="list-text">Remediação de melhores práticas: o analisador de eventos fornece etapas claras e práticas para resolver eventos do FSx for ONTAP EMS.</block>
   <block id="27562a45337f51e17d281897d9fddcd2" category="paragraph">Ao usar o analisador de eventos, você tem controle total do seu ambiente enquanto se beneficia da análise avançada de IA.</block>
   <block id="0da91429b3f9223cbaa4f8470ef89ea0" category="paragraph">Para permitir que o Workload Factory analise eventos, você deve ativar Amazon Bedrock, selecionar o modelo que o Workload Factory utiliza, criar um endpoint privado para conectar-se ao Amazon Bedrock, adicionar permissões e criar uma licença corporativa.</block>
   <block id="697e3d01e31a8ce7704ee41323400066" category="paragraph">Sua privacidade de dados e segurança são protegidas por meio de:</block>
   <block id="84ae233a79c0ea9a3056e7680572780d" category="list-text">*Soberania de dados*: todos os dados e agregações permanecem dentro da sua conta AWS e são comunicados por meio de um endpoint VPC privado (Amazon Bedrock), sem exposição à internet pública.</block>
   <block id="83ba0533f3c89bcebf3d4a8565cd0192" category="list-text">*Sem treinamento de IA*: Os dados do cliente não são usados para treinar ou aprimorar modelos. Amazon Bedrock processa eventos em tempo real, mas não treina com seus dados. Os resultados são armazenados apenas no seu ambiente.</block>
   <block id="cb955412ddfc1e82347d29c44308ede8" category="paragraph">Para mais detalhes, consulte o <block ref="b066fd87fd1e8a2b8d520c5977ecc43e" category="inline-link-macro-rx"></block>.</block>
-  <block id="4afc10e211f325b277b31bdf03653564" category="paragraph">Para usar o analisador de eventos, certifique-se do seguinte:</block>
   <block id="e6cefdd5e44ac5e5142c68d4b8d3451b" category="inline-link-macro">_operações e remediação_ permissions</block>
-  <block id="955afa6e7ada9aae898db4f1ec89597b" category="list-text">Você tem <block ref="3728a9886a6e8befe945facf87fd7817" category="inline-link-macro-rx"></block> na sua conta da AWS para analisar eventos para sistemas de arquivos FSx for ONTAP.</block>
   <block id="622f422e31dd55d6b288a24d05bc2309" category="list-text">A porta 22 (SSH) está aberta no grupo de segurança associado ao seu sistema de arquivos FSx for ONTAP.</block>
-  <block id="b6c462f58509f9b26d80dbd1d24b9aed" category="paragraph">Requisitos adicionais (o sistema solicitará durante a análise de erros de registro):</block>
-  <block id="c8598674a87a9c799b14c6b675d2dd50" category="paragraph">Configure as APIs do Amazon Bedrock para cada conta da AWS. As APIs do Amazon BedRock são usadas para fornecer insights para eventos do FSx for ONTAP.</block>
   <block id="10b86811a1c2efaa2595c0a2596a2bc0" category="paragraph">Modelo recomendado:<block ref="00384dd7439f3263ff61a20c6a4db34c" prefix=" " category="inline-code"></block>. Forneça o ARN do perfil de inferência para a região selecionada.</block>
   <block id="b119b2ead611491e4d54de03365b4de2" category="paragraph">Crie e associe um link a um sistema de arquivos FSx for ONTAP para habilitar a análise de eventos com inteligência artificial. Um link estabelece uma relação de confiança entre NetApp Workload Factory e um ou mais sistemas de arquivos FSx for ONTAP e utiliza AWS Lambda.</block>
   <block id="bb038c2aeef4cf3da06b0b304f46890d" category="paragraph">Adicione as seguintes permissões à política associada à função IAM do Workload Factory.</block>
@@ -2521,9 +2485,7 @@
   <block id="e77c03d49e828607828412709552dbd6" category="sidebar">Gerenciar igroups</block>
   <block id="0352f037ca8dfca49383ddb908805d9a" category="list-text"><block ref="0352f037ca8dfca49383ddb908805d9a" category="inline-link-macro-rx"></block></block>
   <block id="0a17c703284dc61149bdaf13e30980de" category="list-text"><block ref="0a17c703284dc61149bdaf13e30980de" category="inline-link-macro-rx"></block></block>
-  <block id="df267252f2595421cf837794528f006f" category="paragraph">O analisador de eventos extrai automaticamente erros, alertas e eventos de emergência do EMS dos sistemas de arquivos FSx for ONTAP. Você pode visualizar esses eventos por <block ref="f91a3df34ad8b434c845af1c5c4599e2" category="inline-link-macro-rx"></block> e por <block ref="f7fcd176fbc4e82ec30b37b672d1e76e" category="inline-link-macro-rx"></block> em sua conta AWS. Os eventos são exibidos por 72 horas antes de serem removidos.</block>
   <block id="0aa7d11dc16260c47faf9d5b0b642366" category="paragraph">Revise estes requisitos antes de começar.</block>
-  <block id="876ae080bad2795906c16db5a7bfc488" category="paragraph">*Replicar configuração da VM de armazenamento*: Opcionalmente, selecione para replicar os dados e as configurações de uma única VM de armazenamento. Ao migrar dados e configurações simultaneamente, certifique-se de que a última replicação do volume foi concluída nas últimas 24 horas. Todos os volumes na mesma VM de armazenamento devem ser selecionados para usar esse recurso. A política de camadas para todos os volumes é definida por padrão como a política de camadas do volume de origem, o que é recomendado para caso de uso de migração.</block>
   <block id="292198e01fad7795066f40b6fec350fd" category="list-text">Em *FSx for ONTAP*, selecione o sistema de arquivos que contém o(s) volume(s) a serem replicados.</block>
   <block id="bc9c958c3279391522e702151359608b" category="list-text">Selecione a guia *Replication relationships*.</block>
   <block id="23c1b911bea8dc9e9cdd65d07a7745ca" category="list-text">Na tabela de relações de replicação, selecione a relação de replicação para migrar e, em seguida, selecione *Migrar replicação*.</block>
@@ -2587,7 +2549,6 @@
   <block id="df84e5c661ad9c55d4921f236021aac2" category="paragraph"><block ref="df84e5c661ad9c55d4921f236021aac2" category="inline-link-macro-rx"></block></block>
   <block id="3b40a61896ac7bb071b70913553072f1" category="inline-link-macro">Gerencie o armazenamento em blocos para um FSx for ONTAP sistema de arquivos</block>
   <block id="72a58cc21323626d7784d44077612a4a" category="paragraph"><block ref="72a58cc21323626d7784d44077612a4a" category="inline-link-macro-rx"></block></block>
-  <block id="16f2ae5a8a2de6f12ddc298127a4ddb7" category="list-text">Confiabilidade: limite de capacidade do SSD, snapshots locais agendados, backups de volume agendados, replicação remota de dados e confiabilidade dos dados para retenção de longo prazo</block>
   <block id="cfcff7e4ca0a4496f029a99d812c3cb3" category="doc">Ajuste manualmente a capacidade do sistema de arquivos no Workload Factory</block>
   <block id="59f5126fcebfa1b4b592a46994a99827" category="paragraph">Aumente a capacidade de storage SSD quando o uso exceder o limite especificado. Reduza a capacidade de storage SSD quando não estiver usando os conjuntos de trabalho para economizar dinheiro.</block>
   <block id="eb6c620cfb7e9a2b2d272cbd7de4add5" category="inline-link-macro">ativar gerenciamento de capacidade automática</block>
@@ -3063,12 +3024,197 @@
   <block id="4ccd08ccc04cf1986a6dc1a2de287f72" category="sidebar">Aplicar tags a dispositivos de bloco</block>
   <block id="596e30b7050101709ce0d710420e77a7" category="paragraph">Saiba mais sobre as tendências de capacidade do SSD diretamente na visão geral dos seus sistemas de arquivos FSx for ONTAP. O novo cartão de gerenciamento de capacidade exibe as tendências de uso do mês anterior. Essa análise compara a capacidade real com a alocada, facilitando a avaliação do uso de recursos.</block>
   <block id="deede3cf7f18c08613ec53890188368e" category="section-title">Relatório em PDF sobre o status bem arquitetado dos sistemas de arquivos FSx for ONTAP</block>
-  <block id="09731bdb23a8e229cca44808afd3eb18" category="inline-link-macro">Visualize o status de arquitetura adequada dos seus sistemas de arquivos FSx for ONTAP no NetApp Workload Factory.</block>
-  <block id="bf36e3bb684711138abb04e7f7f95c1a" category="paragraph">Após a análise, você pode baixar um relatório em PDF sobre o status de arquitetura adequada dos seus sistemas de arquivos FSx for ONTAP para seus registros ou para compartilhar com suas equipes. <block ref="8f1fbab727bbab0e7967c959283750c4" category="inline-link-macro-rx"></block></block>
   <block id="eeb77472aa3a83d51f0873ec83e22572" category="list-text">*Configurações da VM de armazenamento*:</block>
   <block id="0abde7f01f46e5ae295493bf4b280687" category="list-text">A operação de cutover não migra todas as configurações da máquina virtual de armazenamento para a máquina virtual de armazenamento de destino. Por exemplo, as configurações de iSCSI, MTU do domínio de broadcast e DNS não são migradas. Atualize essas configurações manualmente na máquina virtual de armazenamento de destino após o cutover. Para mais detalhes, consulte a seção <block ref="af05d35e02c20d22f4e6b1df9b57e0a2" category="inline-xref-macro-rx"></block>.</block>
   <block id="893700039eb02078c7602e997d7f9922" category="list-text">Se a sua máquina virtual de armazenamento usa autenticação de domínio-túnel, configure e habilite um túnel de domínio no sistema de arquivos de destino antes de iniciar a migração.</block>
   <block id="8ee47478c07b40fab9e5a6a34028629c" category="list-text">Abra as portas TCP 11104 e 11105 para transferência de dados e gerenciamento seguros entre sistemas de armazenamento. ICMP é opcional, mas pode auxiliar na verificação e solução de problemas de rede.</block>
   <block id="fa8b213a52b4f0e35de875db4340e809" category="paragraph"><block ref="fa8b213a52b4f0e35de875db4340e809" category="inline-link-macro-rx"></block></block>
   <block id="e9df00e078102fb55394d13dad9115a4" category="paragraph">Você pode replicar um volume de origem (leitura/gravação) ou um volume de proteção de dados (DP). A replicação em cascata é suportada, mas um terceiro salto não é. Saiba mais sobre <block ref="a7ce0f55df6d6b86426266d8a7eeb328" category="inline-link-macro-rx"></block>.</block>
+  <block id="6fbe09b3d9705d922f633d5654393f36" category="paragraph">*Replicar configuração da VM de armazenamento*: Opcionalmente, selecione para replicar os dados e as configurações de uma única VM de armazenamento. Ao migrar dados e configurações, todos os volumes devem concluir a replicação nas últimas 24 horas e, em seguida, a migração deve ocorrer ao mesmo tempo.</block>
+  <block id="d5b5dacfafad754125a1766d22142ae9" category="paragraph">A política de tiering para todos os volumes será definida por padrão como a política de tiering do volume de origem, o que é recomendado para casos de uso de migração.</block>
+  <block id="21c415465773e849068dc431e13446de" category="paragraph">Durante a migração, os clientes acessam os dados do sistema de arquivos ONTAP. Após o cutover, os volumes ficam disponíveis por meio dos endereços IP do sistema de arquivos FSx for ONTAP de destino. Atualize quaisquer clientes ou recursos que ainda estejam usando o endereço IP antigo.</block>
+  <block id="5d7672a9b59eb24aba87a27c8bbec3cf" category="list-text">*Nome da VM de armazenamento*: Selecione a VM de armazenamento. A VM de armazenamento que você selecionar será o destino de todos os volumes selecionados nesta relação de replicação.</block>
+  <block id="6a61ae33311b14370f4dc27907232bd8" category="paragraph">Quando os nomes das máquinas virtuais de armazenamento de origem e de destino são idênticos, criamos um alias do sistema de arquivos para os nomes das máquinas virtuais de armazenamento de destino para evitar conflitos de peering.</block>
+  <block id="e9712999f0fba60273338ec00996f750" category="list-text">*Inicializar relacionamento de replicação*: escolha inicializar o relacionamento de replicação imediatamente após criá-lo ou posteriormente. Observe que a inicialização pode ser demorada, e talvez seja melhor executar a transferência completa fora do horário de pico.</block>
+  <block id="c881c341babc8c1d5988377bf0380590" category="paragraph">Para inicializar manualmente mais tarde, consulte as instruções em <block ref="588943a82f15abe65d3587b81de5b7ab" category="inline-xref-macro-rx"></block>.</block>
+  <block id="fabdd77b146b0b5f04616afb10561fb8" category="admonition">A correspondência entre os rótulos de origem e destino é necessária para retenção de longo prazo. Se desejar, Workload Factory pode criar os rótulos que faltam para você.</block>
+  <block id="015e6ecffa9ac033df81ffa6004a8511" category="list-text">*Escolha uma política existente*: selecione uma política existente.</block>
+  <block id="d78944313be822653acf15ab5398cc09" category="paragraph">Após a análise, você pode baixar um relatório em PDF sobre o status de arquitetura adequada dos seus sistemas de arquivos FSx for ONTAP para seus registros ou para compartilhar com suas equipes.</block>
+  <block id="1e2f4a38d5efedb5cf0944fea2e5cddf" category="inline-link-macro">Visualize o status de arquitetura adequada dos seus sistemas de arquivos FSx for ONTAP no NetApp Workload Factory</block>
+  <block id="74d7776910c4ca73289bbbb6c6bfddf9" category="paragraph"><block ref="74d7776910c4ca73289bbbb6c6bfddf9" category="inline-link-macro-rx"></block></block>
+  <block id="ed577820f4fec6bbade3e14c5eb7020d" category="doc">Suporte para AWS GovCloud (US) no NetApp Workload Factory</block>
+  <block id="8b15ccb7fd3de568f0d6670c4c2d0d62" category="paragraph">NetApp Workload Factory é compatível com contas AWS GovCloud (US). Usando uma conta GovCloud, você pode implantar e gerenciar cargas de trabalho de armazenamento nas regiões AWS GovCloud (US).</block>
+  <block id="8e45f2905d109c7f7ad7492d2341d234" category="section-title">Defina os limites de latência de volume no NetApp Workload Factory</block>
+  <block id="aef3e325f515541566b19394d335ef43" category="paragraph">Você pode configurar limites de latência para cada volume individualmente, a fim de monitorar o desempenho e receber alertas quando os valores de latência excederem os limites definidos. O Workload Factory monitora tanto a latência de leitura quanto a de gravação e gera alertas quando qualquer um dos limites é excedido.</block>
+  <block id="e38f666491d8e4d592d5df89c8419266" category="paragraph"><block ref="e38f666491d8e4d592d5df89c8419266" category="inline-link-macro-rx"></block></block>
+  <block id="b9ceeddf626c03ee2118a4917ae8c38b" category="section-title">Acompanhe os atrasos de replicação no NetApp Workload Factory</block>
+  <block id="a36f1662cdb9e2ceab93d3f25e0eca77" category="paragraph">Com o NetApp Workload Factory, você pode monitorar os atrasos de replicação dos seus sistemas de arquivos FSx for ONTAP que estão configurados com replicação remota. Os atrasos de replicação indicam o intervalo de tempo entre quando os dados são gravados no sistema de arquivos de origem e quando são replicados para o sistema de arquivos de destino. Monitorar os atrasos de replicação ajuda você a acompanhar a integridade da sua configuração de replicação e a identificar possíveis problemas que possam afetar a consistência de dados e os objetivos de ponto de recuperação (RPOs).</block>
+  <block id="fde2f1eddf6c2d5994d4c9cacc07ff31" category="paragraph"><block ref="fde2f1eddf6c2d5994d4c9cacc07ff31" category="inline-link-macro-rx"></block></block>
+  <block id="15f374eb532ab28d06443136d99e63b5" category="section-title">Identificação de hosts e definições de carga de trabalho no NetApp Workload Factory</block>
+  <block id="e4d934df8f9ddefcebbc02695e3cfbdc" category="paragraph">O Workload Factory identifica os hosts que consomem armazenamento e os tipos de cargas de trabalho associadas à atividade do host. As definições de carga de trabalho são geradas por IA com base em tags da AWS e metadados. Você pode visualizar detalhes do host e definições de carga de trabalho nas telas de recursos de sistema de arquivos, volume e dispositivo de bloco no Workload Factory.</block>
+  <block id="9ef57b630c87ffd61b917510a7a26030" category="section-title">Detalhes do LIF disponíveis no NetApp Workload Factory</block>
+  <block id="055f68ac1562a94352bd56b1842791fb" category="paragraph">Exibimos todos os endpoints do sistema de arquivos e das máquinas virtuais de armazenamento (VMs) diretamente na guia Visão geral de um sistema de arquivos. A visibilidade direta dos endpoints no console do Workload Factory facilita o monitoramento do acesso à rede, dos endpoints e do status de failover sem usar a CLI ou CloudShell. Para exibir detalhes do LIF, incluindo funções, endpoints, nós, endereços IP e status, você precisará associar um link ao sistema de arquivos.</block>
+  <block id="c1bff806faafabc5316c2270f113bd85" category="inline-link-macro">Aprenda como associar um link ao seu sistema de arquivos no NetApp Workload Factory</block>
+  <block id="0cfa9f29837495af6181228a2286658a" category="paragraph"><block ref="966e2ff22df42c69be9cce59aca228ff" category="inline-link-macro-rx"></block>.</block>
+  <block id="3cb407325a893b82dafad46209626b50" category="section-title">Melhorias de custo</block>
+  <block id="4ca110e0d9ae04c6ba757ec8fd3182f2" category="paragraph">Novos filtros opcionais em nível de página estão disponíveis para aprimorar os resultados da análise de custos dos seus recursos em todas as contas da AWS. Você pode selecionar várias regiões e usar a chave da tag de alocação do sistema de arquivos e os valores da chave para filtrar os resultados da análise de custos e obter detalhes de custos específicos de recursos para seus sistemas de arquivos e volumes FSx for ONTAP.</block>
+  <block id="083b82dbc7669e65217c0c4cdd6a08f3" category="inline-link-macro">Utilize filtros para análise de custos no NetApp Workload Factory</block>
+  <block id="cd3891050de2d442936c795f42b5be55" category="paragraph"><block ref="cd3891050de2d442936c795f42b5be55" category="inline-link-macro-rx"></block></block>
+  <block id="830f303cdae9912a4ea32f1f9cbf416e" category="section-title">O agendamento de inicialização da replicação está disponível no NetApp Workload Factory</block>
+  <block id="15bc72c00374b1de7051b2d672060b33" category="paragraph">Durante a configuração da replicação de dados, agora você pode agendar a inicialização da replicação para seus sistemas de arquivos FSx for ONTAP. As opções são inicializar a relação de replicação imediatamente ou em um horário específico. A inicialização da replicação é o processo de criação de uma linha de base para a replicação, copiando dados do sistema de arquivos de origem para o sistema de arquivos de destino. O agendamento da inicialização da replicação permite automatizar esse processo e garantir que sua configuração de replicação esteja atualizada sem intervenção manual.</block>
+  <block id="214d407853490bc740a9484be85b4f3e" category="inline-link-macro">Replicar dados no NetApp Workload Factory</block>
+  <block id="f9e073199d07787a028f9eaa386764c2" category="paragraph"><block ref="f9e073199d07787a028f9eaa386764c2" category="inline-link-macro-rx"></block></block>
+  <block id="365c1d3c417c4ceff114f4189c08aded" category="section-title">Relatório em Excel do status bem arquitetado do FSx for ONTAP file systems</block>
+  <block id="cef65a1b6b28821282b97ae2bfcccb7b" category="paragraph">Após a análise, você pode baixar um relatório em Excel sobre o status de arquitetura adequada dos seus sistemas de arquivos FSx for ONTAP para seus registros ou para compartilhar com suas equipes.</block>
+  <block id="d280f690a98c812adf5c9aff661addf4" category="section-title">Visualize e analise eventos de latência</block>
+  <block id="9863682c1ac348823880a0e92aae9424" category="paragraph">O NetApp Workload Factory agora oferece suporte à visualização e análise de eventos de latência para volumes FSx for ONTAP. Você pode visualizar eventos de latência sem uma conexão de link, facilitando o monitoramento de problemas de desempenho. Para analisar eventos de latência e receber insights e recomendações baseados em IA, é necessário conectar-se ao sistema de arquivos usando um link. A análise fornece valores de latência atuais, limites, análise de resposta de QoS e orientações para correção.</block>
+  <block id="48b5c4d3746aea9e001799935441305e" category="inline-link-macro">Analise eventos do FSx for ONTAP no NetApp Workload Factory</block>
+  <block id="46d1548637c7b145aedaf16fc4982ded" category="paragraph"><block ref="46d1548637c7b145aedaf16fc4982ded" category="inline-link-macro-rx"></block></block>
+  <block id="6935aa37908b8d3e8e6495adec301374" category="section-title">Defina os limites de latência de volume</block>
+  <block id="8d36c5c4d1b5b3180db932fcf4bd5e3b" category="paragraph">Agora você pode configurar limites de latência por volume para monitorar o desempenho e receber alertas quando a latência de leitura ou gravação exceder os limites definidos. O monitoramento de latência ajuda você a identificar proativamente problemas de desempenho antes que eles afetem suas cargas de trabalho.</block>
+  <block id="da6f5bf8aee08ef83468ad38ab52796b" category="doc">Novo painel de controle bem arquitetado disponível para todos os sistemas FSx para ONTAP</block>
+  <block id="7fca025a8bf1b5d72a149731d5c88125" category="paragraph">A análise de arquitetura bem estruturada agora está disponível para sistemas de arquivos FSx for ONTAP a partir do novo painel de arquitetura bem estruturada no NetApp Workload Factory. O novo painel oferece uma visão centralizada de todos os seus sistemas de arquivos em todas as contas e regiões e suas configurações em um único local. Uma notificação pop-up aparece quando você acessa a guia *Arquitetura bem estruturada* a partir de um sistema de arquivos. Acesse o novo painel selecionando *Arquitetura bem estruturada* no menu de navegação à esquerda no Workload Factory.</block>
+  <block id="b09ad8a2ad81c470093e9c74313ea0c2" category="paragraph">Você ainda pode acessar a análise de arquitetura adequada para um sistema de arquivos específico e pela opção de menu *Well-architected* em Storage.</block>
+  <block id="9864fa88fc3747e67b6fc38c9b938677" category="section-title">Novas recomendações na análise well-architected</block>
+  <block id="a38b9a0af0de5e85c5e64a158079deb5" category="paragraph">O Workload Factory agora inclui as seguintes configurações na análise bem arquitetada para sistemas de arquivos FSx for ONTAP:</block>
+  <block id="fd2d46026cdd19577962231303a46abd" category="list-text">Conectar host ao nó de failover: verifica se os hosts estão conectados ao nó de failover em um sistema de arquivos FSx for ONTAP ativo-passivo e sugere conectar os hosts ao nó de failover para maior confiabilidade.</block>
+  <block id="0e7d4cc90eb78377a1315bafe07799dd" category="list-text">Conectar host ao nó preferencial: verifica se os hosts estão conectados aos seus dispositivos de bloco usando o nó preferencial e sugere conectar os hosts ao nó preferencial para eficiência de desempenho.</block>
+  <block id="efbeddc0347a679a438120189b77f860" category="section-title">Explorador de volumes</block>
+  <block id="3e1cc7f8632eafd5f69d910c06db3aa4" category="paragraph">O Volumes Explorer oferece uma visualização simples e pesquisável de todos os seus volumes no NetApp Workload Factory. Veja rapidamente quais volumes atendem cargas de trabalho de bloco ou de arquivo. Visualize o tamanho lógico de cada volume, a capacidade física utilizada e se ele usa recursos de eficiência de storage (compressão, deduplicação e compactação). Filtre e classifique por nome, status (disponível/com falha), latência, tamanho, capacidade utilizada e recursos de proteção.</block>
+  <block id="2731bbeb58ccf58c8e631528a8e3fc94" category="section-title">Melhorias no atraso de replicação</block>
+  <block id="3a410df7dfc102007ea8a7569fdb1810" category="section-title">Notificações de e-mail aprimoradas para atrasos na replicação</block>
+  <block id="bd78ae8d1a9aed4500716acc31d179d8" category="paragraph">As notificações por e-mail sobre atrasos na replicação agora incluem mais detalhes sobre o relacionamento afetado. Essa notificação ajuda você a identificar rapidamente o relacionamento afetado e analisá-lo no console do Workload Factory.</block>
+  <block id="4dc5c4a9c4b845746295cce1108ec278" category="inline-link-macro">Ativar notificações para atrasos na replicação</block>
+  <block id="7f27417270cfb269527e679a64b5a19a" category="paragraph"><block ref="7f27417270cfb269527e679a64b5a19a" category="inline-link-macro-rx"></block></block>
+  <block id="347a810d994926c5e31d1bd690b34fcf" category="section-title">Exportar dados de atraso de replicação para CSV</block>
+  <block id="45cbeaeb98d1d075d560a8e62269fbbb" category="paragraph">Agora você pode exportar os dados de atraso de replicação para um arquivo CSV para analisar os dados em uma planilha e compartilhá-los com outras pessoas.</block>
+  <block id="2b3d29c88190bdb57da25e1848b65b7d" category="inline-link-macro">Acompanhe atrasos na replicação</block>
+  <block id="7aab1e1b0e0fcc4720b15dcc5848034e" category="paragraph"><block ref="7aab1e1b0e0fcc4720b15dcc5848034e" category="inline-link-macro-rx"></block></block>
+  <block id="5312d8ea7e9ef079aeac882dbcd64d0a" category="section-title">Aprimoramento da criação de dispositivos de bloco</block>
+  <block id="85fb39d6f3bb52679cb9ce3bd27ffd1c" category="paragraph">O Workload Factory suporta a criação de dispositivos de bloco a partir de um snapshot de volume.</block>
+  <block id="a439412a0228682fa1054f4bc1a96815" category="inline-link-macro">Crie um dispositivo de bloco a partir de um snapshot de volume no Workload Factory</block>
+  <block id="40a9299c5fdf8c1e8242dcb670c6b1cd" category="paragraph"><block ref="40a9299c5fdf8c1e8242dcb670c6b1cd" category="inline-link-macro-rx"></block></block>
+  <block id="1f94288dfe179e2109de9bb7a2e9b65f" category="summary">Analise eventos no NetApp Workload Factory para FSx para ONTAP.</block>
+  <block id="0847c46611bd7086c19dafd5d506a708" category="paragraph">Identifique e resolva rapidamente problemas do sistema de arquivos FSx for ONTAP com o analisador de eventos inteligente no NetApp Workload Factory. O analisador de eventos extrai e analisa automaticamente eventos do Sistema de Gerenciamento de Eventos (EMS) e eventos de latência do FSx for ONTAP, aproveitando a IA Agentic com integração ao Amazon Bedrock.</block>
+  <block id="b177ab05bd2fbdb0d056e9aab959cb42" category="paragraph">Os administradores de armazenamento geralmente respondem a eventos do FSx for ONTAP somente após reclamações de clientes ou mantendo scripts e alarmes personalizados. Essa abordagem reativa pode reduzir a eficiência, atrasar a resolução de problemas e aumentar o tempo de inatividade.</block>
+  <block id="ca49138d55194f3a1b69368658fa59c0" category="paragraph">O analisador de eventos extrai automaticamente os seguintes tipos de eventos dos sistemas de arquivos FSx for ONTAP:</block>
+  <block id="229e5c835625a6cd5a09a266df2faa8c" category="inline-link-macro">Conecte-se ao sistema de arquivos usando um link</block>
+  <block id="5189ff53307ee7b08ddaa025da603b7c" category="list-text">*Eventos EMS*: Eventos de erro, alerta e emergência do ONTAP Event Management System. Para visualizar e analisar eventos EMS, você deve <block ref="e3e5092d2d9ecf941f8ffdff56f5837a" category="inline-link-macro-rx"></block>.</block>
+  <block id="35b385d2a34b34294a95472dbbafeb62" category="list-text">*Eventos de latência*: eventos de latência de leitura/gravação. Os eventos de latência podem ser visualizados sem uma conexão de link. Para analisar eventos de latência e receber insights baseados em IA, você deve <block ref="e3e5092d2d9ecf941f8ffdff56f5837a" category="inline-link-macro-rx"></block>.</block>
+  <block id="1ee445f8e51142e85beb7b0f2c2e1518" category="paragraph">Para visualizar os eventos, você deve <block ref="74a62493240df6cc0643a248f282a25a" category="inline-link-macro-rx"></block> em sua conta da AWS. Os eventos são exibidos por 72 horas antes de serem removidos.</block>
+  <block id="59a0aad57efa98df25e199d3fa441911" category="list-text">Solução de problemas avançada: a IA identifica, analisa e fornece automaticamente informações para corrigir eventos de EMS e latência no FSx for ONTAP, reduzindo o tempo de investigação manual.</block>
+  <block id="b5bc253203e24fc8972e3fe9be53196b" category="list-text">Remediação de melhores práticas: o analisador de eventos fornece etapas claras e práticas para resolver eventos de EMS e latência do FSx for ONTAP.</block>
+  <block id="185df28397efd88f333333e1c2f1ae0d" category="section-title">Ver eventos</block>
+  <block id="d523d9bf647cfb019b391ffebe2ea5f5" category="paragraph">Para visualizar eventos de latência, você deve <block ref="74a62493240df6cc0643a248f282a25a" category="inline-link-macro-rx"></block> na sua conta da AWS.</block>
+  <block id="8528b1a4a7dc3ba0b6997424ef1d4876" category="paragraph">Para visualizar os eventos do EMS, você também deve <block ref="e3e5092d2d9ecf941f8ffdff56f5837a" category="inline-link-macro-rx"></block>.</block>
+  <block id="6ff7afa8b9f67a5aab7d9ebedd08b828" category="section-title">Analisar eventos</block>
+  <block id="ffb5c85ee020316605143a7a4c0773b7" category="paragraph">Para analisar eventos de EMS e latência e receber insights e recomendações baseados em IA, certifique-se do seguinte:</block>
+  <block id="17a23fbf55b4140721bd4a74dda992ee" category="list-text">Você tem <block ref="3728a9886a6e8befe945facf87fd7817" category="inline-link-macro-rx"></block> em sua conta AWS.</block>
+  <block id="4dfaad1ff2ec349d086542d609839be5" category="inline-link-macro">conectado ao sistema de arquivos usando um link</block>
+  <block id="118cc54d4ac9f6ec4ccf910143c8176e" category="list-text">Você tem <block ref="e70ae182cde64a3166eabfbf424a24d8" category="inline-link-macro-rx"></block>.</block>
+  <block id="55bc5f9b6cf37ff622a10cc4fd3aaccc" category="paragraph">Requisitos adicionais (o sistema solicitará durante a análise do evento):</block>
+  <block id="6ab6dbf6bacb521f8499b17428a8a145" category="paragraph">Configure as APIs do Amazon Bedrock para cada conta da AWS. As APIs do Amazon Bedrock são usadas para fornecer informações sobre eventos do FSx for ONTAP.</block>
+  <block id="9aac5daa464aa807ec502ef1061168e5" category="section-title">Visualize e analise eventos do FSx para ONTAP</block>
+  <block id="47a237506ac840cddf392779b1585763" category="paragraph">Utilize o console do Workload Factory para visualizar e analisar eventos de EMS e de latência para sistemas de arquivos FSx for ONTAP.</block>
+  <block id="f6856116e4352490acbea56ef62865ec" category="list-text">Na tela de Análise, selecione as contas, credenciais e regiões da AWS que contêm os sistemas de arquivos FSx for ONTAP que você deseja visualizar.</block>
+  <block id="5b33ab8ba01b4578fbe56efef338b884" category="paragraph">Somente sistemas de arquivos FSx for ONTAP que possuem eventos são exibidos.</block>
+  <block id="20fe9df117d2c4b409011f141cf44737" category="list-text">Selecione o sistema de arquivos FSx for ONTAP que você deseja visualizar.</block>
+  <block id="565621a6f9cde613669444d22ece2bee" category="paragraph">A tabela de eventos mostra todos os eventos para esse sistema de arquivos.</block>
+  <block id="5083e777a47a5e50fffe64035fef97e5" category="list-text">Confira os detalhes do evento na tabela.</block>
+  <block id="748fc360eb3ec84dbbcd7c1aae865aac" category="list-text">Para analisar eventos, faça um dos seguintes procedimentos:</block>
+  <block id="6c0f1ccca90477332b018960fb44eb87" category="list-text">Para analisar vários eventos, selecione as caixas de seleção ao lado dos eventos e selecione *Analisar* na tabela.</block>
+  <block id="3daca78e61fc196750ea9d99cf3f0786" category="list-text">Para analisar um evento e visualizar insights no painel lateral, selecione o nome do evento e, em seguida, selecione *Analisar* no painel. Os insights e recomendações são exibidos no painel.</block>
+  <block id="9a1ef45ae6fd0052a26aaea575fa9054" category="list-text">Para analisar um evento da tabela, selecione *Analisar* na linha do evento e, em seguida, selecione o nome do evento para visualizar os insights e recomendações.</block>
+  <block id="68178ddd88bc5af168d0f95fe76212ad" category="inline-link-macro">Defina os limites de latência de volume no Workload Factory</block>
+  <block id="1045d7a603969c049cf68b4017ae537e" category="list-text"><block ref="1045d7a603969c049cf68b4017ae537e" category="inline-link-macro-rx"></block></block>
+  <block id="6347309ad07af7266241819bb2af76d1" category="list-text">*Conecte o host ao nó de failover*</block>
+  <block id="e89cb70f69260bd0359dad1d58cb94de" category="paragraph">A NetApp Workload Factory recomenda conectar os hosts ao nó de failover para manter a conectividade e evitar interrupções durante failovers.</block>
+  <block id="8722112d28d6eea0aff9478fb61c5de7" category="section-title">Eficiência de desempenho</block>
+  <block id="8b1271dadb19678250cdc4bb1a083452" category="paragraph">A eficiência de desempenho concentra-se no uso eficiente dos recursos de TI e computação.</block>
+  <block id="bb7eaffc45b0ebd2357f86e392d3d75e" category="list-text">*Conecte o host ao nó preferido*</block>
+  <block id="e72d694d5291c64bcb1eda2ecaff634a" category="paragraph">Em um modelo de implantação FSx for ONTAP de alta disponibilidade, os hosts devem ser conectados diretamente ao nó que atende o dispositivo de bloco para garantir acesso direto e desempenho ideal.</block>
+  <block id="6149c2ac82c846d8c0c66beff37f271d" category="paragraph">Crie dispositivos de bloco para atender aos seus requisitos de aplicativos LOB. Você pode criar dispositivos de bloco em um volume existente, criar um novo volume para o novo dispositivo de bloco ou criar um novo volume a partir de um snapshot para o novo dispositivo de bloco.</block>
+  <block id="7d890770a60d61d9610602416316dd0c" category="list-text">Criar a partir de um instantâneo de volume. Selecione o nome do volume de origem e o nome do instantâneo. Somente volumes sem dispositivos de bloco estão disponíveis.</block>
+  <block id="0d9cf45fb23b4088730f72dd43be4a9b" category="paragraph">Você tem duas opções para criar links neste fluxo de trabalho: automaticamente ou manualmente. Se você tiver uma conta da AWS GovCloud, deverá criar um novo link manualmente.</block>
+  <block id="e97bbb69ec6bcd2c1b3d761224ed4559" category="admonition">A criação automática de links não é compatível com contas da AWS GovCloud.</block>
+  <block id="d37d952a78337c053485a61317b953df" category="list-text">*AWS Secrets Manager*: Sempre ativado para contas GovCloud. Opcional para outras contas. Permite que o NetApp Workload Factory obtenha as credenciais de acesso do FSx for ONTAP do seu AWS Secrets Manager.</block>
+  <block id="f3a06ea1d47de2a4216fe3fd53364d24" category="list-text">*Fornecido pelo usuário*: selecione esta opção para atribuir uma função de execução Lambda específica e suas políticas associadas ao link Lambda. As seguintes permissões são necessárias para a política de permissões do Lambda. A<block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block> permissão é necessária somente ao usar AWS Secrets Manager.</block>
+  <block id="687e9c397e4fb6b561e735147b5af100" category="paragraph">Observe que três permissões são concedidas ao Lambda quando você inicia o modelo CloudFormation. O NetApp Workload Factory usa essas permissões ao utilizar links.</block>
+  <block id="1425c9b22ae63851bbaa938ebc0a967d" category="list-text">Após criar a stack com sucesso, cole o ARN do Lambda na caixa de texto no console do Workload Factory. O Workload Factory recupera automaticamente a conta da AWS, a localização e o grupo de segurança com base no sistema de arquivos FSx for ONTAP.</block>
+  <block id="47dfa5e12270c73140e2f3dc8b32a020" category="paragraph">O Workload Factory associa o link ao sistema de arquivos FSx for ONTAP. Você pode executar operações avançadas do ONTAP.</block>
+  <block id="eb3eec333eedf15738e12e55e183cdb7" category="paragraph"><block ref="c7c8a4154bf78f63993b7572e6143221" category="inline-link-macro-rx"></block>.</block>
+  <block id="7e1ccbf5b074e2396f26b030d7e1231f" category="list-text">Confiabilidade: limite de capacidade do SSD, snapshots locais agendados, backups de volume agendados, replicação de dados remota, confiabilidade de dados para retenção de longo prazo e conectar hosts ao nó de failover</block>
+  <block id="383b20892354fe24b77f00c1d9e28776" category="list-text">Eficiência de desempenho: conecte hosts ao nó preferencial</block>
+  <block id="81fccfd8b7cc4d87c0978527048afe60" category="paragraph">A conectividade de links para contas GovCloud é suportada. O NetApp Workload Factory usa chaves de autenticação GovCloud, permitindo acesso seguro e sem agente ao FSx for ONTAP para operações ONTAP por meio de mecanismos aprovados GovCloud.</block>
+  <block id="f22e542eda471e2702ed07136761fd6c" category="list-text">Exibindo detalhes da LIF da storage VM e do cluster, incluindo funções, endpoints, nós, endereços IP e status</block>
+  <block id="d72415af6292f1377ab69432624c64ea" category="summary">Gerencie relacionamentos de replicação no NetApp Workload Factory.</block>
+  <block id="a26b114333821bd07a9e54008500a358" category="doc">Gerencie seus relacionamentos de replicação no NetApp Workload Factory</block>
+  <block id="cdb933f4a358f433a7751a2bd01fe605" category="paragraph">Gerencie seus relacionamentos de replicação no NetApp Workload Factory. Você pode pausar, retomar, reverter, interromper e excluir relacionamentos de replicação entre volumes de origem e destino. Você também pode alterar o agendamento de replicação do volume de origem e limitar a taxa de transferência máxima para seus relacionamentos de replicação.</block>
+  <block id="5c91a02c5ef041ec58b2bbf831d9d835" category="section-title">Atualize manualmente os dados do snapshot em uma relação de replicação</block>
+  <block id="35165f9b14f6cde03fa7f6f9b03732ba" category="list-text">Selecione *Atualizar*.</block>
+  <block id="138510169fb71d3c664fd8de2115e91b" category="list-text">Na caixa de diálogo Update, selecione *Update*.</block>
+  <block id="601705efa4e91aafd2708cc73f4f3be2" category="paragraph">Ao retomar uma relação de replicação, quaisquer alterações feitas no volume de destino enquanto a replicação estava interrompida são excluídas. O volume de destino passa de leitura/gravação para somente leitura e volta a receber atualizações do volume de origem no intervalo de replicação agendado.</block>
+  <block id="113dedb25595a53107bcc3df8ba96132" category="summary">Defina limites de latência para os volumes para receber alertas quando a latência de leitura ou gravação exceder os valores especificados.</block>
+  <block id="9811ff892290a925d34cb38c5bf7c65a" category="paragraph">Ao definir limites de latência, o Workload Factory monitora o seguinte:</block>
+  <block id="f8139017cc10775c53aead48940fb841" category="list-text">*Latência de leitura*: aciona um alerta quando as operações de leitura excedem o limite especificado em milissegundos.</block>
+  <block id="b9a70936ee46ebfe9908f4e27212b2f1" category="list-text">*Latência de gravação*: aciona um alerta quando as operações de gravação excedem o limite especificado em milissegundos.</block>
+  <block id="55890744b46d30b34c119008aadad490" category="paragraph">O monitoramento de latência utiliza os seguintes parâmetros padrão:</block>
+  <block id="8b2efc01d419d2e075218fa1edac875b" category="list-text">*Limite de IOPS*: 100 IOPS (leitura/gravação)</block>
+  <block id="037ea7d94a5a2563d24d4aab128c2f74" category="list-text">*Intervalo de tempo*: 10 minutos</block>
+  <block id="fc30acb77198b9a113675211028eeb7f" category="paragraph">Um alerta é gerado quando o limite de latência é excedido e o limite de IOPS é atingido durante o intervalo de tempo especificado.</block>
+  <block id="d663edf15a1c9b9cce32f438ee09111b" category="admonition">Você pode visualizar eventos de latência e receber alertas sem uma conexão de internet. No entanto, para analisar eventos e receber insights e recomendações baseados em IA, você deve <block ref="e3e5092d2d9ecf941f8ffdff56f5837a" category="inline-link-macro-rx"></block>.</block>
+  <block id="c860af979551dbcf8788e767b74ef2f4" category="list-text">No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume que deseja configurar e, em seguida, selecione *Gerenciar*.</block>
+  <block id="ecfd19bbe3c2c4e92ff25fd22f2d17fe" category="list-text">Na aba Volumes, selecione o menu de ações do volume para o qual deseja definir os limites de latência.</block>
+  <block id="ee43009d0c790146325573e838a42f39" category="list-text">Selecione *Ações de alertas* e, em seguida, *Definir limite de latência*.</block>
+  <block id="e7199990279785fb0027f522b7518c23" category="list-text">Na caixa de diálogo Definir limite de latência, configure o seguinte:</block>
+  <block id="18a1f4ac498e878706a9bea4c3f7d8d2" category="list-text">*Latência de leitura*: insira o valor limite em milissegundos (ms) para operações de leitura.</block>
+  <block id="a63caca5c71add7ea0dda24a836eecbe" category="list-text">*Latência de gravação*: insira o valor limite em milissegundos (ms) para operações de gravação.</block>
+  <block id="f81e32f3de5732f5f66ccfa86ef953dd" category="list-text">Selecione *Salvar* para aplicar os limites de latência.</block>
+  <block id="9204792b7a380af352b0493b88d5303b" category="inline-link-macro">Tela de análise</block>
+  <block id="6f5b7d64dd977f3594b9b347533d7259" category="paragraph">O Workload Factory monitora o volume e gera alertas quando a latência de leitura ou gravação excede os limites configurados. Você pode visualizar eventos de latência a partir do <block ref="df1730d271761ecb498a3dca135d5e07" category="inline-link-macro-rx"></block>.</block>
+  <block id="a1edc47cfd4f855c0729219748978279" category="list-text"><block ref="a1edc47cfd4f855c0729219748978279" category="inline-link-macro-rx"></block></block>
+  <block id="56df9b1084a1d8fbfcb5630d52db4560" category="summary">Monitore os custos e gere relatórios para os recursos do seu sistema de arquivos FSx for ONTAP no NetApp Workload Factory.</block>
+  <block id="e34daec9a99e5e16cdd75dd4637d156b" category="doc">Monitore custos e obtenha relatórios de recursos no NetApp Workload Factory</block>
+  <block id="5585a04aef8ebc87e1cda202d7e2a439" category="paragraph">Monitore os custos e o uso do sistema de arquivos FSx for ONTAP em uma visão consolidada no console do NetApp Workload Factory. Os dados de custo ajudam você a gerenciar orçamentos e otimizar recursos com eficiência. O Workload Factory também gera relatórios de custos para seus recursos do sistema de arquivos FSx for ONTAP que você pode compartilhar com as partes interessadas.</block>
+  <block id="132c7cd068e9c3c95296d05738c81a90" category="paragraph">O Workload Factory monitora os custos e o uso do sistema de arquivos FSx for ONTAP obtendo dados de custo do AWS Cost Explorer. Os seguintes detalhes de custo são monitorados: tipo de uso, SKU de uso, tipo de implantação, uso e custo total.</block>
+  <block id="759dd0f8e7a28f421f2c25ba15aca0e1" category="paragraph">Para recursos exclusivos, o Workload Factory calcula os custos combinando o uso real do nível de desempenho, uma parcela proporcional dos custos do nível de desempenho alocada ao espaço provisionado, mas não utilizado, as alocações de desempenho distribuídas por capacidade e o uso do pool de capacidade. Cada componente é multiplicado pelo seu preço por unidade para essa dimensão, e os resultados são somados para determinar o custo total de cada recurso.</block>
+  <block id="0ed1a26b65398b8b99cc7180f0f958ba" category="paragraph">No painel de custos, você pode filtrar os dados de custo e uso por contas da AWS, credenciais, uma ou mais regiões e intervalos de tempo para que você possa entender o consumo do seu sistema de arquivos FSx for ONTAP. Os dados são sempre exibidos em uma taxa mensal.</block>
+  <block id="0254ba3a609bc024e3f6f83721515677" category="paragraph">Obtemos dados de custo e uso dos seus recursos do sistema de arquivos FSx for ONTAP a partir do AWS Cost Explorer usando as seguintes permissões:<block ref="19d055d1af78d5bccb17b82d9e0b9d01" prefix=" " category="inline-code"></block>. Calculamos o custo total usando a API de custos da AWS e nossas estimativas. `</block>
+  <block id="80e92f578bcc9bc76e7904c0736e30b0" category="inline-link-macro">Saiba mais sobre as tags de alocação de custos da AWS.</block>
+  <block id="30aa9e3df2319b487f228fe2955abbb2" category="paragraph">As chaves de tag de alocação da AWS e os valores das chaves de tag adicionam uma camada adicional de filtragem para identificar custos específicos. Uma _tag_ consiste em uma chave e um valor. Para filtrar por chaves de tag e valores de chaves de tag, atribua tags aos seus sistemas de arquivos FSx for ONTAP.<block ref="8ea95efe0fef689337ea8960e5c1861f" category="inline-link-macro-rx"></block></block>
+  <block id="0b0bedbf9ddde3e3d54ab1a3b6a5f9a6" category="paragraph">Além dos dados de custo exibidos no painel de Custos, você pode gerar relatórios de custo para seus recursos do sistema de arquivos FSx for ONTAP. Os dados no relatório de custo mostram informações para sistemas de arquivos e volumes específicos. O relatório é um arquivo PDF para download que você pode compartilhar com as partes interessadas.</block>
+  <block id="258ef99c8c6162f96d39f58575b891c4" category="section-title">Acompanhe os custos</block>
+  <block id="4eb4c996873463b028b9c244954294a7" category="paragraph">Os custos exibidos no painel de custos do console do Workload Factory são baseados nos dados do AWS Cost Explorer, que são atualizados a cada 24 horas.</block>
+  <block id="d33d3fec0d0cc42bf9722d3406ba5aa2" category="paragraph">Certifique-se de que você atende aos seguintes requisitos:</block>
+  <block id="3f793828e6ae31b6953beef1f2c5b592" category="list-text">Você precisa <block ref="1773ab1fe4aa6a3e5fc61d86a29970f0" category="inline-link-macro-rx"></block> no Workload Factory para rastrear os custos do FSx para ONTAP.</block>
+  <block id="cbdceaa837454b037267d62ad01fe349" category="list-text">Para filtrar por tags de alocação da AWS, certifique-se de que seus sistemas de arquivos FSx for ONTAP tenham tags atribuídas a eles.</block>
+  <block id="0920742e44f6fc32f644b1fa4ba9f2ee" category="list-text">No painel de custos, filtre os dados de custo e capacidade dos seus recursos FSx for ONTAP fornecendo o seguinte:</block>
+  <block id="8e81a56781173760652ca9a06392849b" category="list-text">*Chave de tag de alocação*: (Opcional) Selecione uma chave de tag de alocação e seu valor para gerar um relatório de custos detalhado para todos os sistemas de arquivos FSx for ONTAP associados à tag AWS.</block>
+  <block id="4fa614317a610a608b2a1132a0db24bf" category="list-text">*Valores da tag de alocação*: (Opcional) Selecione o valor da chave da tag de alocação que está associado à chave da tag de alocação para gerar um relatório de custos detalhado para todos os sistemas de arquivos FSx for ONTAP associados à tag da AWS.</block>
+  <block id="5e1645e99b61e0758d672e07e9562df5" category="section-title">Gere relatórios de custos para seus recursos FSx for ONTAP</block>
+  <block id="ecc4f580169a71e3b0eb77b0afb36377" category="paragraph">Gere relatórios de custos para recursos específicos do sistema de arquivos FSx for ONTAP para compartilhar com as partes interessadas.</block>
+  <block id="d9fa93b0259aa36ad24fcbb77d17476a" category="list-text">No painel de custos, selecione *Gerar relatório*.</block>
+  <block id="766eb30a1e5bad36f68174d269e44581" category="list-text">Na tela de Relatório, forneça as seguintes informações:</block>
+  <block id="6d28ef4b6f4c3cf90653ef05bfe35523" category="list-text">*Sistema de arquivos*: Selecione um ou mais sistemas de arquivos FSx for ONTAP para incluir no relatório.</block>
+  <block id="a7bd0905e600528204e4269535f4130f" category="list-text">*Volume*: (Opcional) selecione um ou mais volumes para incluir no relatório.</block>
+  <block id="9eedf15c88882820c71be2457a0407b4" category="paragraph">Um relatório em PDF é gerado e pode ser baixado.</block>
+  <block id="753f0ef1207693ec3d5a5341ae8e6a92" category="summary">Ative o rastreamento para monitorar os atrasos em todos os relacionamentos de replicação da sua conta.</block>
+  <block id="4fd22cd0c1b62f84962ef1e8ffd9c966" category="paragraph">Ative o rastreamento para monitorar os atrasos de replicação em sua conta. Workload Factory alerta você quando os atrasos ultrapassam um limite definido. Por padrão, o limite é 150% do intervalo de replicação para permitir um tempo de transferência normal e reduzir alarmes falsos. Você pode ajustar o limite para corresponder ao seu RPO e receber notificações quando os atrasos o excederem. Você também pode exportar os dados para um arquivo CSV para análise posterior.</block>
+  <block id="93dea0fbfb3d3bc0e6e540f6de60aaf4" category="list-text">Selecione *Ativar rastreamento*.</block>
+  <block id="a3c265cc9e14e487d93cfcb8cd19ba63" category="list-text">Na caixa de diálogo Enable replication lag history, selecione *Enable*.</block>
+  <block id="785e95d007ac530ca81623e89d020254" category="list-text">De volta ao bloco de histórico de atraso de replicação, selecione *Personalizar limite* para definir seu limite preferido.</block>
+  <block id="6a755178543e687ff1dabcfef51a7658" category="list-text">Na caixa de diálogo "Personalizar limite de tempo de atraso", insira o limite em horas e minutos.</block>
+  <block id="748b89fa24d3c9751520ee29acfcb298" category="list-text">Opcionalmente, selecione *Ativar notificações de atraso* para receber notificações quando os atrasos de replicação excederem o limite.</block>
+  <block id="ba86cf7b33d47e93634da88ec7f05bbe" category="paragraph">As notificações chegam por e-mail e incluem:</block>
+  <block id="a1565efa58a4379112baa6f6c81b89b5" category="list-text">Volume de origem</block>
+  <block id="70906679659b9e5913d66957f3f5946c" category="list-text">Volume alvo</block>
+  <block id="71a7ff5ebf9156a251d799ca9d4801be" category="list-text">Limite de tempo de atraso que foi excedido</block>
+  <block id="7295e460f10eab584940e13ed73f1a7c" category="list-text">Link para a relação de replicação</block>
+  <block id="90f7372e4d5f7acc9a7ad384567a8fb1" category="inline-link-macro">Gerenciar relações de replicação</block>
+  <block id="40784ca0165ca1ea0dd19de018ca873d" category="paragraph"><block ref="40784ca0165ca1ea0dd19de018ca873d" category="inline-link-macro-rx"></block></block>
+  <block id="3a73b982b2965919c12c85d4ba9df2b4" category="list-text">*Credenciais ONTAP*: Forneça o seguinte:</block>
+  <block id="7bc557e938a1319fa6e07bd448576cd2" category="list-text">GovCloud contas: insira o ARN com as credenciais do ONTAP.</block>
+  <block id="73a2a12878b0731214258fd091d03336" category="list-text">Todas as outras contas: insira as credenciais do ONTAP para o cluster ONTAP local. Certifique-se de que o usuário tenha as permissões necessárias.</block>
+  <block id="1cdbc8bcb26cc8d5e894a97b9e7f269f" category="section-title">05 de julho de 2026</block>
+  <block id="92ee6e4d72d15689a675017ce0db2fa1" category="section-title">31 de maio de 2026</block>
 </blocks>
