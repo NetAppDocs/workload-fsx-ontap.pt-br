@@ -79,8 +79,8 @@ NOTE: Ao usar o Terraform do Codebox, o código que você copia ou baixa oculta 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
-. No menu Armazenamento, selecione *FSx para ONTAP*.
-. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos no qual deseja criar um volume e selecione *Criar volume*.
+. No menu Storage, selecione *Volume explorer*.
+. Em *Volume explorer*, selecione *Create volume*.
 . Na página criar volume em Detalhes gerais, forneça os seguintes detalhes:
 +
 .. *Nome do volume*: Insira um nome para o volume.
@@ -230,7 +230,7 @@ Se o recurso não estiver disponível, é por um dos seguintes motivos:
 
 +
 *** Um link não está associado ao sistema de arquivos. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após os associados da ligação, volte a esta operação.
-*** Volumes com arquivos imutáveis e volumes com protocolos iSCSI e NVMe não são suportados para ARP/AI.
+*** Volumes com arquivos imutáveis e volumes com o protocolo NVMe não são suportados para ARP/AI. Volumes iSCSI são suportados a partir do ONTAP 9.17.1.
 *** O sistema de arquivos já tem uma política ARP/AI.
 
 
