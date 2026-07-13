@@ -4,6 +4,7 @@
 
 
 
+[[volume-autogrow-enhancement]]
 === Aprimoramento de crescimento automático de volume
 
 Agora você pode definir o tamanho de crescimento automático dos seus volumes para que o tamanho do volume possa crescer além do tamanho provisionado para as necessidades comerciais e os requisitos do aplicativo.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-volume-autogrow.html[
 
 
 
+[[well-architected-analysis-update]]
 === Atualização de análise bem arquitetada
 
 A Workload Factory agora analisa seus sistemas de arquivos FSx for ONTAP para verificar se as eficiências de armazenamento, incluindo compactação, compressão e desduplicação de dados, estão sendo utilizadas. As eficiências de armazenamento medem a eficácia com que os sistemas de arquivos utilizam o espaço disponível.
@@ -20,12 +22,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[storage-dashboard-enhancements]]
 === Melhorias no painel de armazenamento
 
 A partir de hoje, ao abrir a carga de trabalho do Storage no console do Workload Factory, você visualizará o *Painel*.  O painel recém-projetado fornece uma visão holística do seu FSx para sistemas ONTAP , incluindo o número de sistemas de arquivos, a capacidade total do SSD, a visão geral do status bem arquitetado, a visão geral da proteção de dados e a integridade do relacionamento de replicação.
 
 
 
+[[volumes-tab-enhancements]]
 === Melhorias na guia Volumes
 
 A carga de trabalho de armazenamento fez melhorias na guia Volumes dentro de um sistema de arquivos FSx para ONTAP no console do Workload Factory.  As melhorias incluem:
@@ -36,6 +40,7 @@ A carga de trabalho de armazenamento fez melhorias na guia Volumes dentro de um 
 
 
 
+[[storage-efficiencies-update-for-volume-creation]]
 === Atualização de eficiência de armazenamento para criação de volume
 
 Ao criar um novo volume, as eficiências de armazenamento, incluindo compactação, compressão e desduplicação de dados, são ativadas por padrão.

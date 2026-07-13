@@ -4,6 +4,7 @@
 
 
 
+[[cache-volume-management]]
 === Gerenciamento de volume de cache
 
 Você pode executar as seguintes operações de gerenciamento de volume de cache no console do Workload Factory:
@@ -20,6 +21,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-cache-volumes.html[
 
 
 
+[[automatic-inode-management-available]]
 === Gerenciamento automático de inodes disponível
 
 Você pode habilitar o gerenciamento automático de inodes sem a necessidade de habilitar o gerenciamento automático de capacidade.
@@ -28,12 +30,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/enable-auto-capacity-manag
 
 
 
+[[threshold-warning-setting-for-capacity-and-inode-usage]]
 === Configuração de aviso de limite para uso de capacidade e inodes.
 
 Avisos de limite estão disponíveis tanto para capacidade quanto para uso de inodes.  Você pode definir esses limites ao ativar o gerenciamento automático de capacidade ou de inodes.  Para usar essa configuração, você precisará configurar as notificações usando olink:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Serviço de notificação do NetApp Workload Factory"^] .
 
 
 
+[[volume-size-decrease-available]]
 === redução do tamanho do volume disponível
 
 É possível diminuir o tamanho dos volumes NFS e SMB/CIFS no NetApp Workload Factory.  Essa funcionalidade permite um melhor gerenciamento dos recursos de armazenamento, possibilitando a redução do tamanho de volumes que não são mais necessários em sua capacidade atual.
@@ -42,12 +46,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/adjust-volume-capacity.htm
 
 
 
+[[enhanced-fsx-for-ontap-resource-state]]
 === FSx aprimorado para estado de recurso ONTAP
 
 O Workload Factory aprimorou o estado de recurso "mal configurado" para incluir uma explicação do problema real do recurso.
 
 
 
+[[well-architected-analysis-updates]]
 === Atualizações de análise bem arquitetadas
 
 O Workload Factory analisa seus sistemas de arquivos FSx para ONTAP para as seguintes configurações:
@@ -58,6 +64,7 @@ O Workload Factory analisa seus sistemas de arquivos FSx para ONTAP para as segu
 
 
 
+[[permissions-changes-for-workload-factory-for-storage]]
 === Alterações de permissões para o Workload Factory para armazenamento
 
 O Workload Factory oferece mais clareza sobre as permissões necessárias para ações específicas e permite selecionar apenas as permissões de que você precisa.  Ao adicionar credenciais, você terá três opções de permissões para escolher, em vez do modelo de permissões anterior, que era _somente leitura_ e _leitura/gravação_.  O novo modelo de permissões divide as políticas de permissão da seguinte forma:
@@ -73,6 +80,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.ht
 
 
 
+[[fsx-for-ontap-cyber-vault-support]]
 === Suporte ao cofre cibernético FSx para ONTAP
 
 Você pode criar um cofre cibernético usando o FSx para ONTAP como origem ou destino na arquitetura do cofre cibernético.  Os cofres cibernéticos oferecem um ambiente seguro e isolado para armazenar dados críticos, protegendo-os contra ransomware e outras ameaças cibernéticas.

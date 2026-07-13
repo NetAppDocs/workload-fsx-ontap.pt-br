@@ -15,6 +15,7 @@ Gerencie seus relacionamentos de replicação no NetApp Workload Factory. Você 
 
 
 
+[[change-the-replication-schedule-of-a-source-volume]]
 == Alterar o agendamento de replicação de um volume de origem
 
 Altere o agendamento de replicação do volume de origem em um relacionamento de replicação no NetApp Workload Factory.
@@ -45,6 +46,7 @@ Quando um cluster ONTAP no local é o destino para a relação de replicação, 
 
 
 
+[[limit-the-max-transfer-rate-of-a-replication-relationship]]
 == Limite a taxa máxima de transferência de uma relação de replicação
 
 Limitar a taxa máxima de transferência é opcional, mas recomendado. Sem um limite, o desempenho da rede e do aplicativo pode declinar.
@@ -71,6 +73,7 @@ Em alternativa, selecione *Unlimited*.
 
 
 
+[[manually-update-snapshot-data-in-a-replication-relationship]]
 == Atualize manualmente os dados do snapshot em uma relação de replicação
 
 Um relacionamento de replicação tem um cronograma de replicação definido, mas você pode atualizar manualmente os dados de snapshot transferidos entre os volumes de origem e de destino no NetApp Workload Factory a qualquer momento.
@@ -88,6 +91,7 @@ Um relacionamento de replicação tem um cronograma de replicação definido, ma
 
 
 
+[[pause-a-replication-relationship]]
 == Pausar uma relação de replicação
 
 Pausar uma relação de replicação para interromper as atualizações de replicação agendadas do volume de origem para o volume de destino. O volume de destino passa de somente leitura para leitura/gravação. Ambos os volumes continuam a compartilhar o snapshot de replicação mais recente como uma nova linha de base para ressincronização posterior.
@@ -111,6 +115,7 @@ A relação pausa e seu status é exibido como "Pausado".
 
 
 
+[[resume-a-paused-replication-relationship]]
 == Retomar uma relação de replicação em pausa
 
 Ao retomar uma relação de replicação, quaisquer alterações feitas no volume de destino enquanto a replicação estava interrompida são excluídas. O volume de destino passa de leitura/gravação para somente leitura e volta a receber atualizações do volume de origem no intervalo de replicação agendado.
@@ -134,6 +139,7 @@ O relacionamento é retomado e seu status é exibido como "replicado".
 
 
 
+[[reverse-a-replication-relationship]]
 == Inverta uma relação de replicação
 
 Inverta uma relação de replicação para que o volume de destino se torne o volume de origem.
@@ -173,6 +179,7 @@ Certifique-se de conhecer as funções atuais e futuras dos volumes de origem e 
 
 
 
+[[stop-a-replication-relationship]]
 == Parar uma relação de replicação
 
 Interrompa um relacionamento de replicação no NetApp Workload Factory.  Quando você interrompe um relacionamento de replicação, as atualizações de replicação agendadas do volume de origem para o volume de destino são pausadas.  O volume de destino passa de somente leitura para leitura/gravação.
@@ -193,6 +200,7 @@ O status da replicação do volume muda para *Broken*. O volume de destino torna
 
 
 
+[[delete-a-replication-relationship]]
 == Excluir uma relação de replicação
 
 Excluir um relacionamento de replicação no NetApp Workload Factory.  Quando você exclui um relacionamento de replicação, ele remove o relacionamento de replicação entre os volumes de origem e de destino.  Após a exclusão do relacionamento de replicação, ambos os volumes continuam a existir independentemente com os dados atuais que eles contêm.

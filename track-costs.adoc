@@ -15,6 +15,7 @@ Monitore os custos e o uso do sistema de arquivos FSx for ONTAP em uma visão co
 
 
 
+[[about-this-task]]
 == Sobre esta tarefa
 
 O Workload Factory monitora os custos e o uso do sistema de arquivos FSx for ONTAP obtendo dados de custo do AWS Cost Explorer. Os seguintes detalhes de custo são monitorados: tipo de uso, SKU de uso, tipo de implantação, uso e custo total.
@@ -31,6 +32,7 @@ Além dos dados de custo exibidos no painel de Custos, você pode gerar relatór
 
 
 
+[[track-costs]]
 == Acompanhe os custos
 
 Os custos exibidos no painel de custos do console do Workload Factory são baseados nos dados do AWS Cost Explorer, que são atualizados a cada 24 horas.
@@ -61,6 +63,7 @@ Certifique-se de que você atende aos seguintes requisitos:
 
 
 
+[[generate-cost-reports-for-your-fsx-for-ontap-resources]]
 == Gere relatórios de custos para seus recursos FSx for ONTAP
 
 Gere relatórios de custos para recursos específicos do sistema de arquivos FSx for ONTAP para compartilhar com as partes interessadas.

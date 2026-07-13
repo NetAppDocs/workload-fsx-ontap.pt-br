@@ -19,6 +19,7 @@ link:configuration-analysis.html["Saiba mais sobre a análise de configuração 
 
 
 
+[[about-this-task]]
 == Sobre esta tarefa
 
 A Workload Factory analisa diariamente as configurações de implantação do sistema de arquivos Amazon FSx for NetApp ONTAP . A análise diária fornece o status bem arquitetado, além de insights e recomendações, com opções para corrigir automaticamente problemas de configuração, para que seu sistema de arquivos atenda às práticas recomendadas.
@@ -32,15 +33,15 @@ Como os requisitos para configurações de armazenamento variam, você pode desc
 .O que é analisado
 A fábrica de carga de trabalho analisa o status bem arquitetado das seguintes configurações para os sistemas de arquivos FSX for ONTAP:
 
-* Confiabilidade: limite de capacidade do SSD, snapshots locais agendados, backups de volume agendados, replicação de dados remota, confiabilidade de dados para retenção de longo prazo e conectar hosts ao nó de failover
+* Confiabilidade: limite de capacidade do SSD, snapshots locais agendados, backups de volume agendados, replicação remota de dados e confiabilidade dos dados para retenção de longo prazo
 * Segurança: Proteção autônoma contra ransomware da NetApp com IA (ARP/AI) desativada e acesso não autorizado a volumes.
 * Excelência operacional: gerenciamento automático de capacidade, limite de utilização da capacidade de arquivos do volume, utilização do volume próxima da capacidade máxima, modo de gravação de relacionamento de cache, otimização do tamanho do volume de cache e relatórios de capacidade lógica do volume
 * Otimização de custos: eficiências de storage, hierarquização de dados, exclusão de snapshots e backups desnecessários, dispositivos de bloco inativos, capacidade subutilizada de SSD e volumes NAS inativos
-* Eficiência de desempenho: conecte hosts ao nó preferencial
 
 
 
 
+[[before-you-begin]]
 == Antes de começar
 
 * Você deve link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["conceder permissões de _operações e remediação_"^] na sua conta da AWS.
@@ -50,6 +51,7 @@ A fábrica de carga de trabalho analisa o status bem arquitetado das seguintes c
 
 
 
+[[fix-a-configuration-issue]]
 == Corrigir um problema de configuração
 
 Você pode corrigir problemas de configuração para um sistema de arquivos FSx for ONTAP ou para volumes selecionados em um sistema de arquivos.  Você pode selecionar uma ou mais configurações para corrigir.
@@ -75,6 +77,7 @@ O processo para corrigir o problema é iniciado. Selecione o menu de configuraç
 
 
 
+[[dismiss-a-configuration-analysis]]
 == Descartar uma análise de configuração
 
 Descartar para interromper uma análise de configuração indefinidamente para um sistema de arquivos FSx for ONTAP ou para volumes selecionados em um sistema de arquivos.  Você pode reiniciar a análise quando necessário.
@@ -122,6 +125,7 @@ Você pode reativar a análise a qualquer momento.  A configuração não está 
 
 
 
+[[reactivate-a-dismissed-configuration-analysis]]
 == Reativar uma análise de configuração descartada
 
 Reative uma análise de configuração descartada a qualquer momento.  Você pode selecionar uma ou mais configurações para reativar.

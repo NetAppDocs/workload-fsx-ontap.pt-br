@@ -4,12 +4,14 @@
 
 
 
+[[home-page-includes-well-architected-issues-and-ems-events-for-storage]]
 === A página inicial inclui problemas bem arquitetados e eventos EMS para Storage
 
 A página inicial do NetApp Workload Factory inclui um bloco Foco onde problemas de arquitetura adequada e eventos do FSx for ONTAP Emergency Management System (EMS) aparecem para suas cargas de trabalho. A partir daí, você pode navegar até a carga de trabalho de storage para visualizar o status de arquitetura adequada ou os eventos de todos os sistemas de arquivos FSx for ONTAP em seu ambiente de storage.
 
 
 
+[[support-for-on-premises-data-replication-using-an-s3-access-point]]
 === Suporte para replicação de dados on-premises usando um ponto de acesso S3
 
 O Workload Factory oferece suporte à replicação de dados ONTAP locais para a nuvem, permitindo a integração com AWS GenAI, ML e analytics. Você pode replicar seus dados locais para um volume NFS ou SMB/CIFS usando um ponto de acesso S3.
@@ -18,6 +20,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["R
 
 
 
+[[s3-access-point-enhancements-in-storage]]
 === Aprimoramentos do ponto de acesso S3 em Storage
 
 Diversas melhorias foram implementadas nos recursos de gerenciamento de pontos de acesso S3 na carga de trabalho de storage para NetApp Workload Factory. Você pode inserir detalhes de configuração de rede para seus pontos de acesso S3 e adicionar tags de ponto de acesso S3. Melhorias adicionais incluem a capacidade de visualizar detalhes do bucket S3 e realizar mais ações para gerenciar pontos de acesso S3.
@@ -38,6 +41,7 @@ NetApp Workload Factory oferece operações de gerenciamento adicionais para pon
 
 
 
+[[well-architected-analysis-updates]]
 === Atualizações de análise bem arquitetadas
 
 O Workload Factory analisa seus sistemas de arquivos FSx para ONTAP para as seguintes configurações:
@@ -49,6 +53,7 @@ O Workload Factory analisa seus sistemas de arquivos FSx para ONTAP para as segu
 
 
 
+[[additional-cards-for-block-devices]]
 === Placas adicionais para dispositivos de bloco
 
 Três novos cartões foram adicionados à guia Dispositivos de bloco na carga de trabalho de storage para fornecer informações rápidas sobre o uso do dispositivo de bloco e o status de proteção:
@@ -60,6 +65,7 @@ Três novos cartões foram adicionados à guia Dispositivos de bloco na carga de
 
 
 
+[[support-for-initiator-group-creation-and-management]]
 === Suporte para criação e gerenciamento de grupos de iniciadores
 
 NetApp Workload Factory oferece suporte à criação e ao gerenciamento de grupos de iniciadores (igroups) para armazenamento em bloco em FSx for ONTAP sistemas de arquivos. Os grupos de iniciadores conectam dispositivos de bloco (LUNs) aos recursos de computação que têm permissão para acessá-los, fornecendo uma camada de permissões para armazenamento em bloco em ambientes SAN.

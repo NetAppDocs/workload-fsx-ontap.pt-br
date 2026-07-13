@@ -15,6 +15,7 @@ Configure a infraestrutura da tabela Journal para capturar e armazenar logs de a
 
 
 
+[[about-this-task]]
 == Sobre esta tarefa
 
 O recurso de tabela de diário captura eventos do plano de dados do S3 (PutObject, GetObject, DeleteObject, etc.) para pontos de acesso S3 do FSx for ONTAP monitorados. Ele utiliza uma cadeia de serviços da AWS implantada em sua conta da AWS. Quando a infraestrutura está configurada corretamente, ela se conecta ao ponto de acesso ao volume do FSx for ONTAP e estabelece o pipeline que captura eventos de auditoria de acesso do usuário e operação de objeto na tabela de diário.
@@ -54,6 +55,7 @@ O {uuid} é um identificador aleatório de 8 caracteres gerado quando o modelo �
 
 
 
+[[before-you-begin]]
 == Antes de começar
 
 Para ativar o recurso de tabela de diário, siga estes passos:
@@ -172,6 +174,7 @@ Para ativar o recurso de tabela de diário, siga estes passos:
 
 
 
+[[set-up-the-journal-table-infrastructure]]
 == Configure a infraestrutura da tabela de diários
 
 Configure a infraestrutura para capturar eventos de serviço da AWS a partir do ponto de acesso S3 na tabela de registro (journal).
@@ -205,6 +208,7 @@ Se alguma das etapas falhar, <<Solucionar problemas na configuração da infraes
 
 
 
+[[troubleshoot-the-infrastructure-setup-for-the-journal-table]]
 == Solucionar problemas na configuração da infraestrutura da tabela de diário
 
 Você pode usar o Console de Gerenciamento da AWS ou a AWS CLI para solucionar problemas durante a implantação da pilha CloudFormation e dos recursos que ela cria.
@@ -213,6 +217,7 @@ Após resolver o problema, envie o CloudTrail ARN novamente para reiniciar a con
 
 
 
+[[common-cloudformation-deployment-failures]]
 === Falhas comuns de implantação do CloudFormation
 
 
@@ -278,6 +283,7 @@ aws iam delete-role \
 ----
 
 
+[[failures-after-journal-table-enablement]]
 === Falhas após capacitação da tabela Journal
 
 Após o envio do ARN do CloudTrail, o Workload Factory valida todo o pipeline de recursos enviando automaticamente um _seed_, ou evento de teste. Se bem-sucedido, o evento seed chega na tabela S3 Tables. O teste leva aproximadamente 10 minutos.
@@ -348,12 +354,14 @@ Após resolver o problema, retorne ao console do Workload Factory. Tente <<Confi
 
 
 
+[[permissions-reference-for-the-journal-table-setup]]
 == Referência de permissões para a configuração da tabela de diário
 
 A função do IAM que implementa a pilha CloudFormation para habilitar o recurso de tabela Journal precisa das seguintes permissões. Consulte <<Antes de começar,Antes de começar>> para uma política JSON copiável com as permissões necessárias.
 
 
 
+[[stack-operations]]
 === Operações de pilha
 
 [cols="1,1,1"]
@@ -371,6 +379,7 @@ A função do IAM que implementa a pilha CloudFormation para habilitar o recurso
 |===
 
 
+[[cloudtrail]]
 === CloudTrail
 
 [cols="1,1,1"]
@@ -394,6 +403,7 @@ A função do IAM que implementa a pilha CloudFormation para habilitar o recurso
 |===
 
 
+[[s3]]
 === S3
 
 [cols="1,1,1"]
@@ -411,6 +421,7 @@ A função do IAM que implementa a pilha CloudFormation para habilitar o recurso
 |===
 
 
+[[iam]]
 === IAM
 
 [cols="1,1,1"]
@@ -434,6 +445,7 @@ A função do IAM que implementa a pilha CloudFormation para habilitar o recurso
 |===
 
 
+[[cloudwatch-logs]]
 === Logs do CloudWatch
 
 [cols="1,1,1"]
@@ -463,6 +475,7 @@ A função do IAM que implementa a pilha CloudFormation para habilitar o recurso
 |===
 
 
+[[observabilityadmin]]
 === ObservabilityAdmin
 
 [cols="1,1,1"]
@@ -483,6 +496,7 @@ A função do IAM que implementa a pilha CloudFormation para habilitar o recurso
 |===
 
 
+[[s3-tables]]
 === Tabelas S3
 
 [cols="1,1,1"]

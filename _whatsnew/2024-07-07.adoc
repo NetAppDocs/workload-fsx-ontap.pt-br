@@ -4,6 +4,7 @@
 
 
 
+[[initial-release-of-workload-factory-for-amazon-fsx-for-netapp-ontap]]
 === Lançamento inicial do Workload Factory para Amazon FSx for NetApp ONTAP
 
 O Amazon FSX for NetApp ONTAP agora está disponível na fábrica de cargas de trabalho do BlueXP .

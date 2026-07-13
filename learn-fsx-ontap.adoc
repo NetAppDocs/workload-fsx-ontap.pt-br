@@ -19,6 +19,7 @@ FSx para ONTAP é o componente _Armazenamento_ no Workload Factory.
 
 
 
+[[features]]
 == Caraterísticas
 
 O FSX para ONTAP oferece os seguintes recursos:
@@ -40,6 +41,7 @@ O FSX para ONTAP oferece os seguintes recursos:
 
 
 
+[[additional-features-in-workload-factory]]
 == Recursos adicionais no Workload Factory
 
 * * Calculadora de comparação de custos de armazenamento*: Compara os custos de armazenamento do Amazon Elastic Block Store (EBS), Elastic File System (EFS) e FSX para Windows File Server com o FSX for ONTAP. A partir da calculadora, você pode ver como as configurações de armazenamento do FSX for ONTAP oferecem economias potenciais e Planejar sua migração para o FSX for ONTAP.
@@ -49,6 +51,7 @@ O FSX para ONTAP oferece os seguintes recursos:
 
 
 
+[[tools-to-use-netapp-workload-factory]]
 == Ferramentas para usar o NetApp Workload Factory
 
 Você pode usar o NetApp Workload Factory com as seguintes ferramentas:
@@ -64,12 +67,14 @@ Você pode usar o NetApp Workload Factory com as seguintes ferramentas:
 
 
 
+[[cost]]
 == Custo
 
 A AWS mantém sua conta FSx para ONTAP , não o Workload Factory. Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Definição de preço do Amazon FSX for NetApp ONTAP"^] .
 
 
 
+[[regions]]
 == Regiões
 
 A fábrica de carga de trabalho é suportada em todas as regiões comerciais onde o FSx para ONTAP é suportado.link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Exibir regiões da Amazon compatíveis."^]
@@ -83,6 +88,7 @@ As seguintes regiões da AWS não são suportadas:
 
 
 
+[[getting-help]]
 == Obter ajuda
 
 O Amazon FSX for NetApp ONTAP é uma solução exclusiva da AWS. Para dúvidas ou problemas de suporte técnico associados ao ONTAP sistema de arquivos, infraestrutura ou qualquer solução usando este serviço, use a Central de suporte no Console de Gerenciamento da AWS para abrir um caso de suporte com a AWS. Selecione o serviço "FSX for ONTAP" e a categoria apropriada. Forneça as informações restantes necessárias para criar seu caso de suporte da AWS.

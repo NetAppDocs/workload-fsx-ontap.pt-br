@@ -4,6 +4,7 @@
 
 
 
+[[volume-cifs-share-enhancements]]
 === Aprimoramentos de compartilhamento de volume CIFS
 
 Os seguintes aprimoramentos estão disponíveis para gerenciar o compartilhamento CIFS para volumes em um sistema de arquivos do Amazon FSX for ONTAP na fábrica de carga de trabalho do BlueXP :

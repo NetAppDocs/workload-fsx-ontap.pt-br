@@ -4,6 +4,7 @@
 
 
 
+[[enhancements-to-replication-relationships-tab]]
 === Melhorias na guia Relacionamentos de replicação
 
 Adicionamos várias colunas novas à tabela de relacionamentos de replicação para fornecer mais informações sobre seus relacionamentos de replicação na guia *Relacionamentos de replicação*.  A tabela agora inclui as seguintes colunas:
@@ -17,6 +18,7 @@ Adicionamos várias colunas novas à tabela de relacionamentos de replicação p
 
 
 
+[[enhancements-to-netapp-autonomous-ransomware-protection-with-ai-arpai]]
 === Melhorias na proteção autônoma contra ransomware da NetApp com IA (ARP/AI)
 
 Esta versão apresenta o termo atualizado "NetApp Autonomous Ransomware Protection with AI (ARP/AI)" para refletir melhor a integração de inteligência artificial em nossos recursos de proteção contra ransomware.
@@ -33,6 +35,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html
 
 
 
+[[well-architected-analysis-updates]]
 === Atualizações de análise bem arquitetadas
 
 O Workload Factory agora analisa seus sistemas de arquivos FSx for ONTAP para as seguintes configurações:
@@ -45,6 +48,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[dismiss-a-configuration-from-the-well-architected-analysis]]
 === Descartar uma configuração da análise bem arquitetada
 
 Agora você pode descartar uma ou mais configurações da análise bem arquitetada.  Isso permite que você ignore configurações específicas que não deseja abordar no momento.
@@ -53,6 +57,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[terraform-support-for-link-creation]]
 === Suporte Terraform para criação de links
 
 Agora você pode usar o Terraform do Codebox para criar um link para associação com um sistema de arquivos FSx para ONTAP .  Esta funcionalidade é para usuários que criam links manualmente.
@@ -61,6 +66,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Conete-s
 
 
 
+[[new-region-support-for-exploring-savings-in-storage]]
 === Novo suporte regional para explorar economias em armazenamento
 
 As seguintes novas regiões agora têm suporte para explorar economias no Amazon Elastic Block Store (EBS), FSx for Windows File Server e Elastic File Systems (EFS):
@@ -71,6 +77,7 @@ As seguintes novas regiões agora têm suporte para explorar economias no Amazon
 
 
 
+[[enhancements-to-smbcifs-shares-creation-and-management]]
 === Melhorias na criação e gerenciamento de compartilhamentos SMB/CIFS
 
 Agora você pode criar compartilhamentos SMB/CIFS que apontam para diretórios dentro de um volume.  Dentro do volume, você poderá ver quais compartilhamentos existem, para onde os compartilhamentos estão apontando e as permissões concedidas a usuários e grupos específicos.

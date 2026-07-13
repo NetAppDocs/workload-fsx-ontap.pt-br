@@ -19,6 +19,7 @@ Você também pode obter o ponto de montagem para volumes no NetApp Workload Fac
 
 
 
+[[get-mount-point-for-volumes-in-netapp-workload-factory]]
 == Obter ponto de montagem para volumes no NetApp Workload Factory
 
 Obtenha o ponto de montagem de um volume para montar um compartilhamento em um compartilhamento CIFS ou cliente NFS.
@@ -35,6 +36,7 @@ Obtenha o ponto de montagem de um volume para montar um compartilhamento em um c
 
 
 
+[[connect-to-nas-clients]]
 == Conete-se a clientes nas
 
 * link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/attach-linux-client.html["Monte um volume em clientes Linux"^]
@@ -44,6 +46,7 @@ Obtenha o ponto de montagem de um volume para montar um compartilhamento em um c
 
 
 
+[[connect-to-san-clients]]
 == Conete-se a clientes SAN
 
 * link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/mount-iscsi-luns-linux.html["Montar um iSCSI LUN em clientes Linux"^]

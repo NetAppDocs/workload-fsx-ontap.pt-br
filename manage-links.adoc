@@ -17,6 +17,7 @@ link:links-overview.html["Saiba mais sobre links"] ou link:create-link.html["cri
 
 
 
+[[view-the-links-associated-with-your-account]]
 == Veja os links associados à sua conta
 
 Você pode exibir os links que estão atualmente associados à sua conta.
@@ -36,6 +37,7 @@ image:screenshot-view-link-details.png["Uma captura de tela que mostra os sistem
 
 
 
+[[edit-a-link]]
 == Edite um link
 
 Não é possível editar um link na interface do Workload Factory.  Se precisar fazer uma alteração em um link, você precisará criar um novo link e então associá-lo ao seu sistema de arquivos.
@@ -45,6 +47,7 @@ NOTE: Você pode editar a configuração de rede do Lambda (por exemplo, VPC, su
 
 
 
+[[authenticate-a-link]]
 == Autentique um link
 
 Forneça uma senha de usuário administrativo para credenciais do Workload Factory ou um ARN secreto do AWS Secrets Manager para conectar o link a um sistema de arquivos FSx para ONTAP .
@@ -74,6 +77,7 @@ O link é autenticado e você pode executar operações avançadas do ONTAP
 
 
 
+[[update-the-password-for-link-authentication]]
 == Atualize a senha para autenticação de link
 
 Quando a senha administrativa for inválida, atualize a senha para conetar o link ao sistema de arquivos FSX for ONTAP.
@@ -93,6 +97,7 @@ A senha é atualizada e o link agora está conetado ao sistema de arquivos FSX f
 
 
 
+[[remove-a-link]]
 == Remova um link
 
 Você pode remover um link que você não está mais usando em seu ambiente. Qualquer sistema de arquivos do FSX for ONTAP ou outros recursos que estavam usando o link não será capaz de usar certas funcionalidades depois que o link for removido.

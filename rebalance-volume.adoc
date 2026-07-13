@@ -15,6 +15,7 @@ Verifique o equilíbrio da capacidade do volume FlexVol ou FlexGroup e rebalance
 
 
 
+[[about-this-task]]
 == Sobre esta tarefa
 
 O rebalanceamento da capacidade de volume é suportado para volumes FlexVol e FlexGroup. O rebalanceamento de um volume redistribui a capacidade quando os desequilíbrios se desenvolvem ao longo do tempo devido à adição de novos arquivos e ao crescimento de arquivos. Depois de iniciar manualmente a operação de rebalanceamento, selecionamos os arquivos e os movemos automaticamente e sem interrupções. As operações de transferência de volume consomem recursos do sistema de arquivos.
@@ -40,6 +41,7 @@ NOTE: O rebalanceamento não é suportado para volumes SAN como iSCSI e NVMe.
 
 
 
+[[check-the-balance-of-your-volumes]]
 == Verifique o equilíbrio dos seus volumes
 
 Verifique o equilíbrio dos volumes FlexVol ou FlexGroup em um sistema de arquivos FSx para ONTAP.
@@ -69,6 +71,7 @@ Quando um volume está desbalanceado, considere <<Capacidade de volume de rebala
 
 
 
+[[rebalance-volume-capacity]]
 == Capacidade de volume de rebalanceamento
 
 Reequilibrar um ou mais volumes desequilibrados.
@@ -158,6 +161,7 @@ Os volumes dos membros do FlexGroup são movidos um de cada vez durante o rebala
 ====
 
 
+[[stop-a-volume-rebalance-operation]]
 == Interromper uma operação de rebalanceamento de volume
 
 Interrompa uma operação de rebalanceamento a qualquer momento; ela não é disruptiva. Interromper a operação aborta as movimentações de volume ativas.

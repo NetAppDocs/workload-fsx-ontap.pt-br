@@ -23,6 +23,7 @@ Se você pausar quando uma transferência estiver em andamento, a transferência
 
 
 
+[[pause-a-replication-relationship]]
 == Pausar uma relação de replicação
 
 .Passos
@@ -41,6 +42,7 @@ A relação pausa e seu status é exibido como "Pausado".
 
 
 
+[[resume-a-paused-replication-relationship]]
 == Retomar uma relação de replicação em pausa
 
 Quando você retoma uma relação de replicação, todas as alterações no volume de destino enquanto a replicação foi interrompida são excluídas.

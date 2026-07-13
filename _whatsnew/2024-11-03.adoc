@@ -4,6 +4,7 @@
 
 
 
+[[tab-views-in-storage-inventory]]
 === Vistas de separador no inventário de armazenamento
 
 O inventário de armazenamento foi atualizado para uma vista de duas abas:

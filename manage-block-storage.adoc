@@ -31,12 +31,14 @@ Verifique o diagrama de armazenamento em blocos para verificar o seguinte:
 
 
 
+[[manage-igroups]]
 == Gerenciar igroups
 
 Você pode visualizar detalhes dos igroups, gerenciar o acesso do cliente e excluir igroups.
 
 
 
+[[manage-client-access-for-an-igroup]]
 === Gerenciar o acesso de clientes para um igroup
 
 Gerencie o acesso de clientes para um igroup existente a qualquer momento.
@@ -65,6 +67,7 @@ Gerencie o acesso de clientes para um igroup existente a qualquer momento.
 
 
 
+[[delete-an-igroup]]
 === Excluir um igroup
 
 Exclua um igroup quando ele não for mais necessário.
@@ -81,6 +84,7 @@ Exclua um igroup quando ele não for mais necessário.
 
 
 
+[[manage-block-devices-for-an-igroup]]
 == Gerenciar dispositivos de bloco para um igroup
 
 Dispositivos de bloco, ou LUNs (números de unidade lógica), são volumes com sistemas de arquivos em um ambiente SAN, acessíveis a hosts por uma rede.
@@ -89,6 +93,7 @@ Você pode gerenciar dispositivos de bloco para sistemas de arquivos FSx para ON
 
 
 
+[[view-block-device-details]]
 === Ver detalhes do dispositivo de bloco
 
 Visualize os detalhes de um dispositivo de bloco existente a qualquer momento.
@@ -106,6 +111,7 @@ São exibidas informações gerais, de consumo, de acesso e de proteção para o
 
 
 
+[[manage-client-access-for-a-block-device]]
 === Gerenciar o acesso do cliente para um dispositivo de bloco
 
 Você pode gerenciar o acesso do cliente a um dispositivo de bloco existente a qualquer momento, criando grupos de interface (igroups) e adicionando ou removendo dispositivos de bloco e iniciadores de host.
@@ -131,6 +137,7 @@ Você pode gerenciar o acesso do cliente a um dispositivo de bloco existente a q
 
 
 
+[[increase-the-capacity-of-a-block-device]]
 === Aumentar a capacidade de um dispositivo de bloco
 
 Aumente a capacidade de um dispositivo de bloco existente a qualquer momento.
@@ -150,6 +157,7 @@ NOTE: Após aumentar o tamanho do dispositivo de bloco, siga o procedimento forn
 
 
 
+[[clone-a-block-device]]
 === Clonar um dispositivo de bloco
 
 Você pode criar um clone de um dispositivo de bloco existente a qualquer momento. Um clone de dispositivo de bloco é uma cópia gravável do dispositivo de bloco original que compartilha os mesmos blocos de dados até que sejam feitas alterações no original ou no clone. Clonar um dispositivo de bloco é uma maneira rápida e eficiente de criar cópias reutilizáveis de seus dados sem consumir capacidade de storage.
@@ -179,6 +187,7 @@ Você pode criar um clone de um dispositivo de bloco existente a qualquer moment
 
 
 
+[[archive-the-data-of-an-inactive-block-device]]
 === Arquivar os dados de um dispositivo de bloco inativo
 
 Dispositivos de bloco que não estão mais mapeados para um cliente ou que não são usados por sete dias consecutivos são classificados como dispositivos de bloco inativos. Você pode arquivar os dados de um dispositivo de bloco inativo na camada de pool de capacidade para recuperar capacidade de SSD.
@@ -195,6 +204,7 @@ Dispositivos de bloco que não estão mais mapeados para um cliente ou que não 
 
 
 
+[[delete-a-block-device]]
 === Excluir dispositivo de bloco
 
 Dispositivos de bloco que não estão mapeados para um cliente ou que não são usados por sete dias são dispositivos de bloco inativos. Esta operação desmapeia e exclui o dispositivo de bloco selecionado. Se o volume FlexVol do host não contiver nenhum dispositivo de bloco, Workload Factory o exclui.
@@ -211,6 +221,7 @@ Dispositivos de bloco que não estão mapeados para um cliente ou que não são 
 
 
 
+[[related-information]]
 == Informações relacionadas
 
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-igroup.html["Crie um igroup para um sistema de arquivos FSx for ONTAP"]

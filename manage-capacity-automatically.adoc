@@ -15,6 +15,7 @@ Habilitar o gerenciamento de capacidade permite que NetApp Workload Factory adic
 
 
 
+[[about-this-task]]
 == Sobre esta tarefa
 
 O sistema verifica o sistema de arquivos FSx for ONTAP a cada 30 minutos. Ele verifica se é necessário adicionar storage incremental e verifica os inodes de volume disponíveis. A contagem aumenta com base nos limites de gerenciamento automático de capacidade.
@@ -27,6 +28,7 @@ A quantidade máxima de capacidade de armazenamento SSD para todos os sistemas d
 
 
 
+[[enable-automatic-capacity-management-and-capacity-notifications]]
 == Ative o gerenciamento de capacidade automático e as notificações de capacidade
 
 Habilite o gerenciamento de capacidade para adicionar automaticamente storage incremental até o limite máximo de tamanho para um sistema de arquivos FSx for ONTAP. Configure notificações para receber alertas quando o sistema de arquivos atingir um determinado limite de capacidade.
@@ -83,6 +85,7 @@ Uma verificação do sistema de arquivos ocorre a cada 30 minutos para determina
 
 
 
+[[enable-inode-management-for-a-file-system]]
 == Habilite o gerenciamento de inode para um sistema de arquivos
 
 Habilite o gerenciamento automático de inodes para aumentar o número de inodes (arquivos) por volume até o limite permitido.

@@ -11,7 +11,7 @@ summary: Ative o rastreamento para monitorar os atrasos em todos os relacionamen
 
 
 [role="lead"]
-Ative o rastreamento para monitorar os atrasos de replicação em sua conta. Workload Factory alerta você quando os atrasos ultrapassam um limite definido. Por padrão, o limite é 150% do intervalo de replicação para permitir um tempo de transferência normal e reduzir alarmes falsos. Você pode ajustar o limite para corresponder ao seu RPO e receber notificações quando os atrasos o excederem. Você também pode exportar os dados para um arquivo CSV para análise posterior.
+Ative o rastreamento para monitorar os atrasos de replicação em sua conta. Workload Factory alerta você quando os atrasos ultrapassam um limite definido. Por padrão, o limite é 150% do intervalo de replicação para permitir um tempo de transferência normal e reduzir alarmes falsos. Você pode ajustar o limite para corresponder ao seu RPO e receber notificações quando os atrasos o excederem.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].

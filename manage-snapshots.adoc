@@ -15,6 +15,7 @@ Edite as configurações de snapshot, habilite o acesso ao diretório e exclua s
 
 
 
+[[edit-a-snapshot]]
 == Editar um instantâneo
 
 Edite o nome, o rótulo e o período de retenção de um snapshot.  Se o snapshot ainda não for imutável, você poderá torná-lo imutável.
@@ -47,6 +48,7 @@ Aceite a declaração sobre snapshots imutáveis.
 
 
 
+[[access-a-snapshot]]
 == Acessar um instantâneo
 
 Habilite o acesso ao diretório de snapshots para dar aos usuários a capacidade de acessar snapshots de forma autônoma.
@@ -72,6 +74,7 @@ Habilite o acesso ao diretório de snapshots para dar aos usuários a capacidade
 
 
 
+[[restore-data-from-a-snapshot]]
 == Restaurar dados de um instantâneo
 
 Você tem a opção de restaurar dados de um instantâneo para um volume existente ou para um novo volume.
@@ -80,6 +83,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapsh
 
 
 
+[[delete-a-snapshot]]
 == Excluir um instantâneo
 
 Exclua um instantâneo para liberar espaço.
