@@ -168,7 +168,7 @@ Você pode criar um clone de um dispositivo de bloco existente a qualquer moment
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx para ONTAP*, selecione a guia *Dispositivos de bloco*.
 . Acesse o menu de ações do dispositivo de bloco e selecione *Clonar dispositivo de bloco*.
-. ${post_edited_translations.segment}
+. Na caixa de diálogo Clonar dispositivo de bloco, insira um nome para o dispositivo de bloco clonado.
 . Opcionalmente, habilite a exclusão automática para excluir automaticamente o dispositivo de bloco clonado quando o volume estiver com pouco espaço.
 . *Configuração iSCSI*: Opcional. Para conectar o clone do dispositivo de bloco aos iniciadores do host, crie um novo grupo de iniciadores ou mapeie-o para um grupo de iniciadores existente.
 +

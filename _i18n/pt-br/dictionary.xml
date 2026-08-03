@@ -2899,7 +2899,6 @@
   <block id="f12250ce1a89e4780f783e37faff61bf" category="section-title">Clonar um dispositivo de bloco</block>
   <block id="3852c39d262a8881e2a8268be54fe6ca" category="paragraph">Você pode criar um clone de um dispositivo de bloco existente a qualquer momento. Um clone de dispositivo de bloco é uma cópia gravável do dispositivo de bloco original que compartilha os mesmos blocos de dados até que sejam feitas alterações no original ou no clone. Clonar um dispositivo de bloco é uma maneira rápida e eficiente de criar cópias reutilizáveis de seus dados sem consumir capacidade de storage.</block>
   <block id="4cbb5fd33ac98b9c735c391778c8d7f0" category="list-text">Acesse o menu de ações do dispositivo de bloco e selecione *Clonar dispositivo de bloco*.</block>
-  <block id="929051af38dd6b0381c93579bedb478d" category="list-text">${post_edited_translations.segment}</block>
   <block id="9fe66450d94dd471c65e7c48e7574afd" category="list-text">Opcionalmente, habilite a exclusão automática para excluir automaticamente o dispositivo de bloco clonado quando o volume estiver com pouco espaço.</block>
   <block id="3f6182f8b829a2b8dac8608939de86e6" category="list-text">*Configuração iSCSI*: Opcional. Para conectar o clone do dispositivo de bloco aos iniciadores do host, crie um novo grupo de iniciadores ou mapeie-o para um grupo de iniciadores existente.</block>
   <block id="bf13cfa9990015b5ba0006913a4d3697" category="list-text">*Criar um novo grupo de iniciadores*: Selecione esta opção para criar um novo grupo de iniciadores para o clone do dispositivo de bloco. Insira os seguintes detalhes:</block>
@@ -3152,8 +3151,6 @@
   <block id="8215457eb88ef1fb110b79579b908e3d" category="paragraph">Você pode descartar a análise de configurações que não se aplicam aos seus ambientes. Isso evita alertas desnecessários e resultados de otimização imprecisos.</block>
   <block id="8817b0c6f0795c52cab62044416eee8a" category="inline-link-macro">Saiba mais sobre regras personalizadas</block>
   <block id="821af7226458ea25572e88e8ab2026e4" category="paragraph">Você também pode criar regras personalizadas em linguagem simples para validar seus ambientes em relação aos padrões da sua organização e às melhores práticas da NetApp. Teste as regras com uma simulação e, em seguida, agende a execução delas em todos os seus ambientes. <block ref="ce039b478eb432b675a03c04866f31ab" category="inline-link-macro-rx"></block>.</block>
-  <block id="8be08850265c9930c26a8e5b28183a2e" category="paragraph">Você também pode criar regras personalizadas em linguagem simples para validar seus ambientes em relação aos padrões da sua organização e às melhores práticas da NetApp. Teste as regras com uma simulação e, em seguida, agende a execução delas em todos os seus ambientes.</block>
-  <block id="7c24f3892a999a3e8d688cabe068b17a" category="paragraph"><block ref="ce039b478eb432b675a03c04866f31ab" category="inline-link-macro-rx"></block>.</block>
   <block id="782a430d789ff1db80e40fbe9c0be819" category="paragraph">O painel de arquitetura bem projetada avalia as configurações de storage em relação às melhores práticas do ONTAP e ao AWS Well-Architected Framework. A avaliação também recomenda melhorias e correções.</block>
   <block id="790f31a1565b039a710f1ff6cd60e24a" category="list-text">*Backups de volume*</block>
   <block id="ca512a483bb26b1b253abc6b2cc463bd" category="list-text">*política do Snapshot*</block>
@@ -3249,4 +3246,5 @@
   <block id="4fd22cd0c1b62f84962ef1e8ffd9c966" category="paragraph">Ative o rastreamento para monitorar os atrasos de replicação em sua conta. Workload Factory alerta você quando os atrasos ultrapassam um limite definido. Por padrão, o limite é 150% do intervalo de replicação para permitir um tempo de transferência normal e reduzir alarmes falsos. Você pode ajustar o limite para corresponder ao seu RPO e receber notificações quando os atrasos o excederem. Você também pode exportar os dados para um arquivo CSV para análise posterior.</block>
   <block id="adf6bc23c10d536eed25c42f34ba48e8" category="section-title">02 de agosto de 2026</block>
   <block id="bb971caaebe9e5940267caf457500810" category="paragraph"><block ref="247b746a5e5f871115d636673a8fd3a7" category="inline-link-macro-rx"></block>.</block>
+  <block id="929051af38dd6b0381c93579bedb478d" category="list-text">Na caixa de diálogo Clonar dispositivo de bloco, insira um nome para o dispositivo de bloco clonado.</block>
 </blocks>
