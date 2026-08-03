@@ -57,7 +57,7 @@ link:https://aws.amazon.com/lambda/pricing/["Saiba mais sobre os custos relacion
 [[when-a-link-is-required]]
 == Quando um link é necessário
 
-A fábrica de carga de trabalho requer um link para exibir algumas informações e executar algumas tarefas.  Se você tentar executar uma operação que requer um link e não tiver associado um link ao sistema de arquivos FSx for ONTAP , o Workload Factory notificará você de que a operação requer um link.
+O Workload Factory requer um link para exibir algumas informações e executar algumas tarefas. Se você tentar executar uma operação que requer um link e não tiver associado um link ao sistema de arquivos FSx for ONTAP, o Workload Factory notificará que a operação requer um link.
 
 Os recursos que exigem um link incluem:
 

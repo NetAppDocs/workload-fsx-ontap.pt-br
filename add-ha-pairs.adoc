@@ -51,4 +51,4 @@ Faça o seguinte antes de adicionar pares de HA a um sistema de arquivos:
 
 
 .Resultado
-A fábrica de carga de trabalho inicia o processo para adicionar o(s) par(s) de HA ao sistema de arquivos. O sistema de arquivos não está disponível para outras operações, como criação de volume, até que os pares de HA sejam adicionados. Pode monitorizar o progresso da operação no separador *Tracker*.
+O Workload Factory inicia o processo para adicionar o(s) par(es) de HA ao sistema de arquivos. O sistema de arquivos não está disponível para outras operações como criação de volumes até que os pares de HA sejam adicionados. Você pode monitorar o progresso da operação na guia *Tracker*.

@@ -137,7 +137,7 @@ Insira o ARN da função de execução do Lambda na caixa de texto.
 
 .. *Tags*: Opcionalmente, adicione quaisquer tags que você deseja associar a este link para que você possa categorizar mais facilmente seus recursos. Por exemplo, você pode adicionar uma tag que identifique esse link como sendo usado pelo FSX para sistemas de arquivos ONTAP.
 +
-O Workload Factory recupera automaticamente a conta, o local e o grupo de segurança da AWS com base no sistema de arquivos FSx para ONTAP .
+O Workload Factory recupera automaticamente a conta da AWS, a localização e o grupo de segurança com base no sistema de arquivos FSx for ONTAP.
 
 
 
@@ -148,7 +148,7 @@ A caixa de diálogo Redirecionar para CloudFormation é exibida e explica como c
 . Selecione *continuar* para abrir o Console de Gerenciamento da AWS e, em seguida, faça login na conta da AWS para este sistema de arquivos FSX for ONTAP.
 . Na página de pilha de criação rápida, em recursos, selecione *reconheço que o AWS CloudFormation pode criar recursos do IAM*.
 +
-Observe que três permissões são concedidas ao Lambda quando você inicia o modelo do CloudFormation. A fábrica de carga de trabalho usa essas permissões ao usar links.
+Observe que três permissões são concedidas ao Lambda quando você inicia o modelo CloudFormation. O NetApp Workload Factory usa essas permissões ao utilizar links.
 
 +
 [source, json]
@@ -167,7 +167,7 @@ Você pode monitorar o status da criação do link na página Eventos.  Isso nã
 --
 .Criar manualmente
 --
-Você pode criar um link usando duas ferramentas de Infraestrutura como Código (IaC) do Codebox: CloudFormation ou Terraform.  Com esta opção, você extrai o ARN do link do AWS CloudFormation e o informa aqui.  A fábrica de carga de trabalho registra manualmente o link para você.
+Você pode criar um link usando duas ferramentas de Infraestrutura como Código (IaC) do Codebox: CloudFormation ou Terraform. Com essa opção, você extrai o ARN do link da AWS CloudFormation e o informa aqui. O Workload Factory registra o link manualmente para você.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].

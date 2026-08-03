@@ -79,7 +79,7 @@ Se você habilitar a retenção a longo prazo, selecione uma política existente
 
 +
 
-NOTE: Rótulos de origem e destino correspondentes são necessários para retenção a longo prazo. Se desejar, a fábrica Workload pode criar rótulos ausentes para você.
+NOTE: A correspondência entre os rótulos de origem e destino é necessária para retenção de longo prazo. Se desejar, Workload Factory pode criar os rótulos que faltam para você.
 
 +
 *** *Escolha uma política existente*: Selecione uma política existente no menu suspenso.
