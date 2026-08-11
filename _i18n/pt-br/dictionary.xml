@@ -755,8 +755,6 @@
   <block id="b755b7c9e5db773b9578d24d7b40b61d" category="list-text">Selecione *Apply* (aplicar) para guardar a alteração.</block>
   <block id="124cb3fd3d0a35a1abf1c0f90f37e8a9" category="paragraph">Para usar dados de um cluster ONTAP on-premises, você primeiro precisa descobrir o cluster ONTAP on-premises. Depois de descobrir um cluster do ONTAP no local, você pode usar os dados para qualquer um dos seguintes casos de uso.</block>
   <block id="2a3b399798aa16ecfbc1425cc560bfad" category="list-text">Casos de uso</block>
-  <block id="ef63a3d009f11deff50f4dc327b32173" category="list-text">Observe que o principal caso de uso para a carga de trabalho do GenAI é o foco dessa série de tarefas.</block>
-  <block id="809c357d304bbfa1cd4446574b270af8" category="inline-link-macro">Enriquecer as bases de conhecimento de IA</block>
   <block id="f15192f8afdcf438f7b1ccf0cda2b436" category="list-text">*Backup e migração para a nuvem*: Os dados de volume ONTAP replicados no local para um sistema de arquivos FSX for ONTAP podem ser usados como backup na nuvem.</block>
   <block id="5b5a84720ff8905504e8a45fbc52fb73" category="list-text">*Disposição em camadas de dados*: Após a replicação, os dados de volume ONTAP no local com pouca frequência podem ser dispostos da camada de storage SSD para a camada de storage do pool de capacidade.</block>
   <block id="4185f116d64b1130e6f9ba4250b147fa" category="paragraph">Certifique-se de que tem o seguinte antes de começar:</block>
@@ -1289,7 +1287,6 @@
   <block id="897bea1a5ca479178427004f773ee72e" category="list-text">Opcionalmente, baixe uma lista de movimentos de volume antes de reequilibrar.</block>
   <block id="703547df715082455f8920d78fe90a30" category="list-text">Selecione *Rebalancamento*.</block>
   <block id="eaaaf380859de755a58a543fbffc3d8a" category="paragraph"><block ref="eaaaf380859de755a58a543fbffc3d8a" category="inline-link-macro-rx"></block></block>
-  <block id="1418bddde60a7d4a1fbd71041ef29d36" category="list-text">*Carga de trabalho do GenAI*: Replique dados de volume no local do ONTAP para um sistema de arquivos FSX for ONTAP para que os dados possam ser usados <block ref="8b94b70e10f0f6c7944c9419ec9922bc" category="inline-link-macro-rx"></block>no .</block>
   <block id="7583f12b4559f6687c67d8588da1e2f7" category="doc">Aprimoramento de crescimento automático de volume</block>
   <block id="b57fe4f5ee65a0e01f61993297811ebf" category="paragraph">Agora você pode definir o tamanho de crescimento automático dos seus volumes para que o tamanho do volume possa crescer além do tamanho provisionado para as necessidades comerciais e os requisitos do aplicativo.</block>
   <block id="9f1effd9ace68ca00fe9e9e3c024b362" category="inline-link-macro">Ativar volume com crescimento automático</block>
@@ -1997,7 +1994,6 @@
   <block id="0b81b68aa4b4da3fc81b7541c9557525" category="summary">No NetApp Workload Factory, você pode atualizar a configuração de eficiência de armazenamento após a criação do volume.</block>
   <block id="0254d70b292c2efb3924bc70f603207a" category="summary">Atualize a capacidade de transferência de um sistema de arquivos FSx para ONTAP no NetApp Workload Factory conforme necessário.</block>
   <block id="5b7dc0f0cef1ddf767dff9731a57d8a4" category="list-text">No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos para atualizar a capacidade de transferência e, em seguida, selecione *Gerenciar*.</block>
-  <block id="be31b62eb26bc544ed1c2919a1a354d8" category="summary">Descubra e replique dados ONTAP locais no NetApp Workload Factory para que eles possam ser usados ​​para enriquecer bases de conhecimento de IA.</block>
   <block id="5811115476eeb3b923e56f3b218e8861" category="doc">Use dados de cluster ONTAP local no NetApp Workload Factory</block>
   <block id="5433703774e7ff1a361e7a705d25ba42" category="paragraph">Descubra um cluster ONTAP local no NetApp Workload Factory para que você possa replicar os dados em um sistema de arquivos Amazon FSx for NetApp ONTAP .</block>
   <block id="cab5c35909125289d94f24cfb933bb6d" category="list-text">*Link*: Selecione um link.  O link será associado ao cluster local para criar conectividade entre o cluster e o Workload Factory.</block>
@@ -3247,4 +3243,7 @@
   <block id="adf6bc23c10d536eed25c42f34ba48e8" category="section-title">02 de agosto de 2026</block>
   <block id="bb971caaebe9e5940267caf457500810" category="paragraph"><block ref="247b746a5e5f871115d636673a8fd3a7" category="inline-link-macro-rx"></block>.</block>
   <block id="929051af38dd6b0381c93579bedb478d" category="list-text">Na caixa de diálogo Clonar dispositivo de bloco, insira um nome para o dispositivo de bloco clonado.</block>
+  <block id="935b1e26eff078e94b224d92e0db898a" category="section-title">Recursos do ONTAP exibidos no explorador de volumes</block>
+  <block id="2d4406cf931edb2fbd5ab72e7eb07c66" category="paragraph">O explorador de volumes agora inclui recursos do ONTAP na tabela de volumes. Esses recursos fornecem informações mais detalhadas sobre a configuração e o status dos seus volumes, como cobertura de proteção, status da Autonomous Ransomware Protection (ARP/AI), eficiência de storage, política de tiering e volume com crescimento automático.</block>
+  <block id="5800d9f6c1560d9eaf8bc5fbacb4698b" category="summary">Descubra e replique os dados ONTAP locais no NetApp Workload Factory para que possam ser usados como backup na nuvem.</block>
 </blocks>

@@ -88,6 +88,13 @@ Para configurar notificações para eventos do S3, link:https://docs.netapp.com/
 
 
 
+[[ontap-features-displayed-in-volumes-explorer]]
+=== Recursos do ONTAP exibidos no explorador de volumes
+
+O explorador de volumes agora inclui recursos do ONTAP na tabela de volumes. Esses recursos fornecem informações mais detalhadas sobre a configuração e o status dos seus volumes, como cobertura de proteção, status da Autonomous Ransomware Protection (ARP/AI), eficiência de storage, política de tiering e volume com crescimento automático.
+
+
+
 [[05-july-2026]]
 == 05 de julho de 2026
 
