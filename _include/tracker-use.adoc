@@ -1,0 +1,54 @@
+= Exibir solicitação de API
+:allow-uri-read: 
+
+
+. No Tracker, use os filtros ou a pesquisa para refinar os resultados dos jobs. Você também pode baixar um relatório de jobs.
+
+
+
+
+[[view-api-request]]
+== Exibir solicitação de API
+
+Visualize a solicitação de API na caixa de código para uma tarefa no Tracker.
+
+.Passos
+. No Rastreador, selecione uma tarefa.
+. Selecione o menu de ações e depois selecione *Exibir solicitação de API*.
+
+
+
+
+[[retry-a-failed-operation]]
+== Tente novamente uma operação com falha
+
+Tente novamente uma operação com falha no Tracker. Você também pode copiar a mensagem de erro de uma operação com falha.
+
+
+NOTE: Você pode tentar novamente uma operação com falha até 10 vezes.
+
+.Passos
+. No Rastreador, selecione uma operação com falha.
+. Selecione o menu de ações e depois selecione *Repetir*.
+
+
+.Resultado
+A operação é reiniciada.
+
+
+
+[[edit-and-retry-a-failed-operation]]
+== Edite e tente novamente uma operação com falha
+
+Edite os parâmetros da operação com falha e tente novamente a operação fora do Rastreador.
+
+.Passos
+. No Rastreador, selecione uma operação com falha.
+. Selecione o menu de ações e depois selecione *Editar e tentar novamente*.
++
+Você é redirecionado para a página de operação, onde você pode editar os parâmetros e tentar novamente a operação.
+
+
+
+.Resultado
+A operação é reiniciada. Aceda a Rastreador para ver o estado da operação.
