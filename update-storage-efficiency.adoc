@@ -23,10 +23,8 @@ Os volumes usam thin Provisioning, independentemente de você habilitar ou desab
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
-. No menu Armazenamento, selecione *FSx para ONTAP*.
-. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume a ser atualizado e, em seguida, selecione *Gerenciar*.
-. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. Na guia Volumes, selecione o menu de ações do volume para alterar a política de camadas.
+. No menu Storage, selecione *Volumes explorer*.
+. Selecione o menu de ações do volume para o qual deseja atualizar a configuração de eficiência de storage.
 . Selecione *ações avançadas* e, em seguida, *Definir eficiência de armazenamento*.
 . Opte por ativar ou desativar a eficiência de armazenamento de volume.
 . Selecione *Apply* (aplicar) para guardar a alteração.

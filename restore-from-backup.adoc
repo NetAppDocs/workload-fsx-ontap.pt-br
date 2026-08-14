@@ -18,10 +18,8 @@ O Workload Factory determina se você tem capacidade suficiente para a restaura�
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
-. No menu Armazenamento, selecione *FSx para ONTAP*.
-. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume e, em seguida, selecione *Gerenciar*.
-. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. Na aba *Volumes*, selecione o menu de ações para o volume a ser restaurado a partir de um backup.
+. No menu Storage, selecione *Volumes explorer*.
+. Selecione o menu de ações para o volume que você deseja restaurar a partir de um backup.
 . Selecione *Data protection actions*, *Volume backups* e, em seguida, *Restore from a backup*.
 . Na caixa de diálogo Restaurar a partir de uma cópia de segurança, forneça o seguinte:
 +

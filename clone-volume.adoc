@@ -25,10 +25,8 @@ Para que um volume clonado contenha todos os dados do volume pai e quaisquer nov
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
-. No menu Armazenamento, selecione *FSx para ONTAP*.
-. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos FSx for ONTAP que contém o volume a ser clonado e selecione *Gerenciar*.
-. Na guia Visão geral do sistema de arquivos, selecione a guia *volumes*.
-. Na aba Volumes, selecione o menu de ações do volume a ser clonado.
+. No menu Storage, selecione *Volumes explorer*.
+. Selecione o menu de ações do volume que você deseja clonar.
 . Selecione *ações de proteção de dados* e, em seguida, *volume Clone*.
 . Na caixa de diálogo Clone volume (Clonar volume), introduza um nome para o clone de volume.
 . Selecione *Clone*.

@@ -23,10 +23,8 @@ Edite o nome, o rótulo e o período de retenção de um snapshot.  Se o snapsho
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
-. No menu Armazenamento, selecione *FSx para ONTAP*.
-. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume e, em seguida, selecione *Gerenciar*.
-. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. Na aba *Volumes*, selecione o menu de ações para o volume com o instantâneo a ser editado.
+. No menu Storage, selecione *Volumes explorer*.
+. Selecione o menu de ações do volume com o snapshot para editar.
 . Selecione *Ações de proteção de dados* e depois *Gerenciar instantâneos*.
 . Na página Gerenciar instantâneos, selecione o menu de ações do instantâneo a ser editado e, em seguida, selecione *Editar*.
 . Na caixa de diálogo Editar um instantâneo, você pode editar o seguinte:
@@ -56,10 +54,8 @@ Habilite o acesso ao diretório de snapshots para dar aos usuários a capacidade
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
-. No menu Armazenamento, selecione *FSx para ONTAP*.
-. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume e, em seguida, selecione *Gerenciar*.
-. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. Na aba *Volumes*, selecione o menu de ações do volume com o snapshot a ser acessado.
+. No menu Storage, selecione *Volumes explorer*.
+. Selecione o menu de ações do volume com o snapshot ao qual você deseja acessar.
 . Selecione *Ações de proteção de dados* e depois *Gerenciar instantâneos*.
 . Na página Gerenciar instantâneos, selecione o menu de ações para acessar o instantâneo e, em seguida, selecione *Acessar*.
 . Na caixa de diálogo Acessar instantâneo, selecione *Habilitar acesso ao diretório de instantâneos* para acessar este instantâneo de volume e todos os instantâneos do volume.
@@ -93,10 +89,8 @@ Snapshots imutáveis não podem ser excluídos até que o período de retenção
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
-. No menu Armazenamento, selecione *FSx para ONTAP*.
-. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume e, em seguida, selecione *Gerenciar*.
-. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. Na aba *Volumes*, selecione o menu de ações para o volume com o snapshot a ser excluído.
+. No menu Storage, selecione *Volumes explorer*.
+. Selecione o menu de ações do volume com o snapshot que você deseja excluir.
 . Selecione *Ações de proteção de dados* e depois *Gerenciar instantâneos*.
 . Na página Gerenciar instantâneos, selecione o menu de ações do instantâneo a ser excluído e, em seguida, selecione *Excluir*.
 . Na caixa de diálogo Excluir instantâneo, digite "excluir".

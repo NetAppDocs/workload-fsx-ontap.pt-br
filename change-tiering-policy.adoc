@@ -40,10 +40,8 @@ Observe que algumas políticas de disposição em categorias têm um período de
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
-. No menu Armazenamento, selecione *FSx para ONTAP*.
-. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume a ser atualizado e, em seguida, selecione *Gerenciar*.
-. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. Na guia Volumes, selecione o menu de ações do volume para alterar a política de camadas.
+. No menu Storage, selecione *Volumes explorer*.
+. Selecione o menu de ações do volume para o qual você deseja alterar a política de tiering.
 . Selecione *ações avançadas* e, em seguida, *alterar política de disposição em camadas*.
 . Na página alterar política de disposição em camadas, selecione para copiar a política de disposição em camadas do volume de origem ou selecione uma das seguintes políticas de disposição em camadas:
 +

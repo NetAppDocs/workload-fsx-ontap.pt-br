@@ -36,10 +36,8 @@ NOTE: Você pode visualizar eventos de latência e receber alertas sem uma conex
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
-. No menu Armazenamento, selecione *FSx para ONTAP*.
-. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume que deseja configurar e, em seguida, selecione *Gerenciar*.
-. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. Na aba Volumes, selecione o menu de ações do volume para o qual deseja definir os limites de latência.
+. No menu Storage, selecione *Volumes explorer*.
+. Selecione o menu de ações do volume para o qual você deseja definir os limites de latência.
 . Selecione *Ações de alertas* e, em seguida, *Definir limite de latência*.
 . Na caixa de diálogo Definir limite de latência, configure o seguinte:
 +

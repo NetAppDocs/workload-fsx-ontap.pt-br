@@ -95,9 +95,8 @@ Para habilitar ARP/AI para um sistema de arquivos ou um volume, você deve assoc
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
-. No menu Armazenamento, selecione *FSx para ONTAP*.
-. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos para habilitar ARP/AI e então selecione *Gerenciar*.
-. Na guia Volumes, selecione o menu de ações do volume para habilitar ARP/AI, depois *Ações de proteção de dados* e depois *Gerenciar ARP/AI*.
+. No menu Storage, selecione *Volumes explorer*.
+. Selecione o menu de ações do volume para ativar o ARP/AI, depois *Ações de proteção de dados* e depois *Gerenciar ARP/AI*.
 . Na caixa de diálogo Gerenciar ARP/AI, faça o seguinte:
 +
 .. Habilitar ou desabilitar o recurso.

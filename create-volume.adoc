@@ -83,8 +83,8 @@ NOTE: Ao usar o Terraform do Codebox, o código que você copia ou baixa oculta 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
-. No menu Storage, selecione *Volume explorer*.
-. Em *Volume explorer*, selecione *Create volume*.
+. No menu Storage, selecione *Volumes explorer*.
+. Selecione *Create volume*.
 . Na página criar volume em Detalhes gerais, forneça os seguintes detalhes:
 +
 .. *Nome do volume*: Insira um nome para o volume.

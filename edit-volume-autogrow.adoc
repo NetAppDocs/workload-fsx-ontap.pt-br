@@ -24,10 +24,8 @@ Para habilitar o crescimento automático de volume, você deve associar um link.
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
-. No menu Armazenamento, selecione *FSx para ONTAP*.
-. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com o volume a ser atualizado e, em seguida, selecione *Gerenciar*.
-. Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. Na guia Volumes, selecione o menu de ações do volume que você deseja modificar.
+. No menu Storage, selecione *Volumes explorer*.
+. Selecione o menu de ações para o volume que você deseja modificar.
 . Selecione *Ações básicas* e depois *Definir aumento automático de volume*.
 . Na caixa de diálogo Definir crescimento automático, ative o crescimento automático de volume para expandir automaticamente a capacidade do volume até que ele atinja o tamanho máximo. Este recurso permite o aumento do uso de dados, garantindo operações ininterruptas.
 +
