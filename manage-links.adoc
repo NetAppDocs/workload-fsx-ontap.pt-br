@@ -4,7 +4,7 @@ permalink: manage-links.html
 keywords: links, accounts, lambda, creating, associating, disassociating, deleting, editing 
 summary: Você pode visualizar links associados à sua conta, atualizar senhas para autenticação de links e remover um link no NetApp Workload Factory. 
 ---
-= Gerenciar links do Workload Factory
+= Gerencie os links do NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

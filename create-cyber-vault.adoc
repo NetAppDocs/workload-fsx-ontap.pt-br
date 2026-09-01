@@ -4,7 +4,7 @@ permalink: create-cyber-vault.html
 keywords: create cyber vault, volume cyber vault, protect data cyber vault, cyber vault setup 
 summary: Saiba mais sobre os cofres cibernéticos da NetApp e como implementar uma arquitetura de cofre cibernético para proteger seus dados contra ransomware e outras ameaças cibernéticas. 
 ---
-= Proteja seus dados com um cofre cibernético.
+= Proteja seus dados do FSx for ONTAP com um cofre cibernético
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

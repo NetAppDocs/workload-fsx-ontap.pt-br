@@ -4,7 +4,7 @@ permalink: track-replication-delays.html
 keywords: replication, track replication, replication lag, replication delay, delay, monitor replication, replication threshold, lag notification 
 summary: Ative o rastreamento para monitorar os atrasos em todos os relacionamentos de replicação da sua conta. 
 ---
-= Acompanhe atrasos na replicação
+= Acompanhe os atrasos de replicação no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

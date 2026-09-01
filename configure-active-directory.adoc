@@ -4,7 +4,7 @@ permalink: configure-active-directory.html
 keywords: configure AD, configure active directory, update ad, edit active directory 
 summary: Configure e atualize o Active Directory para uma VM de armazenamento em um sistema de arquivos FSx para ONTAP no NetApp Workload Factory. 
 ---
-= Configurar e atualizar o ative Directory para uma VM de armazenamento
+= Configure e atualize o Active Directory para uma máquina virtual de armazenamento no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

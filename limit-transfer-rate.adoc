@@ -4,7 +4,7 @@ permalink: limit-transfer-rate.html
 keywords: limit max transfer rate, limit transfer rate 
 summary: Limite a taxa máxima de transferência de um relacionamento de replicação no NetApp Workload Factory. 
 ---
-= Limite a taxa máxima de transferência de uma relação de replicação
+= Limitar a taxa de transferência de replicação no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

@@ -4,7 +4,7 @@ permalink: create-snapshot.html
 keywords: create snapshot, snapshot 
 summary: Crie um snapshot manual de um volume FSx para ONTAP no NetApp Workload Factory.  Snapshots são versões pontuais do conteúdo do seu volume. 
 ---
-= Crie um snapshot manual de um volume do FSX for ONTAP
+= Crie um snapshot sob demanda de um volume no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

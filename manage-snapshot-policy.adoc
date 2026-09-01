@@ -4,7 +4,7 @@ permalink: manage-snapshot-policy.html
 keywords: manage snapshot policy, change snapshot policy, snapshot policies, snapshot schedule, update 
 summary: Gerencie políticas de snapshot para volumes FSx for ONTAP no Workload Factory.  Uma política de snapshot define como o sistema cria snapshots para um volume. 
 ---
-= Gerenciar políticas de snapshot
+= Gerencie políticas de snapshots para volumes no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

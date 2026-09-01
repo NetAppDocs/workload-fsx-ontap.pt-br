@@ -4,7 +4,7 @@ permalink: restore-volume-from-snapshot.html
 keywords: restore volume, snapshot 
 summary: Restaure um volume FSX for ONTAP de um snapshot quando o volume contém arquivos excluídos ou corrompidos. 
 ---
-= Restaurar um volume de um snapshot no Workload Factory
+= Restaurar um volume a partir de um snapshot no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

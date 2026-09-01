@@ -4,7 +4,7 @@ permalink: manage-capacity-automatically.html
 keywords: auto capacity, automatic capacity management, inodes management, file system capacity 
 summary: Habilitar esse recurso permite que o Workload Factory adicione automaticamente armazenamento incremental ou inodes a um sistema de arquivos FSx para ONTAP conforme as necessidades de capacidade mudam ao longo do tempo. 
 ---
-= Gerencie automaticamente a capacidade do sistema de arquivos e os inodes no Workload Factory
+= Gerencie a capacidade e os inodes automaticamente no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

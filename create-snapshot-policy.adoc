@@ -4,7 +4,7 @@ permalink: create-snapshot-policy.html
 keywords: create 
 summary: Crie uma política de snapshot personalizada para uma VM de armazenamento no Workload Factory. 
 ---
-= Crie uma política de snapshot para VMs de armazenamento no Workload Factory
+= Crie uma política de snapshots para VMs de armazenamento no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
