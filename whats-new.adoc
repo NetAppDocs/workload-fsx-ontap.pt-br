@@ -25,7 +25,7 @@ Saiba o que há de novo no Amazon FSX for NetApp ONTAP.
 
 Agora você pode criar links diretamente da página Links no menu Administração, além da página de inventário do FSx para ONTAP e da página de visão geral do sistema de arquivos.
 
-link:create-link.html["Saiba mais sobre como criar links"].
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Saiba mais sobre como criar links"^].
 
 
 
@@ -209,7 +209,7 @@ O Workload Factory identifica os hosts que consomem armazenamento e os tipos de 
 
 Exibimos todos os endpoints do sistema de arquivos e das máquinas virtuais de armazenamento (VMs) diretamente na guia Visão geral de um sistema de arquivos. A visibilidade direta dos endpoints no console do Workload Factory facilita o monitoramento do acesso à rede, dos endpoints e do status de failover sem usar a CLI ou CloudShell. Para exibir detalhes do LIF, incluindo funções, endpoints, nós, endereços IP e status, você precisará associar um link ao sistema de arquivos.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link ao seu sistema de arquivos no NetApp Workload Factory"].
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda como associar um link ao seu sistema de arquivos no NetApp Workload Factory"^].
 
 
 
@@ -943,7 +943,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 Agora você pode usar o Terraform do Codebox para criar um link para associação com um sistema de arquivos FSx para ONTAP .  Esta funcionalidade é para usuários que criam links manualmente.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Conete-se a um sistema de arquivos FSX for ONTAP com um link do Lambda"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Conete-se a um sistema de arquivos FSX for ONTAP com um link do Lambda"^]
 
 
 
@@ -1047,7 +1047,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["A
 
 Agora você pode gerenciar a função de execução do IAM e sua política de permissão anexada ao criar um link no console do Workload Factory.  Um link estabelece conectividade entre sua conta do Workload Factory e um ou mais sistemas de arquivos FSx para ONTAP .  Você tem duas opções para atribuir a função de execução do IAM e as permissões de link: automaticamente ou fornecidas pelo usuário.  Gerenciar a função de execução e sua política de permissões anexada no Workload Factory significa que você não precisa mais usar código de terceiros.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Conete-se a um sistema de arquivos FSX for ONTAP com um link do Lambda"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Conete-se a um sistema de arquivos FSX for ONTAP com um link do Lambda"^]
 
 
 
@@ -1086,7 +1086,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 Agora você pode definir o tamanho de crescimento automático dos seus volumes para que o tamanho do volume possa crescer além do tamanho provisionado para as necessidades comerciais e os requisitos do aplicativo.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-volume-autogrow.html["Ativar volume com crescimento automático"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-volume-capacity.html["Ativar volume com crescimento automático"]
 
 
 
@@ -1548,7 +1548,7 @@ O inventário de armazenamento foi atualizado para uma vista de duas abas:
 * Suporte para criação manual de links: Esse recurso permite a criação autônoma no AWS CloudFormation com o Registro manual do link ARN. Isso é útil quando uma equipe de segurança ou DevOps auxilia no processo de criação de links.
 
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Crie um link"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Crie um link"^]
 
 
 

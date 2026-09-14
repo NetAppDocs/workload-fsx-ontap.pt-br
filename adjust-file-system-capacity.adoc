@@ -1,43 +1,76 @@
 ---
 sidebar: sidebar 
-permalink: manage-capacity-automatically.html 
-keywords: auto capacity, automatic capacity management, inodes management, file system capacity 
-summary: Habilitar esse recurso permite que o Workload Factory adicione automaticamente armazenamento incremental ou inodes a um sistema de arquivos FSx para ONTAP conforme as necessidades de capacidade mudam ao longo do tempo. 
+permalink: adjust-file-system-capacity.html 
+keywords: adjust capacity, elastic file system capacity, increase file system capacity, increase FSx capacity, decrease file system capacity, decrease FSx capacity 
+summary: Ajuste manualmente a capacidade de armazenamento SSD de um sistema de arquivos FSx para ONTAP para atender às necessidades de suas cargas de trabalho baseadas em projetos com conjuntos de trabalho ativos variados. 
 ---
-= Gerencie a capacidade e os inodes automaticamente no NetApp Workload Factory
+= Ajuste a capacidade do sistema de arquivos no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Habilitar o gerenciamento de capacidade permite que NetApp Workload Factory adicione automaticamente storage incremental a um FSx for ONTAP sistema de arquivos conforme as necessidades de capacidade mudam ao longo do tempo. Além disso, habilitar esse recurso elimina a necessidade de monitorar a capacidade manualmente.
+Ajuste a capacidade de storage em unidade de estado sólido (SSD) de um sistema de arquivos FSx for ONTAP para atender às necessidades de cargas de trabalho com diferentes conjuntos de trabalho ativos no NetApp Workload Factory. Aumente a capacidade manualmente quando o uso exceder seu limite ou reduza-a quando você não estiver usando os conjuntos de trabalho para economizar dinheiro. Como alternativa, habilite o gerenciamento automático de capacidade para que o Workload Factory adicione storage incremental conforme as necessidades mudam ao longo do tempo, eliminando a necessidade de monitoramento manual.
+
+
+NOTE: A redução da capacidade de armazenamento do SSD só é suportada em sistemas de arquivos de segunda geração.
 
 
 
-[[about-this-task]]
-== Sobre esta tarefa
+[[adjust-file-system-capacity-manually]]
+== Ajuste manualmente a capacidade do sistema de arquivos
 
-O sistema verifica o sistema de arquivos FSx for ONTAP a cada 30 minutos. Ele verifica se é necessário adicionar storage incremental e verifica os inodes de volume disponíveis. A contagem aumenta com base nos limites de gerenciamento automático de capacidade.
+Com a capacidade elástica do sistema de arquivos, você pode ajustar dinamicamente a capacidade dos seus sistemas de arquivos para atender às necessidades das suas cargas de trabalho.
 
-Habilitar o gerenciamento de inodes permite que NetApp Workload Factory adicione automaticamente inodes incrementais a um sistema de arquivos FSx for ONTAP conforme as necessidades de capacidade mudam. Esse recurso elimina a necessidade de monitoramento manual de inodes.
+.Sobre esta tarefa
+Alterar a capacidade do sistema de arquivos impacta o IOPS do seu sistema de arquivos FSx for ONTAP.
 
-Somente uma conta pode gerenciar esse recurso.
+Quando você automaticamentelink:provision-iops.html["Provisionamento de IOPS"] para um sistema de arquivos, o IOPS aumenta ou diminui em 3 IOPS a cada aumento ou diminuição de 1 GiB na capacidade do SSD.
 
-A quantidade máxima de capacidade de armazenamento SSD para todos os sistemas de arquivos FSX for ONTAP é de 524.288 GiB. Para solicitar um aumento de cota, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quotas"^]documentação do AWS FSX for NetApp ONTAP.
+Quando link:provision-iops.html["Provisionamento de IOPS"] você manualmente, talvez seja necessário aumentar a alocação de IOPS para oferecer suporte ao aumento da capacidade do sistema de arquivos.
+
+Para saber os limites de capacidade de armazenamento SSD, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quotas"^]documentação do AWS FSX for NetApp ONTAP.
+
+.Antes de começar
+Para ajustar a capacidade de um sistema de arquivos, você deve primeiro link:manage-capacity-automatically.html["desativar o gerenciamento automático de capacidade"].
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
+. No Painel, selecione *Ajustar capacidade do SSD*.
+. Selecione o sistema de arquivos cuja capacidade você deseja ajustar e então selecione *Continuar*.
+. Na caixa de diálogo Ajustar capacidade do SSD, insira um número para *Capacidade provisionada*.
+. Selecione a unidade para a capacidade provisionada.
+. Selecione *aplicar*.
+
+
+
+
+[[enable-automatic-capacity-and-inode-management]]
+== Ative o gerenciamento automático de capacidade e inodes
+
+Habilite o gerenciamento de capacidade e inodes para permitir que NetApp Workload Factory adicione automaticamente storage incremental, um sistema de arquivos do FSx for ONTAP e inodes (arquivos) a um volume conforme as necessidades de capacidade mudam ao longo do tempo. Esses recursos eliminam a necessidade de monitorar a capacidade e os inodes manualmente.
+
+Apenas uma conta pode gerenciar esses recursos.
 
 
 
 [[enable-automatic-capacity-management-and-capacity-notifications]]
-== Ative o gerenciamento de capacidade automático e as notificações de capacidade
+=== Ative o gerenciamento de capacidade automático e as notificações de capacidade
 
 Habilite o gerenciamento de capacidade para adicionar automaticamente storage incremental até o limite máximo de tamanho para um sistema de arquivos FSx for ONTAP. Configure notificações para receber alertas quando o sistema de arquivos atingir um determinado limite de capacidade.
+
+.Sobre esta tarefa
+O Workload Factory verifica o sistema de arquivos do Amazon FSx for NetApp ONTAP a cada 30 minutos para verificar se é necessário adicionar storage incremental.
+
+A quantidade máxima de capacidade de armazenamento SSD para todos os sistemas de arquivos FSX for ONTAP é de 524.288 GiB. Para solicitar um aumento de cota, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quotas"^]documentação do AWS FSX for NetApp ONTAP.
 
 .Antes de começar
 Considere o seguinte antes de começar:
 
 * Você develink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Conceder credenciais com a política de permissão _visualizar, planejar e analisar_"^] No Workload Factory, para concluir esta tarefa.
-* Para garantir que os inodes de volume aumentem junto com a capacidade de armazenamento, você deve associar um link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após os associados da ligação, volte a esta operação.
+* Para garantir que os inodes de volume aumentem conforme a capacidade de storage, você deve associar um link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"^]. Após a associação do link, retorne a esta operação.
 * Você não deve habilitar esse recurso durante a migração de dados, pois a AWS impõe um período mínimo de resfriamento de seis horas entre os aumentos de capacidade do SSD. Essa restrição pode atrasar os ajustes, portanto, planeje-se adequadamente.
 
 
@@ -86,11 +119,12 @@ Uma verificação do sistema de arquivos ocorre a cada 30 minutos para determina
 
 
 [[enable-inode-management-for-a-file-system]]
-== Habilite o gerenciamento de inode para um sistema de arquivos
+=== Habilite o gerenciamento de inode para um sistema de arquivos
 
 Habilite o gerenciamento automático de inodes para aumentar o número de inodes (arquivos) por volume até o limite permitido.
 
-Uma varredura do sistema de arquivos FSx for ONTAP ocorre a cada 30 minutos. Ela verifica os inodes de volume disponíveis e verifica se é necessário adicionar inodes incrementais. A contagem aumenta com base nos limites de gerenciamento automático de inodes.
+.Sobre esta tarefa
+O NetApp Workload Factory verifica o sistema de arquivos do Amazon FSx for NetApp ONTAP a cada 30 minutos para verificar os inodes de volume disponíveis e para checar se é necessário adicionar inodes incrementais. A contagem aumenta com base nos limites automáticos de gerenciamento de inodes.
 
 
 NOTE: *Usuários do Terraform*: O Terraform possui uma limitação que exige que todas as operações sejam concluídas dentro do próprio Terraform.  O gerenciamento de inodes não é suportado no Terraform, mas você pode habilitar o gerenciamento automático de inodes no console do Workload Factory.
@@ -98,7 +132,7 @@ NOTE: *Usuários do Terraform*: O Terraform possui uma limitação que exige que
 .Antes de começar
 Considere o seguinte antes de começar:
 
-* Para gerenciar inodes de volume automaticamente, você deve associar um link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após o link associar, retorne a esta operação.
+* Para gerenciar inodes de volume automaticamente, você deve associar um link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"^]. Após a associação do link, retorne a esta operação.
 * O gerenciamento automático de inodes pode ser configurado com um _limiar de aviso_ que aciona uma notificação do serviço de notificação do Workload Factory.  Para usar este recurso, você develink:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Ative o serviço de notificação do Workload Factory."^] primeiro.
 * Você develink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Conceder credenciais com a política de permissão _visualizar, planejar e analisar_"^] No Workload Factory, para concluir esta tarefa.
 

@@ -11,9 +11,7 @@ summary: O Workload Factory analisa as configurações do Amazon FSx for NetApp 
 
 
 [role="lead"]
-Utilizando insights e recomendações de análise de configuração, aproveite o Workload Factory para implementar as melhores práticas para seus sistemas de arquivos FSx for ONTAP. Você pode facilmente revisar o status da arquitetura, identificar problemas em suas configurações e tomar medidas para aprimorar a arquitetura de quaisquer sistemas que não estejam otimizados em termos de confiabilidade, segurança, eficiência, desempenho e custo.
-
-Você também pode descartar a análise de configurações de armazenamento específicas que não se aplicam ao seu ambiente de armazenamento para evitar alertas desnecessários e resultados de otimização imprecisos.
+Use o NetApp Workload Factory para implementar as melhores práticas para seus sistemas de arquivos Amazon FSx for NetApp ONTAP. Você pode facilmente revisar o status bem arquitetado, aprender sobre problemas em suas configurações e corrigi-los para aprimorar a arquitetura de quaisquer sistemas que não estejam otimizados para confiabilidade, segurança, eficiência, desempenho e custo.
 
 link:configuration-analysis.html["Saiba mais sobre a análise de configuração e o status de arquitetura bem projetada."]
 
@@ -22,13 +20,11 @@ link:configuration-analysis.html["Saiba mais sobre a análise de configuração 
 [[about-this-task]]
 == Sobre esta tarefa
 
-O Workload Factory analisa diariamente as configurações de implantação do sistema de arquivos Amazon FSx for NetApp ONTAP. A análise diária fornece o status de arquitetura bem projetada, além de insights e recomendações com opções para corrigir automaticamente problemas de configuração, garantindo que seu sistema de arquivos atenda às melhores práticas.
+O Workload Factory analisa diariamente as configurações de implantação do sistema de arquivos Amazon FSx for NetApp ONTAP.
 
-A conectividade de link permite que o Workload Factory verifique problemas de desempenho, proteção de dados e configurações. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Conecte-se a um sistema de arquivos FSx para ONTAP usando um link"] para a análise mais abrangente dos recursos do seu sistema de arquivos.
+Como os requisitos para configurações de armazenamento variam, você pode descartar a análise de configurações específicas que não se aplicam ao seu ambiente de storage.
 
-Você tem opções para revisar as recomendações para problemas de configuração com seus sistemas de arquivos e corrigir os problemas.
-
-Como os requisitos para configurações de armazenamento variam, você pode descartar a análise de configurações específicas que não se aplicam ao seu ambiente de storage. Isso ajuda você a evitar alertas desnecessários e resultados de otimização imprecisos.
+A conectividade de link permite que o NetApp Workload Factory verifique problemas de desempenho, proteção de dados e configurações. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Conecte-se a um sistema de arquivos FSx para ONTAP usando um link"^] para a análise mais completa dos recursos do seu sistema de arquivos.
 
 .O que é analisado
 O Workload Factory analisa o status de arquitetura adequada das seguintes configurações para sistemas de arquivos FSx for ONTAP:
@@ -46,7 +42,7 @@ O Workload Factory analisa o status de arquitetura adequada das seguintes config
 == Antes de começar
 
 * Você deve link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["conceder permissões de _operações e remediação_"^] na sua conta da AWS.
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Conecte-se a um sistema de arquivos FSx para ONTAP usando um link"]para a análise mais abrangente dos recursos do seu sistema de arquivos.
+* link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Conecte-se a um sistema de arquivos FSx para ONTAP usando um link"^] para a análise mais completa dos recursos do seu sistema de arquivos.
 
 
 
@@ -69,7 +65,7 @@ A recomendação explica as práticas recomendadas e possíveis armadilhas de co
 +
 Algumas operações de correção estão disponíveis apenas para operações específicas e nem sempre para mais de um recurso. Por exemplo, você pode conseguir corrigir a configuração de um único volume, mas não de vários volumes.
 
-. Analise as informações sobre a operação de correção para a configuração na caixa de diálogo. Algumas operações podem causar indisponibilidade da instância ou interrupções de serviço.
+. Analise os itens de ação para saber sobre as consequências dessa correção, como períodos de inatividade da instância ou interrupções de serviço.
 . Selecione *Corrigir* se você quiser que o Workload Factory aplique as alterações recomendadas.
 
 

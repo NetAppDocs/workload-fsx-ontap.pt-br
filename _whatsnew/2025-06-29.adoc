@@ -77,4 +77,4 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["A
 
 Agora você pode gerenciar a função de execução do IAM e sua política de permissão anexada ao criar um link no console do Workload Factory.  Um link estabelece conectividade entre sua conta do Workload Factory e um ou mais sistemas de arquivos FSx para ONTAP .  Você tem duas opções para atribuir a função de execução do IAM e as permissões de link: automaticamente ou fornecidas pelo usuário.  Gerenciar a função de execução e sua política de permissões anexada no Workload Factory significa que você não precisa mais usar código de terceiros.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Conete-se a um sistema de arquivos FSX for ONTAP com um link do Lambda"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Conete-se a um sistema de arquivos FSX for ONTAP com um link do Lambda"^]

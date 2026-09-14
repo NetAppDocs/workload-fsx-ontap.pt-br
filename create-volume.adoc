@@ -64,7 +64,7 @@ Reveja os seguintes pré-requisitos antes de criar um volume:
 * Você precisa ter uma VM de storage.
 * Para acesso ao protocolo, execute o seguinte:
 +
-** Para configurar o acesso ao volume, você deve associar um link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após os associados da ligação, volte a esta operação.
+** Para configurar o acesso ao volume, você deve associar um link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"^]. Após a associação do link, retorne a esta operação.
 ** Você deve configurar o acesso para o protocolo selecionado, SMB/CIFS, NFS ou iSCSI.
 
 
@@ -177,7 +177,7 @@ O ONTAP atinge eficiência de armazenamento usando recursos de desduplicação e
 
 .. *Política de snapshot*: Selecione a política de snapshot para especificar a frequência e a retenção de snapshots.
 +
-A seguir, estão as políticas padrão da AWS. Para exibir as políticas de snapshot existentes, você deve link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["associe um link"].
+A seguir, estão as políticas padrão da AWS. Para exibir as políticas de snapshot existentes, você deve link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["associe um link"^].
 
 +
 `default`:: Essa política cria automaticamente snapshots na programação a seguir, com as cópias snapshot mais antigas excluídas para abrir espaço para cópias mais recentes:
@@ -233,7 +233,7 @@ _Balanced (Auto)_ é a política de armazenamento em camadas padrão ao criar um
 Se o recurso não estiver disponível, é por um dos seguintes motivos:
 
 +
-*** Um link não está associado ao sistema de arquivos. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após os associados da ligação, volte a esta operação.
+*** Não existe um link associado ao sistema de arquivos. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"^]. Após a associação do link, retorne a esta operação.
 *** Volumes com arquivos imutáveis e volumes com o protocolo NVMe não são suportados para ARP/AI. Volumes iSCSI são suportados a partir do ONTAP 9.17.1.
 *** O sistema de arquivos já tem uma política ARP/AI.
 
@@ -252,7 +252,7 @@ Se o recurso não estiver disponível, é por um dos seguintes motivos:
 
 
 .Informações relacionadas
-* link:adjust-volume-capacity.html["Ajuste a capacidade de volume no Workload Factory"]
+* link:manage-volume-capacity.html["Ajuste a capacidade de volume no Workload Factory"]
 * link:change-tiering-policy.html["Alterar a política de hierarquização de volumes no Workload Factory"]
 * link:manage-s3-access-points.html["Gerencie os pontos de acesso S3 no Workload Factory."]
 

@@ -41,7 +41,7 @@ O Workload Factory identifica os hosts que consomem armazenamento e os tipos de 
 
 Exibimos todos os endpoints do sistema de arquivos e das máquinas virtuais de armazenamento (VMs) diretamente na guia Visão geral de um sistema de arquivos. A visibilidade direta dos endpoints no console do Workload Factory facilita o monitoramento do acesso à rede, dos endpoints e do status de failover sem usar a CLI ou CloudShell. Para exibir detalhes do LIF, incluindo funções, endpoints, nós, endereços IP e status, você precisará associar um link ao sistema de arquivos.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link ao seu sistema de arquivos no NetApp Workload Factory"].
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda como associar um link ao seu sistema de arquivos no NetApp Workload Factory"^].
 
 
 

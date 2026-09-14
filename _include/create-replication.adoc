@@ -51,7 +51,11 @@ Se você selecionou o caso de uso de migração, o Workload Factory seleciona au
 
 . *Taxa máxima de transferência*: Selecione *limitada* e insira o limite máximo de transferência em MB/s. Em alternativa, selecione *Unlimited*.
 +
-Sem um limite, o desempenho da rede e do aplicativo pode declinar. Como alternativa, recomendamos uma taxa de transferência ilimitada para os sistemas de arquivos FSX for ONTAP para cargas de trabalho críticas, por exemplo, aquelas que são usadas principalmente para recuperação de desastres. . Em Configurações de replicação, forneça o seguinte:
+Sem um limite, o desempenho da rede e do aplicativo pode declinar. Como alternativa, recomendamos uma taxa de transferência ilimitada para os sistemas de arquivos FSX for ONTAP para cargas de trabalho críticas, por exemplo, aquelas que são usadas principalmente para recuperação de desastres.
+
++
+.. Em Configurações de replicação, forneça o seguinte:
+
 
 . *Inicializar relacionamento de replicação*: escolha inicializar o relacionamento de replicação imediatamente após criá-lo ou posteriormente. Observe que a inicialização pode ser demorada, e talvez seja melhor executar a transferência completa fora do horário de pico.
 +

@@ -19,7 +19,7 @@ Somente volumes FlexVol são suportados para dispositivos de bloco no NetApp Wor
 O tamanho do bloco deve ser menor que o FlexVol volume disponível.
 
 .Antes de começar
-* Você precisa associar um link para criar dispositivos de bloco. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após associar o link, retorne a esta operação.
+* Você precisa associar um link para criar dispositivos de bloco. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"^]. Depois de associar o link, retorne a esta operação.
 
 
 .Passos
@@ -69,7 +69,7 @@ O ONTAP atinge eficiência de armazenamento usando recursos de desduplicação e
 
 .. *Política de snapshot*: Selecione a política de snapshot para especificar a frequência e a retenção de snapshots.
 +
-A seguir, estão as políticas padrão da AWS. Para exibir as políticas de snapshot existentes, você deve link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["associe um link"].
+A seguir, estão as políticas padrão da AWS. Para exibir as políticas de snapshot existentes, você deve link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["associe um link"^].
 
 +
 `default`:: Essa política cria automaticamente snapshots na programação a seguir, com as cópias snapshot mais antigas excluídas para abrir espaço para cópias mais recentes:
@@ -98,7 +98,7 @@ _Balanced (Auto)_ é a política de armazenamento em camadas padrão ao criar um
 Se o recurso não estiver disponível, é por um dos seguintes motivos:
 
 +
-*** Um link não está associado ao sistema de arquivos. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"]. Após os associados da ligação, volte a esta operação.
+*** Não existe um link associado ao sistema de arquivos. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"^]. Após a associação do link, retorne a esta operação.
 *** Volumes com arquivos imutáveis e volumes com o protocolo NVMe não são suportados para ARP/AI.
 *** O sistema de arquivos já tem uma política ARP/AI.
 

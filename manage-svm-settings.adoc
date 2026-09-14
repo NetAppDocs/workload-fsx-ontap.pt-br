@@ -1,0 +1,102 @@
+---
+sidebar: sidebar 
+permalink: manage-svm-settings.html 
+keywords: edit storage vm settings, vm tags, svm tags, storage vm settings, storage vm password, svm password 
+summary: Adicione, atualize ou remova tags de VM de armazenamento para uma VM de armazenamento a qualquer momento. 
+---
+= Gerencie as configurações de VMs de armazenamento no NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gerencie as configurações de uma máquina virtual de armazenamento no NetApp Workload Factory. Você pode configurar e atualizar o Active Directory para uma máquina virtual de armazenamento, atualizar a senha da máquina virtual de armazenamento e gerenciar as tags da máquina virtual de armazenamento.
+
+
+
+[[configure-and-update-ad-for-a-storage-vm-in-netapp-workload-factory]]
+== Configure e atualize o Active Directory para uma máquina virtual de armazenamento no NetApp Workload Factory
+
+Configure e atualize o Active Directory para uma VM de armazenamento em um sistema de arquivos FSx para ONTAP no NetApp Workload Factory.
+
+As mesmas etapas se aplicam à configuração e atualização do ative Directory para uma VM de armazenamento.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com a VM de armazenamento a ser atualizada e, em seguida, selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos em VMs de armazenamento, selecione *Gerenciar*.
+. Na tela Gerenciar VMs de armazenamento, selecione o menu de ações da VM de armazenamento para a qual deseja configurar o Active Directory e, em seguida, selecione *Ações básicas* > *Gerenciar configuração do AD*.
+. Na página Gerenciar configuração do AD, forneça o seguinte:
++
+.. *Domínio do ative Directory para ingressar*: Insira o nome de domínio totalmente qualificado (FQDN) do seu ative Directory.
+.. *Endereços IP DNS*: Insira até três endereços IP separados por vírgulas.
+.. *Nome NetBIOS do servidor SMB*: Insira o nome NetBIOS do servidor SMB do objeto computador do ative Directory a ser criado para sua VM de armazenamento. Esse é o nome desta SVM no active Directory.
+.. *Nome de utilizador*: Introduza o nome de utilizador da conta de serviço no ative Directory existente.
++
+Não inclua um prefixo ou sufixo de domínio. Para `EXAMPLE\ADMIN`, use `ADMIN`.
+
+.. *Senha*: Insira a senha da conta de serviço.
+.. *Unidade de organização (ou)*: Insira a unidade da organização.
++
+A UO é o nome de caminho distinto da unidade organizacional à qual você deseja ingressar no sistema de arquivos.
+
+.. *Grupo de administradores delegados*: Opcionalmente, insira o grupo de administradores do sistema de arquivos delegados.
++
+O grupo de administradores delegados é o nome do grupo no ative Directory que pode administrar o sistema de arquivos.
+
++
+Se você estiver usando o AWS Managed Microsoft AD, você deve especificar um grupo como Administradores delegados do FSX da AWS, Administradores delegados da AWS ou um grupo personalizado com permissões delegadas na UO.
+
++
+Se você estiver se conetando a um AD autogerenciado, use o nome do grupo no AD. O grupo padrão é `Domain Admins`.
+
+
+
+. Selecione *aplicar*.
+
+
+
+
+[[manage-storage-vm-tags]]
+== Gerenciar tags de VM de armazenamento
+
+As tags podem ajudar você a categorizar seus recursos.  Você pode adicionar, editar e remover tags de uma VM de armazenamento a qualquer momento no NetApp Workload Factory.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com a VM de armazenamento a ser atualizada e, em seguida, selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos em VMs de armazenamento, selecione *Gerenciar*.
+. Na tela Gerenciar VMs de armazenamento, selecione o menu de ações da VM de armazenamento para a qual deseja editar as tags e, em seguida, selecione *Ações básicas* > *Editar tags da VM de armazenamento*.
+. Na página Editar tags de VM de armazenamento, adicione, edite ou remova tags.
++
+O número máximo de tags que você pode aplicar a uma VM de armazenamento é 50.
+
+. Selecione *aplicar*.
+
+
+
+
+[[reset-the-storage-vm-password-in-netapp-workload-factory]]
+== Redefinir a senha da VM de armazenamento no NetApp Workload Factory
+
+Redefina a senha de uma VM de armazenamento no NetApp Workload Factory quando necessário.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com a senha da VM de armazenamento que deseja redefinir e, em seguida, selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos em VMs de armazenamento, selecione *Gerenciar*.
+. Na tela Gerenciar VMs de armazenamento, selecione o menu de ações da VM de armazenamento para a qual deseja redefinir a senha e, em seguida, selecione *Ações básicas* > *Redefinir senha*.
+. Na caixa de diálogo Redefinir senha, forneça o seguinte:
++
+.. *Nova senha*: Insira uma nova senha para a VM de armazenamento.
+.. *Confirm password*: Digite a nova senha novamente para confirmar.
+
+
+

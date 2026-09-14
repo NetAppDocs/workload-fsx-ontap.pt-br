@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: manage-file-system-settings.html 
+keywords: create fsx tags, create tags, edit fsx tags, fsx tags, reset fsx admin password 
+summary: Adicione, atualize ou remova tags do sistema de arquivos FSx para ONTAP a qualquer momento. 
+---
+= Gerencie as configurações do sistema de arquivos FSx for ONTAP no NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gerencie as configurações de um sistema de arquivos do Amazon FSx for NetApp ONTAP no NetApp Workload Factory. Você pode gerenciar tags para o sistema de arquivos, redefinir a senha do fsxadmin quando necessário e atualizar a capacidade de throughput conforme necessário.
+
+
+
+[[manage-fsx-for-ontap-file-system-tags]]
+== Gerencie as tags do sistema de arquivos do Amazon FSx for NetApp ONTAP
+
+As etiquetas podem ajudar você a categorizar seus recursos.  No NetApp Workload Factory, você pode adicionar, editar e remover tags de um sistema de arquivos a qualquer momento.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos que deseja atualizar e, em seguida, selecione *Gerenciar tags do sistema de arquivos*.
+. Na caixa de diálogo *Gerenciar tags do sistema de arquivos*, adicione, edite ou remova tags conforme necessário.
++
+O número máximo de tags que você pode aplicar a um sistema de arquivos é 50.
+
+. Selecione *aplicar*.
+
+
+
+
+[[reset-the-fsxadmin-password-of-an-fsx-for-ontap-file-system]]
+== Redefina a senha do fsxadmin de um sistema de arquivos do Amazon FSx for NetApp ONTAP
+
+Redefina a senha do fsxadmin no NetApp Workload Factory quando necessário.
+
+Se você forneceu um usuário alternativo durante a criação do sistema de arquivos, você só poderá redefinir a senha do fsxadmin no console da AWS.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos para redefinir a senha do fsxadmin e, em seguida, selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione o menu de ações.
++
+image:screenshot-reset-fsxadmin-password.png["Uma captura de tela do menu de ações na guia Visão geral de um sistema de arquivos."]
+
+. Selecione *Redefinir senha fsxadmin*.
+. Na caixa de diálogo Redefinir senha do fsxadmin, insira uma nova senha do fsxadmin e insira-a novamente para confirmar.
+. Selecione *aplicar*.
+
+
+
+
+[[update-throughput-capacity-for-an-fsx-for-ontap-file-system]]
+== Atualizar a capacidade de processamento para um sistema de arquivos do Amazon FSx for NetApp ONTAP
+
+Atualize a capacidade de transferência de um sistema de arquivos FSx para ONTAP no NetApp Workload Factory conforme necessário.
+
+Para saber os limites de capacidade de taxa de transferência, consulte a link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quotas"^]documentação do AWS FSX for NetApp ONTAP.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos para atualizar a capacidade de transferência e, em seguida, selecione *Gerenciar*.
+. Em informações, selecione o ícone de lápis ao lado de *capacidade de transferência*. O ícone de lápis aparece ao lado da seta suspensa quando o Mouse passa sobre a linha *capacidade de transferência*.
+. Na caixa de diálogo capacidade de throughput, selecione a capacidade de throughput que você precisa.
+. Selecione *Aplicar* para salvar as alterações
+
