@@ -2999,7 +2999,6 @@
   <block id="cd5018d2830f482994e77102c7380ec5" category="paragraph">A conectividade de link permite que o NetApp Workload Factory verifique problemas de desempenho, proteção de dados e configurações. <block ref="bd244e13e9233be6d4441bce58acbc1c" category="inline-link-macro-rx"></block> para a análise mais completa dos recursos do seu sistema de arquivos.</block>
   <block id="ab656c8a69b575add6ee0729f5bc54c7" category="list-text"><block ref="bd244e13e9233be6d4441bce58acbc1c" category="inline-link-macro-rx"></block> para a análise mais completa dos recursos do seu sistema de arquivos.</block>
   <block id="5d1f387838383b2d368f6e7f1c840316" category="list-text">Analise os itens de ação para saber sobre as consequências dessa correção, como períodos de inatividade da instância ou interrupções de serviço.</block>
-  <block id="6ad3b6fcf10a846b365b85062abd036b" category="paragraph">Diretiva não resolvida em &lt;stdin&gt; - include::https://raw.githubusercontent.com/NetAppDocs/workload-setup-admin/main/_include/links-overview.adoc[]</block>
   <block id="1bd303a4a4865b24239ad78c657bf53e" category="list-text">Você deve associar um link para gerenciar igroups. <block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>. Depois de associar o link, retorne a esta operação.</block>
   <block id="a5546560157685322114f05def377bc2" category="list-text">Você precisa associar um link para gerenciar volumes e relacionamentos de cache. <block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>. Depois de associar o link, retorne a esta operação.</block>
   <block id="873090954c0fe574d1c9f3181d89742b" category="list-text">Para gerenciar compartilhamentos SMB/CIFS, você deve associar um link. <block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>. Após a associação do link, retorne a esta operação.</block>
@@ -3071,4 +3070,39 @@
   <block id="55ce7397d464ef8e34bfaee401cec48d" category="sidebar">Gerencie as configurações do sistema de arquivos</block>
   <block id="2ee20619a771993544eaaa7e388816d1" category="sidebar">Gerencie VMs de armazenamento</block>
   <block id="1c388674e0a6805e31fb6d7602029a59" category="sidebar">Gerencie as configurações da VM de armazenamento</block>
+  <block id="87251eaee5bfd306ceab7bcacfbf47f6" category="paragraph">Um link do NetApp Workload Factory cria uma relação de confiança e conectividade entre uma conta do Workload Factory e um ou mais sistemas de arquivos FSx for ONTAP. Isso permite que você monitore e gerencie determinados recursos do sistema de arquivos diretamente pelas chamadas à API REST do ONTAP, que não estão disponíveis pela API do Amazon FSx for ONTAP.</block>
+  <block id="1e2cf39904eebcbddae0fe72e0186b8b" category="paragraph">Você não precisa de um link para começar a usar o Workload Factory, mas em alguns casos você precisará criar um link para desbloquear todos os recursos e funcionalidades do Workload Factory.</block>
+  <block id="65050310e57f3790fef3c72eb48d33fe" category="section-title">Por que links são benéficos</block>
+  <block id="8db5475a47ce008ca4a3d502a243007d" category="paragraph">Os links são vantajosos porque permitem que o Workload Factory execute operações que não estão disponíveis nativamente por meio da API do Amazon FSx for ONTAP. Os links possibilitam recursos e automações avançadas do ONTAP, o que aprimora o gerenciamento dos sistemas de arquivos do FSx for ONTAP.</block>
+  <block id="abca8c391b472ef4e80c6577b5d5eb2a" category="paragraph">Aqui estão alguns benefícios de usar links:</block>
+  <block id="bf5b08a19bccddd5697b54218eb442dd" category="list-text">O link permite que o NetApp Console envie comandos do ONTAP diretamente para o seu sistema de arquivos FSx for ONTAP, trazendo recursos avançados do ONTAP além do que a AWS oferece nativamente.</block>
+  <block id="92d3d2d26bd62a6b2959d23585ef12a2" category="list-text">Os links utilizam o AWS Lambda para executar código em resposta a eventos. Essa abordagem sem servidor elimina a dependência de uma instância em execução na sua VPC.</block>
+  <block id="87684df341e5a7d9f280a7bdf2048a6e" category="section-title">Como funcionam os links</block>
+  <block id="5abd3a6ae198e27e4c8402463411560f" category="paragraph">Os links utilizam o AWS Lambda. O Lambda executa código em resposta a eventos e gerencia automaticamente os recursos de computação necessários para esse código. Os links que você cria fazem parte da sua conta NetApp e estão associados a uma conta da AWS.</block>
+  <block id="e721a1904dd1a2a54d259deb8d176230" category="paragraph">Após criar um link, você pode associá-lo a um ou mais sistemas de arquivos FSx for ONTAP. Cada sistema de arquivos pode ser associado a apenas um link na mesma conta NetApp. Se você tiver várias contas NetApp, um único sistema de arquivos pode ser associado a links adicionais em contas NetApp diferentes.</block>
+  <block id="0d369015d5a60606bb8b6330f6c1030f" category="paragraph">Você cria e associa links da carga de trabalho de armazenamento no o Workload Factory.</block>
+  <block id="7869cf138befae7f7af03581af782724" category="paragraph">Você pode autenticar links usando credenciais armazenadas no serviço de credenciais do Workload Factory ou com suas credenciais armazenadas no AWS Secrets Manager. O Workload Factory não oferece suporte à alteração dos modos de autenticação.</block>
+  <block id="81fccfd8b7cc4d87c0978527048afe60" category="paragraph">A conectividade de links para contas GovCloud é suportada. O NetApp Workload Factory usa chaves de autenticação GovCloud, permitindo acesso seguro e sem agente ao FSx for ONTAP para operações ONTAP por meio de mecanismos aprovados GovCloud.</block>
+  <block id="66096c22a6220952b7aef731ef78c167" category="section-title">Custos</block>
+  <block id="2ec62661c871c6dda5bcd49be8cea521" category="paragraph">Cada transação realizada pelo Lambda gera uma cobrança. Como o Lambda atua como um intermediário entre os dois sistemas, há uma cobrança quando o Lambda envia uma solicitação para a API REST do ONTAP em um sistema de arquivos e quando envia a resposta de volta para o Workload Factory.</block>
+  <block id="0ab8cd7f04804af6d53be93ef7bd5345" category="inline-link-macro">Saiba mais sobre os custos relacionados ao uso do AWS Lambda</block>
+  <block id="70f0040e444997fbb4beeeae8bd03d34" category="paragraph"><block ref="70f0040e444997fbb4beeeae8bd03d34" category="inline-link-macro-rx"></block></block>
+  <block id="8cd69d367e2dbdfca9ec0b55ba13baec" category="section-title">Quando um link for necessário</block>
+  <block id="875551355a7b095c8343c772ab9a39cd" category="paragraph">O Workload Factory requer um link para exibir algumas informações e executar algumas tarefas. Se você tentar executar uma operação que requer um link e não tiver associado um link ao sistema de arquivos FSx for ONTAP, o Workload Factory notificará que a operação requer um link.</block>
+  <block id="c0653b3ad30a51a0fe3228ad2877ac9d" category="paragraph">As funcionalidades que requerem um link incluem:</block>
+  <block id="d078fe237d087bff0fe3c19efd14fa54" category="list-text">Status bem arquitetado do Amazon FSx para configurações do sistema de arquivos ONTAP para manutenção proativa, confiabilidade e otimização de custo-desempenho</block>
+  <block id="f1a54b856438e25c87919e1789ae841c" category="list-text">Monitoramento e alerta de eventos do ONTAP EMS</block>
+  <block id="c6501747b7c38b1e25460b13a727ec7c" category="list-text">O NetApp Autonomous Ransomware Protection (ARP/AI)</block>
+  <block id="489e0dc0c162e1aff5f0f664bf2ea756" category="list-text">Observabilidade holística aprimorada da capacidade em todo o Amazon FSx para ONTAP sistemas de arquivos</block>
+  <block id="b97b322b8cb0f9b187eb7b966c9ff886" category="list-text">Replicação de dados de volumes e máquinas virtuais de armazenamento, gerenciamento e monitoramento</block>
+  <block id="147d85abf5db68a53249c95e1a68cedb" category="list-text">Provisionamento e gerenciamento de compartilhamentos SMB/CIFS e políticas de exportação NFS</block>
+  <block id="70b71b7616d1607e66f58defc9384bf3" category="list-text">Gerenciamento de volumes iSCSI em um sistema de arquivos Amazon FSx para ONTAP</block>
+  <block id="0ff428418a3d64cc69a6ee68906a8959" category="list-text">Criação e gerenciamento de políticas de snapshots para SLA de proteção personalizado</block>
+  <block id="c92f4938531f7fd55dc831a93892d29a" category="list-text">Aprimoramentos no gerenciamento de inodes para o gerenciamento automático de capacidade</block>
+  <block id="3b5c7e283e0b752d51311178d3fa06f1" category="list-text">Crescimento automático de volume para escalonamento elástico</block>
+  <block id="6cdde78d80d6fbbd8f3706a9bcac599e" category="list-text">Criação e gerenciamento de clones instantâneos e no local para clonagem de dados</block>
+  <block id="7cacd07dfdd5c4feadcbf23d19f9972d" category="list-text">Exibindo métricas adicionais diretamente do ONTAP, como a versão do ONTAP</block>
+  <block id="f22e542eda471e2702ed07136761fd6c" category="list-text">Exibindo detalhes da LIF da storage VM e do cluster, incluindo funções, endpoints, nós, endereços IP e status</block>
+  <block id="30f1ae8a88bc842cdf5e493350ae7eb1" category="inline-link-macro">Conectar um link a um sistema de arquivos Amazon FSx for ONTAP</block>
+  <block id="f86bb6aab3a49998f4db8fa07a49d81a" category="paragraph">Saiba como <block ref="e658cbfbd30fb261626bc7c82308a713" category="inline-link-macro-rx"></block>.</block>
 </blocks>
