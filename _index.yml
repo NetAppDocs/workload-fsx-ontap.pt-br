@@ -20,6 +20,8 @@ indexpage:
     links:
     - title: Explore as poupanças
       url: "/explore-savings.html"
+    - title: Saiba mais sobre links
+      url: "/links-overview.html"
     - title: Conete-se a um sistema de arquivos com um link
       url: https://docs.netapp.com/us-en/workload-setup-admin/create-link.html
     - title: Crie uma VM de storage

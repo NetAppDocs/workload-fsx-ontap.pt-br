@@ -44,7 +44,7 @@ sidebar:
       - title: Criar um dispositivo de bloco
         url: "/create-block-device.html"
     - title: Saiba mais sobre links
-      url: "/learn-about-links.html"
+      url: "/links-overview.html"
     - title: Descubra e visualize volumes de cache
       url: "/discover-cache-volumes.html"
     - title: Acesse seus dados
