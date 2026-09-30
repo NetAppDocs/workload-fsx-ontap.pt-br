@@ -11,7 +11,9 @@ summary: Adicione, atualize ou remova tags do sistema de arquivos FSx para ONTAP
 
 
 [role="lead"]
-Gerencie as configurações de um sistema de arquivos do Amazon FSx for NetApp ONTAP no NetApp Workload Factory. Você pode gerenciar tags para o sistema de arquivos, redefinir a senha do fsxadmin quando necessário e atualizar a capacidade de throughput conforme necessário.
+Gerencie as configurações de um sistema de arquivos FSx for ONTAP no NetApp Workload Factory para manter seu sistema de arquivos organizado, seguro e com o tamanho adequado para sua carga de trabalho. Você pode adicionar ou editar tags, gerenciar credenciais do ONTAP, redefinir a senha do fsxadmin e atualizar a capacidade de throughput a qualquer momento.
+
+A visão geral do sistema de arquivos mostra as tendências de uso da capacidade e da taxa de transferência do SSD, resumos gerados por IA das principais cargas de trabalho e detalhes expansíveis da configuração do sistema de arquivos.
 
 
 
@@ -29,6 +31,44 @@ As etiquetas podem ajudar você a categorizar seus recursos.  No NetApp Workload
 +
 O número máximo de tags que você pode aplicar a um sistema de arquivos é 50.
 
+. Selecione *aplicar*.
+
+
+
+
+[[manage-ontap-credentials]]
+== Gerenciar credenciais do ONTAP
+
+Gerencie as credenciais do ONTAP para um sistema de arquivos do FSx for ONTAP no NetApp Workload Factory. O Workload Factory tem dois tipos de credenciais: primárias e restritas. Por padrão, o sistema de arquivos usa as credenciais principais do ONTAP. As credenciais restritas são usadas apenas para operações de IA (AIOps), como Ask Me, Rule builder e Custom dashboards. Opcionalmente, você pode adicionar um conjunto de credenciais restritas e atualizar qualquer conjunto de credenciais a qualquer momento.
+
+Você pode executar as seguintes tarefas:
+
+* Você pode optar por adicionar um conjunto de credenciais restritas, usando um nome de usuário e senha ou um ARN secreto.
+* Altere as credenciais existentes, incluindo o nome de usuário e a senha, apenas a senha ou o ARN secreto.
+
+
+O Workload Factory oferece suporte à transição entre o serviço de credenciais do Workload Factory (nome de usuário e senha) e o AWS Secrets Manager.
+
+O Workload Factory lida com credenciais restritas da seguinte forma:
+
+* Se você não tiver fornecido credenciais restritas para um sistema de arquivos e, em seguida, criar regras ou painéis personalizados ou fizer perguntas ao Ask Me, o Workload Factory criará credenciais do ONTAP somente leitura para usar como o conjunto de credenciais restritas.
+* Se você já forneceu credenciais restritas para um sistema de arquivos, essas credenciais são usadas para AIOps.
+
+
+.Antes de começar
+Você precisa associar um link para gerenciar as credenciais do ONTAP. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"^]. Após a associação do link, retorne a esta operação.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
+. No menu Armazenamento, selecione *FSx para ONTAP*.
+. No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos para redefinir a senha do fsxadmin e, em seguida, selecione *Gerenciar*.
+. Na visão geral do sistema de arquivos, selecione o menu de ações.
++
+image:screenshot-manage-ontap-credentials.png["Uma captura de tela do menu de ações na guia Visão geral de um sistema de arquivos."]
+
+. Selecione *Gerenciar credenciais do ONTAP*.
+. Atualize as credenciais primárias ou restritas do ONTAP.
 . Selecione *aplicar*.
 
 

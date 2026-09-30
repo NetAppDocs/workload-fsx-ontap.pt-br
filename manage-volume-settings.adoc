@@ -11,7 +11,24 @@ summary: As tags podem ajudá-lo a categorizar seus recursos. Você pode adicion
 
 
 [role="lead"]
-Personalize as configurações de volume do Amazon FSx for NetApp ONTAP no NetApp Workload Factory para atender às necessidades da sua organização. Você pode gerenciar tags de volume para categorizar recursos, atualizar as configurações de eficiência de storage para otimizar espaço e economizar custos, e gerenciar as configurações de arquivos imutáveis para controlar a retenção de dados e proteger contra alterações não autorizadas.
+Personalize as configurações de volume do FSx for ONTAP no NetApp Workload Factory para atender às necessidades da sua organização. Você pode gerenciar tags de volume para categorizar recursos, como definir workloads de volume, atualizar as configurações de eficiência de storage para otimizar espaço e reduzir custos, e gerenciar as configurações de arquivos imutáveis para controlar a retenção de dados e proteger contra alterações não autorizadas.
+
+
+
+[[change-volume-workload]]
+== Alterar a carga de trabalho do volume
+
+Atualize as cargas de trabalho de um volume para corresponder aos casos de uso pretendidos.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
+. No menu Storage, selecione *Volumes explorer*.
+. Selecione o menu de ações do volume para o qual você deseja atualizar a carga de trabalho.
+. Selecione *Ações avançadas* e, em seguida, *Alterar workloads*.
+. Na caixa de diálogo Alterar cargas de trabalho, selecione as cargas de trabalho corretas para o volume.
+. Selecione *Apply* para salvar as alterações.
+
 
 
 
