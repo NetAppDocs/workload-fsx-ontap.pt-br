@@ -90,7 +90,7 @@ Modelo recomendado: `anthropic.claude-sonnet-4-20250514-v1:0`. Forneça o ARN do
 Crie e associe um link a um sistema de arquivos FSx for ONTAP para habilitar a análise de eventos com inteligência artificial. Um link estabelece uma relação de confiança entre NetApp Workload Factory e um ou mais sistemas de arquivos FSx for ONTAP e utiliza AWS Lambda.
 
 +
-link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html^["Aprenda como associar um link existente ou criar e associar um novo link"]. Após a associação do link, retorne a esta operação.
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"^]. Após a associação do link, retorne a esta operação.
 
 * *Permissões do AWS IAM*
 +

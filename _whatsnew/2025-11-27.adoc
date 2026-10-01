@@ -49,7 +49,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-costs.html["Acompanh
 
 Gerencie facilmente suas tags FSx para um sistema de arquivos diretamente do console do NetApp Workload Factory .  Este recurso permite adicionar, editar ou remover tags, possibilitando melhor organização e categorização dos seus sistemas de arquivos FSx para ONTAP .
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-fsx-tags.html["Gerencie as tags FSx no Workload Factory."]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-file-system-settings.html["Gerencie as tags FSx no Workload Factory."]
 
 
 
