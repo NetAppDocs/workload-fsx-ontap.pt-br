@@ -245,7 +245,7 @@ Considere o seguinte ao planejar a operação de transição para casos de uso d
 
 
 * *Clones*: Os clones são migrados como volumes individuais e, portanto, consumirão mais espaço no sistema de arquivos FSx for ONTAP de destino. Considere excluir os clones antes da migração para evitar o aumento da capacidade no destino.
-* *Volumes de cache*: Para ONTAP FlexCache 9.17.x ou inferior. VMs de armazenamento de origem que contêm volumes de cache não são compatíveis para cutover. Remova a relação ONTAP FlexCache antes do cutover para evitar falhas na migração.
+* *Volumes de cache*: as VMs de armazenamento de origem que contêm volumes de cache não são compatíveis com o cutover. Remova o relacionamento do ONTAP FlexCache antes do cutover para evitar falhas de migração.
 * *Pontos de acesso AWS S3*: A replicação de transição para casos de uso de migração não é compatível com volumes que possuem pontos de acesso S3. Exclua os pontos de acesso S3 do volume de origem para evitar falhas na migração.
 * *Configurações do ONTAP S3*: A replicação de transição para casos de uso de migração não é compatível para vservers com configurações do ONTAP S3. Remova as configurações do ONTAP S3, incluindo object-store-server, buckets, usuários, grupos ou políticas no vserver, para evitar falhas na migração.
 * *Números de série do LUN e IQN do destino iSCSI*: Os números de série do LUN e o IQN do destino iSCSI mudam durante a migração.
