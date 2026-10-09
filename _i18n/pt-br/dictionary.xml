@@ -2957,7 +2957,6 @@
   <block id="6dbb8a49c1538ebdedcc12468334fb46" category="paragraph">Exclua todos os backups criados manualmente para volumes que foram excluídos e quaisquer backups com mais de duas semanas. Esses backups não expiram automaticamente, podem aumentar os custos e adicionar complexidade se você não precisar mais deles para SLA ou recuperação.</block>
   <block id="b5ad1c06d1e3c827001a5d86081f1bdb" category="paragraph">Exclua snapshots antigos ou criados manualmente que você não precisa mais. A remoção deles pode reduzir custos e a desordem, especialmente se não forem necessários para o seu SLA ou para suas necessidades de recuperação.</block>
   <block id="0be251ac51e901583999154779926c3b" category="paragraph">Após um dispositivo de bloco ficar sem uso por sete dias, arquive os dados do dispositivo de bloco ou exclua o dispositivo de bloco não utilizado para reduzir custos.</block>
-  <block id="72d8d7f27cf31b02bb7df1a01b23ab49" category="paragraph">A análise de configuração identifica volumes NAS que não estão sendo usados ativamente e sugere excluir ou arquivar esses volumes para reduzir custos.</block>
   <block id="058f4c97fb457003efd47bf8dac18f8b" category="paragraph">Reequilibre seus volumes FlexGroup para melhorar a eficiência. Após a expansão horizontal, a capacidade e a atividade da carga de trabalho podem se tornar desiguais no volume.</block>
   <block id="98ee4192cbfc73d968e2c1f61cbdb3dc" category="paragraph">Reequilibre seus volumes FlexVol para melhorar a eficiência. Após a expansão horizontal, a capacidade e a atividade da carga de trabalho podem se tornar desiguais entre os volumes.</block>
   <block id="c2a622b55f06f11550a3499362e678c9" category="list-text">Você precisa associar um link para criar dispositivos de bloco. <block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>. Depois de associar o link, retorne a esta operação.</block>
@@ -3187,4 +3186,5 @@
   <block id="ec39403359b5b677efc5171e16b20cdb" category="paragraph"><block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>. Após a associação do link, retorne a esta operação.</block>
   <block id="9a90fd93ba397d5f48de07251acc1808" category="list-text">Detalhamento dos componentes para eventos de latência</block>
   <block id="6d4d9f3d79904b627f6aca8246717bca" category="list-text">*Volumes de cache*: as VMs de armazenamento de origem que contêm volumes de cache não são compatíveis com o cutover. Remova o relacionamento do ONTAP FlexCache antes do cutover para evitar falhas de migração.</block>
+  <block id="084b022f1511ba8dda542f70832d22e4" category="paragraph">Após 31 dias sem uso de um volume NAS, arquive ou exclua o volume NAS não utilizado para reduzir custos.</block>
 </blocks>

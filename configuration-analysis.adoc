@@ -203,7 +203,7 @@ O excesso de capacidade de SSD gera custos desnecessários. Reduza a camada de S
 
 * *Volumes NAS inativos*
 +
-A análise de configuração identifica volumes NAS que não estão sendo usados ativamente e sugere excluir ou arquivar esses volumes para reduzir custos.
+Após 31 dias sem uso de um volume NAS, arquive ou exclua o volume NAS não utilizado para reduzir custos.
 
 
 
