@@ -192,6 +192,12 @@ Você pode criar um clone de um dispositivo de bloco existente a qualquer moment
 
 Dispositivos de bloco que não estão mais mapeados para um cliente ou que não são usados por sete dias consecutivos são classificados como dispositivos de bloco inativos. Você pode arquivar os dados de um dispositivo de bloco inativo na camada de pool de capacidade para recuperar capacidade de SSD.
 
+
+NOTE: Um volume com clones filhos não pode ser excluído até que todos os clones filhos sejam excluídos ou separados em volumes independentes.
+
+.Antes de começar
+Certifique-se de que todos os dispositivos de bloco (LUNs) estejam inativos no mesmo volume antes de arquivar os dados.
+
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
@@ -215,7 +221,7 @@ Dispositivos de bloco que não estão mapeados para um cliente ou que não são 
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx para ONTAP*, selecione a guia *Dispositivos de bloco*.
 . Em Dispositivos órfãos, selecione *Visualizar e recuperar capacidade*.
-. Na tela Recuperar espaço para dispositivos de bloco não utilizados, selecione um ou mais dispositivos de bloco para arquivar os dados e recuperar a capacidade.
+. Na tela Recuperar espaço para dispositivos de bloco não utilizados, selecione um ou mais dispositivos de bloco para recuperar a capacidade.
 . Selecione *Eliminar*.
 
 
