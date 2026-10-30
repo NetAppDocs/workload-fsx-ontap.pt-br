@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-snapshot-policy.html 
 keywords: manage snapshot policy, change snapshot policy, assign snapshot policy, remove snapshot policy, snapshot policies, snapshot schedule, update, snapshot long-term retention, enable long-term retention 
-summary: Gerencie políticas de snapshot para volumes FSx for ONTAP no Workload Factory.  Uma política de snapshot define como o sistema cria snapshots para um volume. 
+summary: Atribua, altere, remova e exclua políticas de snapshot, e habilite snapshots imutáveis e retenção de longo prazo para volumes do FSx for ONTAP no Workload Factory. 
 ---
 = Gerencie políticas de snapshots para volumes no NetApp Workload Factory
 :allow-uri-read: 
@@ -51,10 +51,10 @@ A política de instantâneos é atribuída ao volume.
 [[change-a-snapshot-policy]]
 == Alterar uma política de snapshot
 
-Você pode alterar o nome da política de snapshot, o agendamento e o número de cópias a serem mantidas e ativar ou desativar snapshots imutáveis. Não é possível ativar ou desativar o compartilhamento de políticas entre VMs de armazenamento. Esta opção está disponível apenas durante a criação da política de instantâneos.
+Você pode alterar o nome da política de snapshot, o agendamento e o número de cópias a serem retidas, além de habilitar ou desabilitar snapshots imutáveis. Não é possível habilitar ou desabilitar o compartilhamento de políticas entre VMs de armazenamento. Essa opção só pode ser definida ao criar uma política de snapshot.
 
 .Antes de começar
-Para exibir as políticas de instantâneo existentes, você deve associar um link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"^]. Após a associação do link, retorne a esta operação.
+Para exibir as políticas de instantâneo existentes, você deve associar um link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"^]. Depois de associar o link, retorne a esta operação.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
@@ -78,14 +78,14 @@ A política de instantâneos é atualizada.
 Bloqueie instantâneos para evitar que sejam excluídos durante o período de retenção.
 
 .Antes de começar
-Você precisa associar um link para habilitar snapshots imutáveis. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"^]. Após a associação do link, retorne a esta operação.
+Você precisa associar um link para habilitar snapshots imutáveis. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"^]. Depois de associar o link, retorne a esta operação.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Armazenamento*.
 . Na aba *FSx para ONTAP*, selecione o menu de ações do sistema de arquivos que contém o volume para bloquear snapshots e então selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
-. Na aba *Volumes*, selecione o botão de ação do volume a ser protegido.
+. Na aba *Volumes*, selecione o menu de ações para o volume que deseja proteger.
 . Selecione *ações de proteção de dados*, *Snapshots* e, em seguida, *tornar um snapshot imutável*.
 . Na caixa de diálogo tornar um instantâneo imutável, faça o seguinte:
 +

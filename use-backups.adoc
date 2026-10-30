@@ -23,7 +23,7 @@ Crie um backup manual de um volume fora dos backups agendados regularmente no Ne
 .Sobre esta tarefa
 Os backups de volume são feitos por volume, portanto, cada backup contém apenas os dados em um volume específico.
 
-Os backups de volume são incrementais, o que significa que apenas os dados do volume que foram alterados após o backup mais recente são salvos. Isso minimiza o tempo necessário para criar o backup e o armazenamento necessário para o backup, o que reduz os custos de armazenamento ao não duplicar dados.
+Os backups de volume são incrementais, o que significa que apenas os dados no volume que foram alterados após o seu backup mais recente são salvos. Isso minimiza o tempo necessário para criar o backup e o espaço de armazenamento necessário para o backup, o que reduz os custos de armazenamento ao evitar a duplicação de dados.
 
 .Antes de começar
 Para fazer backups de seus volumes, tanto o volume quanto o sistema de arquivos precisam ter capacidade de armazenamento SSD disponível suficiente para armazenar o snapshot de backup. Ao tirar um snapshot de backup, a capacidade de storage adicional consumida pelo snapshot não pode fazer com que o volume exceda 98% da utilização do storage SSD. Se isso acontecer, o backup falhará.

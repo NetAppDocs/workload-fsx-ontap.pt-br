@@ -23,7 +23,7 @@ Esta configuração de par HA único é recomendada para cargas de trabalho que 
 
 
 
-.. *Tags*: Opcionalmente, você pode adicionar até 50 tags.
+.. *Etiquetas*: opcionalmente, adicione até 50 etiquetas.
 
 
 . Em *Detalhes do sistema de arquivos*, forneça o seguinte:
@@ -45,7 +45,7 @@ Se o usuário que você fornecer não for o usuário fsxadmin, e mais tarde voc�
 ... *Nome NetBIOS do servidor SMB*: Insira o nome NetBIOS do servidor SMB do objeto computador do ative Directory a ser criado para sua VM de armazenamento. Este é o nome desta VM de armazenamento no ative Directory.
 ... *Nome de utilizador*: Introduza o nome de utilizador da conta de serviço no ative Directory existente.
 +
-Não inclua um prefixo ou sufixo de domínio. Para `EXAMPLE\ADMIN`, use `ADMIN`.
+Não inclua prefixo ou sufixo de domínio. Para `EXAMPLE\ADMIN`, use `ADMIN`.
 
 ... *Senha*: Insira a senha da conta de serviço.
 ... * Unidade de organização*: Opcionalmente, insira o nome da Unidade organizacional onde você pretende criar a conta de computador para o FSX for ONTAP. A UO é o nome de caminho distinto da unidade organizacional à qual você deseja ingressar no sistema de arquivos.

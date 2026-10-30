@@ -23,7 +23,7 @@ Ative o rastreamento para monitorar os atrasos de replicação em sua conta. Wor
 . Na caixa de diálogo Enable replication lag history, selecione *Enable*.
 . De volta ao bloco de histórico de atraso de replicação, selecione *Personalizar limite* para definir seu limite preferido.
 . Na caixa de diálogo "Personalizar limite de tempo de atraso", insira o limite em horas e minutos.
-. Opcionalmente, selecione *Ativar notificações de atraso* para receber notificações quando os atrasos de replicação excederem o limite.
+. Opcionalmente, selecione *Ativar notificações de atraso* para receber notificações quando o atraso de replicação exceder o limite.
 +
 As notificações chegam por e-mail e incluem:
 

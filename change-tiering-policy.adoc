@@ -31,11 +31,11 @@ Revise as políticas de disposição em categorias disponíveis antes de alterar
 
 * *Balanced (Auto)*: Política de disposição em camadas padrão ao criar um volume usando a interface do usuário. Mantém os dados acessados com frequência na camada de storage SSD e camadas de dados e snapshots acessados com pouca frequência na camada de storage do pool de capacidade após o fim do período de resfriamento. Recomendado para workloads primários gerais.
 * *Custo otimizado (todos)*: Classifica todos os snapshots e dados para a camada de armazenamento do pool de capacidade. Recomendado para alvos secundários.
-* *Desempenho otimizado (somente Snapshots)*: Categoriza somente os dados instantâneos para a camada de storage do pool de capacidade. Recomendado para workloads de baixa latência, como bancos de dados essenciais.
+* *Otimizado para desempenho (somente snapshots)*: hierarquiza apenas os dados de snapshot na camada de storage do pool de capacidade. Recomendado para cargas de trabalho de baixa latência, como bancos de dados de missão crítica.
 * *Nenhum*: Mantém os dados de volume na camada de storage SSD, impedindo que eles sejam movidos para a camada de storage do pool de capacidade.
 
 
-Observe que algumas políticas de disposição em categorias têm um período de resfriamento mínimo associado que define o tempo, ou _dias de resfriamento_, que os dados do usuário em um volume devem permanecer inativos para que os dados sejam considerados "frios" e movidos para a camada de storage do pool de capacidade. O período de resfriamento começa quando os dados são gravados no disco.
+Algumas políticas de armazenamento em camadas têm um período mínimo de resfriamento associado que define o tempo, ou _dias de resfriamento_, durante o qual os dados de usuário em um volume devem permanecer inativos para serem considerados "frios" e movidos para a camada de storage do pool de capacidade. O período de resfriamento começa quando os dados são gravados no disco.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].

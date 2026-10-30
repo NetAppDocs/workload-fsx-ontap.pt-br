@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: replicate-svm-to-file-system.html 
 keywords:  
-summary: Replicar uma VM de armazenamento para outro sistema de arquivos do FSX for ONTAP fornece uma camada protetora de acesso a dados em caso de perda de dados. 
+summary: Replique uma máquina virtual de storage para outro sistema de arquivos do FSx for ONTAP para fornecer uma camada de proteção de acesso aos dados em caso de perda de dados. 
 ---
 = Replique uma VM de armazenamento para outro sistema de arquivos FSX for ONTAP
 :allow-uri-read: 
@@ -14,7 +14,7 @@ summary: Replicar uma VM de armazenamento para outro sistema de arquivos do FSX 
 A replicação de uma VM de armazenamento para outro sistema de arquivos FSx for ONTAP no NetApp Workload Factory fornece uma camada protetora de acesso a dados em caso de perda de dados.  Esta operação replica todos os volumes em uma VM de armazenamento para outro FSx para o sistema de arquivos ONTAP .
 
 .Antes de começar
-Para replicar uma VM de armazenamento para outro sistema de arquivos do Amazon FSx for NetApp ONTAP, você deve associar um link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"^]. Após a associação do link, retorne a esta operação.
+Para replicar uma VM de armazenamento para outro sistema de arquivos do Amazon FSx for NetApp ONTAP, você deve associar um link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"^]. Depois de associar o link, retorne a esta operação.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
@@ -22,28 +22,28 @@ Para replicar uma VM de armazenamento para outro sistema de arquivos do Amazon F
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos com a VM de armazenamento a ser replicada e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos em VMs de armazenamento, selecione *Gerenciar*.
-. Na tela Gerenciar VMs de armazenamento, selecione o menu de ações da VM de armazenamento para a qual deseja replicar uma SVM e, em seguida, selecione *Ações avançadas* > *Replicar VM de armazenamento*.
+. Na tela Manage storage VMs, selecione o menu de ações da VM de storage que você deseja replicar e, em seguida, selecione *Advanced actions* > *Replicate storage VM*.
 . Na página replicar dados, em destino replicação, forneça o seguinte:
 +
 .. *FSX para sistema de arquivos ONTAP*: Selecione credenciais, região e nome do sistema de arquivos FSX for ONTAP para o sistema de arquivos FSX for ONTAP de destino.
 .. *Nome da VM de armazenamento*: Selecione a VM de armazenamento no menu suspenso.
-.. *Nome do volume*: O nome do volume de destino é gerado automaticamente com o seguinte `{OriginalVolumeName}_copy` formato .
+.. *Nome do volume*: o nome do volume de destino é gerado automaticamente no formato `{OriginalVolumeName}_copy`.
 .. *Política de disposição em categorias*: Selecione a política de disposição em categorias para os dados armazenados no volume de destino.
 +
-_Auto_ é a política de camadas padrão ao criar um volume usando a interface de usuário do Workload Factory FSx para ONTAP .  Para obter mais informações sobre políticas de níveis de volume, consultelink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidade de armazenamento de volume"^] na documentação do AWS FSx para NetApp ONTAP .
+_Auto_ é a política de armazenamento em camadas padrão quando você cria um volume no console do Workload Factory. Para obter mais informações sobre políticas de armazenamento em camadas de volumes, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidade de armazenamento de volume"^]na documentação do Amazon FSx for NetApp ONTAP.
 
-.. *Taxa máxima de transferência*: Selecione *limitada* e insira o limite máximo de transferência em MB/s. Em alternativa, selecione *Unlimited*.
+.. *Taxa de transferência máxima*: selecione *Limitada* e insira o limite máximo de transferência em MB/s. Como alternativa, selecione *Ilimitada*.
 +
-Sem um limite, o desempenho da rede e do aplicativo pode declinar. Como alternativa, recomendamos uma taxa de transferência ilimitada para os sistemas de arquivos FSX for ONTAP para cargas de trabalho críticas, por exemplo, aquelas que são usadas principalmente para recuperação de desastres.
+Sem um limite, o desempenho da rede e dos aplicativos pode ser prejudicado. No entanto, recomendamos uma taxa de transferência ilimitada para os sistemas de arquivos do FSx for ONTAP em cargas de trabalho críticas, como aquelas usadas principalmente para recuperação de desastres.
 
 
 
 . Em Configurações de replicação, forneça o seguinte:
 +
-.. *Intervalo de replicação*: Selecione a frequência em que os instantâneos são transferidos do volume de origem para o volume de destino.
+.. *Intervalo de replicação*: selecione a frequência com que os snapshots são transferidos do volume de origem para o volume de destino.
 .. *Retenção de longo prazo*: Opcionalmente, habilite snapshots para retenção de longo prazo.
 +
-Se você habilitar a retenção a longo prazo, selecione uma política existente ou crie uma nova política para definir os snapshots a serem replicados e o número a ser retido.
+Se você habilitar a retenção de longo prazo, selecione uma política existente ou crie uma nova para definir os snapshots a serem replicados e a quantidade a ser retida.
 
 +
 ... Para *escolha uma política existente*, selecione uma política existente no menu suspenso.

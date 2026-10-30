@@ -11,14 +11,14 @@ summary: Saiba mais sobre os cofres cibernéticos da NetApp e como implementar u
 
 
 [role="lead"]
-Um volume de cofre cibernético é um local de armazenamento isolado e seguro usado para guardar cópias de segurança dos seus dados, protegendo-os contra ataques de ransomware e outras ameaças cibernéticas.  Como parte da criação do cofre, você criará um volume de cofre cibernético, desativará todos os protocolos do cliente, configurará uma relação de replicação entre o volume de origem e o volume do cofre cibernético e criará snapshots imutáveis no volume do cofre cibernético.
+Um volume de cofre cibernético é um local de armazenamento isolado e seguro que armazena cópias de backup dos seus dados e os protege contra ataques de ransomware e outras ameaças cibernéticas. Para criar um cofre, você cria um volume de cofre cibernético, desativa todos os protocolos de cliente, configura uma relação de replicação entre o volume de origem e o volume do cofre cibernético e cria snapshots imutáveis no volume do cofre cibernético.
 
 .O que é um cofre cibernético?
 Um cofre cibernético é uma técnica específica de proteção de dados que envolve o armazenamento de dados críticos em um ambiente isolado, separado da infraestrutura primária de TI.
 
 O cofre cibernético é um repositório de dados "isolado da internet", imutável e indelével, imune a ameaças que afetam a rede principal, como malware, ransomware ou mesmo ameaças internas.  Um cofre cibernético pode ser criado com instantâneos imutáveis e indeléveis.
 
-Os backups com air-gapping que usam métodos tradicionais envolvem a criação de espaço e a separação física das mídias primária e secundária. Ao mover a mídia para outro local e/ou cortar a conectividade, os criminosos não têm acesso aos dados. Isso protege os dados, mas pode levar a tempos de recuperação mais lentos.
+Os backups com isolamento físico (air-gapping) que utilizam métodos tradicionais envolvem a criação de espaço e a separação física das mídias primária e secundária. Ao mover a mídia para um local externo ou interromper a conectividade, os invasores não têm acesso aos dados. Isso protege os dados, mas pode resultar em tempos de recuperação mais lentos.
 
 .FSx para cofres cibernéticos ONTAP
 O Amazon FSx for NetApp ONTAP é compatível como origem e destino de cofre cibernético.

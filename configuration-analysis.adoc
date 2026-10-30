@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: configuration-analysis.html 
 keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
-summary: O NetApp Workload Factory analisa regularmente as configurações do sistema de arquivos Amazon FSx for NetApp ONTAP para determinar se há problemas de configuração. 
+summary: Analise as configurações do sistema de arquivos FSx for ONTAP na NetApp Workload Factory para encontrar problemas e receber recomendações que melhorem o desempenho, a eficiência de custo e a conformidade. 
 ---
 = Análise de configuração para sistemas de arquivos FSX for ONTAP
 :allow-uri-read: 
@@ -104,7 +104,7 @@ Os rótulos da política de snapshot do volume de origem e os rótulos da polít
 
 * *Capacidade de objeto de arquivo*
 +
-O limite de capacidade de arquivos deve ser aumentado para evitar atingir o limite de capacidade do volume. A baixa capacidade de arquivos (inodes) impede a gravação de dados adicionais no volume. A Workload Factory recomenda manter a utilização da capacidade de arquivos abaixo de 80% para permitir a criação de novos arquivos.
+Aumente o limite de capacidade de arquivos para evitar atingir o limite de capacidade do volume. Uma baixa capacidade de arquivos (inodes) impede a gravação de dados adicionais no volume. O Workload Factory recomenda manter a utilização da capacidade de arquivos abaixo de 80% para permitir a criação de novos arquivos.
 
 
 
@@ -134,7 +134,7 @@ A excelência operacional concentra-se em fornecer a arquitetura mais ideal e va
 
 * *gerenciamento de capacidade automático*
 +
-O gerenciamento de capacidade automático deve ser ativado para garantir regularmente que a camada SSD não exceda o limite.
+Ative o gerenciamento automático de capacidade para garantir regularmente que a camada SSD não exceda o limite.
 
 * *Folga de capacidade do volume*
 +

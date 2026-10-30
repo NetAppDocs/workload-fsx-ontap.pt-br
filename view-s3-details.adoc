@@ -11,7 +11,7 @@ summary: Visualize os detalhes dos pontos de acesso S3 para um volume no NetApp 
 
 
 [role="lead"]
-Visualize detalhes do ponto de acesso S3, como o alias, o ARN e o URI do S3. Com as tabelas de inventário e registro em diário ativadas, você pode visualizar metadados e registros de auditoria de eventos de acesso do usuário e operações de objetos em todos os pontos de acesso S3.
+Visualize detalhes do ponto de acesso S3, como o alias, o ARN e o URI do S3. Quando as tabelas de inventário e de registro em diário estão habilitadas, você pode visualizar metadados e registros de auditoria de eventos de acesso do usuário e operações de objetos em todos os pontos de acesso S3.
 
 .Sobre esta tarefa
 Quando a tabela de inventário está habilitada no volume, você pode visualizar os detalhes do ponto de acesso, da tabela de inventário e do bucket da tabela dos pontos de acesso S3 existentes conectados ao volume. O sistema também fornece um link para a tabela de inventário no Console de Gerenciamento da AWS.

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-replication.html 
 keywords: replication management, manage replication, pause replication, stop replication, break replication, delete replication, track replication, change replication schedule, limit replication transfer rate, reverse replication 
-summary: Gerencie relacionamentos de replicação no NetApp Workload Factory. 
+summary: No NetApp Workload Factory, você pode pausar, retomar, reverter, interromper e excluir relacionamentos de replicação, alterar o agendamento de replicação e limitar a taxa de transferência. 
 ---
 = Gerencie seus relacionamentos de replicação no NetApp Workload Factory
 :allow-uri-read: 
@@ -20,7 +20,7 @@ Gerencie seus relacionamentos de replicação no NetApp Workload Factory. Você 
 
 Altere o agendamento de replicação do volume de origem em um relacionamento de replicação no NetApp Workload Factory.
 
-Escolha com que frequência os snapshots do volume de origem são transferidos para o volume replicado para corresponder aos objetivos de ponto (RPOs) necessários.
+Escolha com que frequência os snapshots do volume de origem são transferidos para o volume replicado para atender aos seus objetivos de ponto de recuperação (RPOs).
 
 Quando um cluster ONTAP no local é o destino para a relação de replicação, a alteração da programação de replicação não é suportada.
 
@@ -30,9 +30,9 @@ Quando um cluster ONTAP no local é o destino para a relação de replicação, 
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos a ser atualizado e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *relacionamentos de replicação*.
-. Na guia Relacionamentos de replicação, selecione o menu de ações do agendamento do relacionamento de replicação a ser alterado.
+. Na guia Relacionamentos de replicação, selecione o menu de ações do agendamento de relacionamento de replicação a ser alterado.
 . Selecione *Editar intervalo de replicação*.
-. Na caixa de diálogo Editar intervalo de replicação, selecione a frequência da transferência de instantâneos a partir do volume de origem. Pode selecionar entre as seguintes frequências:
+. Na caixa de diálogo Edit replication interval, selecione a frequência da transferência de instantâneos do volume de origem. Selecione uma das seguintes frequências:
 +
 ** A cada 5 minutos
 ** Por hora
@@ -51,7 +51,7 @@ Quando um cluster ONTAP no local é o destino para a relação de replicação, 
 
 Limitar a taxa máxima de transferência é opcional, mas recomendado. Sem um limite, o desempenho da rede e do aplicativo pode declinar.
 
-Como alternativa, recomendamos uma taxa de transferência ilimitada para os sistemas de arquivos FSX for ONTAP para cargas de trabalho críticas, por exemplo, aquelas que são usadas principalmente para recuperação de desastres.
+Para cargas de trabalho críticas, como sistemas de arquivos FSx for ONTAP usados principalmente para recuperação de desastres, recomenda-se uma taxa de transferência ilimitada.
 
 .Antes de começar
 Considere a quantidade de largura de banda a alocar para replicação.
@@ -62,7 +62,7 @@ Considere a quantidade de largura de banda a alocar para replicação.
 . No menu Armazenamento, selecione *FSx para ONTAP*.
 . No *FSx for ONTAP*, selecione o menu de ações do sistema de arquivos a ser atualizado e, em seguida, selecione *Gerenciar*.
 . Na visão geral do sistema de arquivos, selecione a guia *relacionamentos de replicação*.
-. Na guia Relacionamentos de replicação, selecione o menu de ações do relacionamento de replicação para limitar a taxa máxima de transferência.
+. Na guia "Relações de replicação", selecione o menu de ações da relação de replicação para a qual você deseja limitar a taxa máxima de transferência.
 . Selecione *Editar taxa de transferência máxima*.
 . Na caixa de diálogo Edit Max transfer rate (Editar taxa de transferência máxima), selecione *Limited* (limitado) e introduza o limite máximo de transferência em MB/s.
 +
@@ -152,7 +152,7 @@ As operações de reversão são suportadas para o seguinte:
 
 Depois de interromper a replicação e fazer alterações no volume de destino, é possível replicar essas alterações de volta para o volume de origem. Esse processo é comum em um cenário de recuperação de desastres no qual você opera no volume alvo por um tempo e deseja alternar funções dos volumes.
 
-Quando você inverte e retoma uma replicação, ele alterna as funções de origem e destino dos seus volumes; o volume de destino se torna o novo volume de origem e o volume de origem se torna o novo volume de destino. A operação reversa também substitui o conteúdo do novo volume alvo com o conteúdo do novo volume de origem. Se você reverter uma replicação duas vezes, a direção de replicação original será restabelecida.
+Ao reverter e retomar uma replicação, as funções de origem e destino dos seus volumes se invertem; o volume de destino se torna o novo volume de origem, e o volume de origem se torna o novo volume de destino. A operação de reversão também sobrescreve o conteúdo do novo volume de destino com o conteúdo do novo volume de origem. Se você reverter uma replicação duas vezes, a direção original da replicação se restabelece.
 
 []
 ====
@@ -203,7 +203,7 @@ O status da replicação do volume muda para *Broken*. O volume de destino torna
 [[delete-a-replication-relationship]]
 == Excluir uma relação de replicação
 
-Excluir um relacionamento de replicação no NetApp Workload Factory.  Quando você exclui um relacionamento de replicação, ele remove o relacionamento de replicação entre os volumes de origem e de destino.  Após a exclusão do relacionamento de replicação, ambos os volumes continuam a existir independentemente com os dados atuais que eles contêm.
+Exclua um relacionamento de replicação na NetApp Workload Factory. Quando você exclui um relacionamento de replicação, o relacionamento entre o volume de origem e o volume de destino é removido. Depois que você exclui o relacionamento, ambos os volumes continuam a existir de forma independente com os dados atuais que contêm.
 
 Quando você exclui uma relação de replicação, o FSX for ONTAP também exclui os snapshots de replicação comuns do volume de origem e destino.
 

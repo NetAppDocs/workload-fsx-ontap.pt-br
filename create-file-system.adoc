@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-file-system.html 
 keywords: create, FSx file system, ONTAP file system, Workload Factory, storage 
-summary: Usando o NetApp Workload Factory, você pode criar um FSx para o sistema de arquivos ONTAP para adicionar e gerenciar volumes e serviços de dados adicionais. 
+summary: Crie um sistema de arquivos FSx for ONTAP no NetApp Workload Factory para adicionar e gerenciar volumes e serviços de dados adicionais. 
 ---
 = Crie um sistema de arquivos FSx para ONTAP no NetApp Workload Factory
 :allow-uri-read: 
@@ -11,13 +11,13 @@ summary: Usando o NetApp Workload Factory, você pode criar um FSx para o sistem
 
 
 [role="lead"]
-Usando o NetApp Workload Factory, você pode criar FSx de primeira e segunda geração para sistemas de arquivos ONTAP para adicionar e gerenciar volumes e serviços de dados adicionais.
+Crie sistemas de arquivos FSx for ONTAP de primeira e segunda geração no NetApp Workload Factory para adicionar e gerenciar volumes e serviços de dados adicionais.
 
 .Sobre esta tarefa
 Uma VM de storage e um grupo de segurança são criados como parte da criação do sistema de arquivos.
 
 .Antes de começar
-Antes de criar seu sistema de arquivos FSX for ONTAP, você precisará de:
+Antes de criar seu sistema de arquivos do FSx for ONTAP, você precisa:
 
 * Credenciais com permissões de _criação e exclusão de sistema de arquivos_ para criar um sistema de arquivos FSx para ONTAP . link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Saiba como conceder permissões a uma conta da AWS"^].
 * A região e as informações de VPC para onde você criará a instância do FSX for ONTAP.
@@ -66,7 +66,7 @@ Esta configuração de par HA único é recomendada para cargas de trabalho que 
 
 
 
-.. *Tags*: Opcionalmente, você pode adicionar até 50 tags.
+.. *Etiquetas*: opcionalmente, adicione até 50 etiquetas.
 
 
 . Em *Detalhes do sistema de arquivos*, forneça o seguinte:
@@ -88,7 +88,7 @@ Se o usuário que você fornecer não for o usuário fsxadmin, e mais tarde voc�
 ... *Nome NetBIOS do servidor SMB*: Insira o nome NetBIOS do servidor SMB do objeto computador do ative Directory a ser criado para sua VM de armazenamento. Este é o nome desta VM de armazenamento no ative Directory.
 ... *Nome de utilizador*: Introduza o nome de utilizador da conta de serviço no ative Directory existente.
 +
-Não inclua um prefixo ou sufixo de domínio. Para `EXAMPLE\ADMIN`, use `ADMIN`.
+Não inclua prefixo ou sufixo de domínio. Para `EXAMPLE\ADMIN`, use `ADMIN`.
 
 ... *Senha*: Insira a senha da conta de serviço.
 ... * Unidade de organização*: Opcionalmente, insira o nome da Unidade organizacional onde você pretende criar a conta de computador para o FSX for ONTAP. A UO é o nome de caminho distinto da unidade organizacional à qual você deseja ingressar no sistema de arquivos.
@@ -107,7 +107,7 @@ Se você estiver se juntando a um AD autogerenciado, use o nome do grupo em seu 
 . Salve ou crie o sistema de arquivos.
 
 
-Se você criou o sistema de arquivos, agora você pode visualizar o sistema de arquivos FSX for ONTAP na página *Inventário*.
+Após criar o sistema de arquivos, você poderá visualizá-lo na página *Inventory*.
 
 --
 .Criação avançada
@@ -148,7 +148,7 @@ Você também pode carregar uma configuração salva.
 
 
 
-.. *Tags*: Opcionalmente, você pode adicionar até 50 tags.
+.. *Etiquetas*: opcionalmente, adicione até 50 etiquetas.
 
 
 . Em Detalhes do sistema de arquivos, forneça o seguinte:
@@ -162,8 +162,8 @@ Você também pode carregar uma configuração salva.
 .. *Capacidade de transferência por par de HA*: Selecione a capacidade de transferência por número de pares de HA. Os sistemas de arquivos de primeira geração suportam apenas um par de HA.
 .. *IOPS provisionados*: Selecione uma das seguintes opções:
 +
-*** *Automático*: Para automático, para cada GiB criado, 3 IOPS são adicionados.
-*** *Provisionado pelo usuário*: para provisionado pelo usuário, insira o valor de IOPS.
+*** *Automático*: adiciona 3 IOPS para cada GiB criado.
+*** *Provisionado pelo usuário*: insira o valor de IOPS.
 
 
 .. *Credenciais ONTAP*: Opcional. Introduza o nome de utilizador e a palavra-passe do ONTAP. A senha pode ser definida agora ou mais tarde.
@@ -178,7 +178,7 @@ Se o usuário que você fornecer não for o usuário fsxadmin, e mais tarde voc�
 ... *Nome NetBIOS do servidor SMB*: Insira o nome NetBIOS do servidor SMB do objeto computador do ative Directory a ser criado para sua VM de armazenamento. Este é o nome desta VM de armazenamento no ative Directory.
 ... *Nome de utilizador*: Introduza o nome de utilizador da conta de serviço no ative Directory existente.
 +
-Não inclua um prefixo ou sufixo de domínio. Para `EXAMPLE\ADMIN`, use `ADMIN`.
+Não inclua prefixo ou sufixo de domínio. Para `EXAMPLE\ADMIN`, use `ADMIN`.
 
 ... *Senha*: Insira a senha da conta de serviço.
 ... * Unidade de organização*: Opcionalmente, insira o nome da Unidade organizacional onde você pretende criar a conta de computador para o FSX for ONTAP. A UO é o nome de caminho distinto da unidade organizacional à qual você deseja ingressar no sistema de arquivos.
@@ -224,7 +224,7 @@ Para um novo grupo de segurança, consulte <<Detalhes do grupo de segurança,det
 . Salve ou crie o sistema de arquivos.
 
 
-Se você criou o sistema de arquivos, agora você pode visualizar o sistema de arquivos FSX for ONTAP na página *Inventário*.
+Após criar o sistema de arquivos, você poderá visualizá-lo na página *Inventory*.
 
 --
 ====
@@ -233,7 +233,7 @@ Se você criou o sistema de arquivos, agora você pode visualizar o sistema de a
 [[security-group-details]]
 == Detalhes do grupo de segurança
 
-A tabela a seguir fornece detalhes do grupo de segurança, incluindo protocolos, portas e funções.
+A tabela lista detalhes do grupo de segurança, incluindo protocolos, portas e funções.
 
 []
 ====

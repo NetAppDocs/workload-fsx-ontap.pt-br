@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-cifs-share.html 
 keywords: cifs, smb, SMB, CIFS, cifs share, change, update, modify, delete, create 
-summary: O gerenciamento do compartilhamento SMB ou CIFS no Workload Factory inclui a criação, a determinação do acesso de usuários e grupos e a exclusão. 
+summary: Crie, altere ou exclua um compartilhamento SMB/CIFS para um volume na Workload Factory e controle quais usuários e grupos podem acessá-lo. 
 ---
 = Gerencie o compartilhamento CIFS de um volume no NetApp Workload Factory
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: O gerenciamento do compartilhamento SMB ou CIFS no Workload Factory inc
 
 
 [role="lead"]
-O gerenciamento do compartilhamento SMB/CIFS de um volume no Workload Factory inclui a criação do compartilhamento SMB/CIFS, a determinação dos usuários e grupos aos quais será concedido acesso e o nível de permissões a serem concedidos a eles, além da exclusão do compartilhamento SMB/CIFS.
+Crie, altere ou exclua um compartilhamento CIFS para um volume no Workload Factory. Controle quais usuários e grupos podem acessar o compartilhamento e o nível de permissões que eles possuem.
 
 .Antes de começar
 Antes de começar, faça o seguinte:
@@ -25,7 +25,7 @@ Antes de começar, faça o seguinte:
 [[create-an-smbcifs-share-for-a-volume]]
 == Crie um compartilhamento SMB/CIFS para um volume
 
-Siga as etapas para criar um compartilhamento SMB/CIFS para um volume.
+Crie um compartilhamento SMB/CIFS para um volume.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
@@ -37,7 +37,7 @@ Siga as etapas para criar um compartilhamento SMB/CIFS para um volume.
 . Na caixa de diálogo Criar compartilhamento SMB/CIFS, forneça o seguinte:
 +
 .. *Nome*: Digite o nome do compartilhamento SMB/CIFS.
-.. *Caminho*: Defina o caminho usando o nome do volume padrão ou forneça um compartilhamento para um diretório interno.
+.. *Caminho*: defina o caminho usando o nome de volume padrão ou forneça um compartilhamento para um diretório interno.
 +
 As entradas de caminho válidas para o nome do volume, por exemplo "abacate", são as seguintes:
 
@@ -65,7 +65,7 @@ As entradas de caminho válidas para o nome do compartilhamento, por exemplo "Se
 [[change-an-smbcifs-share-for-a-volume]]
 == Alterar um compartilhamento SMB/CIFS para um volume
 
-Siga as etapas para alterar as configurações de compartilhamento SMB/CIFS para um volume.
+Altere as configurações de compartilhamento SMB/CIFS para um volume.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].

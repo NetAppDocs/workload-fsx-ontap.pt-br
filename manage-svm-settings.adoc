@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-svm-settings.html 
 keywords: edit storage vm settings, vm tags, svm tags, storage vm settings, storage vm password, svm password 
-summary: Adicione, atualize ou remova tags de VM de armazenamento para uma VM de armazenamento a qualquer momento. 
+summary: Configure o Active Directory, gerencie tags e redefina a senha de uma máquina virtual de armazenamento em um sistema de arquivos FSx for ONTAP. 
 ---
 = Gerencie as configurações de VMs de armazenamento no NetApp Workload Factory
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Adicione, atualize ou remova tags de VM de armazenamento para uma VM de
 
 
 [role="lead"]
-Gerencie as configurações de uma máquina virtual de armazenamento no NetApp Workload Factory. Você pode configurar e atualizar o Active Directory para uma máquina virtual de armazenamento, atualizar a senha da máquina virtual de armazenamento e gerenciar as tags da máquina virtual de armazenamento.
+Gerencie as configurações de uma VM de storage na NetApp Workload Factory. Você pode configurar e atualizar o Active Directory, redefinir a senha da VM de storage e gerenciar as tags da VM de storage.
 
 
 
@@ -33,13 +33,13 @@ As mesmas etapas se aplicam à configuração e atualização do ative Directory
 +
 .. *Domínio do ative Directory para ingressar*: Insira o nome de domínio totalmente qualificado (FQDN) do seu ative Directory.
 .. *Endereços IP DNS*: Insira até três endereços IP separados por vírgulas.
-.. *Nome NetBIOS do servidor SMB*: Insira o nome NetBIOS do servidor SMB do objeto computador do ative Directory a ser criado para sua VM de armazenamento. Esse é o nome desta SVM no active Directory.
+.. *Nome NetBIOS do servidor SMB*: Insira o nome NetBIOS do servidor SMB do objeto de computador do Active Directory a ser criado para sua VM de armazenamento. Este é o nome da VM de armazenamento no Active Directory.
 .. *Nome de utilizador*: Introduza o nome de utilizador da conta de serviço no ative Directory existente.
 +
 Não inclua um prefixo ou sufixo de domínio. Para `EXAMPLE\ADMIN`, use `ADMIN`.
 
 .. *Senha*: Insira a senha da conta de serviço.
-.. *Unidade de organização (ou)*: Insira a unidade da organização.
+.. *Unidade organizacional (UO)*: insira a unidade organizacional.
 +
 A UO é o nome de caminho distinto da unidade organizacional à qual você deseja ingressar no sistema de arquivos.
 

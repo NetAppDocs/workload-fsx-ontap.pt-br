@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-volume-settings.html 
 keywords: volume tags, edit volume tags, edit tags, enable immutable files, disable immutable files, lock files, unlock files, storage efficiency change, update storage efficiency 
-summary: As tags podem ajudá-lo a categorizar seus recursos. Você pode adicionar, editar e remover tags de volume a qualquer momento para o FSX for ONTAP volumes. 
+summary: No NetApp Workload Factory, você pode alterar as cargas de trabalho de volumes, editar tags de volumes, atualizar a eficiência de storage e gerenciar as configurações de arquivos imutáveis para volumes do FSx for ONTAP. 
 ---
 = Gerencie as configurações de volume no NetApp Workload Factory
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: As tags podem ajudá-lo a categorizar seus recursos. Você pode adicion
 
 
 [role="lead"]
-Personalize as configurações de volume do FSx for ONTAP no NetApp Workload Factory para atender às necessidades da sua organização. Você pode gerenciar tags de volume para categorizar recursos, como definir workloads de volume, atualizar as configurações de eficiência de storage para otimizar espaço e reduzir custos, e gerenciar as configurações de arquivos imutáveis para controlar a retenção de dados e proteger contra alterações não autorizadas.
+Personalize as configurações de volume do FSx for ONTAP no NetApp Workload Factory para atender às necessidades da sua organização. Você pode definir cargas de trabalho e tags de volume para categorizar recursos, atualizar as configurações de eficiência de storage para otimizar o espaço e reduzir custos, e gerenciar as configurações de arquivos imutáveis para controlar a retenção de dados e proteger contra alterações não autorizadas.
 
 
 
@@ -80,7 +80,7 @@ Os volumes usam thin Provisioning, independentemente de você habilitar ou desab
 
 Você pode atualizar certas configurações de arquivos imutáveis para um volume quando o recurso estiver ativado, como a política de retenção e os períodos, o período de confirmação automática e o modo de adição de volume.
 
-Observe que a ativação de arquivos imutáveis só é possível durante link:create-volume.html["criação de volume"]o .
+Você pode habilitar arquivos imutáveis somente durante link:create-volume.html["criação de volume"].
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
@@ -92,7 +92,7 @@ Observe que a ativação de arquivos imutáveis só é possível durante link:cr
 +
 ** *Período de retenção*: Selecione *não especificado* ou *especificar período*.
 +
-*** *Não especificado*: O período mínimo padrão é "0" anos e o período máximo padrão é "30 anos".
+*** *Não especificado*: o período mínimo padrão é de 0 anos e o período máximo padrão é de 30 anos.
 *** *Especificar período*: Opção para definir a política de retenção, os períodos mínimo e máximo, o recurso de confirmação automática e o recurso de modo de adição de volume. Forneça os seguintes detalhes:
 +
 **** *Política de retenção*: Este período deve ser maior ou igual ao período mínimo de retenção e menor ou igual ao período máximo de retenção.
@@ -103,10 +103,10 @@ Observe que a ativação de arquivos imutáveis só é possível durante link:cr
 
 ** *AUTOCOMMIT*: Ative ou desative o recurso para enviar automaticamente arquivos para WORM que não foram modificados durante o período AUTOCOMMIT.
 ** *Exclusão privilegiada*: habilita ou desabilita o recurso.  Habilitar o recurso permite que um administrador do SnapLock exclua um volume WORM não expirado.  Este recurso só é suportado no modo de retenção Enterprise.
-** *Modo de adição de volume*: Ative ou desative o recurso. Ativar o modo de adição de volume permite adicionar novo conteúdo a arquivos WORM.
+** *Modo de acréscimo de volume*: ative ou desative o recurso. Ativar o modo de acréscimo de volume permite adicionar novo conteúdo aos arquivos WORM.
 
 
-. Clique em *aplicar*.
+. Selecione *aplicar*.
 
 
 

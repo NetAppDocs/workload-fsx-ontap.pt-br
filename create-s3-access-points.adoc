@@ -11,7 +11,7 @@ summary: Crie pontos de acesso S3 para um volume no NetApp Workload Factory.
 
 
 [role="lead"]
-Crie e anexe pontos de acesso S3 para um volume no NetApp Workload Factory.
+Crie e anexe pontos de acesso S3 a um volume do FSx for ONTAP no NetApp Workload Factory para que os serviços da AWS possam acessar os arquivos do volume como se estivessem em um bucket S3.
 
 .Sobre esta tarefa
 Amazon FSx for NetApp ONTAP permite que sistemas de arquivos NFS e SMB acessem dados do S3 e se conectem a serviços da AWS como Amazon Bedrock, SageMaker, Athena, AWS Glue e mais. Você pode conectar serviços da AWS a todos os seus dados de storage de objetos.
@@ -41,7 +41,7 @@ Cumpra os seguintes requisitos antes de começar.
 ** *Usuário*: Selecione um usuário existente com acesso ao volume ou crie um novo usuário.
 ** *Tipo de usuário*: Selecione *UNIX* ou *Windows* como o tipo de usuário.
 ** *Configuração de rede*: Selecione *Internet* ou *nuvem privada (VPC)*. O tipo de rede que você escolher determina se o ponto de acesso será acessível pela internet ou restrito a uma VPC específica. Para usar o recurso de tabela Journal, você deve selecionar *Internet* como configuração de rede.
-** *Tabela de inventário*: Opcional. Requer a  `getObject` permissão. Habilite a tabela de inventário no volume para gerar metadados para todos os objetos acessíveis ao ponto de acesso S3 e isso acarreta custos de solicitação do AWS S3. Consulte link:https://aws.amazon.com/s3/pricing/["Documentação de preços do Amazon S3"^] para obter mais informações. A tabela é atualizada a cada 24 horas.
+** *Tabela de inventário*: opcional. Requer a `getObject` permissão. Habilite a tabela de inventário no volume para gerar metadados para todos os objetos acessíveis ao ponto de acesso S3 e gerar custos de solicitações do AWS S3. Consulte link:https://aws.amazon.com/s3/pricing/["Documentação de preços do Amazon S3"^] para obter mais informações. A tabela é atualizada a cada 24 horas.
 ** *Tags de ponto de acesso S3*: Opcionalmente, você pode adicionar até 50 tags ou remover tags.
 
 

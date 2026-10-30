@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-block-device.html 
 keywords: create block device, create lun, iscsi protocol 
-summary: 'Crie dispositivos de bloco para atender aos requisitos de aplicativos da sua linha de negócios (LOB).' 
+summary: Crie dispositivos de bloco iSCSI em um volume novo ou existente, configure o acesso ao grupo de iniciadores e defina a eficiência de storage e as opções de proteção para o FSx for ONTAP. 
 ---
 = Crie um dispositivo de bloco para um sistema de arquivos no NetApp Workload Factory.
 :allow-uri-read: 
@@ -91,7 +91,7 @@ NOTE: Os tempos de instantâneos baseiam-se no fuso horário do sistema de arqui
 
 .. *Política de disposição em categorias*: Selecione a política de disposição em categorias para os dados armazenados no volume.
 +
-_Balanced (Auto)_ é a política de armazenamento em camadas padrão ao criar um volume usando o console do Workload Factory. Para obter mais informações sobre políticas de escalonamento de volume, consulte: link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidade de armazenamento de volume"^] Na documentação do AWS FSx para NetApp ONTAP . Observe que o Workload Factory usa nomes baseados em casos de uso no console do Workload Factory para políticas de tiering e inclui os nomes das políticas de tiering do FSx para ONTAP entre parênteses.
+_Balanced (Auto)_ é a política de tiering padrão ao criar um volume usando o console do Workload Factory. Para obter mais informações sobre políticas de tiering de volume, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidade de armazenamento de volume"^]na documentação do AWS FSx for NetApp ONTAP. O Workload Factory usa nomes baseados em casos de uso no console do Workload Factory para políticas de tiering e inclui os nomes das políticas de tiering do FSx for ONTAP entre parênteses.
 
 .. *ARP/AI*: A Proteção Autônoma contra Ransomware da NetApp com AI (ARP/AI) é ativada por padrão quando um link é associado ao sistema de arquivos. link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html["Saiba mais sobre ARP/IA"]. Aceite a declaração para prosseguir.
 +

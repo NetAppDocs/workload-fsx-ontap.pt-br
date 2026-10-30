@@ -33,7 +33,7 @@ Você também pode carregar uma configuração salva.
 
 
 
-.. *Tags*: Opcionalmente, você pode adicionar até 50 tags.
+.. *Etiquetas*: opcionalmente, adicione até 50 etiquetas.
 
 
 . Em Detalhes do sistema de arquivos, forneça o seguinte:
@@ -47,8 +47,8 @@ Você também pode carregar uma configuração salva.
 .. *Capacidade de transferência por par de HA*: Selecione a capacidade de transferência por número de pares de HA. Os sistemas de arquivos de primeira geração suportam apenas um par de HA.
 .. *IOPS provisionados*: Selecione uma das seguintes opções:
 +
-*** *Automático*: Para automático, para cada GiB criado, 3 IOPS são adicionados.
-*** *Provisionado pelo usuário*: para provisionado pelo usuário, insira o valor de IOPS.
+*** *Automático*: adiciona 3 IOPS para cada GiB criado.
+*** *Provisionado pelo usuário*: insira o valor de IOPS.
 
 
 .. *Credenciais ONTAP*: Opcional. Introduza o nome de utilizador e a palavra-passe do ONTAP. A senha pode ser definida agora ou mais tarde.
@@ -63,7 +63,7 @@ Se o usuário que você fornecer não for o usuário fsxadmin, e mais tarde voc�
 ... *Nome NetBIOS do servidor SMB*: Insira o nome NetBIOS do servidor SMB do objeto computador do ative Directory a ser criado para sua VM de armazenamento. Este é o nome desta VM de armazenamento no ative Directory.
 ... *Nome de utilizador*: Introduza o nome de utilizador da conta de serviço no ative Directory existente.
 +
-Não inclua um prefixo ou sufixo de domínio. Para `EXAMPLE\ADMIN`, use `ADMIN`.
+Não inclua prefixo ou sufixo de domínio. Para `EXAMPLE\ADMIN`, use `ADMIN`.
 
 ... *Senha*: Insira a senha da conta de serviço.
 ... * Unidade de organização*: Opcionalmente, insira o nome da Unidade organizacional onde você pretende criar a conta de computador para o FSX for ONTAP. A UO é o nome de caminho distinto da unidade organizacional à qual você deseja ingressar no sistema de arquivos.

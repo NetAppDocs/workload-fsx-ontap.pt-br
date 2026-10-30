@@ -187,7 +187,7 @@ Configure a infraestrutura para capturar eventos de serviço da AWS a partir do 
 . Na visão geral do sistema de arquivos, selecione a guia *volumes*.
 . Na guia Volumes, selecione o menu de ações do volume para o qual deseja gerenciar pontos de acesso S3, depois selecione *Ações avançadas* e, em seguida, *Gerenciar pontos de acesso S3*.
 . Na tela *Gerenciar pontos de acesso S3*, selecione o menu de ações e depois selecione *Editar ponto de acesso*.
-. Na caixa de diálogo *Editar ponto de acesso S3*, verifique se a configuração de rede está definida como *Internet*.
+. Na caixa de diálogo *Editar ponto de acesso S3*, confirme se a configuração de rede está definida como *Internet*.
 . Siga as instruções na caixa de diálogo para configurar a infraestrutura para o recurso de tabela de journal.
 . Baixe o modelo CloudFormation.
 . Implante a pilha CloudFormation em sua conta da AWS.
@@ -232,7 +232,7 @@ Se a pilha falhar com um `AccessDenied` ou `InsufficientPermission` erro, verifi
 
 ==== CloudTrail limite
 
-A AWS impõe um limite padrão de 5 trilhas por região. Se a conta já tiver 5 trilhas, `the FsxDataEventTrail` o recurso falhará com: Número máximo de trilhas (5) excedido. Você pode verificar o número de trilhas em nível regional com o seguinte comando:
+A AWS impõe um limite padrão de cinco trilhas por região. Se a conta já tiver cinco trilhas, o `FsxDataEventTrail` recurso falhará com: número máximo de trilhas (5) excedido. Você pode verificar o número de trilhas em nível regional com o seguinte comando:
 
 [source, cli]
 ----
@@ -335,14 +335,14 @@ A S3TableIntegration cria automaticamente um bucket de tabela chamado aws-cloudw
 +
 ** Se o bucket da tabela aws-cloudwatch não existir, então o  `S3TableIntegrationRole` está sem permissões. Ele precisa de  `s3tables:CreateTableBucket`,  `s3tables:PutTableBucketEncryption` e  `s3tables:PutTableBucketPolicy` — todos com escopo para  `arn:aws:s3tables:*:*:bucket/aws-cloudwatch`.
 ** Se o bucket da tabela existir mas  `logs.aws_cloudtrail__data` não existir, então a integração não está roteando eventos. A integração deve mostrar  `Status: ACTIVE` e incluir  `aws_cloudtrail` como uma fonte de log.
-** Se a tabela existir, mas o evento inicial não estiver nela, o evento pode ainda estar em trânsito. A ingestão de tabelas S3 tem alguma latência. Aguarde mais alguns minutos. Se ainda não aparecer após 15-20 minutos, a integração pode estar interrompida.
+** Se a tabela existir, mas o evento inicial não estiver nela, o evento ainda pode estar em trânsito. A ingestão do S3 Tables tem alguma latência. Aguarde mais alguns minutos. Se ainda não aparecer após 15 a 20 minutos, a integração pode estar interrompida.
 
 
 . Consulte o evento inicial diretamente.
 +
 .. Abra as tabelas do S3 no Console de Gerenciamento da AWS.
 .. Navegue até o bucket da tabela aws-cloudwatch → tabela aws_cloudtrail__data e use o botão *Preview* para executar uma consulta rápida diretamente no navegador.
-.. Se o evento estiver presente na tabela, mas o diário ainda mostrar `FAILED`, então a janela de pesquisa pode ter expirado antes da chegada do evento.
+.. Se o evento estiver presente na tabela, mas o registro ainda mostrar `FAILED`, então a janela de polling pode ter expirado antes de o evento chegar.
 
 
 

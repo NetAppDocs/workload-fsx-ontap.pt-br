@@ -26,7 +26,7 @@ O FSX para ONTAP oferece os seguintes recursos:
 * *Cache na memória e cache NVMe*: Inclui um cache exclusivo na memória e cache NVMe, que aumenta o desempenho de dados acessados com frequência.
 * *Centenas de milhares de IOPS*: Fornece centenas de milhares de IOPS com discos SSD, garantindo que seu armazenamento e cargas de trabalho recebam resultados oportunos.
 * *Provisionamento de thin*: Permite o provisionamento de capacidade com antecedência, economizando custos até que seja necessária mais capacidade.
-* * Deduplicação e compactação de dados*: Remove dados duplicados e compacta dados para reduzir a quantidade de armazenamento físico necessário para os sistemas de arquivos FSX for ONTAP, resultando em economia de custos.
+* *Desduplicação e compressão de dados*: remove dados duplicados e comprime os dados para reduzir a quantidade de storage físico necessária para os sistemas de arquivos do FSx for ONTAP, resultando em economia de custos.
 * *Disposição em camadas de dados*: Permite a redução de custos de storage movendo dados acessados com menos frequência da camada de storage SSD principal de alto desempenho para a camada de storage do pool de capacidade secundária.
 
 
@@ -68,7 +68,7 @@ A AWS mantém sua conta FSx para ONTAP , não o Workload Factory. Consulte link:
 [[regions]]
 == Regiões
 
-A fábrica de carga de trabalho é suportada em todas as regiões comerciais onde o FSx para ONTAP é suportado.link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Exibir regiões da Amazon compatíveis."^]
+O Workload Factory é compatível com todas as regiões comerciais onde o FSx for ONTAP tem suporte. link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Exibir regiões da Amazon compatíveis."^]
 
 As seguintes regiões da AWS não são suportadas:
 
