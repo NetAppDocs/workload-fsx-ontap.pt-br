@@ -3419,4 +3419,6 @@
   <block id="356b28bbbd0d4021c21f75e7c065f091" category="list-text">Detalhes do host, incluindo nome do host, ID da instância, tipo de carga de trabalho, região e Nome Qualificado iSCSI (IQN)</block>
   <block id="8b253c1d4259c21c8314fc85adcb31d6" category="section-title">01 de novembro de 2026</block>
   <block id="7dc50386b3284326e1114e4e7f4eb3fd" category="section-title">1 de novembro de 2026</block>
+  <block id="7cc20c44b067a9d650d7a25d5be9d67d" category="section-title">Suporte ao Bedrock gerenciado pelo cliente para classificação</block>
+  <block id="8a8cb6e7e1b94c2efc52b7f5d677eb4d" category="paragraph">O Workload Factory agora permite que você use sua própria configuração do Amazon Bedrock para a classificação de tags de cargas de trabalho. Você pode fornecer seu próprio endpoint e credenciais do Bedrock para que as solicitações de classificação sejam executadas por meio de sua própria configuração do Bedrock.</block>
 </blocks>
