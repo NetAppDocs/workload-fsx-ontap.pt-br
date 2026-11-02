@@ -32,7 +32,7 @@ Um link estabelece uma relação de confiança entre o Workload Factory e um ou 
 * Gerenciando credenciais do ONTAP
 
 
-link:learn-about-links.html["Saiba mais sobre links"].
+link:links-overview.html["Saiba mais sobre links"].
 
 .O que acontece se eu não associar um link ao meu sistema de arquivos?
 Recursos que dependem de um link podem ficar indisponíveis. Por exemplo, o ARP/AI fica indisponível sem um link, você não pode exibir políticas de Snapshot existentes ao criar um volume e não pode descobrir relacionamentos de cache. Sem um link, a análise de configuração não consegue verificar as configurações de proteção de dados e desempenho, portanto a análise fica incompleta. Você ainda pode visualizar eventos de latência sem um link, mas precisa de um link para visualizar e analisar eventos de EMS e para analisar eventos de latência.
