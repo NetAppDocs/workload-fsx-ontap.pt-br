@@ -2,31 +2,40 @@
 sidebar: sidebar 
 permalink: track-costs.html 
 keywords: cost, consumption, Cost Explorer 
-summary: Monitore os custos e gere relatórios para os recursos do seu sistema de arquivos FSx for ONTAP no NetApp Workload Factory. 
+summary: Acompanhe os custos dos recursos do seu sistema de arquivos FSx for ONTAP na NetApp Workload Factory. 
 ---
-= Monitore os custos do FSx for ONTAP e obtenha relatórios no NetApp Workload Factory
+= Acompanhe os custos dos recursos no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-NetApp Workload Factory oferece uma visão consolidada dos custos e do uso do seu sistema de arquivos FSx for ONTAP, ajudando você a gerenciar orçamentos e otimizar recursos com eficiência. Você também pode gerar relatórios de custos dos recursos do seu sistema de arquivos FSx for ONTAP para compartilhar com as partes interessadas.
+Use o NetApp Workload Factory para monitorar os custos e o uso do seu sistema de arquivos FSx for ONTAP, para que você possa gerenciar orçamentos e otimizar recursos com eficiência. Usamos o AWS Cost Explorer para fornecer o custo total com dados que exigem permissões mínimas. O custo por recurso (sistema de arquivos ou volume) é baseado em cálculos do Workload Factory, que fornecem insights exclusivos que não estão disponíveis no AWS Cost Explorer.
 
 
 
 [[about-this-task]]
 == Sobre esta tarefa
 
-O Workload Factory monitora os custos e o uso do sistema de arquivos FSx for ONTAP obtendo dados de custo do AWS Cost Explorer. Os seguintes detalhes de custo são monitorados: tipo de uso, SKU de uso, tipo de implantação, uso e custo total.
+O Workload Factory obtém dados de custo e uso para os recursos do seu sistema de arquivos FSx for ONTAP do AWS Cost Explorer usando as seguintes permissões: `ce:GetCostAndUsage` e  `ce:GetTags`. Os seguintes detalhes de custo são monitorados: tipo de uso, SKU de uso, tipo de implantação, uso e custo total.
 
+No painel Cost, duas abas exibem o custo geral e o custo por recurso.
+
+* O custo total é baseado em dados extraídos diretamente da API do AWS Cost Explorer.
+* O custo por recurso mostra estimativas de custo por sistemas de arquivos ou volumes.
++
 Para recursos exclusivos, o Workload Factory calcula os custos combinando o uso real do nível de desempenho, uma parcela proporcional dos custos do nível de desempenho alocada ao espaço provisionado, mas não utilizado, as alocações de desempenho distribuídas por capacidade e o uso do pool de capacidade. O Workload Factory multiplica cada componente pelo seu preço por unidade para essa dimensão e soma os resultados para determinar o custo total de cada recurso.
 
-No painel Cost, você pode filtrar os dados de custo e uso por contas da AWS, credenciais, uma ou mais regiões e intervalos de tempo para entender o consumo do seu sistema de arquivos FSx for ONTAP. O Workload Factory sempre mostra os dados em uma taxa mensal. Você também pode filtrar por um ou mais sistemas de arquivos e um ou mais volumes em um sistema de arquivos. As chaves de tag de alocação de custos da AWS e os valores de chave de tag adicionam uma camada de filtragem para identificar custos específicos. Uma tag consiste em uma chave e um valor. Para filtrar por chaves de tag e valores de chave de tag, atribua tags aos seus sistemas de arquivos FSx for ONTAP. link:https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html["Saiba mais sobre as tags de alocação de custos da AWS."^]
 
-O Workload Factory obtém dados de custo e uso para os recursos do seu sistema de arquivos FSx for ONTAP do AWS Cost Explorer usando as seguintes permissões: `ce:GetCostAndUsage` e  `ce:GetTags`. Calculamos o custo total usando a API de custos da AWS e nossas próprias estimativas.
 
-Além dos dados de custos no painel de Custos, o resumo executivo de custos mostra os custos do seu sistema de arquivos FSx for ONTAP e os padrões de gastos da sua organização. Você também pode gerar relatórios de custos para os recursos do seu sistema de arquivos FSx for ONTAP. O relatório é um arquivo CSV para download que você pode compartilhar com as partes interessadas.
+O Workload Factory sempre mostra os dados em uma taxa mensal.
+
+Você pode filtrar os dados de custo e uso por contas da AWS, credenciais, uma ou mais regiões e intervalos de tempo para entender o consumo do seu sistema de arquivos do FSx for ONTAP. Você também pode filtrar por um ou mais sistemas de arquivos e um ou mais volumes dentro de um sistema de arquivos.
+
+As chaves de tag de alocação de custos da AWS e os valores de chave de tag adicionam uma camada de filtragem para identificar custos específicos. Uma tag consiste em uma chave e um valor. Para filtrar por chaves de tag e valores de chave de tag, atribua tags aos seus sistemas de arquivos FSx for ONTAP. link:https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html["Saiba mais sobre as tags de alocação de custos da AWS."^]
+
+Além dos dados de custos no painel de custos, o resumo executivo de custos gerado por IA mostra os custos do seu sistema de arquivos FSx for ONTAP e os padrões de gastos da sua organização. Você pode gerar arquivos CSV dos recursos do seu sistema de arquivos FSx for ONTAP para compartilhar com sua equipe e partes interessadas.
 
 
 
