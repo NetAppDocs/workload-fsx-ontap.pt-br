@@ -26,7 +26,7 @@ O Amazon FSx for NetApp ONTAP é compatível como origem e destino de cofre cibe
 .Implementação
 A Workload Factory oferece assistência na criação de uma arquitetura de cofre cibernético.  Após você entrar em contato com a NetApp para manifestar seu interesse na implementação de um cofre cibernético, um especialista da NetApp entrará em contato para discutir suas necessidades.
 
-Envie um e-mail para ng-FSx-CyberVault@netapp.com para começar.
+Envie um e-mail para ng-CyberVault@netapp.com para começar.
 
 .Informações relacionadas
 Para obter mais informações sobre cofres cibernéticos e como configurar essa arquitetura, consulte o link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html["Documentação do cofre cibernético ONTAP"^].
