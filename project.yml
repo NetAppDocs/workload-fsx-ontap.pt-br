@@ -91,6 +91,14 @@ sidebar:
         url: "/configuration-analysis.html"
       - title: Implemente configurações de sistema de arquivos bem arquitetadas
         url: "/improve-configurations.html"
+      - title: Regras personalizadas
+        entries:
+        - title: Saiba mais sobre regras personalizadas
+          url: "/learn-custom-rules.html"
+        - title: Crie uma regra personalizada
+          url: "/create-custom-rule.html"
+        - title: Gerenciar regras personalizadas
+          url: "/manage-custom-rules.html"
     - title: Monitore e analise os custos do FSx para ONTAP.
       url: "/track-costs.html"
     - title: Gerenciar volumes

@@ -1,0 +1,113 @@
+---
+sidebar: sidebar 
+permalink: learn-custom-rules.html 
+keywords: custom rules, byor, bring your own rules, fsx, ontap, well architected, organizational standards 
+summary: Aprenda a definir e gerenciar suas próprias regras de arquitetura para aplicar padrões organizacionais juntamente com as melhores práticas da NetApp no NetApp Workload Factory. 
+---
+= Saiba mais sobre regras personalizadas no NetApp Workload Factory
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+As regras personalizadas permitem que você defina, verifique e aplique seus próprios padrões de arquitetura, juntamente com as práticas recomendadas da NetApp, no catálogo Rules no NetApp Workload Factory.
+
+
+
+[[overview]]
+== Visão geral
+
+O Construtor de Regras permite criar regras personalizadas usando linguagem simples. Essas regras são verificadas em todos os seus recursos. As regras personalizadas ajudam a aplicar os padrões, limites de risco e requisitos operacionais da sua organização que as regras padrão podem não abranger.
+
+
+NOTE: Se o administrador da sua conta desativou os recursos de IA, você não poderá criar novas regras nem editar as regras existentes. Todas as regras já agendadas continuam em execução. link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["Saiba mais sobre como gerenciar recursos de IA"^].
+
+
+
+[[how-custom-rules-work]]
+== Como funcionam as regras personalizadas
+
+As regras personalizadas usam IA para transformar instruções em linguagem simples em regras claras e estruturadas. A IA traduz sua solicitação, sugere uma regra, explica como entendeu suas instruções e pede aprovação antes de salvar ou agendar a regra. Esse processo ajuda a garantir que:
+
+* A regra está claramente definida e verificada quanto a erros
+* Nenhum código personalizado é executado
+* Você pode revisar exatamente o que será avaliado antes de aprovar a regra
+* Cada regra personalizada inclui o tipo de recurso a ser avaliado, a lógica da condição, a gravidade, o cronograma de avaliação e as orientações para correção.
+
+
+
+
+[[before-you-begin]]
+== Antes de começar
+
+Antes de criar e executar regras personalizadas, certifique-se de ter o seguinte:
+
+Credenciais AWS:: Acesso somente leitura ao seu ambiente AWS. Regras personalizadas exigem permissões somente leitura como limite de segurança. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Adicione as credenciais da AWS ao Workload Factory"].
+Credenciais ONTAP:: Usuário visualizador do FSx com permissões somente leitura. O Workload Factory cria um usuário somente leitura em cada sistema de arquivos FSx for ONTAP, caso ainda não exista, para que o Workload Factory possa realizar avaliações.
+Link ou agente:: Necessário apenas para regras que precisam se conectar diretamente ao ONTAP para verificar configurações que as APIs da AWS não podem acessar link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Conecte-se a um sistema de arquivos FSx for ONTAP com um link"^].
+
+
+
+
+[[limitations]]
+== Limitações
+
+* As regras não podem corrigir problemas automaticamente. Você mesmo deve corrigir os recursos não compatíveis usando as orientações fornecidas.
+* Cada regra verifica apenas um tipo de recurso, mas pode ser aplicada a uma ampla gama de recursos. Por exemplo, uma regra pode avaliar volumes em várias regiões, em todas as regiões ou em várias contas. Para avaliar diferentes tipos de recursos, crie regras separadas.
+* As regras são executadas no máximo uma vez por hora para evitar varreduras excessivas.
+* As regras só podem ler o seu ambiente e não podem fazer alterações.
+* Você poderá atualizar essas configurações posteriormente no catálogo de regras.
+
+
+
+
+[[rule-lifecycle]]
+== Ciclo de vida da regra
+
+As regras personalizadas progridem pelos seguintes estados:
+
+Em andamento:: Criando ou verificando regras.
+Falha ao criar:: Não foi possível criar a regra. Você pode reabrir a regra e continuar editando no chat.
+Rascunho:: Salvo, mas ainda não agendado.
+Rascunho validado:: A validação foi aprovada e pode ser salva ou agendada.
+Edição:: Atualizando uma cópia de rascunho de uma regra existente. A regra agendada atual continuará em execução até que você salve as alterações.
+Agendado:: Ativo e em execução conforme o cronograma definido.
+Desabilitado:: Pausado, mas não excluído. Pode ser reativado.
+Excluído:: Removido permanentemente.
+
+
+
+
+[[custom-rule-examples]]
+== Exemplos de regras personalizadas
+
+Proteção do volume de produção:: "Todos os volumes com a tag 'Prod' devem ter uma política de snapshot instalada"
++
+--
+Esta regra verifica se os volumes de produção possuem uma política de snapshot para protegê-los de acordo com os requisitos da empresa.
+
+--
+Tiering de volumes de arquivamento:: "Todos os volumes com a etiqueta 'Archive' devem ter uma política de tiering definida como 'All'"
++
+--
+Essa regra reduz custos ao mover automaticamente os dados arquivados para um storage mais barato.
+
+--
+Padrões de nomenclatura do sistema de arquivos:: "Todos os sistemas de arquivos devem seguir a convenção de nomenclatura 'fsx-{environment}-{application}'"
++
+--
+Esta regra garante que os sistemas de arquivos sigam as convenções de nomenclatura da organização para facilitar o gerenciamento e a alocação de custos.
+
+--
+
+
+
+
+[[what-to-do-next]]
+== O que fazer a seguir
+
+link:create-custom-rule.html["Crie uma regra personalizada"] link:manage-custom-rules.html["Gerenciar regras personalizadas"]

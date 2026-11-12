@@ -3444,4 +3444,166 @@
   <block id="6d24db4e0644546ba5972d86f0474123" category="paragraph">As chaves de tag de alocação de custos da AWS e os valores de chave de tag adicionam uma camada de filtragem para identificar custos específicos. Uma tag consiste em uma chave e um valor. Para filtrar por chaves de tag e valores de chave de tag, atribua tags aos seus sistemas de arquivos FSx for ONTAP. <block ref="8ea95efe0fef689337ea8960e5c1861f" category="inline-link-macro-rx"></block></block>
   <block id="00785d0f1296ca2a8d0846890b38a469" category="paragraph">Além dos dados de custos no painel de custos, o resumo executivo de custos gerado por IA mostra os custos do seu sistema de arquivos FSx for ONTAP e os padrões de gastos da sua organização. Você pode gerar arquivos CSV dos recursos do seu sistema de arquivos FSx for ONTAP para compartilhar com sua equipe e partes interessadas.</block>
   <block id="1e1ba6e3e89c5c46a8b08f6bb7ca5b1e" category="paragraph">Envie um e-mail para ng-CyberVault@netapp.com para começar.</block>
+  <block id="5a42b43100ba01e0c1d04cf83985f0a6" category="summary">Crie uma regra arquitetural personalizada usando linguagem natural para aplicar os padrões da sua organização para o FSx for ONTAP no NetApp Workload Factory.</block>
+  <block id="4049afdb7ff78ea7ac28f61f9f797fd8" category="doc">Crie uma regra personalizada no NetApp Workload Factory</block>
+  <block id="5372fe69d86b61601b1f331c4b46a82a" category="paragraph">Crie regras personalizadas para verificar seus recursos do FSx for ONTAP no Workload Factory em relação aos padrões da sua organização. Descreva cada regra em linguagem simples, e o construtor de regras com IA transformará sua solicitação em uma regra validada.</block>
+  <block id="4995e76cedbca110dbb7cefe85e61d77" category="paragraph">O processo de configuração de regras guia você por cada etapa: criação da regra, revisão de como a IA a interpretou e verificação dos resultados antes de agendar revisões periódicas. Você mantém o controle durante todo o processo. O sistema sugere uma regra com base na sua solicitação, mas nada acontece até que você a aprove.</block>
+  <block id="c6cf187b99e57acdf56ff23a5013546b" category="admonition">Se o administrador da sua conta desativou os recursos de IA, você verá uma mensagem e não poderá criar ou editar regras personalizadas. Entre em contato com seu administrador ou <block ref="a4efb9d0168cfdc15063741b91ed0040" category="inline-link-macro-rx"></block>.</block>
+  <block id="5d9b02c1296ee6f0b859a2db7ccf523b" category="list-text">Você configurou credenciais da AWS com acesso somente leitura.</block>
+  <block id="0876642abf2aedd4eb3ae76dd87f7586" category="list-text">Você possui credenciais ONTAP com permissões de visualizador.</block>
+  <block id="0e8e25fe832310f010ce2950b2110974" category="list-text">Você tem um link ou agente configurado para conectividade FSx for ONTAP.</block>
+  <block id="fadf874162a190084750a51220f07180" category="list-text">Você entende que a criação de regras personalizadas utiliza o serviço de IA Bedrock da NetApp.</block>
+  <block id="536d32f8526dd0faea40f78af4cad034" category="section-title">Criar uma regra</block>
+  <block id="d50a7101e42fa60ccc6f625b2ce3048e" category="list-text">Selecione o menu <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> e, em seguida, selecione *Well-architected* &gt; *Rule builder*.</block>
+  <block id="3f87c61ee7c070ec896e14d55b132e25" category="paragraph">Ao abrir o construtor de regras, são exibidos exemplos de prompts para ajudar você a escrever sua regra personalizada. Você pode selecionar *Copiar prompt* para copiar um exemplo de prompt para a caixa de texto da caixa de diálogo de IA.</block>
+  <block id="ab99baf0da39867076eea6e470865275" category="list-text">No campo *Criar uma regra*, insira a descrição da sua regra em linguagem natural. Seja o mais específico possível sobre:</block>
+  <block id="d8eefaf38d3f8455541df01bc5d6831b" category="list-text">Qual o tipo de recurso que você está verificando (sistema de arquivos, volume ou cache).</block>
+  <block id="4e86c5f58eeed68b966c1b5f2cf16853" category="list-text">Qual condição você está validando.</block>
+  <block id="dfa6d1dd6fe7783b6568e7fea39c0f7a" category="list-text">Qual é o limite que define a conformidade.</block>
+  <block id="7bceccf61b56c9e997b6748a3219ca2c" category="list-text">Por que essa regra é importante (opcional, mas recomendada).</block>
+  <block id="7950e8546d11cf9aebf1d18723eacb62" category="inline-image-macro">O ícone de menu é usado para iniciar a geração de regras., width=18</block>
+  <block id="448a77fdd0ab1119d70eda7dfad65fa7" category="list-text">Selecione <block ref="9bf5747e0eee12d0fcc488bd415a8bc3" category="inline-image-macro-rx" type="image"></block>.</block>
+  <block id="15fc6fdd1dd9d66889237c7e8a75d290" category="paragraph">A IA analisa sua solicitação e gera uma definição de regra.</block>
+  <block id="1c88936123899b4423b51efeb098f008" category="section-title">Revise a interpretação da IA</block>
+  <block id="28ea3f4811ef4cb7fc2b7f08d6fce5a7" category="paragraph">O construtor de regras exibe:</block>
+  <block id="0cd216375fd6782b45d9f84efb6f3e84" category="list-text">Interpretação analisada</block>
+  <block id="9d009657b96c5aad9fa21f1828b73bcf" category="list-text">Como a IA entendeu sua solicitação em linguagem simples.</block>
+  <block id="e35d59c335e26445eed5e3cf4fc88047" category="list-text">Definição de regra</block>
+  <block id="69dc0eb643b0cd391da1782b1c0156e4" category="list-text">A regra estruturada, incluindo o tipo de recurso, a lógica da condição e os critérios de avaliação.</block>
+  <block id="87a222577e9c7b7a0739d92337f4fe46" category="list-text">Raciocínio</block>
+  <block id="22e3f2781979bb9f2227381c2a3c30ea" category="list-text">Por que a IA interpretou seu prompt dessa maneira.</block>
+  <block id="6e536680660f9f562a1a4ab7cdbba4e1" category="list-text">Indicador de confiança</block>
+  <block id="0f1a4e7b1fc79efcfb93a1a4b715f3d0" category="list-text">O grau de confiança do sistema na interpretação.</block>
+  <block id="f89784f298e9f6255c6acd2f32b4051a" category="list-text">Revise a interpretação para garantir que ela corresponda ao que você pretendia.</block>
+  <block id="b5d05144afb692d05ca26ecfffcee694" category="list-text">Verifique se a definição da regra está correta. Se a interpretação não estiver clara ou estiver incorreta, o sistema poderá fazer perguntas como:</block>
+  <block id="1f3c02b25897cff55c5d7894bed5c157" category="list-text">Qual recurso deve ser verificado?</block>
+  <block id="2d351367dd00ae9228b6503d57500015" category="list-text">Que valor ou limite define a conformidade?</block>
+  <block id="d24a425ef6891cb0134794ec6897a668" category="list-text">Com que frequência a regra deve ser executada?</block>
+  <block id="32e95e9677f9ef2f50e204cf4b6401d7" category="list-text">Responda às perguntas de esclarecimento da IA.</block>
+  <block id="7d84a0d9d14a5f050503a7b9b00b3435" category="paragraph">A IA pode pedir que você escolha entre várias opções para entender melhor o que você precisa. Responda a cada pergunta e selecione *Continuar* ou selecione *Pular* para passar pelas perguntas opcionais.</block>
+  <block id="f7dd96479a94850934674d003fe54f52" category="list-text">Após responder a todas as perguntas, selecione *Continuar* para criar sua regra.</block>
+  <block id="66178252f08edeeeeda7bfc5ebf5227b" category="section-title">Teste a regra</block>
+  <block id="12eb9fcd23a3f9a01164b30552a1e02c" category="paragraph">Antes de salvar ou agendar a regra, execute um teste para ver quais recursos a regra afeta.</block>
+  <block id="e0924f9cecf28912d6b59208f0ee9242" category="list-text">Selecione *Validar regra*.</block>
+  <block id="87d68b4e906936ea67c73d25fddbb199" category="paragraph">O sistema avalia todos os recursos dentro do escopo com base na sua lógica de regras.</block>
+  <block id="6ad0887ee719e958ea66bc1d5ca7ed60" category="list-text">Revise os resultados da validação:</block>
+  <block id="31d7cb3d933c56805e03dca75c02893d" category="list-text">Recursos avaliados: número total de recursos verificados</block>
+  <block id="c3e6edb3feeaf77e1989872831656640" category="list-text">Em conformidade: recursos que atendem aos critérios da regra</block>
+  <block id="00d56e696324ec288953d4f8b2cfec0f" category="list-text">Não conformes: recursos que não atendem aos critérios</block>
+  <block id="bd86697cf08c2fc5775c698f872f3628" category="list-text">Avaliações com falha: recursos que não puderam ser avaliados (com detalhes do erro)</block>
+  <block id="24a910eeb4468fa91fa54136e064eb5d" category="section-title">Salvar ou agendar a regra</block>
+  <block id="cdac1db1869db85a5ed349854c63c6bf" category="paragraph">Após validar a sua regra, você pode salvá-la como rascunho ou configurá-la para ser executada regularmente.</block>
+  <block id="365d382b2d9ecca9b0d40171c69b38ff" category="list-text">Faça um dos seguintes procedimentos:</block>
+  <block id="39a7241c7fb2f38f3a304dc5a7ddd33e" category="list-text">Para agendar avaliações regulares, defina a frequência de avaliação e selecione *Agendar*. A regra é ativada e executada na programação definida.</block>
+  <block id="9c85906f54c1b8a93d6470f07300ddfa" category="list-text">Para salvar após a validação sem agendamento, selecione *Salvar como rascunho*. A regra é salva, mas não é avaliada até que você a agende.</block>
+  <block id="4a5aaf656967e8a439bf519ae6b59880" category="list-text">Para excluir a regra, selecione *Excluir*.</block>
+  <block id="a1c63e33653cd43f47951d30d948a4f4" category="paragraph">Sua regra personalizada foi criada e listada no catálogo de regras. Se você definir um agendamento, a regra verificará seus recursos do FSx for ONTAP na frequência especificada. Se você editar a regra posteriormente, o sistema guiará você pelas mesmas etapas, chat, revisão, aprovação e validação, antes de salvar a versão atualizada.</block>
+  <block id="79d32aa7b3e52f3c6db178577378b427" category="inline-link-macro">Gerenciar regras personalizadas</block>
+  <block id="f571cd95e32f7c421382198bc0dd0eae" category="paragraph"><block ref="f571cd95e32f7c421382198bc0dd0eae" category="inline-link-macro-rx"></block></block>
+  <block id="ce245aab753e2723bfd040fed4abf11f" category="summary">Aprenda a definir e gerenciar suas próprias regras de arquitetura para aplicar padrões organizacionais juntamente com as melhores práticas da NetApp no NetApp Workload Factory.</block>
+  <block id="7d242f235430b1bf813d847afa9c75af" category="doc">Saiba mais sobre regras personalizadas no NetApp Workload Factory</block>
+  <block id="311939b9d3db153a7ced12abaf3717a0" category="paragraph">As regras personalizadas permitem que você defina, verifique e aplique seus próprios padrões de arquitetura, juntamente com as práticas recomendadas da NetApp, no catálogo Rules no NetApp Workload Factory.</block>
+  <block id="3b878279a04dc47d60932cb294d96259" category="section-title">Visão geral</block>
+  <block id="91b90f08c0d07c5aa66b502a1d12c868" category="paragraph">O Construtor de Regras permite criar regras personalizadas usando linguagem simples. Essas regras são verificadas em todos os seus recursos. As regras personalizadas ajudam a aplicar os padrões, limites de risco e requisitos operacionais da sua organização que as regras padrão podem não abranger.</block>
+  <block id="48dc51848c127d267cdd7ab1bcd0fe5e" category="inline-link-macro">Saiba mais sobre como gerenciar recursos de IA</block>
+  <block id="01b363e0fd4d8a4ccc9789787974b41d" category="admonition">Se o administrador da sua conta desativou os recursos de IA, você não poderá criar novas regras nem editar as regras existentes. Todas as regras já agendadas continuam em execução. <block ref="0d265466472513eb45c1ef2960b8028d" category="inline-link-macro-rx"></block>.</block>
+  <block id="2d5a2d8915799663f0b12f296909b0d7" category="section-title">Como funcionam as regras personalizadas</block>
+  <block id="4edc72502b9f9929e41bae938a7490c1" category="paragraph">As regras personalizadas usam IA para transformar instruções em linguagem simples em regras claras e estruturadas. A IA traduz sua solicitação, sugere uma regra, explica como entendeu suas instruções e pede aprovação antes de salvar ou agendar a regra. Esse processo ajuda a garantir que:</block>
+  <block id="0465277e228b6cf7f37c1fab3872f9cd" category="list-text">A regra está claramente definida e verificada quanto a erros</block>
+  <block id="f2b92cb195f44b1f57205f66b9c1c992" category="list-text">Nenhum código personalizado é executado</block>
+  <block id="f6b50ace5a7da2eb893c9a1a1c3971be" category="list-text">Você pode revisar exatamente o que será avaliado antes de aprovar a regra</block>
+  <block id="110a917dc178ad706edce62d767a4196" category="list-text">Cada regra personalizada inclui o tipo de recurso a ser avaliado, a lógica da condição, a gravidade, o cronograma de avaliação e as orientações para correção.</block>
+  <block id="aa5bf59269969e22f1e91f0116790d69" category="paragraph">Antes de criar e executar regras personalizadas, certifique-se de ter o seguinte:</block>
+  <block id="2c4eed705dd3e0adf6e7194858d8dff7" category="list-text">Credenciais AWS</block>
+  <block id="287ae8bc216279a75c04344894e04b7f" category="inline-link-macro">Adicione as credenciais da AWS ao Workload Factory</block>
+  <block id="7494074c4fddc030d2901e19b4299fbc" category="list-text">Acesso somente leitura ao seu ambiente AWS. Regras personalizadas exigem permissões somente leitura como limite de segurança. <block ref="3cc095eb9cb9898bd77210cc5e32ef56" category="inline-link-macro-rx"></block>.</block>
+  <block id="823a6e1d7fe661be55dd3af05f972b11" category="list-text">Credenciais ONTAP</block>
+  <block id="2fe1ca0ae9374dba8f39842024c0183d" category="list-text">Usuário visualizador do FSx com permissões somente leitura. O Workload Factory cria um usuário somente leitura em cada sistema de arquivos FSx for ONTAP, caso ainda não exista, para que o Workload Factory possa realizar avaliações.</block>
+  <block id="04d1424a4b58f665f6537d166f4f9750" category="list-text">Link ou agente</block>
+  <block id="b68341d527b58582cc7cb537c3230cd8" category="inline-link-macro">Conecte-se a um sistema de arquivos FSx for ONTAP com um link</block>
+  <block id="1a9a7cbcff7e420530f8c372f3d5adee" category="list-text">Necessário apenas para regras que precisam se conectar diretamente ao ONTAP para verificar configurações que as APIs da AWS não podem acessar <block ref="24b9156f94ab02a475dde64452245780" category="inline-link-macro-rx"></block>.</block>
+  <block id="e646e16bee8b32e6ea29e30d01970a6c" category="section-title">Limitações</block>
+  <block id="97897c725b297f3a24f29e0cb3d12838" category="list-text">As regras não podem corrigir problemas automaticamente. Você mesmo deve corrigir os recursos não compatíveis usando as orientações fornecidas.</block>
+  <block id="e0ff3e32dbc4b668a800d5b59c47613b" category="list-text">Cada regra verifica apenas um tipo de recurso, mas pode ser aplicada a uma ampla gama de recursos. Por exemplo, uma regra pode avaliar volumes em várias regiões, em todas as regiões ou em várias contas. Para avaliar diferentes tipos de recursos, crie regras separadas.</block>
+  <block id="3f84490332db2de49bed3d46ab452bb0" category="list-text">As regras são executadas no máximo uma vez por hora para evitar varreduras excessivas.</block>
+  <block id="499ed12f9f73ef11f2d3afd859dacba5" category="list-text">As regras só podem ler o seu ambiente e não podem fazer alterações.</block>
+  <block id="7d178946e8d76597de91865cae420fb6" category="list-text">Você poderá atualizar essas configurações posteriormente no catálogo de regras.</block>
+  <block id="3414a9edc41238183f8bcc3192e49adf" category="section-title">Ciclo de vida da regra</block>
+  <block id="990ef24c1b7e8a2bf1d9ad948d75e88c" category="paragraph">As regras personalizadas progridem pelos seguintes estados:</block>
+  <block id="b6e0b0c90cfbddfe767f137f8066d1df" category="list-text">Em andamento</block>
+  <block id="d4008ffe54f55490997ab0d5940aafb3" category="list-text">Criando ou verificando regras.</block>
+  <block id="b75ff201f3276decaffcefb7b216622f" category="list-text">Falha ao criar</block>
+  <block id="db78d463a1f2fbb737aa54f862bd0d4b" category="list-text">Não foi possível criar a regra. Você pode reabrir a regra e continuar editando no chat.</block>
+  <block id="f03ab16cd58372c77ba45a3d9a5a1cb9" category="list-text">Rascunho</block>
+  <block id="c4e6fec5ee0f22a348768aa087f15acb" category="list-text">Salvo, mas ainda não agendado.</block>
+  <block id="7401c14d073cd1188b475ef7f5e0cdc8" category="list-text">Rascunho validado</block>
+  <block id="de28b803b960b2c037e1abe4d18cf9d7" category="list-text">A validação foi aprovada e pode ser salva ou agendada.</block>
+  <block id="b1caf7f21c1b8899e11165a6aed71af9" category="list-text">Edição</block>
+  <block id="f25dfb15b911ed977033f485330ceadd" category="list-text">Atualizando uma cópia de rascunho de uma regra existente. A regra agendada atual continuará em execução até que você salve as alterações.</block>
+  <block id="2b7dabba0077abe3732e0418b048a56b" category="list-text">Agendado</block>
+  <block id="cf61937578a34d9f00c4f6dd6f175c05" category="list-text">Ativo e em execução conforme o cronograma definido.</block>
+  <block id="b9f5c797ebbf55adccdd8539a65a0241" category="list-text">Desabilitado</block>
+  <block id="ca7e0b16936fbee3bd2dd7f992b32b4d" category="list-text">Pausado, mas não excluído. Pode ser reativado.</block>
+  <block id="5fe6005bf6e415c950c011fb65f12b8f" category="list-text">Excluído</block>
+  <block id="71e78f13c09017bc4b63f46243d379b7" category="list-text">Removido permanentemente.</block>
+  <block id="2090e30be5c37fb6b5aa40aa26a83dea" category="section-title">Exemplos de regras personalizadas</block>
+  <block id="cc36425e424f4c30e5d1dd8b4cf78a69" category="list-text">Proteção do volume de produção</block>
+  <block id="31ba253c12166670e96f9fc69476b594" category="list-text">"Todos os volumes com a tag 'Prod' devem ter uma política de snapshot instalada"</block>
+  <block id="3243b04cc4c4b7516a144da9c506a9ba" category="paragraph">Esta regra verifica se os volumes de produção possuem uma política de snapshot para protegê-los de acordo com os requisitos da empresa.</block>
+  <block id="9beacae88b6d84f519d92cf003a30d57" category="list-text">Tiering de volumes de arquivamento</block>
+  <block id="654b13cdd2897fd4260df3602f80ebbf" category="list-text">"Todos os volumes com a etiqueta 'Archive' devem ter uma política de tiering definida como 'All'"</block>
+  <block id="3756e2c2d7cd023d9845fbb763b174a9" category="paragraph">Essa regra reduz custos ao mover automaticamente os dados arquivados para um storage mais barato.</block>
+  <block id="ccf414cfce06645c55d0bcfd5f41608b" category="list-text">Padrões de nomenclatura do sistema de arquivos</block>
+  <block id="269acf14c942e18c7f92dabf12bccaf5" category="list-text">"Todos os sistemas de arquivos devem seguir a convenção de nomenclatura 'fsx-{environment}-{application}'"</block>
+  <block id="bf0fa31d0a55270b5b0783d82f5a26b2" category="paragraph">Esta regra garante que os sistemas de arquivos sigam as convenções de nomenclatura da organização para facilitar o gerenciamento e a alocação de custos.</block>
+  <block id="3f710cadb0123c693533da68aaf5b596" category="section-title">O que fazer a seguir</block>
+  <block id="cff2e3f5566a6d8510f1c58ca5513eb3" category="inline-link-macro">Crie uma regra personalizada</block>
+  <block id="ef517711d9a5dee55f2bb56046d3fd70" category="paragraph"><block ref="385442535e80145b437f6d2ceb94114a" category="inline-link-macro-rx"></block> <block ref="f571cd95e32f7c421382198bc0dd0eae" category="inline-link-macro-rx"></block></block>
+  <block id="736345038ae5166988c54000f3a9ef2a" category="summary">Visualize, edite, pause, retome, teste e exclua regras arquitetônicas personalizadas do catálogo de Regras no NetApp Workload Factory.</block>
+  <block id="f111cb0bc631b06943464ebbce09ef55" category="doc">Gerencie regras personalizadas no NetApp Workload Factory</block>
+  <block id="5a39a30849e6dba110bd13af7cf930b3" category="paragraph">O catálogo de regras no NetApp Workload Factory oferece a você um local centralizado para gerenciar todas as suas regras de arquitetura personalizadas. Você pode revisar os detalhes e os resultados das regras, editá-las, executar testes rápidos, pausar ou retomar avaliações agendadas e excluir as regras de que você não precisa mais.</block>
+  <block id="d8bb2214730133a5475bf68bf933cdeb" category="section-title">Veja o catálogo de regras</block>
+  <block id="12dc6c12cd959eea202fab9d01a2ef04" category="paragraph">O catálogo de regras mostra todas as regras que você criou, o status delas, o agendamento e os resultados mais recentes.</block>
+  <block id="642657de37325cdd56a85e86e5effce6" category="list-text">Selecione *Ver suas regras* para abrir o catálogo de regras.</block>
+  <block id="5890f83979745a0ed0d6d680fbcc1638" category="section-title">Ver resultados da regra</block>
+  <block id="eeed19c5f7da7509abad8a01045710dc" category="paragraph">Os resultados mostram quais recursos seguem sua regra e quais não.</block>
+  <block id="a40467eae61686c6d04705b1341a3476" category="list-text">No catálogo de regras, selecione a regra que você deseja revisar.</block>
+  <block id="2d6751ce25ede21d2492997ddca98b45" category="list-text">Selecione a guia *Resultados de todas as execuções*.</block>
+  <block id="f4e2484ce7f636995f87d4460bb472cf" category="list-text">Selecione **Ver detalhes** para ver os resultados de cada execução.</block>
+  <block id="13b595cf2341f5678ff3130cc1287485" category="paragraph">Se a verificação falhou para alguns itens, leia a mensagem de erro para ver o motivo. As razões mais comuns são problemas de conexão, permissões ausentes ou um link que não foi configurado.</block>
+  <block id="12a0a2265c24db72f6aaae801b9ef08e" category="section-title">Editar uma regra personalizada</block>
+  <block id="dbea8da43ac90f4152565d880d18e30e" category="paragraph">Você pode renomear uma regra a qualquer momento. Você também pode editar a descrição, o tipo de recurso, o agendamento, a gravidade, a lógica da condição, o escopo da avaliação e as orientações de correção de uma regra.</block>
+  <block id="8473633d69dc94d27429c2a37902fe75" category="paragraph">Você pode renomear uma regra no catálogo de regras ou no cartão de detalhes da regra. Para editar qualquer outra configuração da regra, comece pelo catálogo de regras.</block>
+  <block id="a7bcf973f8ab46210fd83a2c927c24de" category="list-text">No catálogo de regras, selecione a regra que deseja editar.</block>
+  <block id="2dc19156fac0f6096a2db17a78fe0da8" category="list-text">Para renomear a regra, atualize o nome da regra no catálogo ou no cartão de detalhes da regra.</block>
+  <block id="b4f3df698e928c6673aa11c0a7e74343" category="list-text">Para editar outras configurações da regra, selecione *Editar*.</block>
+  <block id="01e52dae8e86fc149d714c3cdc94859d" category="paragraph">A regra é aberta no modo de chat com todo o seu histórico.</block>
+  <block id="91fa4b053658e4dedadb0d60014d7b3e" category="list-text">Solicite as alterações que deseja fazer, ou atualize a solicitação no chat.</block>
+  <block id="f5500860e31d724af72a4be713c2c1e5" category="paragraph">Caso a criação da regra tenha falhado anteriormente, você pode continuar a partir dessa regra e atualizar sua solicitação no chat.</block>
+  <block id="1f998f331ae48a1cf2b4056c154eff9f" category="list-text">Analise a explicação atualizada e o resumo das alterações.</block>
+  <block id="fc7c0f65a3d8f2f0a1da1c56bd143c30" category="paragraph">O sistema mostra o que mudou em relação à regra atual antes de você salvá-la.</block>
+  <block id="023ad31a6b18fc538747a36ab488e65c" category="list-text">Se a regra estiver em modo de rascunho, selecione *Validate rule* para testar a lógica atualizada.</block>
+  <block id="44e90941996b011e8407b152cda355df" category="list-text">Para manter as alterações, selecione *Salvar* para substituir a regra atual. Se você alterou o agendamento, salve o agendamento atualizado. Se você não alterou o agendamento, ele permanece o mesmo.</block>
+  <block id="cabf275678b6655f7ec32af7a5e772ec" category="list-text">Para descartar as alterações, selecione *Descartar alterações*. A regra retorna à versão anterior e sai do modo de edição.</block>
+  <block id="053ebf33b65f60110cd8e776b413ed79" category="paragraph">Enquanto você edita uma regra, ela aparece como *Em edição* para você. Outros usuários ainda veem a regra agendada atual e as execuções agendadas continuam normalmente até que você salve as alterações.</block>
+  <block id="8c5fb02c595607ff2d6a7bffe64be464" category="section-title">Pausar uma regra</block>
+  <block id="1e68160fbadf5661e25cda25fd14c709" category="paragraph">Pause uma regra para interromper as avaliações sem excluí-la. As regras pausadas permanecem no catálogo e você pode retomá-las a qualquer momento.</block>
+  <block id="ab37000159a2028473bf2d51d2e168df" category="list-text">No catálogo de Regras, selecione a regra que você deseja pausar.</block>
+  <block id="1e9305945880528c5c52639547a0485e" category="list-text">Para pausar uma regra agendada, selecione *Pausar* e confirme. A regra deixará de ser executada conforme o agendamento.</block>
+  <block id="ef31b72311045c72b3594fe1b8294b61" category="list-text">Para retomar uma regra pausada, selecione *Retomar* e confirme. A regra retoma as avaliações regulares.</block>
+  <block id="505e9a4d5d793341b92e51caeffa198f" category="section-title">Excluir uma regra personalizada</block>
+  <block id="106aa9d3af8dd9fe811548be7c0ab934" category="paragraph">Exclua uma regra permanentemente quando não precisar mais dela. Esta ação não pode ser desfeita.</block>
+  <block id="cd69578465ffe65a5793f55372a9e2b0" category="list-text">No catálogo de regras, selecione a regra que deseja excluir.</block>
+  <block id="a611c28af3d155e736c074bd926dc51b" category="list-text">Confirme que você deseja excluir a regra permanentemente.</block>
+  <block id="f36dd1b2731552458a4d8983a8bec074" category="paragraph">A regra foi removida do catálogo. Todo o histórico de avaliações foi apagado.</block>
+  <block id="ee46de54fef48d3ea00b2c8fc06cb58b" category="section-title">Faça um teste rápido</block>
+  <block id="bd472ca28321d77d062059272b456804" category="paragraph">Execute um teste rápido a qualquer momento para verificar a conformidade atual sem precisar esperar pela próxima execução agendada.</block>
+  <block id="635b91ded7a74d36fda511d533ef4c52" category="list-text">No catálogo de regras, selecione a regra que deseja avaliar.</block>
+  <block id="e70327eb26e94002df7dad0a96b24a3d" category="list-text">Selecione *Validar*.</block>
+  <block id="b4b7ad5dbb1a5d746e0ac8936e3f4798" category="paragraph">O sistema avalia todos os recursos em escopo com base na lógica da regra.</block>
+  <block id="5cb57852939f164731c4f61fcca33dac" category="list-text">Analise os resultados para verificar o status atual de conformidade.</block>
+  <block id="2cc894218e78a9699920859cc698e5d7" category="paragraph">Os testes são auditados e constam no histórico de avaliação da regra.</block>
+  <block id="cc04bd1e4cca8a5b4e87672f588bf490" category="paragraph"><block ref="cc04bd1e4cca8a5b4e87672f588bf490" category="inline-link-macro-rx"></block></block>
+  <block id="2977988f0d0d5b4f141a9dbdc67379ed" category="sidebar">Regras personalizadas</block>
+  <block id="4bd4792ab17b2dfaf1c72610c348727b" category="sidebar">Saiba mais sobre regras personalizadas</block>
 </blocks>

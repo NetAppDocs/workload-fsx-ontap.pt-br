@@ -1,0 +1,142 @@
+---
+sidebar: sidebar 
+permalink: manage-custom-rules.html 
+keywords: manage rules, edit rules, disable rules, delete rules, rule catalog, byor 
+summary: Visualize, edite, pause, retome, teste e exclua regras arquitetônicas personalizadas do catálogo de Regras no NetApp Workload Factory. 
+---
+= Gerencie regras personalizadas no NetApp Workload Factory
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O catálogo de regras no NetApp Workload Factory oferece a você um local centralizado para gerenciar todas as suas regras de arquitetura personalizadas. Você pode revisar os detalhes e os resultados das regras, editá-las, executar testes rápidos, pausar ou retomar avaliações agendadas e excluir as regras de que você não precisa mais.
+
+
+
+[[view-the-rules-catalog]]
+== Veja o catálogo de regras
+
+O catálogo de regras mostra todas as regras que você criou, o status delas, o agendamento e os resultados mais recentes.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] e, em seguida, selecione *Well-architected* > *Rule builder*.
+. Selecione *Ver suas regras* para abrir o catálogo de regras.
+
+
+
+
+[[view-rule-results]]
+== Ver resultados da regra
+
+Os resultados mostram quais recursos seguem sua regra e quais não.
+
+.Passos
+. No catálogo de regras, selecione a regra que você deseja revisar.
+. Selecione a guia *Resultados de todas as execuções*.
+. Selecione **Ver detalhes** para ver os resultados de cada execução.
+
+
+Se a verificação falhou para alguns itens, leia a mensagem de erro para ver o motivo. As razões mais comuns são problemas de conexão, permissões ausentes ou um link que não foi configurado.
+
+
+
+[[edit-a-custom-rule]]
+== Editar uma regra personalizada
+
+Você pode renomear uma regra a qualquer momento. Você também pode editar a descrição, o tipo de recurso, o agendamento, a gravidade, a lógica da condição, o escopo da avaliação e as orientações de correção de uma regra.
+
+Você pode renomear uma regra no catálogo de regras ou no cartão de detalhes da regra. Para editar qualquer outra configuração da regra, comece pelo catálogo de regras.
+
+.Passos
+. No catálogo de regras, selecione a regra que deseja editar.
+. Faça um dos seguintes procedimentos:
++
+** Para renomear a regra, atualize o nome da regra no catálogo ou no cartão de detalhes da regra.
+** Para editar outras configurações da regra, selecione *Editar*.
++
+A regra é aberta no modo de chat com todo o seu histórico.
+
+
+
+. Solicite as alterações que deseja fazer, ou atualize a solicitação no chat.
++
+Caso a criação da regra tenha falhado anteriormente, você pode continuar a partir dessa regra e atualizar sua solicitação no chat.
+
+. Analise a explicação atualizada e o resumo das alterações.
++
+O sistema mostra o que mudou em relação à regra atual antes de você salvá-la.
+
+. Se a regra estiver em modo de rascunho, selecione *Validate rule* para testar a lógica atualizada.
+. Faça um dos seguintes procedimentos:
++
+** Para manter as alterações, selecione *Salvar* para substituir a regra atual. Se você alterou o agendamento, salve o agendamento atualizado. Se você não alterou o agendamento, ele permanece o mesmo.
+** Para descartar as alterações, selecione *Descartar alterações*. A regra retorna à versão anterior e sai do modo de edição.
+
+
+
+
+Enquanto você edita uma regra, ela aparece como *Em edição* para você. Outros usuários ainda veem a regra agendada atual e as execuções agendadas continuam normalmente até que você salve as alterações.
+
+
+
+[[pause-a-rule]]
+== Pausar uma regra
+
+Pause uma regra para interromper as avaliações sem excluí-la. As regras pausadas permanecem no catálogo e você pode retomá-las a qualquer momento.
+
+.Passos
+. No catálogo de Regras, selecione a regra que você deseja pausar.
+. Faça um dos seguintes procedimentos:
++
+** Para pausar uma regra agendada, selecione *Pausar* e confirme. A regra deixará de ser executada conforme o agendamento.
+** Para retomar uma regra pausada, selecione *Retomar* e confirme. A regra retoma as avaliações regulares.
+
+
+
+
+
+
+[[delete-a-custom-rule]]
+== Excluir uma regra personalizada
+
+Exclua uma regra permanentemente quando não precisar mais dela. Esta ação não pode ser desfeita.
+
+.Passos
+. No catálogo de regras, selecione a regra que deseja excluir.
+. Selecione *Eliminar*.
+. Confirme que você deseja excluir a regra permanentemente.
+
+
+.Resultado
+A regra foi removida do catálogo. Todo o histórico de avaliações foi apagado.
+
+
+
+[[run-a-quick-test]]
+== Faça um teste rápido
+
+Execute um teste rápido a qualquer momento para verificar a conformidade atual sem precisar esperar pela próxima execução agendada.
+
+.Passos
+. No catálogo de regras, selecione a regra que deseja avaliar.
+. Selecione *Validar*.
++
+O sistema avalia todos os recursos em escopo com base na lógica da regra.
+
+. Analise os resultados para verificar o status atual de conformidade.
+
+
+Os testes são auditados e constam no histórico de avaliação da regra.
+
+
+
+[[related-information]]
+== Informações relacionadas
+
+link:learn-custom-rules.html["Saiba mais sobre regras personalizadas"]
